@@ -189,6 +189,102 @@ Recommended learning path for beginners:
 3. **Java** or **C++** - Learn OOP concepts
 4. **Rust** or **Go** - Modern systems programming
 5. **Docker** - Containerization and DevOps (complements any language)
+6. **Linux** - Essential for servers, cloud, DevOps
+
+---
+
+## Linux & Operating Systems Questions
+
+### What is Linux?
+
+Linux is a **kernel** (core of an operating system) created by Linus Torvalds in 1991. It manages hardware, processes, memory, and devices. By itself, Linux is not a complete OS—it's combined with userland tools (often GNU tools) and software to create **Linux distributions (distros)**.
+
+### Which Linux distro should I choose?
+
+**Beginners**: Ubuntu, Linux Mint, Pop!_OS
+**Developers**: Fedora Workstation, openSUSE Tumbleweed
+**Servers**: Debian Stable, Ubuntu LTS, RHEL
+**Rolling/DIY**: Arch, Manjaro
+**Lightweight**: Alpine, Slackware
+**Security/Pentesting**: Kali Linux, Parrot OS, BlackArch
+
+Use our [Linux intro](Linux/linux-intro.md) to compare families and traits.
+
+### Can I try Linux without installing?
+
+Yes! Several options:
+1. **Virtual Machine**: VirtualBox or VMware (free, reversible)
+2. **Live USB**: Boot from USB without installation
+3. **WSL (Windows)**: Windows Subsystem for Linux (Windows 10/11)
+4. **Cloud**: Try free cloud VMs (AWS, Google Cloud, Azure)
+5. **Online**: Practice commands on [OverTheWire Bandit](https://overthewire.org/wargames/bandit/)
+
+### What's the difference between Linux distros?
+
+- **Package manager**: apt (Debian), dnf (RedHat), pacman (Arch), emerge (Gentoo)
+- **Release model**: Fixed (Ubuntu LTS), Rolling (Arch, Fedora), Enterprise (RHEL)
+- **Init system**: systemd (most), OpenRC, runit
+- **Use case**: Desktop, Server, Security, Embedded, Development
+- **Philosophy**: Stability, Cutting-edge, Minimalism, Flexibility
+
+See our [Distro Families Guide](Linux/linux-intro.md#major-distro-families).
+
+### How do I update/install packages on Linux?
+
+Depends on your distro's package manager:
+
+**Debian/Ubuntu**:
+```bash
+sudo apt update && sudo apt upgrade
+sudo apt install <package>
+```
+
+**Fedora/RHEL**:
+```bash
+sudo dnf upgrade --refresh
+sudo dnf install <package>
+```
+
+**Arch**:
+```bash
+sudo pacman -Syu
+sudo pacman -S <package>
+```
+
+Check [Linux/user-guide.md](Linux/Debian/user-guide.md) for your distro.
+
+### What's systemd vs other init systems?
+
+**systemd** is the modern standard (most distros use it):
+- Manages services and daemons
+- Controls boot process
+- Unified logging with journalctl
+
+Other init systems (OpenRC, runit) are lighter but less common.
+
+### Where can I learn Linux commands?
+
+- [Linux/COMMANDS.md](Linux/COMMANDS.md) - Quick reference cheat sheet
+- [The Linux Command Line book](https://linuxcommand.org/tlcl.php) - Free comprehensive guide
+- [Linux Journey](https://linuxjourney.com/) - Interactive learning
+- [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) - CLI challenges
+- [ExplainShell.com](https://www.explainshell.com/) - Understand any command
+
+### How do I choose between Arch and Ubuntu?
+
+**Ubuntu**:
+- ✅ Beginner-friendly
+- ✅ Long-term support (5 years LTS)
+- ✅ Large community
+- ❌ More pre-installed (heavier)
+
+**Arch**:
+- ✅ Minimal, you build what you want
+- ✅ Rolling release (always latest)
+- ✅ Excellent wiki
+- ❌ DIY philosophy, steeper learning curve
+
+**Best for beginners**: Start with Ubuntu or Mint, move to Arch after mastering basics.
 
 ### How long does it take to learn a language?
 

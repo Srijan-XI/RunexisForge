@@ -560,6 +560,78 @@ A curated collection of high-quality learning resources for each programming lan
 
 ---
 
+## 🐧 Linux & Operating Systems
+
+### Official Documentation
+- [Linux Kernel](https://www.kernel.org/) - Official Linux kernel
+- [The Linux Foundation](https://www.linuxfoundation.org/) - Organization and resources
+- [Linux Documentation](https://tldp.org/) - The Linux Documentation Project
+
+### Arch Family
+- [Arch Linux Wiki](https://wiki.archlinux.org/) - Comprehensive reference
+- [Arch Installation Guide](https://wiki.archlinux.org/title/Installation_guide)
+- [BlackArch](https://blackarch.org/) - Security tools distro
+- [Garuda Linux](https://garudalinux.org/) - Performance-focused Arch variant
+
+### Debian Family
+- [Debian Official](https://www.debian.org/) - Debian project
+- [Ubuntu Official](https://ubuntu.com/) - Ubuntu releases and support
+- [Linux Mint](https://linuxmint.com/) - Beginner-friendly desktop
+- [Kali Linux](https://www.kali.org/) - Penetration testing
+- [Parrot OS](https://www.parrotsec.org/) - Security and privacy focused
+
+### Red Hat Family
+- [Red Hat](https://www.redhat.com/) - Enterprise Linux
+- [Fedora Project](https://getfedora.org/) - Community-driven distribution
+- [CentOS](https://www.centos.org/) - Community Enterprise OS
+- [Oracle Linux](https://www.oracle.com/linux/) - Free RHEL-compatible
+
+### Other Distributions
+- [Gentoo](https://www.gentoo.org/) - Source-based flexibility
+- [Slackware](http://www.slackware.com/) - Classic minimalist distro
+- [openSUSE](https://www.opensuse.org/) - Community and enterprise
+- [Alpine Linux](https://alpinelinux.org/) - Lightweight, container-focused
+
+### Books
+- **Free**:
+  - [The Linux Command Line](https://linuxcommand.org/tlcl.php) by William Shotts
+  - [Linux Fundamentals](https://linux-training.be/) - Free online course materials
+  - [Ubuntu Manual](https://ubuntu.com/tutorials) - Official tutorials
+
+- **Paid**:
+  - How Linux Works by Brian Ward
+  - The Linux Programming Interface by Michael Kerrisk
+  - Linux Bible by Christopher Negus
+
+### Online Courses
+- [Linux Basics (Linux Academy/Pluralsight)](https://www.pluralsight.com/courses/linux-system-administration-basics)
+- [Ubuntu Linux Server Administration (Udemy)](https://www.udemy.com/topic/ubuntu-linux/)
+- [Linux for Beginners (freeCodeCamp)](https://www.youtube.com/watch?v=sWbUDq4S6Y8)
+- [Linux Essentials (CompTIA)](https://www.comptia.org/certifications/linux)
+
+### YouTube Channels
+- [Linux Foundation](https://www.youtube.com/c/LinuxFoundation)
+- [Learn Linux TV](https://www.youtube.com/c/LearnLinuxtv)
+- [Tecmint](https://www.youtube.com/c/Tecmint)
+- [DJ Ware](https://www.youtube.com/c/DJWare)
+- [TechWorld with Nana](https://www.youtube.com/c/TechWorldwithNana)
+
+### Practice Platforms
+- [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) - Linux CLI challenges
+- [HackerRank Linux](https://www.hackerrank.com/domains/linux-shell)
+- [Linux Journey](https://linuxjourney.com/) - Interactive learning
+- [Exercism Linux](https://exercism.org/tracks/bash) - Bash exercises
+
+### Command References
+- [Man Pages Online](https://man7.org/) - Manual pages
+- [Linux.com Cheat Sheets](https://www.linux.com/)
+- [ExplainShell.com](https://www.explainshell.com/) - Understand shell commands
+- [SS64.com Linux Command Line](https://ss64.com/bash/) - Command reference
+
+---
+
+---
+
 ## 🌐 General Programming Resources
 
 ### Multi-Language Platforms

@@ -13,6 +13,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Interactive coding challenges
 - Video tutorials for installation
 
+## [1.4.0] - 2025-12-19
+
+### Added
+- **Linux** comprehensive operating system guide covering:
+  - Linux kernel overview and distro families (Arch, Debian, RedHat, Gentoo, Slackware, SUSE)
+  - Installation guides (ISO download, USB creation, VM setup, WSL)
+  - Family-specific documentation:
+    - Arch family: Arch, BlackArch, Garuda Linux, RedArch
+    - Debian family: Debian, Ubuntu, Linux Mint, Kali Linux, Parrot OS
+    - RedHat family: RHEL, Fedora, CentOS Stream, Oracle Linux
+    - Gentoo and Slackware
+  - Each distro with intro.md and user-guide.md covering package managers, services, installation steps
+  - Linux COMMANDS.md cheat sheet with package management, system administration, file operations, text processing, and cross-distro tips
+  - Quick reference links and navigation
+- Updated README.md with Operating Systems & Linux Distros table
+- Updated DOCUMENTATION.md with Linux section
+- Added Linux to Getting Started navigation in README
+
+### Changed
+- Enhanced project scope to include operating systems documentation
+- Updated language/OS coverage in README badges and tables
+
 ## [1.3.0] - 2025-11-14
 
 ### Added
