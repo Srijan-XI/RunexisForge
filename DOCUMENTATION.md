@@ -117,6 +117,12 @@ Welcome to the complete documentation for DevSphere!
 - **Practice**: `TypeScript/questions/` (10 questions)
 - **Topics**: Types, Interfaces, Generics, Classes, Advanced Types
 
+### Linux 🐧
+- **Location**: `/Linux/`
+- **Introduction**: `Linux/linux-intro.md`
+- **Installation**: `Linux/INSTALL.md`
+- **Family Guides**: Arch, Debian, RedHat, Gentoo, Slackware (each with `intro.md` and `user-guide.md`)
+
 ### SQL 🗄️
 - **Location**: `/SQL/`
 - **Installation**: `SQL/install&usage.md`

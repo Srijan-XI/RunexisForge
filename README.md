@@ -105,6 +105,17 @@ This repository currently includes guides and practice questions for:
 | **Postman** 📮 | ✅ Available | API Testing, Collections, Newman | Active |
 | **Jest** 🃏 | ✅ Available | Testing Framework, Mocking, Coverage | Active |
 
+### Operating Systems & Linux Distros
+
+| System | Documentation | Topics Covered | Status |
+|--------|---------------|----------------|--------|
+| **Linux** 🐧 | ✅ Available | Kernel, Distro Families, Installation, Commands | Active |
+| **Arch Family** | ✅ Available | Arch, BlackArch, Garuda Linux, RedArch | Active |
+| **Debian Family** | ✅ Available | Debian, Ubuntu, Mint, Kali, Parrot OS | Active |
+| **Red Hat Family** | ✅ Available | RHEL, Fedora, CentOS Stream, Oracle Linux | Active |
+| **Gentoo** | ✅ Available | Source-based, USE flags, Portage | Active |
+| **Slackware** | ✅ Available | Minimalist, UNIX-like, Classic | Active |
+
 ---
 
 ## 🚀 Getting Started
@@ -132,6 +143,7 @@ cd Golang/               # For Go (Golang)
 cd JavaScript/           # For JavaScript (Node.js, Express.js, Next.js)
 cd TypeScript/           # For TypeScript
 cd SQL/                  # For SQL (MySQL, PostgreSQL, MongoDB, Redis, DynamoDB)
+cd Linux/                # For Linux OS & distro docs
 cd Bash/                 # For Bash shell scripting
 cd Kql/                  # For KQL (Kusto Query Language)
 cd Docker/               # For Docker containerization
