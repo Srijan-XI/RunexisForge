@@ -3,7 +3,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/badge/Languages-12-blue.svg)]()
+[![Languages](https://img.shields.io/badge/Languages-13-blue.svg)]()
 [![Frameworks](https://img.shields.io/badge/Frameworks-2-orange.svg)]()
 [![Tools](https://img.shields.io/badge/Tools-5-red.svg)]()
 [![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)]()
@@ -12,6 +12,247 @@
 
 </div>
 
+---
+<!-- ICONS SECTION -->
+ <div>
+       <p align="center">
+
+  <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer" title="angular">
+    <img alt="angular" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=angular&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.redhat.com/en/ansible-collaborative" target="_blank" rel="noopener noreferrer" title="ansible">
+    <img alt="ansible" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=ansible&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer" title="Bash">
+    <img alt="Bash" width="50" src="https://skillicons.dev/icons?i=bash" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer" title="C Language">
+    <img alt="C" width="50" src="https://skillicons.dev/icons?i=c" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://isocpp.org/" target="_blank" rel="noopener noreferrer" title="C++">
+    <img alt="C++" width="50" src="https://skillicons.dev/icons?i=cpp" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" title="CSS">
+    <img alt="CSS" width="50" src="https://skillicons.dev/icons?i=css" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://dotnet.microsoft.com/en-us/" target="_blank" rel="noopener noreferrer" title="dotnet">
+    <img alt="dotnet" width="50" src="https://skillicons.dev/icons?i=dotnet" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://docker.com/" target="_blank" rel="noopener noreferrer" title="docker">
+    <img alt="docker" width="50" src="https://skillicons.dev/icons?i=docker" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer" title="Django">
+    <img alt="Django" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=django&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.dynamodb.org/" target="_blank" rel="noopener noreferrer" title="dynamodb IDE">
+    <img alt="dynamodb" width="50" src="https://skillicons.dev/icons?i=dynamodb" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.java.com/" target="_blank" rel="noopener noreferrer" title="java">
+    <img alt="java" width="50" src="https://skillicons.dev/icons?i=java" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://flask.palletsprojects.com/en/stable/" target="_blank" rel="noopener noreferrer" title="Flask">
+    <img alt="Flask" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=flask&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" title="Git">
+    <img alt="Git" width="50" src="https://skillicons.dev/icons?i=git" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" title="GitHub">
+    <img alt="GitHub" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=github&theme=dark" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer" title="godot">
+    <img alt="godot" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=godot&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" title="HTML">
+    <img alt="HTML" width="50" src="https://skillicons.dev/icons?i=html" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://htmx.org/" target="_blank" rel="noopener noreferrer" title="HTMX">
+    <img alt="HTMX" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=htmx&theme=dark" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" title="JavaScript">
+    <img alt="JavaScript" width="50" src="https://skillicons.dev/icons?i=js" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.kali.org/" target="_blank" rel="noopener noreferrer" title="Kali Linux">
+    <img alt="Kali Linux" width="50" src="https://skillicons.dev/icons?i=kali" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" title="Linux">
+    <img alt="Linux" width="50" src="https://skillicons.dev/icons?i=linux" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.markdownguide.org/" target="_blank" rel="noopener noreferrer" title="Markdown">
+    <img alt="Markdown" width="50" src="https://skillicons.dev/icons?i=md" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://matplotlib.org/" target="_blank" rel="noopener noreferrer" title="Matplotlib">
+    <img alt="Matplotlib" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=matplotlib&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" title="MySQL">
+    <img alt="MySQL" width="50" src="https://skillicons.dev/icons?i=mysql" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.microsoft.com/en-in/sql-server/sql-server-downloads" target="_blank" rel="noopener noreferrer" title="sqlserver">
+    <img alt="sqlserver" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=sqlserver&theme=dark" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" title="Node.js">
+    <img alt="Node.js" width="50" src="https://skillicons.dev/icons?i=nodejs" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer" title="NumPy">
+    <img alt="NumPy" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=numpy&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" title="Pandas">
+    <img alt="Pandas" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=pandas&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer" title="Postman">
+    <img alt="Postman" width="50" src="https://skillicons.dev/icons?i=postman" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer" title="r">
+    <img alt="r" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=r&theme=dark" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python">
+    <img alt="Python" width="50" src="https://skillicons.dev/icons?i=python" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://scipy.org/" target="_blank" rel="noopener noreferrer" title="SciPy">
+    <img alt="SciPy" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=scipy&theme=dark" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://kubernetes.io/" target="_blank" rel="noopener noreferrer" title="kubernetes">
+    <img alt="kubernetes" width="50" src="https://skillicons.dev/icons?i=kubernetes" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://kotlinlang.org/" target="_blank" rel="noopener noreferrer" title="kotlin">
+    <img alt="kotlin" width="50" src="https://skillicons.dev/icons?i=kotlin" style="vertical-align: top;" />
+  </a>
+
+  <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener noreferrer" title="Ruby">
+    <img alt="Ruby" width="50" src="https://skillicons.dev/icons?i=ruby" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" title="react">
+    <img alt="react" width="50" src="https://skillicons.dev/icons?i=react" style="vertical-align: top;" />
+  </a>
+  
+  <a href="https://rust-lang.org/" target="_blank" rel="noopener noreferrer" title="rust">
+    <img alt="rust" width="50" src="https://skillicons.dev/icons?i=rust" style="vertical-align: top;" />
+  </a>
+
+<a href="https://swift.org/" target="_blank" rel="noopener noreferrer" title="swift">
+<img alt="swift" width="50" src="https://skillicons.dev/icons?i=swift" style="vertical-align: top;" />
+</a>
+
+<a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" title="vite">
+  <img alt="vite" width="50" src="https://skillicons.dev/icons?i=vite" style="vertical-align: top;" />
+</a>
+
+<a href="https://vitest.dev/" target="_blank" rel="noopener noreferrer" title="vitest">
+  <img alt="vitest" width="50" src="https://skillicons.dev/icons?i=vitest" style="vertical-align: top;" />
+</a>
+
+<a href="https://yaml.org/" target="_blank" rel="noopener noreferrer" title="yaml">
+  <img alt="yaml" width="50" src="https://skillicons.dev/icons?i=yaml" style="vertical-align: top;" />
+</a>
+
+<a href="https://toml.io/en/" target="_blank" rel="noopener noreferrer" title="toml">
+  <img alt="toml" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=toml&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://streamlit.io/" target="_blank" rel="noopener noreferrer" title="streamlit">
+  <img alt="streamlit" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=streamlit&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer" title="tensorflow">
+  <img alt="tensorflow" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=tensorflow&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://www.langchain.com/" target="_blank" rel="noopener noreferrer" title="langchain">
+  <img alt="langchain" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=langchain&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://tauri.app/" target="_blank" rel="noopener noreferrer" title="tauri">
+  <img alt="tauri" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=tauri&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://laravel.com/" target="_blank" rel="noopener noreferrer" title="laravel">
+  <img alt="laravel" width="50" src="https://skillicons.dev/icons?i=laravel" style="vertical-align: top;" />
+</a>
+
+<a href="https://learn.microsoft.com/windows/wsl/" target="_blank" rel="noopener noreferrer" title="wsl">
+  <img alt="wsl" width="50" src="https://skillicons.dev/icons?i=windows" style="vertical-align: top;" />
+</a>
+
+<a href="https://cuba.is/" target="_blank" rel="noopener noreferrer" title="cuba">
+  <img alt="cuba" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=cuba&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://terraform.io/" target="_blank" rel="noopener noreferrer" title="terraform">
+    <img alt="terraform" width="50" src="https://skillicons.dev/icons?i=terraform" style="vertical-align: top;" />
+</a>
+
+<a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" title="TypeScript">
+    <img alt="TypeScript" width="50" src="https://skillicons.dev/icons?i=ts" style="vertical-align: top;" />
+</a>
+
+<a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" title="vuejs">
+    <img alt="vuejs" width="50" src="https://skillicons.dev/icons?i=vuejs" style="vertical-align: top;" />
+</a>
+
+<a href="https://www.unrealengine.com/" target="_blank" rel="noopener noreferrer" title="unreal">
+    <img alt="unreal" width="50" src="https://skillicons.dev/icons?i=unreal" style="vertical-align: top;" />
+</a>
+
+<a href="https://redis.io/" target="_blank" rel="noopener noreferrer" title="redis">
+    <img alt="redis" width="50" src="https://skillicons.dev/icons?i=redis" style="vertical-align: top;" />
+</a>
+
+<a href="https://www.php.net/" target="_blank" rel="noopener noreferrer" title="php">
+    <img alt="php" width="50" src="https://skillicons.dev/icons?i=php" style="vertical-align: top;" />
+</a>
+
+<a href="https://spring.io/" target="_blank" rel="noopener noreferrer" title="spring">
+    <img alt="spring" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=spring&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://kafka.apache.org/" target="_blank" rel="noopener noreferrer" title="kafka">
+    <img alt="kafka" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=kafka&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://spark.apache.org/" target="_blank" rel="noopener noreferrer" title="spark">
+    <img alt="spark" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=spark&theme=dark" style="vertical-align: top;" />
+</a>
+
+<a href="https://portswigger.net/burp" target="_blank" rel="noopener noreferrer" title="burpsuite">
+    <img alt="burpsuite" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=burpsuite&theme=dark" style="vertical-align: top;" />
+</a>
+
+</p>
+</div>
+
+---
 Welcome to **DevSphere**!  
 This repository provides **step-by-step guides** and **practical examples** to help you install, configure, and start using various programming languages across different platforms (Windows, Linux, macOS).
 
@@ -83,6 +324,7 @@ This repository currently includes guides and practice questions for:
 | **TypeScript** 📘 | ✅ Available | 10 Questions | Active |
 | **Kotlin** 🟣 | ✅ Available | Starter Questions | Active |
 | **Swift** 🍎 | ✅ Available | Starter Questions | Active |
+| **Ruby** 💎 | ✅ Available | Starter Content | Active |
 | **SQL** 🗄️ | ✅ Available | 10 Questions + 5 DB Guides | Active |
 
 ### Python Frameworks
@@ -109,6 +351,21 @@ This repository currently includes guides and practice questions for:
 | **GitHub** 🐙 | ✅ Available | Collaboration, Actions, Pull Requests | Active |
 | **Postman** 📮 | ✅ Available | API Testing, Collections, Newman | Active |
 | **Jest** 🃏 | ✅ Available | Testing Framework, Mocking, Coverage | Active |
+| **Vite** ⚡ | ✅ Available | Frontend tooling, dev server, builds | Active |
+| **Vitest** 🧪 | ✅ Available | Unit testing for Vite projects | Active |
+| **YAML** 🧾 | ✅ Available | Config format basics and examples | Active |
+| **TOML** 🧩 | ✅ Available | Config format basics and examples | Active |
+
+### Web Frameworks & Libraries (More)
+
+| Topic | Guide Available | Notes | Status |
+|------|----------------|-------|--------|
+| **Laravel** 🧱 | ✅ Available | PHP web framework starter docs | Active |
+| **Cuba** 🧊 | ✅ Available | Minimal Ruby web framework starter docs | Active |
+| **LangChain** 🔗 | ✅ Available | LLM app framework starter docs | Active |
+| **TensorFlow** 🧠 | ✅ Available | ML framework starter docs | Active |
+| **Streamlit** 📈 | ✅ Available | Python data apps starter docs | Active |
+| **Tauri** 🖥️ | ✅ Available | Desktop apps (Rust + web UI) starter docs | Active |
 
 ### Data Engineering
 
@@ -145,6 +402,7 @@ This repository currently includes guides and practice questions for:
 | **Red Hat Family** | ✅ Available | RHEL, Fedora, CentOS Stream, Oracle Linux | Active |
 | **Gentoo** | ✅ Available | Source-based, USE flags, Portage | Active |
 | **Slackware** | ✅ Available | Minimalist, UNIX-like, Classic | Active |
+| **WSL** 🪟 | ✅ Available | Run Linux on Windows (WSL 1/2 basics) | Active |
 
 ---
 
@@ -175,6 +433,7 @@ cd JavaScript/           # For JavaScript (Node.js, Express.js, Next.js)
 cd TypeScript/           # For TypeScript
 cd Kotlin/               # For Kotlin
 cd Swift/                # For Swift
+cd Ruby/                # For Ruby
 cd SQL/                  # For SQL (MySQL, PostgreSQL, MongoDB, Redis, DynamoDB)
 cd Linux/                # For Linux OS & distro docs
 cd Bash/                 # For Bash shell scripting
@@ -195,6 +454,17 @@ cd Godot/                # For Godot
 cd Kubernetes/           # For Kubernetes
 cd Terraform/            # For Terraform
 cd Ansible/              # For Ansible
+cd WSL/                  # For Windows Subsystem for Linux
+cd YAML/                 # For YAML config format
+cd TOML/                 # For TOML config format
+cd Vite/                 # For Vite frontend tooling
+cd Vitest/               # For Vitest unit testing
+cd Streamlit/            # For Streamlit data apps
+cd TensorFlow/           # For TensorFlow ML
+cd LangChain/            # For LangChain LLM apps
+cd Tauri/                # For Tauri desktop apps
+cd Laravel/              # For Laravel (PHP framework)
+cd Cuba/                 # For Cuba (Ruby framework)
 ```
 
 ### 3. Follow the Installation Guide

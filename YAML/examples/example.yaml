@@ -1,0 +1,20 @@
+name: devsphere
+version: 1
+active: true
+labels:
+  env: dev
+  owner: you
+ports:
+  - 3000
+  - 8080
+features:
+  - docs
+  - examples
+  - questions
+nested:
+  database:
+    host: localhost
+    enabled: false
+message: |
+  Multi-line text
+  is supported.

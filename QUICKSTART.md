@@ -87,15 +87,28 @@ Install-and-Learn-DevLangs/
 ├── JavaScript/          # JavaScript guides & questions + frameworks
 ├── Kotlin/              # Kotlin guides, examples & questions
 ├── Swift/               # Swift guides, examples & questions
+├── Ruby/                # Ruby guides (starter)
+├── Ruby on Rails/        # Rails framework (starter)
 ├── C & C++/             # C/C++ guides & questions
 ├── PHP/                 # PHP guides & questions
 ├── R/                   # R guides & questions
 ├── RUST/                # Rust guides & questions
+├── Laravel/              # Laravel (PHP framework) starter
+├── Cuba/                 # Cuba (Ruby framework) starter
 ├── Bash/                # Bash shell scripting guide & questions
 ├── Kql/                 # KQL query language guide & questions
 ├── Docker/              # Docker containerization guide
 ├── Git/                 # Git version control guide
 ├── JenKins/             # Jenkins CI/CD guide
+├── WSL/                  # Windows Subsystem for Linux
+├── YAML/                 # YAML config format
+├── TOML/                 # TOML config format
+├── Vite/                 # Vite frontend tooling
+├── Vitest/               # Vitest unit testing
+├── Streamlit/            # Streamlit data apps
+├── TensorFlow/           # TensorFlow ML
+├── LangChain/            # LangChain LLM apps
+├── Tauri/                # Tauri desktop apps
 ├── GitHub/              # GitHub collaboration guide
 ├── Postman/             # Postman API testing guide
 ├── Jest/                # Jest testing guide

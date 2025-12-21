@@ -1,0 +1,10 @@
+# Q1: Write a minimal pyproject snippet
+#
+# Goal:
+# - Fill in a minimal project metadata section.
+
+[project]
+name = "TODO_NAME"
+version = "0.1.0"
+description = "TODO_DESCRIPTION"
+requires-python = ">=3.10"

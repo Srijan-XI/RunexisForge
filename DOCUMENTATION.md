@@ -7,14 +7,17 @@ Welcome to the complete documentation for DevSphere!
 ## 📚 Core Documentation
 
 ### Summary
-- **12 Programming Languages**: Python, Java, C/C++, PHP, R, Rust, Go, JavaScript, TypeScript, Kotlin, Swift, SQL
+- **13 Programming Languages**: Python, Java, C/C++, PHP, R, Rust, Go, JavaScript, TypeScript, Kotlin, Swift, Ruby, SQL
 - **141+ Practice Questions**: Beginner to Expert levels
 - **Python Frameworks**: Django, Flask
 - **JavaScript Frameworks**: Node.js, Express.js, Next.js
 - **DevOps & CI/CD Tools**: Docker, Git, Jenkins
-- **Development Tools**: Bash, KQL, GitHub, Postman, Jest
+- **Development Tools**: Bash, KQL, GitHub, Postman, Jest, Vite, Vitest
+- **Config Formats**: YAML, TOML
 - **Database Guides**: MySQL, PostgreSQL, MongoDB, Redis, DynamoDB
 - **Data Engineering**: Apache Spark, Apache Kafka, Pandas, NumPy
+- **AI/ML & Data Apps**: TensorFlow, Streamlit, LangChain
+- **Desktop Development**: Tauri
 - **Infrastructure & Automation**: Kubernetes, Terraform, Ansible
 - **Game Development**: Unity, Unreal Engine, Godot
 
@@ -134,11 +137,25 @@ Welcome to the complete documentation for DevSphere!
 - **Examples**: `Swift/examples/`
 - **Practice**: `Swift/questions/`
 
+### Ruby 💎
+- **Location**: `/Ruby/`
+- **Introduction**: `Ruby/intro.md`
+- **User Guide**: `Ruby/user-guide.md`
+- **Examples**: `Ruby/examples/`
+- **Practice**: `Ruby/questions/`
+
 ### Linux 🐧
 - **Location**: `/Linux/`
 - **Introduction**: `Linux/linux-intro.md`
 - **Installation**: `Linux/INSTALL.md`
 - **Family Guides**: Arch, Debian, RedHat, Gentoo, Slackware (each with `intro.md` and `user-guide.md`)
+
+### WSL (Windows Subsystem for Linux) 🪟
+- **Location**: `/WSL/`
+- **Introduction**: `WSL/intro.md`
+- **User Guide**: `WSL/user-guide.md`
+- **Examples**: `WSL/examples/`
+- **Practice**: `WSL/questions/`
 
 ### SQL 🗄️
 - **Location**: `/SQL/`
@@ -157,6 +174,82 @@ Welcome to the complete documentation for DevSphere!
 - **Location**: `/Docker/`
 - **Introduction**: `Docker/intro.md`
 - **Topics**: Containers, Images, Dockerfile, Docker Compose, Volumes, Networking, Best Practices
+
+### YAML 🧾
+- **Location**: `/YAML/`
+- **Introduction**: `YAML/intro.md`
+- **User Guide**: `YAML/user-guide.md`
+- **Examples**: `YAML/examples/`
+- **Practice**: `YAML/questions/`
+
+### TOML 🧩
+- **Location**: `/TOML/`
+- **Introduction**: `TOML/intro.md`
+- **User Guide**: `TOML/user-guide.md`
+- **Examples**: `TOML/examples/`
+- **Practice**: `TOML/questions/`
+
+### Vite ⚡
+- **Location**: `/Vite/`
+- **Introduction**: `Vite/intro.md`
+- **User Guide**: `Vite/user-guide.md`
+- **Examples**: `Vite/examples/`
+- **Practice**: `Vite/questions/`
+
+### Vitest 🧪
+- **Location**: `/Vitest/`
+- **Introduction**: `Vitest/intro.md`
+- **User Guide**: `Vitest/user-guide.md`
+- **Examples**: `Vitest/examples/`
+- **Practice**: `Vitest/questions/`
+
+### Streamlit 📈
+- **Location**: `/Streamlit/`
+- **Introduction**: `Streamlit/intro.md`
+- **User Guide**: `Streamlit/user-guide.md`
+- **Examples**: `Streamlit/examples/`
+- **Practice**: `Streamlit/questions/`
+
+### TensorFlow 🧠
+- **Location**: `/TensorFlow/`
+- **Introduction**: `TensorFlow/intro.md`
+- **User Guide**: `TensorFlow/user-guide.md`
+- **Examples**: `TensorFlow/examples/`
+- **Practice**: `TensorFlow/questions/`
+
+### LangChain 🔗
+- **Location**: `/LangChain/`
+- **Introduction**: `LangChain/intro.md`
+- **User Guide**: `LangChain/user-guide.md`
+- **Examples**: `LangChain/examples/`
+- **Practice**: `LangChain/questions/`
+
+### Tauri 🖥️
+- **Location**: `/Tauri/`
+- **Introduction**: `Tauri/intro.md`
+- **User Guide**: `Tauri/user-guide.md`
+- **Examples**: `Tauri/examples/`
+- **Practice**: `Tauri/questions/`
+
+### Laravel 🧱
+- **Location**: `/Laravel/`
+- **Introduction**: `Laravel/intro.md`
+- **User Guide**: `Laravel/user-guide.md`
+- **Examples**: `Laravel/examples/`
+- **Practice**: `Laravel/questions/`
+
+### Cuba 🧊
+- **Location**: `/Cuba/`
+- **Introduction**: `Cuba/intro.md`
+- **User Guide**: `Cuba/user-guide.md`
+- **Examples**: `Cuba/examples/`
+- **Practice**: `Cuba/questions/`
+
+### Ruby on Rails 🚂
+- **Location**: `/Ruby on Rails/`
+- **Introduction**: `Ruby on Rails/intro.md`
+- **User Guide**: `Ruby on Rails/user-guide.md`
+- **Practice**: `Ruby on Rails/questions/`
 
 ### Git 📚
 - **Location**: `/Git/`
