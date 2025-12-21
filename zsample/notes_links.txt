@@ -1,0 +1,19 @@
+Note PDF Download Links:
+- Bash : https://goalkicker.com/BashBook/
+- C : https://goalkicker.com/CBook/
+- C++ : https://goalkicker.com/CPlusPlusBook/
+- Java : https://goalkicker.com/JavaBook/
+- JavaScript : https://goalkicker.com/JavaScriptBook/
+- Python : https://goalkicker.com/PythonBook/
+- Typescript : https://goalkicker.com/TypeScriptBook/
+- PostgreSQL : https://goalkicker.com/PostgreSQLBook/
+- SQL : https://goalkicker.com/SQLBook/
+- HTML : https://goalkicker.com/HTMLBook/
+- CSS : https://goalkicker.com/CSSBook/
+- R : https://goalkicker.com/RBook/
+- php : https://goalkicker.com/PHPBook/
+- My SQL : https://goalkicker.com/MySQLBook/
+- Node JS : https://goalkicker.com/NodeJSBook/
+- MongoDB : https://goalkicker.com/MongoDBBook/
+- Git : https://goalkicker.com/GitBook/
+- Spring Boot : https://goalkicker.com/SpringFrameworkBook/

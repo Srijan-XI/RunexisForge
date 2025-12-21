@@ -1,0 +1,215 @@
+Project List
+
+Project List divided by code like for beginner level project are noticed by 'B',
+Intermediate level project are noticed by 'I', Advanced level project are noticed by 'A' and All level project are noticed by 'AL'.
+
+For example: TO-DO 'B' means this is a beginner level project, library management system 'I' means this is an intermediate level project,
+Chat application 'A' means this is an advanced level project, AI based code generator and 'AL' means this project is for all levels.
+
+================================================================================
+Java Projects For All Levels: Beginner, Intermediate, and Advanced
+================================================================================
+
+Beginner Level (B):
+1. Build a Basic Calculator 'B'
+2. Create a Currency Converter 'B'
+3. Make a To-Do List Application 'B'
+
+Intermediate Level (I):
+4. Develop a Library Management System 'I'
+5. Build a Simple Search Engine 'I'
+6. Make a Chat Application 'I'
+7. Build an Inventory Management System 'I'
+
+Advanced Level (A):
+8. Create an E-commerce Shopping System 'A'
+9. Build a Web Scraping Application 'A'
+10. Create a Job Portal Website 'A'
+
+All Levels (AL):
+11. Mobile App Development Projects 'AL'
+12. Data Analysis and Visualization Project 'AL'
+13. Game Development Projects 'AL'
+14. AI and Machine Learning Projects 'AL'
+15. Spring Boot Microservices Application 'AL'
+
+================================================================================
+Python Projects For All Levels: Beginner, Intermediate, and Advanced
+================================================================================
+
+Beginner Level (B):
+1. To-Do List CLI App 'B'
+2. Weather App using API 'B'
+3. Blog Website with Flask 'B'
+4. Password Generator 'B'
+
+Intermediate Level (I):
+5. Expense Tracker (Local DB) 'I'
+6. Chat Application with Sockets 'I'
+7. URL Shortener 'I'
+8. Quiz App with Timer (Tkinter or Flask) 'I'
+
+Advanced Level (A):
+9. E-commerce Website with Django 'A'
+10. Blog Platform (Flask or Django) 'A'
+11. Social Media Dashboard 'A'
+12. RESTful API for Library Management 'A'
+13. AI Chatbot using LangChain or OpenAI API 'A'
+
+All Levels (AL):
+14. Data Analysis with Pandas and Matplotlib 'AL'
+
+================================================================================
+C++ Projects For All Levels: Beginner, Intermediate, and Advanced
+================================================================================
+
+Beginner Level (B):
+1. Calculator App 'B'
+2. To-Do List Manager 'B'
+3. Number Guessing Game 'B'
+4. Simple Bank Management System 'B'
+5. Tic-Tac-Toe Game 'B'
+6. Student Record System 'B'
+7. Temperature Converter 'B'
+8. File Encryption/Decryption Tool 'B'
+9. Quiz Application 'B'
+10. Contact Management System 'B'
+11. Basic Chat Console App 'B'
+12. Currency Converter 'B'
+13. Password Generator 'B'
+14. Library Management System 'B'
+15. Simple Stopwatch Timer 'B'
+
+Intermediate Level (I):
+16. Inventory Management System 'I'
+17. Hotel Reservation System 'I'
+18. File Compression Utility (Huffman Coding) 'I'
+19. Bus/Train Ticket Booking Simulator 'I'
+20. Expense Tracker 'I'
+21. Music Player (CLI-based) 'I'
+22. Mini Search Engine (Keyword-based) 'I'
+23. Data Visualization using SFML 'I'
+24. Chess or Snake Game 'I'
+25. Student Result Management System 'I'
+26. Car Rental System 'I'
+27. File System Simulator 'I'
+28. Hospital Management System 'I'
+29. Movie Recommendation System 'I'
+30. Weather Forecast Console App (API integration) 'I'
+
+Advanced Level (A):
+31. Compiler or Interpreter (Mini C++/Custom Language) 'A'
+32. Operating System Shell Simulation 'A'
+33. Database Engine (Mini SQL Processor) 'A'
+34. Blockchain Simulation 'A'
+35. Chat Application using Socket Programming 'A'
+36. Machine Learning Algorithm Implementation (e.g., KNN, SVM) 'A'
+37. Game Engine Core (2D/3D with OpenGL) 'A'
+38. Web Server from Scratch 'A'
+39. Distributed File System 'A'
+40. Virtual Memory Manager Simulation 'A'
+41. Neural Network Library 'A'
+42. Multiplayer Game using Networking 'A'
+43. Real-Time Stock Market Simulator 'A'
+44. Custom Encryption Algorithm Suite 'A'
+45. AI Pathfinding Visualizer (A*, Dijkstra) 'A'
+
+================================================================================
+C Projects For All Levels: Beginner, Intermediate, and Advanced
+================================================================================
+
+Beginner Level (B):
+1. Simple Calculator 'B'
+2. Student Record Management System 'B'
+3. Number Guessing Game 'B'
+4. Tic-Tac-Toe Game 'B'
+5. Temperature Conversion Program 'B'
+
+Intermediate Level (I):
+6. Library Management System 'I'
+7. Bank Management System 'I'
+8. File Compression Tool 'I'
+9. Hospital Management System 'I'
+10. Mini Shell (Command Line Interpreter) 'I'
+
+Advanced Level (A):
+11. Chat Application using Sockets 'A'
+12. Compiler or Interpreter (Basic) 'A'
+13. Operating System Shell Simulation 'A'
+14. HTTP Web Server 'A'
+15. Database Management System (Custom SQL Engine) 'A'
+
+================================================================================
+Go Projects For All Levels: Beginner, Intermediate, and Advanced
+================================================================================
+
+Beginner Level (B):
+1. CLI Calculator 'B'
+2. To-Do List App (Terminal-based) 'B'
+3. File Renamer Utility 'B'
+4. JSON to CSV Converter 'B'
+5. URL Shortener (basic version) 'B'
+
+Intermediate Level (I):
+6. RESTful API for Notes App 'I'
+7. URL Shortener with Database 'I'
+8. Chat Application (TCP or WebSocket) 'I'
+9. Task Scheduler (Cron-style) 'I'
+10. Web Scraper with Concurrency 'I'
+
+Advanced Level (A):
+11. Microservice-based Blog Platform 'A'
+12. Real-time Stock Tracker using WebSockets 'A'
+13. Custom Load Balancer 'A'
+14. Distributed File Storage System 'A'
+15. Lightweight Web Framework (like a mini Gin clone) 'A'
+
+================================================================================
+Rust Projects For All Levels: Beginner, Intermediate, and Advanced
+================================================================================
+
+Beginner Level (B):
+1. Command-Line Calculator 'B'
+2. Guess the Number Game 'B'
+3. File Organizer 'B'
+4. Basic Todo CLI App 'B'
+5. URL Shortener (in-memory) 'B'
+
+Intermediate Level (I):
+6. REST API with Actix or Rocket 'I'
+7. Markdown to HTML Converter 'I'
+8. Multi-threaded Web Scraper 'I'
+9. Chat Server using Tokio 'I'
+10. Simple Database Engine 'I'
+
+Advanced Level (A):
+11. HTTP Server from Scratch 'A'
+12. Blockchain Prototype 'A'
+13. Game Engine Core (2D) 'A'
+14. Distributed Key-Value Store 'A'
+15. Operating System Kernel (TinyOS clone) 'A'
+
+================================================================================
+PHP Projects For All Levels: Beginner, Intermediate, and Advanced
+================================================================================
+
+Beginner Level (B):
+1. Simple Calculator 'B'
+2. Contact Form with Validation 'B'
+3. Basic Login & Signup System 'B'
+4. To-Do List App 'B'
+5. Guestbook Application 'B'
+
+Intermediate Level (I):
+6. Blog Management System 'I'
+7. File Upload & Management System 'I'
+8. Polling/Voting App 'I'
+9. Event Calendar 'I'
+10. URL Shortener with MySQL 'I'
+
+Advanced Level (A):
+11. E-Commerce Website 'A'
+12. Learning Management System (LMS) 'A'
+13. Content Management System (CMS) 'A'
+14. Social Networking Platform 'A'
+15. Online Job Portal 'A'

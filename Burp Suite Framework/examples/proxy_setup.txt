@@ -1,0 +1,39 @@
+# Burp Suite Proxy Setup
+
+## Browser Configuration Steps
+
+### Firefox
+1. Settings → Network Settings
+2. Manual proxy configuration
+3. HTTP Proxy: 127.0.0.1
+4. Port: 8080
+5. Check "Use this proxy for all protocols"
+
+### Chrome
+1. Settings → Advanced → System → Proxy settings
+2. Manual proxy setup
+3. HTTP proxy: 127.0.0.1
+4. Port: 8080
+
+## Certificate Installation
+
+### Firefox
+1. Open http://burp in browser
+2. Click "CA Certificate" download
+3. Firefox → Preferences → Privacy → Certificates
+4. Click "View Certificates"
+5. Import downloaded certificate
+
+### Chrome
+1. Download CA certificate from http://burp
+2. Settings → Security and Privacy → Manage certificates
+3. Click "Import"
+4. Select downloaded certificate
+5. Trust for websites
+
+## Test Request
+
+Once proxy is configured:
+1. Open http://example.com
+2. Check Burp's Proxy → HTTP history
+3. You should see captured requests

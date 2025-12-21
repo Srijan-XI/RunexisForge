@@ -1,0 +1,8 @@
+# Basic Port Scanning with Metasploit
+
+use auxiliary/scanner/nmap/nmap
+set RHOSTS 192.168.1.0/24
+set ARGUMENTS -p 1-65535 -sV
+run
+
+# This scans a network range for open ports and services

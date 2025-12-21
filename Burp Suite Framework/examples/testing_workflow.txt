@@ -1,0 +1,50 @@
+# Web Application Security Testing Workflow
+
+## Phase 1: Reconnaissance
+1. Map application manually using proxy
+2. Identify all input fields
+3. Note parameters and functionality
+4. Understand authentication flow
+
+## Phase 2: Scanning
+1. Set Target Scope
+2. Run Burp Scanner on scope
+3. Review automated findings
+4. Verify false positives
+
+## Phase 3: Manual Testing
+1. Test Authentication:
+   - Bypass login
+   - Session fixation
+   - Account enumeration
+
+2. Test Authorization:
+   - Privilege escalation
+   - Horizontal escalation
+   - Insecure direct object references
+
+3. Test Input Validation:
+   - SQL Injection
+   - XSS (Stored, Reflected, DOM)
+   - Command Injection
+   - Path Traversal
+
+## Phase 4: Advanced Testing
+1. Use Intruder for fuzzing
+2. Analyze with Sequencer
+3. Test API endpoints
+4. Check for CSRF tokens
+
+## Phase 5: Reporting
+1. Export findings
+2. Create risk ratings
+3. Document proof of concepts
+4. Provide remediation advice
+
+## Critical Vulnerabilities to Report
+- SQL Injection
+- Remote Code Execution
+- Authentication Bypass
+- Privilege Escalation
+- XXE Injection
+- SSRF

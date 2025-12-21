@@ -1,0 +1,37 @@
+# Testing for SQL Injection with Burp Intruder
+
+## Step 1: Identify Input Point
+- Target: http://vulnerable-app/search
+- Parameter: ?query=
+
+## Step 2: Send to Intruder
+Right-click request → Send to Intruder
+
+## Step 3: Set Positions
+Mark payload positions with §
+GET /search?query=§test§ HTTP/1.1
+
+## Step 4: Configure Payloads
+Payloads tab:
+- Type: Simple list
+- Add payloads:
+  * ' OR '1'='1
+  * admin'--
+  * ' UNION SELECT NULL--
+  * 1' AND '1'='1
+
+## Step 5: Start Attack
+Click "Start attack"
+
+## Step 6: Analyze Results
+Look for:
+- Different response codes
+- Longer response lengths
+- Database error messages
+- Unusual page content
+
+## Successful SQL Injection Signs
+- Query returns different results
+- SQL error messages visible
+- Authentication bypass (login as admin)
+- Data extraction possible

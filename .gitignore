@@ -100,12 +100,66 @@ target/
 Cargo.lock
 **/*.rs.bk
 
-# Node.js (if added in future)
+# Node.js / React / Vue / Angular / Svelte
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
+yarn.lock
+dist/
+.next/
+.nuxt/
+out/
+.cache/
+
+# ASP.NET Core
+bin/
+obj/
+*.csproj.user
+*.csproj.nuget.*
+.vs/
+.vscode/settings.json
+.vsconfig
+Properties/launchSettings.json
+appsettings.Development.json
+*.user
+*.userprefs
+
+# Ruby / Ruby on Rails
+Gemfile.lock
+.ruby-version
+.ruby-gemset
+vendor/
+.bundle/
+log/
+tmp/
+*.swp
+*.swo
+*.swapdiff
+
+# Penetration Testing Tools
+# Metasploit Framework
+.msf4/
+.msfconsole_history
+metasploit-modules/
+modules/
+
+# Burp Suite
+burp-project-*.state
+burpsuite_config/
+burp-exports/
+burp-reports/
+
+# Security & Database Files
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+postgres_data/
+mysql_data/
+mongodb_data/
+openvas_data/
 
 # Logs and Databases
 *.log
@@ -129,6 +183,5 @@ secrets/
 .env
 .env.local
 credentials.json
-# Ignore text files
-*.txt
-samples/
+# Ignore text files in this directory
+zsamples/

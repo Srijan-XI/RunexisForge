@@ -1,0 +1,13 @@
+# SMB Enumeration Example
+
+use auxiliary/scanner/smb/smb_version
+set RHOSTS 192.168.1.100
+run
+
+# Enumerate SMB shares
+use auxiliary/scanner/smb/smb_enumshares
+set RHOSTS 192.168.1.100
+set RHOSTS_GLOBAL false
+run
+
+# This identifies Windows systems and available shares
