@@ -1,4 +1,5 @@
-# 🚀 DevSphere - Programming Language Learning Hub
+# Install-and-Learn-DevLangs
+# 🚀 DevSphere - Main Directory
 
 <div align="center">
 
@@ -253,7 +254,7 @@
 </div>
 
 ---
-Welcome to **DevSphere**!  
+Welcome to **Install-and-Learn-DevLangs** the main directory **Devsphere**!  
 This repository provides **step-by-step guides** and **practical examples** to help you install, configure, and start using various programming languages across different platforms (Windows, Linux, macOS).
 
 Whether you're a beginner or setting up a fresh dev environment, this guide has you covered.
