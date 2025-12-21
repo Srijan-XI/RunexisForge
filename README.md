@@ -1,21 +1,25 @@
-# Install-and-Learn-DevLangs
-# 🚀 DevSphere - Main Directory
+# DevSphere — Install & Learn DevLangs
 
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Languages](https://img.shields.io/badge/Languages-13-blue.svg)]()
-[![Frameworks](https://img.shields.io/badge/Frameworks-2-orange.svg)]()
-[![Tools](https://img.shields.io/badge/Tools-5-red.svg)]()
+[![Frameworks](https://img.shields.io/badge/Frameworks-8-orange.svg)]()
+[![Tools](https://img.shields.io/badge/Tools-10-red.svg)]()
 [![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-success.svg)]()
 
+  <p align="center">
+    Step-by-step setup guides, examples, and practice for languages, frameworks, and tools.
+  </p>
+
 </div>
 
 ---
+
 <!-- ICONS SECTION -->
- <div>
+<div>
        <p align="center">
 
   <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer" title="angular">
@@ -254,7 +258,7 @@
 </div>
 
 ---
-Welcome to **Install-and-Learn-DevLangs** the main directory **Devsphere**!  
+Welcome to **DevSphere**!  
 This repository provides **step-by-step guides** and **practical examples** to help you install, configure, and start using various programming languages across different platforms (Windows, Linux, macOS).
 
 Whether you're a beginner or setting up a fresh dev environment, this guide has you covered.
@@ -303,8 +307,11 @@ Or jump directly to a language folder and follow the installation guide!
 - ✅ **Tooling Help** – IDE setup, compilers, package managers  
 - ✅ **Troubleshooting Tips** – Common issues and their fixes  
 - ✅ **Data Engineering** – Apache Spark, Apache Kafka, Pandas, NumPy  
+- ✅ **AI/ML & Data Apps** – TensorFlow, Streamlit, LangChain  
 - ✅ **Game Development** – Unity, Unreal Engine, Godot  
 - ✅ **Infrastructure & Automation** – Kubernetes, Terraform, Ansible  
+- ✅ **Config Formats** – YAML, TOML  
+- ✅ **Desktop Development** – Tauri  
 
 ---
 
@@ -577,7 +584,7 @@ Curious about what's next? Check our [**ROADMAP.md**](ROADMAP.md) to see:
 - 💡 How you can help shape the future
 - 📊 Project milestones and goals
 
-We're planning to add JavaScript, Go, SQL, and much more!
+Follow [**ROADMAP.md**](ROADMAP.md) for upcoming additions.
 
 ---
 
