@@ -81,9 +81,12 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Install-and-Learn-DevLangs/
 │
 ├── PYTHON/              # Python guides & questions
-├── Python Framework/    # Django & Flask guides
+├── Django/              # Django framework guide
+├── Flask/               # Flask framework guide
 ├── JAVA/                # Java guides & questions  
 ├── JavaScript/          # JavaScript guides & questions + frameworks
+├── Kotlin/              # Kotlin guides, examples & questions
+├── Swift/               # Swift guides, examples & questions
 ├── C & C++/             # C/C++ guides & questions
 ├── PHP/                 # PHP guides & questions
 ├── R/                   # R guides & questions

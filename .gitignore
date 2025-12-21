@@ -172,7 +172,6 @@ openvas_data/
 *.backup
 
 # Compiled Documentation
-*.pdf
 *.docx
 
 # Security - Never commit these

@@ -5,13 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.5.2] - 2025-12-22
 
-### Planned
-- Swift programming language guide
-- Kotlin programming language guide
-- Interactive coding challenges
-- Video tutorials for installation
+### Added
+- **Kotlin** documentation and starter content: intro, user guide, examples, and practice questions
+- **Swift** documentation and starter content: intro, user guide, examples, and practice questions
+
+### Changed
+- Updated README.md and DOCUMENTATION.md to include Kotlin and Swift
+
+## [1.5.1] - 2025-12-22
+
+### Added
+- **Game Development** documentation and starter content:
+  - **Unity**: intro, user guide, example C# script, and a practice script
+  - **Unreal Engine**: intro, user guide, example snippet, and a practice task
+  - **Godot**: intro, user guide, example GDScript, and a practice script
+- **Infrastructure & Automation** documentation and starter content:
+  - **Kubernetes**: intro, user guide, example manifest, and a practice manifest
+  - **Terraform**: intro, user guide, example `.tf`, and a practice `.tf`
+  - **Ansible**: intro, user guide, example inventory/playbook, and a practice playbook
+
+## [1.5.0] - 2025-12-20
+
+### Added
+- **Data Engineering** documentation and practice content:
+  - **Apache Spark**: intro, user guide, examples, and practice questions
+  - **Apache Kafka**: intro, user guide, examples, and practice questions
+  - **Pandas**: intro, user guide, examples, and practice questions
+  - **NumPy**: intro, user guide, examples, and practice questions
+- Updated README.md and DOCUMENTATION.md to include Data Engineering section
 
 ## [1.4.0] - 2025-12-19
 

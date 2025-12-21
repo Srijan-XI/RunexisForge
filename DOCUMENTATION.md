@@ -7,13 +7,16 @@ Welcome to the complete documentation for DevSphere!
 ## 📚 Core Documentation
 
 ### Summary
-- **10 Programming Languages**: Python, Java, C/C++, PHP, R, Rust, Go, JavaScript, TypeScript, SQL
+- **12 Programming Languages**: Python, Java, C/C++, PHP, R, Rust, Go, JavaScript, TypeScript, Kotlin, Swift, SQL
 - **141+ Practice Questions**: Beginner to Expert levels
 - **Python Frameworks**: Django, Flask
 - **JavaScript Frameworks**: Node.js, Express.js, Next.js
 - **DevOps & CI/CD Tools**: Docker, Git, Jenkins
 - **Development Tools**: Bash, KQL, GitHub, Postman, Jest
 - **Database Guides**: MySQL, PostgreSQL, MongoDB, Redis, DynamoDB
+- **Data Engineering**: Apache Spark, Apache Kafka, Pandas, NumPy
+- **Infrastructure & Automation**: Kubernetes, Terraform, Ansible
+- **Game Development**: Unity, Unreal Engine, Godot
 
 ### Getting Started
 - **[README.md](README.md)** - Project overview, features, and main documentation
@@ -48,15 +51,15 @@ Welcome to the complete documentation for DevSphere!
 ### Python Frameworks 🎯
 
 #### Django
-- **Location**: `/Python Framework/Django/`
-- **Introduction**: `Python Framework/Django/intro.md`
-- **User Guide**: `Python Framework/Django/user-guide.md`
+- **Location**: `/Django/`
+- **Introduction**: `Django/intro.md`
+- **User Guide**: `Django/user-guide.md`
 - **Topics**: MTV Architecture, ORM, Admin, Models, Migrations, Views, Templates, Forms, Django REST Framework, Authentication, Testing, Deployment
 
 #### Flask
-- **Location**: `/Python Framework/Flask/`
-- **Introduction**: `Python Framework/Flask/intro.md`
-- **User Guide**: `Python Framework/Flask/user-guide.md`
+- **Location**: `/Flask/`
+- **Introduction**: `Flask/intro.md`
+- **User Guide**: `Flask/user-guide.md`
 - **Topics**: Microframework, Routing, Templates, Forms, SQLAlchemy, Migrations, Blueprints, App Factory, Testing, APIs, Deployment
 
 ### Java ☕
@@ -117,6 +120,20 @@ Welcome to the complete documentation for DevSphere!
 - **Practice**: `TypeScript/questions/` (10 questions)
 - **Topics**: Types, Interfaces, Generics, Classes, Advanced Types
 
+### Kotlin 🟣
+- **Location**: `/Kotlin/`
+- **Introduction**: `Kotlin/intro.md`
+- **User Guide**: `Kotlin/user-guide.md`
+- **Examples**: `Kotlin/examples/`
+- **Practice**: `Kotlin/questions/`
+
+### Swift 🍎
+- **Location**: `/Swift/`
+- **Introduction**: `Swift/intro.md`
+- **User Guide**: `Swift/user-guide.md`
+- **Examples**: `Swift/examples/`
+- **Practice**: `Swift/questions/`
+
 ### Linux 🐧
 - **Location**: `/Linux/`
 - **Introduction**: `Linux/linux-intro.md`
@@ -152,6 +169,88 @@ Welcome to the complete documentation for DevSphere!
 - **Introduction**: `JenKins/intro.md`
 - **User Guide**: `JenKins/user-guide.md`
 - **Topics**: CI/CD, Installation (Docker/Package Managers/WAR), Jobs, Pipelines, Pipeline as Code, Source Control Integration, Build Triggers, Agents, Credentials, Plugins, Best Practices
+
+---
+
+## 📈 Data Engineering
+
+### Apache Spark ⚡
+- **Location**: `/Apache Spark/`
+- **Introduction**: `Apache Spark/intro.md`
+- **User Guide**: `Apache Spark/user-guide.md`
+- **Examples**: `Apache Spark/examples/`
+- **Practice**: `Apache Spark/questions/`
+
+### Apache Kafka 📨
+- **Location**: `/Apache Kafka/`
+- **Introduction**: `Apache Kafka/intro.md`
+- **User Guide**: `Apache Kafka/user-guide.md`
+- **Examples**: `Apache Kafka/examples/`
+- **Practice**: `Apache Kafka/questions/`
+
+### Pandas 🧮
+- **Location**: `/Pandas/`
+- **Introduction**: `Pandas/intro.md`
+- **User Guide**: `Pandas/user-guide.md`
+- **Examples**: `Pandas/examples/`
+- **Practice**: `Pandas/questions/`
+
+### NumPy 🔢
+- **Location**: `/NumPy/`
+- **Introduction**: `NumPy/intro.md`
+- **User Guide**: `NumPy/user-guide.md`
+- **Examples**: `NumPy/examples/`
+- **Practice**: `NumPy/questions/`
+
+---
+
+## 🧰 Infrastructure & Automation
+
+### Kubernetes ☸️
+- **Location**: `/Kubernetes/`
+- **Introduction**: `Kubernetes/intro.md`
+- **User Guide**: `Kubernetes/user-guide.md`
+- **Examples**: `Kubernetes/examples/`
+- **Practice**: `Kubernetes/questions/`
+
+### Terraform 🧱
+- **Location**: `/Terraform/`
+- **Introduction**: `Terraform/intro.md`
+- **User Guide**: `Terraform/user-guide.md`
+- **Examples**: `Terraform/examples/`
+- **Practice**: `Terraform/questions/`
+
+### Ansible 🧰
+- **Location**: `/Ansible/`
+- **Introduction**: `Ansible/intro.md`
+- **User Guide**: `Ansible/user-guide.md`
+- **Examples**: `Ansible/examples/`
+- **Practice**: `Ansible/questions/`
+
+---
+
+## 🎮 Game Development
+
+### Unity 🎮
+- **Location**: `/Unity/`
+- **Introduction**: `Unity/intro.md`
+- **User Guide**: `Unity/user-guide.md`
+- **Examples**: `Unity/examples/`
+- **Practice**: `Unity/questions/`
+
+### Unreal Engine 🧩
+- **Location**: `/Unreal Engine/`
+- **Introduction**: `Unreal Engine/intro.md`
+- **User Guide**: `Unreal Engine/user-guide.md`
+- **Examples**: `Unreal Engine/examples/`
+- **Practice**: `Unreal Engine/questions/`
+
+### Godot 🟦
+- **Location**: `/Godot/`
+- **Introduction**: `Godot/intro.md`
+- **User Guide**: `Godot/user-guide.md`
+- **Examples**: `Godot/examples/`
+- **Practice**: `Godot/questions/`
 
 ---
 

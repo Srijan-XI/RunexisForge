@@ -3,7 +3,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/badge/Languages-10-blue.svg)]()
+[![Languages](https://img.shields.io/badge/Languages-12-blue.svg)]()
 [![Frameworks](https://img.shields.io/badge/Frameworks-2-orange.svg)]()
 [![Tools](https://img.shields.io/badge/Tools-5-red.svg)]()
 [![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)]()
@@ -60,6 +60,9 @@ Or jump directly to a language folder and follow the installation guide!
 - ✅ **Platform Coverage** – Instructions for Windows, Linux, and macOS  
 - ✅ **Tooling Help** – IDE setup, compilers, package managers  
 - ✅ **Troubleshooting Tips** – Common issues and their fixes  
+- ✅ **Data Engineering** – Apache Spark, Apache Kafka, Pandas, NumPy  
+- ✅ **Game Development** – Unity, Unreal Engine, Godot  
+- ✅ **Infrastructure & Automation** – Kubernetes, Terraform, Ansible  
 
 ---
 
@@ -78,6 +81,8 @@ This repository currently includes guides and practice questions for:
 | **Go (Golang)** 🐹 | ✅ Available | 10 Questions | Active |
 | **JavaScript** 🟨 | ✅ Available | 25 Questions + 3 Frameworks | Active |
 | **TypeScript** 📘 | ✅ Available | 10 Questions | Active |
+| **Kotlin** 🟣 | ✅ Available | Starter Questions | Active |
+| **Swift** 🍎 | ✅ Available | Starter Questions | Active |
 | **SQL** 🗄️ | ✅ Available | 10 Questions + 5 DB Guides | Active |
 
 ### Python Frameworks
@@ -104,6 +109,31 @@ This repository currently includes guides and practice questions for:
 | **GitHub** 🐙 | ✅ Available | Collaboration, Actions, Pull Requests | Active |
 | **Postman** 📮 | ✅ Available | API Testing, Collections, Newman | Active |
 | **Jest** 🃏 | ✅ Available | Testing Framework, Mocking, Coverage | Active |
+
+### Data Engineering
+
+| Tool/Library | Guide Available | Topics Covered | Status |
+|-------------|----------------|----------------|--------|
+| **Apache Spark** ⚡ | ✅ Available | PySpark, DataFrames, Read/Write, Basics | Active |
+| **Apache Kafka** 📨 | ✅ Available | Topics, Producers/Consumers, Offsets, Basics | Active |
+| **Pandas** 🧮 | ✅ Available | DataFrames, I/O, groupby, cleaning | Active |
+| **NumPy** 🔢 | ✅ Available | ndarrays, broadcasting, basic ops | Active |
+
+### Game Development
+
+| Engine | Guide Available | Topics Covered | Status |
+|--------|----------------|----------------|--------|
+| **Unity** 🎮 | ✅ Available | Editor basics, C# scripts, scenes/components | Active |
+| **Unreal Engine** 🧩 | ✅ Available | Editor basics, Blueprints, C++ overview | Active |
+| **Godot** 🟦 | ✅ Available | Scene/node system, GDScript basics | Active |
+
+### Infrastructure & Automation
+
+| Tool | Guide Available | Topics Covered | Status |
+|------|----------------|----------------|--------|
+| **Kubernetes** ☸️ | ✅ Available | Pods, Deployments, Services, kubectl basics | Active |
+| **Terraform** 🧱 | ✅ Available | IaC concepts, init/plan/apply workflow | Active |
+| **Ansible** 🧰 | ✅ Available | Inventories, playbooks, modules basics | Active |
 
 ### Operating Systems & Linux Distros
 
@@ -133,7 +163,8 @@ Navigate to the folder of the programming language you want to learn:
 
 ```bash
 cd PYTHON/               # For Python
-cd "Python Framework"/   # For Django & Flask
+cd Django/               # For Django
+cd Flask/                # For Flask
 cd JAVA/                 # For Java
 cd "C & C++"/            # For C/C++
 cd PHP/                  # For PHP
@@ -142,6 +173,8 @@ cd RUST/                 # For Rust
 cd Golang/               # For Go (Golang)
 cd JavaScript/           # For JavaScript (Node.js, Express.js, Next.js)
 cd TypeScript/           # For TypeScript
+cd Kotlin/               # For Kotlin
+cd Swift/                # For Swift
 cd SQL/                  # For SQL (MySQL, PostgreSQL, MongoDB, Redis, DynamoDB)
 cd Linux/                # For Linux OS & distro docs
 cd Bash/                 # For Bash shell scripting
@@ -152,6 +185,16 @@ cd JenKins/              # For Jenkins CI/CD
 cd GitHub/               # For GitHub collaboration
 cd Postman/              # For API testing
 cd Jest/                 # For Jest testing
+cd "Apache Spark"/        # For Apache Spark
+cd "Apache Kafka"/        # For Apache Kafka
+cd Pandas/               # For Pandas
+cd NumPy/                # For NumPy
+cd Unity/                # For Unity
+cd "Unreal Engine"/       # For Unreal Engine
+cd Godot/                # For Godot
+cd Kubernetes/           # For Kubernetes
+cd Terraform/            # For Terraform
+cd Ansible/              # For Ansible
 ```
 
 ### 3. Follow the Installation Guide

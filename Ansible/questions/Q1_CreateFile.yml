@@ -1,0 +1,12 @@
+# Task:
+# Write a playbook that creates a file /tmp/hello.txt with content "hello".
+# Hint: use ansible.builtin.copy.
+
+- name: Create hello file
+  hosts: local
+  gather_facts: false
+  tasks:
+    - name: Create /tmp/hello.txt
+      ansible.builtin.copy:
+        dest: /tmp/hello.txt
+        content: "hello\n"
