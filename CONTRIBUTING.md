@@ -1,10 +1,10 @@
-# Contributing to DevSphere
+# Contributing to Runexis Forge
 
-Thank you for considering contributing to DevSphere! 🎉
+Thank you for considering contributing to Runexis Forge! 🎉
 
 ## Table of Contents
 
-- [Contributing to DevSphere](#contributing-to-devsphere)
+- [Contributing to Runexis Forge](#contributing-to-runexis-forge)
   - [Table of Contents](#table-of-contents)
   - [Code of Conduct](#code-of-conduct)
   - [How Can I Contribute?](#how-can-i-contribute)

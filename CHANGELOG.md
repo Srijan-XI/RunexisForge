@@ -5,6 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2025-12-24
+
+### Added
+- **Major reorganization**: Categorized all topics into 9 main folders for better navigation
+- **Programming Languages**: C#, MATLAB, Dart with Flutter, Assembly, Scala
+- **Frontend Frameworks**: NuxtJs, Remix, Astro, SolidJs
+- **Backend Frameworks**: Gin (Go), Electron
+- **Operating Systems**: Windows, macOS, iOS, Android with complete guides
+- **Linux Distributions**: NixOS, Rocky Linux, Zorin OS, Pop!_OS, MX Linux, Tails, Qubes OS, ChromeOS Flex, Alpine Linux, SteamOS
+- **Databases**: MariaDB, SQLite, IBM Db2, Neo4j, Snowflake, BigQuery
+- **Cloud Platforms**: Azure, AWS, GCP, DigitalOcean with complete CLI guides
+- **DevSecOps Tools**: AquaSecurity/Trivy, SonarQube, Snyk, HashiCorp Vault
+- **DevOps Tools**: GitLab CI/CD, GitHub Actions, Bitbucket Pipelines
+
+### Changed
+- Reorganized repository into categorized folders:
+  - `01-Programming-Languages/`
+  - `02-Frontend-Frameworks/`
+  - `03-Backend-Web/`
+  - `04-Cloud-DevOps/`
+  - `05-Data-Analytics-DB/`
+  - `06-Security-Testing/`
+  - `07-Game-Engines/`
+  - `08-Operating-Systems/`
+  - `09-Misc/`
+- Linux folder remains at top level with organized distro subfamilies
+- Updated all documentation to reflect new structure
+
 ## [1.5.3] - 2025-12-22
 
 ### Added

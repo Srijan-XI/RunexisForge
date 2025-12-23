@@ -67,12 +67,14 @@ To become the most comprehensive, beginner-friendly repository for learning prog
 ## Medium Term Goals (6-12 Months) 🚀
 
 ### Languages to Add
-- [ ] Swift
-- [ ] Kotlin
-- [ ] Ruby
-- [ ] C#
-- [ ] Scala
-- [ ] Dart
+- [x] Swift ✅
+- [x] Kotlin ✅
+- [x] Ruby ✅
+- [x] C# ✅
+- [x] Scala ✅
+- [x] Dart (with Flutter) ✅
+- [x] Assembly ✅
+- [x] MATLAB ✅
 
 ### Advanced Features
 - [ ] Interactive coding challenges
@@ -175,11 +177,32 @@ Have an idea that's not on the roadmap? We'd love to hear it!
 - ✅ Go/Golang (Complete)
 - ✅ JavaScript (Complete - 25 questions + 3 frameworks)
 - ✅ TypeScript (Complete)
+- ✅ C# (Complete)
+- ✅ MATLAB (Complete)
+- ✅ Dart with Flutter (Complete)
+- ✅ Assembly (Complete)
+- ✅ Scala (Complete)
+- ✅ Kotlin (Complete)
+- ✅ Swift (Complete)
+- ✅ Ruby (Complete)
+- ✅ Bash (Complete)
+- ✅ KQL (Complete)
 - ✅ SQL - MySQL (Complete)
 - ✅ SQL - PostgreSQL (Complete)
 - ✅ SQL - MongoDB (Complete)
 - ✅ SQL - Redis (Complete)
 - ✅ SQL - DynamoDB (Complete)
+
+### Framework & Platform Coverage
+- ✅ Frontend: Angular, React, Vue, Svelte, NuxtJs, Remix, Astro, SolidJs, Vite, Electron, Tauri
+- ✅ Backend: Django, Flask, FastAPI, Laravel, Spring Boot, ASP.NET Core, Gin, Ruby on Rails
+- ✅ Cloud: AWS, Azure, GCP, DigitalOcean
+- ✅ Databases: MariaDB, SQLite, IBM Db2, Neo4j, Snowflake, BigQuery
+- ✅ DevSecOps: AquaSecurity, SonarQube, Snyk, HashiCorp Vault
+- ✅ DevOps: Git, GitHub (Actions), GitLab (CI/CD), BitBucket, Jenkins, Docker, Kubernetes, Terraform, Ansible
+- ✅ OS: Windows, macOS, iOS, Android, WSL, Linux (15+ distros)
+- ✅ Game Engines: Unity, Unreal Engine, Godot
+- ✅ Data/ML: Apache Spark, Apache Kafka, Pandas, NumPy, TensorFlow, Streamlit, LangChain
 
 ### Documentation Coverage
 - ✅ README (100%)
@@ -200,11 +223,14 @@ Have an idea that's not on the roadmap? We'd love to hear it!
 - **v1.1** (November 2025) - Added Go/Golang, TypeScript, and SQL (5 databases)
 - **v1.2** (November 2025) - Added JavaScript (25 questions + Node.js, Express.js, Next.js guides)
 - **v1.3** (November 2025) - Added Git, Jenkins, GitHub, Postman, Jest, Django, Flask
-- **v2.0** (Planned) - Interactive features and web interface
+- **v1.4** (December 2025) - Added Linux comprehensive guide with 15+ distributions
+- **v1.5** (December 2025) - Added Game Engines, Data Engineering, Infrastructure tools
+- **v2.0** (December 2025) - Major reorganization into categories + 8 languages, 8 frameworks, 4 cloud platforms, 6 databases, 4 DevSecOps tools, OS guides
+- **v3.0** (Planned) - Interactive features and web interface
 
 ---
 
-**Last Updated**: November 14, 2025
+**Last Updated**: December 24, 2025
 
 *This roadmap is subject to change based on community feedback and contributions.*
 

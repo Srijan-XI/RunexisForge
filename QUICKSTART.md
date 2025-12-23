@@ -10,7 +10,7 @@ Get up and running with any programming language in minutes!
 Never coded before? Start here!
 
 1. **Choose Python** (most beginner-friendly)
-2. **Go to**: `PYTHON/Installation-Guide.md`
+2. **Go to**: `Programming-Languages/PYTHON/Installation-Guide.md`
 3. **Follow**: Step-by-step installation
 4. **Try**: `q01_hello_world.py`
 5. **Progress**: Work through questions q01-q10
@@ -80,43 +80,129 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 Install-and-Learn-DevLangs/
 │
-├── PYTHON/              # Python guides & questions
-├── Django/              # Django framework guide
-├── Flask/               # Flask framework guide
-├── JAVA/                # Java guides & questions  
-├── JavaScript/          # JavaScript guides & questions + frameworks
-├── Kotlin/              # Kotlin guides, examples & questions
-├── Swift/               # Swift guides, examples & questions
-├── Ruby/                # Ruby guides (starter)
-├── Ruby on Rails/        # Rails framework (starter)
-├── C & C++/             # C/C++ guides & questions
-├── PHP/                 # PHP guides & questions
-├── R/                   # R guides & questions
-├── RUST/                # Rust guides & questions
-├── Laravel/              # Laravel (PHP framework) starter
-├── Cuba/                 # Cuba (Ruby framework) starter
-├── Bash/                # Bash shell scripting guide & questions
-├── Kql/                 # KQL query language guide & questions
-├── Docker/              # Docker containerization guide
-├── Git/                 # Git version control guide
-├── JenKins/             # Jenkins CI/CD guide
-├── WSL/                  # Windows Subsystem for Linux
-├── YAML/                 # YAML config format
-├── TOML/                 # TOML config format
-├── Vite/                 # Vite frontend tooling
-├── Vitest/               # Vitest unit testing
-├── Streamlit/            # Streamlit data apps
-├── TensorFlow/           # TensorFlow ML
-├── LangChain/            # LangChain LLM apps
-├── Tauri/                # Tauri desktop apps
-├── GitHub/              # GitHub collaboration guide
-├── Postman/             # Postman API testing guide
-├── Jest/                # Jest testing guide
+├── Programming-Languages/
+│   ├── PYTHON/          # Python guides & questions
+│   ├── JAVA/            # Java guides & questions
+│   ├── JavaScript/      # JavaScript + Node.js, Express.js, Next.js
+│   ├── TypeScript/      # TypeScript guides
+│   ├── CSharp/          # C# guides
+│   ├── C & C++/         # C/C++ guides & questions
+│   ├── Golang/          # Go guides & questions
+│   ├── RUST/            # Rust guides & questions
+│   ├── PHP/             # PHP guides & questions
+│   ├── R/               # R guides & questions
+│   ├── Ruby/            # Ruby guides
+│   ├── Kotlin/          # Kotlin guides & questions
+│   ├── Swift/           # Swift guides & questions
+│   ├── Scala/           # Scala guides
+│   ├── MATLAB/          # MATLAB guides
+│   ├── Dart with Flutter/ # Dart/Flutter guides
+│   ├── Assembly/        # Assembly guides
+│   ├── Bash/            # Bash shell scripting
+│   ├── Kql/             # KQL query language
+│   ├── SQL/             # SQL guides
+│   ├── YAML/            # YAML config format
+│   └── TOML/            # TOML config format
+│
+├── Frontend-Frameworks/
+│   ├── Angular/         # Angular framework
+│   ├── React/           # React library
+│   ├── Vue/             # Vue.js framework
+│   ├── Svelte/          # Svelte framework
+│   ├── NuxtJs/          # Nuxt.js (Vue meta-framework)
+│   ├── Remix/           # Remix (React framework)
+│   ├── Astro/           # Astro (islands architecture)
+│   ├── SolidJs/         # SolidJS framework
+│   ├── Vite/            # Vite build tool
+│   ├── Electron/        # Electron desktop apps
+│   └── Tauri/           # Tauri desktop apps
+│
+├── Backend-Web/
+│   ├── Django/          # Django (Python)
+│   ├── Flask/           # Flask (Python)
+│   ├── FastAPI/         # FastAPI (Python)
+│   ├── Spring Boot/     # Spring Boot (Java)
+│   ├── ASP.NET Core/    # ASP.NET Core (C#)
+│   ├── Laravel/         # Laravel (PHP)
+│   ├── Ruby on Rails/   # Rails (Ruby)
+│   ├── Gin/             # Gin (Go)
+│   ├── LangChain/       # LangChain (LLM apps)
+│   └── Streamlit/       # Streamlit (Python data apps)
+│
+├── Cloud-DevOps/
+│   ├── AWS/             # Amazon Web Services
+│   ├── Azure/           # Microsoft Azure
+│   ├── GCP/             # Google Cloud Platform
+│   ├── DigitalOcean/    # DigitalOcean
+│   ├── Docker/          # Docker containerization
+│   ├── Kubernetes/      # Kubernetes orchestration
+│   ├── Terraform/       # Infrastructure as Code
+│   ├── Ansible/         # Configuration management
+│   ├── Git/             # Git version control
+│   ├── GitHub/          # GitHub & Actions
+│   ├── GitLab/          # GitLab & CI/CD
+│   ├── BitBucket/       # Bitbucket & Pipelines
+│   └── JenKins/         # Jenkins CI/CD
+│
+├── Data-Analytics/
+│   ├── Apache Spark/    # Apache Spark
+│   ├── Apache Kafka/    # Apache Kafka
+│   ├── Pandas/          # Pandas (Python)
+│   ├── NumPy/           # NumPy (Python)
+│   ├── TensorFlow/      # TensorFlow ML
+│   ├── MariaDB/         # MariaDB database
+│   ├── SQLite/          # SQLite database
+│   ├── IBM_Db2/         # IBM Db2
+│   ├── Neo4j/           # Neo4j graph database
+│   ├── Snowflake/       # Snowflake data warehouse
+│   └── BigQuery/        # Google BigQuery
+│
+├── Security-Testing/
+│   ├── AquaSecurity/    # Aqua Security / Trivy
+│   ├── SonarQube/       # SonarQube code quality
+│   ├── Snyk/            # Snyk security
+│   ├── HashiCorpVault/  # HashiCorp Vault
+│   ├── Burp Suite Framework/
+│   ├── Metasploit Framework/
+│   ├── OpenVAS/         # Vulnerability scanner
+│   ├── Scapy/           # Packet manipulation
+│   ├── Postman/         # API testing
+│   ├── Jest/            # Jest testing
+│   └── Vitest/          # Vitest unit testing
+│
+├── Game-Engines/
+│   ├── Unity/           # Unity game engine
+│   ├── Unreal Engine/   # Unreal Engine
+│   └── Godot/           # Godot engine
+│
+├── Operating-Systems/
+│   ├── Windows/         # Windows OS guides
+│   ├── macOS/           # macOS guides
+│   ├── iOS/             # iOS development
+│   ├── Android/         # Android development
+│   └── WSL/             # Windows Subsystem for Linux
+│
+├── Misc/
+│   ├── Cuba/            # Cuba framework
+│   ├── notes/           # General notes
+│   └── zsample/         # Samples and plans
+│
+├── Linux/               # Linux distros (15+ distributions)
+│   ├── Arch/            # Arch family
+│   ├── Debian/          # Debian family
+│   ├── RedHat/          # RedHat family
+│   ├── Gentoo/          # Gentoo
+│   ├── Slackware/       # Slackware
+│   ├── NixOS/           # NixOS
+│   ├── Rocky_Linux/     # Rocky Linux
+│   ├── Zorin/           # Zorin OS
+│   └── ... and more
 │
 ├── README.md            # Main documentation
 ├── CONTRIBUTING.md      # How to contribute
 ├── FAQ.md               # Common questions
 ├── RESOURCES.md         # Learning materials
+├── ROADMAP.md           # Project roadmap
 └── .github/             # Templates & workflows
 ```
 

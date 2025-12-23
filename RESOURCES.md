@@ -671,6 +671,347 @@ A curated collection of high-quality learning resources for each programming lan
 
 ---
 
+## 🎨 C# (.NET)
+
+### Official Documentation
+- [Microsoft C# Documentation](https://learn.microsoft.com/dotnet/csharp/)
+- [.NET Documentation](https://learn.microsoft.com/dotnet/)
+
+### Books
+- **Free**:
+  - [C# Programming Yellow Book](https://www.robmiles.com/c-yellow-book/)
+  - [C# Notes for Professionals](https://goalkicker.com/CSharpBook/)
+
+- **Paid**:
+  - C# 12 and .NET 8 by Mark J. Price
+  - Pro C# 10 by Andrew Troelsen
+  - Head First C# by Andrew Stellman & Jennifer Greene
+
+### Online Courses
+- [C# Fundamentals (Microsoft Learn)](https://learn.microsoft.com/training/paths/csharp-first-steps/)
+- [Codecademy C#](https://www.codecademy.com/learn/learn-c-sharp)
+- [C# Tutorial (W3Schools)](https://www.w3schools.com/cs/)
+
+### YouTube Channels
+- [IAmTimCorey](https://www.youtube.com/user/IAmTimCorey)
+- [Nick Chapsas](https://www.youtube.com/c/Elfocrash)
+- [dotNET](https://www.youtube.com/c/dotNET)
+
+### Practice Platforms
+- [HackerRank C#](https://www.hackerrank.com/domains/tutorials/10-days-of-csharp)
+- [Exercism C#](https://exercism.org/tracks/csharp)
+
+---
+
+## 📊 MATLAB
+
+### Official Documentation
+- [MATLAB Documentation](https://www.mathworks.com/help/matlab)
+- [MATLAB Online](https://matlab.mathworks.com)
+
+### Books
+- **Paid**:
+  - MATLAB for Engineers by Holly Moore
+  - Numerical Computing with MATLAB by Cleve Moler
+  - MATLAB Programming for Engineers by Stephen Chapman
+
+### Online Courses
+- [MATLAB Onramp](https://www.mathworks.com/learn/tutorials/matlab-onramp.html)
+- [Coursera MATLAB](https://www.coursera.org/learn/matlab)
+- [MATLAB Academy](https://matlabacademy.mathworks.com/)
+
+### YouTube Channels
+- [MATLAB Official](https://www.youtube.com/user/MATLAB)
+- [Joseph Delgadillo](https://www.youtube.com/watch?v=T_ekAD7U-wU)
+
+---
+
+## 📱 Dart & Flutter
+
+### Official Documentation
+- [Dart Documentation](https://dart.dev/guides)
+- [Flutter Documentation](https://docs.flutter.dev)
+
+### Books
+- **Free**:
+  - [Flutter Documentation](https://docs.flutter.dev/)
+  - [Dart Language Tour](https://dart.dev/guides/language/language-tour)
+
+- **Paid**:
+  - Flutter Complete Reference by Alberto Miola
+  - Flutter in Action by Eric Windmill
+  - Beginning Flutter by Marco L. Napoli
+
+### Online Courses
+- [Flutter & Dart Course (Udemy)](https://www.udemy.com/course/flutter-bootcamp-with-dart/)
+- [Flutter Codelabs](https://docs.flutter.dev/codelabs)
+- [Dart Programming (Udemy)](https://www.udemy.com/course/dart-beginner-course/)
+
+### YouTube Channels
+- [The Net Ninja - Flutter](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ)
+- [Flutter Official](https://www.youtube.com/c/flutterdev)
+- [Reso Coder](https://www.youtube.com/c/ResoCoder)
+
+### Practice Platforms
+- [DartPad](https://dartpad.dev/) - Online Dart editor
+- [Flutter Widget of the Week](https://www.youtube.com/playlist?list=PLjxrf2q8roU23XGwz3Km7sQZFTdB996iG)
+
+---
+
+## ⚙️ Assembly Language
+
+### Official Documentation
+- [NASM Documentation](https://www.nasm.us/docs.php)
+- [x86-64 Assembly Guide](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)
+
+### Books
+- **Free**:
+  - [Programming from the Ground Up](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf)
+  - [PC Assembly Language](https://pacman128.github.io/pcasm/)
+
+- **Paid**:
+  - Assembly Language Step-by-Step by Jeff Duntemann
+  - Modern x86 Assembly Language Programming by Daniel Kusswurm
+  - The Art of Assembly Language by Randall Hyde
+
+### Online Resources
+- [Learn Assembly](https://www.assemblylanguagetuts.com/)
+- [Assembly Tutorial (Tutorialspoint)](https://www.tutorialspoint.com/assembly_programming/)
+- [x86 Assembly Wikibook](https://en.wikibooks.org/wiki/X86_Assembly)
+
+### YouTube Channels
+- [Davy Wybiral](https://www.youtube.com/watch?v=wLXIWKUWpSs)
+- [Creel](https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe)
+
+---
+
+## 🔴 Scala
+
+### Official Documentation
+- [Scala Documentation](https://docs.scala-lang.org)
+- [Scala Book](https://docs.scala-lang.org/overviews/scala-book/introduction.html)
+
+### Books
+- **Free**:
+  - [Scala Book (Official)](https://docs.scala-lang.org/overviews/scala-book/introduction.html)
+  - [Programming in Scala (1st Edition)](https://www.artima.com/pins1ed/)
+
+- **Paid**:
+  - Programming in Scala by Martin Odersky
+  - Functional Programming in Scala by Paul Chiusano
+  - Scala for the Impatient by Cay Horstmann
+
+### Online Courses
+- [Functional Programming in Scala (Coursera)](https://www.coursera.org/specializations/scala)
+- [Rock the JVM](https://rockthejvm.com/)
+- [Scala Exercises](https://www.scala-exercises.org/)
+
+### YouTube Channels
+- [Rock the JVM](https://www.youtube.com/c/RocktheJVM)
+- [Scala Days](https://www.youtube.com/c/ScalaDays)
+
+### Practice Platforms
+- [Exercism Scala](https://exercism.org/tracks/scala)
+- [Scala Exercises](https://www.scala-exercises.org/)
+
+---
+
+## ☁️ Cloud Platforms
+
+### AWS (Amazon Web Services)
+- [AWS Documentation](https://docs.aws.amazon.com)
+- [AWS Free Tier](https://aws.amazon.com/free/)
+- [AWS Skill Builder](https://skillbuilder.aws/)
+- [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/)
+
+### Microsoft Azure
+- [Azure Documentation](https://learn.microsoft.com/azure)
+- [Azure Free Account](https://azure.microsoft.com/free/)
+- [Microsoft Learn](https://learn.microsoft.com/training/azure/)
+- [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/)
+
+### Google Cloud Platform (GCP)
+- [GCP Documentation](https://cloud.google.com/docs)
+- [GCP Free Tier](https://cloud.google.com/free)
+- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
+- [GCP Architecture Framework](https://cloud.google.com/architecture/framework)
+
+### DigitalOcean
+- [DigitalOcean Docs](https://docs.digitalocean.com)
+- [DigitalOcean Community Tutorials](https://www.digitalocean.com/community/tutorials)
+- [DigitalOcean Free Credits](https://try.digitalocean.com/freetrialoffer/)
+
+---
+
+## 🗄️ Database Systems
+
+### MariaDB
+- [MariaDB Documentation](https://mariadb.com/kb/en/)
+- [MariaDB Tutorial](https://www.mariadbtutorial.com/)
+- [MariaDB Server GitHub](https://github.com/MariaDB/server)
+
+### SQLite
+- [SQLite Documentation](https://www.sqlite.org/docs.html)
+- [SQLite Tutorial](https://www.sqlitetutorial.net/)
+- [SQLite Browser](https://sqlitebrowser.org/)
+
+### IBM Db2
+- [Db2 Documentation](https://www.ibm.com/docs/en/db2)
+- [Db2 Community Edition](https://www.ibm.com/products/db2-database)
+
+### Neo4j (Graph Database)
+- [Neo4j Documentation](https://neo4j.com/docs)
+- [Cypher Query Language](https://neo4j.com/developer/cypher)
+- [GraphAcademy](https://graphacademy.neo4j.com/)
+- [Neo4j Sandbox](https://neo4j.com/sandbox/)
+
+### Snowflake (Data Warehouse)
+- [Snowflake Documentation](https://docs.snowflake.com)
+- [Snowflake University](https://learn.snowflake.com/)
+- [Snowflake Trial](https://signup.snowflake.com/)
+
+### Google BigQuery
+- [BigQuery Documentation](https://cloud.google.com/bigquery/docs)
+- [BigQuery Tutorials](https://cloud.google.com/bigquery/docs/tutorials)
+- [BigQuery SQL Reference](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax)
+
+---
+
+## 🔒 DevSecOps & Security
+
+### Aqua Security (Trivy)
+- [Trivy Documentation](https://aquasecurity.github.io/trivy/)
+- [Trivy GitHub](https://github.com/aquasecurity/trivy)
+- [Container Security Best Practices](https://www.aquasec.com/cloud-native-academy/container-security/)
+
+### SonarQube
+- [SonarQube Documentation](https://docs.sonarsource.com/sonarqube/)
+- [SonarQube Community](https://community.sonarsource.com/)
+- [SonarQube Rules](https://rules.sonarsource.com/)
+
+### Snyk
+- [Snyk Documentation](https://docs.snyk.io)
+- [Snyk Learn](https://learn.snyk.io/)
+- [Snyk Advisor](https://snyk.io/advisor/)
+
+### HashiCorp Vault
+- [Vault Documentation](https://developer.hashicorp.com/vault/docs)
+- [Vault Tutorials](https://developer.hashicorp.com/vault/tutorials)
+- [Vault GitHub](https://github.com/hashicorp/vault)
+
+---
+
+## 🐧 Linux Distributions
+
+### NixOS
+- [NixOS Manual](https://nixos.org/manual/nixos/stable/)
+- [Nix Pills](https://nixos.org/guides/nix-pills/)
+- [NixOS Wiki](https://nixos.wiki/)
+- [Nix Package Search](https://search.nixos.org/)
+
+### Rocky Linux
+- [Rocky Linux Documentation](https://docs.rockylinux.org)
+- [Rocky Linux Wiki](https://wiki.rockylinux.org/)
+- [Rocky Linux GitHub](https://github.com/rocky-linux)
+
+### Alpine Linux
+- [Alpine Wiki](https://wiki.alpinelinux.org)
+- [Alpine Handbook](https://docs.alpinelinux.org/)
+- [Alpine Packages](https://pkgs.alpinelinux.org/)
+
+### Qubes OS (Security-focused)
+- [Qubes Documentation](https://www.qubes-os.org/doc/)
+- [Qubes Introduction](https://www.qubes-os.org/intro/)
+- [Qubes Video Tours](https://www.qubes-os.org/video-tours/)
+
+### Pop!_OS
+- [Pop!_OS Documentation](https://support.system76.com/articles/pop-basics/)
+- [Pop!_OS GitHub](https://github.com/pop-os)
+
+### Zorin OS
+- [Zorin OS Help](https://help.zorin.com/)
+- [Zorin OS Forum](https://forum.zorin.com/)
+
+### MX Linux
+- [MX Linux Wiki](https://mxlinux.org/wiki/)
+- [MX Linux Forum](https://forum.mxlinux.org/)
+
+### Tails (Privacy & Anonymity)
+- [Tails Documentation](https://tails.boum.org/doc/index.en.html)
+- [Tails Installation](https://tails.boum.org/install/index.en.html)
+
+### ChromeOS Flex
+- [ChromeOS Flex Docs](https://support.google.com/chromeosflex/)
+- [ChromeOS Flex Install Guide](https://chromeenterprise.google/os/chromeosflex/)
+
+### SteamOS
+- [SteamOS Documentation](https://help.steampowered.com/en/faqs/view/671A-4453-E8D2-323C)
+- [Steam Deck Developer](https://partner.steamgames.com/doc/steamdeck)
+
+---
+
+## 🎮 Game Development
+
+### Unity
+- [Unity Learn](https://learn.unity.com/)
+- [Unity Documentation](https://docs.unity3d.com/)
+- [Unity Asset Store](https://assetstore.unity.com/)
+
+### Unreal Engine
+- [Unreal Documentation](https://docs.unrealengine.com/)
+- [Unreal Online Learning](https://www.unrealengine.com/en-US/onlinelearning-courses)
+- [Unreal Marketplace](https://www.unrealengine.com/marketplace/)
+
+### Godot
+- [Godot Documentation](https://docs.godotengine.org/)
+- [GDQuest](https://www.gdquest.com/)
+- [Godot Asset Library](https://godotengine.org/asset-library/asset)
+
+---
+
+## 🚀 Frontend Frameworks
+
+### NuxtJs (Vue Meta-Framework)
+- [Nuxt Documentation](https://nuxt.com/docs)
+- [Nuxt Modules](https://nuxt.com/modules)
+- [Nuxt Examples](https://nuxt.com/docs/examples/essentials/hello-world)
+
+### Remix (React Framework)
+- [Remix Documentation](https://remix.run/docs)
+- [Remix Stacks](https://remix.run/stacks)
+- [Remix Tutorials](https://remix.run/docs/en/main/tutorials/blog)
+
+### Astro (Static Site Generator)
+- [Astro Documentation](https://docs.astro.build)
+- [Astro Integrations](https://astro.build/integrations)
+- [Astro Themes](https://astro.build/themes/)
+
+### SolidJS
+- [SolidJS Documentation](https://www.solidjs.com/docs/latest)
+- [SolidJS Tutorial](https://www.solidjs.com/tutorial/introduction_basics)
+- [Solid Start](https://start.solidjs.com/)
+
+### Electron (Desktop Apps)
+- [Electron Documentation](https://www.electronjs.org/docs/latest)
+- [Electron Fiddle](https://www.electronjs.org/fiddle)
+- [Awesome Electron](https://github.com/sindresorhus/awesome-electron)
+
+---
+
+## ⚡ Backend Frameworks
+
+### FastAPI (Python)
+- [FastAPI Documentation](https://fastapi.tiangolo.com)
+- [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
+- [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
+
+### Gin (Go)
+- [Gin Documentation](https://gin-gonic.com/docs/)
+- [Gin GitHub](https://github.com/gin-gonic/gin)
+- [Gin Examples](https://github.com/gin-gonic/examples)
+
+---
+
 ## 💡 Tips for Using These Resources
 
 1. **Start with fundamentals** - Master basics before moving to advanced topics

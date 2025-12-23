@@ -3,7 +3,7 @@
                             December 19, 2025
 ================================================================================
 
-PROJECT: DevSphere - Programming Language Learning Hub
+PROJECT: Runexis Forge - Programming Language Learning Hub
 VERSION: 1.4.0
 SCOPE: Comprehensive Linux operating system and distro family documentation
 

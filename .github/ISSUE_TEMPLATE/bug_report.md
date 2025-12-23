@@ -6,6 +6,8 @@ labels: bug
 assignees: ''
 ---
 
+<!-- Runexis Forge - Bug Report -->
+
 ## 🐛 Bug Description
 
 <!-- A clear and concise description of what the bug is -->
