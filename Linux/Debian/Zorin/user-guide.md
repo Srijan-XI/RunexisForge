@@ -1,28 +1,57 @@
 # Zorin OS User Guide
 
-## Install
-- Download ISO: https://zorin.com/os/download
-- Create bootable USB with Etcher/Rufus
-- Boot and choose Install Zorin OS; select partitions and user account
+## Installation
+
+1. Download ISO from [zorin.com](https://zorin.com/os/download/)
+2. Create bootable USB with Rufus/Etcher
+3. Boot from USB
+4. Follow installation wizard
+5. Restart and enjoy
+
+---
+
+## Desktop Layouts
+
+### Change Layout
+```
+Zorin Appearance → Layouts
+- Windows-like
+- macOS-like
+- GNOME-like
+- Touch-optimized
+```
+
+---
 
 ## Package Management
+
 ```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install <pkg>
+# Update system
+sudo apt update && sudo apt upgrade
+
+# Install software
+sudo apt install <package-name>
+
+# Or use Software Center (GUI)
 ```
-Flatpak support:
+
+---
+
+## Windows Software
+
+### Using Wine
 ```bash
-flatpak install flathub <app>
+# Install Windows app
+wine setup.exe
+
+# Or use PlayOnLinux (pre-installed)
 ```
 
-## Desktop
-- Use Zorin Appearance to switch layouts
-- Zorin Connect pairs with Android for notifications/files
+---
 
-## Updates
-- Software Updater GUI or `sudo apt upgrade`
+## Resources
 
-## Troubleshooting
-- Check logs: `journalctl -xe`
-- Drivers: `software-properties-gtk --open-tab=4` for additional drivers
+- [Help Center](https://help.zorin.com/)
+- [Forum](https://forum.zorin.com/)
+
+**Enjoy Zorin! 🎨**

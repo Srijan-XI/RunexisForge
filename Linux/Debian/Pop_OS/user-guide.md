@@ -1,26 +1,67 @@
 # Pop!_OS User Guide
 
-## Install
-- Download ISO (AMD/Intel or NVIDIA) from https://pop.system76.com
-- Flash with Etcher/Rufus; boot and run installer
-- Choose full-disk encryption if desired
+## Installation
 
-## Updates and Packages
-```bash
-sudo apt update && sudo apt upgrade
-sudo apt install <pkg>
+1. Download ISO from [pop.system76.com](https://pop.system76.com/)
+2. Choose Intel/AMD or NVIDIA version
+3. Create bootable USB
+4. Boot and install
+5. Restart
+
+---
+
+## Pop Shell (Tiling)
+
+### Enable Auto-Tiling
 ```
-Pop Shop provides GUI updates and Flatpak apps.
+Super + Y (toggle tiling)
+```
 
-## Tiling
-- Toggle auto-tiling: Super + Y
-- Move focus: Super + Arrow keys
-- Workspaces: Super + Up/Down
+### Keyboard Shortcuts
+```
+Super + Enter - Terminal
+Super + / - Launcher
+Super + O - Workspaces
+Super + Arrow Keys - Move focus
+Super + Shift + Arrow Keys - Move windows
+```
 
-## NVIDIA
-- Verify driver: `nvidia-smi`
-- Switch graphics (hybrid) via Power menu on laptops
+---
 
-## Troubleshooting
-- Logs: `journalctl -xe`
-- Firmware updates: `sudo fwupdmgr update`
+## Package Management
+
+```bash
+# Update
+sudo apt update && sudo apt upgrade
+
+# Install
+sudo apt install <package>
+
+# Flatpak (pre-installed)
+flatpak install <app>
+```
+
+---
+
+## Gaming
+
+### Install Steam
+```bash
+# Via Pop!_Shop or
+sudo apt install steam
+```
+
+### GameMode (pre-installed)
+```bash
+# Runs automatically with games
+gamemoderun <game>
+```
+
+---
+
+## Resources
+
+- [Support](https://support.system76.com/)
+- [Chat](https://chat.pop-os.org/)
+
+**Stay productive! 🚀**

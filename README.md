@@ -3,12 +3,13 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/badge/Languages-22%2B-blue.svg)]()
-[![Frameworks](https://img.shields.io/badge/Frameworks-18%2B-orange.svg)]()
-[![Databases](https://img.shields.io/badge/Databases-12%2B-purple.svg)]()
-[![Cloud](https://img.shields.io/badge/Cloud-4%20Platforms-cyan.svg)]()
-[![Tools](https://img.shields.io/badge/DevOps%20Tools-15%2B-red.svg)]()
-[![OS](https://img.shields.io/badge/Operating%20Systems-20%2B-yellow.svg)]()
+[![Languages](https://img.shields.io/badge/Languages-21%20Categorized-blue.svg)](Programming-Languages/CATEGORIZATION.md)
+[![Frameworks](https://img.shields.io/badge/Frameworks-20%2B-orange.svg)]()
+[![Databases](https://img.shields.io/badge/Databases-11-purple.svg)](SQL&DB'S/)
+[![Cloud](https://img.shields.io/badge/Cloud-4%20Platforms-cyan.svg)](Cloud-DevOps/)
+[![DevOps](https://img.shields.io/badge/DevOps%20Tools-15%2B-red.svg)](Cloud-DevOps/)
+[![Linux](https://img.shields.io/badge/Linux%20Distros-25%2B-teal.svg)](Linux/)
+[![Game Engines](https://img.shields.io/badge/Game%20Engines-9-indigo.svg)](Game-Engines/)
 [![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)]()
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-success.svg)]()
@@ -451,7 +452,18 @@ This repository currently includes guides and practice questions for:
 | **Scala** 🔴 | ✅ Available | Complete Guide | Active |
 | **Bash** 🐚 | ✅ Available | Shell Scripting + 10 Questions | Active |
 | **KQL** 📊 | ✅ Available | Query Language + 10 Questions | Active |
-| **SQL** 🗄️ | ✅ Available | 10 Questions + 12 DB Guides | Active |
+| **SQL** 🗄️ | ✅ Available | 10 Questions + 11 DB Guides | Active |
+
+**📁 Organization**: Languages are now organized by category in `Programming-Languages/`:
+- **General-purpose/**: Kotlin, Scala, Swift, Dart with Flutter
+- **Scripting/**: Python, PHP, Ruby, Bash
+- **WebDevelopment/**: JavaScript (+ Node.js, Express, Next.js), TypeScript
+- **SystemsProgramming/**: Assembly, C, C++, Rust
+- **EnterpriseApplications/**: C#, Java
+- **DataScience&Analytics/**: R, MATLAB, KQL
+- **Cloud-native/**: Go (Golang)
+
+👉 See [Programming-Languages/README.md](Programming-Languages/README.md) for categorized navigation
 
 ### Frontend Frameworks & Libraries
 
@@ -516,6 +528,26 @@ This repository currently includes guides and practice questions for:
 | **Streamlit** 📈 | ✅ Available | Python data apps starter docs | Active |
 | **Tauri** 🖥️ | ✅ Available | Desktop apps (Rust + web UI) starter docs | Active |
 
+### Linux Distributions
+
+| Distribution | Type | Guide Available | Focus Area | Status |
+|--------------|------|----------------|------------|--------|
+| **Alpine** 🏔️ | Minimal | ✅ Available | Containers, minimal systems | Active |
+| **Arch** 🎯 | Rolling | ✅ Available | Cutting-edge, customization | Active |
+| **ChromeOS Flex** 💻 | Cloud-first | ✅ Available | Legacy hardware revival, education | Active |
+| **Debian** 🌀 | Stable | ✅ Available | Stability, servers | Active |
+| **Gentoo** 🐧 | Source-based | ✅ Available | Customization, optimization | Active |
+| **MX Linux** 🖥️ | Desktop | ✅ Available | User-friendly, performance | Active |
+| **NixOS** ❄️ | Declarative | ✅ Available | Reproducible systems | Active |
+| **Pop!_OS** 🎨 | Desktop | ✅ Available | Developers, creators, gaming | Active |
+| **Qubes OS** 🔒 | Security | ✅ Available | Security through isolation | Active |
+| **RedHat** 🎩 | Enterprise | ✅ Available | Enterprise servers | Active |
+| **Rocky Linux** 🏔️ | Enterprise | ✅ Available | RHEL replacement, CentOS successor | Active |
+| **Slackware** 🐱 | Traditional | ✅ Available | Unix-like simplicity | Active |
+| **SteamOS** 🎮 | Gaming | ✅ Available | Gaming, Steam Deck | Active |
+| **Tails** 🔐 | Privacy | ✅ Available | Anonymity, privacy, Tor | Active |
+| **Zorin** 💎 | Desktop | ✅ Available | Windows users, beginners | Active |
+
 ### Cloud Platforms
 
 | Platform | Guide Available | Topics Covered | Status |
@@ -555,11 +587,17 @@ This repository currently includes guides and practice questions for:
 
 ### Game Development
 
-| Engine | Guide Available | Topics Covered | Status |
-|--------|----------------|----------------|--------|
-| **Unity** 🎮 | ✅ Available | Editor basics, C# scripts, scenes/components | Active |
-| **Unreal Engine** 🧩 | ✅ Available | Editor basics, Blueprints, C++ overview | Active |
-| **Godot** 🟦 | ✅ Available | Scene/node system, GDScript basics | Active |
+| Engine | Type | Guide Available | Best For | Status |
+|--------|------|----------------|----------|--------|
+| **Unity** 🎮 | 3D/2D | ✅ Available | Cross-platform, mobile games | Active |
+| **Unreal Engine** 🚀 | 3D | ✅ Available | AAA games, photorealistic graphics | Active |
+| **Godot** 🤖 | 3D/2D | ✅ Available | Open-source, indie games | Active |
+| **CryEngine** 💎 | 3D | ✅ Available | High-end graphics, FPS games | Active |
+| **Panda3D** 🐼 | 3D | ✅ Available | Python-based game development | Active |
+| **Cocos2d** 🎯 | 2D | ✅ Available | Mobile 2D games | Active |
+| **GameMaker Studio** 🎨 | 2D | ✅ Available | Beginner-friendly 2D games | Active |
+| **Spring Engine** 🌱 | RTS | ✅ Available | Real-time strategy games | Active |
+| **Rage** 🎭 | 3D | ✅ Available | Rockstar games (study/modding) | Active |
 
 ### DevSecOps & Security Tools
 
@@ -598,25 +636,46 @@ This repository currently includes guides and practice questions for:
 | **Android** 🤖 | ✅ Available | Android Studio, Kotlin, Gradle, Compose | Active |
 | **WSL** 🐧 | ✅ Available | Run Linux on Windows (WSL 1/2 basics) | Active |
 
-### Linux Distributions (20+ Distros)
+### Linux Distributions (25+ Distros)
 
-| Family/Distro | Documentation | Topics Covered | Status |
-|---------------|---------------|----------------|--------|
-| **Linux Overview** 🐧 | ✅ Available | Kernel, Distro Families, Installation, Commands | Active |
-| **Arch Family** | ✅ Available | Arch, BlackArch, Garuda Linux, RedArch | Active |
-| **Debian Family** | ✅ Available | Debian, Ubuntu, Mint, Kali, Parrot OS | Active |
-| **Red Hat Family** | ✅ Available | RHEL, Fedora, CentOS Stream, Oracle Linux, Rocky Linux | Active |
-| **Gentoo** | ✅ Available | Source-based, USE flags, Portage | Active |
-| **Slackware** | ✅ Available | Minimalist, UNIX-like, Classic | Active |
-| **NixOS** ❄️ | ✅ Available | Declarative config, reproducibility | Active |
-| **Zorin OS** 💎 | ✅ Available | Ubuntu-based, Windows-like UI | Active |
-| **Pop!_OS** 🎨 | ✅ Available | System76, tiling, NVIDIA support | Active |
-| **MX Linux** 🔧 | ✅ Available | Debian-based, MX Tools | Active |
-| **Tails** 🔒 | ✅ Available | Privacy-focused, Tor-routed, amnesic | Active |
-| **Qubes OS** 🛡️ | ✅ Available | Security by isolation, Xen-based VMs | Active |
-| **ChromeOS Flex** 🌐 | ✅ Available | Cloud-managed, Google Workspace | Active |
-| **Alpine Linux** 🏔️ | ✅ Available | Minimal, musl libc, container-friendly | Active |
-| **SteamOS** 🎮 | ✅ Available | Valve's gaming OS, Proton, Steam Deck | Active |
+#### By Distribution Family
+
+| Family | Distros Documented | Focus | Status |
+|--------|-------------------|-------|--------|
+| **Arch** 🔷 | Arch, BlackArch, GarudaLinux, RedArch, SteamOS | Rolling release, cutting-edge | Active |
+| **Debian** 🌀 | Debian, Ubuntu, MintLinux, KaliLinux, ParrotSec, Pop!_OS, Zorin, MX Linux, Tails | Stability, broad hardware support | Active |
+| **Red Hat** 🎩 | RHEL, Fedora, CentOS, Oracle Linux, Rocky Linux | Enterprise, commercial support | Active |
+| **Independent** 🔧 | Alpine, Gentoo, NixOS, Slackware, Qubes OS, ChromeOS Flex | Specialized use cases | Active |
+
+#### Featured Distributions
+
+| Distribution | Type | Guide Available | Focus Area | Status |
+|--------------|------|----------------|------------|--------|
+| **Alpine** 🏔️ | Minimal | ✅ Available | Containers, embedded systems | Active |
+| **Arch** 🔷 | Rolling | ✅ Available | Customization, latest software | Active |
+| **BlackArch** 🐉 | Security | ✅ Available | Penetration testing (2800+ tools) | Active |
+| **CentOS** 🔴 | Enterprise | ✅ Available | RHEL downstream (deprecated) | Legacy |
+| **ChromeOS Flex** 💻 | Cloud | ✅ Available | Legacy hardware, education | Active |
+| **Debian** 🌀 | Stable | ✅ Available | Servers, stability | Active |
+| **Fedora** 🎩 | Cutting-edge | ✅ Available | RHEL upstream, latest features | Active |
+| **Garuda Linux** 🦅 | Gaming | ✅ Available | Gaming-focused Arch derivative | Active |
+| **Gentoo** 🏴 | Source | ✅ Available | Compile from source, optimization | Active |
+| **Kali Linux** 🐉 | Security | ✅ Available | Penetration testing, security audits | Active |
+| **Mint Linux** 🌿 | Desktop | ✅ Available | User-friendly, Windows alternative | Active |
+| **MX Linux** 🔧 | Desktop | ✅ Available | #1 on DistroWatch, stability | Active |
+| **NixOS** ❄️ | Declarative | ✅ Available | Reproducible, functional package management | Active |
+| **Oracle Linux** 🔴 | Enterprise | ✅ Available | RHEL-compatible, Oracle support | Active |
+| **Parrot Security** 🦜 | Security | ✅ Available | Security, privacy, development | Active |
+| **Pop!_OS** 🎨 | Desktop | ✅ Available | Developer-friendly, System76 hardware | Active |
+| **Qubes OS** 🛡️ | Security | ✅ Available | Security by compartmentalization | Active |
+| **RedArch** 🔴🔷 | Hybrid | ✅ Available | Arch + Red Hat features | Active |
+| **RHEL** 🎩 | Enterprise | ✅ Available | Commercial support, stability | Active |
+| **Rocky Linux** 🏔️ | Enterprise | ✅ Available | CentOS replacement, RHEL-compatible | Active |
+| **Slackware** 🐱 | Traditional | ✅ Available | Oldest distribution, simplicity | Active |
+| **SteamOS** 🎮 | Gaming | ✅ Available | Valve's Steam Deck OS, Proton layer | Active |
+| **Tails** 🔐 | Privacy | ✅ Available | Tor integration, amnesia, anonymity | Active |
+| **Ubuntu** 🟠 | Desktop | ✅ Available | Most popular, LTS releases | Active |
+| **Zorin OS** 💎 | Desktop | ✅ Available | Windows-like interface, beginners | Active |
 
 ---
 

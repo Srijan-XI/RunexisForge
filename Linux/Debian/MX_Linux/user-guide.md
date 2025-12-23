@@ -1,27 +1,62 @@
 # MX Linux User Guide
 
-## Install
-- Download ISO from https://mxlinux.org/download-links/
-- Create bootable USB with MX Live USB Maker or Etcher
-- Boot and run installer; set partitions and user
+## Installation
 
-## Updates and Packages
-```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install <pkg>
-```
-MX Updater provides GUI updates.
+1. Download from [mxlinux.org](https://mxlinux.org/download-links/)
+2. Create bootable USB
+3. Boot from USB
+4. Run installer
+5. Follow wizard
+
+---
 
 ## MX Tools
-- Snapshot: create live ISO of your system
-- Boot Repair: fix GRUB issues
-- Drivers: NVIDIA installer if needed
 
-## Lightweight Usage
-- Xfce panel and Whisker menu by default
-- Use MX Tweak for compositor and window tweaks
+### Access MX Tools
+```
+Menu → System → MX Tools
+```
 
-## Troubleshooting
-- Logs: `journalctl -xe`
-- Check MX forums for hardware-specific tips
+### Common Tools
+```
+- MX Package Installer (software)
+- MX Snapshot (backup)
+- MX Boot Repair (fix GRUB)
+- MX Tweak (customize)
+```
+
+---
+
+## Package Management
+
+```bash
+# Update
+sudo apt update && sudo apt upgrade
+
+# Install
+sudo apt install <package>
+
+# Or use MX Package Installer (GUI)
+```
+
+---
+
+## Create System Snapshot
+
+```
+MX Tools → MX Snapshot
+1. Choose type (full/home)
+2. Enter description
+3. Click "Create Snapshot"
+4. Wait for completion
+```
+
+---
+
+## Resources
+
+- [MX Wiki](https://mxlinux.org/wiki/)
+- [Forum](https://forum.mxlinux.org/)
+- [Videos](https://mxlinux.org/video-tutorials/)
+
+**Enjoy MX! 🎯**

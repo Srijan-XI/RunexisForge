@@ -183,4 +183,4 @@ secrets/
 .env.local
 credentials.json
 # Ignore text files in this directory
-zsamples/
+*zsamples/

@@ -1,28 +1,77 @@
 # Tails User Guide
 
-## Booting Tails
-- Download ISO from https://tails.net/install
-- Verify signature
-- Flash to USB with Etcher or Tails Installer
-- Boot from USB; choose language and keyboard
+## Installation
 
-## Networking
-- Tor is mandatory; no direct clearnet
-- Configure Tor bridges if your network blocks Tor
+### Create Tails USB
 
-## Persistent Storage
-- Optional encrypted persistent storage for selected data (KeePassXC database, Wi-Fi, additional packages)
-- Create via Applications > Tails > Configure Persistent Storage
+1. Download from [tails.boum.org](https://tails.boum.org/install/)
+2. Verify download (important for security)
+3. Use Tails Installer or Etcher
+4. Create bootable USB
+5. Restart and boot from USB
 
-## Apps
-- Tor Browser for web
-- Thunderbird with Tor integration
-- OnionShare for file sharing over Tor
-- Metadata Cleaner for files
+---
 
-## Updates
-- Use Tails Upgrader prompts; reflash USB when major releases arrive
+## First Boot
 
-## Safety Tips
-- Avoid installing to hard disk; Tails is live-only
-- Shutdown to clear memory; amnesic by design
+### Boot Menu
+1. Access BIOS/UEFI
+2. Select USB as boot device
+3. Tails boot menu appears
+4. Select "Tails"
+
+---
+
+## Using Tails
+
+### Tor Browser
+- Pre-configured for anonymity
+- Never use personal accounts
+- HTTPS Everywhere enabled
+
+### Persistent Storage (Optional)
+
+```
+Applications → Tails → Configure persistent volume
+1. Create passphrase
+2. Select what to save:
+   - Personal files
+   - Browser bookmarks
+   - Email client
+   - Network connections
+3. Restart to activate
+```
+
+---
+
+## Security Tips
+
+- ⚠️ Never use personal information
+- ⚠️ Don't torrent (reveals IP)
+- ⚠️ Use HTTPS sites
+- ⚠️ Don't maximize Tor Browser
+- ⚠️ Update regularly
+
+---
+
+## Tor Circuits
+
+### View Circuit
+```
+Tor Browser → Click lock icon → More information
+```
+
+### New Circuit
+```
+Tor Browser → New Identity
+```
+
+---
+
+## Resources
+
+- [Tails Documentation](https://tails.boum.org/doc/)
+- [First Steps](https://tails.boum.org/doc/first_steps/)
+- [Warnings](https://tails.boum.org/doc/about/warnings/)
+
+**Stay safe! 🔒**

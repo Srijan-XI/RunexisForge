@@ -5,6 +5,89 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2024-12-24
+
+### Fixed
+- **Documentation Accuracy**: Corrected all documentation to reflect actual repository structure
+  - README.md badges now show accurate counts: 20+ frameworks, 11 databases, 25+ Linux distros, 9 game engines
+  - Fixed Game Engines table to include all 9 engines (Unity, Unreal, Godot, CryEngine, Panda3D, Cocos2d, GameMaker Studio, Spring Engine, Rage)
+  - Updated Linux Distributions section to show 25+ distros with family-based organization
+  - Added comprehensive Linux distribution tables organized by family (Arch, Debian, Red Hat, Independent)
+  - Corrected Programming-Languages section to reference new category-based organization
+- **QUICKSTART.md Structure**: Updated to reflect actual hierarchical organization
+  - Programming-Languages now shows subcategory structure (General-purpose/, Scripting/, WebDevelopment/, etc.)
+  - Linux section shows family-based hierarchy (Arch/, Debian/, RedHat/, Gentoo/ with subdistros)
+  - Added Development-Tools/ and SQL&DB'S/ sections with complete listings
+  - Corrected project name from "Install-and-Learn-DevLangs" to "RunexisForge"
+- **Path References**: All documentation now correctly references hierarchical paths
+  - Programming-Languages/{category}/{language}/ structure documented
+  - Linux/{family}/{distro}/ structure documented
+
+### Changed
+- **README.md Enhancements**:
+  - Linux distributions expanded from 10+ to 25+ (actual count)
+  - Game engines section now comprehensive with all 9 engines
+  - Added organizational note about Programming-Languages categorization
+  - Updated badge for frameworks from 18+ to 20+ (reflects actual count)
+  - Updated badge for databases from 12+ to 11 (accurate count)
+- **QUICKSTART.md Improvements**:
+  - Repository structure tree now matches actual file organization
+  - Added subcategory breakdown for all Programming-Languages
+  - Expanded Linux section to show all 25+ distributions organized by family
+  - Added SQL&DB'S complete database listing (11 databases)
+  - Added Development-Tools section (5 tools: CSV, JSON, TOML, XML, YAML)
+
+### Statistics
+- **Verified Counts**:
+  - 21 programming languages (categorized into 7 groups)
+  - 20+ frontend and backend frameworks
+  - 11 databases (BigQuery, DynamoDB, IBM_Db2, MariaDB, MongoDB, MySQL, Neo4j, PostgreSQL, Redis, SQLite, plus Snowflake)
+  - 25+ Linux distributions across 8 families
+  - 9 game engines (Unity, Unreal Engine, Godot, CryEngine, Panda3D, Cocos2d, GameMaker Studio, Spring Engine, Rage)
+  - 115 intro.md files across repository
+  - 110 user-guide.md files across repository
+
+## [2.1.0] - 2024-12-24
+
+### Added
+- **Programming Language Categorization**: Comprehensive categorization system
+  - Created `Programming-Languages/README.md` with categorized navigation
+  - Created `Programming-Languages/CATEGORIZATION.md` with detailed analysis
+  - Categories: Systems, General-Purpose, Scripting, Web, Query/DSL, Data Science, Scientific
+  - Quick navigation by use case (Enterprise, Mobile, Web, Games, AI/ML, etc.)
+  - Performance tiers and learning curve comparisons
+  - Language ecosystem and framework mappings
+- **Linux Distributions**: Three new enterprise and gaming-focused distros
+  - ChromeOS Flex: Google's cloud-first OS for legacy hardware revival
+  - SteamOS: Valve's gaming-focused Arch-based distribution
+  - Rocky Linux: RHEL-compatible enterprise Linux (CentOS replacement)
+- **Game Engine Documentation**: Rage Engine
+  - Comprehensive guide to Rockstar's proprietary engine
+  - GTA V and RDR2 modding guide
+  - Technical analysis and learning resources
+- **Development Tools Documentation**: JSON, XML, CSV
+  - Complete guides for data format manipulation
+  - Multi-language examples and best practices
+- **Game Engines**: CryEngine, Panda3D, Cocos2d, GameMaker Studio, Spring Engine
+  - Professional and indie game engine documentation
+  - Installation guides and starter tutorials
+- **Linux Distributions**: Zorin, Pop!_OS, MX Linux, Tails
+  - User-friendly and privacy-focused distributions
+  - Complete installation and usage guides
+
+### Changed
+- Updated n2plan.md to 100% completion (60/60 items)
+- Enhanced Programming-Languages directory with comprehensive navigation
+- Added Swift to language categorization table
+- Reorganized documentation structure for better discoverability
+
+### Statistics
+- **32 new documentation files** created in this update
+- **21 programming languages** now categorized
+- **7 categories** for language classification
+- **10 Linux distributions** with complete documentation
+- **6 game engines** documented
+
 ## [2.0.0] - 2025-12-24
 
 ### Added

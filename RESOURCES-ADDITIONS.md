@@ -151,6 +151,39 @@ Resources for newly added languages, frameworks, and tools.
 - [Qubes Documentation](https://www.qubes-os.org/doc/)
 - [Qubes Introduction](https://www.qubes-os.org/intro/)
 
+### Zorin OS
+- [Zorin Help](https://help.zorin.com/)
+- [Zorin Forum](https://forum.zorin.com/)
+
+### Pop!_OS
+- [Pop!_OS Documentation](https://support.system76.com/)
+- [Pop!_OS GitHub](https://github.com/pop-os)
+
+### MX Linux
+- [MX Linux Documentation](https://mxlinux.org/documentation/)
+- [MX Linux Forum](https://forum.mxlinux.org/)
+
+### Tails
+- [Tails Documentation](https://tails.boum.org/doc/)
+- [Tails Installation](https://tails.boum.org/install/)
+
+### ChromeOS Flex
+- [ChromeOS Flex Homepage](https://chromeenterprise.google/os/chromeosflex/)
+- [ChromeOS Flex Support](https://support.google.com/chromeosflex/)
+- [Certified Models](https://support.google.com/chromeosflex/answer/11513094)
+
+### SteamOS
+- [SteamOS Homepage](https://store.steampowered.com/steamos)
+- [Steam Deck](https://www.steamdeck.com/)
+- [ProtonDB](https://www.protondb.com/) - Game compatibility
+- [r/SteamDeck](https://www.reddit.com/r/SteamDeck/)
+
+### Rocky Linux
+- [Rocky Linux Docs](https://docs.rockylinux.org/)
+- [Rocky Wiki](https://wiki.rockylinux.org/)
+- [Rocky Forums](https://forums.rockylinux.org/)
+- [Rocky Mattermost](https://chat.rockylinux.org/)
+
 ---
 
 ## 🎮 Game Development
@@ -167,6 +200,35 @@ Resources for newly added languages, frameworks, and tools.
 ### Godot
 - [Godot Documentation](https://docs.godotengine.org/)
 - [GDQuest](https://www.gdquest.com/)
+
+### CryEngine
+- [CryEngine Documentation](https://docs.cryengine.com/)
+- [CryEngine Tutorials](https://www.cryengine.com/tutorials)
+- [CRYENGINE Community](https://www.cryengine.com/community)
+
+### Panda3D
+- [Panda3D Manual](https://docs.panda3d.org/)
+- [Panda3D Forum](https://discourse.panda3d.org/)
+- [Panda3D GitHub](https://github.com/panda3d/panda3d)
+
+### Cocos2d
+- [Cocos2d-x Documentation](https://docs.cocos2d-x.org/)
+- [Cocos Forum](https://discuss.cocos2d-x.org/)
+
+### GameMaker Studio
+- [GameMaker Docs](https://manual.gamemaker.io/)
+- [GameMaker Community](https://forum.gamemaker.io/)
+- [YoYo Games](https://www.yoyogames.com/)
+
+### Spring Engine
+- [Spring RTS Wiki](https://springrts.com/wiki/)
+- [Spring Engine GitHub](https://github.com/spring/spring)
+
+### Rage Engine
+- [GTA5-Mods](https://www.gta5-mods.com/) - Modding resources
+- [OpenIV](https://openiv.com/) - Modding tool
+- [ProtonDB](https://www.protondb.com/) - RDR2/GTA V compatibility
+- [Digital Foundry](https://www.youtube.com/digitalfoundry) - Technical analysis
 
 ---
 

@@ -78,31 +78,37 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ## 📁 Repository Structure (Quick Reference)
 
 ```
-Install-and-Learn-DevLangs/
+RunexisForge/
 │
 ├── Programming-Languages/
-│   ├── PYTHON/          # Python guides & questions
-│   ├── JAVA/            # Java guides & questions
-│   ├── JavaScript/      # JavaScript + Node.js, Express.js, Next.js
-│   ├── TypeScript/      # TypeScript guides
-│   ├── CSharp/          # C# guides
-│   ├── C & C++/         # C/C++ guides & questions
-│   ├── Golang/          # Go guides & questions
-│   ├── RUST/            # Rust guides & questions
-│   ├── PHP/             # PHP guides & questions
-│   ├── R/               # R guides & questions
-│   ├── Ruby/            # Ruby guides
-│   ├── Kotlin/          # Kotlin guides & questions
-│   ├── Swift/           # Swift guides & questions
-│   ├── Scala/           # Scala guides
-│   ├── MATLAB/          # MATLAB guides
-│   ├── Dart with Flutter/ # Dart/Flutter guides
-│   ├── Assembly/        # Assembly guides
-│   ├── Bash/            # Bash shell scripting
-│   ├── Kql/             # KQL query language
-│   ├── SQL/             # SQL guides
-│   ├── YAML/            # YAML config format
-│   └── TOML/            # TOML config format
+│   ├── README.md        # 📚 Main navigation & categorization
+│   ├── CATEGORIZATION.md # 📊 Detailed language comparison
+│   ├── General-purpose/
+│   │   ├── Kotlin/      # Kotlin guides & questions
+│   │   ├── Scala/       # Scala guides
+│   │   ├── Swift/       # Swift guides & questions
+│   │   └── Dart with Flutter/ # Dart/Flutter guides
+│   ├── Scripting/
+│   │   ├── PYTHON/      # Python guides & questions
+│   │   ├── PHP/         # PHP guides & questions
+│   │   ├── Ruby/        # Ruby guides
+│   │   └── Bash/        # Bash shell scripting
+│   ├── WebDevelopment/
+│   │   ├── JavaScript/  # JavaScript + Node.js, Express.js, Next.js
+│   │   └── TypeScript/  # TypeScript guides
+│   ├── SystemsProgramming/
+│   │   ├── Assembly/    # Assembly guides
+│   │   ├── C & C++/     # C/C++ guides & questions
+│   │   └── RUST/        # Rust guides & questions
+│   ├── EnterpriseApplications/
+│   │   ├── CSharp/      # C# guides
+│   │   └── JAVA/        # Java guides & questions
+│   ├── DataScience&Analytics/
+│   │   ├── R/           # R guides & questions
+│   │   ├── MATLAB/      # MATLAB guides
+│   │   └── Kql/         # KQL query language
+│   └── Cloud-native/
+│       └── Golang/      # Go guides & questions
 │
 ├── Frontend-Frameworks/
 │   ├── Angular/         # Angular framework
@@ -171,9 +177,34 @@ Install-and-Learn-DevLangs/
 │   └── Vitest/          # Vitest unit testing
 │
 ├── Game-Engines/
+│   ├── Cocos2d/         # Cocos2d (2D games)
+│   ├── CryEngine/       # CryEngine (photorealistic)
+│   ├── GameMaker Studio/ # GameMaker (beginner-friendly)
+│   ├── Godot/           # Godot engine
+│   ├── Panda3D/         # Panda3D (Python)
+│   ├── Rage/            # Rage Engine (educational)
+│   ├── Spring Engine/   # Spring RTS engine
 │   ├── Unity/           # Unity game engine
-│   ├── Unreal Engine/   # Unreal Engine
-│   └── Godot/           # Godot engine
+│   └── Unreal Engine/   # Unreal Engine
+│
+├── Development-Tools/
+│   ├── CSV/             # CSV data format
+│   ├── JSON/            # JSON data format
+│   ├── TOML/            # TOML config format
+│   ├── XML/             # XML data format
+│   └── YAML/            # YAML config format
+│
+├── SQL&DB'S/
+│   ├── BigQuery/        # Google BigQuery
+│   ├── DynamoDB/        # AWS DynamoDB
+│   ├── IBM_Db2/         # IBM Db2
+│   ├── MariaDB/         # MariaDB
+│   ├── MongoDB/         # MongoDB (NoSQL)
+│   ├── MySQL/           # MySQL
+│   ├── Neo4j/           # Neo4j graph database
+│   ├── PostgreSQL/      # PostgreSQL
+│   ├── Redis/           # Redis cache/DB
+│   └── SQLite/          # SQLite embedded DB
 │
 ├── Operating-Systems/
 │   ├── Windows/         # Windows OS guides
@@ -187,16 +218,36 @@ Install-and-Learn-DevLangs/
 │   ├── notes/           # General notes
 │   └── zsample/         # Samples and plans
 │
-├── Linux/               # Linux distros (15+ distributions)
-│   ├── Arch/            # Arch family
-│   ├── Debian/          # Debian family
-│   ├── RedHat/          # RedHat family
-│   ├── Gentoo/          # Gentoo
-│   ├── Slackware/       # Slackware
-│   ├── NixOS/           # NixOS
-│   ├── Rocky_Linux/     # Rocky Linux
-│   ├── Zorin/           # Zorin OS
-│   └── ... and more
+├── Linux/               # Linux distros (25+ distributions, family-organized)
+│   ├── Alpine/          # Alpine Linux (minimal, musl)
+│   ├── Arch/
+│   │   ├── Arch/        # Arch Linux base
+│   │   ├── BlackArch/   # Security/pentesting (2800+ tools)
+│   │   ├── GarudaLinux/ # Gaming-focused derivative
+│   │   ├── RedArch/     # Arch + Red Hat hybrid
+│   │   └── SteamOS/     # Valve's Steam Deck OS
+│   ├── Debian/
+│   │   ├── Debian/      # Debian base (stable)
+│   │   ├── Ubuntu/      # Most popular, LTS
+│   │   ├── KaliLinux/   # Pentesting & security
+│   │   ├── MintLinux/   # User-friendly desktop
+│   │   ├── MX_Linux/    # #1 on DistroWatch
+│   │   ├── ParrotSec/   # Security, privacy, development
+│   │   ├── Pop_OS/      # System76, developer-focused
+│   │   ├── Tails/       # Privacy, Tor, amnesia
+│   │   └── Zorin/       # Windows-like UI, beginners
+│   ├── RedHat/
+│   │   ├── CentOS/      # RHEL downstream (deprecated)
+│   │   ├── Fedora Linux/ # RHEL upstream, cutting-edge
+│   │   ├── OracleLinux/ # Oracle-supported RHEL clone
+│   │   ├── RedHatEnterpriseLinux/ # Commercial enterprise
+│   │   └── Rocky_Linux/ # CentOS replacement
+│   ├── Gentoo/
+│   │   ├── Gentoo/      # Source-based, optimization
+│   │   └── ChromeOS_Flex/ # Cloud-managed, legacy HW
+│   ├── NixOS/           # Declarative, reproducible
+│   ├── Qubes_OS/        # Security by isolation
+│   └── Slackware/       # Oldest, traditional Unix-like
 │
 ├── README.md            # Main documentation
 ├── CONTRIBUTING.md      # How to contribute
