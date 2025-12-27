@@ -1,6 +1,6 @@
 # Runexis Forge — Install & Learn DevLangs
 
-<div align="center" style="display: grid; place-items: center;">
+<div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Languages](https://img.shields.io/badge/Languages-21%20Categorized-blue.svg)](Programming-Languages/CATEGORIZATION.md)
@@ -85,8 +85,8 @@
     <img alt="CSS" width="50" src="https://skillicons.dev/icons?i=css" style="vertical-align: top;" />
   </a>
 
-  <a href="https://cuba.is/" target="_blank" rel="noopener noreferrer" title="cuba">
-    <img alt="cuba" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=cuba&theme=dark" style="vertical-align: top;" />
+  <a href="https://developer.nvidia.com/cuda" target="_blank" rel="noopener noreferrer" title="cuda">
+    <img alt="cuda" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=cuda&theme=dark" style="vertical-align: top;" />
   </a>
 
   <a href="https://dart.dev/" target="_blank" rel="noopener noreferrer" title="dart">
@@ -109,7 +109,7 @@
     <img alt="dotnet" width="50" src="https://skillicons.dev/icons?i=dotnet" style="vertical-align: top;" />
   </a>
 
-  <a href="https://www.dynamodb.org/" target="_blank" rel="noopener noreferrer" title="dynamodb IDE">
+  <a href="https://aws.amazon.com/dynamodb/" target="_blank" rel="noopener noreferrer" title="Amazon DynamoDB">
     <img alt="dynamodb" width="50" src="https://skillicons.dev/icons?i=dynamodb" style="vertical-align: top;" />
   </a>
 
@@ -687,7 +687,7 @@ This repository currently includes guides and practice questions for:
 ```
 
 git clone https://github.com/Srijan-XI/Install-and-Learn-DevLangs.git
-cd  Install-and-Learn-DevLangs
+cd Install-and-Learn-DevLangs
 ```
 
 ### 2. Choose Your Language

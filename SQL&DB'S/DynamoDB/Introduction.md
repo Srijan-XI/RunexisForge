@@ -150,7 +150,7 @@
 ```yaml
 Table: Users
 Partition Key: UserID
-```yaml
+```
 
 **Composite Primary Key (Partition + Sort Key):**
 
@@ -158,7 +158,7 @@ Partition Key: UserID
 Table: Orders
 Partition Key: CustomerID
 Sort Key: OrderDate
-```yaml
+```
 
 ### 5. Secondary Indexes
 
@@ -209,7 +209,7 @@ USER#12345        | ORDER#002          | orderDate, total, items
 USER#67890        | PROFILE#67890      | name, email, age
 PRODUCT#ABC       | METADATA           | name, price, stock
 PRODUCT#ABC       | REVIEW#001         | rating, comment, date
-```yaml
+```
 
 **Benefits of Single-Table Design:**
 

@@ -49,7 +49,7 @@ winget install Oracle.JDK.17
 
 # Rust
 winget install Rustlang.Rust.MSVC
-```bash
+```
 
 ### macOS
 
@@ -58,7 +58,7 @@ winget install Rustlang.Rust.MSVC
 brew install python
 brew install openjdk@17
 brew install rust
-```bash
+```
 
 ### Linux (Ubuntu/Debian)
 
@@ -72,7 +72,7 @@ sudo apt install openjdk-17-jdk
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```bash
+```
 
 *For detailed instructions, see language-specific installation guides.*
 
@@ -258,7 +258,7 @@ RunexisForge/
 ├── RESOURCES.md         # Learning materials
 ├── ROADMAP.md           # Project roadmap
 └── .github/             # Templates & workflows
-```bash
+```
 
 ---
 

@@ -47,7 +47,7 @@ There are many ways to contribute to this project:
 2. **Clone your fork** locally:
 
    ```bash
-   git clone https://github.com/Srijan-XI/Install-and-Learn-DevLangs.git
+   git clone https://github.com/Srijan-XI/RunexisForge.git
    ```
 
 3. **Create a new branch** for your contribution:
