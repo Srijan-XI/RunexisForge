@@ -188,5 +188,5 @@ secrets/
 .env.local
 credentials.json
 # Ignore text files in this directory including markdown files and txt files
-zsample/*.txt
-zsample/*.md
+*zsample/*.txt
+*zsample/*.md
