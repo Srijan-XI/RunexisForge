@@ -17,7 +17,7 @@ jobs:
     name: Markdown lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Run markdownlint-cli2
         uses: DavidAnson/markdownlint-cli2-action@v19
         with:
@@ -29,7 +29,7 @@ jobs:
     name: Prose lint (Vale)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Run Vale
         uses: errata-ai/vale-action@v2.1.1
         with:
@@ -40,7 +40,7 @@ jobs:
     name: Link check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Run lychee
         uses: lycheeverse/lychee-action@v2
         with:
@@ -53,7 +53,7 @@ jobs:
     name: Spellcheck (codespell)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Run codespell
         uses: codespell-project/actions-codespell@v2
         with:
