@@ -1,16 +1,16 @@
 # Runexis Forge — Install & Learn DevLangs
 
-<div align="center">
+<div align="center" style="display: grid; place-items: center;">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Languages](https://img.shields.io/badge/Languages-21%20Categorized-blue.svg)](Programming-Languages/CATEGORIZATION.md)
-[![Frameworks](https://img.shields.io/badge/Frameworks-20%2B-orange.svg)]()
-[![Databases](https://img.shields.io/badge/Databases-11-purple.svg)](SQL&DB'S/)
+[![Frameworks](https://img.shields.io/badge/Frameworks-20%2B-orange.svg)](Frameworks/)
+[![Databases](https://img.shields.io/badge/Databases-11-purple.svg)](Databases/)
 [![Cloud](https://img.shields.io/badge/Cloud-4%20Platforms-cyan.svg)](Cloud-DevOps/)
 [![DevOps](https://img.shields.io/badge/DevOps%20Tools-15%2B-red.svg)](Cloud-DevOps/)
 [![Linux](https://img.shields.io/badge/Linux%20Distros-25%2B-teal.svg)](Linux/)
 [![Game Engines](https://img.shields.io/badge/Game%20Engines-9-indigo.svg)](Game-Engines/)
-[![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)]()
+[![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)](Practice-Questions/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-success.svg)]()
 
@@ -684,17 +684,18 @@ This repository currently includes guides and practice questions for:
 
 ### 1. Clone the Repository
 
-```bash
+```
+
 git clone https://github.com/Srijan-XI/Install-and-Learn-DevLangs.git
 cd  Install-and-Learn-DevLangs
-```bash
+```
 
 ### 2. Choose Your Language
 
 Navigate to the folder of the programming language you want to learn:
 
-```bash
 # Programming Languages
+```
 cd Programming-Languages/PYTHON/      # Python
 cd Programming-Languages/JAVA/        # Java
 cd Programming-Languages/JavaScript/  # JavaScript + Node.js
@@ -763,15 +764,15 @@ cd Operating-Systems/Windows/         # Windows
 cd Operating-Systems/macOS/           # macOS
 cd Operating-Systems/Android/         # Android
 cd Linux/                             # Linux distros
-```bash
+```
 
 ### 3. Follow the Installation Guide
 
 Each language folder contains an installation guide with detailed instructions for:
 
-- Windows
-- macOS
-- Linux
+- `Windows`
+- `macOS`
+- `Linux`
 
 ### 4. Try Practice Questions
 
@@ -940,7 +941,5 @@ See [**CHANGELOG.md**](CHANGELOG.md) for a list of notable changes to this proje
 ### 💻 Happy Coding! 🚀
 
 **Made with ❤️ for developers by developers**
-
-[⬆ Back to Top](#-install-and-learn-programming-languages)
 
 </div>
