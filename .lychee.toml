@@ -9,6 +9,10 @@ exclude = [
   "https://img.shields.io/.*",
   "https://go-skill-icons.vercel.app/.*",
   "https://skillicons.dev/.*",
+  "http://localhost.*",
+  "https://localhost.*",
+  "http://127.0.0.1.*",
+  "http://0.0.0.0.*",
 ]
 
 # Skip non-text files and repo internals.

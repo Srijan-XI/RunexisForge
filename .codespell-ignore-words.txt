@@ -5,3 +5,7 @@
 Kql
 JenKins
 OpenVAS
+OpenSearch
+Promtail
+LogQL
+OpenTelemetry

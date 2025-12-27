@@ -1,0 +1,15 @@
+{
+  "name": "RunexisForge Docs",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [8000],
+  "postCreateCommand": "pip install -r requirements-docs.txt || true && npm install -g markdownlint-cli2 && echo Devcontainer ready",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "streetsidesoftware.code-spell-checker",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  }
+}

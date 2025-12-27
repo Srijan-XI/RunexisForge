@@ -213,7 +213,7 @@ All databases are located in **`/SQL&DB'S/`**
   - **MySQL**: `SQL/MySQL/` (Introduction & Installation)
   - **PostgreSQL**: `SQL/PostgreSQL/` (Introduction & Installation)
   - **MongoDB**: `SQL/MongoDB/` (Introduction & Installation)
-  - **Redis**: `SQL/Redis/` (Introduction & Installation)
+  - **Redis**: `SQL/Redis/` (Introduction, Installation & Patterns Guide)
   - **DynamoDB**: `SQL/DynamoDB/` (Introduction & AWS Guide)
   - **MariaDB**: `SQL/MariaDB/`
   - **SQLite**: `SQL/SQLite/`
@@ -459,9 +459,63 @@ All cloud and DevOps tools are located in **`/Cloud-DevOps/`**
 - **Introduction**: `OpenTofu/intro.md`
 - **User Guide**: `OpenTofu/user-guide.md`
 
+#### OpenTelemetry 📡
+- **Location**: `/Cloud-DevOps/OpenTelemetry/`
+- **Introduction**: `OpenTelemetry/intro.md`
+- **User Guide**: `OpenTelemetry/user-guide.md`
+- **Topics**: Traces, metrics, logs, collector, exporters
+
+#### Prometheus 📈
+- **Location**: `/Cloud-DevOps/Prometheus/`
+- **Introduction**: `Prometheus/intro.md`
+- **User Guide**: `Prometheus/user-guide.md`
+- **Topics**: Metrics, exporters, PromQL, alerting
+
+#### Grafana 📊
+- **Location**: `/Cloud-DevOps/Grafana/`
+- **Introduction**: `Grafana/intro.md`
+- **User Guide**: `Grafana/user-guide.md`
+- **Topics**: Dashboards, alerts, data sources (Prometheus/Loki/Tempo)
+
+#### Loki 🪵
+- **Location**: `/Cloud-DevOps/Loki/`
+- **Introduction**: `Loki/intro.md`
+- **User Guide**: `Loki/user-guide.md`
+- **Topics**: Log aggregation, LogQL, Promtail
+
+#### ELK & OpenSearch 🔎
+- **Location**: `/Cloud-DevOps/ELK-OpenSearch/`
+- **Introduction**: `ELK-OpenSearch/intro.md`
+- **User Guide**: `ELK-OpenSearch/user-guide.md`
+- **Topics**: Elasticsearch/OpenSearch, Logstash/Ingest, Kibana/Dashboards, Beats
+
 ### 🔒 Security & Testing
 
 All security and testing tools are located in **`/Security-Testing/`**
+
+#### OWASP Top 10 🛡️
+- **Location**: `/Security-Testing/OWASP-Top-10/`
+- **Introduction**: `OWASP-Top-10/intro.md`
+- **User Guide**: `OWASP-Top-10/user-guide.md`
+- **Topics**: Web app risks, checklists, secure design/testing
+
+#### Semgrep 🔍
+- **Location**: `/Security-Testing/Semgrep/`
+- **Introduction**: `Semgrep/intro.md`
+- **User Guide**: `Semgrep/user-guide.md`
+- **Topics**: SAST, custom rules, CI integration
+
+#### Dependency Scanning 📦
+- **Location**: `/Security-Testing/Dependency-Scanning/`
+- **Introduction**: `Dependency-Scanning/intro.md`
+- **User Guide**: `Dependency-Scanning/user-guide.md`
+- **Topics**: SCA, SBOM, CVEs, CI gates
+
+#### Secrets Scanning 🔑
+- **Location**: `/Security-Testing/Secrets-Scanning/`
+- **Introduction**: `Secrets-Scanning/intro.md`
+- **User Guide**: `Secrets-Scanning/user-guide.md`
+- **Topics**: gitleaks, trufflehog, remediation, pre-commit/CI
 
 #### Aqua Security (Trivy) 🛡️
 - **Location**: `/Security-Testing/AquaSecurity/`
@@ -565,6 +619,30 @@ All data tools are located in **`/Data-Analytics/`**
 - **User Guide**: `Apache Kafka/user-guide.md`
 - **Examples**: `Apache Kafka/examples/`
 - **Practice**: `Apache Kafka/questions/`
+
+#### dbt 🧱
+- **Location**: `/Data-Analytics/dbt/`
+- **Introduction**: `dbt/intro.md`
+- **User Guide**: `dbt/user-guide.md`
+- **Topics**: Models, tests, snapshots, docs
+
+#### Apache Airflow 🌬️
+- **Location**: `/Data-Analytics/Airflow/`
+- **Introduction**: `Airflow/intro.md`
+- **User Guide**: `Airflow/user-guide.md`
+- **Topics**: DAGs, operators, scheduling, executors
+
+#### DuckDB 🦆
+- **Location**: `/Data-Analytics/DuckDB/`
+- **Introduction**: `DuckDB/intro.md`
+- **User Guide**: `DuckDB/user-guide.md`
+- **Topics**: In-process OLAP, Parquet/CSV, Python integration
+
+#### Lakehouse Basics 🏞️
+- **Location**: `/Data-Analytics/Lakehouse/`
+- **Introduction**: `Lakehouse/intro.md`
+- **User Guide**: `Lakehouse/user-guide.md`
+- **Topics**: Delta Lake, Apache Iceberg, Apache Hudi, ACID tables
 
 #### Pandas 🐼
 - **Location**: `/Data-Analytics/Pandas/`

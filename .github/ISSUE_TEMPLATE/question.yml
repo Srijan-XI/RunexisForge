@@ -1,0 +1,21 @@
+name: "❓ Question"
+description: Ask a question or request clarification
+labels: [question]
+title: "[Question]: "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Be specific so we can help quickly.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: File or URL (optional)
+      description: Where did the question arise?
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context

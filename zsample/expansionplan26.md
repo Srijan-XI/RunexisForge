@@ -33,6 +33,29 @@
 	- Background Jobs: `Backend-Web/BackgroundJobs/intro.md`, `celery-guide.md`, `sidekiq-guide.md`
 	- OAuth 2.0 & OIDC: `Backend-Web/OAuth-OIDC/intro.md`, `user-guide.md`
 
+- Observability expansion:
+	- OpenTelemetry: `Cloud-DevOps/OpenTelemetry/intro.md`, `user-guide.md`
+	- Prometheus: `Cloud-DevOps/Prometheus/intro.md`, `user-guide.md`
+	- Grafana: `Cloud-DevOps/Grafana/intro.md`, `user-guide.md`
+	- Loki: `Cloud-DevOps/Loki/intro.md`, `user-guide.md`
+	- ELK & OpenSearch: `Cloud-DevOps/ELK-OpenSearch/intro.md`, `user-guide.md`
+
+- Security expansion:
+	- OWASP Top 10: `Security-Testing/OWASP-Top-10/intro.md`, `user-guide.md`
+	- Semgrep: `Security-Testing/Semgrep/intro.md`, `user-guide.md`
+	- Dependency Scanning: `Security-Testing/Dependency-Scanning/intro.md`, `user-guide.md`
+	- Secrets Scanning: `Security-Testing/Secrets-Scanning/intro.md`, `user-guide.md`
+
+- Data expansion:
+	- dbt: `Data-Analytics/dbt/intro.md`, `user-guide.md`
+	- Apache Airflow: `Data-Analytics/Airflow/intro.md`, `user-guide.md`
+	- DuckDB: `Data-Analytics/DuckDB/intro.md`, `user-guide.md`
+	- Lakehouse basics: `Data-Analytics/Lakehouse/intro.md`, `user-guide.md`
+
+- Dev experience & templates:
+	- Dev Container: `.devcontainer/devcontainer.json`
+	- Issue Forms: `.github/ISSUE_TEMPLATE/bug_report.yml`, `feature_request.yml`, `question.yml`
+
 ## Software/technologies to consider adding as topics (content expansion)
 
 - Containers & DevOps: Podman, Helm, GitHub Actions “starter workflows”, Azure DevOps Pipelines, ArgoCD/Flux, OpenTofu (Terraform alternative).

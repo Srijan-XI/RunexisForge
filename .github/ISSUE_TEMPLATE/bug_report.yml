@@ -1,0 +1,32 @@
+name: "🐞 Bug report"
+description: Report a bug or regression
+labels: [bug]
+title: "[Bug]: "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Clear description of the issue.
+      placeholder: e.g., Broken link on page X
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: List the steps to reproduce the issue.
+      placeholder: 1) ...
+  - type: input
+    id: location
+    attributes:
+      label: File or URL
+      description: Path or URL where the issue occurs.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
