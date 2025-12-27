@@ -1,0 +1,12 @@
+# Project vocabulary for Vale.
+# One term per line. Case-sensitive.
+
+Runexis
+RunexisForge
+Kql
+JenKins
+OpenVAS
+MkDocs
+n8n
+VBoxManage
+PowerCLI

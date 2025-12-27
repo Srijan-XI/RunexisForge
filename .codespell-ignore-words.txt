@@ -1,0 +1,7 @@
+# Add project-specific words here to reduce false positives.
+# One word per line.
+
+# Common tech terms / names
+Kql
+JenKins
+OpenVAS

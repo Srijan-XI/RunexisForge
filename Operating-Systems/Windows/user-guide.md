@@ -17,6 +17,11 @@ wsl -l -v
 wsl --set-version Ubuntu 2
 ```
 
+## Virtualization (VMs)
+- Intro: `Operating-Systems/Windows/Virtualization/intro.md`
+- VirtualBox: `Operating-Systems/Windows/Virtualization/virtualbox.md`
+- VMware: `Operating-Systems/Windows/Virtualization/vmware.md`
+
 ## PowerShell Basics
 ```powershell
 Get-Process

@@ -49,3 +49,6 @@ strategy:
 ## Reusable Workflows
 - Define in `.github/workflows/reusable.yml`
 - Call with `uses: ./.github/workflows/reusable.yml` and `workflow_call`
+
+## Starter workflows
+See [Cloud-DevOps/GitHub/starter-workflows.md](starter-workflows.md) for ready-to-use workflow examples.

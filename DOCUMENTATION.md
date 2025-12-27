@@ -319,6 +319,31 @@ All backend frameworks are located in **`/Backend-Web/`**
 - **Examples**: `Streamlit/examples/`
 - **Practice**: `Streamlit/questions/`
 
+#### gRPC 🔌
+- **Location**: `/Backend-Web/gRPC/`
+- **Introduction**: `gRPC/intro.md`
+- **User Guide**: `gRPC/user-guide.md`
+- **Topics**: Protocol Buffers, RPC framework, streaming, HTTP/2
+
+#### GraphQL 🔍
+- **Location**: `/Backend-Web/GraphQL/`
+- **Introduction**: `GraphQL/intro.md`
+- **User Guide**: `GraphQL/user-guide.md`
+- **Topics**: Query language, resolvers, subscriptions, schema
+
+#### Background Jobs ⚙️
+- **Location**: `/Backend-Web/BackgroundJobs/`
+- **Introduction**: `BackgroundJobs/intro.md`
+- **Celery Guide**: `BackgroundJobs/celery-guide.md` (Python)
+- **Sidekiq Guide**: `BackgroundJobs/sidekiq-guide.md` (Ruby)
+- **Topics**: Task queues, async processing, scheduling
+
+#### OAuth 2.0 & OIDC 🔐
+- **Location**: `/Backend-Web/OAuth-OIDC/`
+- **Introduction**: `OAuth-OIDC/intro.md`
+- **User Guide**: `OAuth-OIDC/user-guide.md`
+- **Topics**: Authorization, authentication, PKCE, tokens
+
 ### ☁️ Cloud & DevOps
 
 All cloud and DevOps tools are located in **`/Cloud-DevOps/`**
@@ -347,6 +372,12 @@ All cloud and DevOps tools are located in **`/Cloud-DevOps/`**
 - **Location**: `/Cloud-DevOps/Docker/`
 - **Introduction**: `Docker/intro.md`
 - **Topics**: Containers, Images, Dockerfile, Docker Compose, Volumes, Networking, Best Practices
+
+#### n8n 🔁
+- **Location**: `/Cloud-DevOps/n8n/`
+- **Introduction**: `n8n/intro.md`
+- **User Guide**: `n8n/user-guide.md`
+- **Examples**: `n8n/examples/`
 
 #### Kubernetes ☸️
 - **Location**: `/Cloud-DevOps/Kubernetes/`
@@ -397,6 +428,36 @@ All cloud and DevOps tools are located in **`/Cloud-DevOps/`**
 - **Location**: `/Cloud-DevOps/JenKins/`
 - **Introduction**: `JenKins/intro.md`
 - **User Guide**: `JenKins/user-guide.md`
+
+#### Podman 🐳
+- **Location**: `/Cloud-DevOps/Podman/`
+- **Introduction**: `Podman/intro.md`
+- **User Guide**: `Podman/user-guide.md`
+
+#### Helm ⎈
+- **Location**: `/Cloud-DevOps/Helm/`
+- **Introduction**: `Helm/intro.md`
+- **User Guide**: `Helm/user-guide.md`
+
+#### Azure DevOps Pipelines 🔵
+- **Location**: `/Cloud-DevOps/AzureDevOpsPipelines/`
+- **Introduction**: `AzureDevOpsPipelines/intro.md`
+- **User Guide**: `AzureDevOpsPipelines/user-guide.md`
+
+#### ArgoCD 🐙
+- **Location**: `/Cloud-DevOps/ArgoCD/`
+- **Introduction**: `ArgoCD/intro.md`
+- **User Guide**: `ArgoCD/user-guide.md`
+
+#### Flux 🔄
+- **Location**: `/Cloud-DevOps/Flux/`
+- **Introduction**: `Flux/intro.md`
+- **User Guide**: `Flux/user-guide.md`
+
+#### OpenTofu 🌱
+- **Location**: `/Cloud-DevOps/OpenTofu/`
+- **Introduction**: `OpenTofu/intro.md`
+- **User Guide**: `OpenTofu/user-guide.md`
 
 ### 🔒 Security & Testing
 
@@ -534,6 +595,7 @@ All operating systems are located in **`/Operating-Systems/`**
 - **Location**: `/Operating-Systems/Windows/`
 - **Introduction**: `Windows/intro.md`
 - **User Guide**: `Windows/user-guide.md`
+- **Virtualization**: `Windows/Virtualization/`
 
 #### macOS 🍎
 - **Location**: `/Operating-Systems/macOS/`

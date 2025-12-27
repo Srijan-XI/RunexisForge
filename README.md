@@ -22,6 +22,14 @@
 
 ---
 
+## Docs site (MkDocs)
+
+This repository can be browsed as a documentation website using MkDocs.
+
+- Install: `pip install -r requirements-docs.txt`
+- Serve locally: `mkdocs serve`
+- Build: `mkdocs build`
+
 <!-- ICONS SECTION -->
  <div>
        <p align="center">

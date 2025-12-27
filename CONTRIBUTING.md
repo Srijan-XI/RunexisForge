@@ -57,6 +57,22 @@ There are many ways to contribute to this project:
 6. **Commit your changes** with clear commit messages
 7. **Push to your fork** and submit a pull request
 
+### Run checks locally (recommended)
+
+This repository uses automated checks in CI to keep documentation consistent. You can run the same checks locally before opening a PR.
+
+1. Install `pre-commit`
+   - Python: `pip install pre-commit`
+2. Install git hooks (one-time)
+   - `pre-commit install`
+3. Run all checks
+   - `pre-commit run --all-files`
+
+CI also runs:
+- Markdown linting via `.markdownlint.json`
+- Link checking via `.lychee.toml`
+- Spellchecking via `codespell` (project words in `.codespell-ignore-words.txt`)
+
 ## Contribution Guidelines
 
 ### Adding a New Language
