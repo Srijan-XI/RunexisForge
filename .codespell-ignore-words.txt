@@ -12,6 +12,7 @@ OpenTelemetry
 
 # Azure terms
 AKS
+aks
 
 # Flutter/Dart patterns
 BLoC
