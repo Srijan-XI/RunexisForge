@@ -20,11 +20,13 @@
 ## Key Features
 
 ### Privacy & Anonymity
+
 - **Tor Network**: All traffic anonymized
 - **No Traces**: Amnesia feature clears memory
 - **Encrypted Storage**: Persistent volume encryption
 
 ### Security Tools
+
 - **Tor Browser**: Anonymous web browsing
 - **Encrypted Messaging**: Pidgin with OTR
 - **Email Encryption**: Thunderbird with OpenPGP

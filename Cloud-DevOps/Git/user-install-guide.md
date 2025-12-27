@@ -1,6 +1,7 @@
 # Git User Installation and Usage Guide
 
 ## Table of Contents
+
 1. [Installation](#installation)
 2. [Initial Configuration](#initial-configuration)
 3. [Basic Commands](#basic-commands)
@@ -38,76 +39,88 @@
      - Credential helper: Git Credential Manager
 
 3. **Verify Installation:**
+
 ```powershell
 git --version
-```
+```bash
 
 #### Method 2: Winget (Windows Package Manager)
+
 ```powershell
 winget install --id Git.Git -e --source winget
-```
+```bash
 
 #### Method 3: Chocolatey
+
 ```powershell
 choco install git
-```
+```bash
 
 ### macOS
 
 #### Method 1: Homebrew (Recommended)
+
 ```bash
 # Install Homebrew if not already installed
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install Git
 brew install git
-```
+```bash
 
 #### Method 2: Xcode Command Line Tools
+
 ```bash
 xcode-select --install
-```
+```bash
 
 #### Method 3: Official Installer
+
 - Download from [git-scm.com/download/mac](https://git-scm.com/download/mac)
 - Run the installer package
 
 **Verify Installation:**
+
 ```bash
 git --version
-```
+```bash
 
 ### Linux
 
 #### Debian/Ubuntu
+
 ```bash
 sudo apt update
 sudo apt install git
-```
+```bash
 
 #### Fedora/RHEL/CentOS
+
 ```bash
 # Fedora
 sudo dnf install git
 
 # RHEL/CentOS
 sudo yum install git
-```
+```bash
 
 #### Arch Linux
+
 ```bash
 sudo pacman -S git
-```
+```bash
 
 #### openSUSE
+
 ```bash
 sudo zypper install git
-```
+```bash
 
 **Verify Installation:**
+
 ```bash
 git --version
-```
+```bash
 
 ---
 
@@ -116,20 +129,23 @@ git --version
 ### Set Up User Identity
 
 **Required for commits:**
+
 ```bash
 # Set your name
 git config --global user.name "Your Name"
 
 # Set your email
 git config --global user.email "your.email@example.com"
-```
+```bash
 
 ### Configure Default Branch Name
+
 ```bash
 git config --global init.defaultBranch main
-```
+```bash
 
 ### Set Default Editor
+
 ```bash
 # VS Code
 git config --global core.editor "code --wait"
@@ -142,26 +158,30 @@ git config --global core.editor "nano"
 
 # Notepad (Windows)
 git config --global core.editor "notepad"
-```
+```bash
 
 ### Enable Color Output
+
 ```bash
 git config --global color.ui auto
-```
+```text
 
 ### Configure Line Endings
 
 **Windows:**
+
 ```bash
 git config --global core.autocrlf true
-```
+```text
 
 **macOS/Linux:**
+
 ```bash
 git config --global core.autocrlf input
-```
+```text
 
 ### View Configuration
+
 ```bash
 # View all settings
 git config --list
@@ -171,9 +191,10 @@ git config user.name
 
 # View configuration location
 git config --list --show-origin
-```
+```text
 
 ### Configure Aliases (Optional but Useful)
+
 ```bash
 git config --global alias.co checkout
 git config --global alias.br branch
@@ -182,7 +203,7 @@ git config --global alias.st status
 git config --global alias.unstage 'reset HEAD --'
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.visual 'log --graph --oneline --all'
-```
+```text
 
 ---
 
@@ -191,6 +212,7 @@ git config --global alias.visual 'log --graph --oneline --all'
 ### Creating a Repository
 
 #### Initialize New Repository
+
 ```bash
 # Create and navigate to project directory
 mkdir my-project
@@ -198,9 +220,10 @@ cd my-project
 
 # Initialize Git repository
 git init
-```
+```text
 
 #### Clone Existing Repository
+
 ```bash
 # Clone from URL
 git clone https://github.com/username/repository.git
@@ -210,16 +233,17 @@ git clone https://github.com/username/repository.git my-folder
 
 # Clone specific branch
 git clone -b branch-name https://github.com/username/repository.git
-```
+```text
 
 ### Checking Status
+
 ```bash
 # Check repository status
 git status
 
 # Short status format
 git status -s
-```
+```text
 
 ### Staging Changes
 
@@ -241,7 +265,7 @@ git add -u
 
 # Interactive staging
 git add -p
-```
+```text
 
 ### Committing Changes
 
@@ -260,7 +284,7 @@ git commit --amend -m "Updated commit message"
 
 # Amend without changing message
 git commit --amend --no-edit
-```
+```text
 
 ### Viewing History
 
@@ -292,7 +316,7 @@ git log --after="2024-01-01" --before="2024-12-31"
 
 # Search commit messages
 git log --grep="bug fix"
-```
+```text
 
 ### Viewing Changes
 
@@ -311,7 +335,7 @@ git diff branch1..branch2
 
 # Compare commits
 git diff commit1 commit2
-```
+```text
 
 ### Undoing Changes
 
@@ -336,7 +360,7 @@ git reset HEAD~1
 
 # Undo last commit (discard changes)
 git reset --hard HEAD~1
-```
+```text
 
 ### Removing Files
 
@@ -349,7 +373,7 @@ git rm --cached filename.txt
 
 # Remove directory
 git rm -r directory-name
-```
+```text
 
 ### Moving/Renaming Files
 
@@ -359,7 +383,7 @@ git mv old-name.txt new-name.txt
 
 # Move file
 git mv file.txt directory/
-```
+```text
 
 ---
 
@@ -399,7 +423,7 @@ Thumbs.db
 # Ignore compiled files
 *.pyc
 __pycache__/
-```
+```text
 
 ### Stashing Changes
 
@@ -430,7 +454,7 @@ git stash clear
 
 # Show stash changes
 git stash show -p
-```
+```text
 
 ### Tagging
 
@@ -461,7 +485,7 @@ git tag -d v1.0.0
 
 # Delete remote tag
 git push origin --delete v1.0.0
-```
+```text
 
 ---
 
@@ -502,7 +526,7 @@ git branch -D feature-name
 
 # Delete remote branch
 git push origin --delete feature-name
-```
+```text
 
 ### Merging
 
@@ -518,35 +542,39 @@ git merge --abort
 
 # Continue merge after resolving conflicts
 git merge --continue
-```
+```text
 
 ### Resolving Merge Conflicts
 
 1. **Identify conflicted files:**
+
 ```bash
 git status
-```
+```text
 
-2. **Open conflicted files and look for:**
-```
+1. **Open conflicted files and look for:**
+
+```text
 <<<<<<< HEAD
 Your changes
 =======
 Incoming changes
 >>>>>>> feature-branch
-```
+```text
 
-3. **Edit file to resolve conflict**
+1. **Edit file to resolve conflict**
 
-4. **Stage resolved files:**
+2. **Stage resolved files:**
+
 ```bash
 git add resolved-file.txt
-```
+```text
 
-5. **Complete the merge:**
+1. **Complete the merge:**
+
 ```bash
 git commit
-```
+```text
 
 ### Rebasing
 
@@ -565,7 +593,7 @@ git rebase --skip
 
 # Abort rebase
 git rebase --abort
-```
+```text
 
 ---
 
@@ -594,7 +622,7 @@ git remote set-url origin https://github.com/username/new-repo.git
 
 # Show remote details
 git remote show origin
-```
+```text
 
 ### Fetching and Pulling
 
@@ -613,7 +641,7 @@ git pull --rebase origin main
 
 # Pull all branches
 git pull --all
-```
+```text
 
 ### Pushing
 
@@ -635,7 +663,7 @@ git push --force origin main
 
 # Force push with lease (safer)
 git push --force-with-lease origin main
-```
+```text
 
 ### Tracking Branches
 
@@ -648,7 +676,7 @@ git branch --set-upstream-to=origin/main main
 
 # Show tracking branches
 git branch -vv
-```
+```text
 
 ---
 
@@ -665,7 +693,7 @@ git cherry-pick commit1 commit2
 
 # Cherry-pick range
 git cherry-pick commit1^..commit2
-```
+```text
 
 ### Reverting
 
@@ -678,7 +706,7 @@ git revert -n commit-hash
 
 # Revert merge commit
 git revert -m 1 merge-commit-hash
-```
+```text
 
 ### Cleaning
 
@@ -694,7 +722,7 @@ git clean -fd
 
 # Remove ignored files too
 git clean -fdx
-```
+```text
 
 ### Bisect (Find Bug Introduction)
 
@@ -713,7 +741,7 @@ git bisect good  # or bad
 
 # End bisect
 git bisect reset
-```
+```text
 
 ### Submodules
 
@@ -732,7 +760,7 @@ git clone --recurse-submodules https://github.com/user/repo.git
 
 # Update submodule to latest
 git submodule update --remote
-```
+```text
 
 ---
 
@@ -760,7 +788,7 @@ git merge feature/new-feature
 # 6. Delete feature branch
 git branch -d feature/new-feature
 git push origin --delete feature/new-feature
-```
+```text
 
 ### Git Flow
 
@@ -795,7 +823,7 @@ git tag -a v1.0.1
 git checkout develop
 git merge --no-ff hotfix/1.0.1
 git branch -d hotfix/1.0.1
-```
+```text
 
 ---
 
@@ -804,38 +832,43 @@ git branch -d hotfix/1.0.1
 ### Common Issues
 
 #### Undo Last Commit
+
 ```bash
 # Keep changes
 git reset --soft HEAD~1
 
 # Discard changes
 git reset --hard HEAD~1
-```
+```text
 
 #### Fix Wrong Commit Message
+
 ```bash
 git commit --amend -m "Correct message"
-```
+```text
 
 #### Recover Deleted Branch
+
 ```bash
 # Find commit hash
 git reflog
 
 # Recreate branch
 git checkout -b recovered-branch commit-hash
-```
+```text
 
 #### Discard Local Changes
+
 ```bash
 # Single file
 git checkout -- filename
 
 # All files
 git reset --hard HEAD
-```
+```text
 
 #### Authentication Issues
+
 ```bash
 # Use SSH instead of HTTPS
 git remote set-url origin git@github.com:username/repo.git
@@ -843,14 +876,15 @@ git remote set-url origin git@github.com:username/repo.git
 # Or use Personal Access Token
 # Configure credential helper
 git config --global credential.helper store
-```
+```text
 
 ---
 
 ## Best Practices
 
 ### 1. Commit Messages
-```
+
+```text
 # Good format:
 Short summary (50 chars or less)
 
@@ -863,22 +897,25 @@ More detailed explanation (wrap at 72 chars):
 "Fix login bug causing crashes"
 "Add user authentication feature"
 "Refactor database connection logic"
-```
+```text
 
 ### 2. Commit Frequency
+
 - Commit often with logical chunks
 - Each commit should be a working state
 - Don't commit broken code
 
 ### 3. Branch Naming
-```
+
+```text
 feature/user-authentication
 bugfix/login-error
 hotfix/security-patch
 release/v1.2.0
-```
+```text
 
 ### 4. Before Pushing
+
 ```bash
 # Always pull first
 git pull --rebase
@@ -891,9 +928,10 @@ git status
 
 # Then push
 git push
-```
+```text
 
 ### 5. Never Commit
+
 - Passwords or API keys
 - Binary files (use Git LFS)
 - Generated files
@@ -905,20 +943,24 @@ git push
 ## Useful Resources
 
 ### Official Documentation
+
 - [Git Documentation](https://git-scm.com/doc)
 - [Pro Git Book](https://git-scm.com/book/en/v2) (Free)
 - [Git Reference](https://git-scm.com/docs)
 
 ### Interactive Learning
+
 - [Learn Git Branching](https://learngitbranching.js.org/)
 - [Git Immersion](http://gitimmersion.com/)
 - [GitHub Learning Lab](https://lab.github.com/)
 
 ### Cheat Sheets
+
 - [GitHub Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
 
 ### Community
+
 - [Stack Overflow - Git](https://stackoverflow.com/questions/tagged/git)
 - [Git Users Mailing List](https://git-scm.com/community)
 

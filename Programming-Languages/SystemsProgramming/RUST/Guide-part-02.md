@@ -8,10 +8,10 @@
 - Run the installer and follow on-screen instructions.
 - Open Command Prompt and verify with:
 
-```
+```bash
 rustc --version
 cargo --version
-```
+```bash
 
 - Update Rust: `rustup update`.
 
@@ -19,32 +19,31 @@ cargo --version
 
 - Open the terminal and run:
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+```bash
 
 - Follow installation prompts.
 - Reload your shell or restart terminal:
 
-```
+```bash
 source $HOME/.cargo/env
-```
+```bash
 
 - Verify:
 
-```
+```bash
 rustc --version
 cargo --version
-```
-
+```bash
 
 **macOS**
 
 - Open Terminal and run:
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+```bash
 
 - Follow installation instructions.
 - To update, run: `rustup update`.
@@ -61,7 +60,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fn main() {
     println!("Hello, world!");
 }
-```
+```bash
 
 **Variables \& Types**
 
@@ -71,7 +70,7 @@ fn main() {
     let y = 10.0; // f64 by default
     println!("x = {}, y = {}", x, y);
 }
-```
+```bash
 
 **Control Flow**
 
@@ -85,8 +84,7 @@ fn main() {
         }
     }
 }
-```
-
+```bash
 
 ***
 
@@ -98,7 +96,6 @@ fn main() {
 | Linux | curl | sh |
 | macOS | curl | sh |
 
-
 ***
 
 ### 4. Tooling Help: IDE Setup, Compilers, Package Managers
@@ -106,9 +103,9 @@ fn main() {
 - **Official Compiler**: rustc
 - **Package Manager**: Cargo – bundled with rustup
 - **Popular IDEs**:
-    - VSCode (with Rust Analyzer extension)
-    - IntelliJ IDEA (with Rust plugin)
-    - CLion (Rust plugin support)
+  - VSCode (with Rust Analyzer extension)
+  - IntelliJ IDEA (with Rust plugin)
+  - CLion (Rust plugin support)
 - **Editor Setup Example (VSCode)**:
 
 1. Install [VSCode].
@@ -120,13 +117,13 @@ fn main() {
 ### 5. Troubleshooting Tips
 
 - **Common Issue: rustc or cargo not found**
-    - Ensure `$HOME/.cargo/bin` is in your PATH.
+  - Ensure `$HOME/.cargo/bin` is in your PATH.
 - **Outdated Rust version**
-    - Run `rustup update`.
+  - Run `rustup update`.
 - **Permission errors (Linux/macOS)**
-    - Try running as sudo or ensure user owns Rust installation directory.
+  - Try running as sudo or ensure user owns Rust installation directory.
 - **IDE not recognizing Rust**
-    - Check extension and version compatibility; restart IDE.
+  - Check extension and version compatibility; restart IDE.
 
 ***
 
@@ -142,9 +139,9 @@ fn main() {
         if i % 2 == 0 { println!("{}", i); }
     }
 }
-```
+```bash
 
-2. **Sum Array Elements**
+1. **Sum Array Elements**
 
 ```rust
 fn main() {
@@ -152,12 +149,11 @@ fn main() {
     let sum: i32 = arr.iter().sum();
     println!("{}", sum);
 }
-```
-
+```bash
 
 ### Intermediate
 
-3. **Reverse a String**
+1. **Reverse a String**
 
 ```rust
 fn main() {
@@ -165,9 +161,9 @@ fn main() {
     let rev: String = s.chars().rev().collect();
     println!("{}", rev);
 }
-```
+```bash
 
-4. **Check if Number is Prime**
+1. **Check if Number is Prime**
 
 ```rust
 fn is_prime(n: u32) -> bool {
@@ -178,9 +174,9 @@ fn is_prime(n: u32) -> bool {
     true
 }
 fn main() { println!("{}", is_prime(17)); }
-```
+```bash
 
-5. **Factorial Calculation**
+1. **Factorial Calculation**
 
 ```rust
 fn factorial(n: u32) -> u32 {
@@ -189,21 +185,20 @@ fn factorial(n: u32) -> u32 {
 fn main() {
     println!("{}", factorial(5));
 }
-```
-
+```bash
 
 ### Advanced
 
-6. **Find the Largest Element in a Vector**
+1. **Find the Largest Element in a Vector**
 
 ```rust
 fn main() {
     let v = vec![10, 44, 32, 17];
     println!("{}", v.iter().max().unwrap());
 }
-```
+```bash
 
-7. **Implement Fibonacci (Recursive)**
+1. **Implement Fibonacci (Recursive)**
 
 ```rust
 fn fib(n: u32) -> u32 {
@@ -212,9 +207,9 @@ fn fib(n: u32) -> u32 {
 fn main() {
     println!("{}", fib(6));
 }
-```
+```bash
 
-8. **Write to a File**
+1. **Write to a File**
 
 ```rust
 use std::fs::File;
@@ -223,9 +218,9 @@ fn main() {
     let mut file = File::create("demo.txt").unwrap();
     file.write_all(b"Hello, Rust!").unwrap();
 }
-```
+```bash
 
-9. **Struct for Rectangle + Area Method**
+1. **Struct for Rectangle + Area Method**
 
 ```rust
 struct Rectangle { width: u32, height: u32 }
@@ -236,9 +231,9 @@ fn main() {
     let rect = Rectangle { width: 7, height: 3 };
     println!("Area: {}", rect.area());
 }
-```
+```bash
 
-10. **Read Numbers from User \& Sort**
+1. **Read Numbers from User \& Sort**
 
 ```rust
 use std::io;
@@ -252,5 +247,4 @@ fn main() {
     v.sort();
     println!("{:?}", v);
 }
-```
-
+```bash

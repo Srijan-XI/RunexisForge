@@ -5,6 +5,7 @@ Comprehensive guide to working with CSV files across different programming langu
 ---
 
 ## Table of Contents
+
 1. [Reading CSV Files](#reading-csv-files)
 2. [Writing CSV Files](#writing-csv-files)
 3. [Data Manipulation](#data-manipulation)
@@ -19,6 +20,7 @@ Comprehensive guide to working with CSV files across different programming langu
 ### Python
 
 #### Using csv module
+
 ```python
 import csv
 
@@ -40,9 +42,10 @@ with open('data.tsv', 'r') as file:
     csv_reader = csv.reader(file, delimiter='\t')
     for row in csv_reader:
         print(row)
-```
+```bash
 
 #### Using pandas (recommended for data analysis)
+
 ```python
 import pandas as pd
 
@@ -68,11 +71,12 @@ df = pd.read_csv('data.csv', usecols=['Name', 'Age', 'City'])
 
 # Skip rows
 df = pd.read_csv('data.csv', skiprows=[0, 2, 3])
-```
+```bash
 
 ### JavaScript (Node.js)
 
 #### Using csv-parser
+
 ```javascript
 const fs = require('fs');
 const csv = require('csv-parser');
@@ -93,9 +97,10 @@ fs.createReadStream('data.csv')
 fs.createReadStream('data.tsv')
   .pipe(csv({ separator: '\t' }))
   .on('data', (row) => console.log(row));
-```
+```bash
 
 #### Using papaparse
+
 ```javascript
 const Papa = require('papaparse');
 const fs = require('fs');
@@ -116,7 +121,7 @@ Papa.parse(file, {
 fs.createReadStream('large_file.csv')
   .pipe(Papa.parse(Papa.NODE_STREAM_INPUT, {header: true}))
   .on('data', (row) => console.log(row));
-```
+```bash
 
 ### JavaScript (Browser)
 
@@ -143,11 +148,12 @@ Papa.parse(file, {
     console.log(results.data);
   }
 });
-```
+```text
 
 ### Java
 
 #### Using OpenCSV
+
 ```java
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
@@ -186,9 +192,10 @@ public class CSVExample {
         }
     }
 }
-```
+```text
 
 #### Using Apache Commons CSV
+
 ```java
 import org.apache.commons.csv.*;
 import java.io.*;
@@ -205,11 +212,12 @@ for (CSVRecord record : records) {
     String city = record.get("City");
     System.out.println(name + ", " + age + ", " + city);
 }
-```
+```text
 
 ### C# (.NET)
 
 #### Using CsvHelper
+
 ```csharp
 using CsvHelper;
 using CsvHelper.Configuration;
@@ -248,7 +256,7 @@ using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
         Console.WriteLine($"{name}, {age}");
     }
 }
-```
+```text
 
 ### PHP
 
@@ -280,7 +288,7 @@ fclose($file);
 // One-liner to read all
 $data = array_map('str_getcsv', file('data.csv'));
 ?>
-```
+```text
 
 ### R
 
@@ -306,7 +314,7 @@ data <- read_csv("data.csv",
 data <- read_csv_chunked("large_file.csv",
                         DataFrameCallback$new(function(x, pos) x),
                         chunk_size = 10000)
-```
+```text
 
 ---
 
@@ -315,6 +323,7 @@ data <- read_csv_chunked("large_file.csv",
 ### Python
 
 #### Using csv module
+
 ```python
 import csv
 
@@ -345,9 +354,10 @@ with open('output.csv', 'w', newline='', encoding='utf-8') as file:
 with open('output.tsv', 'w', newline='') as file:
     writer = csv.writer(file, delimiter='\t')
     writer.writerows(data)
-```
+```text
 
 #### Using pandas
+
 ```python
 import pandas as pd
 
@@ -371,7 +381,7 @@ df.to_csv('output.csv',
 
 # Append to existing file
 df.to_csv('output.csv', mode='a', header=False, index=False)
-```
+```text
 
 ### JavaScript (Node.js)
 
@@ -401,7 +411,7 @@ const fs = require('fs');
 
 const csv = Papa.unparse(records);
 fs.writeFileSync('output.csv', csv);
-```
+```text
 
 ### Java
 
@@ -420,9 +430,9 @@ try (CSVWriter writer = new CSVWriter(new FileWriter("output.csv"))) {
     writer.writeNext(row1);
     writer.writeNext(row2);
 }
-```
+```text
 
-### C#
+### C #
 
 ```csharp
 using CsvHelper;
@@ -439,7 +449,7 @@ using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
 {
     csv.WriteRecords(records);
 }
-```
+```text
 
 ---
 
@@ -486,7 +496,7 @@ merged = pd.merge(df1, df2, on='ID')
 
 # Export
 df.to_csv('output.csv', index=False)
-```
+```text
 
 ---
 
@@ -525,7 +535,7 @@ csvgrep -c city -m "New York" data.csv
 
 # Join CSVs
 csvjoin -c id file1.csv file2.csv
-```
+```text
 
 ### xsv (Rust-based, very fast)
 
@@ -556,7 +566,7 @@ xsv frequency -s city data.csv
 
 # Join
 xsv join id file1.csv id file2.csv
-```
+```text
 
 ### awk
 
@@ -572,7 +582,7 @@ awk -F',' '{sum+=$2} END {print sum}' data.csv
 
 # Add header
 awk 'BEGIN {print "Name,Age"} {print}' data.csv
-```
+```text
 
 ---
 
@@ -602,7 +612,7 @@ with open('large_file.csv', 'r') as file:
     for row in reader:
         if int(row['Age']) > 25:
             process(row)
-```
+```text
 
 ### Data Validation
 
@@ -628,7 +638,7 @@ def validate_email(email):
     return '@' in email and '.' in email
 
 df['Valid Email'] = df['Email'].apply(validate_email)
-```
+```text
 
 ### CSV to Database
 
@@ -647,7 +657,7 @@ df.to_sql('table_name', conn, if_exists='replace', index=False)
 from sqlalchemy import create_engine
 engine = create_engine('mysql://user:pass@localhost/dbname')
 df.to_sql('table_name', engine, if_exists='append', index=False)
-```
+```text
 
 ---
 
@@ -656,6 +666,7 @@ df.to_sql('table_name', engine, if_exists='append', index=False)
 ### Common Issues
 
 #### 1. **Encoding Errors**
+
 ```python
 # Try different encodings
 df = pd.read_csv('data.csv', encoding='utf-8')
@@ -667,9 +678,10 @@ import chardet
 with open('data.csv', 'rb') as f:
     result = chardet.detect(f.read())
     print(result['encoding'])
-```
+```text
 
 #### 2. **Inconsistent Delimiters**
+
 ```python
 # Auto-detect delimiter
 df = pd.read_csv('data.csv', sep=None, engine='python')
@@ -680,18 +692,20 @@ with open('data.csv', 'r') as f:
     sample = f.read(1024)
     sniffer = csv.Sniffer()
     delimiter = sniffer.sniff(sample).delimiter
-```
+```text
 
 #### 3. **Quoted Fields**
+
 ```python
 df = pd.read_csv('data.csv', quotechar='"', quoting=csv.QUOTE_ALL)
-```
+```text
 
 #### 4. **Extra Whitespace**
+
 ```python
 df = pd.read_csv('data.csv', skipinitialspace=True)
 df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
-```
+```text
 
 ---
 
@@ -713,6 +727,7 @@ df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
 ## Quick Reference
 
 ### Python CSV Module
+
 ```python
 import csv
 
@@ -727,9 +742,10 @@ with open('file.csv', 'w', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=['col1', 'col2'])
     writer.writeheader()
     writer.writerow({'col1': 'val1', 'col2': 'val2'})
-```
+```text
 
 ### Pandas Quick Reference
+
 ```python
 import pandas as pd
 
@@ -742,7 +758,7 @@ df.head()
 df[df['col'] > 5]
 df.groupby('col').mean()
 df.sort_values('col')
-```
+```text
 
 ---
 

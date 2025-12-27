@@ -9,7 +9,9 @@ As a self-contained automation server, Jenkins can be installed on various platf
 ## Why Use Jenkins?
 
 ### 1. **Continuous Integration/Continuous Delivery**
+
 Automate the entire software delivery pipeline:
+
 - Automatic builds on code commits
 - Automated testing after builds
 - Deployment automation
@@ -17,7 +19,9 @@ Automate the entire software delivery pipeline:
 - Reduced manual errors
 
 ### 2. **Extensive Plugin Ecosystem**
+
 Over 1,800 plugins for integration:
+
 - Version control (Git, SVN, Mercurial)
 - Build tools (Maven, Gradle, npm)
 - Cloud platforms (AWS, Azure, Google Cloud)
@@ -26,7 +30,9 @@ Over 1,800 plugins for integration:
 - Notification systems
 
 ### 3. **Distributed Builds**
+
 Scale your build infrastructure:
+
 - Master-agent architecture
 - Parallel job execution
 - Platform-specific builds
@@ -34,14 +40,18 @@ Scale your build infrastructure:
 - Load balancing
 
 ### 4. **Easy Configuration**
+
 Multiple ways to configure:
+
 - Web-based GUI
 - Configuration as Code (JCasC)
 - Pipeline as Code (Jenkinsfile)
 - Groovy DSL scripting
 
 ### 5. **Open Source and Free**
+
 No licensing costs:
+
 - Free to use and modify
 - Active community support
 - Regular updates
@@ -49,7 +59,9 @@ No licensing costs:
 - No vendor lock-in
 
 ### 6. **Platform Independent**
+
 Runs anywhere Java runs:
+
 - Windows, Linux, macOS
 - Docker containers
 - Kubernetes clusters
@@ -59,7 +71,9 @@ Runs anywhere Java runs:
 ## Core Concepts
 
 ### Jobs/Projects
+
 A job (or project) is a runnable task configured in Jenkins:
+
 - **Freestyle Project**: Simple, GUI-based jobs
 - **Pipeline**: Code-based workflow definitions
 - **Multi-configuration**: Matrix builds for multiple configurations
@@ -67,7 +81,9 @@ A job (or project) is a runnable task configured in Jenkins:
 - **Multibranch Pipeline**: Automatic pipeline for each branch
 
 ### Builds
+
 A build is a single execution of a job:
+
 - Triggered manually or automatically
 - Includes build number and timestamp
 - Produces artifacts and logs
@@ -75,7 +91,9 @@ A build is a single execution of a job:
 - Can trigger other builds
 
 ### Pipeline
+
 A suite of plugins supporting CI/CD pipelines:
+
 - Define entire workflow as code
 - Version control pipeline definitions
 - Visualize stages and steps
@@ -83,20 +101,26 @@ A suite of plugins supporting CI/CD pipelines:
 - Resilient to Jenkins restarts
 
 ### Nodes
+
 Machines that execute builds:
+
 - **Master/Controller**: Orchestrates builds, stores configuration
 - **Agents/Slaves**: Execute build jobs
 - **Executors**: Slots for running builds on nodes
 
 ### Workspace
+
 Directory where build operations execute:
+
 - Contains source code
 - Build artifacts
 - Temporary files
 - Cleaned between builds (optional)
 
 ### Artifacts
+
 Files produced by builds:
+
 - Compiled binaries
 - JAR/WAR files
 - Docker images
@@ -107,7 +131,7 @@ Files produced by builds:
 
 ### Master-Agent Architecture
 
-```
+```bash
                     ┌────────────────┐
                     │ Jenkins Master  │
                     │ (Controller)    │
@@ -124,11 +148,11 @@ Files produced by builds:
     │ - Executes  │  │ - Executes│  │ - Executes│
     │ - Builds   │  │ - Tests   │  │ - Deploys │
     └────────────┘  └───────────┘  └───────────┘
-```
+```bash
 
 ### CI/CD Pipeline Flow
 
-```
+```bash
 1. Developer commits code → Git Repository
 2. Webhook triggers Jenkins build
 3. Jenkins pulls latest code
@@ -141,12 +165,14 @@ Files produced by builds:
 10. Run integration tests
 11. Deploy to production (manual approval)
 12. Notify team of results
-```
+```bash
 
 ## Key Features
 
 ### 1. **Pipeline as Code**
+
 Define CI/CD pipelines in version-controlled Jenkinsfile:
+
 ```groovy
 pipeline {
     agent any
@@ -168,23 +194,28 @@ pipeline {
         }
     }
 }
-```
+```bash
 
 ### 2. **Distributed Builds**
+
 - Execute builds on multiple machines
 - Platform-specific builds (Windows, Linux, macOS)
 - Label-based agent selection
 - Dynamic agent provisioning
 
 ### 3. **Blue Ocean**
+
 Modern, intuitive UI:
+
 - Visual pipeline editor
 - Pipeline visualization
 - Personalized dashboard
 - GitHub/Bitbucket integration
 
 ### 4. **Configuration as Code (JCasC)**
+
 Manage Jenkins configuration as code:
+
 ```yaml
 jenkins:
   systemMessage: "Jenkins configured as code"
@@ -194,9 +225,10 @@ jenkins:
       users:
         - id: admin
           password: ${ADMIN_PASSWORD}
-```
+```bash
 
 ### 5. **Extensive Integration**
+
 - Source control integration
 - Build tool integration
 - Testing framework integration
@@ -204,6 +236,7 @@ jenkins:
 - Notification systems
 
 ### 6. **Security Features**
+
 - Role-based access control (RBAC)
 - LDAP/Active Directory integration
 - OAuth authentication
@@ -226,6 +259,7 @@ jenkins:
 ## Common Use Cases
 
 ### 1. **Continuous Integration**
+
 - Automated builds on commits
 - Compile code
 - Run unit tests
@@ -233,6 +267,7 @@ jenkins:
 - Generate reports
 
 ### 2. **Continuous Deployment**
+
 - Deploy to staging environments
 - Run integration tests
 - Deploy to production
@@ -240,6 +275,7 @@ jenkins:
 - Blue-green deployments
 
 ### 3. **Automated Testing**
+
 - Unit test execution
 - Integration testing
 - End-to-end testing
@@ -247,6 +283,7 @@ jenkins:
 - Security scanning
 
 ### 4. **Build Automation**
+
 - Compile applications
 - Package artifacts
 - Create Docker images
@@ -254,6 +291,7 @@ jenkins:
 - Database migrations
 
 ### 5. **Release Management**
+
 - Version tagging
 - Release notes generation
 - Artifact publishing
@@ -261,6 +299,7 @@ jenkins:
 - Approval workflows
 
 ### 6. **Infrastructure as Code**
+
 - Terraform execution
 - Ansible playbooks
 - CloudFormation templates
@@ -269,36 +308,42 @@ jenkins:
 ## Popular Jenkins Plugins
 
 ### Source Control
+
 - **Git Plugin**: Git repository integration
 - **GitHub Plugin**: GitHub-specific features
 - **Bitbucket Plugin**: Bitbucket integration
 - **GitLab Plugin**: GitLab integration
 
 ### Build Tools
+
 - **Maven Integration**: Apache Maven support
 - **Gradle Plugin**: Gradle build automation
 - **NodeJS Plugin**: Node.js and npm support
 - **Docker Plugin**: Docker integration
 
 ### Testing & Quality
+
 - **JUnit Plugin**: Test result publishing
 - **SonarQube Scanner**: Code quality analysis
 - **Selenium Plugin**: Browser automation
 - **Code Coverage Plugin**: Coverage reports
 
 ### Deployment
+
 - **Deploy to container Plugin**: Container deployment
 - **Kubernetes Plugin**: Kubernetes integration
 - **AWS Steps Plugin**: AWS services integration
 - **Azure CLI Plugin**: Azure deployment
 
 ### Notifications
+
 - **Email Extension**: Enhanced email notifications
 - **Slack Notification**: Slack integration
 - **Microsoft Teams**: Teams notifications
 - **Discord Notifier**: Discord integration
 
 ### Utilities
+
 - **Pipeline Plugin**: Pipeline support
 - **Blue Ocean**: Modern UI
 - **Configuration as Code**: JCasC support
@@ -307,7 +352,9 @@ jenkins:
 ## Jenkins Pipeline Types
 
 ### Declarative Pipeline
+
 Structured, opinionated syntax:
+
 ```groovy
 pipeline {
     agent any
@@ -351,10 +398,12 @@ pipeline {
         }
     }
 }
-```
+```bash
 
 ### Scripted Pipeline
+
 Flexible, Groovy-based:
+
 ```groovy
 node {
     try {
@@ -379,40 +428,46 @@ node {
         throw e
     }
 }
-```
+```text
 
 ## Best Practices
 
 ### 1. **Use Pipeline as Code**
+
 - Store Jenkinsfile in source control
 - Version control pipeline changes
 - Review pipeline modifications
 
 ### 2. **Implement Proper Security**
+
 - Enable security from the start
 - Use role-based access control
 - Manage credentials securely
 - Regular security updates
 
 ### 3. **Optimize Build Performance**
+
 - Use distributed builds
 - Cache dependencies
 - Parallel stage execution
 - Incremental builds
 
 ### 4. **Monitor and Maintain**
+
 - Regular backups
 - Monitor disk space
 - Update plugins regularly
 - Clean old builds
 
 ### 5. **Use Shared Libraries**
+
 - Reuse common pipeline code
 - Maintain consistency
 - Simplify pipelines
 - Version control libraries
 
 ### 6. **Implement Proper Testing**
+
 - Unit tests for pipeline code
 - Test pipeline changes
 - Use test environments
@@ -420,6 +475,7 @@ node {
 ## Industry Adoption
 
 Jenkins is used by:
+
 - Netflix
 - LinkedIn
 - Facebook
@@ -435,6 +491,7 @@ Jenkins is used by:
 Jenkins skills are valuable for:
 
 ### Job Roles
+
 - DevOps Engineer
 - Build and Release Engineer
 - CI/CD Engineer
@@ -443,6 +500,7 @@ Jenkins skills are valuable for:
 - Cloud Engineer
 
 ### Skills Enhancement
+
 - CI/CD implementation
 - Automation expertise
 - Pipeline design
@@ -452,6 +510,7 @@ Jenkins skills are valuable for:
 ## Advantages of Jenkins
 
 ### Technical Benefits
+
 - Highly customizable
 - Extensive plugin ecosystem
 - Supports any language/platform
@@ -459,6 +518,7 @@ Jenkins skills are valuable for:
 - Active development
 
 ### Business Benefits
+
 - Reduces manual effort
 - Faster time to market
 - Improved code quality
@@ -466,6 +526,7 @@ Jenkins skills are valuable for:
 - Better collaboration
 
 ### Operational Benefits
+
 - Self-hosted control
 - No vendor lock-in
 - Scalable architecture
@@ -474,28 +535,36 @@ Jenkins skills are valuable for:
 ## Common Challenges
 
 ### 1. **Initial Setup Complexity**
+
 Solution:
+
 - Use Docker for quick setup
 - Start with simple pipelines
 - Leverage documentation
 - Use templates
 
 ### 2. **Plugin Management**
+
 Solution:
+
 - Keep plugins updated
 - Use only necessary plugins
 - Test plugin updates
 - Monitor compatibility
 
 ### 3. **Maintenance Overhead**
+
 Solution:
+
 - Automate maintenance tasks
 - Regular backups
 - Monitor resources
 - Use Configuration as Code
 
 ### 4. **Security Configuration**
+
 Solution:
+
 - Follow security best practices
 - Enable authentication early
 - Use RBAC
@@ -504,6 +573,7 @@ Solution:
 ## Learning Path
 
 ### Beginner
+
 1. Install Jenkins
 2. Create freestyle jobs
 3. Configure source control
@@ -511,6 +581,7 @@ Solution:
 5. Understand workspace and artifacts
 
 ### Intermediate
+
 1. Write declarative pipelines
 2. Use Pipeline as Code
 3. Implement multi-stage pipelines
@@ -518,6 +589,7 @@ Solution:
 5. Integrate testing tools
 
 ### Advanced
+
 1. Shared libraries
 2. Scripted pipelines
 3. Custom plugins
@@ -532,6 +604,7 @@ Jenkins remains the most popular and versatile CI/CD tool in the industry, power
 While newer CI/CD tools offer simpler setup and cloud-native features, Jenkins provides unmatched customization, control, and integration capabilities. Its self-hosted nature appeals to organizations with strict security requirements or those seeking to avoid vendor lock-in.
 
 Learning Jenkins opens doors to:
+
 - DevOps career opportunities
 - Automation expertise
 - CI/CD best practices

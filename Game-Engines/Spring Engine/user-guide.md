@@ -3,13 +3,15 @@
 ## Installation
 
 ### Windows
-```
+
+```bash
 1. Download from springrts.com
 2. Run installer
 3. Install Spring Lobby (recommended)
-```
+```bash
 
 ### Linux
+
 ```bash
 # Ubuntu/Debian
 sudo apt-get install spring
@@ -20,26 +22,28 @@ cd spring
 cmake .
 make
 sudo make install
-```
+```bash
 
 ---
 
 ## Getting Started
 
 ### Play Existing Games
-```
+
+```bash
 1. Install Spring Lobby
 2. Browse games (BAR, Zero-K, etc.)
 3. Download game/maps
 4. Join or host match
-```
+```bash
 
 ---
 
 ## Creating a Mod
 
 ### Basic Structure
-```
+
+```bash
 MyMod/
 ├── modinfo.lua          # Mod metadata
 ├── gamedata/
@@ -51,9 +55,10 @@ MyMod/
 ├── scripts/             # Lua unit scripts
 ├── luarules/            # Game logic
 └── luaui/              # UI customization
-```
+```bash
 
 ### modinfo.lua
+
 ```lua
 return {
     name = "My RTS Game",
@@ -65,13 +70,14 @@ return {
     description = "My awesome RTS game",
     modtype = 1,
 }
-```
+```bash
 
 ---
 
 ## Unit Definition
 
 ### units/myunit.lua
+
 ```lua
 return {
     myunit = {
@@ -103,13 +109,14 @@ return {
         buildTime = 10,
     },
 }
-```
+```bash
 
 ---
 
 ## Weapon Definition
 
 ### weapons/machinegun.lua
+
 ```lua
 return {
     MACHINEGUN = {
@@ -131,7 +138,7 @@ return {
         avoidFriendly = true,
     },
 }
-```
+```bash
 
 ---
 

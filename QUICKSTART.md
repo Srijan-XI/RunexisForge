@@ -7,6 +7,7 @@ Get up and running with any programming language in minutes!
 ## 🎯 Choose Your Path
 
 ### Path 1: Complete Beginner
+
 Never coded before? Start here!
 
 1. **Choose Python** (most beginner-friendly)
@@ -16,6 +17,7 @@ Never coded before? Start here!
 5. **Progress**: Work through questions q01-q10
 
 ### Path 2: Experienced Developer
+
 Setting up a new language or environment?
 
 1. **Pick your language**: Python, Java, C/C++, PHP, R, or Rust
@@ -24,6 +26,7 @@ Setting up a new language or environment?
 4. **Build**: Real projects with your new skills
 
 ### Path 3: Contributor
+
 Want to contribute to the project?
 
 1. **Read**: [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -46,7 +49,7 @@ winget install Oracle.JDK.17
 
 # Rust
 winget install Rustlang.Rust.MSVC
-```
+```bash
 
 ### macOS
 
@@ -55,7 +58,7 @@ winget install Rustlang.Rust.MSVC
 brew install python
 brew install openjdk@17
 brew install rust
-```
+```bash
 
 ### Linux (Ubuntu/Debian)
 
@@ -69,7 +72,7 @@ sudo apt install openjdk-17-jdk
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+```bash
 
 *For detailed instructions, see language-specific installation guides.*
 
@@ -77,7 +80,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ## 📁 Repository Structure (Quick Reference)
 
-```
+```bash
 RunexisForge/
 │
 ├── Programming-Languages/
@@ -255,19 +258,21 @@ RunexisForge/
 ├── RESOURCES.md         # Learning materials
 ├── ROADMAP.md           # Project roadmap
 └── .github/             # Templates & workflows
-```
+```bash
 
 ---
 
 ## 🎓 Learning Path Recommendations
 
 ### Week 1: Getting Started
+
 - ✅ Install chosen language
 - ✅ Set up IDE/editor
 - ✅ Complete beginner questions (Q1-Q5)
 - ✅ Read basic syntax documentation
 
 ### Week 2-4: Building Skills
+
 - ✅ Complete intermediate questions
 - ✅ Read about data structures
 - ✅ Start a small project
@@ -275,6 +280,7 @@ RunexisForge/
 - ✅ Join community discussions
 
 ### Month 2-3: Advanced Topics
+
 - ✅ Complete advanced questions
 - ✅ Build a medium-sized project
 - ✅ Contribute to open source
@@ -285,6 +291,7 @@ RunexisForge/
 ## 💡 Quick Tips
 
 ### For Learning
+
 1. **Code daily**: Even 30 minutes helps
 2. **Type, don't copy**: Manual typing builds muscle memory
 3. **Experiment**: Modify examples to see what happens
@@ -292,6 +299,7 @@ RunexisForge/
 5. **Build projects**: Apply what you learn
 
 ### For Practice Questions
+
 1. **Read carefully**: Understand requirements first
 2. **Plan first**: Pseudocode before coding
 3. **Start simple**: Get basic version working first
@@ -299,6 +307,7 @@ RunexisForge/
 5. **Refactor**: Improve after it works
 
 ### For Contributing
+
 1. **Start small**: Fix typos, improve docs
 2. **Follow guidelines**: Read CONTRIBUTING.md
 3. **Test everything**: Run code before submitting
@@ -310,6 +319,7 @@ RunexisForge/
 ## 🔧 Essential Tools
 
 ### Code Editors (Pick One)
+
 - **VS Code** (Recommended) - Free, powerful, many extensions
 - **PyCharm** - Great for Python
 - **IntelliJ IDEA** - Excellent for Java
@@ -317,10 +327,12 @@ RunexisForge/
 - **Vim/Neovim** - For terminal lovers
 
 ### Version Control
+
 - **Git** - Essential for all developers
 - **GitHub Desktop** - GUI for Git (beginners)
 
 ### Terminal/Shell
+
 - **Windows**: PowerShell or Windows Terminal
 - **macOS**: Terminal or iTerm2
 - **Linux**: Your distro's default terminal

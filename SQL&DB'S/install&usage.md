@@ -9,12 +9,14 @@ This guide provides quick links and overview for installing different database s
 ### **Relational Databases (SQL)**
 
 #### 1. **MySQL** 🐬
+
 - **Installation Guide**: [MySQL Installation](MySQL/install&usage.md)
 - **Introduction**: [MySQL Introduction](MySQL/Introduction.md)
 - **Best For**: Web applications, WordPress, small to medium projects
 - **License**: GPL / Commercial
 
 #### 2. **PostgreSQL** 🐘
+
 - **Installation Guide**: [PostgreSQL Installation](PostgreSQL/install&usage.md)
 - **Introduction**: [PostgreSQL Introduction](PostgreSQL/Introduction.md)
 - **Best For**: Complex queries, data integrity, enterprise applications
@@ -23,18 +25,21 @@ This guide provides quick links and overview for installing different database s
 ### **NoSQL Databases**
 
 #### 3. **MongoDB** 🍃
+
 - **Installation Guide**: [MongoDB Installation](MongoDB/install&usage.md)
 - **Introduction**: [MongoDB Introduction](MongoDB/Introduction.md)
 - **Best For**: Flexible schema, rapid development, big data
 - **License**: SSPL / Commercial
 
 #### 4. **Redis** 🔴
+
 - **Installation Guide**: [Redis Installation](Redis/install&usage.md)
 - **Introduction**: [Redis Introduction](Redis/Introduction.md)
 - **Best For**: Caching, session management, real-time analytics
 - **License**: BSD
 
 #### 5. **DynamoDB** ⚡
+
 - **Introduction**: [DynamoDB Introduction](DynamoDB/Introduction.md)
 - **Best For**: AWS serverless, auto-scaling, managed service
 - **Type**: Fully managed AWS service (No local installation)
@@ -70,23 +75,26 @@ This guide provides quick links and overview for installing different database s
 ### **Package Managers**
 
 #### Windows
+
 ```powershell
 # Using Chocolatey
 choco install mysql
 choco install postgresql
 choco install mongodb
-```
+```bash
 
 #### macOS
+
 ```bash
 # Using Homebrew
 brew install mysql
 brew install postgresql
 brew install mongodb-community
 brew install redis
-```
+```bash
 
 #### Linux (Ubuntu/Debian)
+
 ```bash
 # APT package manager
 sudo apt update
@@ -94,7 +102,7 @@ sudo apt install mysql-server
 sudo apt install postgresql
 sudo apt install mongodb
 sudo apt install redis-server
-```
+```bash
 
 ### **Docker (All Platforms)**
 
@@ -110,7 +118,7 @@ docker run --name mongodb -p 27017:27017 -d mongo
 
 # Redis
 docker run --name redis -p 6379:6379 -d redis
-```
+```bash
 
 ---
 
@@ -118,7 +126,7 @@ docker run --name redis -p 6379:6379 -d redis
 
 ### **Decision Tree**
 
-```
+```bash
 Do you need a relational database?
 ├─ YES
 │  ├─ Need advanced features (JSON, arrays, geospatial)?
@@ -133,13 +141,14 @@ Do you need a relational database?
    │  └─> MongoDB
    └─ AWS serverless application?
       └─> DynamoDB
-```
+```bash
 
 ---
 
 ## 📊 Feature Comparison
 
 ### **MySQL**
+
 - ✅ Easy to learn and use
 - ✅ Wide hosting support
 - ✅ Large community
@@ -148,6 +157,7 @@ Do you need a relational database?
 - ❌ Less suitable for complex queries
 
 ### **PostgreSQL**
+
 - ✅ ACID compliant
 - ✅ Advanced features
 - ✅ Excellent for analytics
@@ -156,6 +166,7 @@ Do you need a relational database?
 - ❌ Fewer hosting options
 
 ### **MongoDB**
+
 - ✅ Flexible schema
 - ✅ Horizontal scaling
 - ✅ Easy to start
@@ -164,6 +175,7 @@ Do you need a relational database?
 - ❌ Memory intensive
 
 ### **Redis**
+
 - ✅ Extremely fast
 - ✅ Rich data structures
 - ✅ Pub/sub support
@@ -172,6 +184,7 @@ Do you need a relational database?
 - ❌ Not a primary database
 
 ### **DynamoDB**
+
 - ✅ Fully managed
 - ✅ Auto-scaling
 - ✅ High availability
@@ -184,6 +197,7 @@ Do you need a relational database?
 ## 🔧 Common Tools
 
 ### **GUI Clients**
+
 - **MySQL Workbench** - Official MySQL tool
 - **pgAdmin** - PostgreSQL management
 - **MongoDB Compass** - MongoDB GUI
@@ -193,6 +207,7 @@ Do you need a relational database?
 - **DataGrip** - JetBrains database IDE (paid)
 
 ### **Command Line**
+
 - `mysql` - MySQL CLI
 - `psql` - PostgreSQL CLI
 - `mongosh` - MongoDB Shell
@@ -202,24 +217,27 @@ Do you need a relational database?
 ### **Programming Language Drivers**
 
 #### Python
+
 ```bash
 pip install mysql-connector-python  # MySQL
 pip install psycopg2-binary          # PostgreSQL
 pip install pymongo                   # MongoDB
 pip install redis                     # Redis
 pip install boto3                     # DynamoDB
-```
+```bash
 
 #### Node.js
+
 ```bash
 npm install mysql2        # MySQL
 npm install pg            # PostgreSQL
 npm install mongodb       # MongoDB
 npm install redis         # Redis
 npm install @aws-sdk/client-dynamodb  # DynamoDB
-```
+```bash
 
 #### Java
+
 ```xml
 <!-- MySQL -->
 <dependency>
@@ -238,13 +256,14 @@ npm install @aws-sdk/client-dynamodb  # DynamoDB
     <groupId>org.mongodb</groupId>
     <artifactId>mongodb-driver-sync</artifactId>
 </dependency>
-```
+```bash
 
 ---
 
 ## 📚 Learning Resources
 
 ### **Official Documentation**
+
 - [MySQL Docs](https://dev.mysql.com/doc/)
 - [PostgreSQL Docs](https://www.postgresql.org/docs/)
 - [MongoDB Docs](https://docs.mongodb.com/)
@@ -252,6 +271,7 @@ npm install @aws-sdk/client-dynamodb  # DynamoDB
 - [DynamoDB Docs](https://docs.aws.amazon.com/dynamodb/)
 
 ### **Interactive Learning**
+
 - [SQLBolt](https://sqlbolt.com/) - Interactive SQL tutorials
 - [PostgreSQL Exercises](https://pgexercises.com/)
 - [MongoDB University](https://university.mongodb.com/)
@@ -263,6 +283,7 @@ npm install @aws-sdk/client-dynamodb  # DynamoDB
 ## 🎓 Practice Questions
 
 Check the `questions/` folder for SQL practice exercises covering:
+
 - Basic SELECT queries
 - JOINs and relationships
 - Aggregate functions
@@ -275,6 +296,7 @@ Check the `questions/` folder for SQL practice exercises covering:
 ## 🔐 Security Basics
 
 ### **Initial Setup Checklist**
+
 - [ ] Change default passwords
 - [ ] Create non-root users
 - [ ] Configure firewall rules
@@ -284,6 +306,7 @@ Check the `questions/` folder for SQL practice exercises covering:
 - [ ] Enable audit logging
 
 ### **Connection Security**
+
 ```bash
 # MySQL - Secure connection
 mysql -u user -p -h host --ssl-mode=REQUIRED
@@ -293,7 +316,7 @@ psql "sslmode=require host=hostname dbname=mydb user=myuser"
 
 # MongoDB - Secure connection
 mongosh "mongodb://username:password@host:port/?tls=true"
-```
+```bash
 
 ---
 
@@ -339,12 +362,14 @@ mongosh "mongodb://username:password@host:port/?tls=true"
 ## 🔄 Updates and Maintenance
 
 All databases receive regular updates. Check for:
+
 - Security patches
 - Performance improvements
 - New features
 - Bug fixes
 
 Stay updated with:
+
 ```bash
 # MySQL
 sudo apt update && sudo apt upgrade mysql-server
@@ -357,7 +382,7 @@ sudo apt update && sudo apt upgrade mongodb
 
 # Redis
 sudo apt update && sudo apt upgrade redis-server
-```
+```bash
 
 ---
 

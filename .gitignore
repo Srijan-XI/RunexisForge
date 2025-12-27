@@ -173,6 +173,11 @@ openvas_data/
 
 # Compiled Documentation
 *.docx
+# MkDocs build output
+site/
+
+# Link checker cache
+.lychee_cache.json
 
 # Security - Never commit these
 *.key
@@ -182,5 +187,6 @@ secrets/
 .env
 .env.local
 credentials.json
-# Ignore text files in this directory
-*zsamples/
+# Ignore text files in this directory including markdown files and txt files
+zsample/*.txt
+zsample/*.md

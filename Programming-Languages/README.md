@@ -7,6 +7,7 @@ A comprehensive collection of programming language documentation organized by ca
 ## 📚 Language Categories
 
 ### 🔧 Systems Programming
+
 Low to mid-level languages for system-level programming, OS development, and performance-critical applications.
 
 | Language | Level | Paradigm(s) | Execution Model | Primary Use | Domains |
@@ -18,6 +19,7 @@ Low to mid-level languages for system-level programming, OS development, and per
 ---
 
 ### 💼 General-Purpose Programming
+
 High-level languages suitable for a wide range of applications from enterprise to mobile.
 
 | Language | Level | Paradigm(s) | Execution Model | Primary Use | Domains |
@@ -33,6 +35,7 @@ High-level languages suitable for a wide range of applications from enterprise t
 ---
 
 ### 📝 Scripting Languages
+
 Interpreted languages optimized for automation, rapid development, and web backends.
 
 | Language | Level | Paradigm(s) | Execution Model | Primary Use | Domains |
@@ -45,6 +48,7 @@ Interpreted languages optimized for automation, rapid development, and web backe
 ---
 
 ### 🌐 Web Development Languages
+
 Languages specifically designed or heavily used for web application development.
 
 | Language | Level | Paradigm(s) | Execution Model | Primary Use | Domains |
@@ -55,6 +59,7 @@ Languages specifically designed or heavily used for web application development.
 ---
 
 ### 🔍 Query & Domain-Specific Languages
+
 Specialized languages for data querying and specific problem domains.
 
 | Language | Level | Paradigm(s) | Execution Model | Primary Use | Domains |
@@ -65,6 +70,7 @@ Specialized languages for data querying and specific problem domains.
 ---
 
 ### 📊 Data Science & Statistical Computing
+
 Languages optimized for statistical analysis, data manipulation, and scientific computing.
 
 | Language | Level | Paradigm(s) | Execution Model | Primary Use | Domains |
@@ -74,6 +80,7 @@ Languages optimized for statistical analysis, data manipulation, and scientific 
 ---
 
 ### 🔬 Scientific Computing
+
 Languages designed for numerical computing, engineering, and simulation.
 
 | Language | Level | Paradigm(s) | Execution Model | Primary Use | Domains |
@@ -85,6 +92,7 @@ Languages designed for numerical computing, engineering, and simulation.
 ## 🎯 Quick Navigation by Use Case
 
 ### 🏢 Enterprise & Backend Development
+
 - [Java](JAVA/) - Enterprise standard, Android
 - [C#](CSharp/) - .NET ecosystem, Windows
 - [Go](Golang/) - Cloud-native, microservices
@@ -93,12 +101,14 @@ Languages designed for numerical computing, engineering, and simulation.
 - [Scala](Scala/) - Big data, Spark
 
 ### 📱 Mobile Development
+
 - [Kotlin](Kotlin/) - Android (modern)
 - [Java](JAVA/) - Android (traditional)
 - [Swift](Swift/) - iOS, macOS
 - [Dart](Dart%20with%20Flutter/) - Cross-platform (Flutter)
 
 ### 🌐 Web Development
+
 - [JavaScript](JavaScript/) - Frontend & Node.js
 - [TypeScript](TypeScript/) - Type-safe web apps
 - [PHP](PHP/) - Server-side web
@@ -107,41 +117,48 @@ Languages designed for numerical computing, engineering, and simulation.
 - [Go](Golang/) - High-performance APIs
 
 ### 🎮 Game Development & Graphics
+
 - [C++](C%20&%20C++/) - AAA games, engines
 - [C#](CSharp/) - Unity game engine
 - [Rust](RUST/) - Performance-critical games
 
 ### 🤖 AI, ML & Data Science
+
 - [Python](PYTHON/) - Primary ML language
 - [R](R/) - Statistical analysis
 - [Scala](Scala/) - Big data (Spark)
 - [Julia](https://julialang.org/) - Scientific computing
 
 ### 🔧 Systems & Low-Level Programming
+
 - [Rust](RUST/) - Memory-safe systems
 - [C & C++](C%20&%20C++/) - OS, drivers, embedded
 - [Assembly](Assembly/) - Hardware-level control
 - [Go](Golang/) - System tools, DevOps
 
 ### ⚡ Performance-Critical Applications
+
 - [C++](C%20&%20C++/) - Maximum performance
 - [Rust](RUST/) - Safe + fast
 - [Go](Golang/) - Concurrent systems
 - [C](C%20&%20C++/) - Embedded systems
 
 ### 🔬 Scientific & Engineering
+
 - [MATLAB](MATLAB/) - Numerical computing
 - [Python](PYTHON/) - Scientific libraries (NumPy, SciPy)
 - [R](R/) - Statistical modeling
 - [Julia](https://julialang.org/) - High-performance computing
 
 ### ☁️ Cloud & DevOps
+
 - [Go](Golang/) - Docker, Kubernetes
 - [Python](PYTHON/) - Automation, orchestration
 - [Bash](Bash/) - Shell scripting
 - [PowerShell](https://docs.microsoft.com/powershell/) - Windows automation
 
 ### 📊 Data Engineering & Analytics
+
 - [Python](PYTHON/) - Data pipelines
 - [Scala](Scala/) - Apache Spark
 - [R](R/) - Data analysis
@@ -153,6 +170,7 @@ Languages designed for numerical computing, engineering, and simulation.
 ## 📖 Documentation Structure
 
 Each language folder contains:
+
 - **intro.md** - Overview, features, history, and use cases
 - **user-guide.md** - Getting started, syntax, and practical examples
 - **examples/** - Code samples and projects (where available)
@@ -173,31 +191,37 @@ Each language folder contains:
 ## 🏆 Popular Language Combinations
 
 ### Full-Stack Web Development
+
 - **Frontend**: JavaScript/TypeScript + React/Vue
 - **Backend**: Node.js, Python (Django/Flask), Go, or Ruby (Rails)
 - **Database**: SQL (PostgreSQL/MySQL)
 
 ### Mobile App Development
+
 - **iOS**: Swift
 - **Android**: Kotlin or Java
 - **Cross-Platform**: Dart (Flutter) or JavaScript (React Native)
 
 ### Data Science & ML
+
 - **Analysis**: Python + R
 - **Big Data**: Scala (Spark) + Python
 - **Visualization**: R or Python
 
 ### Enterprise Systems
+
 - **Backend**: Java, C#, or Go
 - **Frontend**: TypeScript + Angular/React
 - **Database**: SQL (Oracle/SQL Server/PostgreSQL)
 
 ### Game Development
+
 - **Engine Development**: C++
 - **Game Logic**: C# (Unity) or C++ (Unreal)
 - **Scripting**: Lua, Python
 
 ### DevOps & Automation
+
 - **Scripting**: Bash, Python
 - **Tools**: Go (Docker, Kubernetes)
 - **Infrastructure**: Python (Ansible), Go (Terraform)
@@ -207,6 +231,7 @@ Each language folder contains:
 ## 📊 Comparison Matrix
 
 ### Execution Speed (Fastest → Slowest)
+
 1. Assembly, C, C++, Rust
 2. Go, Swift
 3. Java, C#, Kotlin, Scala
@@ -214,6 +239,7 @@ Each language folder contains:
 5. Python, Ruby, PHP, R, MATLAB, Bash
 
 ### Learning Curve (Easiest → Hardest)
+
 1. Python, JavaScript, Ruby
 2. Go, PHP, Bash
 3. Java, C#, Swift, Dart, TypeScript
@@ -222,6 +248,7 @@ Each language folder contains:
 6. C, Assembly
 
 ### Community & Ecosystem Size
+
 1. **Massive**: JavaScript, Python, Java
 2. **Very Large**: C++, C#, PHP, TypeScript, Go
 3. **Large**: Ruby, Swift, Kotlin, Rust, R

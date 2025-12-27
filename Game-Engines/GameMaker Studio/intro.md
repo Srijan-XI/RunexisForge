@@ -46,12 +46,14 @@
 ## GameMaker Language (GML)
 
 **Hello World**:
+
 ```gml
 // Draw Event
 draw_text(x, y, "Hello, World!");
-```
+```bash
 
 **Movement**:
+
 ```gml
 // Step Event
 if (keyboard_check(vk_right)) {
@@ -66,21 +68,23 @@ if (keyboard_check(vk_up)) {
 if (keyboard_check(vk_down)) {
     y += 4;
 }
-```
+```bash
 
 **Collision**:
+
 ```gml
 // Collision with obj_enemy
 if (place_meeting(x, y, obj_enemy)) {
     instance_destroy();
 }
-```
+```bash
 
 ---
 
 ## Supported Platforms
 
 ### Export Targets
+
 - **Windows**: Desktop
 - **macOS**: Desktop
 - **Linux**: Ubuntu
@@ -98,25 +102,30 @@ if (place_meeting(x, y, obj_enemy)) {
 ### GameMaker Studio 2
 
 **Free Tier**:
+
 - Windows & macOS export
 - Full IDE features
 - Limited to GMS2 branding
 
 **Creator** ($39/year):
+
 - Windows, macOS export
 - Remove GMS2 branding
 
 **Developer** ($79/year):
-- + iOS, Android, HTML5
+
+- - iOS, Android, HTML5
 
 **Console** (Contact):
-- + PlayStation, Xbox, Switch
+
+- - PlayStation, Xbox, Switch
 
 ---
 
 ## Pros & Cons
 
 ### Strengths
+
 - ✅ Very beginner-friendly
 - ✅ Fast development cycle
 - ✅ Great for 2D games
@@ -125,6 +134,7 @@ if (place_meeting(x, y, obj_enemy)) {
 - ✅ Proven track record
 
 ### Limitations
+
 - ❌ Primarily 2D (limited 3D)
 - ❌ Less flexible than code-first engines
 - ❌ Paid export for some platforms
@@ -136,6 +146,7 @@ if (place_meeting(x, y, obj_enemy)) {
 ## Who Should Use GameMaker?
 
 ### Ideal For
+
 - Beginners learning game development
 - 2D game developers
 - Rapid prototyping
@@ -144,6 +155,7 @@ if (place_meeting(x, y, obj_enemy)) {
 - Educational purposes
 
 ### Not Ideal For
+
 - 3D games
 - Projects requiring advanced graphics
 - Developers preferring C++/C#
@@ -154,11 +166,13 @@ if (place_meeting(x, y, obj_enemy)) {
 ## Learning Resources
 
 ### Official
+
 - [GameMaker Manual](https://manual.yoyogames.com/)
 - [GameMaker YouTube](https://www.youtube.com/c/yoyogames)
 - [Official Tutorials](https://gamemaker.io/en/tutorials)
 
 ### Community
+
 - [r/gamemaker](https://www.reddit.com/r/gamemaker/)
 - [GameMaker Community](https://forum.yoyogames.com/)
 - Shaun Spalding YouTube tutorials

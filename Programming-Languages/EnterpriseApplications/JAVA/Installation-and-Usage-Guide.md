@@ -11,14 +11,12 @@ This guide provides a detailed, step-by-step process for installing and using Ja
 - Select the **Windows** platform.
 - Download the 64-bit Windows installer (`.exe`).
 
-
 ### Step 2: Installing Java
 
 - Run the downloaded installer by double-clicking it.
 - Follow the installation wizard steps, using default options unless customization is needed.
 - Click **Next** and wait for the installation to complete.
 - Click **Close** when done.
-
 
 ### Step 3: Configuring Environment Variables
 
@@ -30,13 +28,11 @@ This guide provides a detailed, step-by-step process for installing and using Ja
 - Create a new system variable `JAVA_HOME` and set it to `C:\Program Files\Java\jdk-<version>` (excluding `bin`).
 - Click OK to save changes.
 
-
 ### Step 4: Verifying Installation
 
 - Open **Command Prompt**.
 - Run `java --version` and `javac --version` to confirm the JDK is correctly installed.
 - If versions are displayed, Java is ready.
-
 
 ### Step 5: Running a Sample Java Program
 
@@ -49,13 +45,12 @@ public class HelloWorld {
     System.out.println("Java is working perfectly!");
   }
 }
-```
+```java
 
 - Open Command Prompt in the directory where the file is saved.
 - Compile: `javac HelloWorld.java`.
 - Run: `java HelloWorld`.
 - The output should display: `Java is working perfectly!`.
-
 
 ## 2. Installing and Using Java on Linux
 
@@ -64,7 +59,6 @@ public class HelloWorld {
 - Visit Oracle’s official site or choose an OpenJDK distribution available for Linux.
 - For Oracle JDK, download the `.tar.gz` package for Linux (x64 or ARM as applicable).
 
-
 ### Step 2: Installing Java
 
 - Open the terminal and go to the Download folder.
@@ -72,14 +66,13 @@ public class HelloWorld {
 
 ```bash
 tar -xvzf jdk-<version>_linux-x64_bin.tar.gz
-```
+```bash
 
 - Move the extracted folder to `/opt`:
 
 ```bash
 sudo mv jdk-<version> /opt/
-```
-
+```bash
 
 ### Step 3: Configuring Environment Variables
 
@@ -87,21 +80,20 @@ sudo mv jdk-<version> /opt/
 
 ```bash
 nano ~/.bashrc
-```
+```bash
 
 - Add:
 
 ```bash
 export JAVA_HOME=/opt/jdk-<version>
 export PATH=$JAVA_HOME/bin:$PATH
-```
+```bash
 
 - Apply changes:
 
 ```bash
 source ~/.bashrc
-```
-
+```bash
 
 ### Step 4: Installing via Package Manager (Alternative Method)
 
@@ -110,8 +102,7 @@ For Ubuntu/Debian systems:
 ```bash
 sudo apt update
 sudo apt install openjdk-<version>-jdk
-```
-
+```bash
 
 ### Step 5: Verifying Installation
 
@@ -120,10 +111,9 @@ sudo apt install openjdk-<version>-jdk
 ```bash
 java --version
 javac --version
-```
+```bash
 
 - Confirm installed version appears correctly.
-
 
 ### Step 6: Running a Java Program
 
@@ -133,8 +123,7 @@ javac --version
 ```bash
 javac HelloWorld.java
 java HelloWorld
-```
-
+```bash
 
 ## 3. Installing and Using Java on macOS
 
@@ -152,7 +141,6 @@ Alternatively, use OpenJDK distributions such as AdoptOpenJDK.
 - Follow the installation prompts and enter your password if prompted.
 - Finish the installation.
 
-
 ### Step 3: Configuring Environment Variables (Optional but Recommended)
 
 - Open Terminal.
@@ -160,22 +148,21 @@ Alternatively, use OpenJDK distributions such as AdoptOpenJDK.
 
 ```bash
 nano ~/.zshrc
-```
+```bash
 
 - Add:
 
 ```bash
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$JAVA_HOME/bin:$PATH
-```
+```bash
 
 - Save and exit.
 - Run:
 
 ```bash
 source ~/.zshrc
-```
-
+```bash
 
 ### Step 4: Verifying Installation
 
@@ -184,8 +171,7 @@ source ~/.zshrc
 ```bash
 java --version
 javac --version
-```
-
+```bash
 
 ### Step 5: Running a Java Program
 
@@ -195,16 +181,15 @@ javac --version
 ```bash
 javac HelloWorld.java
 java HelloWorld
-```
-
+```bash
 
 ## Tips for Professional Usage
 
 - Always download the **latest Long-Term Support (LTS)** version for production environments or the latest stable release for development.
 - Use environment variables like `JAVA_HOME` for development tool integrations.
 - Manage multiple Java versions using version managers:
-    - Windows: Use tools like **jEnv** or manually adjust environments.
-    - Linux/macOS: Use **SDKMAN** to easily switch between multiple JDK versions.
+  - Windows: Use tools like **jEnv** or manually adjust environments.
+  - Linux/macOS: Use **SDKMAN** to easily switch between multiple JDK versions.
 - For corporate or professional use, consider using Oracle JDK or other supported builds like Amazon Corretto, Eclipse Temurin, or Microsoft Build of OpenJDK depending on the support and licensing requirements.
 - Regularly update Java to keep up with security patches.
 

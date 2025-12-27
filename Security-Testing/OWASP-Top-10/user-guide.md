@@ -1,12 +1,14 @@
 # OWASP Top 10 — User Guide
 
 ## How to use the Top 10
+
 - Threat modeling: identify which risks apply to your app
 - Secure design: apply controls before coding
 - Testing: build test cases for each category
 - CI/CD gates: run automated checks and block on high-risk findings
 
 ## Quick checklists by category
+
 - A01 Broken Access Control: enforce least privilege, deny-by-default, validate ownership, rate-limit sensitive actions
 - A02 Cryptographic Failures: enforce TLS, disable weak ciphers, never store secrets in plaintext, use modern algorithms (AES-GCM, Argon2)
 - A03 Injection: use parameterized queries/ORM, avoid string concatenation, sanitize untrusted input, prefer allowlists
@@ -19,11 +21,13 @@
 - A10 SSRF: restrict outbound requests, block internal metadata IPs, use allowlists, egress proxies
 
 ## Developer guardrails
+
 - Secure defaults in code (HTTP security headers, input validation, authz checks)
 - Use frameworks’ built-in protections (CSRF tokens, template auto-escaping)
 - Handle secrets via vaults/managed identities, never commit secrets
 
 ## CI/CD integration ideas
+
 - Lint for security headers in infra as code
 - SCA (dependency scanning) for A06
 - Secrets scanning in repos
@@ -31,6 +35,7 @@
 - DAST/SAST/IAST where applicable
 
 ## References
-- https://owasp.org/Top10/
-- ASVS: https://owasp.org/www-project-application-security-verification-standard/
-- Cheat Sheets: https://cheatsheetseries.owasp.org/
+
+- <https://owasp.org/Top10/>
+- ASVS: <https://owasp.org/www-project-application-security-verification-standard/>
+- Cheat Sheets: <https://cheatsheetseries.owasp.org/>

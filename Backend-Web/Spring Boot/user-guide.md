@@ -1,6 +1,7 @@
 # Spring Boot User Guide
 
 ## Table of Contents
+
 1. [Installation and Setup](#installation-and-setup)
 2. [Creating Your First Application](#creating-your-first-application)
 3. [Project Structure](#project-structure)
@@ -26,23 +27,26 @@
 - **Windows/macOS/Linux**: Download from [Oracle](https://www.oracle.com/java/technologies/downloads/) or [Adoptium](https://adoptium.net/)
 
 **Verify Installation:**
+
 ```bash
 java -version
 javac -version
-```
+```bash
 
 **Set JAVA_HOME (if needed):**
 
 Windows (PowerShell):
+
 ```powershell
 [System.Environment]::SetEnvironmentVariable('JAVA_HOME', 'C:\Program Files\Java\jdk-17', 'Machine')
-```
+```bash
 
 Linux/macOS:
+
 ```bash
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
-```
+```bash
 
 #### 2. Install Build Tool
 
@@ -51,37 +55,43 @@ export PATH=$JAVA_HOME/bin:$PATH
 Download from [maven.apache.org](https://maven.apache.org/download.cgi)
 
 Verify:
+
 ```bash
 mvn -version
-```
+```bash
 
 **Option B: Gradle**
 
 Download from [gradle.org](https://gradle.org/install/)
 
 Verify:
+
 ```bash
 gradle -version
-```
+```bash
 
 #### 3. Install IDE (Choose One)
 
 **IntelliJ IDEA** (Recommended)
+
 - Download: [jetbrains.com/idea/download](https://www.jetbrains.com/idea/download/)
 - Community Edition is free
 - Ultimate Edition has better Spring support
 
 **Eclipse**
+
 - Download: [eclipse.org/downloads](https://www.eclipse.org/downloads/)
 - Install Spring Tools Suite plugin
 
 **Visual Studio Code**
+
 - Download: [code.visualstudio.com](https://code.visualstudio.com/)
 - Install extensions: Spring Boot Extension Pack, Java Extension Pack
 
 ### Optional Tools
 
 **Spring Boot CLI:**
+
 ```bash
 # macOS (Homebrew)
 brew tap spring-io/tap
@@ -92,7 +102,7 @@ choco install springbootcli
 
 # SDKMAN (Linux/macOS)
 sdk install springboot
-```
+```bash
 
 ---
 
@@ -129,7 +139,7 @@ sdk install springboot
 ```bash
 spring init --dependencies=web,devtools --build=maven --java-version=17 demo
 cd demo
-```
+```bash
 
 #### Using IntelliJ IDEA
 
@@ -147,7 +157,7 @@ mvn archetype:generate \
     -DartifactId=demo \
     -DarchetypeArtifactId=maven-archetype-quickstart \
     -DinteractiveMode=false
-```
+```bash
 
 Then add Spring Boot parent to `pom.xml`.
 
@@ -176,7 +186,7 @@ public class DemoApplication {
         return "Hello, Spring Boot!";
     }
 }
-```
+```bash
 
 **Run the application:**
 
@@ -188,7 +198,7 @@ public class DemoApplication {
 ./gradlew bootRun
 
 # Or run main method in IDE
-```
+```bash
 
 **Test it:**
 Open browser: [http://localhost:8080](http://localhost:8080)
@@ -199,7 +209,7 @@ Open browser: [http://localhost:8080](http://localhost:8080)
 
 ### Standard Maven/Gradle Structure
 
-```
+```bash
 demo/
 ├── src/
 │   ├── main/
@@ -237,7 +247,7 @@ demo/
 │                   └── UserControllerTest.java
 ├── pom.xml (or build.gradle)
 └── README.md
-```
+```bash
 
 ### Key Directories
 
@@ -286,7 +296,7 @@ logging.file.name=application.log
 # Actuator
 management.endpoints.web.exposure.include=health,info,metrics
 management.endpoint.health.show-details=always
-```
+```bash
 
 ### application.yml (Alternative)
 
@@ -319,23 +329,26 @@ logging:
     com.example.demo: DEBUG
   file:
     name: application.log
-```
+```bash
 
 ### Profile-Specific Configuration
 
 **application-dev.properties:**
+
 ```properties
 spring.datasource.url=jdbc:h2:mem:testdb
 server.port=8080
-```
+```bash
 
 **application-prod.properties:**
+
 ```properties
 spring.datasource.url=jdbc:mysql://prod-server:3306/mydb
 server.port=80
-```
+```bash
 
 **Activate Profile:**
+
 ```bash
 # Command line
 java -jar app.jar --spring.profiles.active=dev
@@ -345,7 +358,7 @@ export SPRING_PROFILES_ACTIVE=prod
 
 # In application.properties
 spring.profiles.active=dev
-```
+```bash
 
 ### Configuration Properties Class
 
@@ -366,15 +379,16 @@ public class AppConfig {
         // Getters and setters
     }
 }
-```
+```bash
 
 **In application.properties:**
+
 ```properties
 app.name=My Application
 app.version=1.0.0
 app.security.enabled=true
 app.security.secret-key=my-secret-key
-```
+```bash
 
 ---
 
@@ -394,7 +408,7 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
-```
+```bash
 
 ### Stereotype Annotations
 
@@ -423,7 +437,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 public class EmailService {
     // Utility component
 }
-```
+```bash
 
 ### Dependency Injection Methods
 
@@ -441,7 +455,7 @@ public class UserService {
         this.emailService = emailService;
     }
 }
-```
+```bash
 
 #### 2. Field Injection
 
@@ -454,7 +468,7 @@ public class UserService {
     @Autowired
     private EmailService emailService;
 }
-```
+```bash
 
 #### 3. Setter Injection
 
@@ -468,7 +482,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 }
-```
+```bash
 
 ### Bean Configuration
 
@@ -488,7 +502,7 @@ public class AppConfig {
         return mapper;
     }
 }
-```
+```text
 
 ---
 
@@ -547,19 +561,21 @@ public class UserController {
         return ResponseEntity.notFound().build();
     }
 }
-```
+```text
 
 ### Request/Response Handling
 
 #### Path Variables
+
 ```java
 @GetMapping("/users/{id}")
 public User getUser(@PathVariable Long id) {
     return userService.findById(id);
 }
-```
+```text
 
 #### Request Parameters
+
 ```java
 @GetMapping("/users")
 public List<User> getUsers(
@@ -568,17 +584,19 @@ public List<User> getUsers(
     @RequestParam(required = false) String name) {
     return userService.findAll(page, size, name);
 }
-```
+```text
 
 #### Request Body
+
 ```java
 @PostMapping("/users")
 public User createUser(@RequestBody User user) {
     return userService.save(user);
 }
-```
+```text
 
 #### Response Entity
+
 ```java
 @GetMapping("/users/{id}")
 public ResponseEntity<User> getUser(@PathVariable Long id) {
@@ -588,20 +606,22 @@ public ResponseEntity<User> getUser(@PathVariable Long id) {
     }
     return ResponseEntity.notFound().build();
 }
-```
+```text
 
 ### Exception Handling
 
 #### Custom Exception
+
 ```java
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {
         super(message);
     }
 }
-```
+```bash
 
 #### Global Exception Handler
+
 ```java
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -643,19 +663,21 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
 }
-```
+```text
 
 ### Validation
 
 #### Add Dependency
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
-```
+```text
 
 #### Entity with Validation
+
 ```java
 @Entity
 public class User {
@@ -677,16 +699,17 @@ public class User {
     
     // Getters and setters
 }
-```
+```text
 
 #### Controller with Validation
+
 ```java
 @PostMapping
 public ResponseEntity<User> createUser(@RequestBody @Valid User user) {
     User savedUser = userService.save(user);
     return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
 }
-```
+```text
 
 ---
 
@@ -704,7 +727,7 @@ public ResponseEntity<User> createUser(@RequestBody @Valid User user) {
     <artifactId>mysql-connector-j</artifactId>
     <scope>runtime</scope>
 </dependency>
-```
+```bash
 
 ### Entity Class
 
@@ -744,7 +767,7 @@ public class User {
     
     // Getters and setters
 }
-```
+```bash
 
 ### Repository Interface
 
@@ -772,7 +795,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query("UPDATE User u SET u.name = :name WHERE u.id = :id")
     int updateUserName(@Param("id") Long id, @Param("name") String name);
 }
-```
+```bash
 
 ### Service Layer
 
@@ -820,11 +843,12 @@ public class UserService {
             .orElse(false);
     }
 }
-```
+```bash
 
 ### Relationships
 
 #### One-to-Many
+
 ```java
 @Entity
 public class Department {
@@ -850,9 +874,10 @@ public class Employee {
     @JoinColumn(name = "department_id")
     private Department department;
 }
-```
+```bash
 
 #### Many-to-Many
+
 ```java
 @Entity
 public class Student {
@@ -882,7 +907,7 @@ public class Course {
     @ManyToMany(mappedBy = "courses")
     private Set<Student> students = new HashSet<>();
 }
-```
+```bash
 
 ---
 
@@ -895,7 +920,7 @@ public class Course {
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
-```
+```bash
 
 ### Basic Security Configuration
 
@@ -923,7 +948,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
-```
+```bash
 
 ### User Details Service
 
@@ -950,18 +975,19 @@ public class CustomUserDetailsService implements UserDetailsService {
             .build();
     }
 }
-```
+```bash
 
 ### JWT Authentication (Advanced)
 
 Add dependency:
+
 ```xml
 <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-api</artifactId>
     <version>0.11.5</version>
 </dependency>
-```
+```bash
 
 ---
 
@@ -975,7 +1001,7 @@ Add dependency:
     <artifactId>spring-boot-starter-test</artifactId>
     <scope>test</scope>
 </dependency>
-```
+```bash
 
 ### Unit Testing Service Layer
 
@@ -1003,7 +1029,7 @@ class UserServiceTest {
         verify(userRepository).findById(1L);
     }
 }
-```
+```text
 
 ### Integration Testing Controller
 
@@ -1030,7 +1056,7 @@ class UserControllerIntegrationTest {
             .andExpect(jsonPath("$.email").value("jane@example.com"));
     }
 }
-```
+```text
 
 ### Repository Testing
 
@@ -1050,7 +1076,7 @@ class UserRepositoryTest {
         assertEquals("Alice", savedUser.getName());
     }
 }
-```
+```text
 
 ---
 
@@ -1059,14 +1085,16 @@ class UserRepositoryTest {
 ### Building JAR/WAR
 
 #### Maven
+
 ```bash
 ./mvnw clean package
-```
+```text
 
 #### Gradle
+
 ```bash
 ./gradlew build
-```
+```text
 
 ### Running JAR
 
@@ -1078,50 +1106,56 @@ java -jar target/demo-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
 
 # With custom port
 java -jar target/demo-0.0.1-SNAPSHOT.jar --server.port=9000
-```
+```text
 
 ### Docker Deployment
 
 **Dockerfile:**
+
 ```dockerfile
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
-```
+```text
 
 **Build and Run:**
+
 ```bash
 docker build -t myapp .
 docker run -p 8080:8080 myapp
-```
+```bash
 
 ### Cloud Deployment
 
 #### AWS Elastic Beanstalk
+
 ```bash
 eb init
 eb create
 eb deploy
-```
+```bash
 
 #### Heroku
+
 ```bash
 heroku create
 git push heroku main
-```
+```bash
 
 #### Azure App Service
+
 ```bash
 az webapp up --name myapp --resource-group mygroup
-```
+```bash
 
 ---
 
 ## Best Practices
 
 ### 1. Use Constructor Injection
+
 ```java
 @Service
 public class UserService {
@@ -1131,18 +1165,22 @@ public class UserService {
         this.userRepository = userRepository;
     }
 }
-```
+```bash
 
 ### 2. Keep Controllers Thin
+
 Move business logic to service layer.
 
 ### 3. Use DTOs
+
 Separate API models from domain entities.
 
 ### 4. Handle Exceptions Globally
+
 Use `@RestControllerAdvice` for centralized exception handling.
 
 ### 5. Use Lombok to Reduce Boilerplate
+
 ```java
 @Data
 @Entity
@@ -1153,21 +1191,26 @@ public class User {
     private String name;
     private String email;
 }
-```
+```bash
 
 ### 6. Externalize Configuration
+
 Use `application.properties` and environment variables.
 
 ### 7. Enable Actuator for Production
+
 Monitor application health and metrics.
 
 ### 8. Write Tests
+
 Maintain good test coverage (unit, integration, e2e).
 
 ### 9. Use Profiles
+
 Separate dev, test, and prod configurations.
 
 ### 10. Follow REST Conventions
+
 Use proper HTTP methods and status codes.
 
 ---
@@ -1175,20 +1218,25 @@ Use proper HTTP methods and status codes.
 ## Common Issues and Solutions
 
 ### Port Already in Use
+
 ```properties
 server.port=8081
-```
+```bash
 
 ### Database Connection Issues
+
 Check credentials, URL, and database availability.
 
 ### Auto-configuration Issues
+
 Use `--debug` flag to see auto-configuration report:
+
 ```bash
 java -jar app.jar --debug
-```
+```bash
 
 ### Circular Dependencies
+
 Refactor code or use `@Lazy` annotation.
 
 ---
@@ -1196,16 +1244,19 @@ Refactor code or use `@Lazy` annotation.
 ## Resources
 
 ### Official Documentation
+
 - [Spring Boot Reference](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 - [Spring Framework Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/)
 - [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
 
 ### Learning Platforms
+
 - [Spring Academy](https://spring.academy/)
 - [Baeldung](https://www.baeldung.com/spring-boot)
 - [Spring Boot Guides](https://spring.io/guides)
 
 ### Community
+
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/spring-boot)
 - [Spring Community Forum](https://community.spring.io/)
 - [GitHub Discussions](https://github.com/spring-projects/spring-boot/discussions)

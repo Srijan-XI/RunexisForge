@@ -5,46 +5,43 @@
 ### Windows
 
 - **Using Rustup (Recommended):**
-    - Download and run [rustup-init.exe] from the official Rust website.
-    - Follow on-screen instructions; choose default installation.
-    - Update Rust regularly via Command Prompt:
+  - Download and run [rustup-init.exe] from the official Rust website.
+  - Follow on-screen instructions; choose default installation.
+  - Update Rust regularly via Command Prompt:
 
-```
+```bash
 rustup update
-```
-
+```bash
 
 ### macOS
 
 - **Using Homebrew (Recommended for Mac):**
 
-```
+```bash
 brew install rust
-```
+```bash
 
 - **Using rustup:**
-    - Run the following in Terminal:
+  - Run the following in Terminal:
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
+```bash
 
 ### Linux
 
 - **Using rustup:**
-    - Open a terminal and run:
+  - Open a terminal and run:
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+```bash
 
 - **Update your PATH:**
 
-```
+```bash
 source $HOME/.cargo/env
-```
-
+```bash
 
 ## 2. Usage Examples
 
@@ -54,8 +51,7 @@ source $HOME/.cargo/env
 fn main() {
     println!("Hello, world!");
 }
-```
-
+```bash
 
 ### Declaring Variables
 
@@ -63,8 +59,7 @@ fn main() {
 let mut x = 5;
 x = 10;
 println!("{}", x);
-```
-
+```bash
 
 ### Functions
 
@@ -72,8 +67,7 @@ println!("{}", x);
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
-```
-
+```bash
 
 ### Control Flow
 
@@ -84,8 +78,7 @@ if number > 5 {
 } else {
     println!("Not greater than 5");
 }
-```
-
+```bash
 
 ## 3. Platform Coverage
 
@@ -99,13 +92,12 @@ if number > 5 {
 ## 4. Tooling Help
 
 - **IDE Setup**
-    - **VS Code:** Install the "rust-analyzer" extension.
-    - **JetBrains:** Use "IntelliJ Rust" plugin for CLion, IntelliJ IDEA.
-    - **Other Editors:** Vim and Emacs have Rust support via plugins.
+  - **VS Code:** Install the "rust-analyzer" extension.
+  - **JetBrains:** Use "IntelliJ Rust" plugin for CLion, IntelliJ IDEA.
+  - **Other Editors:** Vim and Emacs have Rust support via plugins.
 - **Compilers \& Package Manager**
-    - **Compiler:** `rustc`
-    - **Package Manager:** `cargo` (handles build, test, dependency management)
-
+  - **Compiler:** `rustc`
+  - **Package Manager:** `cargo` (handles build, test, dependency management)
 
 ## 5. Troubleshooting Tips
 

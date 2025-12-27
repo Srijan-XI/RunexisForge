@@ -6,7 +6,7 @@ Open **PowerShell as Administrator**:
 
 ```pwsh
 wsl --install
-```
+```bash
 
 Reboot if prompted.
 
@@ -15,13 +15,14 @@ Install a distro (example: Ubuntu):
 ```pwsh
 wsl --list --online
 wsl --install -d Ubuntu
-```
+```bash
 
 Check status:
+
 ```pwsh
 wsl --status
 wsl --list --verbose
-```
+```bash
 
 ## First-time setup
 
@@ -29,9 +30,10 @@ wsl --list --verbose
 - Create a Linux username/password
 
 Update packages (inside WSL):
+
 ```bash
 sudo apt update && sudo apt upgrade -y
-```
+```bash
 
 ## Filesystem basics
 
@@ -44,21 +46,24 @@ Tip: keep project code in the Linux filesystem (e.g. `~/projects`) for best perf
 ## Useful interop commands
 
 From Windows → open your WSL home in Explorer:
+
 ```bash
 explorer.exe .
-```
+```bash
 
 From WSL → run a Windows command:
+
 ```bash
 notepad.exe README.md
-```
+```bash
 
 ## Common dev setup
 
 Inside WSL (Ubuntu):
+
 ```bash
 sudo apt install -y git curl build-essential
-```
+```bash
 
 ## Troubleshooting
 

@@ -12,7 +12,7 @@ npm create tauri-app@latest
 cd your-app
 npm install
 npm run tauri dev
-```
+```bash
 
 ## Frontend ↔ Rust commands
 

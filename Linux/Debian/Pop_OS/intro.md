@@ -20,11 +20,13 @@
 ## Key Features
 
 ### Pop Shell
+
 - **Auto-tiling**: Automatic window tiling
 - **Keyboard shortcuts**: Efficient workflow
 - **Workspace management**: Easy multi-desktop switching
 
 ### Built-in Tools
+
 - **Pop!_Shop**: Curated application store
 - **NVIDIA ISO**: Dedicated ISO with NVIDIA drivers
 - **Power Profiles**: Easy battery/performance management
@@ -35,10 +37,12 @@
 ## Editions
 
 ### Pop!_OS (Intel/AMD)
+
 - For Intel or AMD graphics
 - Standard kernel
 
 ### Pop!_OS (NVIDIA)
+
 - Pre-installed NVIDIA drivers
 - Optimized for NVIDIA GPUs
 

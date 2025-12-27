@@ -1,9 +1,11 @@
 # Burp Suite Framework Introduction
 
 ## Overview
+
 Burp Suite is a comprehensive web application security testing platform. Developed by PortSwigger, it's the industry-leading tool for finding vulnerabilities in web applications. It includes automated scanning, manual testing tools, and exploitation capabilities.
 
 ## Key Features
+
 - **Proxy Interception**: Capture and modify HTTP requests/responses
 - **Scanner**: Automated vulnerability scanning
 - **Intruder**: Automated injection attacks
@@ -17,12 +19,14 @@ Burp Suite is a comprehensive web application security testing platform. Develop
 ## Editions
 
 ### Community Edition
+
 - Free version
 - Manual testing tools
 - Automated scanning (limited)
 - Good for learning
 
 ### Professional Edition
+
 - Advanced automated scanning
 - Burp Collaborator Server
 - Priority support
@@ -41,6 +45,7 @@ Burp Suite is a comprehensive web application security testing platform. Develop
 8. **Extender**: Plugin framework
 
 ## Common Use Cases
+
 - Web application penetration testing
 - Security vulnerability scanning
 - API security testing
@@ -51,6 +56,7 @@ Burp Suite is a comprehensive web application security testing platform. Develop
 - Bug bounty hunting
 
 ## Prerequisites
+
 - Java 8+ (for Burp Suite)
 - Web application knowledge
 - HTTP protocol understanding
@@ -59,6 +65,7 @@ Burp Suite is a comprehensive web application security testing platform. Develop
 - XSS vulnerabilities awareness
 
 ## Advantages
+
 - Industry standard tool
 - Comprehensive testing platform
 - Excellent documentation
@@ -69,9 +76,10 @@ Burp Suite is a comprehensive web application security testing platform. Develop
 - Flexible and extensible
 
 ## Resources
-- Official Website: https://portswigger.net/burp
-- Documentation: https://portswigger.net/burp/documentation
-- GitHub: https://github.com/PortSwigger
-- Community: https://forum.portswigger.net
-- Bug Bounty: https://portswigger.net/web-security
-- Free Training: https://portswigger.net/web-security/dashboard
+
+- Official Website: <https://portswigger.net/burp>
+- Documentation: <https://portswigger.net/burp/documentation>
+- GitHub: <https://github.com/PortSwigger>
+- Community: <https://forum.portswigger.net>
+- Bug Bounty: <https://portswigger.net/web-security>
+- Free Training: <https://portswigger.net/web-security/dashboard>

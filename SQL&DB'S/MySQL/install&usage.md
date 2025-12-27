@@ -7,7 +7,7 @@
 #### Method 1: MySQL Installer (Recommended)
 
 1. **Download MySQL Installer**
-   - Visit: https://dev.mysql.com/downloads/installer/
+   - Visit: <https://dev.mysql.com/downloads/installer/>
    - Download MySQL Installer for Windows (mysql-installer-web-community)
 
 2. **Run the Installer**
@@ -25,23 +25,27 @@
    - Apply configuration
 
 4. **Verify Installation**
+
    ```powershell
    mysql --version
    ```
 
 #### Method 2: Chocolatey
+
 ```powershell
 choco install mysql
-```
+```bash
 
 #### Method 3: Winget
+
 ```powershell
 winget install Oracle.MySQL
-```
+```bash
 
 ### macOS Installation
 
 #### Method 1: Homebrew (Recommended)
+
 ```bash
 # Install MySQL
 brew install mysql
@@ -54,10 +58,11 @@ mysql_secure_installation
 
 # Verify
 mysql --version
-```
+```bash
 
 #### Method 2: DMG Package
-1. Download from https://dev.mysql.com/downloads/mysql/
+
+1. Download from <https://dev.mysql.com/downloads/mysql/>
 2. Open `.dmg` file
 3. Run installer package
 4. Follow installation wizard
@@ -66,6 +71,7 @@ mysql --version
 ### Linux Installation
 
 #### Ubuntu/Debian
+
 ```bash
 # Update package index
 sudo apt update
@@ -84,9 +90,10 @@ sudo mysql_secure_installation
 
 # Verify
 mysql --version
-```
+```bash
 
 #### Fedora/RHEL/CentOS
+
 ```bash
 # Install MySQL
 sudo dnf install mysql-server
@@ -102,9 +109,10 @@ sudo grep 'temporary password' /var/log/mysqld.log
 
 # Secure installation
 sudo mysql_secure_installation
-```
+```bash
 
 #### Arch Linux
+
 ```bash
 # Install
 sudo pacman -S mysql
@@ -117,7 +125,7 @@ sudo systemctl start mysqld
 
 # Enable on boot
 sudo systemctl enable mysqld
-```
+```bash
 
 ### Docker Installation
 
@@ -140,7 +148,7 @@ docker run --name mysql \
   -v mysql-data:/var/lib/mysql \
   -p 3306:3306 \
   -d mysql:latest
-```
+```bash
 
 ---
 
@@ -150,9 +158,10 @@ docker run --name mysql \
 
 ```bash
 mysql_secure_installation
-```
+```bash
 
 This will:
+
 - Set root password
 - Remove anonymous users
 - Disallow root login remotely
@@ -170,7 +179,7 @@ mysql -u root -p database_name
 
 # Connect to remote server
 mysql -h hostname -u username -p database_name
-```
+```bash
 
 ### First Time Configuration
 
@@ -198,7 +207,7 @@ FLUSH PRIVILEGES;
 
 -- Verify user
 SELECT user, host FROM mysql.user;
-```
+```bash
 
 ---
 
@@ -221,7 +230,7 @@ DROP DATABASE shop;
 
 -- Get current database
 SELECT DATABASE();
-```
+```bash
 
 ### Table Operations
 
@@ -259,11 +268,12 @@ DROP TABLE products;
 
 -- Truncate table (delete all data)
 TRUNCATE TABLE products;
-```
+```bash
 
 ### CRUD Operations
 
 #### INSERT
+
 ```sql
 -- Insert single row
 INSERT INTO products (name, price, stock) 
@@ -278,9 +288,10 @@ INSERT INTO products (name, price, stock) VALUES
 -- Insert with all columns
 INSERT INTO products VALUES 
     (NULL, 'Headphones', 149.99, 25, NOW());
-```
+```bash
 
 #### SELECT
+
 ```sql
 -- Select all
 SELECT * FROM products;
@@ -312,9 +323,10 @@ SELECT * FROM products WHERE id IN (1, 3, 5);
 
 -- With BETWEEN
 SELECT * FROM products WHERE price BETWEEN 50 AND 200;
-```
+```bash
 
 #### UPDATE
+
 ```sql
 -- Update single row
 UPDATE products SET price = 899.99 WHERE id = 1;
@@ -329,9 +341,10 @@ UPDATE products SET price = price * 1.1 WHERE category = 'Electronics';
 
 -- Update all rows (careful!)
 UPDATE products SET stock = stock + 10;
-```
+```bash
 
 #### DELETE
+
 ```sql
 -- Delete specific row
 DELETE FROM products WHERE id = 1;
@@ -341,7 +354,7 @@ DELETE FROM products WHERE stock = 0;
 
 -- Delete all rows (careful!)
 DELETE FROM products;
-```
+```bash
 
 ### Joins
 
@@ -380,7 +393,7 @@ SELECT o.id, c.name AS customer, p.name AS product
 FROM orders o
 JOIN customers c ON o.customer_id = c.id
 JOIN products p ON o.product_id = p.id;
-```
+```bash
 
 ### Aggregate Functions
 
@@ -409,7 +422,7 @@ SELECT category_id, AVG(price) AS avg_price
 FROM products
 GROUP BY category_id
 HAVING avg_price > 100;
-```
+```bash
 
 ### Subqueries
 
@@ -428,7 +441,7 @@ WHERE category_id IN (
 SELECT AVG(price) FROM (
     SELECT price FROM products WHERE stock > 0
 ) AS available_products;
-```
+```bash
 
 ---
 
@@ -463,7 +476,7 @@ DROP USER 'username'@'localhost';
 
 -- Flush privileges
 FLUSH PRIVILEGES;
-```
+```bash
 
 ### Database Information
 
@@ -494,11 +507,12 @@ SHOW VARIABLES;
 
 -- Show process list
 SHOW PROCESSLIST;
-```
+```bash
 
 ### Backup and Restore
 
 #### Backup
+
 ```bash
 # Backup single database
 mysqldump -u root -p database_name > backup.sql
@@ -511,9 +525,10 @@ mysqldump -u root -p database_name table1 table2 > tables_backup.sql
 
 # Backup with compression
 mysqldump -u root -p database_name | gzip > backup.sql.gz
-```
+```bash
 
 #### Restore
+
 ```bash
 # Restore database
 mysql -u root -p database_name < backup.sql
@@ -523,7 +538,7 @@ gunzip < backup.sql.gz | mysql -u root -p database_name
 
 # Restore all databases
 mysql -u root -p < all_databases.sql
-```
+```bash
 
 ---
 
@@ -559,7 +574,7 @@ slow_query_log_file = /var/log/mysql/slow.log
 # Character set
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
-```
+```bash
 
 ### Restart MySQL
 
@@ -573,7 +588,7 @@ brew services restart mysql
 # Windows
 net stop MySQL80
 net start MySQL80
-```
+```bash
 
 ---
 
@@ -588,9 +603,10 @@ brew install --cask mysqlworkbench
 
 # Ubuntu/Debian
 sudo apt install mysql-workbench
-```
+```bash
 
 ### Features
+
 - Visual database design
 - SQL editor with syntax highlighting
 - Database administration
@@ -614,7 +630,7 @@ netstat -an | grep 3306
 
 # Reset root password
 # Stop MySQL, start with skip-grant-tables, change password
-```
+```bash
 
 ### Access Denied
 
@@ -625,7 +641,7 @@ SELECT user, host FROM mysql.user;
 -- Grant proper privileges
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';
 FLUSH PRIVILEGES;
-```
+```bash
 
 ### Performance Issues
 
@@ -643,7 +659,7 @@ SHOW PROCESSLIST;
 
 -- Kill slow query
 KILL process_id;
-```
+```bash
 
 ---
 

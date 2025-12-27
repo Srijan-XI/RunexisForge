@@ -30,15 +30,15 @@ app = Flask(__name__)
 
 @app.get("/hello")
 def hello():
-	return {"message": "Hello, Flask!"}
+ return {"message": "Hello, Flask!"}
 
 if __name__ == "__main__":
-	app.run(debug=True)
-```
+ app.run(debug=True)
+```bash
 
 ## Typical Structure
 
-```
+```bash
 myflask/
   app.py
   config.py
@@ -46,11 +46,11 @@ myflask/
   templates/
   static/
   app/
-	__init__.py
-	routes.py
-	models.py
-	blueprints/
-```
+ __init__.py
+ routes.py
+ models.py
+ blueprints/
+```bash
 
 ## Ecosystem Highlights
 

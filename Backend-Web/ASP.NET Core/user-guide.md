@@ -3,43 +3,50 @@
 ## Installation
 
 ### Prerequisites
+
 - .NET SDK 6.0 or higher
 - Visual Studio, VS Code, or Rider
 - C# extension for VS Code
 
 ### Install .NET SDK
-Visit https://dotnet.microsoft.com/download to download and install the latest .NET SDK.
+
+Visit <https://dotnet.microsoft.com/download> to download and install the latest .NET SDK.
 
 ### Verify Installation
+
 ```bash
 dotnet --version
-```
+```bash
 
 ## Create a New Project
 
 ### Create ASP.NET Core MVC Project
+
 ```bash
 dotnet new mvc -n MyApp
 cd MyApp
 dotnet run
-```
+```bash
 
 ### Create ASP.NET Core Web API Project
+
 ```bash
 dotnet new webapi -n MyApi
 cd MyApi
 dotnet run
-```
+```bash
 
 ### Create Blazor Project
+
 ```bash
 dotnet new blazorserver -n MyBlazorApp
 cd MyBlazorApp
 dotnet run
-```
+```bash
 
 ## Project Structure
-```
+
+```bash
 MyApp/
 ├── Controllers/
 │   └── HomeController.cs
@@ -56,9 +63,10 @@ MyApp/
 ├── Program.cs
 ├── Startup.cs
 └── MyApp.csproj
-```
+```bash
 
 ## Basic Controller
+
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 
@@ -85,9 +93,10 @@ public class UsersController : ControllerBase
         return CreatedAtAction(nameof(Get), new { id = 1 }, userDto);
     }
 }
-```
+```text
 
 ## Program.cs (Startup Configuration)
+
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 
@@ -112,9 +121,10 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-```
+```bash
 
 ## Dependency Injection
+
 ```csharp
 // Register services in Program.cs
 builder.Services.AddScoped<IUserService, UserService>();
@@ -131,15 +141,17 @@ public class MyController : ControllerBase
         _userService = userService;
     }
 }
-```
+```bash
 
 ## Entity Framework Core
+
 ```bash
 dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-```
+```bash
 
 ### DbContext Example
+
 ```csharp
 using Microsoft.EntityFrameworkCore;
 
@@ -151,15 +163,17 @@ public class AppDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Product> Products { get; set; }
 }
-```
+```bash
 
 ### Migrations
+
 ```bash
 dotnet ef migrations add InitialCreate
 dotnet ef database update
-```
+```bash
 
 ## View (Razor Template)
+
 ```html
 @{
     ViewData["Title"] = "Home";
@@ -179,9 +193,10 @@ dotnet ef database update
         <li>@item.Name</li>
     }
 </ul>
-```
+```bash
 
 ## Common Commands
+
 ```bash
 dotnet run                  # Run the application
 dotnet build                # Build the project
@@ -190,9 +205,10 @@ dotnet add package Package  # Add NuGet package
 dotnet ef migrations add    # Add migration
 dotnet ef database update   # Apply migrations
 dotnet publish              # Publish for production
-```
+```bash
 
 ## Configuration
+
 ```json
 {
   "Logging": {
@@ -204,9 +220,10 @@ dotnet publish              # Publish for production
     "DefaultConnection": "Server=localhost;Database=mydb;User=sa;Password=password"
   }
 }
-```
+```bash
 
 ## Authentication
+
 ```csharp
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -219,9 +236,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
         };
     });
-```
+```bash
 
 ## Best Practices
+
 1. Follow SOLID principles
 2. Use dependency injection
 3. Implement proper exception handling
@@ -234,12 +252,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 10. Use configuration for environment-specific settings
 
 ## Testing
+
 ```bash
 dotnet new xunit -n MyApp.Tests
 dotnet add reference ../MyApp/MyApp.csproj
-```
+```bash
 
 ## Debugging
+
 - Visual Studio built-in debugger
 - VS Code with C# extension
 - Application Insights for production monitoring

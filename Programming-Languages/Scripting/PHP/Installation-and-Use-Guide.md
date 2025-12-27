@@ -1,6 +1,7 @@
 # ✅ PHP Installation and Use Guide (Windows, Linux, macOS)
 
 ## 📌 Table of Contents
+
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
@@ -58,69 +59,94 @@
 
 ```bash
 php -v
-```
+```php
+
 ### 🐧 Linux (Ubuntu/Debian-based)
--  Step 1: Update Repositories
-```
+
+- Step 1: Update Repositories
+
+```php
 sudo apt update
-```
--  Step 2: Install PHP and Common Modules
-```
+```php
+
+- Step 2: Install PHP and Common Modules
+
+```bash
 sudo apt install php php-cli php-mbstring php-xml php-mysql php-curl php-zip php-gd
 
-```
+```bash
+
 - Optional: Install Apache or Nginx with PHP
 
 ### For Apache
-```
+
+```bash
 sudo apt install apache2 libapache2-mod-php
-```
+```bash
 
 ### For Nginx (PHP-FPM)
-```
+
+```bash
 sudo apt install nginx php-fpm
-```
+```bash
+
 bash
 Copy
 Edit
 php -v
 
 ### 🍎 macOS
--  Option 1: Homebrew (Recommended)
+
+- Option 1: Homebrew (Recommended)
+
 1. Install Homebrew:
 
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-2. Install PHP:
-```
+```bash
+
+1. Install PHP:
+
+```bash
 brew install php
-```
-3. To start PHP's built-in server:
-```
+```bash
+
+1. To start PHP's built-in server:
+
+```bash
 php -S localhost:8000
-```
-```
+```bash
+
+```bash
 php -v
-```
+```bash
+
 - Option 2: XAMPP for macOS
 
-Download from https://www.apachefriends.org/index.html
+Download from <https://www.apachefriends.org/index.html>
 
 ### 🧪 Verifying Installation
-```
+
+```bash
 php -v
-```
-#### Expected output:
-```
+```bash
+
+#### Expected output
+
+```text
 PHP 8.x.x (cli) (built: ...)
-```
-#### Run test script:
-```
+```text
+
+#### Run test script
+
+```bash
 <?php phpinfo(); ?>
-```
-#### Serve using:
-```
+```bash
+
+#### Serve using
+
+```bash
 php -S localhost:8080 
-```
+```bash
+
 Navigate to: `http://localhost:8080/test.php`

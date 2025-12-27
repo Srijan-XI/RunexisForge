@@ -1,9 +1,11 @@
 # Angular Introduction
 
 ## Overview
+
 Angular is a full-featured, opinionated framework for building scalable, enterprise-grade single-page applications (SPAs). Developed and maintained by Google, it provides a complete solution for web development with TypeScript at its core.
 
 ## Key Features
+
 - **TypeScript First**: Built with TypeScript for type safety and better developer experience
 - **Component-Based**: Modular architecture with reusable components
 - **Dependency Injection**: Built-in DI container for managing dependencies
@@ -14,6 +16,7 @@ Angular is a full-featured, opinionated framework for building scalable, enterpr
 - **Forms**: Powerful form handling (Template-driven and Reactive)
 
 ## Core Concepts
+
 1. **Components**: Building blocks of Angular applications
 2. **Services**: Reusable business logic
 3. **Modules**: Organize related components, services, and directives
@@ -23,6 +26,7 @@ Angular is a full-featured, opinionated framework for building scalable, enterpr
 7. **Dependency Injection**: Manage component dependencies
 
 ## Angular Architecture
+
 - **Smart Components**: Container components managing state
 - **Presentational Components**: Dumb components for display
 - **Services**: Handle business logic and data
@@ -30,6 +34,7 @@ Angular is a full-featured, opinionated framework for building scalable, enterpr
 - **Decorators**: Add metadata to classes
 
 ## Common Use Cases
+
 - Enterprise-level SPAs
 - Complex web applications
 - Real-time collaborative applications
@@ -37,12 +42,14 @@ Angular is a full-featured, opinionated framework for building scalable, enterpr
 - Mobile applications (NativeScript, Ionic)
 
 ## Prerequisites
+
 - Solid JavaScript/TypeScript knowledge
 - HTML/CSS fundamentals
 - Understanding of OOP concepts
 - Familiarity with RxJS/Observables
 
 ## Why Angular?
+
 - Comprehensive framework (no need for external solutions)
 - Strong community and corporate backing
 - Excellent for large-scale projects
@@ -50,7 +57,8 @@ Angular is a full-featured, opinionated framework for building scalable, enterpr
 - Powerful CLI tooling
 
 ## Resources
-- Official Documentation: https://angular.io
-- Angular CLI: https://angular.io/cli
-- TypeScript: https://www.typescriptlang.org
-- RxJS: https://rxjs.dev
+
+- Official Documentation: <https://angular.io>
+- Angular CLI: <https://angular.io/cli>
+- TypeScript: <https://www.typescriptlang.org>
+- RxJS: <https://rxjs.dev>

@@ -1,19 +1,22 @@
 # Semgrep — User Guide
 
 ## Install
+
 ```bash
 pip install semgrep
 # or
 brew install semgrep
-```
+```bash
 
 ## Run with the registry rules
+
 ```bash
 semgrep --config p/ci  # recommended baseline
 semgrep --config auto  # auto-selects based on languages detected
-```
+```bash
 
 ## Add to CI (GitHub Actions example)
+
 ```yaml
 name: semgrep
 on: [push, pull_request]
@@ -25,9 +28,10 @@ jobs:
       - uses: returntocorp/semgrep-action@v1
         with:
           config: p/ci
-```
+```bash
 
 ## Write a custom rule (example: no eval in JS)
+
 ```yaml
 rules:
 - id: no-eval
@@ -36,17 +40,21 @@ rules:
   severity: ERROR
   patterns:
     - pattern: eval(...)
-```
+```bash
+
 Run it:
+
 ```bash
 semgrep --config ./rules.yml src/
-```
+```bash
 
 ## Tuning
+
 - Use `--exclude` for generated code
 - Use `--severity` to filter
 - Autofix: add `fix:` in rules to propose changes
 
 ## References
-- https://semgrep.dev/
-- Rule examples: https://semgrep.dev/explore
+
+- <https://semgrep.dev/>
+- Rule examples: <https://semgrep.dev/explore>

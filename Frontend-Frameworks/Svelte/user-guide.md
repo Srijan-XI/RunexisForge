@@ -3,28 +3,32 @@
 ## Installation
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - npm or yarn
 - Code editor (VS Code recommended)
 
 ### Create a Svelte Project with Vite
+
 ```bash
 npm create vite@latest my-app -- --template svelte
 cd my-app
 npm install
 npm run dev
-```
+```bash
 
 ### Create a SvelteKit Project (Full-Stack)
+
 ```bash
 npm create svelte@latest my-app
 cd my-app
 npm install
 npm run dev
-```
+```bash
 
 ## Project Structure
-```
+
+```bash
 my-app/
 ├── node_modules/
 ├── src/
@@ -34,9 +38,10 @@ my-app/
 ├── public/
 ├── package.json
 └── vite.config.js
-```
+```bash
 
 ## Basic Svelte Component
+
 ```svelte
 <script>
   let count = 0;
@@ -69,9 +74,10 @@ my-app/
     cursor: pointer;
   }
 </style>
-```
+```bash
 
 ## Reactivity
+
 ```svelte
 <script>
   let count = 0;
@@ -85,9 +91,10 @@ my-app/
 <p>Count: {count}</p>
 <p>Doubled: {doubled}</p>
 <button on:click={() => count++}>Increment</button>
-```
+```bash
 
 ## Props (Props Passing)
+
 ```svelte
 <script>
   export let name;
@@ -95,9 +102,10 @@ my-app/
 </script>
 
 <p>Name: {name}, Age: {age}</p>
-```
+```bash
 
 ## Event Dispatching
+
 ```svelte
 <script>
   import { createEventDispatcher } from 'svelte';
@@ -110,9 +118,10 @@ my-app/
 </script>
 
 <button on:click={handleClick}>Send Event</button>
-```
+```bash
 
 ## Directives
+
 ```svelte
 <!-- Event Binding -->
 <button on:click={handleClick}>Click me</button>
@@ -138,16 +147,17 @@ my-app/
 {#each items as item (item.id)}
   <p>{item.name}</p>
 {/each}
-```
+```bash
 
 ## Stores
+
 ```javascript
 // store.js
 import { writable } from 'svelte/store';
 
 export const count = writable(0);
 export const user = writable({ name: 'John' });
-```
+```bash
 
 ```svelte
 <!-- Using Store -->
@@ -157,9 +167,10 @@ export const user = writable({ name: 'John' });
 
 <p>Count: {$count}</p>
 <button on:click={() => $count++}>Increment</button>
-```
+```bash
 
 ## Animations & Transitions
+
 ```svelte
 <script>
   import { fade, slide } from 'svelte/transition';
@@ -177,17 +188,19 @@ export const user = writable({ name: 'John' });
     Content with slide effect
   </div>
 {/if}
-```
+```bash
 
 ## Common Commands
+
 ```bash
 npm run dev        # Start development server
 npm run build      # Build for production
 npm run preview    # Preview production build
 npm run lint       # Run linter
-```
+```bash
 
 ## Lifecycle Hooks
+
 ```svelte
 <script>
   import { onMount, onDestroy, beforeUpdate, afterUpdate } from 'svelte';
@@ -200,9 +213,10 @@ npm run lint       # Run linter
     console.log('Component destroyed');
   });
 </script>
-```
+```bash
 
 ## Best Practices
+
 1. Keep components small and focused
 2. Use stores for shared state
 3. Leverage reactive statements with `$:`
@@ -213,11 +227,13 @@ npm run lint       # Run linter
 8. Write tests with Vitest
 
 ## Debugging
+
 - Svelte DevTools browser extension
 - Chrome DevTools
 - VS Code Svelte extension
 
 ## Performance Tips
+
 - Minimal runtime overhead
 - No virtual DOM reconciliation
 - Smaller bundle sizes by default

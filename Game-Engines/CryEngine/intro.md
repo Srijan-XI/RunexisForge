@@ -20,6 +20,7 @@
 ## Key Features
 
 ### Graphics & Rendering
+
 - **Advanced Lighting**: Real-time global illumination, dynamic lighting
 - **Physically Based Rendering (PBR)**: Realistic material system
 - **Volumetric Effects**: Fog, clouds, atmospheric effects
@@ -28,6 +29,7 @@
 - **HDR Rendering**: High dynamic range imaging
 
 ### World Building
+
 - **Terrain System**: Procedural terrain generation
 - **Vegetation System**: Advanced foliage rendering
 - **Time of Day**: Dynamic day/night cycles
@@ -35,12 +37,14 @@
 - **Ocean System**: Realistic water simulation
 
 ### Scripting & Programming
+
 - **C++ Scripting**: Full engine source code access
 - **Schematyc**: Visual scripting system
 - **Lua Support**: Scripting integration
 - **Entity Component System**: Flexible game object architecture
 
 ### Physics
+
 - **CryPhysics**: Built-in physics engine
 - **Destructible Environments**: Real-time destruction
 - **Ragdoll Physics**: Character physics
@@ -63,6 +67,7 @@
 ## System Requirements
 
 ### Minimum Requirements
+
 - **OS**: Windows 10 (64-bit)
 - **CPU**: Intel Core i5 or AMD Ryzen 5
 - **RAM**: 8 GB
@@ -70,6 +75,7 @@
 - **Storage**: 15 GB available space
 
 ### Recommended
+
 - **OS**: Windows 10/11 (64-bit)
 - **CPU**: Intel Core i7 or AMD Ryzen 7
 - **RAM**: 16+ GB
@@ -81,6 +87,7 @@
 ## Supported Platforms
 
 ### Build Targets
+
 - **Windows**: Full support
 - **PlayStation 4/5**: Console development
 - **Xbox One/Series X|S**: Console development
@@ -92,10 +99,12 @@
 ## Programming Languages
 
 ### Primary
+
 - **C++**: Main engine programming language
 - **Schematyc**: Visual scripting (node-based)
 
 ### Additional
+
 - **Lua**: Scripting support
 - **Python**: Editor automation
 - **C#**: Plugin development
@@ -121,12 +130,14 @@
 ## Licensing & Pricing
 
 ### "Pay What You Want" Model
+
 - **Free to use**: Download and use for free
 - **No upfront costs**: No subscription fees
 - **Revenue Share**: 5% royalty after first $5,000 per project per year
 - **Full source code**: Included with all licenses
 
 ### Commercial License
+
 - Contact Crytek for custom licensing arrangements
 - Enterprise solutions available
 
@@ -135,6 +146,7 @@
 ## Core Components
 
 ### CryEngine Editor (Sandbox)
+
 - **Scene Editor**: Visual level design
 - **Material Editor**: PBR material creation
 - **Particle Editor**: Visual effects creation
@@ -143,6 +155,7 @@
 - **Flow Graph**: Visual logic scripting
 
 ### Asset Pipeline
+
 - **FBX Import**: 3D model support
 - **Substance Integration**: Material workflow
 - **Texture Processing**: Automatic optimization
@@ -166,16 +179,19 @@
 ## Learning Resources
 
 ### Official Resources
+
 - [CryEngine Documentation](https://docs.cryengine.com/)
 - [CryEngine YouTube Channel](https://www.youtube.com/user/CrytekOfficial)
 - [CryEngine Learning Portal](https://www.cryengine.com/learn)
 
 ### Community
+
 - [CryEngine Forums](https://www.cryengine.com/community)
 - [CryDev Discord](https://discord.gg/cryengine)
 - [Reddit r/cryengine](https://www.reddit.com/r/cryengine/)
 
 ### Tutorials
+
 - Official Getting Started tutorials
 - Community video tutorials
 - Sample projects and demos
@@ -185,6 +201,7 @@
 ## Strengths & Weaknesses
 
 ### Strengths
+
 - ✅ Cutting-edge graphics capabilities
 - ✅ Excellent for photorealistic visuals
 - ✅ Great for open-world games
@@ -192,6 +209,7 @@
 - ✅ Advanced lighting and particle systems
 
 ### Weaknesses
+
 - ❌ Steep learning curve
 - ❌ Smaller community than Unity/Unreal
 - ❌ Less documentation and tutorials
@@ -203,6 +221,7 @@
 ## Who Should Use CryEngine?
 
 ### Ideal For
+
 - AAA game studios
 - Developers focused on graphics quality
 - Open-world game developers
@@ -210,6 +229,7 @@
 - Projects requiring photorealism
 
 ### Not Ideal For
+
 - Complete beginners
 - Mobile-first development
 - 2D games
@@ -233,6 +253,7 @@
 ## Notable Features
 
 ### CRYENGINE 5.7+ Features
+
 - **Ray Tracing**: Real-time ray-traced reflections
 - **SVOGI**: Sparse Voxel Octree Global Illumination
 - **Advanced AI**: Navigation and behavior systems
@@ -244,12 +265,14 @@
 ## Community & Support
 
 ### Official Support
+
 - Documentation portal
 - Video tutorials
 - Sample projects
 - Technical support (license-dependent)
 
 ### Community Support
+
 - Active forums
 - Discord server
 - Community tutorials
@@ -260,6 +283,7 @@
 ## Future Outlook
 
 CryEngine continues to evolve with:
+
 - Ray tracing enhancements
 - Improved editor tools
 - Better cross-platform support

@@ -5,6 +5,7 @@ Comprehensive guide to working with XML across different programming languages a
 ---
 
 ## Table of Contents
+
 1. [Creating XML Documents](#creating-xml-documents)
 2. [Parsing XML](#parsing-xml)
 3. [Validation](#validation)
@@ -18,6 +19,7 @@ Comprehensive guide to working with XML across different programming languages a
 ## Creating XML Documents
 
 ### Basic XML Document
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <bookstore>
@@ -34,9 +36,10 @@ Comprehensive guide to working with XML across different programming languages a
         <price>29.99</price>
     </book>
 </bookstore>
-```
+```bash
 
 ### With Namespaces
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <root xmlns="http://www.example.com/default"
@@ -50,9 +53,10 @@ Comprehensive guide to working with XML across different programming languages a
         </auth:author>
     </bk:book>
 </root>
-```
+```bash
 
 ### With CDATA Sections
+
 ```xml
 <?xml version="1.0"?>
 <script>
@@ -68,7 +72,7 @@ Comprehensive guide to working with XML across different programming languages a
         ]]>
     </code>
 </script>
-```
+```bash
 
 ---
 
@@ -77,6 +81,7 @@ Comprehensive guide to working with XML across different programming languages a
 ### JavaScript (Browser)
 
 #### Using DOMParser
+
 ```javascript
 const xmlString = `
 <?xml version="1.0"?>
@@ -103,9 +108,10 @@ for (let book of books) {
     const author = book.getElementsByTagName("author")[0].textContent;
     console.log(`${title} by ${author}`);
 }
-```
+```bash
 
 #### Creating XML
+
 ```javascript
 // Create XML document
 const xmlDoc = document.implementation.createDocument("", "bookstore");
@@ -130,11 +136,12 @@ xmlDoc.documentElement.appendChild(book);
 const serializer = new XMLSerializer();
 const xmlString = serializer.serializeToString(xmlDoc);
 console.log(xmlString);
-```
+```bash
 
 ### JavaScript (Node.js)
 
 #### Using xml2js
+
 ```javascript
 const xml2js = require('xml2js');
 
@@ -169,9 +176,10 @@ const obj = {
 };
 const xml = builder.buildObject(obj);
 console.log(xml);
-```
+```bash
 
 #### Using fast-xml-parser
+
 ```javascript
 const { XMLParser, XMLBuilder } = require('fast-xml-parser');
 
@@ -187,11 +195,12 @@ const builder = new XMLBuilder({
     ignoreAttributes: false
 });
 const xmlOutput = builder.build(result);
-```
+```text
 
 ### Python
 
 #### Using ElementTree
+
 ```python
 import xml.etree.ElementTree as ET
 
@@ -236,9 +245,10 @@ import xml.dom.minidom as minidom
 xml_str = ET.tostring(root, encoding='unicode')
 pretty_xml = minidom.parseString(xml_str).toprettyxml(indent="  ")
 print(pretty_xml)
-```
+```text
 
 #### Using lxml
+
 ```python
 from lxml import etree
 
@@ -269,11 +279,12 @@ print(xml_string)
 schema_root = etree.parse('schema.xsd')
 schema = etree.XMLSchema(schema_root)
 is_valid = schema.validate(tree)
-```
+```text
 
 ### Java
 
 #### Using DOM
+
 ```java
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
@@ -328,9 +339,10 @@ public class XMLExample {
         transformer.transform(source, result);
     }
 }
-```
+```text
 
 #### Using JAXB
+
 ```java
 import javax.xml.bind.*;
 import javax.xml.bind.annotation.*;
@@ -379,11 +391,12 @@ public class JAXBExample {
         marshaller.marshal(bookstore, System.out);
     }
 }
-```
+```text
 
 ### C# (.NET)
 
 #### Using XmlDocument
+
 ```csharp
 using System;
 using System.Xml;
@@ -422,9 +435,10 @@ class Program
         newDoc.Save("output.xml");
     }
 }
-```
+```text
 
 #### Using LINQ to XML
+
 ```csharp
 using System;
 using System.Xml.Linq;
@@ -465,9 +479,10 @@ class Program
         newDoc.Save("output.xml");
     }
 }
-```
+```text
 
 #### Using XmlSerializer
+
 ```csharp
 using System;
 using System.Xml.Serialization;
@@ -524,7 +539,7 @@ class Program
         }
     }
 }
-```
+```text
 
 ### PHP
 
@@ -556,7 +571,7 @@ $dom->formatOutput = true;
 $dom->loadXML($bookstore->asXML());
 echo $dom->saveXML();
 ?>
-```
+```text
 
 ---
 
@@ -565,6 +580,7 @@ echo $dom->saveXML();
 ### XML Schema (XSD)
 
 **Schema File** (`books.xsd`):
+
 ```xml
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -586,9 +602,10 @@ echo $dom->saveXML();
         </xs:complexType>
     </xs:element>
 </xs:schema>
-```
+```text
 
 **Validation in Python**:
+
 ```python
 from lxml import etree
 
@@ -602,9 +619,10 @@ is_valid = schema.validate(xml_doc)
 
 if not is_valid:
     print(schema.error_log)
-```
+```text
 
 **Validation in Java**:
+
 ```java
 import javax.xml.XMLConstants;
 import javax.xml.transform.stream.StreamSource;
@@ -621,13 +639,14 @@ try {
 } catch (Exception e) {
     System.out.println("XML is NOT valid: " + e.getMessage());
 }
-```
+```text
 
 ---
 
 ## Transformations (XSLT)
 
 **XSLT Stylesheet** (`transform.xslt`):
+
 ```xml
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -651,9 +670,10 @@ try {
         </html>
     </xsl:template>
 </xsl:stylesheet>
-```
+```text
 
 **Apply XSLT in Python**:
+
 ```python
 from lxml import etree
 
@@ -670,7 +690,7 @@ result = transform(xml_doc)
 # Save result
 with open('output.html', 'wb') as f:
     f.write(etree.tostring(result, pretty_print=True))
-```
+```text
 
 ---
 
@@ -705,9 +725,10 @@ with open('output.html', 'wb') as f:
 
 // Select all attributes
 //@*
-```
+```text
 
 **Python Example**:
+
 ```python
 from lxml import etree
 
@@ -725,7 +746,7 @@ for book in cooking:
 
 # Complex query
 expensive = tree.xpath('//book[price > 30]/title/text()')
-```
+```text
 
 ---
 
@@ -734,34 +755,38 @@ expensive = tree.xpath('//book[price > 30]/title/text()')
 ### Common Issues
 
 #### 1. **Encoding Problems**
+
 ```python
 # Always specify encoding
 tree = ET.parse('file.xml', ET.XMLParser(encoding='utf-8'))
-```
+```text
 
 #### 2. **Namespace Issues**
+
 ```python
 # Define namespaces
 namespaces = {'ns': 'http://example.com/namespace'}
 titles = root.findall('.//ns:title', namespaces)
-```
+```text
 
 #### 3. **Invalid Characters**
+
 ```python
 import html
 
 # Escape special characters
 safe_text = html.escape(user_input)
-```
+```text
 
 #### 4. **Large Files**
+
 ```python
 # Use iterparse for large files
 for event, elem in ET.iterparse('large_file.xml'):
     if elem.tag == 'book':
         process(elem)
         elem.clear()  # Free memory
-```
+```text
 
 ---
 
@@ -783,11 +808,13 @@ for event, elem in ET.iterparse('large_file.xml'):
 ## Additional Resources
 
 ### Tools
+
 - **XMLSpy**: Professional XML editor
 - **Oxygen XML**: XML development environment
 - **xmllint**: Command-line validator
 
 ### Documentation
+
 - [W3C XML](https://www.w3.org/XML/)
 - [W3Schools XML](https://www.w3schools.com/xml/)
 - [Mozilla XML Guide](https://developer.mozilla.org/en-US/docs/Web/XML)

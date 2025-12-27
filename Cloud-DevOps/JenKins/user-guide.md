@@ -1,6 +1,7 @@
 # Jenkins User Guide
 
 ## Table of Contents
+
 1. [Installation](#installation)
 2. [Initial Setup](#initial-setup)
 3. [Creating Jobs](#creating-jobs)
@@ -35,7 +36,7 @@ sudo dnf install java-17-openjdk
 
 # macOS
 brew install openjdk@17
-```
+```bash
 
 ### Installation Methods
 
@@ -53,7 +54,7 @@ docker run -d -p 8080:8080 -p 50000:50000 \
 
 # View initial admin password
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-```
+```bash
 
 #### 2. Ubuntu/Debian
 
@@ -76,7 +77,7 @@ sudo systemctl enable jenkins
 
 # Check status
 sudo systemctl status jenkins
-```
+```bash
 
 #### 3. RHEL/CentOS/Fedora
 
@@ -92,7 +93,7 @@ sudo dnf install jenkins
 # Start Jenkins
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
-```
+```bash
 
 #### 4. macOS
 
@@ -102,7 +103,7 @@ brew install jenkins-lts
 
 # Start Jenkins
 brew services start jenkins-lts
-```
+```bash
 
 #### 5. Windows
 
@@ -118,7 +119,7 @@ wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
 # Run Jenkins
 java -jar jenkins.war --httpPort=8080
-```
+```bash
 
 ### Firewall Configuration
 
@@ -131,7 +132,7 @@ sudo ufw allow 50000
 sudo firewall-cmd --permanent --add-port=8080/tcp
 sudo firewall-cmd --permanent --add-port=50000/tcp
 sudo firewall-cmd --reload
-```
+```bash
 
 ---
 
@@ -154,19 +155,22 @@ docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
 # Windows
 type "C:\Program Files\Jenkins\secrets\initialAdminPassword"
-```
+```bash
 
 ### Install Plugins
 
 **Option 1: Install Suggested Plugins** (Recommended)
+
 - Includes commonly used plugins
 - Good for getting started
 
 **Option 2: Select Plugins to Install**
+
 - Choose specific plugins
 - More control over installation
 
 **Common Essential Plugins:**
+
 - Git Plugin
 - Pipeline Plugin
 - Docker Plugin
@@ -207,6 +211,7 @@ Set to your Jenkins URL (e.g., `http://jenkins.example.com:8080`)
 
 4. **Build Steps:**
    - Add build step → Execute shell
+
    ```bash
    echo "Building application..."
    mvn clean package
@@ -269,7 +274,7 @@ pipeline {
         }
     }
 }
-```
+```bash
 
 ### 3. Multibranch Pipeline
 
@@ -392,11 +397,12 @@ pipeline {
         }
     }
 }
-```
+```bash
 
 ### Pipeline Directives
 
 #### agent
+
 ```groovy
 // Run on any available agent
 agent any
@@ -413,35 +419,39 @@ agent {
 
 // No agent (specify per stage)
 agent none
-```
+```bash
 
 #### environment
+
 ```groovy
 environment {
     APP_NAME = 'my-app'
     VERSION = '1.0.0'
     DEPLOY_PATH = '/opt/app'
 }
-```
+```bash
 
 #### parameters
+
 ```groovy
 parameters {
     string(name: 'BRANCH', defaultValue: 'main', description: 'Branch to build')
     choice(name: 'ENV', choices: ['dev', 'staging', 'prod'])
     booleanParam(name: 'DEPLOY', defaultValue: false)
 }
-```
+```bash
 
 #### triggers
+
 ```groovy
 triggers {
     cron('H 2 * * *')  // Daily at 2 AM
     pollSCM('H/15 * * * *')  // Poll every 15 minutes
 }
-```
+```bash
 
 #### when conditions
+
 ```groovy
 when {
     branch 'main'
@@ -452,7 +462,7 @@ when {
         environment name: 'ENV', value: 'prod'
     }
 }
-```
+```bash
 
 ### Scripted Pipeline
 
@@ -481,7 +491,7 @@ node {
         archiveArtifacts 'target/*.jar'
     }
 }
-```
+```bash
 
 ---
 
@@ -493,6 +503,7 @@ node {
 Manage Jenkins → Manage Plugins → Available → Git Plugin
 
 **Configure in Pipeline:**
+
 ```groovy
 stage('Checkout') {
     steps {
@@ -501,25 +512,28 @@ stage('Checkout') {
             url: 'https://github.com/user/repo.git'
     }
 }
-```
+```bash
 
 ### GitHub Integration
 
 **1. Install GitHub Plugin**
 
 **2. Configure GitHub Server:**
+
 - Manage Jenkins → Configure System
 - GitHub → Add GitHub Server
 - API URL: `https://api.github.com`
 - Credentials: GitHub Personal Access Token
 
 **3. Configure Webhook:**
+
 - GitHub Repository → Settings → Webhooks
 - Payload URL: `http://jenkins.example.com/github-webhook/`
 - Content type: `application/json`
 - Events: Just the push event
 
 **4. Pipeline with GitHub:**
+
 ```groovy
 pipeline {
     agent any
@@ -531,19 +545,21 @@ pipeline {
         }
     }
 }
-```
+```bash
 
 ### GitLab Integration
 
 **1. Install GitLab Plugin**
 
 **2. Configure GitLab Connection:**
+
 - Manage Jenkins → Configure System → GitLab
 - Connection name: `GitLab`
 - GitLab host URL: `https://gitlab.com`
 - Credentials: GitLab API token
 
 **3. Configure Webhook in GitLab:**
+
 - Project → Settings → Webhooks
 - URL: `http://jenkins.example.com/project/job-name`
 - Trigger: Push events, Merge request events
@@ -553,27 +569,32 @@ pipeline {
 ## Build Triggers
 
 ### 1. Manual Trigger
+
 Click "Build Now" button
 
 ### 2. Poll SCM
+
 ```groovy
 triggers {
     pollSCM('H/15 * * * *')  // Every 15 minutes
 }
-```
+```bash
 
 ### 3. GitHub/GitLab Webhook
+
 Automatic trigger on push events
 
 ### 4. Scheduled Builds (Cron)
+
 ```groovy
 triggers {
     cron('H 2 * * *')  // 2 AM daily
 }
-```
+```bash
 
 **Cron Syntax:**
-```
+
+```bash
 MINUTE HOUR DAY MONTH DAYOFWEEK
 
 Examples:
@@ -582,23 +603,25 @@ H H * * 0           - Weekly on Sunday
 H H 1 * *           - Monthly on 1st
 H/15 * * * *        - Every 15 minutes
 H 9-17/2 * * 1-5    - Weekdays, 9 AM-5 PM, every 2 hours
-```
+```bash
 
 ### 5. Build After Other Projects
+
 ```groovy
 triggers {
     upstream(upstreamProjects: 'upstream-job', threshold: hudson.model.Result.SUCCESS)
 }
-```
+```text
 
 ### 6. Remote Trigger
+
 ```bash
 # Trigger with token
 curl -X POST http://jenkins.example.com/job/job-name/build?token=BUILD_TOKEN
 
 # With parameters
 curl -X POST http://jenkins.example.com/job/job-name/buildWithParameters?token=BUILD_TOKEN&PARAM1=value1
-```
+```text
 
 ---
 
@@ -657,7 +680,7 @@ pipeline {
         }
     }
 }
-```
+```text
 
 ---
 
@@ -671,22 +694,26 @@ pipeline {
 ### Credential Types
 
 #### Username with Password
+
 - Username: `admin`
 - Password: `*******`
 - ID: `admin-credentials`
 - Description: `Admin credentials`
 
 #### SSH Username with Private Key
+
 - Username: `jenkins`
 - Private Key: Enter directly or from file
 - Passphrase: (if key is encrypted)
 - ID: `ssh-key`
 
 #### Secret Text
+
 - Secret: `api-token-value`
 - ID: `api-token`
 
 #### Secret File
+
 - File: Upload certificate or config file
 - ID: `keystore`
 
@@ -732,7 +759,7 @@ pipeline {
         }
     }
 }
-```
+```text
 
 ---
 
@@ -747,29 +774,34 @@ pipeline {
 ### Essential Plugins
 
 **Source Control:**
+
 - Git Plugin
 - GitHub Integration Plugin
 - Bitbucket Plugin
 - GitLab Plugin
 
 **Build & Test:**
+
 - Maven Integration Plugin
 - Gradle Plugin
 - NodeJS Plugin
 - JUnit Plugin
 
 **Deployment:**
+
 - Deploy to container Plugin
 - Kubernetes Plugin
 - Docker Plugin
 - AWS Steps Plugin
 
 **Notifications:**
+
 - Email Extension Plugin
 - Slack Notification Plugin
 - Microsoft Teams Plugin
 
 **Utilities:**
+
 - Blue Ocean
 - Pipeline Plugin
 - Configuration as Code Plugin
@@ -787,13 +819,15 @@ pipeline {
 ## Best Practices
 
 ### 1. Pipeline as Code
+
 ```groovy
 // Store Jenkinsfile in repository
 // Version control your pipeline
 // Review pipeline changes with code
-```
+```text
 
 ### 2. Use Shared Libraries
+
 ```groovy
 // vars/buildApp.groovy
 def call(String appName) {
@@ -812,9 +846,10 @@ def call(String appName) {
 // Jenkinsfile
 @Library('my-shared-library') _
 buildApp('my-app')
-```
+```text
 
 ### 3. Security Best Practices
+
 - Enable CSRF protection
 - Use role-based access control
 - Secure credentials properly
@@ -822,6 +857,7 @@ buildApp('my-app')
 - Enable audit logging
 
 ### 4. Performance Optimization
+
 ```groovy
 pipeline {
     agent none  // Don't allocate executor until needed
@@ -841,9 +877,10 @@ pipeline {
         }
     }
 }
-```
+```text
 
 ### 5. Resource Management
+
 ```groovy
 pipeline {
     options {
@@ -852,23 +889,26 @@ pipeline {
         disableConcurrentBuilds()
     }
 }
-```
+```text
 
 ---
 
 ## Resources
 
 ### Official Documentation
+
 - [Jenkins Documentation](https://www.jenkins.io/doc/)
 - [Pipeline Syntax](https://www.jenkins.io/doc/book/pipeline/syntax/)
 - [Plugin Index](https://plugins.jenkins.io/)
 
 ### Learning Resources
+
 - [Jenkins User Handbook](https://www.jenkins.io/doc/book/)
 - [Pipeline Tutorial](https://www.jenkins.io/doc/book/pipeline/getting-started/)
 - [Jenkins Community](https://community.jenkins.io/)
 
 ### Community
+
 - [Stack Overflow - Jenkins](https://stackoverflow.com/questions/tagged/jenkins)
 - [Jenkins Users Mailing List](https://www.jenkins.io/mailing-lists/)
 - [Reddit r/jenkinsci](https://www.reddit.com/r/jenkinsci/)

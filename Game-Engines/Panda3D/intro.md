@@ -58,7 +58,7 @@ class MyGame(ShowBase):
 
 app = MyGame()
 app.run()
-```
+```bash
 
 ---
 

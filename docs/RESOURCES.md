@@ -1,0 +1,1 @@
+{% include-markdown "../RESOURCES.md" %}

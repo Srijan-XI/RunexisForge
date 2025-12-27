@@ -7,29 +7,34 @@
 ## Key Features
 
 ### 1. **Minimalist Framework**
+
 - Lightweight and unopinionated
 - Provides core web application features
 - Doesn't force any specific project structure
 - Freedom to organize code as you prefer
 
 ### 2. **Middleware Support**
+
 - Built on middleware functions
 - Process requests before they reach route handlers
 - Modular and reusable middleware
 - Third-party middleware ecosystem
 
 ### 3. **Routing**
+
 - Powerful routing mechanism
 - HTTP method support (GET, POST, PUT, DELETE, etc.)
 - Route parameters and query strings
 - Regular expressions in routes
 
 ### 4. **Template Engine Integration**
+
 - Support for multiple template engines
 - Popular engines: Pug, EJS, Handlebars
 - Server-side rendering capabilities
 
 ### 5. **Fast Development**
+
 - Minimal boilerplate code
 - Quick prototyping
 - Extensive documentation
@@ -37,7 +42,7 @@
 
 ## Architecture
 
-```
+```javascript
 ┌─────────────────────────────────────────────────┐
 │                   Client                         │
 │              (Browser/Mobile App)                │
@@ -79,19 +84,21 @@
 ┌─────────────────────────────────────────────────┐
 │                   Client                         │
 └─────────────────────────────────────────────────┘
-```
+```text
 
 ## Core Concepts
 
 ### 1. Application Object (`app`)
+
 The main Express application object that handles requests and responses.
 
 ```javascript
 const express = require('express');
 const app = express();
-```
+```text
 
 ### 2. Middleware
+
 Functions that have access to request and response objects, and the next middleware function.
 
 ```javascript
@@ -99,9 +106,10 @@ app.use((req, res, next) => {
     console.log('Request received');
     next(); // Pass control to next middleware
 });
-```
+```text
 
 ### 3. Routing
+
 Define how application responds to client requests at specific endpoints.
 
 ```javascript
@@ -112,12 +120,14 @@ app.get('/users', (req, res) => {
 app.post('/users', (req, res) => {
     res.send('Create a user');
 });
-```
+```text
 
 ### 4. Request Object (`req`)
+
 Represents the HTTP request with properties like query strings, parameters, body, HTTP headers.
 
 ### 5. Response Object (`res`)
+
 Represents the HTTP response that Express sends when it receives a request.
 
 ## Installation
@@ -135,7 +145,7 @@ npm install express
 
 # Install development dependencies (optional)
 npm install --save-dev nodemon
-```
+```bash
 
 ## Hello World Example
 
@@ -151,7 +161,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
-```
+```bash
 
 ## HTTP Methods
 
@@ -170,6 +180,7 @@ Express supports all HTTP methods:
 ## Middleware Types
 
 ### 1. Application-Level Middleware
+
 Bound to the app object using `app.use()` or `app.METHOD()`.
 
 ```javascript
@@ -177,9 +188,10 @@ app.use((req, res, next) => {
     console.log('Time:', Date.now());
     next();
 });
-```
+```bash
 
 ### 2. Router-Level Middleware
+
 Works like application-level but bound to `express.Router()`.
 
 ```javascript
@@ -189,9 +201,10 @@ router.use((req, res, next) => {
     console.log('Router middleware');
     next();
 });
-```
+```bash
 
 ### 3. Error-Handling Middleware
+
 Has four arguments instead of three.
 
 ```javascript
@@ -199,18 +212,20 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 });
-```
+```bash
 
 ### 4. Built-in Middleware
+
 Provided by Express itself.
 
 ```javascript
 app.use(express.json());              // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded
 app.use(express.static('public'));     // Serve static files
-```
+```bash
 
 ### 5. Third-Party Middleware
+
 Installed via npm.
 
 ```javascript
@@ -221,7 +236,7 @@ const morgan = require('morgan');
 app.use(cors());                       // Enable CORS
 app.use(helmet());                     // Security headers
 app.use(morgan('dev'));                // Logging
-```
+```bash
 
 ## Routing
 
@@ -247,7 +262,7 @@ app.put('/users/:id', (req, res) => {
 app.delete('/users/:id', (req, res) => {
     res.json({ message: `Delete user ${req.params.id}` });
 });
-```
+```bash
 
 ### Route Parameters
 
@@ -264,7 +279,7 @@ app.get('/users/:userId/posts/:postId', (req, res) => {
         postId: req.params.postId
     });
 });
-```
+```bash
 
 ### Query Strings
 
@@ -276,7 +291,7 @@ app.get('/search', (req, res) => {
         page: req.query.page     // '2'
     });
 });
-```
+```bash
 
 ### Router Module
 
@@ -298,7 +313,7 @@ module.exports = router;
 // app.js
 const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
-```
+```bash
 
 ## Response Methods
 
@@ -317,36 +332,42 @@ app.use('/users', usersRouter);
 ## Popular Middleware
 
 ### 1. **Body Parser** (built-in since Express 4.16)
+
 ```javascript
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-```
+```bash
 
 ### 2. **CORS** (Cross-Origin Resource Sharing)
+
 ```javascript
 const cors = require('cors');
 app.use(cors());
-```
+```bash
 
 ### 3. **Helmet** (Security)
+
 ```javascript
 const helmet = require('helmet');
 app.use(helmet());
-```
+```bash
 
 ### 4. **Morgan** (Logging)
+
 ```javascript
 const morgan = require('morgan');
 app.use(morgan('dev'));
-```
+```bash
 
 ### 5. **Cookie Parser**
+
 ```javascript
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
-```
+```bash
 
 ### 6. **Express Session**
+
 ```javascript
 const session = require('express-session');
 app.use(session({
@@ -354,7 +375,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-```
+```bash
 
 ## RESTful API Example
 
@@ -410,7 +431,7 @@ app.delete('/api/users/:id', (req, res) => {
 });
 
 app.listen(3000, () => console.log('Server running on port 3000'));
-```
+```bash
 
 ## Advantages
 
@@ -443,7 +464,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ## Project Structure (Best Practice)
 
-```
+```bash
 myapp/
 ├── node_modules/
 ├── public/
@@ -470,7 +491,7 @@ myapp/
 ├── .gitignore
 ├── package.json
 └── server.js
-```
+```bash
 
 ## Best Practices
 

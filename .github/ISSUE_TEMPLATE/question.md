@@ -16,8 +16,8 @@ assignees: ''
 
 <!-- Which language or topic is this related to? -->
 
-- **Language**: 
-- **File/Section** (if applicable): 
+- **Language**:
+- **File/Section** (if applicable):
 - **Your Experience Level**: [ ] Beginner [ ] Intermediate [ ] Advanced
 
 ## 🔍 What Have You Tried?
@@ -40,6 +40,7 @@ assignees: ''
 ---
 
 **Note**: For general programming questions not specific to this repository, you might also want to check:
+
 - [Stack Overflow](https://stackoverflow.com/)
 - Language-specific forums or communities
 - [Resources.md](../../RESOURCES.md) for learning materials

@@ -13,17 +13,19 @@
 ## MX Tools
 
 ### Access MX Tools
-```
+
+```bash
 Menu → System → MX Tools
-```
+```bash
 
 ### Common Tools
-```
+
+```bash
 - MX Package Installer (software)
 - MX Snapshot (backup)
 - MX Boot Repair (fix GRUB)
 - MX Tweak (customize)
-```
+```bash
 
 ---
 
@@ -37,19 +39,19 @@ sudo apt update && sudo apt upgrade
 sudo apt install <package>
 
 # Or use MX Package Installer (GUI)
-```
+```bash
 
 ---
 
 ## Create System Snapshot
 
-```
+```bash
 MX Tools → MX Snapshot
 1. Choose type (full/home)
 2. Enter description
 3. Click "Create Snapshot"
 4. Wait for completion
-```
+```bash
 
 ---
 

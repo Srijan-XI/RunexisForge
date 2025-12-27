@@ -3,6 +3,7 @@
 ## Installation
 
 ### Linux
+
 ```bash
 # Fedora/RHEL/CentOS
 sudo dnf install podman
@@ -10,18 +11,20 @@ sudo dnf install podman
 # Ubuntu/Debian
 sudo apt-get update
 sudo apt-get install podman
-```
+```bash
 
 ### macOS
+
 ```bash
 brew install podman
 
 # Initialize VM (Podman uses a Linux VM on macOS)
 podman machine init
 podman machine start
-```
+```bash
 
 ### Windows
+
 ```powershell
 # Install via winget
 winget install RedHat.Podman
@@ -29,7 +32,7 @@ winget install RedHat.Podman
 # Initialize WSL2 machine
 podman machine init
 podman machine start
-```
+```bash
 
 ---
 
@@ -50,7 +53,7 @@ podman stop web
 
 # Remove a container
 podman rm web
-```
+```bash
 
 ---
 
@@ -61,9 +64,10 @@ Podman runs rootless by default (no sudo required):
 ```bash
 podman run -d -p 8080:80 nginx
 # Container runs as your user, not root
-```
+```bash
 
 ### Benefits
+
 - No privilege escalation risks
 - Better security isolation
 - Works in environments where root access is restricted
@@ -86,7 +90,7 @@ podman pod ps
 # Stop/start entire pod
 podman pod stop mypod
 podman pod start mypod
-```
+```bash
 
 Pods share network namespace (containers can talk via localhost).
 
@@ -104,7 +108,7 @@ podman generate systemd --new --name myapp > ~/.config/systemd/user/myapp.servic
 # Enable and start as a systemd service
 systemctl --user enable myapp
 systemctl --user start myapp
-```
+```bash
 
 ---
 
@@ -117,13 +121,14 @@ pip install podman-compose
 # Use like docker-compose
 podman-compose up -d
 podman-compose down
-```
+```bash
 
 ---
 
 ## Migration from Docker
 
 1. Most Docker commands work as-is:
+
    ```bash
    alias docker=podman
    ```
@@ -138,5 +143,6 @@ podman-compose down
 ---
 
 ## References
-- Docs: https://docs.podman.io/
-- Tutorials: https://github.com/containers/podman/tree/main/docs/tutorials
+
+- Docs: <https://docs.podman.io/>
+- Tutorials: <https://github.com/containers/podman/tree/main/docs/tutorials>

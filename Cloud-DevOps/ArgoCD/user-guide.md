@@ -13,15 +13,15 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 # Expose the UI (for local testing)
 kubectl port-forward svc/argocd-server -n argocd 8080:443
-```
+```bash
 
-Access UI: https://localhost:8080
+Access UI: <https://localhost:8080>
 
 ### Get initial admin password
 
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
-```
+```bash
 
 Login: `admin` / `<password from above>`
 
@@ -30,36 +30,40 @@ Login: `admin` / `<password from above>`
 ## Install ArgoCD CLI
 
 ### Linux/macOS
+
 ```bash
 curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
-```
+```bash
 
 ### Windows
+
 ```powershell
 # Download from https://github.com/argoproj/argo-cd/releases/latest
 # Add to PATH
-```
+```bash
 
 Login via CLI:
+
 ```bash
 argocd login localhost:8080
 argocd account update-password
-```
+```bash
 
 ---
 
 ## Create an application
 
 ### Via UI
+
 1. Applications → New App
 2. Fill in:
    - **App Name**: myapp
    - **Project**: default
    - **Sync Policy**: Manual or Automatic
-   - **Repository URL**: https://github.com/yourorg/yourapp
+   - **Repository URL**: <https://github.com/yourorg/yourapp>
    - **Path**: k8s/ (folder with manifests)
-   - **Cluster URL**: https://kubernetes.default.svc
+   - **Cluster URL**: <https://kubernetes.default.svc>
    - **Namespace**: default
 
 ### Via CLI
@@ -70,7 +74,7 @@ argocd app create myapp \
   --path k8s \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace default
-```
+```bash
 
 ### Via YAML (declarative)
 
@@ -93,12 +97,13 @@ spec:
     automated:
       prune: true
       selfHeal: true
-```
+```bash
 
 Apply:
+
 ```bash
 kubectl apply -f application.yaml
-```
+```bash
 
 ---
 
@@ -113,7 +118,7 @@ argocd app set myapp --sync-policy automated
 
 # Watch sync status
 argocd app wait myapp
-```
+```bash
 
 ---
 
@@ -125,7 +130,7 @@ argocd app history myapp
 
 # Rollback to a specific revision
 argocd app rollback myapp 1
-```
+```bash
 
 ---
 
@@ -141,7 +146,7 @@ argocd cluster list
 # Deploy to specific cluster
 argocd app create myapp \
   --dest-server https://my-other-cluster-api
-```
+```bash
 
 ---
 
@@ -153,6 +158,7 @@ argocd app create myapp \
 4. Monitor health in ArgoCD UI
 
 **Benefits:**
+
 - Audit trail (Git history)
 - Easy rollback (revert commit)
 - Declarative deployments
@@ -160,6 +166,7 @@ argocd app create myapp \
 ---
 
 ## Best practices
+
 - Use auto-sync + self-heal for production
 - Store Application manifests in Git (App of Apps pattern)
 - Restrict access with RBAC
@@ -168,5 +175,6 @@ argocd app create myapp \
 ---
 
 ## References
-- Docs: https://argo-cd.readthedocs.io/
-- Getting started: https://argo-cd.readthedocs.io/en/stable/getting_started/
+
+- Docs: <https://argo-cd.readthedocs.io/>
+- Getting started: <https://argo-cd.readthedocs.io/en/stable/getting_started/>

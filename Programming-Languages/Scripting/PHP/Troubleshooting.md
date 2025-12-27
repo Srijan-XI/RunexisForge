@@ -10,8 +10,8 @@
 
 # 📚 Additional Resources
 
-PHP Manual: https://www.php.net/manual/en/
+PHP Manual: <https://www.php.net/manual/en/>
 
-Composer: https://getcomposer.org/
+Composer: <https://getcomposer.org/>
 
-PHP Coding Standards: https://www.php-fig.org/psr/
+PHP Coding Standards: <https://www.php-fig.org/psr/>

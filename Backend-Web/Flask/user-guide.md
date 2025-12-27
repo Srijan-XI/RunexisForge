@@ -13,11 +13,12 @@ pip install "Flask>=3.0"
 
 # Verify
 python -c "import flask; print(flask.__version__)"
-```
+```bash
 
 ## Your First App
 
 `app.py`:
+
 ```python
 from flask import Flask
 
@@ -25,17 +26,18 @@ app = Flask(__name__)
 
 @app.get("/")
 def index():
-	return {"status": "ok"}
+ return {"status": "ok"}
 
 if __name__ == "__main__":
-	app.run(debug=True)
-```
+ app.run(debug=True)
+```bash
 
 Run:
+
 ```pwsh
 python app.py
 # http://127.0.0.1:5000/
-```
+```bash
 
 ## Routing Basics
 
@@ -44,17 +46,17 @@ from flask import request, redirect, url_for
 
 @app.get("/hello/<name>")
 def hello(name):
-	return f"Hello, {name}!"
+ return f"Hello, {name}!"
 
 @app.post("/submit")
 def submit():
-	data = request.json or {}
-	return {"received": data}, 201
+ data = request.json or {}
+ return {"received": data}, 201
 
 @app.get("/go-home")
 def go_home():
-	return redirect(url_for("index"))
-```
+ return redirect(url_for("index"))
+```bash
 
 ## Templates
 
@@ -63,14 +65,15 @@ from flask import render_template
 
 @app.get("/home")
 def home():
-	return render_template("home.html", title="Flask")
-```
+ return render_template("home.html", title="Flask")
+```bash
 
 `templates/home.html`:
+
 ```html
 <!doctype html>
 <h1>{{ title }}</h1>
-```
+```bash
 
 Static files live in `static/` and are served at `/static/...`.
 
@@ -78,7 +81,7 @@ Static files live in `static/` and are served at `/static/...`.
 
 ```pwsh
 pip install Flask-WTF WTForms
-```
+```bash
 
 ```python
 from flask_wtf import FlaskForm
@@ -88,95 +91,100 @@ from wtforms.validators import DataRequired
 app.config["SECRET_KEY"] = "change-this"  # use env var in prod
 
 class TodoForm(FlaskForm):
-	title = StringField("Title", validators=[DataRequired()])
-	submit = SubmitField("Save")
-```
+ title = StringField("Title", validators=[DataRequired()])
+ submit = SubmitField("Save")
+```bash
 
 ## Database with SQLAlchemy
 
 ```pwsh
 pip install Flask-SQLAlchemy Flask-Migrate
-```
+```bash
 
 ```python
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 app.config.update(
-	SQLALCHEMY_DATABASE_URI="sqlite:///app.db",
-	SQLALCHEMY_TRACK_MODIFICATIONS=False,
+ SQLALCHEMY_DATABASE_URI="sqlite:///app.db",
+ SQLALCHEMY_TRACK_MODIFICATIONS=False,
 )
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 class Todo(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
-	title = db.Column(db.String(200), nullable=False)
-	done = db.Column(db.Boolean, default=False)
+ id = db.Column(db.Integer, primary_key=True)
+ title = db.Column(db.String(200), nullable=False)
+ done = db.Column(db.Boolean, default=False)
 
 @app.get("/todos")
 def list_todos():
-	items = Todo.query.all()
-	return {"todos": [{"id": t.id, "title": t.title, "done": t.done} for t in items]}
-```
+ items = Todo.query.all()
+ return {"todos": [{"id": t.id, "title": t.title, "done": t.done} for t in items]}
+```bash
 
 Initialize DB:
+
 ```pwsh
 flask db init
 flask db migrate -m "init"
 flask db upgrade
-```
+```bash
 
 ## Blueprints & App Factory
 
 `app/__init__.py`:
+
 ```python
 from flask import Flask
 
 def create_app():
-	app = Flask(__name__)
-	from .routes import bp
-	app.register_blueprint(bp)
-	return app
-```
+ app = Flask(__name__)
+ from .routes import bp
+ app.register_blueprint(bp)
+ return app
+```bash
 
 `app/routes.py`:
+
 ```python
 from flask import Blueprint
 bp = Blueprint("main", __name__)
 
 @bp.get("/ping")
 def ping():
-	return {"ping": "pong"}
-```
+ return {"ping": "pong"}
+```bash
 
 `wsgi.py`:
+
 ```python
 from app import create_app
 app = create_app()
-```
+```bash
 
 Run with:
+
 ```pwsh
 flask --app wsgi:app run --debug
-```
+```bash
 
 ## Configuration Management
 
 ```python
 class Config:
-	DEBUG = False
-	SECRET_KEY = "change-me"
+ DEBUG = False
+ SECRET_KEY = "change-me"
 
 class DevConfig(Config):
-	DEBUG = True
+ DEBUG = True
 
 class ProdConfig(Config):
-	pass
+ pass
 
 app.config.from_object(DevConfig)
-```
+```bash
 
 Use env vars for secrets (e.g., `os.environ["SECRET_KEY"]`).
 
@@ -184,29 +192,31 @@ Use env vars for secrets (e.g., `os.environ["SECRET_KEY"]`).
 
 ```pwsh
 pip install pytest pytest-cov
-```
+```bash
 
 `tests/test_app.py`:
+
 ```python
 import pytest
 from app import create_app
 
 @pytest.fixture()
 def client():
-	app = create_app()
-	app.config.update(TESTING=True)
-	return app.test_client()
+ app = create_app()
+ app.config.update(TESTING=True)
+ return app.test_client()
 
 def test_ping(client):
-	res = client.get("/ping")
-	assert res.status_code == 200
-	assert res.get_json()["ping"] == "pong"
-```
+ res = client.get("/ping")
+ assert res.status_code == 200
+ assert res.get_json()["ping"] == "pong"
+```bash
 
 Run:
+
 ```pwsh
 pytest -q
-```
+```bash
 
 ## Building a JSON API
 
@@ -215,12 +225,12 @@ from flask import request, jsonify
 
 @app.post("/todos")
 def create_todo():
-	data = request.get_json(force=True)
-	t = Todo(title=data.get("title", ""))
-	db.session.add(t)
-	db.session.commit()
-	return jsonify(id=t.id, title=t.title, done=t.done), 201
-```
+ data = request.get_json(force=True)
+ t = Todo(title=data.get("title", ""))
+ db.session.add(t)
+ db.session.commit()
+ return jsonify(id=t.id, title=t.title, done=t.done), 201
+```bash
 
 ## Deployment (Overview)
 
@@ -229,10 +239,11 @@ def create_todo():
 - Configure logging, error handling, and timeouts.
 
 Example (Linux):
+
 ```bash
 pip install gunicorn
 gunicorn wsgi:app --bind 0.0.0.0:8000 --workers 4
-```
+```bash
 
 ## Best Practices
 

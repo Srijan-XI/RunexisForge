@@ -20,6 +20,7 @@
 ## Key Features
 
 ### 1. **Simple Data Types**
+
 ```json
 {
   "string": "Hello World",
@@ -29,9 +30,10 @@
   "array": [1, 2, 3],
   "object": {"nested": "value"}
 }
-```
+```bash
 
 ### 2. **Nested Structures**
+
 ```json
 {
   "user": {
@@ -49,9 +51,10 @@
     ]
   }
 }
-```
+```bash
 
 ### 3. **Language Independent**
+
 - Works with Python, Java, C#, JavaScript, PHP, Ruby, and more
 - Standard parsers available in all major languages
 
@@ -60,6 +63,7 @@
 ## Common Use Cases
 
 ### API Communication
+
 ```json
 {
   "request": {
@@ -74,9 +78,10 @@
     }
   }
 }
-```
+```bash
 
 ### Configuration Files
+
 ```json
 {
   "app": {
@@ -88,9 +93,10 @@
     }
   }
 }
-```
+```bash
 
 ### Data Storage
+
 ```json
 {
   "products": [
@@ -108,7 +114,7 @@
     }
   ]
 }
-```
+```bash
 
 ---
 
@@ -140,12 +146,14 @@
 ## Data Types in JSON
 
 ### Primitive Types
+
 - **String**: `"Hello World"`
 - **Number**: `42`, `3.14`, `-10`, `1.5e10`
 - **Boolean**: `true`, `false`
 - **Null**: `null`
 
 ### Complex Types
+
 - **Object**: `{"key": "value"}`
 - **Array**: `[1, 2, 3, "four"]`
 
@@ -154,16 +162,19 @@
 ## Popular JSON Tools
 
 ### Validation & Formatting
+
 - **JSONLint**: Online JSON validator
 - **Prettier**: Code formatter with JSON support
 - **jq**: Command-line JSON processor
 
 ### Editors
+
 - **VS Code**: Excellent JSON support with IntelliSense
 - **Postman**: API testing with JSON
 - **JSON Editor Online**: Web-based editor
 
 ### Libraries by Language
+
 - **JavaScript**: `JSON.parse()`, `JSON.stringify()`
 - **Python**: `json` module
 - **Java**: Jackson, Gson
@@ -186,6 +197,7 @@
 ## Security Considerations
 
 ⚠️ **Important Security Notes**:
+
 - Never use `eval()` to parse JSON (use proper parsers)
 - Validate JSON schema before processing
 - Sanitize user-generated JSON data
@@ -215,7 +227,7 @@ Define structure and validation rules:
   },
   "required": ["name", "age"]
 }
-```
+```bash
 
 ---
 
@@ -234,14 +246,17 @@ Define structure and validation rules:
 ## Learning Resources
 
 ### Official Documentation
+
 - [JSON.org](https://www.json.org/) - Official JSON specification
 - [ECMA-404](https://www.ecma-international.org/publications/standards/Ecma-404.htm) - JSON Data Interchange Format
 
 ### Tutorials & Guides
+
 - [MDN Web Docs - Working with JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 - [W3Schools JSON Tutorial](https://www.w3schools.com/js/js_json_intro.asp)
 
 ### Tools
+
 - [JSONLint](https://jsonlint.com/) - JSON Validator
 - [JSON Schema](https://json-schema.org/) - Schema specification
 

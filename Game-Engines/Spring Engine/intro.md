@@ -21,6 +21,7 @@
 ## Key Features
 
 ### Engine Features
+
 - **Advanced Physics**: Projectile physics, terrain deformation
 - **Large Scale Battles**: Supports thousands of units
 - **Terrain System**: Heightmap-based with deformable terrain
@@ -30,6 +31,7 @@
 - **AI Support**: Lua and C++ AI interfaces
 
 ### Multiplayer
+
 - **Built-in Lobby**: Spring Lobby for matchmaking
 - **Network Play**: UDP-based networking
 - **Replays**: Record and watch replays
@@ -50,6 +52,7 @@
 ## Programming/Scripting
 
 **Lua Scripting**:
+
 ```lua
 -- Unit script example
 local base = piece "base"
@@ -71,13 +74,14 @@ end
 function script.FireWeapon(weaponNum)
     EmitSfx(barrel, 1024)
 end
-```
+```java
 
 ---
 
 ## System Requirements
 
 ### Minimum
+
 - **OS**: Windows 7+, Linux, macOS
 - **CPU**: Dual-core 2.0 GHz
 - **RAM**: 2 GB
@@ -85,6 +89,7 @@ end
 - **Storage**: 500 MB
 
 ### Recommended
+
 - **OS**: Windows 10+, Modern Linux
 - **CPU**: Quad-core 3.0+ GHz
 - **RAM**: 4+ GB
@@ -114,11 +119,13 @@ end
 ## Learning Resources
 
 ### Official
+
 - [Spring RTS Website](https://springrts.com/)
 - [Spring Wiki](https://springrts.com/wiki/)
 - [GitHub Repository](https://github.com/spring/spring)
 
 ### Community
+
 - [Spring RTS Forums](https://springrts.com/phpbb/)
 - [Discord Community](https://discord.gg/7aAQTGp)
 

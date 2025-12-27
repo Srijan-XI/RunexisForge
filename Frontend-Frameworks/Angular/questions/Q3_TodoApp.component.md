@@ -1,6 +1,8 @@
 ## Q3_TodoApp.component.ts
+
 Create a Todo app with add and remove functionality
-```
+
+```python
 import { Component } from '@angular/core';
 
 interface Todo {
@@ -72,4 +74,4 @@ export class TodoAppComponent {
     this.todos = this.todos.filter(todo => todo.id !== id);
   }
 }
-```
+```python

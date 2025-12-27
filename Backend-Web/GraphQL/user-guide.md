@@ -3,22 +3,25 @@
 ## Installation
 
 ### Node.js (Apollo Server)
+
 ```bash
 npm install @apollo/server graphql
-```
+```bash
 
 ### Python (Strawberry or Graphene)
+
 ```bash
 pip install strawberry-graphql
 # or
 pip install graphene
-```
+```bash
 
 ---
 
 ## Define a schema
 
 **Node.js (Apollo Server):**
+
 ```javascript
 const { ApolloServer } = require('@apollo/server');
 const { startStandaloneServer } = require('@apollo/server/standalone');
@@ -63,13 +66,14 @@ const server = new ApolloServer({ typeDefs, resolvers });
 startStandaloneServer(server, { listen: { port: 4000 } }).then(({ url }) => {
   console.log(`GraphQL server ready at ${url}`);
 });
-```
+```bash
 
 ---
 
 ## Query examples
 
 **Fetch all books:**
+
 ```graphql
 query {
   books {
@@ -77,9 +81,10 @@ query {
     author
   }
 }
-```
+```bash
 
 **Fetch a specific book:**
+
 ```graphql
 query {
   book(title: "1984") {
@@ -87,9 +92,10 @@ query {
     author
   }
 }
-```
+```bash
 
 **Add a book (mutation):**
+
 ```graphql
 mutation {
   addBook(title: "Fahrenheit 451", author: "Ray Bradbury") {
@@ -97,13 +103,14 @@ mutation {
     author
   }
 }
-```
+```bash
 
 ---
 
 ## Nested queries (relations)
 
 **Schema:**
+
 ```graphql
 type Author {
   id: ID!
@@ -121,9 +128,10 @@ type Query {
   authors: [Author]
   author(id: ID!): Author
 }
-```
+```bash
 
 **Resolvers:**
+
 ```javascript
 const resolvers = {
   Query: {
@@ -137,9 +145,10 @@ const resolvers = {
     author: (parent) => authorsData.find(a => a.id === parent.authorId),
   },
 };
-```
+```bash
 
 **Query:**
+
 ```graphql
 query {
   authors {
@@ -149,7 +158,7 @@ query {
     }
   }
 }
-```
+```bash
 
 ---
 
@@ -164,14 +173,15 @@ query GetBook($title: String!) {
     author
   }
 }
-```
+```bash
 
 Variables (sent separately):
+
 ```json
 {
   "title": "1984"
 }
-```
+```bash
 
 ---
 
@@ -188,20 +198,22 @@ query {
     ...BookFields
   }
 }
-```
+```bash
 
 ---
 
 ## Subscriptions (real-time)
 
 **Schema:**
+
 ```graphql
 type Subscription {
   bookAdded: Book
 }
-```
+```bash
 
 **Resolver (with PubSub):**
+
 ```javascript
 const { PubSub } = require('graphql-subscriptions');
 const pubsub = new PubSub();
@@ -221,9 +233,10 @@ const resolvers = {
     },
   },
 };
-```
+```bash
 
 **Client subscription:**
+
 ```graphql
 subscription {
   bookAdded {
@@ -231,13 +244,14 @@ subscription {
     author
   }
 }
-```
+```bash
 
 ---
 
 ## Error handling
 
 **Throw errors in resolvers:**
+
 ```javascript
 const { GraphQLError } = require('graphql');
 
@@ -254,9 +268,10 @@ const resolvers = {
     },
   },
 };
-```
+```bash
 
 **Client receives:**
+
 ```json
 {
   "errors": [
@@ -266,13 +281,14 @@ const resolvers = {
     }
   ]
 }
-```
+```bash
 
 ---
 
 ## Authentication
 
 **Add context to resolvers:**
+
 ```javascript
 const server = new ApolloServer({
   typeDefs,
@@ -286,9 +302,10 @@ startStandaloneServer(server, {
     return { user };
   },
 });
-```
+```bash
 
 **Check auth in resolvers:**
+
 ```javascript
 const resolvers = {
   Query: {
@@ -300,7 +317,7 @@ const resolvers = {
     },
   },
 };
-```
+```bash
 
 ---
 
@@ -308,9 +325,10 @@ const resolvers = {
 
 ```bash
 npm install dataloader
-```
+```bash
 
 **Create a DataLoader:**
+
 ```javascript
 const DataLoader = require('dataloader');
 
@@ -326,11 +344,12 @@ const resolvers = {
     },
   },
 };
-```
+```bash
 
 ---
 
 ## Best practices
+
 - Use DataLoader to batch/cache database queries
 - Implement pagination (cursor-based or offset)
 - Add rate limiting and query depth limits
@@ -340,6 +359,7 @@ const resolvers = {
 ---
 
 ## References
-- Docs: https://graphql.org/learn/
-- Apollo Server: https://www.apollographql.com/docs/apollo-server/
-- GraphQL Playground: https://github.com/graphql/graphql-playground
+
+- Docs: <https://graphql.org/learn/>
+- Apollo Server: <https://www.apollographql.com/docs/apollo-server/>
+- GraphQL Playground: <https://github.com/graphql/graphql-playground>

@@ -5,9 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.1] - 2024-12-24
+## [2.1.2] - 2025-12-28
+
+### Added
+
+- GitHub Pages deployment workflow using MkDocs (build and deploy via Actions).
+- Stub docs pages in `docs/` to include top-level files and reduce link warnings:
+  - `FAQ.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTORS.md`, `RESOURCES.md`, `CHANGELOG.md`.
 
 ### Fixed
+
+- MkDocs build workflow indentation in [.github/workflows/mkdocs-build.yml](.github/workflows/mkdocs-build.yml).
+- Removed `--strict` from Pages deploy workflow to prevent aborting on non-critical warnings in [.github/workflows/pages.yml](.github/workflows/pages.yml).
+- Updated internal links in [DOCUMENTATION.md](DOCUMENTATION.md) to match actual docs filenames and homepage (`index.md`).
+- Resolved `docs/README.md` homepage conflict by relying on `docs/index.md`.
+
+### Changed
+
+- Recommended Pages source set to “GitHub Actions” for MkDocs-based deployment.
+- Aligned branch protection guidance to require docs quality checks and Pages build/deploy.
+
+## [2.1.1] - 2025-12-24
+
+### Fixed
+
 - **Documentation Accuracy**: Corrected all documentation to reflect actual repository structure
   - README.md badges now show accurate counts: 20+ frameworks, 11 databases, 25+ Linux distros, 9 game engines
   - Fixed Game Engines table to include all 9 engines (Unity, Unreal, Godot, CryEngine, Panda3D, Cocos2d, GameMaker Studio, Spring Engine, Rage)
@@ -24,6 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Linux/{family}/{distro}/ structure documented
 
 ### Changed
+
 - **README.md Enhancements**:
   - Linux distributions expanded from 10+ to 25+ (actual count)
   - Game engines section now comprehensive with all 9 engines
@@ -38,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added Development-Tools section (5 tools: CSV, JSON, TOML, XML, YAML)
 
 ### Statistics
+
 - **Verified Counts**:
   - 21 programming languages (categorized into 7 groups)
   - 20+ frontend and backend frameworks
@@ -47,9 +70,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 115 intro.md files across repository
   - 110 user-guide.md files across repository
 
-## [2.1.0] - 2024-12-24
+## [2.1.0] - 2025-12-24
 
 ### Added
+
 - **Programming Language Categorization**: Comprehensive categorization system
   - Created `Programming-Languages/README.md` with categorized navigation
   - Created `Programming-Languages/CATEGORIZATION.md` with detailed analysis
@@ -76,12 +100,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Complete installation and usage guides
 
 ### Changed
+
 - Updated n2plan.md to 100% completion (60/60 items)
 - Enhanced Programming-Languages directory with comprehensive navigation
 - Added Swift to language categorization table
 - Reorganized documentation structure for better discoverability
 
 ### Statistics
+
 - **32 new documentation files** created in this update
 - **21 programming languages** now categorized
 - **7 categories** for language classification
@@ -91,6 +117,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.0] - 2025-12-24
 
 ### Added
+
 - **Major reorganization**: Categorized all topics into 9 main folders for better navigation
 - **Programming Languages**: C#, MATLAB, Dart with Flutter, Assembly, Scala
 - **Frontend Frameworks**: NuxtJs, Remix, Astro, SolidJs
@@ -103,6 +130,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **DevOps Tools**: GitLab CI/CD, GitHub Actions, Bitbucket Pipelines
 
 ### Changed
+
 - Reorganized repository into categorized folders:
   - `01-Programming-Languages/`
   - `02-Frontend-Frameworks/`
@@ -119,22 +147,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.5.3] - 2025-12-22
 
 ### Added
+
 - New starter topics: **WSL**, **YAML**, **TOML**, **Vite**, **Vitest**, **Streamlit**, **TensorFlow**, **LangChain**, **Tauri**, **Ruby**, **Laravel**, **Cuba**
-
-
 
 ## [1.5.2] - 2025-12-22
 
 ### Added
+
 - **Kotlin** documentation and starter content: intro, user guide, examples, and practice questions
 - **Swift** documentation and starter content: intro, user guide, examples, and practice questions
 
 ### Changed
+
 - Updated README.md and DOCUMENTATION.md to include Kotlin and Swift
 
 ## [1.5.1] - 2025-12-22
 
 ### Added
+
 - **Game Development** documentation and starter content:
   - **Unity**: intro, user guide, example C# script, and a practice script
   - **Unreal Engine**: intro, user guide, example snippet, and a practice task
@@ -147,6 +177,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.5.0] - 2025-12-20
 
 ### Added
+
 - **Data Engineering** documentation and practice content:
   - **Apache Spark**: intro, user guide, examples, and practice questions
   - **Apache Kafka**: intro, user guide, examples, and practice questions
@@ -157,6 +188,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.0] - 2025-12-19
 
 ### Added
+
 - **Linux** comprehensive operating system guide covering:
   - Linux kernel overview and distro families (Arch, Debian, RedHat, Gentoo, Slackware, SUSE)
   - Installation guides (ISO download, USB creation, VM setup, WSL)
@@ -173,12 +205,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Linux to Getting Started navigation in README
 
 ### Changed
+
 - Enhanced project scope to include operating systems documentation
 - Updated language/OS coverage in README badges and tables
 
 ## [1.3.0] - 2025-11-14
 
 ### Added
+
 - **Bash** shell scripting guide covering:
   - Introduction to Bash and shell scripting
   - Installation and setup across platforms
@@ -265,6 +299,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Deployment and best practices
 
 ### Changed
+
 - Enhanced README.md with new tools and frameworks sections
 - Updated badge counts (2 frameworks, 5 tools added)
 - Reorganized tool categories (DevOps, Development Tools, Frameworks)
@@ -273,6 +308,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.2.0] - 2025-11-13
 
 ### Added
+
 - **Docker** comprehensive introduction guide covering:
   - Core concepts (Containers, Images, Dockerfile, Docker Engine)
   - Architecture and Docker vs VMs comparison
@@ -297,12 +333,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated practice questions count from 91+ to 116+
 
 ### Changed
+
 - Enhanced README.md with JavaScript framework guides
 - Updated ROADMAP with JavaScript completion status
 
 ## [1.1.0] - 2025-11-13
 
 ### Added
+
 - **Go (Golang)** complete installation guide with introduction, advantages, disadvantages
 - **Go (Golang)** 10 practice questions (beginner to advanced)
 - **TypeScript** comprehensive installation and usage guide
@@ -319,6 +357,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated ROADMAP to reflect completed goals
 
 ### Changed
+
 - Enhanced README.md with Go, TypeScript, and SQL coverage
 - Updated language count from 6 to 9
 - Updated practice questions count from 61+ to 91+
@@ -327,6 +366,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-11-13 (Initial Release)
 
 ### Added
+
 - Initial repository structure
 - Python installation guide and 21 practice questions
 - Java installation guide and 10 practice questions
@@ -348,6 +388,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CONTRIBUTORS.md to acknowledge contributors
 
 ### Documentation
+
 - Installation guides for all supported languages
 - Platform-specific instructions (Windows, macOS, Linux)
 - Usage examples and starter scripts

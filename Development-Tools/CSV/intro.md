@@ -20,53 +20,59 @@
 ## Basic CSV Structure
 
 ### Simple CSV Example
+
 ```csv
 Name,Age,City,Country
 John Doe,30,New York,USA
 Jane Smith,25,London,UK
 Bob Johnson,35,Toronto,Canada
 Alice Williams,28,Sydney,Australia
-```
+```bash
 
 ### With Headers
+
 ```csv
 product_id,product_name,price,quantity,in_stock
 101,Laptop,999.99,50,true
 102,Mouse,29.99,200,true
 103,Keyboard,79.99,150,true
 104,Monitor,299.99,75,false
-```
+```bash
 
 ---
 
 ## Key Features
 
 ### 1. **Column Headers** (First Row)
+
 ```csv
 FirstName,LastName,Email,PhoneNumber
 John,Doe,john@example.com,555-0100
 Jane,Smith,jane@example.com,555-0101
-```
+```bash
 
 ### 2. **Quoted Fields** (Handle Commas)
+
 ```csv
 Name,Address,City
 "Doe, John","123 Main St, Apt 4B",New York
 "Smith, Jane","456 Oak Ave",London
-```
+```bash
 
 ### 3. **Escaped Quotes**
+
 ```csv
 Title,Description
 "The ""Great"" Gatsby","A novel by F. Scott Fitzgerald"
 "Alice's Adventures","A book with a quote: ""We're all mad here"""
-```
+```bash
 
 ### 4. **Different Delimiters**
+
 ```csv
 // Tab-separated (TSV)
-Name	Age	City
-John	30	New York
+Name Age City
+John 30 New York
 
 // Semicolon-separated
 Name;Age;City
@@ -75,7 +81,7 @@ John;30;New York
 // Pipe-separated
 Name|Age|City
 John|30|New York
-```
+```bash
 
 ---
 
@@ -94,37 +100,41 @@ John|30|New York
 ## Common Use Cases
 
 ### 1. **Data Export/Import**
+
 ```csv
 // Excel to Database
 order_id,customer_name,order_date,total_amount,status
 1001,John Doe,2024-01-15,250.00,completed
 1002,Jane Smith,2024-01-16,180.50,pending
 1003,Bob Johnson,2024-01-16,420.75,completed
-```
+```bash
 
 ### 2. **Configuration Files**
+
 ```csv
 server_name,ip_address,port,environment
 web-server-1,192.168.1.10,80,production
 web-server-2,192.168.1.11,80,production
 db-server-1,192.168.1.20,3306,production
-```
+```bash
 
 ### 3. **Log Files**
+
 ```csv
 timestamp,level,message,user
 2024-12-24T10:30:00,INFO,User login successful,johndoe
 2024-12-24T10:31:15,WARNING,Failed login attempt,unknown
 2024-12-24T10:32:00,ERROR,Database connection failed,system
-```
+```bash
 
 ### 4. **Machine Learning Datasets**
+
 ```csv
 feature1,feature2,feature3,target
 0.5,1.2,3.4,positive
 0.3,0.9,2.1,negative
 0.8,1.5,4.2,positive
-```
+```bash
 
 ---
 
@@ -147,12 +157,14 @@ feature1,feature2,feature3,target
 ## Popular CSV Tools
 
 ### Spreadsheet Applications
+
 - **Microsoft Excel**: Industry standard
 - **Google Sheets**: Cloud-based
 - **LibreOffice Calc**: Open-source alternative
 - **Apple Numbers**: macOS spreadsheet app
 
 ### Command-Line Tools
+
 - **csvkit**: Python CSV toolkit
 - **xsv**: Fast CSV command-line toolkit (Rust)
 - **awk**: Text processing
@@ -160,6 +172,7 @@ feature1,feature2,feature3,target
 - **miller**: CSV/JSON/TSV processor
 
 ### Programming Libraries
+
 - **Python**: `csv`, `pandas`
 - **JavaScript**: `csv-parser`, `papaparse`
 - **Java**: `OpenCSV`, `Apache Commons CSV`
@@ -167,6 +180,7 @@ feature1,feature2,feature3,target
 - **R**: `read.csv()`, `readr`
 
 ### Online Tools
+
 - **CSV Lint**: Online validator
 - **CSV to JSON Converter**: Format converter
 - **Mr. Data Converter**: Multi-format converter
@@ -176,53 +190,59 @@ feature1,feature2,feature3,target
 ## CSV Variations
 
 ### TSV (Tab-Separated Values)
+
 ```tsv
-Name	Age	City	Country
-John Doe	30	New York	USA
-Jane Smith	25	London	UK
-```
+Name Age City Country
+John Doe 30 New York USA
+Jane Smith 25 London UK
+```bash
 
 ### PSV (Pipe-Separated Values)
+
 ```csv
 Name|Age|City|Country
 John Doe|30|New York|USA
 Jane Smith|25|London|UK
-```
+```bash
 
 ### Fixed-Width Format
-```
+
+```bash
 Name          Age City         Country
 John Doe       30 New York     USA
 Jane Smith     25 London       UK
-```
+```bash
 
 ---
 
 ## Special Cases
 
 ### Empty Fields
+
 ```csv
 Name,Age,City,Country
 John Doe,30,,USA
 Jane Smith,,London,UK
 ,25,Toronto,Canada
-```
+```bash
 
 ### Multiline Fields
+
 ```csv
 Name,Address,City
 "John Doe","123 Main St
 Apt 4B",New York
 "Jane Smith","456 Oak Avenue",London
-```
+```bash
 
 ### Unicode and Special Characters
+
 ```csv
 Name,City,Country,Note
 José García,Madrid,España,café
 李明,北京,中国,你好
 Müller,München,Deutschland,Grüße
-```
+```bash
 
 ---
 
@@ -231,14 +251,16 @@ Müller,München,Deutschland,Grüße
 ⚠️ **CSV Security Issues**:
 
 1. **CSV Injection**: Leading `=`, `+`, `-`, `@` can execute formulas
+
    ```csv
    // Dangerous!
    Name,Formula
    John,=1+1
    Jane,=cmd|'/c calc'!A1
    ```
-   
+
 2. **Sanitize Input**: Escape or remove formula characters
+
    ```csv
    // Safe
    Name,Formula
@@ -256,6 +278,7 @@ Müller,München,Deutschland,Grüße
 ## Best Practices
 
 ### File Creation
+
 1. **✅ Include Headers**: Always use descriptive column names
 2. **✅ Consistent Delimiters**: Stick to commas (or chosen delimiter)
 3. **✅ Quote When Needed**: Quote fields containing delimiters
@@ -265,6 +288,7 @@ Müller,München,Deutschland,Grüße
 7. **✅ Handle Missing Data**: Use empty fields or NULL
 
 ### Data Quality
+
 1. **✅ Validate Data**: Check for expected format
 2. **✅ Trim Whitespace**: Remove leading/trailing spaces
 3. **✅ Consistent Date Format**: Use ISO 8601 (YYYY-MM-DD)
@@ -279,29 +303,33 @@ Müller,München,Deutschland,Grüße
 ### Common Encoding Issues
 
 **UTF-8 (Recommended)**:
+
 ```csv
 Name,City
 José,São Paulo
 李明,北京
-```
+```bash
 
 **UTF-8 with BOM** (Excel compatibility):
-```
+
+```bash
 (BOM: EF BB BF)Name,City
 José,São Paulo
-```
+```bash
 
 **ASCII** (Limited characters):
+
 ```csv
 Name,City
 Jose,Sao Paulo
-```
+```bash
 
 ---
 
 ## CSV Gotchas
 
 ### Problem 1: Leading Zeros
+
 ```csv
 // Excel removes leading zeros
 OrderID,ZipCode
@@ -312,9 +340,10 @@ OrderID,ZipCode
 OrderID,ZipCode
 "001","00501"
 "002","00544"
-```
+```bash
 
 ### Problem 2: Large Numbers
+
 ```csv
 // Excel converts to scientific notation
 ID,PhoneNumber
@@ -323,9 +352,10 @@ ID,PhoneNumber
 // Solution: Quote numbers
 ID,PhoneNumber
 1,"12345678901234"
-```
+```bash
 
 ### Problem 3: Date Format
+
 ```csv
 // Excel auto-converts dates
 Name,Date
@@ -336,7 +366,7 @@ Jane,3/15/2024
 Name,Date
 John,2024-01-15
 Jane,2024-03-15
-```
+```bash
 
 ---
 
@@ -353,7 +383,7 @@ Jane,2024-03-15
 
 ---
 
-## CSV Best Tool for...
+## CSV Best Tool for
 
 | Use Case | Recommended Tool |
 |----------|------------------|
@@ -370,16 +400,19 @@ Jane,2024-03-15
 ## Learning Resources
 
 ### Documentation
+
 - [RFC 4180](https://tools.ietf.org/html/rfc4180) - CSV Format Specification
 - [csvkit Documentation](https://csvkit.readthedocs.io/)
 - [pandas CSV Guide](https://pandas.pydata.org/docs/user_guide/io.html#csv-text-files)
 
 ### Tutorials
+
 - [CSV Guide on Wikipedia](https://en.wikipedia.org/wiki/Comma-separated_values)
 - [Python CSV Tutorial](https://realpython.com/python-csv/)
 - [Excel CSV Best Practices](https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba)
 
 ### Tools
+
 - [csvkit](https://csvkit.readthedocs.io/) - Command-line CSV toolkit
 - [xsv](https://github.com/BurntSushi/xsv) - Fast CSV toolkit
 - [Online CSV Editor](https://www.convertcsv.com/csv-viewer-editor.htm)
@@ -389,6 +422,7 @@ Jane,2024-03-15
 ## Quick Tips
 
 💡 **Pro Tips**:
+
 - Use TSV for data with many commas
 - Always test CSV with target application
 - Keep a data dictionary

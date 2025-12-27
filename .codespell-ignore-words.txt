@@ -9,3 +9,25 @@ OpenSearch
 Promtail
 LogQL
 OpenTelemetry
+
+# Azure terms
+AKS
+
+# Flutter/Dart patterns
+BLoC
+
+# KQL functions
+iif
+
+# Jest testing functions
+afterAll
+
+# Burp Suite plugins
+Autorize
+
+# PostgreSQL index types
+BRIN
+
+# Game engine terms
+LOD
+Dota

@@ -1,6 +1,7 @@
 # Jest User Guide
 
 ## Table of Contents
+
 1. [Installation](#installation)
 2. [Basic Setup](#basic-setup)
 3. [Writing Tests](#writing-tests)
@@ -20,27 +21,31 @@
 ### Node.js Project
 
 #### Using npm
+
 ```bash
 # Initialize package.json if needed
 npm init -y
 
 # Install Jest
 npm install --save-dev jest
-```
+```bash
 
 #### Using yarn
+
 ```bash
 yarn add --dev jest
-```
+```bash
 
 #### Using pnpm
+
 ```bash
 pnpm add -D jest
-```
+```bash
 
 ### Add Test Script
 
 Edit `package.json`:
+
 ```json
 {
   "scripts": {
@@ -49,34 +54,38 @@ Edit `package.json`:
     "test:coverage": "jest --coverage"
   }
 }
-```
+```bash
 
 ### TypeScript Setup
 
 ```bash
 npm install --save-dev @types/jest ts-jest typescript
-```
+```bash
 
 **Create `jest.config.js`:**
+
 ```javascript
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
 };
-```
+```bash
 
 ### React Project
 
 #### Create React App
+
 Jest is included by default!
 
 #### Manual React Setup
+
 ```bash
 npm install --save-dev jest @testing-library/react @testing-library/jest-dom
 npm install --save-dev @babel/preset-react
-```
+```bash
 
 **Create `babel.config.js`:**
+
 ```javascript
 module.exports = {
   presets: [
@@ -84,7 +93,7 @@ module.exports = {
     ['@babel/preset-react', { runtime: 'automatic' }]
   ]
 };
-```
+```bash
 
 ---
 
@@ -92,7 +101,7 @@ module.exports = {
 
 ### File Structure
 
-```
+```bash
 project/
 ├── src/
 │   ├── math.js
@@ -104,11 +113,12 @@ project/
 │       └── integration.test.js
 ├── package.json
 └── jest.config.js
-```
+```bash
 
 ### Naming Conventions
 
 **Test files:**
+
 - `*.test.js`
 - `*.spec.js`
 - `__tests__/*.js`
@@ -116,27 +126,30 @@ project/
 ### Your First Test
 
 **Create `sum.js`:**
+
 ```javascript
 function sum(a, b) {
   return a + b;
 }
 
 module.exports = sum;
-```
+```bash
 
 **Create `sum.test.js`:**
+
 ```javascript
 const sum = require('./sum');
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
 });
-```
+```bash
 
 **Run tests:**
+
 ```bash
 npm test
-```
+```bash
 
 ---
 
@@ -160,7 +173,7 @@ describe('Feature', () => {
   test('scenario 1', () => {});
   test('scenario 2', () => {});
 });
-```
+```bash
 
 ### Setup and Teardown
 
@@ -194,7 +207,7 @@ describe('Database', () => {
     // Test code
   });
 });
-```
+```bash
 
 ### Test Skipping and Isolation
 
@@ -213,7 +226,7 @@ describe.only('only suite', () => {});
 
 // Pending test (todo)
 test.todo('implement this test later');
-```
+```bash
 
 ---
 
@@ -222,15 +235,17 @@ test.todo('implement this test later');
 ### Common Matchers
 
 #### Equality
+
 ```javascript
 test('equality matchers', () => {
   expect(2 + 2).toBe(4);                    // Strict equality (===)
   expect({ name: 'John' }).toEqual({ name: 'John' }); // Deep equality
   expect([1, 2, 3]).toEqual([1, 2, 3]);     // Array equality
 });
-```
+```bash
 
 #### Truthiness
+
 ```javascript
 test('truthiness', () => {
   expect(true).toBeTruthy();
@@ -239,9 +254,10 @@ test('truthiness', () => {
   expect(undefined).toBeUndefined();
   expect('hello').toBeDefined();
 });
-```
+```bash
 
 #### Numbers
+
 ```javascript
 test('numbers', () => {
   expect(4).toBeGreaterThan(3);
@@ -252,18 +268,20 @@ test('numbers', () => {
   // Floating point
   expect(0.1 + 0.2).toBeCloseTo(0.3);
 });
-```
+```bash
 
 #### Strings
+
 ```javascript
 test('strings', () => {
   expect('team').not.toMatch(/I/);
   expect('Christoph').toMatch(/stop/);
   expect('hello world').toContain('world');
 });
-```
+```bash
 
 #### Arrays and Iterables
+
 ```javascript
 test('arrays', () => {
   const shoppingList = ['milk', 'bread', 'eggs'];
@@ -272,9 +290,10 @@ test('arrays', () => {
   expect(shoppingList).toHaveLength(3);
   expect(new Set(shoppingList)).toContain('bread');
 });
-```
+```bash
 
 #### Objects
+
 ```javascript
 test('objects', () => {
   const user = {
@@ -291,9 +310,10 @@ test('objects', () => {
     age: 30
   });
 });
-```
+```bash
 
 #### Exceptions
+
 ```javascript
 test('exceptions', () => {
   function compileCode() {
@@ -305,21 +325,23 @@ test('exceptions', () => {
   expect(compileCode).toThrow('Syntax error');
   expect(compileCode).toThrow(/syntax/i);
 });
-```
+```bash
 
 ### Negation
+
 ```javascript
 test('negation', () => {
   expect(1 + 1).not.toBe(3);
   expect('hello').not.toMatch(/goodbye/);
 });
-```
+```bash
 
 ---
 
 ## Testing Async Code
 
 ### Callbacks
+
 ```javascript
 test('callback', (done) => {
   function fetchData(callback) {
@@ -331,9 +353,10 @@ test('callback', (done) => {
     done(); // Must call done()
   });
 });
-```
+```bash
 
 ### Promises
+
 ```javascript
 test('promise', () => {
   function fetchData() {
@@ -352,9 +375,10 @@ test('promise rejection', () => {
   
   return expect(fetchData()).rejects.toThrow('error');
 });
-```
+```bash
 
 ### Async/Await
+
 ```javascript
 test('async/await', async () => {
   const data = await fetchData();
@@ -373,9 +397,10 @@ test('async/await with try/catch', async () => {
     expect(error.message).toBe('error');
   }
 });
-```
+```bash
 
 ### resolves / rejects Matchers
+
 ```javascript
 test('resolves matcher', async () => {
   await expect(Promise.resolve('data')).resolves.toBe('data');
@@ -384,7 +409,7 @@ test('resolves matcher', async () => {
 test('rejects matcher', async () => {
   await expect(Promise.reject(new Error('error'))).rejects.toThrow('error');
 });
-```
+```bash
 
 ---
 
@@ -406,9 +431,10 @@ test('mock function', () => {
   expect(mockFn).toHaveBeenCalledWith('hello');
   expect(mockFn).toHaveBeenLastCalledWith('world');
 });
-```
+```bash
 
 ### Mock Return Values
+
 ```javascript
 test('mock return value', () => {
   const mockFn = jest.fn();
@@ -425,9 +451,10 @@ test('mock return value', () => {
   expect(mockFn()).toBe(3);
   expect(mockFn()).toBe(3);
 });
-```
+```bash
 
 ### Mock Implementation
+
 ```javascript
 test('mock implementation', () => {
   const mockFn = jest.fn((x) => x * 2);
@@ -448,18 +475,20 @@ test('mock implementation once', () => {
   expect(mockFn()).toBe('second');
   expect(mockFn()).toBe('default');
 });
-```
+```bash
 
 ### Mock Modules
 
 **api.js:**
+
 ```javascript
 export function fetchData() {
   return fetch('/api/data').then(res => res.json());
 }
-```
+```bash
 
 **test file:**
+
 ```javascript
 import { fetchData } from './api';
 
@@ -472,23 +501,26 @@ test('mock module', () => {
     expect(data).toEqual({ data: 'mocked' });
   });
 });
-```
+```bash
 
 ### Manual Mocks
 
 **Create `__mocks__/api.js`:**
+
 ```javascript
 export const fetchData = jest.fn(() => 
   Promise.resolve({ data: 'mocked' })
 );
-```
+```bash
 
 **In test:**
+
 ```javascript
 jest.mock('./api'); // Automatically uses manual mock
-```
+```bash
 
 ### Mock Timers
+
 ```javascript
 test('timer mocks', () => {
   jest.useFakeTimers();
@@ -517,9 +549,10 @@ test('advance timers by time', () => {
   jest.advanceTimersByTime(500);
   expect(callback).toHaveBeenCalled();
 });
-```
+```bash
 
 ### Spy on Methods
+
 ```javascript
 test('spy on object method', () => {
   const video = {
@@ -537,13 +570,14 @@ test('spy on object method', () => {
   
   spy.mockRestore(); // Restore original implementation
 });
-```
+```bash
 
 ---
 
 ## Snapshot Testing
 
 ### Basic Snapshot
+
 ```javascript
 import renderer from 'react-test-renderer';
 import Button from './Button';
@@ -552,9 +586,10 @@ test('Button snapshot', () => {
   const tree = renderer.create(<Button>Click me</Button>).toJSON();
   expect(tree).toMatchSnapshot();
 });
-```
+```bash
 
 ### Inline Snapshots
+
 ```javascript
 test('inline snapshot', () => {
   const user = { name: 'John', age: 30 };
@@ -565,9 +600,10 @@ test('inline snapshot', () => {
     }
   `);
 });
-```
+```bash
 
 ### Update Snapshots
+
 ```bash
 # Update all snapshots
 jest --updateSnapshot
@@ -576,9 +612,10 @@ jest -u
 
 # Update in watch mode
 Press 'u' to update snapshots
-```
+```bash
 
 ### Property Matchers
+
 ```javascript
 test('snapshot with property matchers', () => {
   const user = {
@@ -592,32 +629,36 @@ test('snapshot with property matchers', () => {
     id: expect.any(Number)
   });
 });
-```
+```bash
 
 ---
 
 ## Testing React Components
 
 ### Setup
+
 ```bash
 npm install --save-dev @testing-library/react @testing-library/jest-dom
-```
+```bash
 
 **setupTests.js:**
+
 ```javascript
 import '@testing-library/jest-dom';
-```
+```bash
 
 ### Basic Component Test
 
 **Button.jsx:**
+
 ```javascript
 export default function Button({ onClick, children }) {
   return <button onClick={onClick}>{children}</button>;
 }
-```
+```bash
 
 **Button.test.jsx:**
+
 ```javascript
 import { render, screen, fireEvent } from '@testing-library/react';
 import Button from './Button';
@@ -634,9 +675,10 @@ test('calls onClick when clicked', () => {
   fireEvent.click(screen.getByText('Click me'));
   expect(handleClick).toHaveBeenCalledTimes(1);
 });
-```
+```bash
 
 ### Querying Elements
+
 ```javascript
 import { render, screen } from '@testing-library/react';
 
@@ -656,9 +698,10 @@ test('query methods', () => {
   // findBy - async, waits for element
   await screen.findByText('Async content');
 });
-```
+```bash
 
 ### User Events
+
 ```javascript
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -677,9 +720,10 @@ test('user interactions', async () => {
   // Click button
   await user.click(button);
 });
-```
+```bash
 
 ### Async Testing
+
 ```javascript
 import { render, screen, waitFor } from '@testing-library/react';
 
@@ -694,13 +738,14 @@ test('loads and displays data', async () => {
   // Or use findBy
   expect(await screen.findByText('John Doe')).toBeInTheDocument();
 });
-```
+```bash
 
 ---
 
 ## Code Coverage
 
 ### Running Coverage
+
 ```bash
 # Run tests with coverage
 npm test -- --coverage
@@ -709,21 +754,23 @@ npm test -- --coverage
 "scripts": {
   "test:coverage": "jest --coverage"
 }
-```
+```bash
 
 ### Coverage Report
-```
+
+```bash
 ------------------|---------|----------|---------|---------|-------------------
 File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ------------------|---------|----------|---------|---------|-------------------
 All files         |   85.71 |       75 |     100 |   85.71 |                   
  math.js          |   85.71 |       75 |     100 |   85.71 | 7                 
 ------------------|---------|----------|---------|---------|-------------------
-```
+```bash
 
 ### Coverage Thresholds
 
 **jest.config.js:**
+
 ```javascript
 module.exports = {
   coverageThreshold: {
@@ -735,9 +782,10 @@ module.exports = {
     }
   }
 };
-```
+```bash
 
 ### Collect Coverage From
+
 ```javascript
 module.exports = {
   collectCoverageFrom: [
@@ -747,7 +795,7 @@ module.exports = {
     '!src/**/*.test.{js,jsx}'
   ]
 };
-```
+```bash
 
 ---
 
@@ -792,22 +840,24 @@ module.exports = {
   // Module file extensions
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node']
 };
-```
+```bash
 
 ---
 
 ## Best Practices
 
 ### 1. **Descriptive Test Names**
+
 ```javascript
 // Good
 test('should return user when valid ID is provided', () => {});
 
 // Bad
 test('user test', () => {});
-```
+```bash
 
 ### 2. **Arrange-Act-Assert**
+
 ```javascript
 test('adds item to cart', () => {
   // Arrange
@@ -820,9 +870,10 @@ test('adds item to cart', () => {
   // Assert
   expect(cart.total).toBe(10);
 });
-```
+```bash
 
 ### 3. **Test Behavior, Not Implementation**
+
 ```javascript
 // Good - tests behavior
 test('displays error on invalid email', () => {
@@ -837,9 +888,10 @@ test('sets error state', () => {
   form.validateEmail('invalid');
   expect(form.state.emailError).toBe(true);
 });
-```
+```bash
 
 ### 4. **Keep Tests Independent**
+
 ```javascript
 // Bad - tests depend on each other
 let user;
@@ -860,9 +912,10 @@ test('deletes user', () => {
   deleteUser(user.id);
   expect(getUser(user.id)).toBeNull();
 });
-```
+```bash
 
 ### 5. **Use beforeEach for Common Setup**
+
 ```javascript
 describe('User service', () => {
   let user;
@@ -876,23 +929,26 @@ describe('User service', () => {
     expect(user.name).toBe('Jane');
   });
 });
-```
+```bash
 
 ---
 
 ## Resources
 
 ### Official Documentation
+
 - [Jest Documentation](https://jestjs.io/docs/getting-started)
 - [Jest API Reference](https://jestjs.io/docs/api)
 - [Testing Library](https://testing-library.com/)
 
 ### Learning Resources
+
 - [Jest Crash Course](https://www.youtube.com/results?search_query=jest+crash+course)
 - [Testing JavaScript](https://testingjavascript.com/)
 - [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
 
 ### Community
+
 - [Stack Overflow - Jest](https://stackoverflow.com/questions/tagged/jestjs)
 - [Jest Discord](https://discord.gg/jest)
 - [GitHub Discussions](https://github.com/facebook/jest/discussions)

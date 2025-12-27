@@ -17,15 +17,15 @@ exclude = [
 
 # Skip non-text files and repo internals.
 exclude_path = [
-  ".git/",
-  "**/*.png",
-  "**/*.jpg",
-  "**/*.jpeg",
-  "**/*.gif",
-  "**/*.svg",
-  "**/*.webp",
-  "**/*.ico",
-  "**/*.pdf",
+  "glob:.git/**",
+  "glob:**/*.png",
+  "glob:**/*.jpg",
+  "glob:**/*.jpeg",
+  "glob:**/*.gif",
+  "glob:**/*.svg",
+  "glob:**/*.webp",
+  "glob:**/*.ico",
+  "glob:**/*.pdf",
 ]
 
 # Don’t hang forever on flaky sites.

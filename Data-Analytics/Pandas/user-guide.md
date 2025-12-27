@@ -4,12 +4,13 @@
 
 ```bash
 pip install pandas
-```
+```bash
 
 Verify:
+
 ```bash
 python -c "import pandas as pd; print(pd.__version__)"
-```
+```bash
 
 ## 2) Your First DataFrame
 
@@ -25,9 +26,10 @@ df = pd.DataFrame(
 
 print(df)
 print(df.groupby("name")["score"].sum())
-```
+```bash
 
 ## 3) Common Tasks
+
 - Select columns: `df[["col1", "col2"]]`
 - Filter rows: `df[df["score"] >= 10]`
 - Missing data: `df.isna()`, `df.fillna(...)`, `df.dropna(...)`
@@ -39,8 +41,9 @@ print(df.groupby("name")["score"].sum())
 ```python
 df = pd.read_csv("data.csv")
 df.to_parquet("out.parquet", index=False)
-```
+```bash
 
 ## Examples & Practice
+
 - Examples: `Pandas/examples/`
 - Practice: `Pandas/questions/`

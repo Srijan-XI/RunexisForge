@@ -3,27 +3,31 @@
 ## Installation
 
 ### Prerequisites
+
 - Node.js (v16.13.0 or higher)
 - npm (v8.0.0 or higher)
 - Code editor (VS Code recommended)
 - Angular CLI
 
 ### Install Angular CLI
+
 ```bash
 npm install -g @angular/cli
-```
+```bash
 
 ### Create a New Project
+
 ```bash
 ng new my-app
 cd my-app
 ng serve
-```
+```bash
 
 Visit `http://localhost:4200/` to see your application.
 
 ## Project Structure
-```
+
+```bash
 my-app/
 ├── node_modules/
 ├── src/
@@ -39,9 +43,10 @@ my-app/
 ├── angular.json
 ├── package.json
 └── tsconfig.json
-```
+```bash
 
 ## Basic Component Example
+
 ```typescript
 import { Component } from '@angular/core';
 
@@ -61,18 +66,20 @@ export class CounterComponent {
     this.count--;
   }
 }
-```
+```bash
 
 ## Component Template
+
 ```html
 <div class="container">
   <h1>Counter: {{ count }}</h1>
   <button (click)="increment()">Increment</button>
   <button (click)="decrement()">Decrement</button>
 </div>
-```
+```bash
 
 ## Common Commands
+
 ```bash
 ng serve               # Start development server
 ng build              # Build for production
@@ -80,23 +87,26 @@ ng generate component # Generate a new component
 ng generate service   # Generate a new service
 ng test               # Run tests
 ng lint               # Run linter
-```
+```bash
 
 ## Key Concepts
 
 ### Decorators
+
 - `@Component`: Defines a component
 - `@Injectable`: Makes a class injectable
 - `@Input`: Passes data to a component
 - `@Output`: Emits events from a component
 
 ### Data Binding
+
 - `{{ }}` - Interpolation
 - `[property]` - Property binding
 - `(event)` - Event binding
 - `[(ngModel)]` - Two-way binding
 
 ### Directives
+
 - `*ngIf` - Conditional rendering
 - `*ngFor` - Loop rendering
 - `*ngSwitch` - Conditional multiple branches
@@ -104,6 +114,7 @@ ng lint               # Run linter
 - `[ngStyle]` - Dynamic style binding
 
 ### Services
+
 ```typescript
 import { Injectable } from '@angular/core';
 
@@ -117,9 +128,10 @@ export class DataService {
     return [1, 2, 3, 4, 5];
   }
 }
-```
+```bash
 
 ## Reactive Forms Example
+
 ```typescript
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -139,9 +151,10 @@ export class MyFormComponent {
     }
   }
 }
-```
+```bash
 
 ## Routing
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -156,9 +169,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-```
+```bash
 
 ## Best Practices
+
 1. Use standalone components (Angular 14+)
 2. Keep components simple and focused
 3. Use services for shared logic
@@ -169,11 +183,13 @@ export class AppRoutingModule { }
 8. Write unit tests for components and services
 
 ## Testing
+
 ```bash
 ng test  # Run Jasmine tests with Karma
-```
+```bash
 
 ## Debugging
+
 - Angular DevTools browser extension
 - Chrome DevTools
 - VS Code Angular extension

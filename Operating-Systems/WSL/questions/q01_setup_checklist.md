@@ -11,4 +11,5 @@ Goal: set up WSL and confirm it works.
 5. From inside WSL, open the folder in Explorer with `explorer.exe .`.
 
 Bonus:
+
 - Install `git` and run `git --version`.

@@ -3,21 +3,24 @@
 ## Installation (Cocos2d-x)
 
 ### Download
+
 1. Visit [cocos2d-x.org](https://www.cocos.com/en/cocos2d-x)
 2. Download latest stable version
 3. Extract to your development folder
 
 ### Prerequisites
+
 - Python 2.7 or 3.x
 - CMake 3.6+
 - Visual Studio (Windows) or Xcode (macOS)
 - Android SDK/NDK (for Android)
 
 ### Setup
+
 ```bash
 cd cocos2d-x
 python setup.py
-```
+```bash
 
 ---
 
@@ -26,7 +29,7 @@ python setup.py
 ```bash
 cocos new MyGame -p com.company.mygame -l cpp -d ~/Projects
 cd MyGame
-```
+```bash
 
 ---
 
@@ -44,7 +47,7 @@ cocos run -p win32
 
 # Web
 cocos run -p web
-```
+```bash
 
 ---
 
@@ -66,7 +69,7 @@ public:
 };
 
 #endif // __HELLOWORLD_SCENE_H__
-```
+```bash
 
 ```cpp
 // HelloWorldScene.cpp
@@ -95,7 +98,7 @@ bool HelloWorld::init()
     
     return true;
 }
-```
+```bash
 
 ---
 

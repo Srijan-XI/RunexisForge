@@ -21,18 +21,21 @@
 ## Key Features
 
 ### Performance
+
 - **Fast Boot**: Boot in seconds
 - **Automatic Updates**: Background updates, no interruptions
 - **Lightweight**: Minimal resource usage
 - **SSD Optimized**: Best with SSD storage
 
 ### Security
+
 - **Verified Boot**: Checks system integrity at startup
 - **Sandboxing**: Apps run in isolated environments
 - **Auto-Updates**: Always protected with latest patches
 - **Data Encryption**: Built-in encryption support
 
 ### Management
+
 - **Chrome Enterprise**: Cloud-based device management
 - **Zero-touch Enrollment**: Easy deployment
 - **Policy Controls**: Centralized configuration
@@ -56,6 +59,7 @@
 ## System Requirements
 
 ### Minimum Requirements
+
 - **CPU**: Intel/AMD x86-64 processor (2010 or newer)
 - **RAM**: 4 GB
 - **Storage**: 16 GB
@@ -63,11 +67,13 @@
 - **BIOS**: Support for USB booting
 
 ### Recommended
+
 - **RAM**: 8+ GB
 - **Storage**: 32+ GB SSD
 - **Network**: Stable internet connection
 
 ### Certified Models
+
 Check [Google's certified models list](https://support.google.com/chromeosflex/answer/11513094) for guaranteed compatibility.
 
 ---
@@ -94,18 +100,21 @@ Check [Google's certified models list](https://support.google.com/chromeosflex/a
 ## Use Cases
 
 ### Education
+
 - Computer labs
 - Student devices
 - Remote learning
 - Cost-effective deployment
 
 ### Business
+
 - Office workstations
 - Point-of-sale systems
 - Digital signage
 - Remote workers
 
 ### Home
+
 - Family computers
 - Web browsing
 - Video streaming
@@ -136,18 +145,20 @@ ChromeOS Flex includes Linux (Beta) support:
 sudo apt update
 sudo apt install code  # VS Code
 sudo apt install gimp  # GIMP
-```
+```bash
 
 ---
 
 ## Deployment Options
 
 ### Individual Install
+
 1. Download ChromeOS Flex installer
 2. Create bootable USB
 3. Boot and install on device
 
 ### Enterprise Deployment
+
 1. Enroll in Chrome Enterprise
 2. Configure policies in Admin Console
 3. Deploy via USB or network boot
@@ -158,6 +169,7 @@ sudo apt install gimp  # GIMP
 ## Pros & Cons
 
 ### Strengths
+
 - ✅ Revives old hardware effectively
 - ✅ Extremely fast and responsive
 - ✅ No cost for software
@@ -166,6 +178,7 @@ sudo apt install gimp  # GIMP
 - ✅ Great for web-based workflows
 
 ### Limitations
+
 - ❌ No Android app support
 - ❌ Limited offline functionality
 - ❌ Requires constant internet
@@ -177,6 +190,7 @@ sudo apt install gimp  # GIMP
 ## Who Should Use ChromeOS Flex?
 
 ### Ideal For
+
 - Schools needing low-cost solutions
 - Businesses with legacy hardware
 - Users primarily using web apps
@@ -184,6 +198,7 @@ sudo apt install gimp  # GIMP
 - Light computing needs
 
 ### Not Ideal For
+
 - Gamers
 - Video/photo editing professionals
 - Users needing specific Windows/Mac software
@@ -195,6 +210,7 @@ sudo apt install gimp  # GIMP
 ## Migration Path
 
 ### From Windows/Mac
+
 1. Backup important data
 2. List required applications
 3. Find web/Linux alternatives
@@ -202,6 +218,7 @@ sudo apt install gimp  # GIMP
 5. Install if satisfied
 
 ### Common Alternatives
+
 - Microsoft Office → Google Workspace
 - Photoshop → Photopea (web) or GIMP (Linux)
 - iTunes → YouTube Music
@@ -212,12 +229,14 @@ sudo apt install gimp  # GIMP
 ## Learning Resources
 
 ### Official Resources
+
 - [ChromeOS Flex Homepage](https://chromeenterprise.google/os/chromeosflex/)
 - [Installation Guide](https://support.google.com/chromeosflex/answer/11552529)
 - [Certified Models List](https://support.google.com/chromeosflex/answer/11513094)
 - [Admin Documentation](https://support.google.com/chromeosflex/)
 
 ### Community
+
 - [ChromeOS Flex Help Community](https://support.google.com/chromeosflex/community)
 - [r/ChromeOSFlex](https://www.reddit.com/r/ChromeOSFlex/)
 
@@ -226,6 +245,7 @@ sudo apt install gimp  # GIMP
 ## Quick Tips
 
 💡 **Pro Tips**:
+
 - Test with USB before installing
 - Check certified models list first
 - Ensure good internet connection

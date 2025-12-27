@@ -9,6 +9,7 @@
 Redis doesn't officially support Windows, but you can use WSL2 or unofficial ports.
 
 **Option 1: WSL2 (Recommended)**
+
 ```powershell
 # Install WSL2
 wsl --install
@@ -22,25 +23,28 @@ sudo service redis-server start
 
 # Test
 redis-cli ping
-```
+```sql
 
 **Option 2: Windows Port (Memurai)**
-- Download from https://www.memurai.com/
+
+- Download from <https://www.memurai.com/>
 - Free for development
 - Compatible with Redis API
 
 **Option 3: Docker (Best for Windows)**
+
 ```powershell
 # Install Docker Desktop, then:
 docker run --name redis -p 6379:6379 -d redis:latest
 
 # Test
 docker exec -it redis redis-cli ping
-```
+```bash
 
 ### macOS
 
 **Homebrew (Recommended)**
+
 ```bash
 # Install Redis
 brew install redis
@@ -54,11 +58,12 @@ redis-server /usr/local/etc/redis.conf
 # Test
 redis-cli ping
 # Output: PONG
-```
+```text
 
 ### Linux
 
 **Ubuntu/Debian**
+
 ```bash
 # Update packages
 sudo apt update
@@ -76,9 +81,10 @@ redis-cli ping
 
 # Check status
 sudo systemctl status redis-server
-```
+```text
 
 **Fedora/RHEL/CentOS**
+
 ```bash
 # Install Redis
 sudo dnf install redis
@@ -89,9 +95,10 @@ sudo systemctl enable redis
 
 # Test
 redis-cli ping
-```
+```text
 
 **From Source (All Linux)**
+
 ```bash
 # Install dependencies
 sudo apt install build-essential tcl  # Debian/Ubuntu
@@ -109,7 +116,7 @@ redis-server
 
 # Or as background process
 redis-server --daemonize yes
-```
+```text
 
 ### Docker (Cross-Platform)
 
@@ -131,7 +138,7 @@ docker run --name redis \
 
 # Connect to Redis CLI
 docker exec -it redis redis-cli
-```
+```text
 
 ---
 
@@ -140,6 +147,7 @@ docker exec -it redis redis-cli
 ### Basic Configuration
 
 Edit Redis configuration file:
+
 - **Linux**: `/etc/redis/redis.conf`
 - **macOS**: `/usr/local/etc/redis.conf`
 
@@ -165,13 +173,14 @@ appendfilename "appendonly.aof"
 # Set max memory
 maxmemory 256mb
 maxmemory-policy allkeys-lru  # Eviction policy
-```
+```text
 
 Restart Redis:
+
 ```bash
 sudo systemctl restart redis-server  # Linux
 brew services restart redis  # macOS
-```
+```text
 
 ### Connect to Redis
 
@@ -188,7 +197,7 @@ redis-cli -h hostname -p 6379 -a password
 # Test connection
 127.0.0.1:6379> PING
 PONG
-```
+```text
 
 ---
 
@@ -240,7 +249,7 @@ TTL counter
 
 # Remove expiration
 PERSIST counter
-```
+```text
 
 ### List Operations
 
@@ -271,7 +280,7 @@ LSET tasks 0 "updated_task"
 
 # Remove elements
 LREM tasks 1 "task1"  # Remove first occurrence
-```
+```text
 
 ### Set Operations
 
@@ -310,7 +319,7 @@ SDIFF set1 set2
 
 # Random member
 SRANDMEMBER tags
-```
+```text
 
 ### Hash Operations
 
@@ -346,7 +355,7 @@ HVALS user:1
 
 # Get number of fields
 HLEN user:1
-```
+```text
 
 ### Sorted Set Operations
 
@@ -381,7 +390,7 @@ ZREM leaderboard "player3"
 
 # Get count
 ZCARD leaderboard
-```
+```text
 
 ---
 
@@ -390,26 +399,29 @@ ZCARD leaderboard
 ### Pub/Sub (Publish/Subscribe)
 
 **Subscriber (Terminal 1):**
+
 ```bash
 redis-cli
 SUBSCRIBE news updates
-```
+```bash
 
 **Publisher (Terminal 2):**
+
 ```bash
 redis-cli
 PUBLISH news "Breaking news!"
 PUBLISH updates "System update available"
-```
+```bash
 
 **Pattern Subscription:**
+
 ```bash
 # Subscribe to channels matching pattern
 PSUBSCRIBE news:*
 
 # Publish
 PUBLISH news:sports "Team wins championship"
-```
+```bash
 
 ### Transactions
 
@@ -427,7 +439,7 @@ EXEC
 
 # Or discard
 DISCARD
-```
+```bash
 
 ### Lua Scripting
 
@@ -443,7 +455,7 @@ EVAL "
   end
   return 0
 " 1 counter 100
-```
+```bash
 
 ### Geospatial Operations
 
@@ -460,7 +472,7 @@ GEORADIUS cities 15 37 200 km WITHDIST
 
 # Get coordinates
 GEOPOS cities "Palermo"
-```
+```bash
 
 ### Streams (Redis 5.0+)
 
@@ -482,7 +494,7 @@ XGROUP CREATE mystream mygroup 0
 
 # Read as consumer
 XREADGROUP GROUP mygroup consumer1 STREAMS mystream >
-```
+```bash
 
 ---
 
@@ -510,7 +522,7 @@ CLIENT LIST
 
 # Kill client
 CLIENT KILL ip:port
-```
+```bash
 
 ### Performance
 
@@ -530,7 +542,7 @@ DBSIZE
 # Flush database
 FLUSHDB  # Current database
 FLUSHALL  # All databases
-```
+```bash
 
 ### Backup and Restore
 
@@ -547,7 +559,7 @@ LASTSAVE
 # macOS: /usr/local/var/db/redis/dump.rdb
 
 # Restore: Stop Redis, replace dump.rdb, start Redis
-```
+```bash
 
 ---
 
@@ -556,35 +568,38 @@ LASTSAVE
 ### Enable Password Authentication
 
 Edit `redis.conf`:
-```
+
+```bash
 requirepass yourStrongPassword123!
-```
+```bash
 
 Connect with password:
+
 ```bash
 redis-cli -a yourStrongPassword123!
 
 # Or authenticate after connecting
 redis-cli
 AUTH yourStrongPassword123!
-```
+```bash
 
 ### Rename Dangerous Commands
 
 Edit `redis.conf`:
-```
+
+```bash
 rename-command FLUSHDB ""
 rename-command FLUSHALL ""
 rename-command KEYS ""
 rename-command CONFIG "CONFIG_abcd1234"
-```
+```bash
 
 ### Bind to Specific Interface
 
-```
+```bash
 bind 127.0.0.1  # Local only
 bind 0.0.0.0    # All interfaces (use with firewall!)
-```
+```bash
 
 ---
 
@@ -601,7 +616,7 @@ brew services list | grep redis
 
 # All platforms
 redis-cli ping
-```
+```bash
 
 ### View Logs
 
@@ -614,11 +629,12 @@ tail -f /usr/local/var/log/redis.log
 
 # Docker
 docker logs -f redis
-```
+```bash
 
 ### Common Issues
 
 **Can't connect to Redis:**
+
 ```bash
 # Check if running
 ps aux | grep redis
@@ -628,9 +644,10 @@ netstat -tuln | grep 6379
 
 # Check firewall
 sudo ufw status  # Linux
-```
+```bash
 
 **Out of memory:**
+
 ```bash
 # Check memory usage
 INFO memory
@@ -638,17 +655,18 @@ INFO memory
 # Set max memory in redis.conf
 maxmemory 256mb
 maxmemory-policy allkeys-lru
-```
+```bash
 
 ---
 
 ## 🔧 Redis GUI Tools
 
 1. **RedisInsight** (Official, Free)
-   - Download: https://redis.com/redis-enterprise/redis-insight/
+   - Download: <https://redis.com/redis-enterprise/redis-insight/>
    - Features: Visualization, profiling, CLI, cluster management
 
 2. **Redis Commander** (Web-based)
+
    ```bash
    npm install -g redis-commander
    redis-commander
@@ -656,7 +674,7 @@ maxmemory-policy allkeys-lru
 
 3. **Medis** (macOS only)
    - Modern GUI for macOS
-   - Download: https://getmedis.com/
+   - Download: <https://getmedis.com/>
 
 ---
 

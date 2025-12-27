@@ -5,6 +5,7 @@
 **Amazon DynamoDB** is a fully managed, serverless NoSQL database service provided by AWS that delivers single-digit millisecond performance at any scale. It's designed for applications that need consistent, low-latency data access at any scale.
 
 **Key Features:**
+
 - **Fully Managed**: No servers to provision, patch, or manage
 - **Serverless**: Pay only for what you use
 - **Automatic Scaling**: Handles trillions of requests per day
@@ -125,16 +126,19 @@
 ## 🔑 DynamoDB Core Concepts
 
 ### 1. Tables
+
 - Collection of data
 - No fixed schema
 - Identified by partition key (and optional sort key)
 
 ### 2. Items
+
 - Individual records in a table (like rows)
 - Maximum size: 400 KB
 - Uniquely identified by primary key
 
 ### 3. Attributes
+
 - Data fields (like columns)
 - Flexible, not all items need same attributes
 - Support various data types (string, number, binary, list, map, set)
@@ -142,26 +146,30 @@
 ### 4. Primary Key
 
 **Partition Key (Simple Primary Key):**
-```
+
+```yaml
 Table: Users
 Partition Key: UserID
-```
+```yaml
 
 **Composite Primary Key (Partition + Sort Key):**
-```
+
+```yaml
 Table: Orders
 Partition Key: CustomerID
 Sort Key: OrderDate
-```
+```yaml
 
 ### 5. Secondary Indexes
 
 **Global Secondary Index (GSI):**
+
 - Different partition and sort key than base table
 - Query data using alternate key
 - Allows queries across partitions
 
 **Local Secondary Index (LSI):**
+
 - Same partition key as base table
 - Different sort key
 - Must be created at table creation time
@@ -169,12 +177,14 @@ Sort Key: OrderDate
 ### 6. Capacity Modes
 
 **Provisioned Mode:**
+
 - Specify read/write capacity units
 - Predictable traffic
 - Lower cost for steady workloads
 - Auto-scaling available
 
 **On-Demand Mode:**
+
 - Pay-per-request pricing
 - Unpredictable traffic
 - Instant scaling
@@ -188,7 +198,7 @@ Sort Key: OrderDate
 
 **Single-Table Design Pattern:**
 
-```
+```yaml
 Table: AppData
 
 PK (Partition Key) | SK (Sort Key)      | Attributes
@@ -199,9 +209,10 @@ USER#12345        | ORDER#002          | orderDate, total, items
 USER#67890        | PROFILE#67890      | name, email, age
 PRODUCT#ABC       | METADATA           | name, price, stock
 PRODUCT#ABC       | REVIEW#001         | rating, comment, date
-```
+```yaml
 
 **Benefits of Single-Table Design:**
+
 - Retrieve related data in single query
 - Reduce number of requests
 - Lower cost
@@ -256,16 +267,19 @@ PRODUCT#ABC       | REVIEW#001         | rating, comment, date
 ## 💰 Pricing Overview
 
 ### On-Demand Pricing (Simplified)
+
 - **Write**: $1.25 per million write requests
 - **Read**: $0.25 per million read requests
 - **Storage**: $0.25 per GB per month
 
 ### Provisioned Pricing
+
 - **Write Capacity Unit (WCU)**: $0.00065 per hour
 - **Read Capacity Unit (RCU)**: $0.00013 per hour
 - **Storage**: $0.25 per GB per month
 
 **Capacity Units:**
+
 - 1 WCU = 1 write per second (item up to 1 KB)
 - 1 RCU = 1 strongly consistent read per second (item up to 4 KB)
 - 1 RCU = 2 eventually consistent reads per second
@@ -275,12 +289,14 @@ PRODUCT#ABC       | REVIEW#001         | rating, comment, date
 ## 🧩 DynamoDB Streams
 
 **Real-time change data capture:**
+
 - Captures item-level modifications
 - Time-ordered sequence of changes
 - Retained for 24 hours
 - Trigger AWS Lambda for event-driven processing
 
 **Use Cases:**
+
 - Real-time analytics
 - Data replication
 - Notifications
@@ -292,12 +308,14 @@ PRODUCT#ABC       | REVIEW#001         | rating, comment, date
 ## 🌍 Global Tables
 
 **Multi-region, active-active replication:**
+
 - Write to any region
 - Automatic replication
 - Low-latency access worldwide
 - Conflict resolution (last-writer-wins)
 
 **Use Cases:**
+
 - Global applications
 - Disaster recovery
 - Low-latency for worldwide users
@@ -327,6 +345,7 @@ PRODUCT#ABC       | REVIEW#001         | rating, comment, date
 ## 🆓 Free Tier
 
 **AWS Free Tier Includes:**
+
 - 25 GB of storage
 - 25 write capacity units (WCU)
 - 25 read capacity units (RCU)

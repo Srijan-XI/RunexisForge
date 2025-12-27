@@ -7,6 +7,7 @@
 ## Key Concepts
 
 ### 1. **Containers**
+
 - Lightweight, standalone, executable packages
 - Include everything needed to run an application
 - Share the host OS kernel (unlike VMs)
@@ -14,6 +15,7 @@
 - Use minimal resources
 
 ### 2. **Images**
+
 - Read-only templates used to create containers
 - Built from a Dockerfile
 - Stored in registries (Docker Hub, private registries)
@@ -21,12 +23,14 @@
 - Version controlled and shareable
 
 ### 3. **Dockerfile**
+
 - Text file with instructions to build an image
 - Defines base image, dependencies, and commands
 - Reproducible and version-controllable
 - Enables automation
 
 ### 4. **Docker Engine**
+
 - Core runtime that builds and runs containers
 - Client-server architecture
 - REST API for interaction
@@ -34,6 +38,7 @@
 - Docker CLI client
 
 ### 5. **Docker Hub**
+
 - Public registry for Docker images
 - Millions of pre-built images
 - Official images for popular software
@@ -41,7 +46,7 @@
 
 ## Architecture
 
-```
+```dockerfile
 ┌─────────────────────────────────────────────────────────┐
 │                    Docker Client                         │
 │                   (docker CLI)                           │
@@ -83,7 +88,7 @@
 │                  Host Operating System                   │
 │                  (Linux, Windows, macOS)                 │
 └─────────────────────────────────────────────────────────┘
-```
+```dockerfile
 
 ## Docker vs Virtual Machines
 
@@ -98,7 +103,7 @@
 | **Performance** | Near-native | Slower |
 | **Density** | 100s per host | 10s per host |
 
-```
+```dockerfile
 Virtual Machines:                    Docker Containers:
 
 ┌─────────────────────────┐         ┌─────────────────────────┐
@@ -114,41 +119,47 @@ Virtual Machines:                    Docker Containers:
 ├─────────────────────────┤         └─────────────────────────┘
 │      Infrastructure     │
 └─────────────────────────┘
-```
+```dockerfile
 
 ## Key Features
 
 ### 1. **Portability**
+
 - "Build once, run anywhere"
 - Consistent across development, testing, and production
 - No "works on my machine" problems
 - Platform-independent
 
 ### 2. **Efficiency**
+
 - Share host OS kernel
 - Lightweight compared to VMs
 - Fast startup and shutdown
 - Optimal resource utilization
 
 ### 3. **Scalability**
+
 - Easily scale applications up or down
 - Container orchestration (Kubernetes, Docker Swarm)
 - Microservices architecture support
 - Load balancing
 
 ### 4. **Isolation**
+
 - Each container is isolated
 - Separate processes and file systems
 - Security through isolation
 - No conflicts between applications
 
 ### 5. **Version Control**
+
 - Images are versioned
 - Easy rollback to previous versions
 - Track changes over time
 - Reproducible builds
 
 ### 6. **Microservices Ready**
+
 - Each service in its own container
 - Independent deployment and scaling
 - Technology stack flexibility
@@ -167,7 +178,7 @@ Virtual Machines:                    Docker Containers:
 # Verify installation
 docker --version
 docker run hello-world
-```
+```bash
 
 ### macOS
 
@@ -179,7 +190,7 @@ docker run hello-world
 # Verify installation
 docker --version
 docker run hello-world
-```
+```bash
 
 ### Linux (Ubuntu/Debian)
 
@@ -212,7 +223,7 @@ sudo docker run hello-world
 
 # Add user to docker group (optional)
 sudo usermod -aG docker $USER
-```
+```bash
 
 ## Basic Commands
 
@@ -251,7 +262,7 @@ docker exec -it <container> bash   # Interactive shell
 # Inspect container
 docker inspect <container>
 docker stats <container>           # Resource usage
-```
+```bash
 
 ### Image Management
 
@@ -281,7 +292,7 @@ docker push <image>:<tag>
 
 # Search images
 docker search <term>
-```
+```bash
 
 ### System Commands
 
@@ -298,7 +309,7 @@ docker system df                   # Disk usage
 # Help
 docker --help
 docker <command> --help
-```
+```bash
 
 ## Dockerfile Example
 
@@ -328,7 +339,7 @@ ENV NODE_ENV=production
 
 # Run application
 CMD ["node", "app.js"]
-```
+```bash
 
 ### Multi-Stage Build
 
@@ -349,7 +360,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY package*.json ./
 EXPOSE 3000
 CMD ["node", "dist/app.js"]
-```
+```bash
 
 ## Docker Compose
 
@@ -405,7 +416,7 @@ volumes:
 networks:
   app-network:
     driver: bridge
-```
+```bash
 
 ### Docker Compose Commands
 
@@ -432,28 +443,31 @@ docker-compose exec web bash
 
 # Scale services
 docker-compose up -d --scale web=3
-```
+```bash
 
 ## Volumes (Data Persistence)
 
 ### Types of Volumes
 
 1. **Named Volumes** (Managed by Docker)
+
 ```bash
 docker volume create mydata
 docker run -v mydata:/app/data myapp
-```
+```bash
 
-2. **Bind Mounts** (Host filesystem)
+1. **Bind Mounts** (Host filesystem)
+
 ```bash
 docker run -v /host/path:/container/path myapp
 docker run -v $(pwd):/app myapp
-```
+```bash
 
-3. **tmpfs Mounts** (Memory only)
+1. **tmpfs Mounts** (Memory only)
+
 ```bash
 docker run --tmpfs /app/temp myapp
-```
+```bash
 
 ### Volume Commands
 
@@ -470,7 +484,7 @@ docker volume inspect <name>
 # Remove volume
 docker volume rm <name>
 docker volume prune                # Remove unused volumes
-```
+```bash
 
 ## Networking
 
@@ -504,11 +518,12 @@ docker network inspect <network>
 # Remove network
 docker network rm <network>
 docker network prune               # Remove unused networks
-```
+```bash
 
 ## Best Practices
 
 ### 1. Image Optimization
+
 ```dockerfile
 # Use specific tags (not 'latest')
 FROM node:18-alpine
@@ -521,9 +536,10 @@ RUN apt-get update && \
 
 # Multi-stage builds for smaller images
 # Order layers by change frequency (dependencies first)
-```
+```bash
 
 ### 2. Security
+
 ```bash
 # Don't run as root
 USER node
@@ -534,10 +550,11 @@ docker scan <image>
 # Use official images
 # Keep images updated
 # Use secrets for sensitive data
-```
+```bash
 
 ### 3. .dockerignore File
-```
+
+```bash
 node_modules
 npm-debug.log
 .git
@@ -548,43 +565,50 @@ README.md
 *.log
 dist
 coverage
-```
+```bash
 
 ### 4. Resource Limits
+
 ```bash
 # Limit CPU and memory
 docker run --memory="512m" --cpus="1.0" myapp
-```
+```bash
 
 ### 5. Health Checks
+
 ```dockerfile
 HEALTHCHECK --interval=30s --timeout=3s \
   CMD curl -f http://localhost:3000/health || exit 1
-```
+```bash
 
 ## Common Use Cases
 
 ### 1. **Development Environments**
+
 - Consistent dev environment across team
 - Easy setup for new developers
 - No local software conflicts
 
 ### 2. **Microservices**
+
 - Each service in separate container
 - Independent deployment and scaling
 - Language/framework flexibility
 
 ### 3. **CI/CD Pipelines**
+
 - Build and test in containers
 - Consistent build environments
 - Fast and reliable deployments
 
 ### 4. **Legacy Application Modernization**
+
 - Containerize monolithic apps
 - Gradually migrate to microservices
 - Maintain old dependencies
 
 ### 5. **Testing**
+
 - Isolated test environments
 - Parallel testing
 - Quick setup and teardown
@@ -615,12 +639,14 @@ HEALTHCHECK --interval=30s --timeout=3s \
 ## Docker Ecosystem
 
 ### Orchestration
+
 - **Kubernetes** - Industry standard for container orchestration
 - **Docker Swarm** - Docker's native orchestration
 - **Amazon ECS** - AWS container service
 - **Azure Container Instances** - Microsoft's solution
 
 ### Registries
+
 - **Docker Hub** - Public registry
 - **Amazon ECR** - AWS registry
 - **Google Container Registry** - GCP registry
@@ -628,6 +654,7 @@ HEALTHCHECK --interval=30s --timeout=3s \
 - **Harbor** - Open-source registry
 
 ### Tools
+
 - **Docker Compose** - Multi-container applications
 - **Docker Desktop** - Desktop GUI application
 - **Portainer** - Container management UI
@@ -657,7 +684,7 @@ services:
 
 volumes:
   mongo-data:
-```
+```bash
 
 ### Example 2: WordPress with MySQL
 
@@ -689,7 +716,7 @@ services:
 volumes:
   wordpress-data:
   db-data:
-```
+```bash
 
 ## Who Uses Docker?
 

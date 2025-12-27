@@ -5,6 +5,7 @@
 **TypeScript** is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. Developed and maintained by Microsoft, TypeScript adds optional static typing to JavaScript, enabling developers to catch errors early in development and improve code quality.
 
 **Key Features:**
+
 - **Static Type Checking**: Catch errors before runtime
 - **Modern JavaScript Features**: Support for ES6+ features
 - **Excellent IDE Support**: IntelliSense, refactoring, and navigation
@@ -145,7 +146,7 @@ let user: { name: string; age: number } = {
   name: "Alice",
   age: 25
 };
-```
+```javascript
 
 ### 2. Interfaces
 
@@ -164,7 +165,7 @@ const user: User = {
   email: "john@example.com",
   createdAt: new Date()
 };
-```
+```javascript
 
 ### 3. Classes
 
@@ -184,7 +185,7 @@ class Person {
     return `Hi, I'm ${this.name}`;
   }
 }
-```
+```javascript
 
 ### 4. Generics
 
@@ -213,7 +214,7 @@ class DataStore<T> {
     return this.items;
   }
 }
-```
+```javascript
 
 ### 5. Union and Intersection Types
 
@@ -241,7 +242,7 @@ const person: Person = {
   name: "Alice",
   age: 30
 };
-```
+```javascript
 
 ### 6. Type Aliases
 
@@ -258,7 +259,7 @@ type Callback = (data: string) => void;
 // Using type alias
 const point: Point = { x: 10, y: 20 };
 const userId: ID = 123;
-```
+```javascript
 
 ### 7. Enums
 
@@ -280,7 +281,7 @@ enum Color {
 
 let direction: Direction = Direction.Up;
 let color: Color = Color.Red;
-```
+```javascript
 
 ---
 
@@ -305,7 +306,7 @@ let color: Color = Color.Red;
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
-```
+```javascript
 
 ---
 
@@ -322,7 +323,7 @@ let count = 42;        // Inferred as number
 function add(a: number, b: number) {
   return a + b; // Return type inferred as number
 }
-```
+```javascript
 
 ### Type Guards
 
@@ -336,7 +337,7 @@ function processValue(value: string | number) {
     console.log(value.toFixed(2));
   }
 }
-```
+```javascript
 
 ### Non-Null Assertion
 
@@ -350,7 +351,7 @@ function getLength(str: string | null) {
 function getLengthSafe(str: string | null) {
   return str?.length; // Returns undefined if null
 }
-```
+```javascript
 
 ---
 
@@ -401,7 +402,7 @@ const api = new ApiClient('https://api.example.com');
 // TypeScript knows the response type
 const response = await api.get<User>('/users/1');
 console.log(response.data.name); // Type-safe access
-```
+```text
 
 ---
 
@@ -446,6 +447,7 @@ console.log(response.data.name); // Type-safe access
 
 - **DefinitelyTyped**: Community-maintained type definitions for JavaScript libraries
 - **@types/* packages**: Install types for popular libraries
+
   ```bash
   npm install --save-dev @types/node @types/express @types/react
   ```
@@ -465,6 +467,7 @@ console.log(response.data.name); // Type-safe access
 ## 🎓 TypeScript Design Patterns
 
 TypeScript works excellently with design patterns:
+
 - **Singleton**: Ensure single instance
 - **Factory**: Create objects without specifying exact class
 - **Observer**: Event-driven programming

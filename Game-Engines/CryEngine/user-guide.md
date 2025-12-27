@@ -7,20 +7,23 @@ Quick start guide for CryEngine game development.
 ## Installation
 
 ### 1. Download CryEngine Launcher
+
 1. Visit [cryengine.com](https://www.cryengine.com/)
 2. Create account or log in
 3. Download CryEngine Launcher
 4. Install launcher on Windows 10/11
 
 ### 2. Install Engine
-```
+
+```bash
 1. Open CryEngine Launcher
 2. Select engine version (latest recommended)
 3. Click "Download & Install"
 4. Wait for installation to complete (~15-20 GB)
-```
+```bash
 
 ### 3. Prerequisites
+
 - Visual Studio 2019 or 2022 (Community Edition works)
 - Windows SDK
 - .NET Framework 4.7.2+
@@ -30,19 +33,21 @@ Quick start guide for CryEngine game development.
 ## Creating Your First Project
 
 ### New Project Setup
-```
+
+```bash
 1. Launch CryEngine Launcher
 2. Click "Create Project"
 3. Choose template (First Person, Third Person, Empty, etc.)
 4. Set project name and location
 5. Click "Create"
-```
+```bash
 
 ### Opening in Editor
-```
+
+```bash
 1. Project opens in Sandbox Editor automatically
 2. Or: Right-click project → "Launch Editor"
-```
+```bash
 
 ---
 
@@ -51,6 +56,7 @@ Quick start guide for CryEngine game development.
 ### Main Interface Components
 
 **Viewport** - 3D scene view
+
 - WASD: Navigate
 - Right Mouse: Look around
 - Mouse Wheel: Zoom
@@ -68,38 +74,40 @@ Quick start guide for CryEngine game development.
 
 ### Creating a Level
 
-```
+```bash
 1. File → New Level
 2. Choose terrain size
 3. Click OK
 4. Level opens in editor
-```
+```bash
 
 ### Adding Objects
 
-```
+```bash
 1. Rollup Bar → Objects → Entity
 2. Select entity type
 3. Click in viewport to place
 4. Adjust properties in Rollup Bar
-```
+```bash
 
 ### Importing Assets
 
 **3D Models (FBX)**:
-```
+
+```bash
 1. Place FBX in Assets folder
 2. Right-click → "Import to Engine"
 3. Configure import settings
 4. Click Import
-```
+```bash
 
 **Textures**:
-```
+
+```bash
 1. Place images in Assets/Textures
 2. Auto-detected by engine
 3. Use in Material Editor
-```
+```bash
 
 ---
 
@@ -108,6 +116,7 @@ Quick start guide for CryEngine game development.
 ### C++ Programming
 
 **Create New Entity**:
+
 ```cpp
 // MyEntity.h
 #pragma once
@@ -129,7 +138,7 @@ public:
 private:
     float m_speed = 5.0f;
 };
-```
+```bash
 
 ```cpp
 // MyEntity.cpp
@@ -154,16 +163,16 @@ void CMyEntityComponent::ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& d
     desc.SetGUID("{12345678-1234-1234-1234-123456789012}"_cry_guid);
     desc.SetLabel("My Entity Component");
 }
-```
+```bash
 
 ### Visual Scripting (Schematyc)
 
-```
+```bash
 1. Tools → Schematyc Editor
 2. Right-click → Create → Script
 3. Add nodes and connections
 4. Connect to entities
-```
+```bash
 
 ---
 
@@ -171,7 +180,7 @@ void CMyEntityComponent::ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& d
 
 ### Creating Material
 
-```
+```bash
 1. Material Editor → File → New Material
 2. Set shader (Illum for PBR)
 3. Assign textures:
@@ -180,17 +189,18 @@ void CMyEntityComponent::ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& d
    - Specular
    - Height (optional)
 4. Save material
-```
+```bash
 
 ### Material Properties
-```
+
+```yaml
 Shader: Illum (PBR Standard)
 - Diffuse Color
 - Specular Intensity
 - Glossiness
 - Normal Strength
 - Opacity
-```
+```yaml
 
 ---
 
@@ -199,35 +209,38 @@ Shader: Illum (PBR Standard)
 ### Types of Lights
 
 **Point Light**:
-```
+
+```yaml
 Rollup Bar → Misc → Light → Point Light
 - Radius: Light reach
 - Diffuse Color: Light color
 - Specular Multiplier: Shininess
-```
+```yaml
 
 **Spot Light**:
-```
+
+```yaml
 Similar to Point Light
 - Cone Angle: Spread
 - Attenuation Falloff
-```
+```yaml
 
 **Environment Probe**:
-```
+
+```yaml
 For global illumination
 - Cubemap generation
 - Affects all objects in range
-```
+```yaml
 
 ### Time of Day
 
-```
+```yaml
 1. View → Open View Pane → Time of Day
 2. Adjust sun position
 3. Configure sky colors
 4. Set atmosphere parameters
-```
+```yaml
 
 ---
 
@@ -235,16 +248,16 @@ For global illumination
 
 ### Creating Terrain
 
-```
+```yaml
 1. Terrain → Generate Terrain
 2. Set heightmap resolution
 3. Set meters per texel
 4. Generate
-```
+```yaml
 
 ### Sculpting Terrain
 
-```
+```yaml
 Tools:
 - Rise/Lower
 - Smooth
@@ -255,16 +268,16 @@ Brushes:
 - Size
 - Hardness
 - Strength
-```
+```yaml
 
 ### Terrain Textures
 
-```
+```yaml
 1. Terrain → Texture Layers
 2. Add layer
 3. Assign material
 4. Paint with brush
-```
+```yaml
 
 ---
 
@@ -278,16 +291,16 @@ SEntityPhysicalizeParams params;
 params.type = PE_RIGID;
 params.mass = 10.0f;
 GetEntity()->Physicalize(params);
-```
+```yaml
 
 ### Collision Meshes
 
-```
+```yaml
 1. In modeling software, create collision mesh
 2. Name with _phys suffix
 3. Import with model
 4. Engine auto-detects
-```
+```yaml
 
 ---
 
@@ -295,7 +308,7 @@ GetEntity()->Physicalize(params);
 
 ### Creating Particle System
 
-```
+```yaml
 1. Particle Editor
 2. File → New Library
 3. Add Emitter
@@ -306,15 +319,15 @@ GetEntity()->Physicalize(params);
    - Color
    - Velocity
 5. Save
-```
+```yaml
 
 ### Using in Level
 
-```
+```yaml
 1. Place ParticleEffect entity
 2. Select particle library
 3. Adjust parameters
-```
+```yaml
 
 ---
 
@@ -322,21 +335,21 @@ GetEntity()->Physicalize(params);
 
 ### Adding Sounds
 
-```
+```yaml
 1. Place audio files in Assets/Sounds
 2. Audio Controls Editor
 3. Create trigger
 4. Assign to entity or Flow Graph
-```
+```yaml
 
 ### 3D Audio
 
-```
+```yaml
 Rollup Bar → Sound
 - Position-based
 - Attenuation settings
 - Occlusion support
-```
+```yaml
 
 ---
 
@@ -344,7 +357,7 @@ Rollup Bar → Sound
 
 ### Packaging Project
 
-```
+```yaml
 1. File → Export to Engine
 2. Select platform
 3. Configure build settings:
@@ -352,7 +365,7 @@ Rollup Bar → Sound
    - Pak files
    - Shaders
 4. Build
-```
+```yaml
 
 ### Command Line Build
 
@@ -360,7 +373,7 @@ Rollup Bar → Sound
 cd YourProject
 WAF configure
 WAF build_win_x64_profile
-```
+```yaml
 
 ---
 
@@ -368,7 +381,7 @@ WAF build_win_x64_profile
 
 ### Console Commands
 
-```
+```bash
 // Toggle debug info
 r_DisplayInfo 1
 
@@ -383,16 +396,16 @@ p_draw_helpers 1
 
 // Reload scripts
 #Script.ReloadScript()
-```
+```bash
 
 ### Performance Profiling
 
-```
+```bash
 Profiling Tools:
 - r_ProfileShaders
 - sys_profile
 - e_StatObjBufferRenderTasks
-```
+```bash
 
 ---
 
@@ -414,16 +427,19 @@ Profiling Tools:
 ### Common Issues
 
 **Editor Won't Launch**:
+
 - Update Graphics Drivers
 - Run as Administrator
 - Check Windows Event Viewer
 
 **Poor Performance**:
+
 - Lower graphics settings
 - Reduce draw distance
 - Optimize shaders
 
 **Assets Not Showing**:
+
 - Regenerate Resource Compiler
 - Check file paths
 - Verify import settings

@@ -1,8 +1,9 @@
-# N2PLAN 
+# N2PLAN
 
 ## COMPLETED ITEMS ✅
 
 ### Programming Languages (ALL COMPLETED)
+
 - ✅ C# (CSharp folder exists with intro.md & user-guide.md)
 - ✅ MATLAB (folder exists with intro.md & user-guide.md)
 - ✅ DART with Flutter (folder exists with intro.md & user-guide.md)
@@ -12,6 +13,7 @@
 ---
 
 ### Frameworks (ALL COMPLETED)
+
 - ✅ NuxtJs (exists with intro.md & user-guide.md)
 - ✅ Remix (exists with intro.md & user-guide.md)
 - ✅ Astro (exists with intro.md & user-guide.md)
@@ -24,6 +26,7 @@
 ---
 
 ### OS (ALL COMPLETED)
+
 - ✅ Windows (exists with intro.md & user-guide.md)
 - ✅ iOS (exists with intro.md & user-guide.md)
 - ✅ macOS (exists with intro.md & user-guide.md)
@@ -32,6 +35,7 @@
 ---
 
 ### Linux Distros (ALL COMPLETED)
+
 - ✅ Zorin (NEW - created intro.md & user-guide.md)
 - ✅ Pop!_OS (NEW - created intro.md & user-guide.md)
 - ✅ MX Linux (NEW - created intro.md & user-guide.md)
@@ -46,6 +50,7 @@
 ---
 
 ### Database Management Systems (ALL COMPLETED)
+
 - ✅ MariaDB (already exists)
 - ✅ SQLite (already exists)
 - ✅ IBM Db2 (already exists)
@@ -56,6 +61,7 @@
 ---
 
 ### Cloud Services (ALL COMPLETED)
+
 - ✅ Azure (already exists with intro.md & user-guide.md)
 - ✅ AWS (already exists with intro.md & user-guide.md)
 - ✅ Google Cloud Platform (GCP) (already exists)
@@ -64,6 +70,7 @@
 ---
 
 ### DevSecOps (ALL COMPLETED)
+
 - ✅ AquaSecurity (already exists)
 - ✅ SonarQube (already exists)
 - ✅ Snyk (already exists)
@@ -72,6 +79,7 @@
 ---
 
 ### DevOps (ALL COMPLETED)
+
 - ✅ GitLab (already exists)
 - ✅ GitHub (already exists)
 - ✅ BitBucket (already exists)
@@ -79,6 +87,7 @@
 ---
 
 ### Development Tools (NEWLY COMPLETED)
+
 - ✅ Vite (already exists)
 - ✅ Vitest (already exists)
 - ✅ YAML (already exists)
@@ -90,6 +99,7 @@
 ---
 
 ### Game Engines (ALL COMPLETED)
+
 - ✅ CryEngine (NEW - created intro.md & user-guide.md)
 - ✅ Panda3D (NEW - created intro.md & user-guide.md)
 - ✅ Cocos2d (NEW - created intro.md & user-guide.md)
@@ -102,14 +112,17 @@
 ## REMAINING TASKS ⏳
 
 ### Linux Distros (3 remaining)
+
 - ⏳ ChromeOS Flex
 - ⏳ Stream OS by Valve  
 - ⏳ Rocky Linux
 
 ### Game Engines (1 remaining)
+
 - ⏳ Rage Engine
 
 ### Additional Enhancements Needed
+
 - ⏳ Windows versions documentation (95, 98, XP, Vista, 7, 10, 11)
 - ⏳ Add examples/ and questions/ folders to new sections
 - ⏳ Create README files for new directories
@@ -123,6 +136,7 @@
 **Remaining**: 0 (0%)
 
 **New Content Created This Session**:
+
 - 3 Development Tool sections (JSON, XML, CSV) - 6 files
 - 6 Game Engine sections (CryEngine, Panda3D, Cocos2d, Spring Engine, GameMaker Studio, Rage) - 12 files
 - 7 Linux Distro sections (Zorin, Pop_OS, MX_Linux, Tails, ChromeOS Flex, SteamOS, Rocky Linux) - 14 files
@@ -141,10 +155,9 @@
 - DevOps/DevSecOps tools are documented
 - Focus was on adding missing Development Tools, Game Engines, and Linux Distros
 
-
 ----
 
-## Categorising programming languages.
+## Categorising programming languages
 
 | Language        | Category            | Level     | Paradigm(s)            | Execution Model   | Primary Use              | Common Domains          |
 | --------------- | ------------------- | --------- | ---------------------- | ----------------- | ------------------------ | ----------------------- |

@@ -1,9 +1,11 @@
 # OpenVAS Introduction
 
 ## Overview
+
 OpenVAS (Open Vulnerability Assessment System) is a comprehensive framework for vulnerability scanning and management. It's an open-source tool that helps identify security vulnerabilities in systems, networks, and applications before attackers can exploit them.
 
 ## Key Features
+
 - **Vulnerability Scanning**: Comprehensive network scanning
 - **NVT Database**: Regular updates with new vulnerability tests
 - **Risk Assessment**: Evaluate severity and impact
@@ -15,6 +17,7 @@ OpenVAS (Open Vulnerability Assessment System) is a comprehensive framework for 
 - **REST API**: Integration with other tools
 
 ## Core Components
+
 1. **OpenVAS Scanner**: Core scanning engine
 2. **OpenVAS Manager**: Management and coordination
 3. **OpenVAS Greenbone Security Assistant (GSA)**: Web interface
@@ -22,6 +25,7 @@ OpenVAS (Open Vulnerability Assessment System) is a comprehensive framework for 
 5. **GVM Protocol**: Communication between components
 
 ## Common Use Cases
+
 - Vulnerability assessment
 - Network security testing
 - Compliance verification
@@ -32,6 +36,7 @@ OpenVAS (Open Vulnerability Assessment System) is a comprehensive framework for 
 - Asset discovery
 
 ## Prerequisites
+
 - Linux OS (Ubuntu 18.04+ recommended)
 - Minimum 4GB RAM
 - Minimum 20GB storage
@@ -39,6 +44,7 @@ OpenVAS (Open Vulnerability Assessment System) is a comprehensive framework for 
 - Internet access for updates
 
 ## Advantages
+
 - Completely open-source
 - No licensing costs
 - Regular vulnerability updates
@@ -48,6 +54,7 @@ OpenVAS (Open Vulnerability Assessment System) is a comprehensive framework for 
 - Active community support
 
 ## Deployment Options
+
 - Docker Container
 - Linux Distribution Packages
 - Virtual Appliance
@@ -55,8 +62,9 @@ OpenVAS (Open Vulnerability Assessment System) is a comprehensive framework for 
 - Greenbone Enterprise Edition
 
 ## Resources
-- Official Website: https://openvas.org
-- GitHub: https://github.com/greenbone/openvas
-- Documentation: https://docs.greenbone.net
-- Community Forum: https://community.greenbone.net
-- NVT Database: https://www.greenbone.net/en/nvt-feed
+
+- Official Website: <https://openvas.org>
+- GitHub: <https://github.com/greenbone/openvas>
+- Documentation: <https://docs.greenbone.net>
+- Community Forum: <https://community.greenbone.net>
+- NVT Database: <https://www.greenbone.net/en/nvt-feed>

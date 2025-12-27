@@ -5,6 +5,7 @@
 **MongoDB** is a leading NoSQL document-oriented database that stores data in flexible, JSON-like documents. Unlike traditional relational databases, MongoDB uses a flexible schema design, making it ideal for modern applications.
 
 ### Key Information
+
 - **Created**: 2007 by 10gen (now MongoDB Inc.)
 - **License**: SSPL (Server Side Public License) / Commercial
 - **Written In**: C++, JavaScript
@@ -17,24 +18,28 @@
 ## 🌟 Key Features
 
 ### **Document Model**
+
 - Stores data as JSON-like documents (BSON)
 - Embedded documents and arrays
 - Dynamic schema - no predefined structure
 - Rich query language
 
 ### **Scalability**
+
 - Horizontal scaling through sharding
 - Automatic load balancing
 - Replica sets for high availability
 - Built-in replication
 
 ### **Performance**
+
 - In-memory storage engine option
 - Indexes on any field
 - Aggregation framework
 - GridFS for large files
 
 ### **Developer Experience**
+
 - Intuitive document model
 - No complex JOINs needed
 - Easy to learn and use
@@ -73,6 +78,7 @@
 ## 🎯 Use Cases
 
 ### **Perfect For:**
+
 - Content management systems
 - Mobile applications
 - Real-time analytics
@@ -83,12 +89,14 @@
 - Gaming leaderboards
 
 ### **Not Ideal For:**
+
 - Complex transactions requiring ACID
 - Systems with complex relationships
 - Applications requiring strict data integrity
 - Financial systems (use PostgreSQL/MySQL)
 
 ### **Used By:**
+
 - Facebook, Google, Adobe, eBay
 - Forbes, The New York Times
 - Uber, Lyft, Delivery Hero
@@ -113,7 +121,7 @@
   "hobbies": ["reading", "gaming", "coding"],
   "createdAt": ISODate("2024-01-15T10:30:00Z")
 }
-```
+```go
 
 ---
 
@@ -159,7 +167,7 @@ db.users.find({ age: { $gt: 25 } })
 
 // vs SQL
 SELECT * FROM users WHERE age > 25;
-```
+```go
 
 ---
 

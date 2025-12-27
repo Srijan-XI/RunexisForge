@@ -3,6 +3,7 @@
 ## Installation
 
 ### Prerequisites
+
 1. USB drive (8+ GB)
 2. Target computer (Intel/AMD x86-64, 4+ GB RAM)
 3. Windows, Mac, or ChromeOS computer to create installer
@@ -20,6 +21,7 @@
    - Click "Add to Chrome"
 
 2. **Create USB Installer**
+
    ```
    1. Launch Chromebook Recovery Utility
    2. Click "Get started"
@@ -43,28 +45,28 @@
 
 ### 1. Boot from USB
 
-```
+```bash
 1. Insert USB drive into target computer
 2. Restart computer
 3. Press boot menu key (F12, F2, ESC, or DEL)
 4. Select USB drive from boot menu
 5. ChromeOS Flex will load
-```
+```bash
 
 ### 2. Try Before Installing (Optional)
 
-```
+```bash
 1. ChromeOS Flex boots in live mode
 2. Test functionality:
    - WiFi connection
    - Browser performance
    - Hardware compatibility
 3. Explore without installing
-```
+```bash
 
 ### 3. Install ChromeOS Flex
 
-```
+```bash
 1. Click clock (bottom right)
 2. Click "Install ChromeOS Flex"
 3. Read information screen
@@ -73,7 +75,7 @@
 6. Wait for installation (~5-10 minutes)
 7. Remove USB when prompted
 8. Computer restarts automatically
-```
+```bash
 
 ---
 
@@ -81,14 +83,14 @@
 
 ### Initial Configuration
 
-```
+```bash
 1. Select language
 2. Select keyboard layout
 3. Connect to WiFi
 4. Accept Terms of Service
 5. Sign in with Google Account
 6. Follow setup wizard
-```
+```bash
 
 ---
 
@@ -97,13 +99,15 @@
 ### File Management
 
 **Access Files App**:
-```
+
+```bash
 1. Click Launcher (bottom left)
 2. Search "Files" or click Files icon
 3. Navigate folders
-```
+```bash
 
 **File Locations**:
+
 - **Downloads**: Local storage
 - **Google Drive**: Cloud storage
 - **Linux files**: Linux container files
@@ -111,15 +115,17 @@
 ### Installing Linux Apps
 
 **Enable Linux**:
-```
+
+```bash
 1. Settings → Advanced → Developers
 2. Turn on "Linux development environment"
 3. Click "Turn on"
 4. Wait for Linux container setup
 5. Terminal opens automatically
-```
+```bash
 
 **Install Applications**:
+
 ```bash
 # Update package list
 sudo apt update
@@ -139,64 +145,71 @@ sudo apt install python3 python3-pip
 # Install Node.js
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install nodejs
-```
+```bash
 
 ---
 
 ## Settings & Customization
 
 ### Access Settings
-```
+
+```bash
 Click clock → Settings icon (gear)
-```
+```bash
 
 ### Important Settings
 
 **Appearance**:
-```
+
+```bash
 Settings → Personalization
 - Wallpaper
 - Theme (Light/Dark)
 - Shelf (taskbar) position
-```
+```bash
 
 **WiFi**:
-```
+
+```bash
 Settings → Network
 - Connect to networks
 - VPN configuration
 - Proxy settings
-```
+```bash
 
 **Bluetooth**:
-```
+
+```bash
 Settings → Bluetooth
 - Pair devices
 - Manage connections
-```
+```bash
 
 **Displays**:
-```
+
+```bash
 Settings → Device → Displays
 - Resolution
 - Scale
 - Arrangement (multi-monitor)
-```
+```bash
 
 **Privacy**:
-```
+
+```bash
 Settings → Privacy and security
 - Site settings
 - Clear browsing data
 - Permissions
-```
+```bash
 
 ---
 
 ## Keyboard Shortcuts
 
 ### Essential Shortcuts
-```
+
+```bash
 Ctrl + Alt + ? - Show all shortcuts
 
 # Window Management
@@ -221,7 +234,7 @@ Ctrl + Shift + Show windows - Partial screenshot
 Search (🔍) - Open launcher
 Shift + Alt + M - Files app
 Shift + Alt + N - Notifications
-```
+```bash
 
 ---
 
@@ -230,10 +243,13 @@ Shift + Alt + N - Notifications
 ### Setup Printer
 
 1. **WiFi Printer**:
+
    ```
+
    Settings → Advanced → Printing
    → Printers → Add Printer
    → Select printer or add manually
+
    ```
 
 2. **Cloud Print Alternative**:
@@ -246,17 +262,17 @@ Shift + Alt + N - Notifications
 
 ### WiFi Not Working
 
-```
+```bash
 1. Settings → Network
 2. Click WiFi network
 3. Click "Forget"
 4. Reconnect with password
 5. Or: Restart device
-```
+```bash
 
 ### Device Running Slow
 
-```
+```bash
 1. Clear browser cache:
    Settings → Privacy → Clear browsing data
    
@@ -266,11 +282,11 @@ Shift + Alt + N - Notifications
    Chrome → Extensions → Manage Extensions
 
 4. Check Linux apps resource usage
-```
+```bash
 
 ### Linux Apps Not Working
 
-```
+```bash
 # Restart Linux container
 Settings → Advanced → Developers
 → Linux development environment
@@ -278,17 +294,17 @@ Settings → Advanced → Developers
 
 # Or terminal command:
 sudo reboot
-```
+```bash
 
 ### Can't Install ChromeOS Flex
 
-```
+```bash
 Possible reasons:
 1. Device not on certified list
 2. Incompatible hardware (ARM processor)
 3. BIOS settings (disable Secure Boot)
 4. Corrupted USB installer (recreate)
-```
+```bash
 
 ---
 
@@ -296,16 +312,17 @@ Possible reasons:
 
 ### Enroll Device
 
-```
+```bash
 1. During setup, use enterprise credentials
 2. Device auto-enrolls if configured
 3. Or: Settings → About ChromeOS Flex
    → Enterprise enrollment
-```
+```bash
 
 ### Admin Console
 
 Administrators can manage:
+
 - Device policies
 - App restrictions
 - User permissions
@@ -319,20 +336,20 @@ Administrators can manage:
 
 ### Automatic Updates
 
-```
+```bash
 ChromeOS Flex updates automatically
 - No user action needed
 - Updates in background
 - Restart when prompted
-```
+```bash
 
 ### Check for Updates
 
-```
+```bash
 Settings → About ChromeOS Flex
 → Check for updates
 → Restart to update if available
-```
+```bash
 
 ---
 
@@ -340,23 +357,23 @@ Settings → About ChromeOS Flex
 
 ### Backup Important Files
 
-```
+```bash
 ⚠️ ChromeOS Flex is cloud-first
 
 Backup locations:
 1. Google Drive (automatic for cloud files)
 2. External USB drive
 3. Linux files: manually backup
-```
+```bash
 
 ### Powerwash (Factory Reset)
 
-```
+```bash
 Settings → Advanced → Reset settings
 → Powerwash → Restart
 
 ⚠️ This ERASES all local data!
-```
+```bash
 
 ---
 
@@ -410,18 +427,20 @@ df -h
 
 # Check system info
 neofetch  # (install: sudo apt install neofetch)
-```
+```bash
 
 ---
 
 ## Support Resources
 
 ### Official
+
 - [ChromeOS Flex Help](https://support.google.com/chromeosflex/)
 - [Community Forum](https://support.google.com/chromeosflex/community)
 - [Known Issues](https://support.google.com/chromeosflex/answer/11542901)
 
 ### Community
+
 - [r/ChromeOSFlex](https://www.reddit.com/r/ChromeOSFlex/)
 - [ChromeOS Discord](https://discord.gg/chromeos)
 
