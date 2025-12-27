@@ -30,13 +30,13 @@ Postman is a collaborative API platform used to design, test, document, mock, an
 
 ```javascript
 pm.test("Status is 200", function () {
-	pm.response.to.have.status(200);
+ pm.response.to.have.status(200);
 });
 
 pm.test("Response time < 500ms", function () {
-	pm.expect(pm.response.responseTime).to.be.below(500);
+ pm.expect(pm.response.responseTime).to.be.below(500);
 });
-```
+```text
 
 ## Common Use Cases
 

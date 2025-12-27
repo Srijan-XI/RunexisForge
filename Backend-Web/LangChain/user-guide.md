@@ -4,7 +4,7 @@
 
 ```bash
 pip install langchain
-```
+```bash
 
 Depending on your provider, you may need additional packages.
 

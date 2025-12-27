@@ -24,42 +24,44 @@ Django is a high-level Python web framework that enables rapid development of se
 
 ## Typical Project Structure
 
-```
+```text
 myproject/
-	manage.py
-	myproject/
-		settings.py
-		urls.py
-		asgi.py
-		wsgi.py
-	app_one/
-		models.py
-		views.py
-		urls.py
-		templates/app_one/*.html
-		admin.py
-		forms.py
-```
+ manage.py
+ myproject/
+  settings.py
+  urls.py
+  asgi.py
+  wsgi.py
+ app_one/
+  models.py
+  views.py
+  urls.py
+  templates/app_one/*.html
+  admin.py
+  forms.py
+```text
 
 ## Minimal Example
 
 urls.py:
+
 ```python
 from django.urls import path
 from . import views
 
 urlpatterns = [
-		path("hello/", views.hello, name="hello"),
+  path("hello/", views.hello, name="hello"),
 ]
-```
+```text
 
 views.py:
+
 ```python
 from django.http import HttpResponse
 
 def hello(request):
-		return HttpResponse("Hello, Django!")
-```
+  return HttpResponse("Hello, Django!")
+```text
 
 ## Ecosystem Highlights
 

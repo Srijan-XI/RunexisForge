@@ -52,6 +52,7 @@
 ## Programming
 
 **C++ Example**:
+
 ```cpp
 #include "cocos2d.h"
 
@@ -62,9 +63,10 @@ public:
     virtual bool init();
     CREATE_FUNC(HelloWorld);
 };
-```
+```bash
 
 **JavaScript Example**:
+
 ```javascript
 var HelloWorldLayer = cc.Layer.extend({
     sprite: null,
@@ -76,7 +78,7 @@ var HelloWorldLayer = cc.Layer.extend({
         return true;
     }
 });
-```
+```bash
 
 ---
 

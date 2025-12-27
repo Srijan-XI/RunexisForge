@@ -6,10 +6,11 @@
 - Composer
 
 Verify:
+
 ```bash
 php -v
 composer -V
-```
+```bash
 
 ## Create a project
 
@@ -17,7 +18,7 @@ composer -V
 composer create-project laravel/laravel myapp
 cd myapp
 php artisan serve
-```
+```bash
 
 Open `http://127.0.0.1:8000`.
 

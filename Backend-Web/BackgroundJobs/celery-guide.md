@@ -6,11 +6,12 @@ Celery is a distributed task queue for Python. It requires a message broker like
 
 ```bash
 pip install celery redis
-```
+```bash
 
 ## Basic setup
 
 **celery_app.py:**
+
 ```python
 from celery import Celery
 
@@ -27,13 +28,13 @@ def send_email(recipient):
     time.sleep(5)
     print(f"Email sent to {recipient}")
     return f"Sent to {recipient}"
-```
+```bash
 
 ## Start worker
 
 ```bash
 celery -A celery_app worker --loglevel=info
-```
+```bash
 
 ## Call tasks
 
@@ -48,11 +49,12 @@ print(result.get(timeout=10))  # 10
 
 # Fire and forget
 send_email.delay('user@example.com')
-```
+```text
 
 ## Scheduled tasks (beat)
 
 **celery_app.py:**
+
 ```python
 from celery.schedules import crontab
 
@@ -66,12 +68,14 @@ app.conf.beat_schedule = {
 @app.task
 def cleanup():
     print("Running cleanup")
-```
+```bash
 
 **Start beat scheduler:**
+
 ```bash
 celery -A celery_app beat --loglevel=info
-```
+```bash
 
 ## References
-- Docs: https://docs.celeryq.dev/
+
+- Docs: <https://docs.celeryq.dev/>

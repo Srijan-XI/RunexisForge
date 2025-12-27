@@ -5,6 +5,7 @@
 **PostgreSQL** (often called "Postgres") is a powerful, open-source object-relational database system with over 35 years of active development. Known for its robustness, feature richness, and standards compliance.
 
 ### Key Information
+
 - **Created**: 1986 at UC Berkeley
 - **License**: PostgreSQL License (permissive, similar to MIT)
 - **Written In**: C
@@ -17,6 +18,7 @@
 ## 🌟 Key Features
 
 ### **Advanced Features**
+
 - Full ACID compliance
 - Complex queries and optimization
 - JSON and JSONB support
@@ -30,6 +32,7 @@
 - Recursive queries
 
 ### **Performance**
+
 - Multi-Version Concurrency Control (MVCC)
 - Parallel query execution
 - Advanced indexing (B-tree, Hash, GiST, SP-GiST, GIN, BRIN)
@@ -37,6 +40,7 @@
 - Table partitioning
 
 ### **Extensibility**
+
 - Custom functions (PL/pgSQL, Python, Perl, etc.)
 - Custom data types
 - Foreign Data Wrappers (FDW)
@@ -75,6 +79,7 @@
 ## 🎯 Use Cases
 
 ### **Perfect For:**
+
 - Financial systems requiring ACID compliance
 - Data warehousing and analytics
 - Geographic information systems (GIS)
@@ -84,6 +89,7 @@
 - Scientific and research data
 
 ### **Used By:**
+
 - Apple, Instagram, Spotify, Reddit
 - US Government agencies
 - Financial institutions

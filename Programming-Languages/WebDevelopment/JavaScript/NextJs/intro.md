@@ -7,6 +7,7 @@
 ## Key Features
 
 ### 1. **Hybrid Rendering**
+
 - **Server-Side Rendering (SSR)** - Render pages on each request
 - **Static Site Generation (SSG)** - Pre-render pages at build time
 - **Incremental Static Regeneration (ISR)** - Update static pages after deployment
@@ -14,6 +15,7 @@
 - Mix and match rendering strategies per page
 
 ### 2. **File-Based Routing**
+
 - Automatic routing based on file system
 - No need for route configuration
 - Dynamic routes with brackets `[id].js`
@@ -21,6 +23,7 @@
 - Nested and catch-all routes
 
 ### 3. **Built-in Optimizations**
+
 - Automatic code splitting
 - Image optimization with `<Image>` component
 - Font optimization
@@ -28,11 +31,13 @@
 - Prefetching and lazy loading
 
 ### 4. **TypeScript Support**
+
 - First-class TypeScript support
 - Automatic TypeScript configuration
 - Type checking for pages and APIs
 
 ### 5. **Developer Experience**
+
 - Fast Refresh (instant feedback)
 - Zero configuration
 - Built-in CSS and Sass support
@@ -41,7 +46,7 @@
 
 ## Architecture
 
-```
+```javascript
 ┌─────────────────────────────────────────────────┐
 │                   Browser                        │
 │                 (User Request)                   │
@@ -81,11 +86,12 @@
 │            (Rendered Page + JS)                  │
 │              (Hydration)                         │
 └─────────────────────────────────────────────────┘
-```
+```javascript
 
 ## Rendering Strategies
 
 ### 1. Static Site Generation (SSG)
+
 Pre-render pages at build time. Best for content that doesn't change often.
 
 ```javascript
@@ -103,9 +109,10 @@ export async function getStaticPaths() {
     const paths = posts.map(post => ({ params: { id: post.id } }));
     return { paths, fallback: false };
 }
-```
+```javascript
 
 ### 2. Server-Side Rendering (SSR)
+
 Render pages on each request. Best for personalized or frequently updated content.
 
 ```javascript
@@ -116,9 +123,10 @@ export async function getServerSideProps(context) {
         props: { user }
     };
 }
-```
+```javascript
 
 ### 3. Client-Side Rendering (CSR)
+
 Render on the client like traditional React apps.
 
 ```javascript
@@ -135,9 +143,10 @@ export default function Profile() {
     
     return <div>{user?.name}</div>;
 }
-```
+```javascript
 
 ### 4. Incremental Static Regeneration (ISR)
+
 Update static pages after deployment without rebuilding entire site.
 
 ```javascript
@@ -148,7 +157,7 @@ export async function getStaticProps() {
         revalidate: 10 // Regenerate page every 10 seconds
     };
 }
-```
+```javascript
 
 ## Installation
 
@@ -164,11 +173,11 @@ cd my-app
 
 # Start development server
 npm run dev
-```
+```bash
 
 ## File Structure
 
-```
+```bash
 my-app/
 ├── node_modules/
 ├── public/
@@ -192,18 +201,18 @@ my-app/
 ├── package.json
 ├── next.config.js
 └── README.md
-```
+```bash
 
 ## Routing
 
 ### Basic Routes
 
-```
+```bash
 pages/index.js           → /
 pages/about.js           → /about
 pages/blog/index.js      → /blog
 pages/blog/first-post.js → /blog/first-post
-```
+```bash
 
 ### Dynamic Routes
 
@@ -219,7 +228,7 @@ export default function Post() {
 }
 
 // Matches: /posts/1, /posts/abc, etc.
-```
+```bash
 
 ### Catch-All Routes
 
@@ -233,7 +242,7 @@ export default function Doc() {
 }
 
 // Matches: /docs/a, /docs/a/b, /docs/a/b/c, etc.
-```
+```bash
 
 ### API Routes
 
@@ -246,7 +255,7 @@ export default function handler(req, res) {
         res.status(201).json({ message: 'User created' });
     }
 }
-```
+```bash
 
 ## Navigation
 
@@ -264,7 +273,7 @@ export default function Nav() {
         </nav>
     );
 }
-```
+```bash
 
 ### Programmatic Navigation
 
@@ -281,7 +290,7 @@ export default function Login() {
     
     return <button onClick={handleLogin}>Login</button>;
 }
-```
+```bash
 
 ## Image Optimization
 
@@ -300,11 +309,12 @@ export default function Avatar() {
         />
     );
 }
-```
+```bash
 
 ## Built-in Components
 
 ### 1. Head Component
+
 Modify page metadata.
 
 ```javascript
@@ -322,9 +332,10 @@ export default function Home() {
         </>
     );
 }
-```
+```bash
 
 ### 2. Script Component
+
 Load third-party scripts efficiently.
 
 ```javascript
@@ -341,11 +352,12 @@ export default function Page() {
         </>
     );
 }
-```
+```bash
 
 ## Data Fetching
 
 ### getStaticProps (SSG)
+
 Fetch data at build time.
 
 ```javascript
@@ -367,9 +379,10 @@ export async function getStaticProps() {
         props: { posts }
     };
 }
-```
+```bash
 
 ### getServerSideProps (SSR)
+
 Fetch data on each request.
 
 ```javascript
@@ -386,9 +399,10 @@ export async function getServerSideProps(context) {
         props: { data }
     };
 }
-```
+```bash
 
 ### SWR (Client-Side)
+
 React Hooks library for data fetching.
 
 ```javascript
@@ -404,7 +418,7 @@ export default function Profile() {
     
     return <div>Hello {data.name}!</div>;
 }
-```
+```bash
 
 ## Styling Options
 
@@ -423,7 +437,7 @@ import styles from './Button.module.css';
 export default function Button() {
     return <button className={styles.button}>Click me</button>;
 }
-```
+```bash
 
 ### 2. Global Styles
 
@@ -434,7 +448,7 @@ import '../styles/globals.css';
 export default function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />;
 }
-```
+```bash
 
 ### 3. CSS-in-JS (Styled JSX)
 
@@ -457,14 +471,14 @@ export default function Home() {
         </>
     );
 }
-```
+```bash
 
 ### 4. Tailwind CSS
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
-```
+```bash
 
 ```javascript
 export default function Home() {
@@ -474,7 +488,7 @@ export default function Home() {
         </div>
     );
 }
-```
+```bash
 
 ## Environment Variables
 
@@ -482,7 +496,7 @@ export default function Home() {
 # .env.local
 DATABASE_URL=mongodb://localhost:27017
 NEXT_PUBLIC_API_URL=https://api.example.com
-```
+```bash
 
 ```javascript
 // Server-side only
@@ -490,7 +504,7 @@ const dbUrl = process.env.DATABASE_URL;
 
 // Exposed to browser (NEXT_PUBLIC_ prefix)
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-```
+```bash
 
 ## Middleware (Edge Functions)
 
@@ -512,7 +526,7 @@ export function middleware(request) {
 export const config = {
     matcher: '/dashboard/:path*'
 };
-```
+```bash
 
 ## Advantages
 
@@ -596,7 +610,7 @@ npm i -g vercel
 
 # Deploy
 vercel
-```
+```bash
 
 ### Other Platforms
 

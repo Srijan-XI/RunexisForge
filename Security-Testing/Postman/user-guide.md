@@ -1,6 +1,7 @@
 # Postman User Guide
 
 ## Table of Contents
+
 - Installation
 - First Request
 - Authorization
@@ -22,15 +23,15 @@
 
 You can use the Desktop app (recommended), Web app, or CLI tools.
 
-- Desktop: Download from https://www.postman.com/downloads/
-- Web: https://web.postman.co (requires the Postman Desktop Agent to access local networks)
+- Desktop: Download from <https://www.postman.com/downloads/>
+- Web: <https://web.postman.co> (requires the Postman Desktop Agent to access local networks)
 - CLI: Newman (collection runner) via npm
 
 ### Install Newman (CLI Runner)
 
 ```pwsh
 npm install -g newman
-```
+```bash
 
 ---
 
@@ -62,11 +63,13 @@ Tip: Store credentials in environment variables and mark secrets as secret varia
 Collections organize related requests and scripts.
 
 ### Create a Collection
+
 1. New → Collection → Name it (e.g., "Pet Store API").
 2. Add folders (e.g., "Pets", "Orders").
 3. Add requests with URLs, headers, body, and tests.
 
 ### Examples for Documentation
+
 Add an Example to a request to capture a sample response; this powers documentation and mocks.
 
 ---
@@ -74,6 +77,7 @@ Add an Example to a request to capture a sample response; this powers documentat
 ## Variables & Environments
 
 Variable scopes (in increasing priority):
+
 - Global
 - Environment
 - Collection
@@ -82,6 +86,7 @@ Variable scopes (in increasing priority):
 Use variables with `{{varName}}` in URLs, headers, or bodies.
 
 ### Create an Environment
+
 1. Environments → New → Add variables: `baseUrl`, `apiKey`, etc.
 2. Reference in requests: `{{baseUrl}}/pets`.
 
@@ -89,10 +94,10 @@ Use variables with `{{varName}}` in URLs, headers, or bodies.
 
 ```json
 {
-	"baseUrl": "https://api.example.com",
-	"authToken": "{{secrets.token}}"
+ "baseUrl": "https://api.example.com",
+ "authToken": "{{secrets.token}}"
 }
-```
+```bash
 
 ---
 
@@ -101,6 +106,7 @@ Use variables with `{{varName}}` in URLs, headers, or bodies.
 Scripts use JavaScript and the Postman `pm` API.
 
 ### Pre-request Script
+
 Runs before the request; useful for auth signatures or dynamic headers.
 
 ```javascript
@@ -111,24 +117,25 @@ pm.variables.set('timestamp', ts);
 const payload = ts + pm.request.url.getPath();
 const sig = CryptoJS.HmacSHA256(payload, pm.environment.get('apiSecret')).toString();
 pm.request.headers.add({ key: 'X-Signature', value: sig });
-```
+```bash
 
 ### Tests
+
 Runs after the response; write assertions and save data.
 
 ```javascript
 pm.test("Status is 200", function () {
-	pm.response.to.have.status(200);
+ pm.response.to.have.status(200);
 });
 
 pm.test("JSON has id", function () {
-	const json = pm.response.json();
-	pm.expect(json).to.have.property('id');
+ const json = pm.response.json();
+ pm.expect(json).to.have.property('id');
 });
 
 // Set data for next requests
 pm.collectionVariables.set('lastId', pm.response.json().id);
-```
+```text
 
 ### Common Assertions
 
@@ -137,13 +144,14 @@ pm.response.to.be.ok;                // 2xx
 pm.response.to.have.header('etag');
 pm.response.to.have.jsonBody('$.data.items[*]');
 pm.expect(pm.response.responseTime).below(800);
-```
+```text
 
 ---
 
 ## Running Collections (Runner & Newman)
 
 ### Collection Runner (GUI)
+
 1. Open collection → Run.
 2. Select environment and data file (CSV/JSON) if needed.
 3. Configure iterations and concurrency.
@@ -155,16 +163,16 @@ Install globally (see Installation). Run a saved collection export (`.json`).
 
 ```pwsh
 newman run .\collections\petstore.postman_collection.json `
-	-e .\environments\staging.postman_environment.json `
-	--reporters cli,htmlextra `
-	--reporter-htmlextra-export .\reports\run.html
-```
+ -e .\environments\staging.postman_environment.json `
+ --reporters cli,htmlextra `
+ --reporter-htmlextra-export .\reports\run.html
+```bash
 
 Data-driven runs:
 
 ```pwsh
 newman run .\collections\orders.json -d .\data\orders.csv
-```
+```bash
 
 Exit codes are CI-friendly (non-zero on failures).
 
@@ -173,6 +181,7 @@ Exit codes are CI-friendly (non-zero on failures).
 ## Mock Servers
 
 Use Examples to define responses, then create a mock server:
+
 1. Select collection → More → Mock collection.
 2. Choose environment and mock URL; Postman returns `{{mockServerUrl}}`.
 3. Point clients to the mock to unblock frontend/mobile work.
@@ -182,6 +191,7 @@ Use Examples to define responses, then create a mock server:
 ## Monitors
 
 Schedule collection runs from Postman’s cloud:
+
 1. Collection → Monitor → Create Monitor.
 2. Set schedule, environment, regions, and alerts.
 3. View run history, failures, and performance trends.
@@ -191,6 +201,7 @@ Schedule collection runs from Postman’s cloud:
 ## Documentation
 
 Generate and share docs directly from collections:
+
 1. Collection → View in Web → Publish Documentation.
 2. Add descriptions, examples, and authentication guidance.
 3. Share public or restricted links.
@@ -223,27 +234,28 @@ Run Postman tests in pipelines using Newman. Example GitHub Actions workflow:
 name: API Tests
 on: [push, pull_request]
 jobs:
-	newman:
-		runs-on: ubuntu-latest
-		steps:
-			- uses: actions/checkout@v4
-			- uses: actions/setup-node@v4
-				with: { node-version: '20' }
-			- run: npm i -g newman newman-reporter-htmlextra
-			- run: |
-					newman run ./collections/petstore.json \
-						-e ./environments/staging.json \
-						--reporters cli,htmlextra \
-						--reporter-htmlextra-export ./report.html
-			- uses: actions/upload-artifact@v4
-				with: { name: newman-report, path: report.html }
-```
+ newman:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v4
+   - uses: actions/setup-node@v4
+    with: { node-version: '20' }
+   - run: npm i -g newman newman-reporter-htmlextra
+   - run: |
+     newman run ./collections/petstore.json \
+      -e ./environments/staging.json \
+      --reporters cli,htmlextra \
+      --reporter-htmlextra-export ./report.html
+   - uses: actions/upload-artifact@v4
+    with: { name: newman-report, path: report.html }
+```bash
 
 ---
 
 ## Best Practices & Troubleshooting
 
 Best Practices
+
 - Use environments and secret variables for credentials.
 - Keep collections modular; one domain per collection.
 - Write idempotent tests; avoid cross-test coupling where possible.
@@ -251,6 +263,7 @@ Best Practices
 - Reuse utilities via collection-level scripts.
 
 Troubleshooting
+
 - CORS in web app? Use desktop app or Desktop Agent.
 - Auth failures? Verify token refresh and environment selection.
 - Flaky tests? Add retries/backoff and assert only what matters.

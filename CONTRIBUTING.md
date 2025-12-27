@@ -45,13 +45,17 @@ There are many ways to contribute to this project:
 
 1. **Fork the repository** to your GitHub account
 2. **Clone your fork** locally:
+
    ```bash
    git clone https://github.com/Srijan-XI/Install-and-Learn-DevLangs.git
    ```
+
 3. **Create a new branch** for your contribution:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
 4. **Make your changes** following the guidelines below
 5. **Test your changes** to ensure everything works correctly
 6. **Commit your changes** with clear commit messages
@@ -69,6 +73,7 @@ This repository uses automated checks in CI to keep documentation consistent. Yo
    - `pre-commit run --all-files`
 
 CI also runs:
+
 - Markdown linting via `.markdownlint.json`
 - Link checking via `.lychee.toml`
 - Spellchecking via `codespell` (project words in `.codespell-ignore-words.txt`)
@@ -163,7 +168,7 @@ When creating an issue, please include:
    - Question
 
 3. **Detailed description**
-   
+
    **For bugs:**
    - Description of the problem
    - Steps to reproduce
@@ -171,18 +176,19 @@ When creating an issue, please include:
    - Actual behavior
    - Your environment (OS, language version, etc.)
    - Error messages or screenshots
-   
+
    **For feature requests:**
    - Clear description of the feature
    - Use case and benefits
    - Possible implementation suggestions
-   
+
    **For documentation:**
    - What's unclear or missing
    - Suggested improvements
    - Which file/section needs updating
 
 4. **Code examples** (if applicable)
+
    ```
    Provide minimal code that demonstrates the issue
    ```
@@ -213,7 +219,7 @@ When creating an issue, please include:
 
 **Additional Context:**
 [Any other information, screenshots, etc.]
-```
+```bash
 
 ## Coding Standards
 
@@ -245,11 +251,12 @@ When creating an issue, please include:
 ## Questions?
 
 If you have any questions about contributing, feel free to:
+
 - Open an issue with the "question" label
 - Check existing documentation in the README
 - Look at merged PRs for examples
 
-## Thank You!
+## Thank You
 
 Your contributions help make programming more accessible to everyone. We appreciate your time and effort in improving this project!
 

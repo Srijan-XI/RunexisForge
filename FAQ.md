@@ -13,6 +13,7 @@ Absolutely! We provide step-by-step installation guides and practice questions r
 ### Which operating systems are supported?
 
 All guides include instructions for:
+
 - Windows (10/11)
 - macOS (Intel and Apple Silicon)
 - Linux (Ubuntu, Debian, Fedora, and other major distributions)
@@ -39,6 +40,7 @@ No prior experience is required for beginner-level content. However, some interm
 ### Can I use online IDEs instead of installing locally?
 
 Yes! You can use online IDEs like:
+
 - **Python**: Google Colab, Repl.it
 - **Java**: JDoodle, OnlineGDB
 - **JavaScript**: CodePen, JSFiddle, CodeSandbox, StackBlitz
@@ -50,6 +52,7 @@ Yes! You can use online IDEs like:
 ### Which IDE should I use?
 
 Popular choices include:
+
 - **Python**: VS Code, PyCharm, Jupyter Notebook
 - **Java**: IntelliJ IDEA, Eclipse, VS Code
 - **JavaScript**: VS Code, WebStorm, Sublime Text
@@ -66,6 +69,7 @@ Popular choices include:
 ### How are questions organized?
 
 Questions are categorized by difficulty:
+
 - **Beginner**: Basic syntax, variables, loops, functions
 - **Intermediate**: Data structures, file I/O, OOP concepts
 - **Advanced**: Algorithms, multithreading, design patterns
@@ -77,6 +81,7 @@ Currently, most folders contain working code examples. We're working on adding d
 ### Can I submit my own solutions?
 
 Yes! We encourage you to:
+
 1. Fork the repository
 2. Add your solutions
 3. Submit a pull request
@@ -85,6 +90,7 @@ Yes! We encourage you to:
 ### How do I test my code?
 
 Each language folder includes instructions for running code. Generally:
+
 - Save your code in a file with the appropriate extension
 - Use the command line or IDE to run it
 - Compare output with expected results
@@ -96,6 +102,7 @@ Each language folder includes instructions for running code. Generally:
 ### How can I contribute?
 
 You can contribute by:
+
 - Adding new programming languages
 - Creating more practice questions
 - Improving documentation
@@ -107,6 +114,7 @@ See our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 ### What if I'm not good at programming yet?
 
 You can still contribute by:
+
 - Reporting typos or errors
 - Suggesting improvements to documentation
 - Sharing your learning experience
@@ -119,6 +127,7 @@ We aim to review pull requests within 3-7 days. Complex changes may take longer.
 ### Can I add questions in languages not yet in the repository?
 
 Absolutely! We welcome new languages. Please include:
+
 - Installation guide for all major platforms
 - At least 10 practice questions (beginner to advanced)
 - Basic usage examples
@@ -130,6 +139,7 @@ Absolutely! We welcome new languages. Please include:
 ### Why isn't my code running?
 
 Common issues:
+
 1. **Syntax errors**: Check for typos, missing brackets, or incorrect indentation
 2. **Wrong version**: Ensure you're using a compatible language version
 3. **Missing dependencies**: Install required packages or libraries
@@ -138,6 +148,7 @@ Common issues:
 ### How do I update my language installation?
 
 Refer to the installation guide for your specific language. Most languages have update commands:
+
 - **Python**: `pip install --upgrade python`
 - **Java**: Download latest JDK from Oracle
 - **Rust**: `rustup update`
@@ -146,6 +157,7 @@ Refer to the installation guide for your specific language. Most languages have 
 ### Can I use different versions than recommended?
 
 Yes, but be aware that:
+
 - Syntax may differ between versions
 - Some features might not be available in older versions
 - Examples are tested with recommended versions
@@ -175,6 +187,7 @@ Major structural changes should be discussed in an issue first to ensure they al
 ### Where can I learn more?
 
 Check out our [Resources.md](Resources.md) for:
+
 - Official documentation
 - Recommended books
 - Online courses
@@ -184,6 +197,7 @@ Check out our [Resources.md](Resources.md) for:
 ### What order should I learn languages?
 
 Recommended learning path for beginners:
+
 1. **Python** - Easy syntax, great for beginners
 2. **JavaScript** - Essential for web development
 3. **Java** or **C++** - Learn OOP concepts
@@ -213,6 +227,7 @@ Use our [Linux intro](Linux/linux-intro.md) to compare families and traits.
 ### Can I try Linux without installing?
 
 Yes! Several options:
+
 1. **Virtual Machine**: VirtualBox or VMware (free, reversible)
 2. **Live USB**: Boot from USB without installation
 3. **WSL (Windows)**: Windows Subsystem for Linux (Windows 10/11)
@@ -234,28 +249,32 @@ See our [Distro Families Guide](Linux/linux-intro.md#major-distro-families).
 Depends on your distro's package manager:
 
 **Debian/Ubuntu**:
+
 ```bash
 sudo apt update && sudo apt upgrade
 sudo apt install <package>
-```
+```bash
 
 **Fedora/RHEL**:
+
 ```bash
 sudo dnf upgrade --refresh
 sudo dnf install <package>
-```
+```bash
 
 **Arch**:
+
 ```bash
 sudo pacman -Syu
 sudo pacman -S <package>
-```
+```bash
 
 Check [Linux/user-guide.md](Linux/Debian/user-guide.md) for your distro.
 
 ### What's systemd vs other init systems?
 
 **systemd** is the modern standard (most distros use it):
+
 - Manages services and daemons
 - Controls boot process
 - Unified logging with journalctl
@@ -273,12 +292,14 @@ Other init systems (OpenRC, runit) are lighter but less common.
 ### How do I choose between Arch and Ubuntu?
 
 **Ubuntu**:
+
 - ✅ Beginner-friendly
 - ✅ Long-term support (5 years LTS)
 - ✅ Large community
 - ❌ More pre-installed (heavier)
 
 **Arch**:
+
 - ✅ Minimal, you build what you want
 - ✅ Rolling release (always latest)
 - ✅ Excellent wiki

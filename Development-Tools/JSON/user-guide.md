@@ -5,6 +5,7 @@ Complete guide to working with JSON across different programming languages and p
 ---
 
 ## Table of Contents
+
 1. [Basic JSON Structure](#basic-json-structure)
 2. [Working with JSON in Different Languages](#working-with-json-in-different-languages)
 3. [JSON Validation](#json-validation)
@@ -17,6 +18,7 @@ Complete guide to working with JSON across different programming languages and p
 ## Basic JSON Structure
 
 ### Simple Object
+
 ```json
 {
   "firstName": "John",
@@ -25,9 +27,10 @@ Complete guide to working with JSON across different programming languages and p
   "isStudent": false,
   "address": null
 }
-```
+```bash
 
 ### Array of Objects
+
 ```json
 {
   "users": [
@@ -43,9 +46,10 @@ Complete guide to working with JSON across different programming languages and p
     }
   ]
 }
-```
+```bash
 
 ### Nested Structure
+
 ```json
 {
   "company": {
@@ -63,7 +67,7 @@ Complete guide to working with JSON across different programming languages and p
     ]
   }
 }
-```
+```bash
 
 ---
 
@@ -72,6 +76,7 @@ Complete guide to working with JSON across different programming languages and p
 ### JavaScript
 
 #### Parsing JSON
+
 ```javascript
 // String to Object
 const jsonString = '{"name": "John", "age": 30}';
@@ -85,20 +90,22 @@ console.log(json); // '{"name":"Jane","age":25}'
 
 // Pretty print with indentation
 const prettyJson = JSON.stringify(person, null, 2);
-```
+```bash
 
 #### Error Handling
+
 ```javascript
 try {
   const data = JSON.parse(invalidJson);
 } catch (error) {
   console.error("Invalid JSON:", error.message);
 }
-```
+```bash
 
 ### Python
 
 #### Basic Operations
+
 ```python
 import json
 
@@ -114,9 +121,10 @@ json_string = json.dumps(person)
 # Pretty print
 pretty_json = json.dumps(person, indent=2)
 print(pretty_json)
-```
+```bash
 
 #### File Operations
+
 ```python
 # Read from file
 with open('data.json', 'r') as file:
@@ -125,9 +133,10 @@ with open('data.json', 'r') as file:
 # Write to file
 with open('output.json', 'w') as file:
     json.dump(data, file, indent=2)
-```
+```text
 
 #### Custom Encoding
+
 ```python
 from datetime import datetime
 import json
@@ -140,11 +149,12 @@ class DateTimeEncoder(json.JSONEncoder):
 
 data = {"timestamp": datetime.now()}
 json_string = json.dumps(data, cls=DateTimeEncoder)
-```
+```text
 
 ### Java
 
 #### Using Jackson
+
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -160,9 +170,10 @@ String json = mapper.writeValueAsString(person);
 // Pretty print
 String prettyJson = mapper.writerWithDefaultPrettyPrinter()
                           .writeValueAsString(person);
-```
+```text
 
 #### Using Gson
+
 ```java
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -177,11 +188,12 @@ String json = gson.toJson(person);
 // Pretty print
 Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
 String prettyJson = prettyGson.toJson(person);
-```
+```text
 
 ### C# (.NET)
 
 #### Using System.Text.Json
+
 ```csharp
 using System.Text.Json;
 
@@ -196,9 +208,10 @@ string json = JsonSerializer.Serialize(person);
 // Pretty print
 var options = new JsonSerializerOptions { WriteIndented = true };
 string prettyJson = JsonSerializer.Serialize(person, options);
-```
+```text
 
 #### Using Newtonsoft.Json
+
 ```csharp
 using Newtonsoft.Json;
 
@@ -210,7 +223,7 @@ string json = JsonConvert.SerializeObject(person);
 
 // Pretty print
 string prettyJson = JsonConvert.SerializeObject(person, Formatting.Indented);
-```
+```text
 
 ### PHP
 
@@ -232,7 +245,7 @@ $json = json_encode($person);
 // Pretty print
 $prettyJson = json_encode($person, JSON_PRETTY_PRINT);
 ?>
-```
+```text
 
 ### Go
 
@@ -263,7 +276,7 @@ func main() {
     prettyJson, _ := json.MarshalIndent(person, "", "  ")
     fmt.Println(string(prettyJson))
 }
-```
+```text
 
 ### Ruby
 
@@ -282,17 +295,19 @@ json = JSON.generate(person)
 # Pretty print
 pretty_json = JSON.pretty_generate(person)
 puts pretty_json
-```
+```text
 
 ---
 
 ## JSON Validation
 
 ### Online Validators
-- JSONLint: https://jsonlint.com
-- JSON Formatter: https://jsonformatter.org
+
+- JSONLint: <https://jsonlint.com>
+- JSON Formatter: <https://jsonformatter.org>
 
 ### Command Line (jq)
+
 ```bash
 # Validate JSON file
 jq empty data.json
@@ -305,11 +320,12 @@ jq '.users[0].name' data.json
 
 # Filter array
 jq '.users[] | select(.age > 25)' data.json
-```
+```text
 
 ### JSON Schema Validation
 
 **Schema Definition** (`schema.json`):
+
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -332,9 +348,10 @@ jq '.users[] | select(.age > 25)' data.json
   },
   "required": ["name", "age"]
 }
-```
+```text
 
 **JavaScript Validation** (using ajv):
+
 ```javascript
 const Ajv = require('ajv');
 const ajv = new Ajv();
@@ -352,7 +369,7 @@ const valid = validate(data);
 if (!valid) {
   console.log(validate.errors);
 }
-```
+```text
 
 ---
 
@@ -361,6 +378,7 @@ if (!valid) {
 ### Merging JSON Objects
 
 **JavaScript**:
+
 ```javascript
 const obj1 = {name: "John", age: 30};
 const obj2 = {age: 31, city: "New York"};
@@ -370,9 +388,10 @@ const merged = {...obj1, ...obj2};
 
 // Object.assign()
 const merged2 = Object.assign({}, obj1, obj2);
-```
+```text
 
 **Python**:
+
 ```python
 dict1 = {"name": "John", "age": 30}
 dict2 = {"age": 31, "city": "New York"}
@@ -383,11 +402,12 @@ merged = dict1 | dict2
 # Using update
 merged = dict1.copy()
 merged.update(dict2)
-```
+```text
 
 ### Filtering Arrays
 
 **JavaScript**:
+
 ```javascript
 const data = {
   "users": [
@@ -399,9 +419,10 @@ const data = {
 
 // Filter users over 25
 const filtered = data.users.filter(user => user.age > 25);
-```
+```text
 
 **Python**:
+
 ```python
 data = {
     "users": [
@@ -413,26 +434,28 @@ data = {
 
 # Filter users over 25
 filtered = [user for user in data['users'] if user['age'] > 25]
-```
+```text
 
 ### Deep Copying
 
 **JavaScript**:
+
 ```javascript
 // Simple deep clone
 const deepClone = JSON.parse(JSON.stringify(original));
 
 // Using structuredClone (modern browsers)
 const deepClone2 = structuredClone(original);
-```
+```text
 
 **Python**:
+
 ```python
 import copy
 
 # Deep copy
 deep_clone = copy.deepcopy(original)
-```
+```text
 
 ---
 
@@ -441,6 +464,7 @@ deep_clone = copy.deepcopy(original)
 ### Streaming Large JSON Files
 
 **Python** (using ijson):
+
 ```python
 import ijson
 
@@ -448,9 +472,10 @@ with open('large_file.json', 'r') as file:
     objects = ijson.items(file, 'users.item')
     for obj in objects:
         process(obj)
-```
+```text
 
 **Node.js** (using JSONStream):
+
 ```javascript
 const JSONStream = require('JSONStream');
 const fs = require('fs');
@@ -460,11 +485,12 @@ fs.createReadStream('large_file.json')
   .on('data', (data) => {
     console.log(data);
   });
-```
+```text
 
 ### Custom Serialization
 
 **Python**:
+
 ```python
 class Person:
     def __init__(self, name, age):
@@ -478,9 +504,10 @@ class Person:
     def from_json(json_str):
         data = json.loads(json_str)
         return Person(data['name'], data['age'])
-```
+```text
 
 **JavaScript**:
+
 ```javascript
 class Person {
   constructor(name, age) {
@@ -501,7 +528,7 @@ class Person {
     return new Person(data.name, data.age);
   }
 }
-```
+```text
 
 ---
 
@@ -510,60 +537,72 @@ class Person {
 ### Common Errors
 
 #### 1. **Trailing Commas**
+
 ❌ **Wrong**:
+
 ```json
 {
   "name": "John",
   "age": 30,
 }
-```
+```text
 
 ✅ **Correct**:
+
 ```json
 {
   "name": "John",
   "age": 30
 }
-```
+```text
 
 #### 2. **Single Quotes**
+
 ❌ **Wrong**:
+
 ```json
 {'name': 'John'}
-```
+```text
 
 ✅ **Correct**:
+
 ```json
 {"name": "John"}
-```
+```text
 
 #### 3. **Unquoted Keys**
+
 ❌ **Wrong**:
+
 ```json
 {name: "John"}
-```
+```text
 
 ✅ **Correct**:
+
 ```json
 {"name": "John"}
-```
+```text
 
 #### 4. **Comments**
+
 ❌ **Wrong** (JSON doesn't support comments):
+
 ```json
 {
   // This is a comment
   "name": "John"
 }
-```
+```text
 
 ✅ **Workaround** (use a special key):
+
 ```json
 {
   "_comment": "This is metadata",
   "name": "John"
 }
-```
+```text
 
 ### Debugging Tips
 
@@ -593,6 +632,7 @@ class Person {
 ## Quick Reference
 
 ### Data Types
+
 | Type | Example |
 |------|---------|
 | String | `"Hello"` |
@@ -603,6 +643,7 @@ class Person {
 | Object | `{"key": "value"}` |
 
 ### Escape Sequences
+
 | Sequence | Meaning |
 |----------|---------|
 | `\"` | Double quote |
@@ -620,11 +661,13 @@ class Person {
 ## Additional Resources
 
 ### Tools
+
 - **jq**: Command-line JSON processor
 - **Postman**: API testing with JSON
 - **VS Code**: JSON editing with IntelliSense
 
 ### Documentation
+
 - [JSON.org](https://www.json.org/)
 - [MDN JSON Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [JSON Schema](https://json-schema.org/)

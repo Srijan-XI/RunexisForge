@@ -1,4 +1,4 @@
-```
+```python
 import { describe, expect, it } from "vitest";
 
 // Q1: Write tests
@@ -19,4 +19,4 @@ describe("isEven", () => {
     expect(isEven(0)).toBe(true);
   });
 });
-```
+```python

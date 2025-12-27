@@ -3,6 +3,7 @@
 ## Run Loki + Promtail (docker-compose)
 
 **docker-compose.yaml:**
+
 ```yaml
 version: '3'
 services:
@@ -17,9 +18,10 @@ services:
       - /var/log:/var/log
       - ./promtail-config.yaml:/etc/promtail/config.yml
     command: -config.file=/etc/promtail/config.yml
-```
+```bash
 
 **promtail-config.yaml:**
+
 ```yaml
 server:
   http_listen_port: 9080
@@ -35,27 +37,41 @@ scrape_configs:
         labels:
           job: varlogs
           __path__: /var/log/*.log
-```
+```bash
 
 ## Query with LogQL
+
 - Recent logs for job:
+
   ```
+
   {job="varlogs"}
+
   ```
+
 - Filter by substring:
+
   ```
+
   {job="varlogs"} |= "error"
+
   ```
+
 - Count errors per level:
+
   ```
+
   sum by (level) (count_over_time({job="varlogs", level="error"}[5m]))
+
   ```
 
 ## Best practices
+
 - Keep label cardinality low; avoid unique IDs as labels
 - Use consistent labels (env, service, pod)
 - Ship logs via Promtail, Fluent Bit, or Vector
 
 ## References
-- https://grafana.com/oss/loki/
-- LogQL: https://grafana.com/docs/loki/latest/logql/
+
+- <https://grafana.com/oss/loki/>
+- LogQL: <https://grafana.com/docs/loki/latest/logql/>

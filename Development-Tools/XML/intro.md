@@ -20,6 +20,7 @@
 ## Key Features
 
 ### 1. **Hierarchical Structure**
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <library>
@@ -36,9 +37,10 @@
         <genre>Dystopian</genre>
     </book>
 </library>
-```
+```bash
 
 ### 2. **Attributes and Elements**
+
 ```xml
 <!-- Element-centric -->
 <person>
@@ -49,16 +51,17 @@
 
 <!-- Attribute-centric -->
 <person name="John Doe" age="30" city="New York"/>
-```
+```bash
 
 ### 3. **Namespaces**
+
 ```xml
 <root xmlns:book="http://example.com/books"
       xmlns:auth="http://example.com/authors">
     <book:title>XML Guide</book:title>
     <auth:name>Jane Smith</auth:name>
 </root>
-```
+```bash
 
 ---
 
@@ -76,6 +79,7 @@
 ## Common Use Cases
 
 ### 1. **Configuration Files**
+
 ```xml
 <?xml version="1.0"?>
 <configuration>
@@ -90,9 +94,10 @@
         <timeout>30</timeout>
     </settings>
 </configuration>
-```
+```bash
 
 ### 2. **Web Services (SOAP)**
+
 ```xml
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Header/>
@@ -102,9 +107,10 @@
         </GetUserRequest>
     </soap:Body>
 </soap:Envelope>
-```
+```bash
 
 ### 3. **Data Exchange**
+
 ```xml
 <?xml version="1.0"?>
 <invoice>
@@ -123,9 +129,10 @@
     </items>
     <total>250.00</total>
 </invoice>
-```
+```bash
 
 ### 4. **Document Formats**
+
 - **Office Documents**: .docx, .xlsx, .pptx (Office Open XML)
 - **SVG**: Scalable Vector Graphics
 - **RSS/Atom**: News feeds
@@ -153,6 +160,7 @@
 ## XML Document Structure
 
 ### Complete XML Document
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE note SYSTEM "note.dtd">
@@ -162,9 +170,10 @@
     <heading>Reminder</heading>
     <body>Don't forget me this weekend!</body>
 </note>
-```
+```bash
 
 **Components**:
+
 1. **XML Declaration**: `<?xml version="1.0" encoding="UTF-8"?>`
 2. **DOCTYPE**: `<!DOCTYPE note SYSTEM "note.dtd">`
 3. **Root Element**: `<note>...</note>`
@@ -191,7 +200,7 @@ Avoid naming conflicts when combining XML from different sources:
         <f:height>40</f:height>
     </f:table>
 </root>
-```
+```bash
 
 ---
 
@@ -213,13 +222,14 @@ Define structure and validation rules:
         </xs:complexType>
     </xs:element>
 </xs:schema>
-```
+```bash
 
 ---
 
 ## XPath and XQuery
 
 ### XPath Examples
+
 ```xpath
 // Select all book titles
 /library/book/title
@@ -232,31 +242,35 @@ Define structure and validation rules:
 
 // Select all authors
 //author
-```
+```bash
 
 ### XQuery Example
+
 ```xquery
 for $book in /library/book
 where $book/year > 1950
 order by $book/title
 return $book/title
-```
+```bash
 
 ---
 
 ## Popular XML Technologies
 
 ### Processing
+
 - **DOM**: Document Object Model (tree-based)
 - **SAX**: Simple API for XML (event-based)
 - **StAX**: Streaming API for XML (pull parsing)
 
 ### Transformation
+
 - **XSLT**: Transform XML to other formats
 - **XPath**: Navigate XML documents
 - **XQuery**: Query XML data
 
 ### Validation
+
 - **DTD**: Document Type Definition
 - **XSD**: XML Schema Definition
 - **RelaxNG**: Alternative schema language
@@ -279,6 +293,7 @@ return $book/title
 ## XML Tools and Editors
 
 ### Editors
+
 - **Oxygen XML Editor**: Professional XML IDE
 - **XMLSpy**: Altova XML development tool
 - **VS Code**: With XML extensions
@@ -286,11 +301,13 @@ return $book/title
 - **Notepad++**: Basic XML editing
 
 ### Validators
+
 - **W3C Validator**: Online XML validation
 - **XMLLint**: Command-line tool
 - **xmlstarlet**: Command-line XML toolkit
 
 ### Libraries by Language
+
 - **Java**: JAXB, DOM4J, XStream
 - **Python**: lxml, ElementTree, minidom
 - **C#**: System.Xml, LINQ to XML
@@ -331,6 +348,7 @@ Escape special characters:
 ## Security Considerations
 
 ⚠️ **XML Security Issues**:
+
 - **XML External Entity (XXE)**: Disable external entity processing
 - **Billion Laughs Attack**: Entity expansion DoS
 - **XPath Injection**: Sanitize user input
@@ -342,16 +360,19 @@ Escape special characters:
 ## Learning Resources
 
 ### Official Documentation
+
 - [W3C XML Specification](https://www.w3.org/XML/)
 - [W3Schools XML Tutorial](https://www.w3schools.com/xml/)
 
 ### Standards
+
 - [XML 1.0 Specification](https://www.w3.org/TR/xml/)
 - [XML Schema](https://www.w3.org/XML/Schema)
 - [XPath](https://www.w3.org/TR/xpath/)
 - [XSLT](https://www.w3.org/TR/xslt/)
 
 ### Books
+
 - "Learning XML" by Erik T. Ray
 - "XML in a Nutshell" by Elliotte Rusty Harold
 - "XSLT" by Doug Tidwell

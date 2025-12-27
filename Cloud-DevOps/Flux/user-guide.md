@@ -10,12 +10,13 @@ curl -s https://fluxcd.io/install.sh | sudo bash
 
 # Windows (via scoop)
 scoop install flux
-```
+```bash
 
 Verify:
+
 ```bash
 flux --version
-```
+```bash
 
 ---
 
@@ -34,9 +35,10 @@ flux bootstrap github \
   --branch=main \
   --path=clusters/my-cluster \
   --personal
-```
+```bash
 
 This:
+
 1. Installs Flux in the cluster
 2. Creates a GitHub repo (`fleet-infra`)
 3. Commits Flux manifests to `clusters/my-cluster/`
@@ -57,12 +59,13 @@ spec:
   url: https://github.com/yourorg/yourapp
   ref:
     branch: main
-```
+```bash
 
 Apply:
+
 ```bash
 kubectl apply -f gitrepository.yaml
-```
+```bash
 
 ---
 
@@ -82,12 +85,13 @@ spec:
   path: ./k8s
   prune: true
   wait: true
-```
+```bash
 
 Apply:
+
 ```bash
 kubectl apply -f kustomization.yaml
-```
+```bash
 
 Flux will now sync `./k8s` from the Git repo every 5 minutes.
 
@@ -121,7 +125,7 @@ spec:
         namespace: flux-system
   values:
     replicaCount: 2
-```
+```bash
 
 Apply both resources; Flux will install the Helm chart.
 
@@ -140,7 +144,7 @@ metadata:
 spec:
   image: ghcr.io/yourorg/myapp
   interval: 1m
-```
+```bash
 
 ### 2. Define an ImagePolicy (semver, regex, etc.)
 
@@ -156,11 +160,12 @@ spec:
   policy:
     semver:
       range: '>=1.0.0'
-```
+```bash
 
 ### 3. Annotate your deployment
 
 In your Git repo's deployment YAML:
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -172,7 +177,7 @@ spec:
       containers:
       - name: myapp
         image: ghcr.io/yourorg/myapp:1.0.0 # {"$imagepolicy": "flux-system:myapp"}
-```
+```bash
 
 ### 4. Create an ImageUpdateAutomation
 
@@ -195,9 +200,10 @@ spec:
   update:
     path: ./k8s
     strategy: Setters
-```
+```bash
 
 Flux will now:
+
 - Scan for new images
 - Update the YAML in Git
 - Commit + push
@@ -219,7 +225,7 @@ flux get kustomizations --watch
 
 # Reconcile immediately
 flux reconcile kustomization myapp --with-source
-```
+```bash
 
 ---
 
@@ -231,11 +237,12 @@ flux suspend kustomization myapp
 
 # Resume
 flux resume kustomization myapp
-```
+```bash
 
 ---
 
 ## Best practices
+
 - Separate infrastructure (Flux itself) from apps
 - Use multi-tenancy with namespaces and service accounts
 - Pin image tags or use semver policies
@@ -244,5 +251,6 @@ flux resume kustomization myapp
 ---
 
 ## References
-- Docs: https://fluxcd.io/flux/
-- Guides: https://fluxcd.io/flux/guides/
+
+- Docs: <https://fluxcd.io/flux/>
+- Guides: <https://fluxcd.io/flux/guides/>

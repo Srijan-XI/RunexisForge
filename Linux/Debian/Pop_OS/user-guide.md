@@ -13,18 +13,20 @@
 ## Pop Shell (Tiling)
 
 ### Enable Auto-Tiling
-```
+
+```bash
 Super + Y (toggle tiling)
-```
+```bash
 
 ### Keyboard Shortcuts
-```
+
+```bash
 Super + Enter - Terminal
 Super + / - Launcher
 Super + O - Workspaces
 Super + Arrow Keys - Move focus
 Super + Shift + Arrow Keys - Move windows
-```
+```bash
 
 ---
 
@@ -39,23 +41,25 @@ sudo apt install <package>
 
 # Flatpak (pre-installed)
 flatpak install <app>
-```
+```bash
 
 ---
 
 ## Gaming
 
 ### Install Steam
+
 ```bash
 # Via Pop!_Shop or
 sudo apt install steam
-```
+```bash
 
 ### GameMode (pre-installed)
+
 ```bash
 # Runs automatically with games
 gamemoderun <game>
-```
+```bash
 
 ---
 

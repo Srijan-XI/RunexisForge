@@ -17,26 +17,23 @@ This guide details professional, repeatable methods for installing and configuri
 - Optionally, add components for older toolsets (v141, v140), MFC, and cross-platform tools as needed.
 - Post-install, you can add/remove workloads via **Tools > Get Tools and Features...** in Visual Studio.
 
-
 #### 2. GCC/Clang via MinGW-w64 + MSYS2
 
 - Download and install **MSYS2** for a modern GCC/Clang experience.
 - In the MSYS2 terminal, run
 
-```
+```bash
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
-```
+```bash
 
 - Add the MinGW-w64 `bin` directory (usually `C:\msys64\ucrt64\bin`) to your system `PATH`.
 - This setup gives access to `gcc`, `g++`, `clang`, and debugging tools for native Windows binaries.
-
 
 ### B. Professional IDE and Editor Integration
 
 - **Visual Studio**: Full-featured IDE with code intelligence, debugging, static analysis, and project/solution management.
 - **Visual Studio Code**: Install the C/C++ extensions ("C/C++" by Microsoft); configure the editor to use MSVC, MinGW, or Clang toolchains by customizing `tasks.json` and `c_cpp_properties.json`.
 - Other IDEs: CLion, Code::Blocks, Dev-C++ (becoming less common for large teams).
-
 
 ### C. Build \& Debug
 
@@ -47,7 +44,8 @@ pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 | Debug (MSVC, IDE) | Use F5/F9 for breakpoints and step-through |
 | Debug (GDB) | `gdb myapp.exe` in terminal |
 
-### D. See the Guide-part02.md file 
+### D. See the Guide-part02.md file
+
 if above option not work then use `guide-part02.md` file for easy installation steps.
 
 ## 2. Linux
@@ -64,25 +62,23 @@ if above option not work then use `guide-part02.md` file for easy installation s
 ```bash
 sudo apt-get update
 sudo apt-get install build-essential clang cmake gdb
-```
+```bash
 
 - Fedora/Red Hat:
 
 ```bash
 sudo dnf groupinstall "Development Tools"
 sudo dnf install clang cmake gdb
-```
+```bash
 
 - Verify installation:
 `gcc --version` and `clang --version`.
-
 
 ### B. IDEs and Editors
 
 - **VS Code**: Install the "C/C++" extension. Configure `tasks.json` for build tasks, `launch.json` for debugging.
 - **CLion**: Commercial, but popular for large codebases.
 - **Eclipse CDT**, Qt Creator: Good for embedded and cross-platform GUI work.
-
 
 ### C. Build \& Debug
 
@@ -106,10 +102,9 @@ sudo dnf install clang cmake gdb
 
 ```bash
 xcode-select --install
-```
+```bash
 
 - Both methods provide `clang`, Apple’s officially supported C/C++ compiler.
-
 
 #### 2. Homebrew Tools
 
@@ -117,21 +112,19 @@ xcode-select --install
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+```bash
 
 - Then:
 
 ```bash
 brew install gcc cmake gdb
-```
-
+```bash
 
 ### B. IDEs \& Editors
 
 - **Xcode IDE**: Full-featured, ideal for Apple platforms, supports C and C++ as “Command Line Tool” projects.
 - **VS Code**: Add the "C/C++" and "CMake Tools" extensions. Configure similar to Linux for Clang/GCC toolchains.
 - **Sublime Text**, CLion, Qt Creator: Also well supported.
-
 
 ### C. Build \& Debug
 
@@ -150,13 +143,11 @@ Unified build system with support for MSVC, GCC, Clang across platforms.
 - Prefer source control (e.g., Git) with code on GitHub/GitLab.
 - Always configure compilers to emit the highest warning levels (`-Wall -Wextra` or `/W4`).
 
-
 ## 5. Troubleshooting \& Advanced Usage
 
 - **Environment Variables**: Always add compiler `bin` directories to the system `PATH` after installation.
 - **Multiple Toolchains**: For advanced scenarios, use Docker or VMs to compartmentalize builds.
 - **Documentation**: Refer to each compiler's and IDE’s official user guide for advanced build settings and integration.
-
 
 ## Summary Table
 
@@ -169,4 +160,3 @@ Unified build system with support for MSVC, GCC, Clang across platforms.
 **Tip:** Always keep your compiler and IDE updated for performance, security, and standards compliance.
 
 *References are available upon request or review the guides linked for each platform for live walkthroughs and further reading.*
-

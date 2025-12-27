@@ -65,40 +65,45 @@ This is an educational repository with example code. Please note:
 For language-specific security guidelines, refer to:
 
 ### Programming Languages
-- **Python**: https://python.readthedocs.io/en/stable/library/security_warnings.html
-- **Java**: https://www.oracle.com/java/technologies/javase/seccodeguide.html
-- **JavaScript**: https://developer.mozilla.org/en-US/docs/Web/Security
-- **TypeScript**: https://www.typescriptlang.org/docs/handbook/release-notes/overview.html
-- **PHP**: https://www.php.net/manual/en/security.php
-- **C/C++**: https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard
-- **Rust**: https://rust-lang.github.io/rust-clippy/
-- **R**: https://cran.r-project.org/web/packages/security/
-- **Go**: https://go.dev/doc/security/
+
+- **Python**: <https://python.readthedocs.io/en/stable/library/security_warnings.html>
+- **Java**: <https://www.oracle.com/java/technologies/javase/seccodeguide.html>
+- **JavaScript**: <https://developer.mozilla.org/en-US/docs/Web/Security>
+- **TypeScript**: <https://www.typescriptlang.org/docs/handbook/release-notes/overview.html>
+- **PHP**: <https://www.php.net/manual/en/security.php>
+- **C/C++**: <https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard>
+- **Rust**: <https://rust-lang.github.io/rust-clippy/>
+- **R**: <https://cran.r-project.org/web/packages/security/>
+- **Go**: <https://go.dev/doc/security/>
 
 ### Frameworks
-- **Django**: https://docs.djangoproject.com/en/stable/topics/security/
-- **Flask**: https://flask.palletsprojects.com/en/stable/security/
-- **Node.js**: https://nodejs.org/en/docs/guides/security/
-- **Express.js**: https://expressjs.com/en/advanced/best-practice-security.html
-- **Next.js**: https://nextjs.org/docs/app/building-your-application/deploying/production-checklist
+
+- **Django**: <https://docs.djangoproject.com/en/stable/topics/security/>
+- **Flask**: <https://flask.palletsprojects.com/en/stable/security/>
+- **Node.js**: <https://nodejs.org/en/docs/guides/security/>
+- **Express.js**: <https://expressjs.com/en/advanced/best-practice-security.html>
+- **Next.js**: <https://nextjs.org/docs/app/building-your-application/deploying/production-checklist>
 
 ### Databases
-- **MySQL**: https://dev.mysql.com/doc/refman/8.0/en/security.html
-- **PostgreSQL**: https://www.postgresql.org/docs/current/security.html
-- **MongoDB**: https://www.mongodb.com/docs/manual/security/
-- **Redis**: https://redis.io/docs/management/security/
-- **DynamoDB**: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/security.html
+
+- **MySQL**: <https://dev.mysql.com/doc/refman/8.0/en/security.html>
+- **PostgreSQL**: <https://www.postgresql.org/docs/current/security.html>
+- **MongoDB**: <https://www.mongodb.com/docs/manual/security/>
+- **Redis**: <https://redis.io/docs/management/security/>
+- **DynamoDB**: <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/security.html>
 
 ### DevOps & Tools
-- **Docker**: https://docs.docker.com/engine/security/
-- **Git**: https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
-- **Jenkins**: https://www.jenkins.io/doc/book/security/
-- **GitHub**: https://docs.github.com/en/code-security
-- **Bash**: https://mywiki.wooledge.org/BashGuide/Practices#Security
+
+- **Docker**: <https://docs.docker.com/engine/security/>
+- **Git**: <https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage>
+- **Jenkins**: <https://www.jenkins.io/doc/book/security/>
+- **GitHub**: <https://docs.github.com/en/code-security>
+- **Bash**: <https://mywiki.wooledge.org/BashGuide/Practices#Security>
 
 ### Testing & API Tools
-- **Jest**: https://jestjs.io/docs/configuration#testenvironment-string
-- **Postman**: https://learning.postman.com/docs/sending-requests/authorization/
-- **KQL**: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/security-roles
+
+- **Jest**: <https://jestjs.io/docs/configuration#testenvironment-string>
+- **Postman**: <https://learning.postman.com/docs/sending-requests/authorization/>
+- **KQL**: <https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/security-roles>
 
 Thank you for helping keep this educational resource safe and secure!

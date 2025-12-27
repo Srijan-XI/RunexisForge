@@ -13,6 +13,7 @@ This guide provides ready-to-use GitHub Actions workflows for common CI/CD tasks
 ## Node.js CI
 
 **.github/workflows/node-ci.yml**
+
 ```yaml
 name: Node.js CI
 
@@ -37,13 +38,14 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm test
-```
+```bash
 
 ---
 
 ## Python CI
 
 **.github/workflows/python-ci.yml**
+
 ```yaml
 name: Python CI
 
@@ -67,13 +69,14 @@ jobs:
           pip install -r requirements.txt
       - name: Run tests
         run: pytest
-```
+```bash
 
 ---
 
 ## Docker build and push
 
 **.github/workflows/docker.yml**
+
 ```yaml
 name: Docker Build
 
@@ -115,13 +118,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-```
+```text
 
 ---
 
 ## Deploy to GitHub Pages
 
 **.github/workflows/pages.yml**
+
 ```yaml
 name: Deploy to Pages
 
@@ -158,13 +162,14 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-```
+```text
 
 ---
 
 ## Terraform/OpenTofu
 
 **.github/workflows/terraform.yml**
+
 ```yaml
 name: Terraform
 
@@ -195,13 +200,14 @@ jobs:
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
-```
+```bash
 
 ---
 
 ## Security scanning (CodeQL)
 
 **.github/workflows/codeql.yml**
+
 ```yaml
 name: CodeQL
 
@@ -234,13 +240,14 @@ jobs:
       
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
-```
+```bash
 
 ---
 
 ## Release automation
 
 **.github/workflows/release.yml**
+
 ```yaml
 name: Release
 
@@ -267,11 +274,12 @@ jobs:
         with:
           files: dist/*
           generate_release_notes: true
-```
+```bash
 
 ---
 
 ## Tips
+
 - Use `secrets.GITHUB_TOKEN` for authentication (auto-provided)
 - Cache dependencies to speed up builds
 - Use matrix builds to test multiple versions
@@ -280,5 +288,6 @@ jobs:
 ---
 
 ## References
-- Docs: https://docs.github.com/en/actions
-- Marketplace: https://github.com/marketplace?type=actions
+
+- Docs: <https://docs.github.com/en/actions>
+- Marketplace: <https://github.com/marketplace?type=actions>

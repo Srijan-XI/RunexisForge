@@ -5,6 +5,7 @@
 ⚠️ **RAGE Engine is proprietary to Rockstar Games and is NOT available for public use, licensing, or external development.**
 
 This guide covers:
+
 - Understanding Rage from a technical perspective
 - Modding existing Rage-powered games (GTA V, RDR2)
 - Learning concepts for your own engine development
@@ -17,6 +18,7 @@ This guide covers:
 ### GTA V Modding Setup
 
 #### Prerequisites
+
 - **GTA V**: Legitimate Steam/Epic/Rockstar copy
 - **Windows PC**: 64-bit
 - **Storage**: 100+ GB free space
@@ -27,19 +29,21 @@ This guide covers:
 ### Essential Modding Tools
 
 #### 1. Script Hook V
+
 **Purpose**: Native function access for custom scripts
 
-```
+```yaml
 Installation:
 1. Download from: http://www.dev-c.com/gtav/scripthookv/
 2. Extract to GTA V root folder
 3. Files: ScriptHookV.dll, dinput8.dll
-```
+```bash
 
 #### 2. OpenIV
+
 **Purpose**: Game archive editor
 
-```
+```yaml
 Installation:
 1. Download from: https://openiv.com/
 2. Install OpenIV
@@ -47,17 +51,18 @@ Installation:
 4. Set GTA V game path
 5. Enable Edit Mode
 6. Create "mods" folder (recommended)
-```
+```bash
 
 #### 3. Community Script Hook V .NET
+
 **Purpose**: .NET script support
 
-```
+```yaml
 Installation:
 1. Download ScriptHookVDotNet
 2. Extract to GTA V folder
 3. Requires .NET Framework 4.8
-```
+```bash
 
 ---
 
@@ -65,7 +70,7 @@ Installation:
 
 #### Installing Texture Mods
 
-```
+```bash
 Using OpenIV:
 1. Launch OpenIV
 2. Enable Edit Mode
@@ -74,21 +79,21 @@ Using OpenIV:
 5. Replace textures (.ytd files)
 6. Rebuild archive
 7. Launch game
-```
+```bash
 
 #### Installing Script Mods
 
-```
+```bash
 1. Download .dll or .asi mod
 2. Place in GTA V\scripts\ folder
 3. Ensure Script Hook V is installed
 4. Launch game
 5. Mod loads automatically
-```
+```bash
 
 #### Installing Vehicle Mods
 
-```
+```bash
 1. Download vehicle mod (.zip)
 2. Extract files
 3. Use OpenIV to navigate to:
@@ -97,25 +102,28 @@ Using OpenIV:
 5. Import vehicle files (.yft, .ytd, etc.)
 6. Edit vehicles.meta
 7. Save and rebuild
-```
+```bash
 
 ---
 
 ### Popular Mods
 
 #### Graphics Enhancement
+
 - **NaturalVision Evolved**: Photorealistic graphics
 - **Redux**: Complete visual overhaul
 - **QuantV**: Realistic lighting and weather
 - **VisualV**: Enhanced visuals
 
 #### Gameplay
+
 - **LSPDFR**: Police roleplay
 - **Menyoo PC**: Trainer/object spawner
 - **Simple Trainer**: Extensive trainer
 - **Realistic Driving V**: Improved vehicle physics
 
 #### Multiplayer
+
 - **FiveM**: Custom multiplayer framework
 - **RageMP**: Alternative multiplayer
 - **alt:V**: Multiplayer client
@@ -126,18 +134,18 @@ Using OpenIV:
 
 #### Game Won't Launch
 
-```
+```yaml
 Solutions:
 1. Verify game files (Steam/Epic)
 2. Remove recent mods
 3. Check Script Hook V version
 4. Update graphics drivers
 5. Run as Administrator
-```
+```bash
 
 #### Crashes During Gameplay
 
-```
+```bash
 Possible causes:
 - Conflicting mods
 - Outdated Script Hook V
@@ -149,18 +157,18 @@ Solutions:
 2. Update all modding tools
 3. Restore backup files
 4. Use fewer resource-heavy mods
-```
+```bash
 
 #### Mods Not Loading
 
-```
+```yaml
 Check:
 1. Scripts folder exists: GTA V\scripts\
 2. Script Hook V installed correctly
 3. Mod files in correct location
 4. No spaces in file paths
 5. Read mod installation instructions
-```
+```bash
 
 ---
 
@@ -169,22 +177,25 @@ Check:
 ### Tools for RDR2
 
 #### Script Hook RDR2
-```
+
+```bash
 Similar to GTA V Script Hook
 Download: http://www.dev-c.com/rdr2/scripthookrdr2/
-```
+```bash
 
 #### Lenny's Mod Loader
-```
+
+```bash
 Popular mod loader for RDR2
 Loads .lml files
-```
+```bash
 
 #### Red Dead Offline
-```
+
+```bash
 Bypasses online check for modding
 Required for most mods
-```
+```bash
 
 ---
 
@@ -193,12 +204,14 @@ Required for most mods
 ### Studying Open-World Streaming
 
 **Concepts to Learn**:
+
 - **Level of Detail (LOD)**: Multiple model qualities
 - **Occlusion Culling**: Don't render hidden objects
 - **Streaming**: Load/unload assets dynamically
 - **Memory Pools**: Efficient allocation
 
 **Applicable Engines**:
+
 - Unreal Engine 5 (World Partition)
 - Unity (Addressables)
 - Custom engines
@@ -208,12 +221,14 @@ Required for most mods
 ### Physics Implementation
 
 **Rage Physics Features**:
+
 - Vehicle suspension
 - Ragdoll physics (Euphoria)
 - Cloth simulation
 - Destructible environments
 
 **Learn Similar In**:
+
 ```cpp
 // Unreal Engine - Vehicle Physics
 UPROPERTY(EditAnywhere, Category = "Vehicle")
@@ -222,19 +237,21 @@ float SuspensionStiffness = 50.0f;
 // Unity - Cloth Component
 Cloth cloth = GetComponent<Cloth>();
 cloth.stretchingStiffness = 0.5f;
-```
+```bash
 
 ---
 
 ### AI Systems Study
 
 **Rage AI Behaviors**:
+
 - Pedestrian navigation
 - Traffic simulation
 - Police pursuit
 - Gang territories
 
 **Implement Similar**:
+
 ```csharp
 // Unity NavMesh AI
 NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -245,7 +262,7 @@ if (distanceToPlayer < 10f)
 {
     ChangeState(AIState.Alert);
 }
-```
+```bash
 
 ---
 
@@ -254,6 +271,7 @@ if (distanceToPlayer < 10f)
 ### Graphics Programming Lessons
 
 **Study from GTA V/RDR2**:
+
 1. **Volumetric Fog**: Implement in Unreal/Unity
 2. **Dynamic Weather**: Create weather systems
 3. **Time of Day**: Implement day/night cycles
@@ -262,6 +280,7 @@ if (distanceToPlayer < 10f)
 ### Performance Optimization
 
 **Rage Optimization Techniques**:
+
 - Aggressive LOD
 - Efficient streaming
 - Draw call batching
@@ -269,13 +288,14 @@ if (distanceToPlayer < 10f)
 - Shader optimization
 
 **Apply to Your Projects**:
+
 ```cpp
 // Unreal Engine - LOD Setup
 StaticMeshComponent->SetForcedLodModel(lodLevel);
 
 // Unity - LOD Group
 LODGroup lodGroup = GetComponent<LODGroup>();
-```
+```bash
 
 ---
 
@@ -301,7 +321,8 @@ If building your own open-world game inspired by Rage:
 ### Recommended Engines for Open-World
 
 #### Unreal Engine 5
-```
+
+```bash
 Best for:
 - AAA-quality graphics
 - Large open worlds (World Partition)
@@ -313,10 +334,11 @@ Learning Path:
 2. Open World tutorial series
 3. Vehicle physics
 4. AI and behavior trees
-```
+```bash
 
 #### Unity
-```
+
+```bash
 Best for:
 - Flexibility
 - Faster prototyping
@@ -328,7 +350,7 @@ Learning Path:
 2. DOTS for performance
 3. Addressables for streaming
 4. NavMesh AI
-```
+```bash
 
 ---
 
@@ -337,6 +359,7 @@ Learning Path:
 ### What Makes GTA V Special
 
 **Technical Breakdown**:
+
 1. **Three Protagonists**: Seamless character switching
 2. **Diverse Environments**: City, desert, ocean, mountains
 3. **Traffic System**: 1000s of vehicles
@@ -344,6 +367,7 @@ Learning Path:
 5. **Online Integration**: Persistent multiplayer world
 
 **Lessons**:
+
 - Scope management is crucial
 - Polish takes time (5 years development)
 - Performance optimization is key
@@ -354,6 +378,7 @@ Learning Path:
 ### Red Dead Redemption 2 Analysis
 
 **Innovations**:
+
 1. **NPC Routines**: Complex daily schedules
 2. **Dynamic Weather**: Mud, snow accumulation
 3. **Horse Physics**: Realistic animal simulation
@@ -361,6 +386,7 @@ Learning Path:
 5. **Survival Elements**: Eating, sleeping, bathing
 
 **Lessons**:
+
 - Detail creates immersion
 - Systems interconnect
 - Player agency matters
@@ -371,6 +397,7 @@ Learning Path:
 ## Best Practices (From Rage Analysis)
 
 ### World Design
+
 1. **Density**: Fill world with content
 2. **Variety**: Mix urban, rural, natural
 3. **Verticality**: Use height for interest
@@ -378,6 +405,7 @@ Learning Path:
 5. **Secrets**: Reward exploration
 
 ### Performance
+
 1. **LOD Everything**: Models, textures, audio
 2. **Streaming Zones**: Smart loading
 3. **Occlusion**: Don't render hidden
@@ -385,6 +413,7 @@ Learning Path:
 5. **Profiling**: Constantly measure performance
 
 ### Game Feel
+
 1. **Responsive Controls**: Tight input
 2. **Camera Work**: Smooth, dynamic
 3. **Audio Feedback**: Satisfying sounds
@@ -398,17 +427,20 @@ Learning Path:
 ### Modding Guidelines
 
 ✅ **Allowed**:
+
 - Singleplayer mods
 - Local game modifications
 - Personal use
 
 ❌ **Prohibited**:
+
 - Online multiplayer mods (ban risk)
 - Selling mods
 - Redistributing game assets
 - Malicious scripts
 
 ⚠️ **Always**:
+
 - Backup game files
 - Use mods at your own risk
 - Respect Terms of Service
@@ -419,17 +451,20 @@ Learning Path:
 ## Learning Resources
 
 ### Technical Analysis
+
 - **Digital Foundry**: Graphics analysis videos
 - **GDC Talks**: Game development insights
 - **Gamasutra/GameDeveloper**: Technical articles
 
 ### Modding Communities
+
 - [GTA5-Mods.com](https://www.gta5-mods.com/)
 - [GTAForums](https://gtaforums.com/)
 - [r/GrandTheftAutoV_PC](https://www.reddit.com/r/GrandTheftAutoV_PC/)
 - [FiveM Forums](https://forum.cfx.re/)
 
 ### Game Development
+
 - [Unreal Engine Docs](https://docs.unrealengine.com/)
 - [Unity Learn](https://learn.unity.com/)
 - [GDC Vault](https://gdcvault.com/)
@@ -454,6 +489,7 @@ Since Rage is proprietary, consider:
 ## Final Thoughts
 
 While you cannot directly use Rage Engine, you can:
+
 - ✅ Mod existing Rage games (singleplayer)
 - ✅ Study and learn from Rage's achievements
 - ✅ Apply concepts to your own projects

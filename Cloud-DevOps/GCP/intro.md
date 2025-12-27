@@ -3,6 +3,7 @@
 Google Cloud Platform provides compute, storage, databases, AI/ML, and networking services on Google's infrastructure.
 
 ## Core Services
+
 - Compute: Compute Engine, Cloud Run, GKE, App Engine
 - Storage: Cloud Storage, Filestore
 - Data: BigQuery, Cloud SQL, Firestore/Datastore, Spanner
@@ -10,5 +11,6 @@ Google Cloud Platform provides compute, storage, databases, AI/ML, and networkin
 - IAM and Security: IAM roles, Service Accounts, Cloud KMS
 
 ## Resources
-- Docs: https://cloud.google.com/docs
-- Console: https://console.cloud.google.com
+
+- Docs: <https://cloud.google.com/docs>
+- Console: <https://console.cloud.google.com>

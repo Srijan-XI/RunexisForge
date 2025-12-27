@@ -50,19 +50,19 @@ assignees: ''
 
 **If requesting a new language, please provide:**
 
-- Language name and version: 
-- Official website: 
-- Why this language is important: 
+- Language name and version:
+- Official website:
+- Why this language is important:
 - Are you willing to contribute the content? [ ] Yes [ ] No
 
 <!-- For new questions -->
 
 **If proposing new practice questions:**
 
-- Language: 
+- Language:
 - Difficulty level: [ ] Beginner [ ] Intermediate [ ] Advanced
-- Topic/Concept: 
-- Number of questions: 
+- Topic/Concept:
+- Number of questions:
 
 ## 🖼️ Examples/References
 

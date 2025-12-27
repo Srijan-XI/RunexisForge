@@ -6,13 +6,13 @@
 title = "DevSphere"
 version = 1
 active = true
-```
+```bash
 
 ## Arrays
 
 ```toml
 ports = [3000, 8080]
-```
+```bash
 
 ## Tables
 
@@ -20,7 +20,7 @@ ports = [3000, 8080]
 [database]
 host = "localhost"
 port = 5432
-```
+```bash
 
 ## Nested tables
 
@@ -30,6 +30,6 @@ name = "demo"
 
 [app.logging]
 level = "info"
-```
+```bash
 
 See `TOML/examples/example.toml` for a full sample.

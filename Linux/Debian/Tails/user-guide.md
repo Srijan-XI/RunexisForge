@@ -15,6 +15,7 @@
 ## First Boot
 
 ### Boot Menu
+
 1. Access BIOS/UEFI
 2. Select USB as boot device
 3. Tails boot menu appears
@@ -25,13 +26,14 @@
 ## Using Tails
 
 ### Tor Browser
+
 - Pre-configured for anonymity
 - Never use personal accounts
 - HTTPS Everywhere enabled
 
 ### Persistent Storage (Optional)
 
-```
+```bash
 Applications → Tails → Configure persistent volume
 1. Create passphrase
 2. Select what to save:
@@ -40,7 +42,7 @@ Applications → Tails → Configure persistent volume
    - Email client
    - Network connections
 3. Restart to activate
-```
+```bash
 
 ---
 
@@ -57,14 +59,16 @@ Applications → Tails → Configure persistent volume
 ## Tor Circuits
 
 ### View Circuit
-```
+
+```bash
 Tor Browser → Click lock icon → More information
-```
+```bash
 
 ### New Circuit
-```
+
+```bash
 Tor Browser → New Identity
-```
+```bash
 
 ---
 

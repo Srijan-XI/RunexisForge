@@ -20,6 +20,7 @@
 ## Key Features
 
 ### MX Tools
+
 - **MX Package Installer**: Easy software installation
 - **MX Snapshot**: System backup and restore
 - **MX Boot Repair**: Fix boot issues
@@ -27,6 +28,7 @@
 - **MX Live USB Maker**: Create live USBs
 
 ### Performance
+
 - **antiX Magic**: Efficient system design
 - **SysVinit & systemd**: Choice of init system
 - **AppImages**: Portable applications
@@ -36,14 +38,17 @@
 ## Editions
 
 ### MX-21 Xfce (Default)
+
 - Xfce 4.16 desktop
 - Full-featured
 
 ### MX-21 KDE
+
 - Plasma desktop
 - Modern interface
 
 ### MX-21 Fluxbox
+
 - Ultra-lightweight
 - For older systems
 

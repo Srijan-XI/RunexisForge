@@ -32,7 +32,7 @@ Swift is a modern, statically typed programming language created by Apple for bu
 import Foundation
 
 print("Hello, Swift!")
-```
+```bash
 
 ## Learning Path
 

@@ -11,7 +11,7 @@ This document categorizes the Python packages into:
 
 These packages come with Python or are often preinstalled via Jupyter, pip, or standard IDEs like PyCharm or VS Code:
 
-```
+```bash
 pip install 
 setuptools
 unittest
@@ -44,12 +44,15 @@ tornado
 pyzmq
 pywinpty
 wcwidth
-```
+```bash
+
 ## 🔧 Manually Installed Packages with Installation Commands
+
 Below are the packages you likely installed manually. Each comes with the corresponding pip command.
 
-### 📌 To install all at once:
-```
+### 📌 To install all at once
+
+```bash
 pip install annotated-types
 pip install anyio
 pip install argon-cffi
@@ -179,4 +182,4 @@ pip install Werkzeug
 pip install wsproto
 pip install zxcvbn
 
-```
+```bash

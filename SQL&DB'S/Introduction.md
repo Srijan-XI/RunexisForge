@@ -22,12 +22,14 @@ This guide covers multiple database systems, each with unique strengths:
 ### **Relational Databases (SQL)**
 
 #### **MySQL** 🐬
+
 - Most popular open-source RDBMS
 - Ideal for web applications
 - Great for small to medium-scale applications
 - Used by Facebook, Twitter, YouTube
 
 #### **PostgreSQL** 🐘
+
 - Advanced open-source RDBMS
 - ACID-compliant with strong data integrity
 - Excellent for complex queries and analytics
@@ -36,18 +38,21 @@ This guide covers multiple database systems, each with unique strengths:
 ### **NoSQL Databases**
 
 #### **MongoDB** 🍃
+
 - Document-oriented database
 - Stores data in JSON-like format (BSON)
 - Flexible schema design
 - Horizontal scaling support
 
 #### **Redis** 🔴
+
 - In-memory data structure store
 - Extremely fast (sub-millisecond latency)
 - Used for caching, sessions, real-time analytics
 - Supports various data structures
 
 #### **DynamoDB** ⚡
+
 - Fully managed NoSQL by AWS
 - Serverless and auto-scaling
 - Low latency at any scale
@@ -60,40 +65,46 @@ This guide covers multiple database systems, each with unique strengths:
 ### Core SQL Commands
 
 #### **Data Definition Language (DDL)**
+
 ```sql
 CREATE TABLE - Create new table
 ALTER TABLE  - Modify table structure
 DROP TABLE   - Delete table
 TRUNCATE     - Remove all records
-```
+```bash
 
 #### **Data Manipulation Language (DML)**
+
 ```sql
 SELECT - Retrieve data
 INSERT - Add new records
 UPDATE - Modify existing records
 DELETE - Remove records
-```
+```bash
 
 #### **Data Control Language (DCL)**
+
 ```sql
 GRANT  - Give user permissions
 REVOKE - Remove permissions
-```
+```bash
 
 #### **Transaction Control Language (TCL)**
+
 ```sql
 COMMIT   - Save changes
 ROLLBACK - Undo changes
 SAVEPOINT - Set transaction savepoint
-```
+```bash
 
 ---
 
 ## 🔑 Key Concepts
 
 ### **Tables**
+
 Organized collection of data in rows and columns
+
 ```sql
 CREATE TABLE users (
     id INT PRIMARY KEY,
@@ -101,21 +112,26 @@ CREATE TABLE users (
     email VARCHAR(100) UNIQUE,
     created_at TIMESTAMP
 );
-```
+```bash
 
 ### **Primary Key**
+
 Unique identifier for each record in a table
 
 ### **Foreign Key**
+
 Links records between tables, ensuring referential integrity
 
 ### **Index**
+
 Improves query performance by creating fast lookup structures
 
 ### **Normalization**
+
 Process of organizing data to reduce redundancy
 
 ### **ACID Properties**
+
 - **Atomicity**: All or nothing transactions
 - **Consistency**: Database remains in valid state
 - **Isolation**: Concurrent transactions don't interfere
@@ -139,6 +155,7 @@ Process of organizing data to reduce redundancy
 ## 🎓 When to Use Each Database
 
 ### **Use MySQL When:**
+
 - Building web applications (WordPress, Drupal)
 - Need reliable, proven technology
 - Working with structured data
@@ -146,6 +163,7 @@ Process of organizing data to reduce redundancy
 - LAMP/LEMP stack development
 
 ### **Use PostgreSQL When:**
+
 - Need advanced features (JSON, arrays, custom types)
 - Complex queries and analytics
 - Data integrity is critical
@@ -153,6 +171,7 @@ Process of organizing data to reduce redundancy
 - Enterprise applications
 
 ### **Use MongoDB When:**
+
 - Working with unstructured/semi-structured data
 - Rapid application development
 - Need flexible schema
@@ -160,6 +179,7 @@ Process of organizing data to reduce redundancy
 - Real-time analytics
 
 ### **Use Redis When:**
+
 - Need caching layer
 - Session management
 - Real-time leaderboards/counters
@@ -167,6 +187,7 @@ Process of organizing data to reduce redundancy
 - Sub-millisecond performance required
 
 ### **Use DynamoDB When:**
+
 - Building on AWS
 - Need serverless database
 - Unpredictable traffic patterns
@@ -211,7 +232,7 @@ Process of organizing data to reduce redundancy
 
 ## 📚 Database Selection Guide
 
-```
+```bash
 Need ACID compliance + Complex queries? 
     └─> PostgreSQL
 
@@ -226,13 +247,14 @@ Ultra-fast caching + Real-time data?
 
 AWS-based + Serverless + Auto-scaling?
     └─> DynamoDB
-```
+```bash
 
 ---
 
 ## 🛠️ Tools & Clients
 
 ### **GUI Tools**
+
 - **MySQL Workbench** - MySQL official tool
 - **pgAdmin** - PostgreSQL administration
 - **MongoDB Compass** - MongoDB GUI
@@ -241,6 +263,7 @@ AWS-based + Serverless + Auto-scaling?
 - **DBeaver** - Multi-platform database tool
 
 ### **Command-Line Tools**
+
 - **mysql** - MySQL CLI
 - **psql** - PostgreSQL CLI
 - **mongosh** - MongoDB Shell
@@ -252,6 +275,7 @@ AWS-based + Serverless + Auto-scaling?
 ## 📖 SQL Standards
 
 SQL has evolved through several standards:
+
 - **SQL-86**: First standard
 - **SQL-92**: Major revision
 - **SQL:1999**: Added procedural features
@@ -264,29 +288,33 @@ SQL has evolved through several standards:
 ## 🎯 Common SQL Patterns
 
 ### **Simple Query**
+
 ```sql
 SELECT name, email FROM users WHERE age > 18;
-```
+```bash
 
 ### **JOIN Tables**
+
 ```sql
 SELECT orders.id, users.name, orders.total
 FROM orders
 INNER JOIN users ON orders.user_id = users.id;
-```
+```bash
 
 ### **Aggregate Functions**
+
 ```sql
 SELECT COUNT(*), AVG(price), MAX(price)
 FROM products
 GROUP BY category;
-```
+```bash
 
 ### **Subquery**
+
 ```sql
 SELECT name FROM users
 WHERE id IN (SELECT user_id FROM orders WHERE total > 100);
-```
+```bash
 
 ---
 
@@ -326,7 +354,7 @@ WHERE id IN (SELECT user_id FROM orders WHERE total > 100);
 
 ## 📁 Repository Structure
 
-```
+```bash
 SQL/
 ├── MySQL/           # MySQL guides and examples
 ├── PostgreSQL/      # PostgreSQL guides and examples
@@ -334,7 +362,7 @@ SQL/
 ├── Redis/           # Redis guides and examples
 ├── DynamoDB/        # DynamoDB guides and examples
 └── questions/       # SQL practice questions
-```
+```bash
 
 ---
 

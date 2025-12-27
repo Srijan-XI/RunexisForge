@@ -1,7 +1,8 @@
 ## Q1_HelloWorld.component.ts
+
 Create a simple Angular component that displays `"Hello, World!"`
 
-```
+```python
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,4 +11,4 @@ import { Component } from '@angular/core';
   styles: ['h1 { color: #3f51b5; }']
 })
 export class HelloWorldComponent { }
-```
+```python

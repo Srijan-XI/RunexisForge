@@ -21,6 +21,7 @@
 ## History & Background
 
 ### Timeline
+
 - **2020**: CentOS announces shift to CentOS Stream
 - **2020**: Gregory Kurtzer announces Rocky Linux project
 - **2021**: Rocky Linux 8.4 released (June)
@@ -29,6 +30,7 @@
 - **2024**: Active development, stable releases
 
 ### Name Origin
+
 Named after Rocky McGaugh, co-founder of CentOS who passed away in 2004.
 
 ---
@@ -50,18 +52,21 @@ Named after Rocky McGaugh, co-founder of CentOS who passed away in 2004.
 ## Key Features
 
 ### Stability
+
 - **Long-term Support**: 10 years per major release
 - **Minimal Updates**: Security and bugfix only
 - **Production-Ready**: Enterprise stability
 - **Predictable**: No surprises, stable ABI
 
 ### Compatibility
+
 - **RHEL Binary Compatible**: Drop-in replacement
 - **Package Compatibility**: RPM packages from RHEL work
 - **Certification**: Many vendors support Rocky Linux
 - **Migration**: Easy migration from CentOS
 
 ### Security
+
 - **SELinux**: Security-Enhanced Linux enabled by default
 - **Firewalld**: Modern firewall management
 - **Regular Updates**: Security patches
@@ -81,6 +86,7 @@ Named after Rocky McGaugh, co-founder of CentOS who passed away in 2004.
 ## Use Cases
 
 ### Enterprise Servers
+
 - Web servers (Apache, Nginx)
 - Database servers (PostgreSQL, MySQL, MariaDB)
 - Application servers (JBoss, Tomcat)
@@ -88,18 +94,21 @@ Named after Rocky McGaugh, co-founder of CentOS who passed away in 2004.
 - Mail servers (Postfix, Dovecot)
 
 ### Cloud Infrastructure
+
 - OpenStack deployments
 - Kubernetes clusters
 - Container hosts (Docker, Podman)
 - Virtual machine hosts (KVM, oVirt)
 
 ### DevOps & CI/CD
+
 - Jenkins build servers
 - GitLab runners
 - Ansible control nodes
 - Development environments
 
 ### High-Performance Computing
+
 - Scientific computing
 - Research environments
 - Cluster computing
@@ -128,23 +137,26 @@ dnf search nginx
 
 # Get package info
 dnf info mariadb-server
-```
+```bash
 
 ---
 
 ## Editions
 
 ### Minimal Installation
+
 - Command-line only
 - Essential packages
 - Ideal for servers
 
 ### Server with GUI
+
 - GNOME desktop environment
 - Server tools
 - Graphical management
 
 ### Workstation
+
 - Full desktop environment
 - Development tools
 - Office applications
@@ -154,12 +166,14 @@ dnf info mariadb-server
 ## Support Lifecycle
 
 ### Rocky Linux 8
+
 - **Based on**: RHEL 8
 - **Release**: June 2021
 - **Support Until**: May 2029
 - **Kernel**: 4.18.x
 
 ### Rocky Linux 9
+
 - **Based on**: RHEL 9
 - **Release**: July 2022
 - **Support Until**: May 2032
@@ -170,12 +184,14 @@ dnf info mariadb-server
 ## Default Software
 
 ### System Tools
+
 - **SELinux**: Security framework
 - **Firewalld**: Firewall management
 - **Cockpit**: Web-based administration
 - **systemd**: System and service manager
 
 ### Package Repositories
+
 - BaseOS: Core OS packages
 - AppStream: Applications and runtime
 - Extras: Additional packages
@@ -186,6 +202,7 @@ dnf info mariadb-server
 ## Who Should Use Rocky Linux?
 
 ### Ideal For
+
 - Former CentOS users
 - Enterprise environments
 - Hosting providers
@@ -195,6 +212,7 @@ dnf info mariadb-server
 - Users wanting free RHEL alternative
 
 ### Not Ideal For
+
 - Desktop daily driver (better options available)
 - Bleeding-edge software needs
 - Gaming
@@ -206,18 +224,21 @@ dnf info mariadb-server
 ## Differences from CentOS
 
 ### CentOS (Old Model)
+
 - Point releases
 - Downstream of RHEL
 - 10-year support
 - **Status**: Ended Dec 2021
 
 ### CentOS Stream (New Model)
+
 - Rolling release
 - Upstream of RHEL
 - Shorter support
 - Testing ground
 
 ### Rocky Linux
+
 - Point releases (like old CentOS)
 - Downstream of RHEL
 - 10-year support
@@ -235,26 +256,30 @@ Rocky Linux provides migration scripts:
 sudo curl -o migrate2rocky.sh https://raw.githubusercontent.com/rocky-linux/rocky-tools/main/migrate2rocky/migrate2rocky.sh
 sudo chmod +x migrate2rocky.sh
 sudo ./migrate2rocky.sh -r
-```
+```bash
 
 ---
 
 ## Community & Support
 
 ### Official Resources
+
 - [Rocky Linux Website](https://rockylinux.org/)
 - [Documentation](https://docs.rockylinux.org/)
 - [Wiki](https://wiki.rockylinux.org/)
 - [Forums](https://forums.rockylinux.org/)
 
 ### Community Channels
+
 - [Mattermost Chat](https://chat.rockylinux.org/)
 - [Reddit r/RockyLinux](https://www.reddit.com/r/RockyLinux/)
 - IRC: #rockylinux on Libera.Chat
 - [Twitter @rocky_linux](https://twitter.com/rocky_linux)
 
 ### Commercial Support
+
 Multiple vendors offer commercial support:
+
 - CIQ (founded by Rocky Linux creator)
 - 45Drives
 - Other third-party providers
@@ -264,6 +289,7 @@ Multiple vendors offer commercial support:
 ## Pros & Cons
 
 ### Strengths
+
 - ✅ Free and open-source
 - ✅ RHEL compatibility
 - ✅ 10-year support lifecycle
@@ -273,6 +299,7 @@ Multiple vendors offer commercial support:
 - ✅ No sudden changes
 
 ### Limitations
+
 - ❌ Conservative software versions
 - ❌ Slower updates than cutting-edge distros
 - ❌ Not ideal for desktop use
@@ -284,12 +311,14 @@ Multiple vendors offer commercial support:
 ## Rocky Linux Foundation
 
 ### Governance
+
 - **Organization**: Rocky Enterprise Software Foundation (RESF)
 - **Type**: Public Benefit Corporation
 - **Mission**: Community-owned enterprise Linux
 - **Sponsors**: CIQ, Google Cloud, AWS, Microsoft, and others
 
 ### Principles
+
 - Community-driven
 - Transparent development
 - No single controlling entity
@@ -300,6 +329,7 @@ Multiple vendors offer commercial support:
 ## Certifications & Compliance
 
 Rocky Linux aims for compatibility with certifications targeting RHEL:
+
 - **FIPS 140-2**: Cryptographic module validation
 - **Common Criteria**: Security evaluation
 - **PCI-DSS**: Payment card industry compliance
@@ -311,18 +341,21 @@ Rocky Linux aims for compatibility with certifications targeting RHEL:
 ## Learning Path
 
 ### Beginners
+
 1. Install Rocky Linux in VM
 2. Learn basic Linux commands
 3. Understand package management (DNF)
 4. Practice system administration
 
 ### Intermediate
+
 1. Configure web/database servers
 2. Learn SELinux
 3. Automate with Ansible
 4. Container deployment (Podman)
 
 ### Advanced
+
 1. Cluster management
 2. High availability setups
 3. Performance tuning

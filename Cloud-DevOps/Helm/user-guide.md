@@ -3,19 +3,22 @@
 ## Installation
 
 ### Linux/macOS
+
 ```bash
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-```
+```bash
 
 ### Windows
+
 ```powershell
 winget install Helm.Helm
-```
+```bash
 
 Verify:
+
 ```bash
 helm version
-```
+```bash
 
 ---
 
@@ -30,7 +33,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 
 # Update local repo cache
 helm repo update
-```
+```bash
 
 ---
 
@@ -45,7 +48,7 @@ helm install my-nginx bitnami/nginx
 
 # List installed releases
 helm list
-```
+```bash
 
 ---
 
@@ -67,7 +70,7 @@ helm install my-nginx bitnami/nginx -f my-values.yaml
 
 # Or pass values inline
 helm install my-nginx bitnami/nginx --set replicaCount=3
-```
+```bash
 
 ---
 
@@ -82,7 +85,7 @@ helm history my-nginx
 
 # Rollback to a previous revision
 helm rollback my-nginx 1
-```
+```bash
 
 ---
 
@@ -90,7 +93,7 @@ helm rollback my-nginx 1
 
 ```bash
 helm uninstall my-nginx
-```
+```bash
 
 ---
 
@@ -117,30 +120,33 @@ helm package mychart
 
 # Install from local chart
 helm install my-app ./mychart
-```
+```bash
 
 ---
 
 ## Chart structure essentials
 
 **Chart.yaml**
+
 ```yaml
 apiVersion: v2
 name: mychart
 version: 1.0.0
 appVersion: "1.0"
 description: My application
-```
+```bash
 
 **values.yaml**
+
 ```yaml
 replicaCount: 2
 image:
   repository: nginx
   tag: "latest"
-```
+```bash
 
 **templates/deployment.yaml** (example)
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -153,11 +159,12 @@ spec:
       containers:
       - name: app
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-```
+```bash
 
 ---
 
 ## Best practices
+
 - Pin chart versions in production
 - Use `helm lint` to validate charts
 - Store custom values in version control
@@ -166,5 +173,6 @@ spec:
 ---
 
 ## References
-- Docs: https://helm.sh/docs/
-- Chart Hub: https://artifacthub.io/
+
+- Docs: <https://helm.sh/docs/>
+- Chart Hub: <https://artifacthub.io/>

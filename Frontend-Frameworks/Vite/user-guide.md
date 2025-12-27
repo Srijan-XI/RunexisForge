@@ -7,14 +7,14 @@ npm create vite@latest
 cd your-project
 npm install
 npm run dev
-```
+```bash
 
 ## Build
 
 ```bash
 npm run build
 npm run preview
-```
+```bash
 
 ## Environment variables
 

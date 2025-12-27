@@ -11,36 +11,45 @@ Developed by Pivotal (now part of VMware) and released in 2014, Spring Boot has 
 Spring Boot is built on several core principles:
 
 ### 1. **Convention Over Configuration**
+
 Provides sensible defaults and auto-configuration, reducing the need for explicit configuration files.
 
 ### 2. **Stand-Alone Applications**
+
 Create applications that can run independently without requiring external application servers.
 
 ### 3. **Production-Ready**
+
 Built-in features for monitoring, health checks, metrics, and externalized configuration.
 
 ### 4. **Opinionated Defaults**
+
 Pre-configured settings based on best practices, while still allowing customization when needed.
 
 ### 5. **Embedded Servers**
+
 Include Tomcat, Jetty, or Undertow directly in your application, eliminating deployment complexity.
 
 ## Why Use Spring Boot?
 
 ### 1. **Rapid Application Development**
+
 - Minimal boilerplate code
 - Auto-configuration reduces setup time
 - Spring Initializr for quick project generation
 - Built-in development tools (DevTools)
 
 ### 2. **Microservices Architecture**
+
 Spring Boot is ideal for building microservices:
+
 - Lightweight and fast startup
 - Easy integration with Spring Cloud
 - Built-in service discovery and configuration
 - Container-friendly
 
 ### 3. **Enterprise-Grade Features**
+
 - Robust security with Spring Security
 - Transaction management
 - Data access with Spring Data
@@ -48,6 +57,7 @@ Spring Boot is ideal for building microservices:
 - Batch processing capabilities
 
 ### 4. **Production-Ready Capabilities**
+
 - Health checks and metrics (Actuator)
 - Application monitoring
 - Logging and auditing
@@ -55,12 +65,14 @@ Spring Boot is ideal for building microservices:
 - Profile-based configuration
 
 ### 5. **Rich Ecosystem**
+
 - Comprehensive documentation
 - Large community support
 - Extensive third-party integrations
 - Regular updates and LTS versions
 
 ### 6. **Testing Support**
+
 - Built-in testing framework
 - Integration test support
 - MockMVC for API testing
@@ -69,7 +81,9 @@ Spring Boot is ideal for building microservices:
 ## Core Features
 
 ### 1. **Auto-Configuration**
+
 Automatically configures Spring and third-party libraries based on classpath dependencies:
+
 ```java
 @SpringBootApplication
 public class MyApplication {
@@ -77,10 +91,12 @@ public class MyApplication {
         SpringApplication.run(MyApplication.class, args);
     }
 }
-```
+```bash
 
 ### 2. **Starter Dependencies**
+
 Pre-packaged dependency descriptors for common use cases:
+
 - `spring-boot-starter-web` - Web applications
 - `spring-boot-starter-data-jpa` - JPA data access
 - `spring-boot-starter-security` - Security features
@@ -88,13 +104,17 @@ Pre-packaged dependency descriptors for common use cases:
 - `spring-boot-starter-actuator` - Production monitoring
 
 ### 3. **Embedded Servers**
+
 No need for external application servers:
+
 - Tomcat (default)
 - Jetty
 - Undertow
 
 ### 4. **Spring Boot Actuator**
+
 Production-ready features:
+
 - `/health` - Application health status
 - `/metrics` - Application metrics
 - `/info` - Application information
@@ -102,7 +122,9 @@ Production-ready features:
 - Custom endpoints
 
 ### 5. **Externalized Configuration**
+
 Multiple configuration sources:
+
 - `application.properties`
 - `application.yml`
 - Environment variables
@@ -110,13 +132,17 @@ Multiple configuration sources:
 - Profile-specific configurations
 
 ### 6. **Spring Boot CLI**
+
 Command-line tool for rapid prototyping:
+
 ```bash
 spring run app.groovy
-```
+```bash
 
 ### 7. **DevTools**
+
 Development-time features:
+
 - Automatic restart
 - Live reload
 - Configurations for development
@@ -126,7 +152,7 @@ Development-time features:
 
 ### Layered Architecture
 
-```
+```bash
 ┌─────────────────────────────────┐
 │     Presentation Layer          │  ← Controllers, REST APIs
 ├─────────────────────────────────┤
@@ -136,7 +162,7 @@ Development-time features:
 ├─────────────────────────────────┤
 │     Database Layer              │  ← MySQL, PostgreSQL, MongoDB
 └─────────────────────────────────┘
-```
+```bash
 
 ### Key Components
 
@@ -149,6 +175,7 @@ Development-time features:
 ## Common Use Cases
 
 ### 1. **RESTful Web Services**
+
 ```java
 @RestController
 @RequestMapping("/api/users")
@@ -158,32 +185,37 @@ public class UserController {
         return userService.findById(id);
     }
 }
-```
+```bash
 
 ### 2. **Microservices**
+
 - Service discovery with Eureka
 - API Gateway with Spring Cloud Gateway
 - Configuration management with Config Server
 - Circuit breakers with Resilience4j
 
 ### 3. **Data Access Applications**
+
 - JPA/Hibernate integration
 - Spring Data repositories
 - Multiple database support
 - Transaction management
 
 ### 4. **Batch Processing**
+
 - Spring Batch integration
 - Scheduled tasks
 - Async processing
 
 ### 5. **Security Applications**
+
 - Authentication and authorization
 - OAuth2 and JWT support
 - LDAP integration
 - Method-level security
 
 ### 6. **Real-Time Applications**
+
 - WebSocket support
 - Server-Sent Events (SSE)
 - Spring Integration
@@ -377,6 +409,7 @@ Spring Boot skills are highly valued:
 ### Salary Impact
 
 Spring Boot expertise is associated with:
+
 - Higher salary ranges
 - More job opportunities
 - Remote work options
@@ -385,6 +418,7 @@ Spring Boot expertise is associated with:
 ## Learning Path
 
 ### Beginner
+
 1. Java fundamentals
 2. Spring Core (Dependency Injection, IoC)
 3. Spring Boot basics
@@ -392,6 +426,7 @@ Spring Boot expertise is associated with:
 5. Database integration with JPA
 
 ### Intermediate
+
 1. Advanced JPA/Hibernate
 2. Spring Security
 3. Microservices concepts
@@ -399,6 +434,7 @@ Spring Boot expertise is associated with:
 5. Docker containerization
 
 ### Advanced
+
 1. Spring Cloud ecosystem
 2. Event-driven architecture
 3. Performance optimization
@@ -409,24 +445,28 @@ Spring Boot expertise is associated with:
 ## Advantages of Spring Boot
 
 ### Developer Productivity
+
 - Less boilerplate code
 - Faster development cycles
 - Easier testing
 - Hot reload with DevTools
 
 ### Flexibility
+
 - Choose your stack
 - Multiple database support
 - Various deployment options
 - Extensive customization
 
 ### Community & Support
+
 - Large active community
 - Extensive documentation
 - Regular updates
 - Enterprise support available
 
 ### Modern Architecture
+
 - Cloud-native ready
 - Container-friendly
 - Kubernetes-compatible
@@ -435,20 +475,24 @@ Spring Boot expertise is associated with:
 ## Challenges and Considerations
 
 ### Learning Curve
+
 - Requires Java knowledge
 - Understanding of Spring concepts
 - Dependency management complexity
 
 ### Memory Footprint
+
 - Higher than lightweight frameworks
 - JVM overhead
 - Mitigation: GraalVM native images
 
 ### Startup Time
+
 - Slower than some alternatives
 - Solutions: Lazy initialization, native compilation
 
 ### "Magic" of Auto-Configuration
+
 - Can be difficult to debug
 - Understanding what's happening behind the scenes
 - Use `--debug` flag for insights

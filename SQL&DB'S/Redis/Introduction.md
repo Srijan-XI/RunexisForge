@@ -5,6 +5,7 @@
 **Redis** (Remote Dictionary Server) is an open-source, in-memory data structure store used as a database, cache, message broker, and streaming engine. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams.
 
 **Key Features:**
+
 - **In-Memory Storage**: Extremely fast read/write operations
 - **Persistence Options**: Data can be persisted to disk
 - **Rich Data Structures**: More than just key-value pairs
@@ -128,69 +129,86 @@
 ## 🧩 Redis Data Structures
 
 ### 1. Strings
+
 Simple key-value pairs
-```
+
+```sql
 SET name "John"
 GET name
-```
+```sql
 
 ### 2. Lists
+
 Ordered collections of strings
-```
+
+```sql
 LPUSH queue "task1"
 RPOP queue
-```
+```sql
 
 ### 3. Sets
+
 Unordered collections of unique strings
-```
+
+```sql
 SADD tags "redis" "database" "nosql"
 SMEMBERS tags
-```
+```sql
 
 ### 4. Sorted Sets
+
 Sets with scores for ranking
-```
+
+```sql
 ZADD leaderboard 100 "player1"
 ZRANGE leaderboard 0 -1 WITHSCORES
-```
+```sql
 
 ### 5. Hashes
+
 Maps between string fields and values
-```
+
+```sql
 HSET user:1 name "John" age 30
 HGETALL user:1
-```
+```sql
 
 ### 6. Streams
+
 Append-only log data structure
-```
+
+```sql
 XADD mystream * field1 value1 field2 value2
 XREAD STREAMS mystream 0
-```
+```sql
 
 ### 7. Geospatial Indexes
+
 Location-based queries
-```
+
+```sql
 GEOADD locations 13.361389 38.115556 "Palermo"
 GEORADIUS locations 15 37 200 km
-```
+```sql
 
 ---
 
 ## 🔧 Redis Persistence
 
 ### RDB (Redis Database Backup)
+
 - Point-in-time snapshots at specified intervals
 - Compact single-file representation
 - Fast restarts with large datasets
 
 ### AOF (Append Only File)
+
 - Logs every write operation
 - More durable than RDB
 - Larger file size, slower restarts
 
 ### Hybrid Approach
+
 - Combine RDB and AOF for best of both worlds
 
 ---
@@ -217,7 +235,8 @@ GEORADIUS locations 15 37 200 km
 **Problem**: Traditional session storage in databases is slow and doesn't scale well.
 
 **Redis Solution**:
-```
+
+```sql
 # Store session
 SETEX session:abc123 3600 '{"userId": 42, "username": "john", "role": "admin"}'
 
@@ -229,9 +248,10 @@ EXPIRE session:abc123 3600
 
 # Delete session (logout)
 DEL session:abc123
-```
+```sql
 
 **Benefits**:
+
 - Sub-millisecond response time
 - Automatic expiration (no cleanup jobs needed)
 - Horizontally scalable with Redis Cluster

@@ -5,20 +5,23 @@
 ### Windows
 
 **Method 1: Official Installer (Recommended)**
-1. Download from https://www.postgresql.org/download/windows/
+
+1. Download from <https://www.postgresql.org/download/windows/>
 2. Run the installer (postgresql-xx.x-x-windows-x64.exe)
 3. Follow wizard (note password for postgres user!)
 4. Install pgAdmin 4 (included)
 5. Verify: `psql --version`
 
 **Method 2: Chocolatey**
+
 ```powershell
 choco install postgresql
-```
+```bash
 
 ### macOS
 
 **Homebrew (Recommended)**
+
 ```bash
 # Install
 brew install postgresql@16
@@ -28,11 +31,12 @@ brew services start postgresql@16
 
 # Verify
 psql --version
-```
+```bash
 
 ### Linux
 
 **Ubuntu/Debian**
+
 ```bash
 # Add repository
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -45,15 +49,16 @@ sudo apt install postgresql postgresql-contrib
 # Start
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
-```
+```bash
 
 **Fedora/RHEL**
+
 ```bash
 sudo dnf install postgresql-server postgresql-contrib
 sudo postgresql-setup --initdb
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
-```
+```bash
 
 ### Docker
 
@@ -62,7 +67,7 @@ docker run --name postgres \
   -e POSTGRES_PASSWORD=mysecretpassword \
   -p 5432:5432 \
   -d postgres:16
-```
+```bash
 
 ---
 
@@ -79,7 +84,7 @@ psql -U username -d database_name
 
 # Connect to remote server
 psql -h hostname -U username -d database_name
-```
+```bash
 
 ### First Time Configuration
 
@@ -104,7 +109,7 @@ GRANT ALL ON SCHEMA public TO myuser;
 
 -- List users
 \du
-```
+```bash
 
 ---
 
@@ -136,7 +141,7 @@ GRANT ALL ON SCHEMA public TO myuser;
 
 -- Quit
 \q
-```
+```bash
 
 ### Database Operations
 
@@ -149,7 +154,7 @@ DROP DATABASE shop;
 
 -- Rename database
 ALTER DATABASE shop RENAME TO store;
-```
+```bash
 
 ### Table Operations
 
@@ -186,7 +191,7 @@ ALTER TABLE products ADD CONSTRAINT unique_name UNIQUE (name);
 
 -- Drop table
 DROP TABLE products;
-```
+```bash
 
 ### CRUD Operations
 
@@ -210,7 +215,7 @@ UPDATE products SET price = 899.99 WHERE id = 1 RETURNING *;
 
 -- DELETE
 DELETE FROM products WHERE id = 1 RETURNING *;
-```
+```bash
 
 ### Advanced Queries
 
@@ -256,7 +261,7 @@ CREATE TABLE tags (
 
 INSERT INTO tags (tag_list) VALUES (ARRAY['postgresql', 'database', 'sql']);
 SELECT * FROM tags WHERE 'postgresql' = ANY(tag_list);
-```
+```bash
 
 ---
 
@@ -284,7 +289,7 @@ DROP USER myuser;
 
 -- List users
 \du
-```
+```bash
 
 ---
 
@@ -304,7 +309,7 @@ pg_dumpall -U postgres > all_databases.sql
 
 # Backup specific tables
 pg_dump -U username -t table_name database_name > table_backup.sql
-```
+```bash
 
 ### Restore
 
@@ -317,13 +322,14 @@ pg_restore -U username -d database_name backup.dump
 
 # Restore all databases
 psql -U postgres < all_databases.sql
-```
+```bash
 
 ---
 
 ## 🔧 Configuration
 
 ### postgresql.conf Location
+
 - **Linux**: `/etc/postgresql/16/main/postgresql.conf`
 - **macOS (Homebrew)**: `/usr/local/var/postgresql@16/postgresql.conf`
 - **Windows**: `C:\Program Files\PostgreSQL\16\data\postgresql.conf`
@@ -348,7 +354,7 @@ log_statement = 'all'
 # Performance
 random_page_cost = 1.1
 effective_io_concurrency = 200
-```
+```bash
 
 ### Restart PostgreSQL
 
@@ -362,7 +368,7 @@ brew services restart postgresql@16
 # Windows (as administrator)
 net stop postgresql-x64-16
 net start postgresql-x64-16
-```
+```bash
 
 ---
 
@@ -380,7 +386,7 @@ sudo netstat -plnt | grep 5432
 
 # Test connection
 psql -U postgres -h localhost
-```
+```bash
 
 ### Permission Issues
 
@@ -389,7 +395,7 @@ psql -U postgres -h localhost
 GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
 GRANT ALL ON ALL TABLES IN SCHEMA public TO myuser;
 GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO myuser;
-```
+```bash
 
 ### Performance Analysis
 
@@ -404,7 +410,7 @@ EXPLAIN ANALYZE SELECT * FROM products WHERE price > 100;
 SELECT * FROM pg_stat_statements 
 ORDER BY total_exec_time DESC 
 LIMIT 10;
-```
+```bash
 
 ---
 
@@ -421,7 +427,7 @@ CREATE EXTENSION IF NOT EXISTS "postgis";
 
 -- List installed extensions
 \dx
-```
+```bash
 
 ---
 

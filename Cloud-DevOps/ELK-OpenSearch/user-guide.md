@@ -3,6 +3,7 @@
 ## Quick start (docker-compose)
 
 **docker-compose.yaml (OpenSearch + Dashboards):**
+
 ```yaml
 version: '3'
 services:
@@ -23,16 +24,18 @@ services:
       - "5601:5601"
     depends_on:
       - opensearch
-```
+```bash
 
 Bring it up:
+
 ```bash
 docker compose up -d
-```
+```bash
 
 ## Ship logs with Filebeat
 
 **filebeat.yml:**
+
 ```yaml
 filebeat.inputs:
   - type: filestream
@@ -45,25 +48,28 @@ output.elasticsearch:
   password: "admin"
 setup.kibana:
   host: "http://localhost:5601"
-```
+```bash
 
 Start Filebeat:
+
 ```bash
 filebeat run -e -c filebeat.yml
-```
+```bash
 
 ## Queries (OpenSearch DSL)
 
 **Term query:**
+
 ```json
 {
   "query": {
     "term": { "level": "error" }
   }
 }
-```
+```bash
 
 **Aggregation (count per level):**
+
 ```json
 {
   "size": 0,
@@ -73,16 +79,18 @@ filebeat run -e -c filebeat.yml
     }
   }
 }
-```
+```bash
 
 ## Best practices
+
 - Use index lifecycle management (ILM/ISM) for retention
 - Keep mappings consistent; avoid dynamic explosion
 - Prefer structured logs (JSON)
 - Secure with TLS and auth in production
 
 ## References
-- ELK: https://www.elastic.co/elastic-stack
-- OpenSearch: https://opensearch.org/docs/latest/
-- Beats: https://www.elastic.co/beats/
-- OpenSearch Dashboards: https://opensearch.org/docs/latest/dashboards/
+
+- ELK: <https://www.elastic.co/elastic-stack>
+- OpenSearch: <https://opensearch.org/docs/latest/>
+- Beats: <https://www.elastic.co/beats/>
+- OpenSearch Dashboards: <https://opensearch.org/docs/latest/dashboards/>

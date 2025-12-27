@@ -1,7 +1,8 @@
 ## Q2_Counter.component.ts
+
 Create a Counter component with increment and decrement buttons
 
-```
+```python
 import { Component } from '@angular/core';
 
 @Component({
@@ -41,4 +42,4 @@ export class CounterComponent {
     this.count = 0;
   }
 }
-```
+```python

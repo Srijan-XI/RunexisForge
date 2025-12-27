@@ -5,6 +5,7 @@ A quick reference for common Linux commands across different distros.
 ## Package Management
 
 ### Debian/Ubuntu (APT)
+
 ```bash
 sudo apt update              # Refresh package list
 sudo apt upgrade             # Upgrade packages
@@ -13,9 +14,10 @@ sudo apt remove <pkg>        # Remove package
 sudo apt purge <pkg>         # Remove package + config
 sudo apt search <name>       # Search packages
 sudo apt autoremove          # Clean unused dependencies
-```
+```bash
 
 ### Red Hat/Fedora/CentOS (DNF)
+
 ```bash
 sudo dnf upgrade --refresh   # Refresh and upgrade
 sudo dnf install <pkg>       # Install package
@@ -23,9 +25,10 @@ sudo dnf remove <pkg>        # Remove package
 sudo dnf search <name>       # Search packages
 sudo dnf repolist            # List enabled repos
 sudo dnf clean all           # Clean cache
-```
+```bash
 
 ### Arch (Pacman)
+
 ```bash
 sudo pacman -Syu             # Sync and upgrade
 sudo pacman -S <pkg>         # Install package
@@ -33,9 +36,10 @@ sudo pacman -R <pkg>         # Remove package
 sudo pacman -Rs <pkg>        # Remove + dependencies
 sudo pacman -Ss <name>       # Search packages
 sudo pacman -Sc              # Clean cache
-```
+```bash
 
 ### Gentoo (Emerge)
+
 ```bash
 sudo emaint sync --auto      # Sync repos
 sudo emerge --ask --update --deep --newuse @world
@@ -43,19 +47,21 @@ sudo emerge --ask --update --deep --newuse @world
 sudo emerge --ask <pkg>      # Install package
 sudo emerge --unmerge <pkg>  # Remove package
 emerge --search <name>       # Search packages
-```
+```bash
 
 ### Slackware (Slackpkg)
+
 ```bash
 sudo slackpkg update         # Update repos
 sudo slackpkg upgrade-all    # Upgrade all packages
 sudo slackpkg install <pkg>  # Install package
 sudo removepkg <pkg>         # Remove package
-```
+```bash
 
 ## System Management
 
 ### Service/Daemon Control (systemd)
+
 ```bash
 systemctl status <service>       # Check service status
 sudo systemctl start <service>   # Start service
@@ -67,9 +73,10 @@ sudo systemctl enable --now <svc> # Enable + start now
 sudo systemctl list-units --type=service
                                  # List all services
 journalctl -u <service> -n 20   # View last 20 logs
-```
+```bash
 
 ### System Information
+
 ```bash
 uname -a                     # Kernel and system info
 lsb_release -a               # Distro version (Debian/Ubuntu)
@@ -80,7 +87,7 @@ free -h                      # Memory usage
 top or htop                  # System monitor
 ps aux                       # List running processes
 uptime                       # System uptime
-```
+```bash
 
 ## File & Directory Operations
 
@@ -97,7 +104,7 @@ cat <file>                   # Display file content
 less <file>                  # View file paginated
 grep <pattern> <file>        # Search in file
 find <path> -name <pattern>  # Find files
-```
+```bash
 
 ## Text Processing
 
@@ -111,7 +118,7 @@ uniq <file>                  # Remove duplicates
 wc -l <file>                 # Count lines
 head -n 10 <file>            # Show first 10 lines
 tail -n 10 <file>            # Show last 10 lines
-```
+```bash
 
 ## User & Permission
 
@@ -125,7 +132,7 @@ passwd <user>                # Change password
 chmod 755 <file>             # Change permissions
 chown user:group <file>      # Change ownership
 sudo visudo                  # Edit sudoers safely
-```
+```bash
 
 ## Network
 
@@ -138,7 +145,7 @@ curl <url>                   # Fetch URL
 wget <url>                   # Download file
 ssh user@host                # SSH login
 scp file user@host:/path     # Copy over SSH
-```
+```bash
 
 ## Process Management
 
@@ -151,7 +158,7 @@ bg                           # Run in background
 fg                           # Bring to foreground
 jobs                         # List background jobs
 nohup <cmd> &                # Run immune to hangup
-```
+```bash
 
 ## Archive & Compression
 
@@ -162,7 +169,7 @@ zip -r archive.zip <path>        # Create zip
 unzip archive.zip                # Extract zip
 gzip <file>                      # Compress with gzip
 gunzip <file.gz>                 # Decompress gzip
-```
+```bash
 
 ## Filesystem
 
@@ -174,7 +181,7 @@ du -sh <path>                # Directory size
 fsck <device>                # File system check
 mkfs.ext4 <device>           # Format as ext4
 lsblk                        # List block devices
-```
+```bash
 
 ## Tips & Tricks
 

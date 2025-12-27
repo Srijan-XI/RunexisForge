@@ -3,57 +3,66 @@
 ## Installation
 
 ### Prerequisites
+
 - Python 3.6 or higher
 - pip (Python package manager)
 - Root/Administrator privileges
 - Tcpdump (for sniffing)
 
 ### Install Scapy
+
 ```bash
 pip install scapy
-```
+```bash
 
 ### On Linux
+
 ```bash
 sudo pip install scapy
 sudo apt-get install tcpdump
-```
+```bash
 
 ### On Windows
+
 ```bash
 pip install scapy
 # Install Npcap from https://npcap.com
 pip install npcap
-```
+```bash
 
 ### On macOS
+
 ```bash
 pip install scapy
 brew install libpcap
-```
+```bash
 
 ### Verify Installation
+
 ```bash
 python3 -c "import scapy; print(scapy.__version__)"
-```
+```bash
 
 ## Interactive Shell
 
 ### Start Scapy Interactive Shell
+
 ```bash
 sudo scapy
-```
+```bash
 
 ### Basic Commands
-```
+
+```bash
 IPv4()
 IPv4().show()
 TCP().show()
-```
+```bash
 
 ## Creating Packets
 
 ### Simple IP Packet
+
 ```python
 from scapy.all import IP, TCP, send
 
@@ -64,36 +73,40 @@ print(packet.show())
 # Add TCP layer
 packet = IP(dst="192.168.1.1") / TCP(dport=80)
 print(packet.show())
-```
+```bash
 
 ### HTTP Request
+
 ```python
 from scapy.all import IP, TCP, Raw
 
 packet = IP(dst="www.example.com") / TCP(dport=80) / Raw(load="GET / HTTP/1.1\r\nHost: example.com\r\n\r\n")
 packet.show()
-```
+```bash
 
 ## Sending Packets
 
 ### Send Single Packet
+
 ```python
 from scapy.all import IP, ICMP, send
 
 packet = IP(dst="192.168.1.1") / ICMP()
 send(packet)
-```
+```bash
 
 ### Send and Receive (sr)
+
 ```python
 from scapy.all import IP, ICMP, sr
 
 packet = IP(dst="192.168.1.1") / ICMP()
 answered, unanswered = sr(packet)
 answered.show()
-```
+```bash
 
 ### Send Multiple Packets
+
 ```python
 from scapy.all import IP, TCP, sr1
 from itertools import count
@@ -103,11 +116,12 @@ for i in range(1, 1024):
     response = sr1(packet, timeout=1, verbose=False)
     if response:
         print(f"Port {i}: Open")
-```
+```text
 
 ## Packet Sniffing
 
 ### Capture Packets
+
 ```python
 from scapy.all import sniff
 
@@ -123,9 +137,10 @@ packets = sniff(filter="tcp port 80", count=10)
 
 # Capture with timeout
 packets = sniff(timeout=30)
-```
+```text
 
 ### Process Captured Packets
+
 ```python
 from scapy.all import sniff, IP
 
@@ -134,11 +149,12 @@ def packet_callback(packet):
         print(f"Source: {packet[IP].src} -> Destination: {packet[IP].dst}")
 
 sniff(prn=packet_callback, count=10)
-```
+```text
 
 ## Network Scanning
 
 ### Ping Sweep
+
 ```python
 from scapy.all import IP, ICMP, sr
 
@@ -148,9 +164,10 @@ answered, unanswered = sr(packet, timeout=1, verbose=False)
 
 for response in answered:
     print(f"Host {response[1].src} is alive")
-```
+```text
 
 ### TCP Port Scan
+
 ```python
 from scapy.all import IP, TCP, sr1
 
@@ -169,9 +186,10 @@ for port in range(1, 1024):
         print(f"Port {port} is open")
 
 print(f"Open ports: {open_ports}")
-```
+```text
 
 ### UDP Port Scan
+
 ```python
 from scapy.all import IP, UDP, sr, ICMP
 
@@ -186,11 +204,12 @@ for port in [53, 67, 123, 161]:
     
     if response:
         print(f"Port {port} responded")
-```
+```text
 
 ## ARP Scanning
 
 ### ARP Ping
+
 ```python
 from scapy.all import Ether, ARP, srp
 
@@ -200,22 +219,24 @@ answered, unanswered = srp(packet, timeout=1, verbose=False)
 
 for response in answered:
     print(f"IP: {response[1].psrc}, MAC: {response[1].hwsrc}")
-```
+```text
 
 ## DNS Queries
 
 ### Simple DNS Query
+
 ```python
 from scapy.all import IP, UDP, DNS, DNSQR
 
 packet = IP(dst="8.8.8.8") / UDP(dport=53) / DNS(rd=1, qd=DNSQR(qname="example.com"))
 response = sr1(packet, verbose=False, timeout=2)
 response.show()
-```
+```text
 
 ## Packet Manipulation
 
 ### Modify Packet
+
 ```python
 from scapy.all import IP, TCP
 
@@ -223,9 +244,10 @@ packet = IP(dst="192.168.1.1") / TCP(dport=80)
 packet[IP].src = "192.168.1.10"
 packet[TCP].sport = 1234
 packet.show()
-```
+```text
 
 ### Extract Information
+
 ```python
 from scapy.all import sniff, IP, TCP
 
@@ -240,11 +262,12 @@ def extract_data(packet):
             print(f"{src_ip}:{src_port} -> {dst_ip}:{dst_port}")
 
 sniff(prn=extract_data, count=10)
-```
+```text
 
 ## Script Examples
 
 ### Full Script - Port Scanner
+
 ```python
 #!/usr/bin/env python3
 from scapy.all import IP, TCP, sr1
@@ -269,9 +292,10 @@ for port in range(1, 1024):
         print(f"[+] Port {port} is open")
 
 print(f"\n[*] Found {len(open_ports)} open ports: {open_ports}")
-```
+```text
 
 ### Full Script - Network Discovery
+
 ```python
 #!/usr/bin/env python3
 from scapy.all import Ether, ARP, srp
@@ -288,9 +312,10 @@ answered, unanswered = srp(packet, timeout=1, verbose=False)
 print("[*] Active hosts found:")
 for response in answered:
     print(f"IP: {response[1].psrc:15} | MAC: {response[1].hwsrc}")
-```
+```text
 
 ## Best Practices
+
 1. Always get authorization before scanning
 2. Use appropriate timeouts
 3. Handle exceptions properly
@@ -303,7 +328,8 @@ for response in answered:
 10. Keep Scapy updated
 
 ## Common Filters
-```
+
+```text
 tcp          # TCP packets
 udp          # UDP packets
 icmp         # ICMP packets
@@ -311,9 +337,10 @@ port 80      # Specific port
 host 192.168.1.1  # Specific host
 src 192.168.1.0/24  # Source network
 dst 192.168.1.1  # Destination host
-```
+```text
 
 ## Useful Resources
-- Scapy Documentation: https://scapy.readthedocs.io
-- Protocol Reference: https://en.wikipedia.org/wiki/Network_protocol
-- Packet Structure: https://www.tcpdump.org/papers/sniffing-faq.html
+
+- Scapy Documentation: <https://scapy.readthedocs.io>
+- Protocol Reference: <https://en.wikipedia.org/wiki/Network_protocol>
+- Packet Structure: <https://www.tcpdump.org/papers/sniffing-faq.html>

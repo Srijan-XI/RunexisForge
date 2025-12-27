@@ -29,6 +29,7 @@ Special thanks to those who have improved our documentation:
 ### Community Contributors
 
 Thanks to everyone who has:
+
 - Reported bugs
 - Suggested features
 - Answered questions
@@ -89,6 +90,7 @@ Special recognition for significant contributions:
 ## 💝 Recognition
 
 All contributors are valued members of our community, regardless of the size of their contribution. Every:
+
 - Bug report
 - Documentation improvement
 - Code example

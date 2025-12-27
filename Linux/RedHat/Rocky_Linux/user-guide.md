@@ -17,15 +17,17 @@
 ## Create Bootable Media
 
 ### Using Rufus (Windows)
-```
+
+```bash
 1. Download Rufus: https://rufus.ie/
 2. Insert USB drive (8+ GB)
 3. Select Rocky Linux ISO
 4. Click Start
 5. Wait for completion
-```
+```bash
 
 ### Using dd (Linux/Mac)
+
 ```bash
 # Find USB device
 lsblk
@@ -33,7 +35,7 @@ lsblk
 # Write ISO (replace /dev/sdX)
 sudo dd if=Rocky-9-x86_64-minimal.iso of=/dev/sdX bs=4M status=progress
 sync
-```
+```bash
 
 ---
 
@@ -41,13 +43,13 @@ sync
 
 ### Boot from Installation Media
 
-```
+```bash
 1. Insert USB/DVD
 2. Restart computer
 3. Enter BIOS/UEFI (F2, F12, DEL, or ESC)
 4. Select boot device
 5. Boot Rocky Linux installer
-```
+```bash
 
 ### Installation Process
 
@@ -59,7 +61,7 @@ sync
      - Keyboard layout
      - Language support
      - Time & Date
-   
+
    - **Software**:
      - Installation Source
      - Software Selection:
@@ -67,7 +69,7 @@ sync
        - Server with GUI
        - Workstation
        - Custom Operating System
-   
+
    - **System**:
      - Installation Destination (disk partitioning)
      - Network & Hostname
@@ -75,24 +77,31 @@ sync
      - User Creation
 
 3. **Partitioning**
+
    ```
+
    Automatic:
-   - Let installer handle partitioning
-   
+
+- Let installer handle partitioning
+
    Manual (recommended for servers):
    /boot     - 1 GB (ext4)
    /boot/efi - 512 MB (vfat) [UEFI systems]
    /         - 20+ GB (xfs)
    /home     - Remaining space (xfs)
    swap      - 2x RAM (or equal to RAM)
+
    ```
 
 4. **Network Configuration**
+
    ```
-   - Set hostname
-   - Configure ethernet
-   - Enable on boot
-   - Configure IP (DHCP or static)
+
+- Set hostname
+- Configure ethernet
+- Enable on boot
+- Configure IP (DHCP or static)
+
    ```
 
 5. **Begin Installation**
@@ -116,7 +125,7 @@ Password: ********
 # Or root
 rocky login: root
 Password: ********
-```
+```bash
 
 ### Update System
 
@@ -126,7 +135,7 @@ sudo dnf update -y
 
 # Reboot if kernel updated
 sudo reboot
-```
+```bash
 
 ---
 
@@ -140,7 +149,7 @@ sudo hostnamectl set-hostname server.example.com
 
 # Verify
 hostnamectl
-```
+```bash
 
 ### Configure Network
 
@@ -157,7 +166,7 @@ sudo nmcli con up eth0
 
 # Or edit configuration
 sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0
-```
+```bash
 
 ### Firewall Configuration
 
@@ -180,7 +189,7 @@ sudo firewall-cmd --reload
 
 # List rules
 sudo firewall-cmd --list-all
-```
+```bash
 
 ### SELinux Management
 
@@ -197,7 +206,7 @@ sudo vi /etc/selinux/config
 
 # View SELinux denials
 sudo ausearch -m avc -ts recent
-```
+```bash
 
 ---
 
@@ -235,7 +244,7 @@ dnf list updates
 
 # Clean cache
 sudo dnf clean all
-```
+```bash
 
 ### Repository Management
 
@@ -251,7 +260,7 @@ sudo dnf config-manager --enable <repo-name>
 
 # Disable repository
 sudo dnf config-manager --disable <repo-name>
-```
+```bash
 
 ### EPEL Repository
 
@@ -261,7 +270,7 @@ sudo dnf install epel-release
 
 # Verify
 dnf repolist | grep epel
-```
+```bash
 
 ---
 
@@ -287,7 +296,7 @@ sudo firewall-cmd --reload
 
 # Test
 # Browse to http://your-server-ip
-```
+```bash
 
 ### Virtual Host Configuration
 
@@ -297,7 +306,7 @@ sudo mkdir -p /var/www/example.com/html
 
 # Create virtual host config
 sudo vi /etc/httpd/conf.d/example.com.conf
-```
+```bash
 
 ```apache
 <VirtualHost *:80>
@@ -307,7 +316,7 @@ sudo vi /etc/httpd/conf.d/example.com.conf
     ErrorLog /var/log/httpd/example.com-error.log
     CustomLog /var/log/httpd/example.com-access.log combined
 </VirtualHost>
-```
+```bash
 
 ```bash
 # Test configuration
@@ -315,7 +324,7 @@ sudo apachectl configtest
 
 # Restart Apache
 sudo systemctl restart httpd
-```
+```bash
 
 ---
 
@@ -334,7 +343,7 @@ sudo mysql_secure_installation
 
 # Login
 sudo mysql -u root -p
-```
+```bash
 
 ---
 
@@ -361,7 +370,7 @@ podman images
 
 # Pull image
 podman pull docker.io/library/httpd
-```
+```bash
 
 ---
 
@@ -385,7 +394,7 @@ sudo userdel -r john
 # List logged-in users
 who
 w
-```
+```bash
 
 ### Service Management (systemd)
 
@@ -413,7 +422,7 @@ sudo systemctl status httpd
 
 # View logs
 sudo journalctl -u httpd
-```
+```bash
 
 ### Disk Management
 
@@ -435,7 +444,7 @@ sudo mount /dev/sdb1 /mnt
 
 # Unmount
 sudo umount /mnt
-```
+```bash
 
 ---
 
@@ -458,7 +467,7 @@ sudo firewall-cmd --reload
 # Access
 # Browse to https://your-server-ip:9090
 # Login with system credentials
-```
+```bash
 
 ---
 
@@ -486,7 +495,7 @@ sudo systemctl restart sshd
 # Allow SSH through firewall
 sudo firewall-cmd --permanent --add-service=ssh
 sudo firewall-cmd --reload
-```
+```bash
 
 ### SSH Key Authentication
 
@@ -499,7 +508,7 @@ ssh-copy-id user@server-ip
 
 # Login without password
 ssh user@server-ip
-```
+```bash
 
 ---
 
@@ -511,7 +520,7 @@ sudo dnf install ansible
 
 # Create inventory
 sudo vi /etc/ansible/hosts
-```
+```bash
 
 ```ini
 [webservers]
@@ -520,7 +529,7 @@ web2.example.com
 
 [databases]
 db1.example.com
-```
+```bash
 
 ```bash
 # Test connectivity
@@ -531,7 +540,7 @@ ansible webservers -a "uptime"
 
 # Run playbook
 ansible-playbook site.yml
-```
+```bash
 
 ---
 
@@ -554,7 +563,7 @@ sudo journalctl -b
 
 # Logs for today
 sudo journalctl --since today
-```
+```bash
 
 ### System Monitoring
 
@@ -569,7 +578,7 @@ iostat  # (install: sudo dnf install sysstat)
 # Network statistics
 netstat -tuln
 ss -tuln
-```
+```bash
 
 ---
 
@@ -590,7 +599,7 @@ traceroute google.com
 
 # Check listening ports
 sudo ss -tuln
-```
+```bash
 
 ### Service Issues
 
@@ -606,7 +615,7 @@ sudo ausearch -m avc -ts recent
 
 # Check firewall
 sudo firewall-cmd --list-all
-```
+```bash
 
 ---
 

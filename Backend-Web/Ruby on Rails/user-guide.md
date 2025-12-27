@@ -3,56 +3,65 @@
 ## Installation
 
 ### Prerequisites
+
 - Ruby 2.7 or higher
 - Bundler gem
 - Node.js (for asset pipeline)
 - Database (PostgreSQL recommended)
 
 ### Install Ruby
+
 **Windows:**
-Download from https://rubyinstaller.org
+Download from <https://rubyinstaller.org>
 
 **macOS:**
+
 ```bash
 brew install ruby
-```
+```bash
 
 **Linux (Ubuntu):**
+
 ```bash
 sudo apt-get install ruby-full
-```
+```bash
 
 ### Verify Ruby Installation
+
 ```bash
 ruby --version
 gem --version
-```
+```bash
 
 ### Install Rails
+
 ```bash
 gem install rails
 rails --version
-```
+```bash
 
 ## Create a New Rails Project
 
 ### Basic Rails Application
+
 ```bash
 rails new myapp
 cd myapp
 rails server
-```
+```bash
 
 ### Rails with PostgreSQL
+
 ```bash
 rails new myapp --database=postgresql --css=tailwind --javascript=esbuild
 cd myapp
 rails db:create
 rails server
-```
+```bash
 
 ## Project Structure
-```
+
+```bash
 myapp/
 ├── app/
 │   ├── models/
@@ -72,28 +81,32 @@ myapp/
 ├── Gemfile
 ├── Gemfile.lock
 └── config.ru
-```
+```bash
 
 ## Generate Resources with Rails Generators
 
 ### Generate a Model
+
 ```bash
 rails generate model User name:string email:string age:integer
 rails db:migrate
-```
+```bash
 
 ### Generate a Controller
+
 ```bash
 rails generate controller Posts index show create edit update destroy
-```
+```bash
 
 ### Generate a Complete Scaffold
+
 ```bash
 rails generate scaffold Post title:string content:text user:references
 rails db:migrate
-```
+```bash
 
 ## Routing (config/routes.rb)
+
 ```ruby
 Rails.application.routes.draw do
   root 'pages#home'
@@ -109,9 +122,10 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   post '/contact', to: 'pages#create_contact'
 end
-```
+```bash
 
 ## Model Example
+
 ```ruby
 # app/models/post.rb
 class Post < ApplicationRecord
@@ -123,9 +137,10 @@ class Post < ApplicationRecord
 
   scope :recent, -> { order(created_at: :desc) }
 end
-```
+```bash
 
 ## Controller Example
+
 ```ruby
 # app/controllers/posts_controller.rb
 class PostsController < ApplicationController
@@ -160,9 +175,10 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :content)
   end
 end
-```
+```bash
 
 ## View Example (ERB Template)
+
 ```erb
 <!-- app/views/posts/show.html.erb -->
 <h1><%= @post.title %></h1>
@@ -174,9 +190,10 @@ end
 <% end %>
 
 <%= link_to 'Back', posts_path %>
-```
+```bash
 
 ## Database Migrations
+
 ```ruby
 # db/migrate/[timestamp]_create_posts.rb
 class CreatePosts < ActiveRecord::Migration[6.0]
@@ -192,17 +209,19 @@ class CreatePosts < ActiveRecord::Migration[6.0]
     add_index :posts, :title
   end
 end
-```
+```bash
 
 ### Migration Commands
+
 ```bash
 rails db:migrate              # Apply migrations
 rails db:rollback             # Undo last migration
 rails db:migrate:status       # Check migration status
 rails db:seed                 # Load seed data
-```
+```bash
 
 ## Associations
+
 ```ruby
 # has_many
 class User < ApplicationRecord
@@ -219,18 +238,20 @@ end
 class Student < ApplicationRecord
   has_and_belongs_to_many :courses
 end
-```
+```bash
 
 ## Validations
+
 ```ruby
 class User < ApplicationRecord
   validates :name, presence: true, length: { minimum: 2, maximum: 100 }
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :age, numericality: { only_integer: true, greater_than: 0 }
 end
-```
+```bash
 
 ## Gemfile
+
 ```ruby
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -250,9 +271,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
 end
-```
+```bash
 
 ## Useful Commands
+
 ```bash
 rails console              # Interactive Rails shell
 rails generate             # List available generators
@@ -264,9 +286,10 @@ bundle install             # Install gems
 bundle update              # Update gems
 rails assets:precompile    # Compile assets
 rails server               # Start server
-```
+```bash
 
 ## Best Practices
+
 1. Follow Rails naming conventions
 2. Keep controllers thin, models fat
 3. Use validations in models
@@ -279,10 +302,11 @@ rails server               # Start server
 10. Use migrations for all schema changes
 
 ## Testing with RSpec
+
 ```bash
 gem install rspec-rails
 rails generate rspec:install
-```
+```bash
 
 ```ruby
 # spec/models/post_spec.rb
@@ -292,16 +316,18 @@ RSpec.describe Post, type: :model do
   it { should belong_to(:user) }
   it { should validate_presence_of(:title) }
 end
-```
+```bash
 
 ## Authentication
+
 ```bash
 gem 'devise'
 rails generate devise:install
 rails generate devise User
-```
+```bash
 
 ## Debugging
+
 - `byebug` gem for breakpoints
 - Rails logger: `Rails.logger.info "Debug message"`
 - `rails console` for interactive debugging

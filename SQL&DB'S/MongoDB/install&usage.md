@@ -5,7 +5,8 @@
 ### Windows
 
 **Official Installer (Recommended)**
-1. Download from https://www.mongodb.com/try/download/community
+
+1. Download from <https://www.mongodb.com/try/download/community>
 2. Run `.msi` installer
 3. Choose "Complete" installation
 4. Install MongoDB Compass (GUI tool)
@@ -13,13 +14,15 @@
 6. Verify: `mongod --version`
 
 **Chocolatey**
+
 ```powershell
 choco install mongodb
-```
+```bash
 
 ### macOS
 
 **Homebrew (Recommended)**
+
 ```bash
 # Add MongoDB tap
 brew tap mongodb/brew
@@ -32,11 +35,12 @@ brew services start mongodb-community@7.0
 
 # Verify
 mongod --version
-```
+```bash
 
 ### Linux
 
 **Ubuntu/Debian**
+
 ```bash
 # Import MongoDB GPG key
 curl -fsSL https://pgp.mongodb.com/server-7.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-7.0.gpg
@@ -54,9 +58,10 @@ sudo systemctl enable mongod
 
 # Verify
 mongod --version
-```
+```bash
 
 **Fedora/RHEL**
+
 ```bash
 # Create repo file
 sudo tee /etc/yum.repos.d/mongodb-org-7.0.repo <<EOF
@@ -74,7 +79,7 @@ sudo dnf install -y mongodb-org
 # Start
 sudo systemctl start mongod
 sudo systemctl enable mongod
-```
+```bash
 
 ### Docker
 
@@ -96,7 +101,7 @@ docker run --name mongodb \
   -v mongodb-data:/data/db \
   -p 27017:27017 \
   -d mongo:latest
-```
+```bash
 
 ---
 
@@ -116,7 +121,7 @@ mongosh "mongodb://hostname:27017"
 
 # Connect to MongoDB Atlas
 mongosh "mongodb+srv://cluster.mongodb.net/myDatabase" --username user
-```
+```bash
 
 ### Create Database and User
 
@@ -138,7 +143,7 @@ db.createUser({
   pwd: "password",
   roles: [ { role: "readWrite", db: "myapp" } ]
 })
-```
+```bash
 
 ---
 
@@ -158,7 +163,7 @@ db
 
 // Drop database
 db.dropDatabase()
-```
+```bash
 
 ### Collection Operations
 
@@ -174,7 +179,7 @@ db.users.drop()
 
 // Rename collection
 db.users.renameCollection("customers")
-```
+```bash
 
 ### CRUD Operations
 
@@ -195,7 +200,7 @@ db.users.insertMany([
   { name: "Bob", age: 35, email: "bob@example.com" },
   { name: "Charlie", age: 28, email: "charlie@example.com" }
 ])
-```
+```bash
 
 #### Find Documents
 
@@ -231,7 +236,7 @@ db.users.find().limit(5).sort({ age: -1 })
 
 // Find with skip (pagination)
 db.users.find().skip(10).limit(5)
-```
+```bash
 
 #### Update Documents
 
@@ -272,7 +277,7 @@ db.users.updateOne(
   { $set: { age: 40, email: "david@example.com" } },
   { upsert: true }
 )
-```
+```bash
 
 #### Delete Documents
 
@@ -285,7 +290,7 @@ db.users.deleteMany({ age: { $lt: 25 } })
 
 // Delete all documents
 db.users.deleteMany({})
-```
+```bash
 
 ---
 
@@ -318,7 +323,7 @@ db.orders.aggregate([
     }
   }
 ])
-```
+```bash
 
 ### Indexes
 
@@ -340,7 +345,7 @@ db.users.getIndexes()
 
 // Drop index
 db.users.dropIndex("email_1")
-```
+```bash
 
 ### Text Search
 
@@ -356,7 +361,7 @@ db.articles.find(
   { $text: { $search: "mongodb" } },
   { score: { $meta: "textScore" } }
 ).sort({ score: { $meta: "textScore" } })
-```
+```bash
 
 ---
 
@@ -376,7 +381,7 @@ mongodump --username=admin --password=pass --authenticationDatabase=admin --out=
 
 # Compressed backup
 mongodump --archive=backup.gz --gzip
-```
+```bash
 
 ### Restore
 
@@ -392,13 +397,14 @@ mongorestore --username=admin --password=pass --authenticationDatabase=admin /ba
 
 # Restore from archive
 mongorestore --archive=backup.gz --gzip
-```
+```bash
 
 ---
 
 ## 🔧 MongoDB Compass
 
 ### Features
+
 - Visual query builder
 - Schema visualization
 - Index management
@@ -407,8 +413,9 @@ mongorestore --archive=backup.gz --gzip
 - Aggregation pipeline builder
 
 ### Installation
+
 - Included with MongoDB installer on Windows
-- Download from https://www.mongodb.com/products/compass
+- Download from <https://www.mongodb.com/products/compass>
 - Available for Windows, macOS, Linux
 
 ---
@@ -429,7 +436,7 @@ brew services start mongodb-community  # macOS
 # Check logs
 # Linux: /var/log/mongodb/mongod.log
 # macOS: /usr/local/var/log/mongodb/mongo.log
-```
+```bash
 
 ### Connection Issues
 
@@ -439,7 +446,7 @@ mongosh --eval "db.adminCommand('ping')"
 
 // Check port
 // Default: 27017
-```
+```bash
 
 ### Performance Issues
 
@@ -455,7 +462,7 @@ db.stats()
 
 // Get collection statistics
 db.users.stats()
-```
+```bash
 
 ---
 
@@ -468,14 +475,14 @@ Edit `/etc/mongod.conf` (Linux) or `/usr/local/etc/mongod.conf` (macOS):
 ```yaml
 security:
   authorization: enabled
-```
+```bash
 
 Restart MongoDB:
 
 ```bash
 sudo systemctl restart mongod  # Linux
 brew services restart mongodb-community  # macOS
-```
+```bash
 
 ---
 
@@ -483,7 +490,7 @@ brew services restart mongodb-community  # macOS
 
 **Free Tier Available!**
 
-1. Sign up at https://www.mongodb.com/cloud/atlas
+1. Sign up at <https://www.mongodb.com/cloud/atlas>
 2. Create cluster (512MB free)
 3. Create database user
 4. Whitelist IP address

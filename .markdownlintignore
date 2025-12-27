@@ -1,0 +1,15 @@
+# Markdownlint ignore patterns
+# https://github.com/DavidAnson/markdownlint-cli2#ignoring-files
+
+# Ignore vendor/dependency directories
+.venv/**
+node_modules/**
+venv/**
+__pycache__/**
+
+# Ignore generated files
+*.log
+markdownlint-*.txt
+
+# Ignore sample/test files that may have intentional formatting
+zsample/**

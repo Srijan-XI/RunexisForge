@@ -13,20 +13,23 @@ docker run -it --rm \
   -p 5678:5678 \
   -v n8n_data:/home/node/.n8n \
   n8nio/n8n
-```
+```bash
 
 Open: `http://localhost:5678`
 
 #### Production notes
+
 - Prefer a reverse proxy (TLS) for public access
 - Store credentials securely and restrict access
 - Back up the `n8n_data` volume
 
 ### Option 2: n8n.cloud
+
 - Hosted option for quick start (no infrastructure)
 - Good for learning and lightweight production usage
 
 ### Option 3: Desktop app
+
 - Convenient for local learning (varies by platform)
 
 ---
@@ -39,6 +42,7 @@ Open: `http://localhost:5678`
 4. Click **Test workflow**
 
 ### Tips
+
 - Use **Set** node to shape data
 - Use **IF** node to branch logic
 - Use **Merge** node to combine inputs
@@ -46,12 +50,14 @@ Open: `http://localhost:5678`
 ---
 
 ## Expressions and variables
+
 - n8n supports expressions to reference prior node outputs.
 - Start small: rename fields with **Set**, then reference them in later nodes.
 
 ---
 
 ## Error handling
+
 - Prefer explicit checks (IF node) before calling external APIs
 - Add retries/backoff where supported
 - Use a dedicated error route/workflow for alerts
@@ -59,6 +65,7 @@ Open: `http://localhost:5678`
 ---
 
 ## Security basics
+
 - Never hardcode secrets in nodes; use **Credentials**
 - If exposing Webhooks publicly, protect them (token, allowlist, auth)
 - Run behind HTTPS when accessible over the internet
@@ -66,6 +73,7 @@ Open: `http://localhost:5678`
 ---
 
 ## References
-- Project overview: https://n8n.io/
-- Docs: https://docs.n8n.io/
-- Dev.to article : https://dev.to/srijan-xi/n8ndocker-f5l
+
+- Project overview: <https://n8n.io/>
+- Docs: <https://docs.n8n.io/>
+- Dev.to article : <https://dev.to/srijan-xi/n8ndocker-f5l>

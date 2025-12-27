@@ -1,9 +1,11 @@
 # Vue.js Introduction
 
 ## Overview
+
 Vue is a progressive JavaScript framework for building user interfaces. It's designed to be incrementally adoptable, allowing developers to use as little or as much as needed—from enhancing static HTML to full Single Page Applications.
 
 ## Key Features
+
 - **Reactive Data Binding**: Two-way data binding for synchronization
 - **Component System**: Reusable, maintainable component architecture
 - **Simple Syntax**: Easy to learn with a gentle learning curve
@@ -12,6 +14,7 @@ Vue is a progressive JavaScript framework for building user interfaces. It's des
 - **Excellent DevTools**: Vue DevTools for debugging
 
 ## Core Concepts
+
 1. **Templates**: HTML-based templates with Vue-specific syntax
 2. **Data**: Reactive state management
 3. **Methods**: Functions to handle events and logic
@@ -21,10 +24,12 @@ Vue is a progressive JavaScript framework for building user interfaces. It's des
 7. **Components**: Encapsulated UI elements
 
 ## Vue 3 vs Vue 2
+
 - **Vue 3**: Composition API, TypeScript support, better performance
 - **Vue 2**: Options API, established ecosystem
 
 ## Common Use Cases
+
 - Single Page Applications (SPAs)
 - Progressive enhancement
 - Real-time dashboards
@@ -32,11 +37,13 @@ Vue is a progressive JavaScript framework for building user interfaces. It's des
 - Component libraries
 
 ## Prerequisites
+
 - JavaScript fundamentals
 - HTML/CSS knowledge
 - Understanding of modern JavaScript (ES6+)
 
 ## Advantages
+
 - Low learning curve
 - Excellent documentation
 - Small bundle size
@@ -44,7 +51,8 @@ Vue is a progressive JavaScript framework for building user interfaces. It's des
 - Flexible and progressive approach
 
 ## Resources
-- Official Documentation: https://vuejs.org
-- Vue 3 Guide: https://vuejs.org/guide/
-- Vue Router: https://router.vuejs.org
-- Pinia State Management: https://pinia.vuejs.org
+
+- Official Documentation: <https://vuejs.org>
+- Vue 3 Guide: <https://vuejs.org/guide/>
+- Vue Router: <https://router.vuejs.org>
+- Pinia State Management: <https://pinia.vuejs.org>

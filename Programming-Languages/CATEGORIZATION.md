@@ -35,6 +35,7 @@ Comprehensive categorization of all programming languages in this repository.
 ## Category Breakdown
 
 ### 1. Systems Programming (4 languages)
+
 **Purpose**: Low-level system development, OS kernels, drivers, embedded systems
 
 | Language | Abstraction Level | Key Strength | When to Use |
@@ -45,6 +46,7 @@ Comprehensive categorization of all programming languages in this repository.
 | Rust | Low-Mid | Memory safety | Modern systems, safe concurrency |
 
 **Characteristics**:
+
 - Manual memory management (except Rust)
 - Minimal runtime overhead
 - Direct hardware access
@@ -53,6 +55,7 @@ Comprehensive categorization of all programming languages in this repository.
 ---
 
 ### 2. General-Purpose Programming (7 languages)
+
 **Purpose**: Wide range of applications, enterprise development, app creation
 
 | Language | Runtime | Key Strength | When to Use |
@@ -66,6 +69,7 @@ Comprehensive categorization of all programming languages in this repository.
 | Dart | VM/Native | Flutter framework | Cross-platform mobile apps |
 
 **Characteristics**:
+
 - High-level abstractions
 - Strong type systems
 - Multi-paradigm support
@@ -74,6 +78,7 @@ Comprehensive categorization of all programming languages in this repository.
 ---
 
 ### 3. Scripting Languages (4 languages)
+
 **Purpose**: Automation, rapid prototyping, web backends, system administration
 
 | Language | Key Strength | When to Use |
@@ -84,6 +89,7 @@ Comprehensive categorization of all programming languages in this repository.
 | Bash | System integration | Linux automation, DevOps scripts |
 
 **Characteristics**:
+
 - Interpreted execution
 - Dynamic typing (mostly)
 - Rapid development
@@ -92,6 +98,7 @@ Comprehensive categorization of all programming languages in this repository.
 ---
 
 ### 4. Web Development (2 languages)
+
 **Purpose**: Client and server-side web application development
 
 | Language | Typing | Key Strength | When to Use |
@@ -100,6 +107,7 @@ Comprehensive categorization of all programming languages in this repository.
 | TypeScript | Static | Type safety for JS | Large-scale web applications |
 
 **Characteristics**:
+
 - Browser execution (frontend)
 - Node.js runtime (backend)
 - Event-driven architecture
@@ -108,6 +116,7 @@ Comprehensive categorization of all programming languages in this repository.
 ---
 
 ### 5. Query & DSL (2 languages)
+
 **Purpose**: Data querying, log analysis, specialized problem domains
 
 | Language | Domain | Key Strength | When to Use |
@@ -116,6 +125,7 @@ Comprehensive categorization of all programming languages in this repository.
 | KQL | Log Analytics | Azure integration | Cloud monitoring, security analytics |
 
 **Characteristics**:
+
 - Declarative syntax
 - Domain-specific
 - Not general-purpose
@@ -124,6 +134,7 @@ Comprehensive categorization of all programming languages in this repository.
 ---
 
 ### 6. Data Science (1 language)
+
 **Purpose**: Statistical analysis, data visualization, research
 
 | Language | Key Strength | When to Use |
@@ -131,6 +142,7 @@ Comprehensive categorization of all programming languages in this repository.
 | R | Statistical packages | Academic research, data analysis |
 
 **Characteristics**:
+
 - Statistical computing focus
 - Extensive statistical libraries
 - Visualization capabilities
@@ -139,6 +151,7 @@ Comprehensive categorization of all programming languages in this repository.
 ---
 
 ### 7. Scientific Computing (1 language)
+
 **Purpose**: Numerical analysis, engineering simulations, mathematical modeling
 
 | Language | Key Strength | When to Use |
@@ -146,6 +159,7 @@ Comprehensive categorization of all programming languages in this repository.
 | MATLAB | Matrix operations | Engineering, signal processing |
 
 **Characteristics**:
+
 - Matrix-based computation
 - Built-in visualization
 - Specialized toolboxes
@@ -158,14 +172,17 @@ Comprehensive categorization of all programming languages in this repository.
 ### Choose by Abstraction Level
 
 #### Very Low Level (Bare Metal)
+
 - **Assembly** - Direct hardware manipulation
 
 #### Low Level (System)
+
 - **C** - Portable system programming
 - **C++** - System programming with OOP
 - **Rust** - Safe system programming
 
 #### High Level (Application)
+
 - **Java, C#, Go, Kotlin, Scala, Swift** - General applications
 - **Python, Ruby, PHP, Bash** - Scripting and automation
 - **JavaScript, TypeScript** - Web development
@@ -176,18 +193,23 @@ Comprehensive categorization of all programming languages in this repository.
 ### Choose by Execution Model
 
 #### Compiled to Native Code
+
 - Assembly, C, C++, Rust, Go, Swift
 
 #### Bytecode (VM-based)
+
 - Java, C#, Kotlin, Scala (JVM/CLR)
 
 #### Interpreted
+
 - Python, Ruby, PHP, Bash, R, MATLAB, JavaScript, SQL, KQL
 
 #### Transpiled
+
 - TypeScript → JavaScript
 
 #### JIT (Just-In-Time)
+
 - JavaScript (V8), Dart
 
 ---
@@ -195,18 +217,23 @@ Comprehensive categorization of all programming languages in this repository.
 ### Choose by Paradigm
 
 #### Object-Oriented (OOP)
+
 - Java, C++, C#, Kotlin, Swift, Python, Ruby, PHP, TypeScript
 
 #### Functional
+
 - Scala, Haskell, Rust, Kotlin, Swift, R, JavaScript, TypeScript
 
 #### Procedural
+
 - C, Go, MATLAB, Bash
 
 #### Declarative
+
 - SQL, KQL
 
 #### Multi-Paradigm
+
 - C++, Rust, Kotlin, Swift, Scala, Python, JavaScript, TypeScript
 
 ---
@@ -214,30 +241,38 @@ Comprehensive categorization of all programming languages in this repository.
 ### Choose by Domain
 
 #### Web Development
+
 1. **Frontend**: JavaScript, TypeScript
 2. **Backend**: JavaScript/TypeScript (Node.js), Python, Ruby, PHP, Go, Java, C#
 
 #### Mobile Development
+
 1. **iOS**: Swift
 2. **Android**: Kotlin, Java
 3. **Cross-platform**: Dart (Flutter), JavaScript (React Native)
 
 #### Systems Programming
+
 - C, C++, Rust, Assembly
 
 #### Data Science & Analytics
+
 - Python, R, SQL, KQL, MATLAB
 
 #### Enterprise Applications
+
 - Java, C#, Kotlin, Scala, Go
 
 #### Cloud & DevOps
+
 - Go, Python, Bash, JavaScript
 
 #### Game Development
+
 - C++, C#, Rust
 
 #### Scientific Computing
+
 - MATLAB, Python, R
 
 ---
@@ -245,6 +280,7 @@ Comprehensive categorization of all programming languages in this repository.
 ## Language Ecosystem Comparison
 
 ### Package Managers
+
 - **Python**: pip, conda
 - **JavaScript**: npm, yarn, pnpm
 - **Ruby**: gem
@@ -261,34 +297,41 @@ Comprehensive categorization of all programming languages in this repository.
 ### Popular Frameworks by Language
 
 #### Python
+
 - Django, Flask (Web)
 - TensorFlow, PyTorch (ML)
 - Pandas, NumPy (Data)
 
 #### JavaScript/TypeScript
+
 - React, Vue, Angular (Frontend)
 - Express, NestJS (Backend)
 - Next.js, Remix (Full-stack)
 
 #### Java
+
 - Spring Boot, Jakarta EE
 - Hibernate (ORM)
 - Android SDK
 
-#### C#
+#### C #
+
 - ASP.NET Core
 - Entity Framework
 - Unity (Game)
 
 #### Ruby
+
 - Ruby on Rails
 - Sinatra
 
 #### Go
+
 - Gin, Echo (Web)
 - Kubernetes, Docker
 
 #### Rust
+
 - Rocket, Actix (Web)
 - Tokio (Async)
 
@@ -297,22 +340,27 @@ Comprehensive categorization of all programming languages in this repository.
 ## Performance Tiers
 
 ### Tier 1: Maximum Performance
+
 - Assembly, C, C++, Rust
 - **Use**: Real-time systems, game engines, OS
 
 ### Tier 2: High Performance
+
 - Go, Swift, Java (JIT), C#
 - **Use**: High-throughput services, mobile apps
 
 ### Tier 3: Balanced Performance
+
 - JavaScript (V8), Dart (JIT), Kotlin, Scala
 - **Use**: Web apps, general applications
 
 ### Tier 4: Moderate Performance
+
 - Python, Ruby, PHP, R, MATLAB
 - **Use**: Development speed over execution speed
 
 ### Tier 5: Specialized
+
 - SQL, KQL, Bash
 - **Use**: Domain-specific tasks
 
@@ -321,6 +369,7 @@ Comprehensive categorization of all programming languages in this repository.
 ## Language Popularity & Job Market (2024)
 
 ### Top 10 Most Popular
+
 1. JavaScript/TypeScript
 2. Python
 3. Java
@@ -333,6 +382,7 @@ Comprehensive categorization of all programming languages in this repository.
 10. PHP
 
 ### Fastest Growing
+
 1. Rust
 2. Go
 3. TypeScript
@@ -340,6 +390,7 @@ Comprehensive categorization of all programming languages in this repository.
 5. Swift
 
 ### Enterprise Leaders
+
 1. Java
 2. C#
 3. Python
@@ -351,6 +402,7 @@ Comprehensive categorization of all programming languages in this repository.
 ## Conclusion
 
 This categorization helps you:
+
 - ✅ Choose the right language for your project
 - ✅ Understand language strengths and trade-offs
 - ✅ Navigate between similar languages

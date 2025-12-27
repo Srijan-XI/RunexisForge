@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Create an Azure DevOps organization: https://dev.azure.com/
+1. Create an Azure DevOps organization: <https://dev.azure.com/>
 2. Create a project
 3. Connect a code repository (Azure Repos, GitHub, Bitbucket)
 4. Create a pipeline from Pipelines → New Pipeline
@@ -26,7 +26,7 @@ steps:
     npm install
     npm test
   displayName: 'Install and test'
-```
+```bash
 
 ---
 
@@ -70,13 +70,14 @@ stages:
         deploy:
           steps:
           - script: echo "Deploying to production"
-```
+```bash
 
 ---
 
 ## Triggers
 
 ### Push trigger
+
 ```yaml
 trigger:
   branches:
@@ -86,17 +87,19 @@ trigger:
   paths:
     exclude:
     - docs/*
-```
+```bash
 
 ### PR trigger
+
 ```yaml
 pr:
   branches:
     include:
     - main
-```
+```bash
 
 ### Scheduled trigger
+
 ```yaml
 schedules:
 - cron: "0 0 * * *"
@@ -104,7 +107,7 @@ schedules:
   branches:
     include:
     - main
-```
+```bash
 
 ---
 
@@ -121,7 +124,7 @@ steps:
     versionSpec: $(nodeVersion)
 
 - script: dotnet build --configuration $(buildConfiguration)
-```
+```bash
 
 ---
 
@@ -145,7 +148,7 @@ steps:
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'drop'
-```
+```bash
 
 ---
 
@@ -157,7 +160,7 @@ steps:
     azureSubscription: 'MyAzureConnection'
     appName: 'my-web-app'
     package: '$(Pipeline.Workspace)/drop/*.zip'
-```
+```bash
 
 ---
 
@@ -175,11 +178,12 @@ steps:
       deploy:
         steps:
         - script: echo "Deploying to prod"
-```
+```bash
 
 ---
 
 ## Best practices
+
 - Store pipelines in source control (YAML)
 - Use stages to separate build/test/deploy
 - Use environments for production approvals
@@ -189,5 +193,6 @@ steps:
 ---
 
 ## References
-- Docs: https://learn.microsoft.com/azure/devops/pipelines/
-- YAML schema: https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/
+
+- Docs: <https://learn.microsoft.com/azure/devops/pipelines/>
+- YAML schema: <https://learn.microsoft.com/azure/devops/pipelines/yaml-schema/>

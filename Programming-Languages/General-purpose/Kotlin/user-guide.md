@@ -22,18 +22,20 @@
 3. Extract it and add `.../kotlinc/bin` to your `PATH`.
 
 Verify:
+
 ```pwsh
 kotlinc -version
-```
+```bash
 
 Compile and run:
+
 ```pwsh
 # Compile to a runnable jar
 kotlinc Main.kt -include-runtime -d app.jar
 
 # Run
 java -jar app.jar
-```
+```bash
 
 ## Kotlin Basics
 
@@ -42,7 +44,7 @@ java -jar app.jar
 ```kotlin
 val x = 10      // read-only
 var y = 20      // mutable
-```
+```bash
 
 ### Null Safety
 
@@ -51,7 +53,7 @@ val a: String = "hi"
 val b: String? = null
 
 val len = b?.length ?: 0  // safe call + Elvis operator
-```
+```bash
 
 ### Collections
 
@@ -59,7 +61,7 @@ val len = b?.length ?: 0  // safe call + Elvis operator
 val nums = listOf(1, 2, 3, 4)
 val evens = nums.filter { it % 2 == 0 }
 val squares = nums.map { it * it }
-```
+```bash
 
 ### Data Classes
 
@@ -68,7 +70,7 @@ data class User(val id: Int, val name: String)
 
 val u = User(1, "Ada")
 println(u)
-```
+```bash
 
 ## Next Steps
 

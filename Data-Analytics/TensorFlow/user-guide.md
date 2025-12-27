@@ -5,12 +5,13 @@
 ```bash
 python -m pip install --upgrade pip
 pip install tensorflow
-```
+```bash
 
 Verify:
+
 ```bash
 python -c "import tensorflow as tf; print(tf.__version__)"
-```
+```bash
 
 ## Minimal Keras example
 

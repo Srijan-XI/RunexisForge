@@ -20,22 +20,26 @@
 ## Editions
 
 ### Zorin OS Core (Free)
+
 - Modern desktop experience
 - Pre-installed essential apps
 - Based on Ubuntu LTS
 
 ### Zorin OS Lite (Free)
+
 - For older/slower hardware
 - XFCE desktop environment
 - Minimal resource usage
 
 ### Zorin OS Pro ($39)
+
 - Premium desktop layouts
 - Advanced productivity apps
 - Professional creative software
 - Priority support
 
 ### Zorin OS Education
+
 - For schools and students
 - Educational software included
 - Parental controls
@@ -55,11 +59,13 @@
 ## System Requirements
 
 ### Minimum
+
 - **CPU**: 1 GHz Dual Core
 - **RAM**: 2 GB (Core), 1 GB (Lite)
 - **Storage**: 10 GB
 
 ### Recommended
+
 - **CPU**: 2 GHz Dual Core or better
 - **RAM**: 4 GB+
 - **Storage**: 20 GB+ SSD

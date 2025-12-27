@@ -3,27 +3,30 @@
 ## Basic Syntax
 
 ### Mappings
+
 ```yaml
 name: DevSphere
 active: true
 count: 3
-```
+```bash
 
 ### Lists
+
 ```yaml
 items:
   - one
   - two
-```
+```bash
 
 ### Nested structures
+
 ```yaml
 app:
   name: demo
   ports:
     - 8080
     - 9090
-```
+```bash
 
 ## Multiline strings
 
@@ -31,7 +34,7 @@ app:
 message: |
   Hello
   from YAML
-```
+```bash
 
 ## Common pitfalls
 

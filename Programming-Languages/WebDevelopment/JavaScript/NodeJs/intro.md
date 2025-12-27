@@ -7,35 +7,40 @@
 ## Key Features
 
 ### 1. **Asynchronous and Event-Driven**
+
 - All APIs of Node.js library are asynchronous (non-blocking)
 - The server never waits for an API to return data
 - Moves to the next API after calling it
 - Uses events to get response from previous API calls
 
 ### 2. **Fast Execution**
+
 - Built on Google Chrome's V8 JavaScript engine
 - V8 compiles JavaScript directly to native machine code
 - Exceptionally fast code execution
 
 ### 3. **Single-Threaded but Highly Scalable**
+
 - Uses a single-threaded model with event looping
 - Event mechanism helps server respond in a non-blocking way
 - Makes it highly scalable compared to traditional servers
 - Can handle many more concurrent requests than traditional servers
 
 ### 4. **No Buffering**
+
 - Node.js applications never buffer any data
 - Output data in chunks
 - Significantly reduces processing time
 
 ### 5. **Cross-Platform**
+
 - Runs on Windows, macOS, Linux, and Unix
 - Write once, run anywhere approach
 - Consistent behavior across platforms
 
 ## Architecture
 
-```
+```bash
 ┌─────────────────────────────────────────────────┐
 │                  Application                     │
 │            (JavaScript/Node.js Code)             │
@@ -59,7 +64,7 @@
 ┌──────────────────▼──────────────────────────────┐
 │            Operating System                      │
 └─────────────────────────────────────────────────┘
-```
+```bash
 
 ## Event Loop
 
@@ -94,28 +99,33 @@ Node.js comes with built-in modules that don't require installation:
 ## Use Cases
 
 ### 1. **Web Applications**
+
 - Real-time web applications
 - Single-page applications (SPAs)
 - RESTful APIs
 - Microservices architecture
 
 ### 2. **Real-Time Applications**
+
 - Chat applications
 - Live notifications
 - Collaborative tools
 - Gaming servers
 
 ### 3. **Streaming Applications**
+
 - Video/audio streaming
 - Data processing pipelines
 - File upload/download services
 
 ### 4. **Command-Line Tools**
+
 - Build tools (Webpack, Gulp, Grunt)
 - Package managers (npm, Yarn)
 - Development utilities
 
 ### 5. **IoT Applications**
+
 - Sensor data collection
 - Device control systems
 - Real-time monitoring
@@ -159,7 +169,7 @@ npm update                  # Update packages
 npm list                    # List installed packages
 npm search <term>           # Search for packages
 npm run <script>            # Run script from package.json
-```
+```bash
 
 ## Popular Node.js Frameworks
 
@@ -210,7 +220,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
-```
+```bash
 
 ## Getting Started
 
@@ -236,6 +246,7 @@ server.listen(port, hostname, () => {
 ## Learning Path
 
 ### Beginner
+
 1. JavaScript fundamentals
 2. Node.js basics (modules, event loop)
 3. npm and package.json
@@ -243,6 +254,7 @@ server.listen(port, hostname, () => {
 5. Basic HTTP server
 
 ### Intermediate
+
 1. Express.js framework
 2. RESTful API design
 3. Database integration (MongoDB, PostgreSQL)
@@ -250,6 +262,7 @@ server.listen(port, hostname, () => {
 5. Error handling and logging
 
 ### Advanced
+
 1. Microservices architecture
 2. WebSockets and real-time communication
 3. Performance optimization

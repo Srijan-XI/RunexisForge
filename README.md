@@ -407,6 +407,7 @@ Whether you're a beginner or setting up a fresh dev environment, this guide has 
 **New here? Get coding in 5 minutes!**
 
 👉 Check out our [**QUICKSTART.md**](QUICKSTART.md) for the fastest way to:
+
 - Install any language
 - Run your first program
 - Start learning immediately
@@ -463,6 +464,7 @@ This repository currently includes guides and practice questions for:
 | **SQL** 🗄️ | ✅ Available | 10 Questions + 11 DB Guides | Active |
 
 **📁 Organization**: Languages are now organized by category in `Programming-Languages/`:
+
 - **General-purpose/**: Kotlin, Scala, Swift, Dart with Flutter
 - **Scripting/**: Python, PHP, Ruby, Bash
 - **WebDevelopment/**: JavaScript (+ Node.js, Express, Next.js), TypeScript
@@ -694,7 +696,7 @@ This repository currently includes guides and practice questions for:
 ```bash
 git clone https://github.com/Srijan-XI/Install-and-Learn-DevLangs.git
 cd  Install-and-Learn-DevLangs
-```
+```bash
 
 ### 2. Choose Your Language
 
@@ -770,11 +772,12 @@ cd Operating-Systems/Windows/         # Windows
 cd Operating-Systems/macOS/           # macOS
 cd Operating-Systems/Android/         # Android
 cd Linux/                             # Linux distros
-```
+```bash
 
 ### 3. Follow the Installation Guide
 
 Each language folder contains an installation guide with detailed instructions for:
+
 - Windows
 - macOS
 - Linux
@@ -788,12 +791,14 @@ After installation, explore the practice questions folder to test your knowledge
 ## 💡 How to Use This Repository
 
 ### For Beginners
+
 1. Start with the **Installation Guide** for your chosen language
 2. Set up your development environment
 3. Try the **beginner-level practice questions**
 4. Progress to intermediate and advanced questions
 
 ### For Experienced Developers
+
 1. Use the guides as a quick reference for setup on new systems
 2. Explore advanced practice questions
 3. Contribute your own solutions or improvements
@@ -896,6 +901,7 @@ Found a security vulnerability? Please review our [**SECURITY.md**](SECURITY.md)
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 This means you are free to:
+
 - ✅ Use this code for personal or commercial projects
 - ✅ Modify and adapt the code
 - ✅ Distribute copies

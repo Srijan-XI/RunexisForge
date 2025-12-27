@@ -16,9 +16,9 @@ assignees: ''
 
 <!-- Which file or section is affected? -->
 
-- **File Path**: 
-- **Language**: 
-- **Line Number** (if applicable): 
+- **File Path**:
+- **Language**:
+- **Line Number** (if applicable):
 
 ## 🔄 Steps to Reproduce
 
@@ -47,9 +47,9 @@ assignees: ''
 
 <!-- Please paste any error messages, logs, or screenshots -->
 
-```
+```bash
 Paste error message here
-```
+```bash
 
 ## 📎 Additional Context
 
