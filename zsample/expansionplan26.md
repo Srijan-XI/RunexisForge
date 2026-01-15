@@ -1,115 +1,338 @@
-## Expansion Plan 26 for Runexis Forge part 1
+## Expansion Plan 26 for Runexis Forge
 
-## Status (started)
+### Adding New content / topics 
 
-- [x] GitHub Actions CI: markdown lint, link check, spellcheck
-- [x] Prose lint: Vale (Microsoft + write-good)
-- [x] Docs site scaffold: MkDocs (Material) + CI build
-- [x] Repo hygiene: CODEOWNERS + Dependabot for GitHub Actions
-- [x] Security: secret scanning (gitleaks)
+Technology Gap Analysis - RunexisForge
+## 🔴 Critical Gaps (High Priority)
+### Programming Languages COMPLETED
+Lua - Game scripting, embedded systems
+Perl - Text processing, legacy systems, scripting
+Lisp/Clojure - Functional programming paradigm
+Haskell - Pure functional programming
+Elixir - Concurrent, distributed systems
+Julia - Scientific computing/numerical analysis
+Groovy - JVM-based scripting for testing and DSLs
+Erlang - Telecom, distributed systems
+VB.NET - Enterprise development
 
-### New content created
+### Frontend Frameworks & Tools
+Web Components - Native browser standards
+Lit - Lightweight web components library
+Alpine.js - Lightweight Alpine alternative to heavy frameworks
+htmx - Modern HTML interaction
+Qwik - Edge-optimized framework
+Next.js details expansion
+Nuxt.js details expansion
+Stencil - Web component compiler
+FAST - Microsoft's web component library
+Material Design frameworks (Angular Material, Vue Material, etc.)
 
-- n8n:
-  - `Cloud-DevOps/n8n/intro.md`
-  - `Cloud-DevOps/n8n/user-guide.md`
-  - `Cloud-DevOps/n8n/examples/docker-compose.yml`
-- Virtualization (Windows):
-  - `Operating-Systems/Windows/Virtualization/intro.md`
-  - `Operating-Systems/Windows/Virtualization/virtualbox.md`
-  - `Operating-Systems/Windows/Virtualization/vmware.md`
-- Containers & DevOps expansion:
-  - Podman: `Cloud-DevOps/Podman/intro.md`, `user-guide.md`
-  - Helm: `Cloud-DevOps/Helm/intro.md`, `user-guide.md`
-  - Azure DevOps Pipelines: `Cloud-DevOps/AzureDevOpsPipelines/intro.md`, `user-guide.md`
-  - ArgoCD: `Cloud-DevOps/ArgoCD/intro.md`, `user-guide.md`
-  - Flux: `Cloud-DevOps/Flux/intro.md`, `user-guide.md`
-  - OpenTofu: `Cloud-DevOps/OpenTofu/intro.md`, `user-guide.md`
-  - GitHub Actions: `Cloud-DevOps/GitHub/starter-workflows.md`
-- Backend expansion:
-  - gRPC: `Backend-Web/gRPC/intro.md`, `user-guide.md`
-  - GraphQL: `Backend-Web/GraphQL/intro.md`, `user-guide.md`
-  - Redis patterns: `SQL&DB'S/Redis/patterns-guide.md`
-  - Background Jobs: `Backend-Web/BackgroundJobs/intro.md`, `celery-guide.md`, `sidekiq-guide.md`
-  - OAuth 2.0 & OIDC: `Backend-Web/OAuth-OIDC/intro.md`, `user-guide.md`
+### Backend Frameworks
+**✅ COMPLETED (Phase 1 - 11 frameworks):**
+- Node.js - Core JavaScript runtime
+- Express.js - Core Node framework
+- NestJS - Progressive Node.js framework
+- hapi - Robust Node.js framework
+- Koa - Express alternative
+- Fastify - Modern Node.js framework
+- Sails.js - Node.js full-stack framework
+- Adonis - Node.js framework
+- Actix-web - Rust web framework
+- Axum - Modern Rust async framework
+- Rocket - Rust web framework
 
-- Observability expansion:
-  - OpenTelemetry: `Cloud-DevOps/OpenTelemetry/intro.md`, `user-guide.md`
-  - Prometheus: `Cloud-DevOps/Prometheus/intro.md`, `user-guide.md`
-  - Grafana: `Cloud-DevOps/Grafana/intro.md`, `user-guide.md`
-  - Loki: `Cloud-DevOps/Loki/intro.md`, `user-guide.md`
-  - ELK & OpenSearch: `Cloud-DevOps/ELK-OpenSearch/intro.md`, `user-guide.md`
+**✅ COMPLETED (Phase 2 - 15 frameworks):**
+- Deno - Modern JavaScript/TypeScript runtime
+- Oak - Middleware framework for Deno
+- Fresh - Full-stack Deno framework with islands architecture
+- Leptos - Full-stack Rust/WASM web framework
+- Vert.x - Reactive JVM framework
+- Micronaut - Cloud-native JVM microservices framework
+- Quarkus - Container-native JVM framework
+- Play Framework - Scala/Java web framework
+- Vapor - Swift web framework
+- Kitura - Swift framework (legacy/historical reference)
+- Phoenix - Elixir real-time framework
+- Harpoon - Lightweight Elixir framework
+- Strapi - Headless CMS platform
+- Hasura - GraphQL backend platform
+- Firebase - Backend as a Service platform
 
-- Security expansion:
-  - OWASP Top 10: `Security-Testing/OWASP-Top-10/intro.md`, `user-guide.md`
-  - Semgrep: `Security-Testing/Semgrep/intro.md`, `user-guide.md`
-  - Dependency Scanning: `Security-Testing/Dependency-Scanning/intro.md`, `user-guide.md`
-  - Secrets Scanning: `Security-Testing/Secrets-Scanning/intro.md`, `user-guide.md`
+**✅ COMPLETED (Phase 3 - 3 topics):**
+- Elysia - Bun.js framework
+- Hono - Lightweight web framework (multi-runtime)
+- .NET Core deeper guides - Beyond ASP.NET Core basics
 
-- Data expansion:
-  - dbt: `Data-Analytics/dbt/intro.md`, `user-guide.md`
-  - Apache Airflow: `Data-Analytics/Airflow/intro.md`, `user-guide.md`
-  - DuckDB: `Data-Analytics/DuckDB/intro.md`, `user-guide.md`
-  - Lakehouse basics: `Data-Analytics/Lakehouse/intro.md`, `user-guide.md`
+**📊 TOTAL BACKEND FRAMEWORKS DOCUMENTED: 29/29 (100%)**
 
-- Dev experience & templates:
-  - Dev Container: `.devcontainer/devcontainer.json`
-  - Issue Forms: `.github/ISSUE_TEMPLATE/bug_report.yml`, `feature_request.yml`, `question.yml`
+## Databases & Data Storage
+Elasticsearch - Search and analytics (not just ELK)
+Cassandra - Distributed NoSQL
+Couchbase - NoSQL document database
+ArangoDB - Multi-model database
+ClickHouse - OLAP database
+TimescaleDB - Time-series database
+VictoriaMetrics - Time-series database
+Weaviate - Vector database for AI
+Pinecone - Managed vector database
+Milvus - Open-source vector DB
+Druid - Real-time analytics
+Presto/Trino - SQL query engine
+Apache Druid - OLAP database
+S3-compatible storage - MinIO, etc.
+etcd - Distributed configuration
+Consul - Service mesh & discovery
+Memcached - In-memory caching (separate from Redis)
 
-## Software/technologies to consider adding as topics (content expansion)
+## Cloud Platforms & Services
+Cloudflare - CDN & edge computing
+Linode/Akamai - Cloud provider
+Oracle Cloud - Enterprise cloud
+IBM Cloud - Enterprise solutions
+Heroku alternative guides - Deployment platforms
+Railway, Render - Modern deployment platforms
+Vercel - Frontend deployment (beyond Next.js)
+Netlify - Frontend deployment
+AWS services deeper - Lambda, ECS, RDS in detail
+Azure services deeper - App Service, Functions, CosmosDB
+GCP services deeper - Cloud Run, Dataflow, etc.
 
-- Containers & DevOps: Podman, Helm, GitHub Actions “starter workflows”, Azure DevOps Pipelines, ArgoCD/Flux, OpenTofu (Terraform alternative).
-- Backend: Node.js (Express/NestJS), gRPC, GraphQL, Redis patterns, background jobs (Celery / Sidekiq), API auth (OAuth2/OIDC).
-- Observability: OpenTelemetry, Prometheus/Grafana, Loki, ELK/OpenSearch.
-- Security: OWASP Top 10, Semgrep, dependency scanning basics, secrets scanning (how-to + prevention).
-- Data: dbt, Airflow, DuckDB, modern lakehouse basics (Delta/Iceberg/Hudi) if that fits your audience.
+## DevOps & Infrastructure
+Vagrant - Development environment automation
+Packer - Machine image building
+Vault - Secret management (HashiCorp Vault exists but needs expansion)
+Consul - Service discovery & mesh
+Nomad - Workload orchestration
+Pulumi - Infrastructure as Code (Python/TypeScript)
+CDK - AWS CDK for infrastructure
+CloudFormation - AWS native IaC
+Skaffold - Kubernetes development
+Kustomize - Kubernetes customization
+Helm charts - Deeper Helm guides
+Service Mesh - Istio, Linkerd guides
+Istio - Service mesh platform
+Linkerd - Lightweight service mesh
+Spinnaker - Continuous deployment
+GitOps operators - Deeper ArgoCD/Flux guides
+Tekton - Cloud-native CI/CD
+Drone CI - Container-native CI
+CircleCI - CI/CD platform
+Travis CI - CI/CD platform
+GitHub Actions - More detailed guides
+GitLab CI/CD - More detailed guides
+Maven - Java build tool (not just mentioned)
+Gradle - Java build tool (not just mentioned)
+Bazel - Build system
+Make/CMake - Build automation
 
----
+## Testing & Quality
+Cypress - E2E testing
+Playwright - Cross-browser testing
+Selenium - Web automation/testing
+Puppeteer - Headless browser
+TestNG - Java testing framework
+JUnit - Java testing (deeper)
+PHPUnit - PHP testing
+pytest - Python testing (deeper)
+unittest - Python testing alternative
+RSpec - Ruby testing
+Cucumber - BDD testing framework
+Mocha - JavaScript testing
+Chai - Assertion library
+Sinon - Mocking library
+SonarQube - Code quality (exists but needs expansion)
+Checkmarx - SAST tool
+OWASP ZAP - Security testing
+Fortify - Security scanning
+Code coverage tools - Codecov, Coveralls
 
-- GitHub Actions CI (workflows): add workflows to run on PRs:
-Markdown lint using your existing .markdownlint.json
-Broken link checking (internal + external)
-Spellcheck / prose lint (lightweight)
-Optional: validate TOC / consistency checks (duplicate headings, malformed frontmatter, etc.)
+## AI/ML & Data Science
+PyTorch - Deep learning (vs TensorFlow)
+Scikit-learn - ML library (deeper)
+XGBoost - Gradient boosting
+LightGBM - Gradient boosting
+Hugging Face - Transformers library
+OpenAI/GPT integration - LLM APIs
+Anthropic Claude integration - Alternative LLM
+MLflow - ML lifecycle
+Weights & Biases - Experiment tracking
+Kubeflow - ML on Kubernetes
+Ray - Distributed computing
+Dask - Parallel computing
+RAPIDS - GPU-accelerated data science
+Computer Vision libraries - OpenCV deeper guides
+NLP libraries - NLTK, spaCy
+Stable Diffusion - Image generation
+YOLO - Object detection
+Message Queues & Streaming
+RabbitMQ - Message broker
+ActiveMQ - Message broker
+AWS SQS/SNS - AWS messaging
+Azure Service Bus - Azure messaging
+Google Pub/Sub - GCP messaging
+NATS - Cloud-native messaging
+Redis Streams - Redis streaming capability
+Pulsar - Distributed messaging
+MQTT - IoT messaging protocol
+AMQP - Message protocol
+WebSocket - Real-time communication
+Socket.io - WebSocket library (deeper)
 
-- Link-check tooling: e.g., lychee or markdown-link-check to catch dead links early (very common issue in learning repos).
-- Prose quality tooling: Vale (style rules) and/or codespell (typos). This dramatically improves perceived quality with low effort.
-- Pre-commit hooks: add pre-commit config so contributors automatically run markdownlint + link checks + whitespace fixes before committing.
-- Docs site generator (optional but very impactful): MkDocs (Material) or Docusaurus to turn the repo into a browsable website with search + navigation instead of relying on GitHub browsing. This is the biggest UX upgrade for a knowledgebase.
-- Dev Container / Codespaces: add a .devcontainer/ so anyone can contribute with one click (consistent tooling: markdownlint, vale, link checker).
-- Repo hygiene automation:
-CODEOWNERS (review routing)
-dependabot.yml for GitHub Actions (even if you only depend on actions, keeping them updated matters)
-Issue forms (YAML issue forms) if you want stricter reporting than Markdown templates
-- Consistency metadata: a simple frontmatter schema (or a small metadata.json) for each guide: difficulty, prerequisites, last-reviewed date, tested-on versions. Then CI can enforce “must have last-reviewed within N months” for key docs.
+## Monitoring & Observability
+New Relic - APM platform
+Datadog - Monitoring platform
+Elastic Stack - Deeper guides (exists but expand)
+Splunk - Log aggregation
+Dynatrace - APM
+Jaeger - Distributed tracing
+Zipkin - Distributed tracing
+CloudWatch - AWS monitoring
+Azure Monitor - Azure monitoring
+Google Cloud Monitoring - GCP monitoring
+AlertManager - Alert management
+Grafana - Dashboards (exists, needs expansion)
+Prometheus - Metrics (exists, needs expansion)
+InfluxDB - Time-series database
+Datadog - Full observability stack
 
----
+## API & Web Services
+REST API - Core REST patterns
+gRPC - Binary RPC (exists, needs expansion)
+GraphQL - Query language (exists, needs expansion)
+OpenAPI/Swagger - API documentation
+JSON:API - JSON specification
+AsyncAPI - Event-driven APIs
+SOAP - Legacy web services
+Webhook - Event delivery
+OAuth 2.0/OIDC - Auth (exists, needs expansion)
+SAML - Enterprise authentication
+JWT - Token authentication
+Refresh tokens - Token management
+API Gateway - API management
+Kong - API gateway
+Traefik - Reverse proxy/API gateway
+API rate limiting - Best practices
+API versioning - Strategies
 
-### N8N Related Content Ideas
+## Mobile Development
+React Native - Cross-platform mobile
+Flutter - Cross-platform mobile (Dart exists)
+Ionic - Hybrid mobile framework
+NativeScript - Native mobile framework
+Kivy - Python mobile framework
+SwiftUI - Modern iOS development (deeper)
+Jetpack Compose - Android modern UI
+Kotlin Multiplatform - Kotlin for mobile
+Expo - React Native tooling
+PWA - Progressive Web Apps
 
-- What is n8n? Overview, features, and benefits of using n8n for workflow automation.
-- Getting Started with n8n: Installation guides (Docker, n8n.cloud, self-hosted), initial setup, and first workflow creation.
-- n8n Workflow Tutorials: Step-by-step guides for building common workflows (e.g., email automation, data syncing, social media posting).
-- Advanced n8n Features: Using expressions, variables, error handling, and custom functions within n8n workflows.
-- N8N integration guides: popular connectors, custom connector creation, best practices for workflows.
- with With proper guidance. Dev.to article : <https://dev.to/srijan-xi/n8ndocker-f5l>
+## Game Development
+Game frameworks beyond engines - LibGDX, Pygame, Phaser
+Phaser - JavaScript 2D game framework
+Babylon.js - 3D web engine
+Three.js - 3D JavaScript
+PlayCanvas - Cloud-based game engine
+Defold - Mobile game engine
+Love 2D - Lua game framework
+Raylib - Simple game library
+Bevy - Rust game engine
+Amethyst - Rust game engine
+libGDX - Java game framework
+MonoGame - XNA successor (C#)
+FNA - XNA reimplementation
+Pygame - Python game library
 
-### VM ware and Visual Box Related Content Ideas
+## Web3 & Blockchain
+Ethereum - Smart contracts & DApps
+Solidity - Smart contract language
+Web3.js - Ethereum JavaScript library
+Hardhat - Ethereum development
+Foundry - Ethereum development (Rust)
+Truffle - Ethereum framework
+Bitcoin - Bitcoin development
+Polkadot - Blockchain platform
+Cosmos - Blockchain framework
+NEAR - Blockchain platform
+Flow - Blockchain by Dapper Labs
+NFT standards - ERC-721, ERC-1155
+DeFi protocols - Uniswap, Aave integration
+MetaMask - Web3 wallet integration
+Hardhat, Foundry - Development frameworks
 
-- Introduction to Virtualization: Basics of virtualization, benefits, and use cases.
-- Getting Started with VMware: Installation, configuration, and creating your first virtual machine.
-- Using VirtualBox: Step-by-step guide to installing VirtualBox, creating VMs, and managing virtual environments.
-- VMware vs. VirtualBox: Comparison of features, performance, and use cases for both virtualization platforms.
-- Advanced Virtualization Techniques: Snapshots, cloning, networking, and resource management in VMware and VirtualBox.
-- Troubleshooting Common Issues: Solutions to common problems faced while using VMware and VirtualBox.
-- Best Practices for Virtualization: Tips for optimizing performance, security, and resource allocation in virtual environments.
-- Use Cases and Tutorials: Real-world scenarios and step-by-step guides for using VMware and VirtualBox in different contexts (development, testing, learning).
-- Integration with Other Tools: How to integrate VMware and VirtualBox with other software and tools for enhanced functionality.
-- Community and Resources: Where to find help, tutorials, forums, and additional learning materials for VMware and VirtualBox users.
-- Security Considerations: Best practices for securing virtual machines and environments in VMware and VirtualBox.
-- Automation and Scripting: Using PowerCLI for VMware and VBoxManage for VirtualBox to automate tasks and manage VMs programmatically.
-- Performance Optimization: Techniques to improve the performance of virtual machines in both VMware and VirtualBox.
-- Use Cases in Development and Testing: How developers and testers can leverage VMware and VirtualBox for efficient workflows.
-- Future Trends in Virtualization: Emerging technologies and trends in the virtualization space.
+## Utilities & Tools
+Package managers - npm, yarn, pnpm, cargo, pip details
+Version managers - nvm, pyenv, rbenv, jenv
+Container registries - Docker Hub, ECR, GCR, ACR
+Code editors - VS Code extensions
+IDEs - IntelliJ, Eclipse, Visual Studio guides
+Terminal tools - Oh My Zsh, Oh My Posh
+Git workflows - Gitflow, GitHub Flow, trunk-based
+SSH/SSL - Certificate management
+VPN - OpenVPN, WireGuard
+Regex - Pattern matching guide
+Logging - Log4j, Serilog, Winston
 
----
+## Operating Systems (Expansion)
+Linux deepening - More distributions
+OpenSUSE, Fedora, Ubuntu Server - Additional distros
+Container OSs - RancherOS, Flatcar
+Embedded Linux - Buildroot, Yocto
+
+## Documentation & API Tools
+Postman - API testing (exists, needs expansion)
+Insomnia - REST client
+Swagger/OpenAPI - API documentation
+MkDocs - Documentation generator
+Sphinx - Python documentation
+Docusaurus - React documentation
+VuePress - Vue documentation
+Storybook - Component documentation
+Typedoc - TypeScript documentation
+Redoc - OpenAPI documentation
+
+## CMS & Content Platforms
+WordPress - PHP CMS
+Ghost - Headless CMS
+Contentful - Headless CMS
+Strapi - Headless CMS
+Sanity - Headless CMS
+Directus - Content platform
+Payload - TypeScript CMS
+
+## Search & Indexing
+Elasticsearch - Search engine (deeper)
+Solr - Enterprise search
+OpenSearch - Elasticsearch fork
+Meilisearch - Fast search
+Typesense - Search engine
+Algolia - Hosted search
+
+## Specialized Languages (Niche)
+OCaml, F# - Functional languages
+Scheme - Lisp dialect
+Prolog - Logic programming
+COBOL - Legacy enterprise
+PL/SQL - Oracle database language
+T-SQL - SQL Server language
+Transact-SQL - SQL dialect
+Gherkin - BDD language
+
+## 🟡 Medium Priority Gaps
+Deeper guides for existing technologies
+More real-world project examples
+Code samples in multiple languages for same problem
+Video tutorial links/guides
+Interview preparation materials
+Performance benchmarking guides
+Cost optimization guides for cloud
+Disaster recovery & backup strategies
+
+## 🟢 Nice-to-Have
+Interactive coding challenges
+Multi-language algorithm implementations
+Certification preparation guides
+Industry-specific guides (fintech, healthcare, etc.)
+Compliance & regulatory guides (GDPR, HIPAA, etc.)
+Summary: The codebase covers foundational technologies well but has significant gaps in:
+
+

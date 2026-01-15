@@ -269,7 +269,7 @@ sudo pacman -Syu
 sudo pacman -S <package>
 ```bash
 
-Check [Linux/user-guide.md](Linux/Debian/user-guide.md) for your distro.
+Check [Linux/linux-intro.md](Linux/linux-intro.md) for your distro guide.
 
 ### What's systemd vs other init systems?
 

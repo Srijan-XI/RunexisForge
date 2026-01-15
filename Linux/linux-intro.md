@@ -84,14 +84,14 @@ This intro aims to clarify that Linux is a kernel and to map the landscape of di
 
 ## Quick Links
 
-- Arch family: [Overview](Arch/intro.md) • [User Guide](Arch/user-guide.md)
-  - Distros: [BlackArch](Arch/BlackArch/intro.md) • [Garuda Linux](Arch/GarudaLinux/intro.md) • [RedArch](Arch/RedArch/intro.md)
-- Debian family: [Overview](Debian/intro.md) • [User Guide](Debian/user-guide.md)
-  - Distros: [Kali Linux](Debian/KaliLinux/intro.md) • [Linux Mint](Debian/MintLinux/intro.md) • [Parrot OS](Debian/ParrotSec/intro.md) • [Ubuntu](Debian/Ubuntu/intro.md)
-- Red Hat family: [Overview](RedHat/intro.md) • [User Guide](RedHat/user-guide.md)
-  - Distros: [CentOS Stream](RedHat/CentOS/intro.md) • [Fedora Linux](RedHat/Fedora%20Linux/intro.md) • [Oracle Linux](RedHat/OracleLinux/intro.md) • [RHEL](RedHat/RedHatEnterpriseLinux/intro.md)
-- Gentoo: [Overview](Gentoo/intro.md) • [User Guide](Gentoo/user-guide.md)
-- Slackware: [Overview](Slackware/intro.md) • [User Guide](Slackware/user-guide.md)
+- Arch family: [Guide](Arch/Arch.md)
+  - Distros: [BlackArch](Arch/BlackArch/BlackArch.md) • [Garuda Linux](Arch/GarudaLinux/GarudaLinux.md) • [RedArch](Arch/RedArch/RedArch.md)
+- Debian family: [Guide](Debian/Debian.md)
+  - Distros: [Kali Linux](Debian/KaliLinux/KaliLinux.md) • [Linux Mint](Debian/MintLinux/MintLinux.md) • [Parrot OS](Debian/ParrotSec/ParrotSec.md) • [Ubuntu](Debian/Ubuntu/Ubuntu.md)
+- Red Hat family: [Guide](RedHat/RedHat.md)
+  - Distros: [CentOS Stream](RedHat/CentOS/CentOS.md) • [Fedora Linux](RedHat/Fedora%20Linux/Fedora%20Linux.md) • [Oracle Linux](RedHat/OracleLinux/OracleLinux.md) • [RHEL](RedHat/RedHatEnterpriseLinux/RedHatEnterpriseLinux.md)
+- Gentoo: [Guide](Gentoo/Gentoo.md)
+- Slackware: [Guide](Slackware/Slackware.md)
 
 ## Getting Started
 

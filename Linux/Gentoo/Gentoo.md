@@ -1,0 +1,43 @@
+# Gentoo
+
+## Introduction
+
+Gentoo is a source-based distribution focused on customization via USE flags and the Portage package system.
+
+- Package manager: Portage (`emerge`)
+- Build options: USE flags control features
+- Traits: Highly configurable, performance-tuned builds
+
+---
+
+## User Guide
+
+## Sync & Update World
+
+```bash
+sudo emaint sync --auto
+sudo emerge --ask --update --deep --newuse @world
+```bash
+
+## Search & Install
+
+```bash
+emerge --search <name>
+sudo emerge --ask <cat/pkg>
+```bash
+
+## USE Flags
+
+- Set in `/etc/portage/make.conf` and package.use; then rebuild affected packages.
+
+## Install Gentoo
+
+- Download minimal ISO: <https://www.gentoo.org/downloads/>
+- Boot, follow Gentoo Handbook for detailed install (stage3, chroot, kernel, grub)
+- Expert-focused; allocate time for compilation
+- More: [Linux/INSTALL.md](../INSTALL.md)
+
+## Kernel & Services
+
+- Kernel via `genkernel` or manual config; services with `systemd` or OpenRC depending on setup.
+

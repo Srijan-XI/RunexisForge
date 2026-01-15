@@ -314,72 +314,74 @@ All backend frameworks are located in **`/Backend-Web/`**
 #### Spring Boot 🍃
 
 - **Location**: `/Backend-Web/Spring Boot/`
-- **Introduction**: `Spring Boot/intro.md`
-- **User Guide**: `Spring Boot/user-guide.md`
+- **Guide**: `Spring Boot/Spring Boot.md`
 - **Practice**: `Spring Boot/questions/`
 
 #### ASP.NET Core 🎯
 
 - **Location**: `/Backend-Web/ASP.NET Core/`
-- **Introduction**: `ASP.NET Core/intro.md`
-- **User Guide**: `ASP.NET Core/user-guide.md`
+- **Guide**: `ASP.NET Core/ASP.NET Core.md`
+- **Deeper Guide**: `ASP.NET Core/dotnet-core-deeper.md`
 - **Practice**: `ASP.NET Core/questions/`
+
+#### Elysia (Bun) ⚡
+
+- **Location**: `/Backend-Web/Elysia/`
+- **Guide**: `Elysia/Elysia.md`
+
+#### Hono 🌐
+
+- **Location**: `/Backend-Web/Hono/`
+- **Guide**: `Hono/Hono.md`
 
 #### Laravel 🧱
 
 - **Location**: `/Backend-Web/Laravel/`
-- **Introduction**: `Laravel/intro.md`
-- **User Guide**: `Laravel/user-guide.md`
+- **Guide**: `Laravel/Laravel.md`
 - **Examples**: `Laravel/examples/`
 - **Practice**: `Laravel/questions/`
 
 #### Ruby on Rails 🚂
 
 - **Location**: `/Backend-Web/Ruby on Rails/`
-- **Introduction**: `Ruby on Rails/intro.md`
-- **User Guide**: `Ruby on Rails/user-guide.md`
+- **Guide**: `Ruby on Rails/Ruby on Rails.md`
 - **Practice**: `Ruby on Rails/questions/`
 
 #### Gin (Go) 🐹
 
 - **Location**: `/Backend-Web/Gin/`
-- **Introduction**: `Gin/intro.md`
-- **User Guide**: `Gin/user-guide.md`
+- **Guide**: `Gin/Gin.md`
 
 #### LangChain 🔗
 
 - **Location**: `/Backend-Web/LangChain/`
-- **Introduction**: `LangChain/intro.md`
-- **User Guide**: `LangChain/user-guide.md`
+- **Guide**: `LangChain/LangChain.md`
 - **Examples**: `LangChain/examples/`
 - **Practice**: `LangChain/questions/`
 
 #### Streamlit 📈
 
 - **Location**: `/Backend-Web/Streamlit/`
-- **Introduction**: `Streamlit/intro.md`
-- **User Guide**: `Streamlit/user-guide.md`
+- **Guide**: `Streamlit/Streamlit.md`
 - **Examples**: `Streamlit/examples/`
 - **Practice**: `Streamlit/questions/`
 
 #### gRPC 🔌
 
 - **Location**: `/Backend-Web/gRPC/`
-- **Introduction**: `gRPC/intro.md`
-- **User Guide**: `gRPC/user-guide.md`
+- **Guide**: `gRPC/gRPC.md`
 - **Topics**: Protocol Buffers, RPC framework, streaming, HTTP/2
 
 #### GraphQL 🔍
 
 - **Location**: `/Backend-Web/GraphQL/`
-- **Introduction**: `GraphQL/intro.md`
-- **User Guide**: `GraphQL/user-guide.md`
+- **Guide**: `GraphQL/GraphQL.md`
 - **Topics**: Query language, resolvers, subscriptions, schema
 
 #### Background Jobs ⚙️
 
 - **Location**: `/Backend-Web/BackgroundJobs/`
-- **Introduction**: `BackgroundJobs/intro.md`
+- **Guide**: `BackgroundJobs/BackgroundJobs.md`
 - **Celery Guide**: `BackgroundJobs/celery-guide.md` (Python)
 - **Sidekiq Guide**: `BackgroundJobs/sidekiq-guide.md` (Ruby)
 - **Topics**: Task queues, async processing, scheduling
@@ -387,8 +389,7 @@ All backend frameworks are located in **`/Backend-Web/`**
 #### OAuth 2.0 & OIDC 🔐
 
 - **Location**: `/Backend-Web/OAuth-OIDC/`
-- **Introduction**: `OAuth-OIDC/intro.md`
-- **User Guide**: `OAuth-OIDC/user-guide.md`
+- **Guide**: `OAuth-OIDC/OAuth-OIDC.md`
 - **Topics**: Authorization, authentication, PKCE, tokens
 
 ### ☁️ Cloud & DevOps

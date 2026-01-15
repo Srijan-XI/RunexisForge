@@ -1,0 +1,35 @@
+# RedArch
+
+## Introduction
+
+RedArch is a penetration testing repository for Arch Linux, similar in scope to BlackArch, offering a large collection of security tools.
+
+- Base: Arch Linux
+- Package manager: pacman
+- Focus: Security tools repository
+
+---
+
+## User Guide
+
+## Enable Repository
+
+- Add RedArch repository following official docs.
+
+## Update & Install
+
+```bash
+sudo pacman -Syu
+sudo pacman -S <redarch-tool>
+```bash
+
+## Install RedArch
+
+- Install Arch first: <https://archlinux.org/download/>
+- Enable RedArch repository (see official docs)
+- More: [../INSTALL.md](../INSTALL.md)
+
+## Notes
+
+- Intended for security research and testing environments.
+
