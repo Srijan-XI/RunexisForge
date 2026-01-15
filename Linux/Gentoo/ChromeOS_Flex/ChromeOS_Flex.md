@@ -257,7 +257,7 @@ sudo apt install gimp  # GIMP
 
 ---
 
-Ready to install? Check the [User Guide](user-guide.md) for step-by-step instructions!
+Ready to install? Jump to the **User Guide** section below for step-by-step instructions.
 
 ---
 

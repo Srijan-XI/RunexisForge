@@ -88,7 +88,7 @@ wsl --install Ubuntu
 - Back up important data before partitioning
 - Prefer LTS releases for stability
 - Keep install media handy for rescue
-- Read distro-specific notes in their `intro.md` and `user-guide.md`
+- Read distro-specific notes in the distro's `<DistroName>.md` guide (includes both Introduction and User Guide sections)
 
 ## Links
 

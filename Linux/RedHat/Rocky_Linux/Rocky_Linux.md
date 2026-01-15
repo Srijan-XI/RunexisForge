@@ -365,7 +365,7 @@ Rocky Linux aims for compatibility with certifications targeting RHEL:
 
 ---
 
-Ready to get started? Check the [User Guide](user-guide.md) for installation and administration!
+Ready to get started? Jump to the **User Guide** section below for installation and administration.
 
 ---
 

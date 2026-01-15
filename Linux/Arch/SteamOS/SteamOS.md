@@ -295,7 +295,7 @@ SteamOS is highly customizable:
 
 ---
 
-Ready to game on Linux? Check the [User Guide](user-guide.md) for installation and setup!
+Ready to game on Linux? Jump to the **User Guide** section below for installation and setup.
 
 ---
 
