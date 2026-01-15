@@ -21,7 +21,7 @@ This shared guide helps you install or try Linux safely on a PC or in a virtual 
 
 ```powershell
 Get-FileHash "C:\path\to\distro.iso" -Algorithm SHA256
-```bash
+```
 
 - Match the output with the checksum listed on the distro website
 
@@ -53,21 +53,21 @@ Get-FileHash "C:\path\to\distro.iso" -Algorithm SHA256
 - Update packages:
   - Debian/Ubuntu:
 
-```bash
+```
 sudo apt update && sudo apt upgrade
-```bash
+```
 
 - Fedora/RHEL:
 
-```bash
+```
 sudo dnf upgrade --refresh
-```bash
+```
 
 - Arch:
 
-```bash
+```
 sudo pacman -Syu
-```bash
+```
 
 - Enable codecs, set timezone/keyboard, add users, install GPU drivers (if needed)
 
@@ -79,7 +79,7 @@ sudo pacman -Syu
 wsl --install
 wsl --list --online
 wsl --install Ubuntu
-```bash
+```
 
 - Good for dev tooling; not a full desktop environment
 

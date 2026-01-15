@@ -26,7 +26,7 @@ Django is a high-level Python web framework that enables rapid development of se
 
 ## Typical Project Structure
 
-```text
+```
 myproject/
  manage.py
  myproject/
@@ -41,7 +41,7 @@ myproject/
   templates/app_one/*.html
   admin.py
   forms.py
-```text
+```
 
 ## Minimal Example
 
@@ -54,7 +54,7 @@ from . import views
 urlpatterns = [
   path("hello/", views.hello, name="hello"),
 ]
-```text
+```
 
 views.py:
 
@@ -63,7 +63,7 @@ from django.http import HttpResponse
 
 def hello(request):
   return HttpResponse("Hello, Django!")
-```text
+```
 
 ## Ecosystem Highlights
 
@@ -114,7 +114,7 @@ pip install "Django>=4.2,<5.0"
 
 # Verify
 python -m django --version
-```bash
+```
 
 ## Create Project and App
 
@@ -126,7 +126,7 @@ python manage.py startapp core
 # Run the dev server
 python manage.py runserver
 # Visit http://127.0.0.1:8000/
-```bash
+```
 
 Add `core` to `INSTALLED_APPS` in `myproject/settings.py`.
 
@@ -139,7 +139,7 @@ from django.http import JsonResponse
 
 def ping(request):
  return JsonResponse({"status": "ok"})
-```text
+```
 
 `core/urls.py`:
 
@@ -150,7 +150,7 @@ from . import views
 urlpatterns = [
  path("ping/", views.ping, name="ping"),
 ]
-```text
+```
 
 `myproject/urls.py`:
 
@@ -162,7 +162,7 @@ urlpatterns = [
  path("admin/", admin.site.urls),
  path("", include("core.urls")),
 ]
-```text
+```
 
 ## Models and Migrations
 
@@ -178,14 +178,14 @@ class Todo(models.Model):
 
  def __str__(self):
   return self.title
-```text
+```
 
 Create and apply migrations:
 
 ```pwsh
 python manage.py makemigrations
 python manage.py migrate
-```text
+```
 
 ## Admin
 
@@ -200,13 +200,13 @@ class TodoAdmin(admin.ModelAdmin):
  list_display = ("id", "title", "done", "created_at")
  list_filter = ("done",)
  search_fields = ("title",)
-```text
+```
 
 Create superuser and login at `/admin/`:
 
 ```pwsh
 python manage.py createsuperuser
-```text
+```
 
 ## Templates and Static Files
 
@@ -220,7 +220,7 @@ TEMPLATES[0]["DIRS"] = [BASE_DIR / "templates"]
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
-```text
+```
 
 `templates/home.html`:
 
@@ -231,7 +231,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
  <h1>{{ message }}</h1>
   </body>
   </html>
-```text
+```
 
 `core/views.py` (render a template):
 
@@ -240,7 +240,7 @@ from django.shortcuts import render
 
 def home(request):
  return render(request, "home.html", {"message": "Welcome to Django"})
-```text
+```
 
 Add a URL pattern for `home`.
 
@@ -253,7 +253,7 @@ from django import forms
 
 class TodoForm(forms.Form):
  title = forms.CharField(max_length=200)
-```text
+```
 
 `core/views.py` (handling POST):
 
@@ -272,7 +272,7 @@ def create_todo(request):
  else:
   form = TodoForm()
  return render(request, "todo_form.html", {"form": form})
-```text
+```
 
 ## ORM Basics
 
@@ -293,7 +293,7 @@ t.save()
 
 # Delete
 Todo.objects.filter(done=True).delete()
-```text
+```
 
 ## Authentication (Quick Start)
 
@@ -303,13 +303,13 @@ Enable `django.contrib.auth` (already included) and use built-in views or a pack
 
 ```pwsh
 pip install djangorestframework
-```bash
+```
 
 `myproject/settings.py`:
 
 ```python
 INSTALLED_APPS += ["rest_framework"]
-```bash
+```
 
 `core/api.py`:
 
@@ -328,20 +328,20 @@ class TodoViewSet(viewsets.ModelViewSet):
 
 router = routers.DefaultRouter()
 router.register(r"todos", TodoViewSet)
-```bash
+```
 
 `myproject/urls.py`:
 
 ```python
 from core.api import router
 urlpatterns += [path("api/", include(router.urls))]
-```bash
+```
 
 ## Testing
 
 ```pwsh
 python manage.py test
-```bash
+```
 
 `core/tests.py`:
 

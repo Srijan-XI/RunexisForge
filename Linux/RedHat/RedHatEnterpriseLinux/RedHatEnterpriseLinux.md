@@ -14,17 +14,17 @@ RHEL is a subscription-based enterprise distribution focused on security, stabil
 
 ## Register System
 
-```bash
+```
 sudo subscription-manager register
 sudo subscription-manager attach --auto
-```bash
+```
 
 ## Update & Install
 
-```bash
+```
 sudo dnf upgrade --refresh
 sudo dnf install <pkg>
-```bash
+```
 
 ## Install RHEL
 
@@ -35,8 +35,8 @@ sudo dnf install <pkg>
 
 ## Services
 
-```bash
+```
 systemctl status <service>
 sudo systemctl enable --now <service>
-```bash
+```
 

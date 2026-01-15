@@ -430,7 +430,7 @@ add(A, B) ->
 
 ## 📖 Next Steps
 
-1. **[Erlang User Guide](./user-guide.md)** - Installation & syntax
+1. **Installation & syntax** - User guide coming soon
 2. **[OTP Deep Dive](./otp-deep-dive.md)** - GenServer, Supervisors
 3. **[Distributed Systems](./distributed-systems.md)** - Clustering, Mnesia
 4. **[Code Examples](./examples/)** - Practical Erlang programs

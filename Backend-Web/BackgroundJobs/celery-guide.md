@@ -49,7 +49,7 @@ print(result.get(timeout=10))  # 10
 
 # Fire and forget
 send_email.delay('user@example.com')
-```text
+```
 
 ## Scheduled tasks (beat)
 
@@ -68,13 +68,13 @@ app.conf.beat_schedule = {
 @app.task
 def cleanup():
     print("Running cleanup")
-```bash
+```
 
 **Start beat scheduler:**
 
-```bash
+```
 celery -A celery_app beat --loglevel=info
-```bash
+```
 
 ## References
 

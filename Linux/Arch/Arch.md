@@ -17,43 +17,43 @@ The Arch Linux family is known for simplicity, rolling releases, and user contro
 
 - Sync package databases and upgrade:
 
-```bash
+```
 pacman -Syu
-```bash
+```
 
 ## Search & Install
 
 - Search packages:
 
-```bash
+```
 pacman -Ss <name>
-```bash
+```
 
 - Install package:
 
-```bash
+```
 pacman -S <pkg>
-```bash
+```
 
 ## Remove
 
-```bash
+```
 pacman -Rns <pkg>
-```bash
+```
 
 ## AUR Helpers (example: yay)
 
 - Install from AUR:
 
-```bash
+```
 yay -S <aur-pkg>
-```bash
+```
 
 - Upgrade all (incl. AUR):
 
-```bash
+```
 yay -Syu
-```bash
+```
 
 ## Install Arch
 
@@ -64,8 +64,8 @@ yay -Syu
 
 ## Services
 
-```bash
+```
 systemctl status <service>
 systemctl enable --now <service>
-```bash
+```
 

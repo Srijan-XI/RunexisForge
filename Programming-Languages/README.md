@@ -171,8 +171,7 @@ Languages designed for numerical computing, engineering, and simulation.
 
 Each language folder contains:
 
-- **intro.md** - Overview, features, history, and use cases
-- **user-guide.md** - Getting started, syntax, and practical examples
+- **<Language>.md** - Combined guide with **Introduction** and **User Guide** sections
 - **examples/** - Code samples and projects (where available)
 - **questions/** - Common questions and answers (where available)
 
@@ -182,8 +181,8 @@ Each language folder contains:
 
 1. **Choose by Category**: Browse categories above to find languages by type
 2. **Choose by Use Case**: Use the Quick Navigation section to find languages for your project
-3. **Read Introduction**: Start with `intro.md` for an overview
-4. **Follow User Guide**: Use `user-guide.md` for hands-on learning
+3. **Open the Guide**: Start with `<Language>.md` for an overview
+4. **Continue in the Same File**: Use the **User Guide** section for hands-on learning
 5. **Explore Examples**: Check `examples/` folders for code samples
 
 ---

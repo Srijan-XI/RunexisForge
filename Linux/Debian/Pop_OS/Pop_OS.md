@@ -85,19 +85,19 @@
 
 ### Enable Auto-Tiling
 
-```bash
+```
 Super + Y (toggle tiling)
-```bash
+```
 
 ### Keyboard Shortcuts
 
-```bash
+```
 Super + Enter - Terminal
 Super + / - Launcher
 Super + O - Workspaces
 Super + Arrow Keys - Move focus
 Super + Shift + Arrow Keys - Move windows
-```bash
+```
 
 ---
 

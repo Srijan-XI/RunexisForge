@@ -14,22 +14,22 @@ Ubuntu is a popular Debian-based distribution offering regular releases and Long
 
 ## Update & Upgrade
 
-```bash
+```
 sudo apt update
 sudo apt upgrade
-```bash
+```
 
 ## Install Software
 
-```bash
+```
 sudo apt install <pkg>
-```bash
+```
 
 ## Snap (Optional)
 
-```bash
+```
 sudo snap install <app>
-```bash
+```
 
 ## Install Ubuntu
 
@@ -40,8 +40,8 @@ sudo snap install <app>
 
 ## Services
 
-```bash
+```
 systemctl status <service>
 sudo systemctl enable --now <service>
-```bash
+```
 

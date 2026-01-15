@@ -109,7 +109,7 @@
 
 ### Persistent Storage (Optional)
 
-```bash
+```
 Applications → Tails → Configure persistent volume
 1. Create passphrase
 2. Select what to save:
@@ -118,7 +118,7 @@ Applications → Tails → Configure persistent volume
    - Email client
    - Network connections
 3. Restart to activate
-```bash
+```
 
 ---
 
@@ -136,15 +136,15 @@ Applications → Tails → Configure persistent volume
 
 ### View Circuit
 
-```bash
+```
 Tor Browser → Click lock icon → More information
-```bash
+```
 
 ### New Circuit
 
-```bash
+```
 Tor Browser → New Identity
-```bash
+```
 
 ---
 

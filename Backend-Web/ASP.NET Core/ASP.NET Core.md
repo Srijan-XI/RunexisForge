@@ -84,39 +84,39 @@ Visit <https://dotnet.microsoft.com/download> to download and install the latest
 
 ### Verify Installation
 
-```bash
+```
 dotnet --version
-```bash
+```
 
 ## Create a New Project
 
 ### Create ASP.NET Core MVC Project
 
-```bash
+```
 dotnet new mvc -n MyApp
 cd MyApp
 dotnet run
-```bash
+```
 
 ### Create ASP.NET Core Web API Project
 
-```bash
+```
 dotnet new webapi -n MyApi
 cd MyApi
 dotnet run
-```bash
+```
 
 ### Create Blazor Project
 
-```bash
+```
 dotnet new blazorserver -n MyBlazorApp
 cd MyBlazorApp
 dotnet run
-```bash
+```
 
 ## Project Structure
 
-```bash
+```
 MyApp/
 ├── Controllers/
 │   └── HomeController.cs
@@ -133,7 +133,7 @@ MyApp/
 ├── Program.cs
 ├── Startup.cs
 └── MyApp.csproj
-```bash
+```
 
 ## Basic Controller
 
@@ -163,7 +163,7 @@ public class UsersController : ControllerBase
         return CreatedAtAction(nameof(Get), new { id = 1 }, userDto);
     }
 }
-```text
+```
 
 ## Program.cs (Startup Configuration)
 
@@ -191,7 +191,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-```bash
+```
 
 ## Dependency Injection
 

@@ -315,24 +315,24 @@ Ready to game on Linux? Jump to the **User Guide** section below for installatio
 
 **HoloISO** is a community build that brings SteamOS 3.x to desktop PCs.
 
-```bash
+```
 1. Visit: https://github.com/HoloISO/holoiso
 2. Download latest release ISO
 3. Create bootable USB (Rufus, Etcher, or dd)
 4. Boot from USB
 5. Follow installation prompts
-```bash
+```
 
 ### Using dd (Linux/Mac)
 
-```bash
+```
 # Find USB device
 lsblk
 
 # Write ISO to USB (replace /dev/sdX with your USB)
 sudo dd if=holoiso.iso of=/dev/sdX bs=4M status=progress
 sync
-```bash
+```
 
 ---
 
@@ -340,7 +340,7 @@ sync
 
 ### Initial Configuration
 
-```bash
+```
 1. Power on Steam Deck
 2. Select language
 3. Connect to WiFi
@@ -348,7 +348,7 @@ sync
 5. Complete setup wizard
 6. Downloads initial updates
 7. Restart if prompted
-```bash
+```
 
 ---
 
@@ -386,36 +386,36 @@ sync
 
 ### From Steam Library
 
-```bash
+```
 1. Press Steam button
 2. Navigate to Library
 3. Select game
 4. Click Install
 5. Choose install location
 6. Wait for download
-```bash
+```
 
 ### Proton Compatibility
 
 **Enable Proton for All Games**:
 
-```bash
+```
 1. Steam Menu → Settings
 2. Compatibility
 3. Enable "Enable Steam Play for all other titles"
 4. Select Proton version (Latest recommended)
 5. Restart Steam
-```bash
+```
 
 **Per-Game Proton**:
 
-```bash
+```
 1. Select game in Library
 2. Press gear icon
 3. Properties → Compatibility
 4. Check "Force the use of a specific Steam Play compatibility tool"
 5. Select Proton version
-```bash
+```
 
 ---
 
@@ -423,7 +423,7 @@ sync
 
 ### Switch to Desktop Mode
 
-```bash
+```
 Steam Deck:
 1. Press Steam button
 2. Power → Switch to Desktop
@@ -432,7 +432,7 @@ Steam Deck:
 Desktop PC:
 1. Return key from Game Mode
 2. Or boot to desktop by default
-```bash
+```
 
 ### Desktop Mode Basics
 
@@ -450,7 +450,7 @@ Desktop PC:
 
 ### Method 1: Add to Steam
 
-```bash
+```
 Desktop Mode:
 1. Open Steam (desktop client)
 2. Games → Add a Non-Steam Game
@@ -458,11 +458,11 @@ Desktop Mode:
 4. Add selected program
 5. Return to Game Mode
 6. Game appears in library
-```bash
+```
 
 ### Method 2: Lutris
 
-```bash
+```
 # Install Lutris (Desktop Mode)
 sudo pacman -S lutris
 
@@ -470,11 +470,11 @@ sudo pacman -S lutris
 # Search for game
 # Install via script
 # Game added to library
-```bash
+```
 
 ### Method 3: Heroic Launcher (Epic/GOG)
 
-```bash
+```
 Desktop Mode:
 1. Open Discover
 2. Search "Heroic"
@@ -482,7 +482,7 @@ Desktop Mode:
 4. Login to Epic/GOG
 5. Install games
 6. Add to Steam as non-Steam game
-```bash
+```
 
 ---
 
@@ -490,25 +490,25 @@ Desktop Mode:
 
 ### Update System
 
-```bash
+```
 # SteamOS updates automatically
 # Or manually:
 sudo steamos-update
-```bash
+```
 
 ### Install Software (Desktop Mode)
 
 **Using Discover (GUI)**:
 
-```bash
+```
 1. Open Discover
 2. Search for application
 3. Click Install
-```bash
+```
 
 **Using Pacman (Terminal)**:
 
-```bash
+```
 # Update package database
 sudo pacman -Sy
 
@@ -525,11 +525,11 @@ sudo pacman -R <package-name>
 
 # Search for package
 pacman -Ss <keyword>
-```bash
+```
 
 **Using Flatpak**:
 
-```bash
+```
 # Install Flatpak app
 flatpak install flathub <app-id>
 
@@ -538,7 +538,7 @@ flatpak install flathub org.mozilla.firefox
 
 # Update all Flatpaks
 flatpak update
-```bash
+```
 
 ---
 
@@ -546,7 +546,7 @@ flatpak update
 
 ### Install EmuDeck
 
-```bash
+```
 Desktop Mode:
 1. Open Firefox
 2. Visit: https://www.emudeck.com/
@@ -559,7 +559,7 @@ Desktop Mode:
    - Download BIOS files
 6. Add ROMs to designated folders
 7. Emulators appear in Steam
-```bash
+```
 
 ### Popular Emulators Included
 
@@ -577,7 +577,7 @@ Desktop Mode:
 
 ### Graphics Settings (Per-Game)
 
-```bash
+```
 Game Mode:
 1. Select game
 2. Press ... (Quick Access button)
@@ -588,26 +588,26 @@ Game Mode:
    - TDP limit (Steam Deck)
    - GPU clock
    - Scaling filter
-```bash
+```
 
 ### Shader Cache
 
-```bash
+```
 Settings → Downloads
 → Shader Pre-Caching
 → Enable for all games
-```bash
+```
 
 ### ProtonGE (Better Compatibility)
 
-```bash
+```
 # Install ProtonUp-Qt
 flatpak install flathub net.davidotek.pupgui2
 
 # Launch ProtonUp-Qt
 # Install GE-Proton
 # Select in game properties
-```bash
+```
 
 ---
 
@@ -634,14 +634,14 @@ flatpak install flathub net.davidotek.pupgui2
 
 ### Battery Management
 
-```bash
+```
 Quick Access (...) → Battery icon
 - Performance mode
 - Battery saver mode
 - FPS limit (save battery)
 - Brightness
 - Refresh rate
-```bash
+```
 
 ### External Devices
 
@@ -654,12 +654,12 @@ Quick Access (...) → Battery icon
 
 **Bluetooth**:
 
-```bash
+```
 Settings → Bluetooth
 - Pair headphones
 - Pair controllers
 - Pair keyboard/mouse
-```bash
+```
 
 ---
 
@@ -667,7 +667,7 @@ Settings → Bluetooth
 
 ### Game Won't Launch
 
-```bash
+```
 1. Try different Proton version
    - Properties → Compatibility
    - Try GE-Proton
@@ -684,22 +684,22 @@ Settings → Bluetooth
 4. Check launch options
    - Properties → General
    - Add launch options if needed
-```bash
+```
 
 ### Poor Performance
 
-```bash
+```
 1. Lower graphics settings in-game
 2. Set FPS limit (40Hz/40FPS sweet spot on Deck)
 3. Reduce resolution
 4. Enable FSR
 5. Check background downloads
 6. Update Proton version
-```bash
+```
 
 ### Desktop Mode Issues
 
-```bash
+```
 # Restore to default settings
 sudo steamos-readonly disable
 sudo pacman -Syu
@@ -707,7 +707,7 @@ sudo steamos-readonly enable
 
 # Or factory reset
 Settings → System → Factory Reset
-```bash
+```
 
 ---
 
@@ -715,10 +715,10 @@ Settings → System → Factory Reset
 
 ### Install Decky Loader (Steam Deck)
 
-```bash
+```
 # Desktop Mode terminal
 curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
-```bash
+```
 
 **Popular Plugins**:
 
@@ -729,12 +729,12 @@ curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/dow
 
 ### Custom Themes
 
-```bash
+```
 Decky Loader → CSS Loader
 - Browse themes
 - Apply custom CSS
 - Customize Game Mode UI
-```bash
+```
 
 ---
 
@@ -742,7 +742,7 @@ Decky Loader → CSS Loader
 
 ### Common Paths
 
-```bash
+```
 # Steam games (default)
 ~/.local/share/Steam/steamapps/common/
 
@@ -757,13 +757,13 @@ Decky Loader → CSS Loader
 
 # Desktop files
 ~/Desktop/
-```bash
+```
 
 ---
 
 ## Keyboard Shortcuts (Desktop Mode)
 
-```bash
+```
 Meta (Windows key) - Application launcher
 Alt + Tab - Switch windows
 Ctrl + Alt + T - Terminal
@@ -771,7 +771,7 @@ Meta + E - File manager
 Meta + L - Lock screen
 Ctrl + Alt + F1 - Switch to TTY1
 Ctrl + Alt + F2 - Return to desktop
-```bash
+```
 
 ---
 

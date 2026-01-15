@@ -124,7 +124,7 @@ Named after Rocky McGaugh, co-founder of CentOS who passed away in 2004.
 
 Rocky Linux uses **DNF** (Dandified YUM), the next-generation RPM package manager.
 
-```bash
+```
 # Install package
 sudo dnf install httpd
 
@@ -139,7 +139,7 @@ dnf search nginx
 
 # Get package info
 dnf info mariadb-server
-```bash
+```
 
 ---
 
@@ -253,12 +253,12 @@ dnf info mariadb-server
 
 Rocky Linux provides migration scripts:
 
-```bash
+```
 # Migrate from CentOS 8
 sudo curl -o migrate2rocky.sh https://raw.githubusercontent.com/rocky-linux/rocky-tools/main/migrate2rocky/migrate2rocky.sh
 sudo chmod +x migrate2rocky.sh
 sudo ./migrate2rocky.sh -r
-```bash
+```
 
 ---
 
@@ -393,24 +393,24 @@ Ready to get started? Jump to the **User Guide** section below for installation 
 
 ### Using Rufus (Windows)
 
-```bash
+```
 1. Download Rufus: https://rufus.ie/
 2. Insert USB drive (8+ GB)
 3. Select Rocky Linux ISO
 4. Click Start
 5. Wait for completion
-```bash
+```
 
 ### Using dd (Linux/Mac)
 
-```bash
+```
 # Find USB device
 lsblk
 
 # Write ISO (replace /dev/sdX)
 sudo dd if=Rocky-9-x86_64-minimal.iso of=/dev/sdX bs=4M status=progress
 sync
-```bash
+```
 
 ---
 
@@ -418,13 +418,13 @@ sync
 
 ### Boot from Installation Media
 
-```bash
+```
 1. Insert USB/DVD
 2. Restart computer
 3. Enter BIOS/UEFI (F2, F12, DEL, or ESC)
 4. Select boot device
 5. Boot Rocky Linux installer
-```bash
+```
 
 ### Installation Process
 
@@ -492,7 +492,7 @@ sync
 
 ### Login
 
-```bash
+```
 # Console login
 rocky login: yourusername
 Password: ********
@@ -500,17 +500,17 @@ Password: ********
 # Or root
 rocky login: root
 Password: ********
-```bash
+```
 
 ### Update System
 
-```bash
+```
 # Update all packages
 sudo dnf update -y
 
 # Reboot if kernel updated
 sudo reboot
-```bash
+```
 
 ---
 
@@ -518,17 +518,17 @@ sudo reboot
 
 ### Set Hostname
 
-```bash
+```
 # Set hostname
 sudo hostnamectl set-hostname server.example.com
 
 # Verify
 hostnamectl
-```bash
+```
 
 ### Configure Network
 
-```bash
+```
 # List network devices
 nmcli device status
 
@@ -541,11 +541,11 @@ sudo nmcli con up eth0
 
 # Or edit configuration
 sudo vi /etc/sysconfig/network-scripts/ifcfg-eth0
-```bash
+```
 
 ### Firewall Configuration
 
-```bash
+```
 # Check firewall status
 sudo firewall-cmd --state
 
@@ -564,11 +564,11 @@ sudo firewall-cmd --reload
 
 # List rules
 sudo firewall-cmd --list-all
-```bash
+```
 
 ### SELinux Management
 
-```bash
+```
 # Check SELinux status
 getenforce
 
@@ -581,7 +581,7 @@ sudo vi /etc/selinux/config
 
 # View SELinux denials
 sudo ausearch -m avc -ts recent
-```bash
+```
 
 ---
 
@@ -589,7 +589,7 @@ sudo ausearch -m avc -ts recent
 
 ### DNF Basics
 
-```bash
+```
 # Search for package
 dnf search nginx
 
@@ -619,11 +619,11 @@ dnf list updates
 
 # Clean cache
 sudo dnf clean all
-```bash
+```
 
 ### Repository Management
 
-```bash
+```
 # List enabled repositories
 dnf repolist
 
@@ -635,23 +635,23 @@ sudo dnf config-manager --enable <repo-name>
 
 # Disable repository
 sudo dnf config-manager --disable <repo-name>
-```bash
+```
 
 ### EPEL Repository
 
-```bash
+```
 # Install EPEL (Extra Packages for Enterprise Linux)
 sudo dnf install epel-release
 
 # Verify
 dnf repolist | grep epel
-```bash
+```
 
 ---
 
 ## Web Server Setup (Apache)
 
-```bash
+```
 # Install Apache
 sudo dnf install httpd
 
@@ -671,17 +671,17 @@ sudo firewall-cmd --reload
 
 # Test
 # Browse to http://your-server-ip
-```bash
+```
 
 ### Virtual Host Configuration
 
-```bash
+```
 # Create document root
 sudo mkdir -p /var/www/example.com/html
 
 # Create virtual host config
 sudo vi /etc/httpd/conf.d/example.com.conf
-```bash
+```
 
 ```apache
 <VirtualHost *:80>
@@ -691,21 +691,21 @@ sudo vi /etc/httpd/conf.d/example.com.conf
     ErrorLog /var/log/httpd/example.com-error.log
     CustomLog /var/log/httpd/example.com-access.log combined
 </VirtualHost>
-```bash
+```
 
-```bash
+```
 # Test configuration
 sudo apachectl configtest
 
 # Restart Apache
 sudo systemctl restart httpd
-```bash
+```
 
 ---
 
 ## Database Setup (MariaDB)
 
-```bash
+```
 # Install MariaDB
 sudo dnf install mariadb-server
 
@@ -718,13 +718,13 @@ sudo mysql_secure_installation
 
 # Login
 sudo mysql -u root -p
-```bash
+```
 
 ---
 
 ## Container Management (Podman)
 
-```bash
+```
 # Install Podman
 sudo dnf install podman
 
@@ -745,7 +745,7 @@ podman images
 
 # Pull image
 podman pull docker.io/library/httpd
-```bash
+```
 
 ---
 
@@ -753,7 +753,7 @@ podman pull docker.io/library/httpd
 
 ### User Management
 
-```bash
+```
 # Add user
 sudo useradd john
 
@@ -769,11 +769,11 @@ sudo userdel -r john
 # List logged-in users
 who
 w
-```bash
+```
 
 ### Service Management (systemd)
 
-```bash
+```
 # Start service
 sudo systemctl start httpd
 
@@ -797,11 +797,11 @@ sudo systemctl status httpd
 
 # View logs
 sudo journalctl -u httpd
-```bash
+```
 
 ### Disk Management
 
-```bash
+```
 # View disk usage
 df -h
 
@@ -819,7 +819,7 @@ sudo mount /dev/sdb1 /mnt
 
 # Unmount
 sudo umount /mnt
-```bash
+```
 
 ---
 
@@ -827,7 +827,7 @@ sudo umount /mnt
 
 **Cockpit** is a web-based server management tool included with Rocky Linux.
 
-```bash
+```
 # Install Cockpit
 sudo dnf install cockpit
 
@@ -842,7 +842,7 @@ sudo firewall-cmd --reload
 # Access
 # Browse to https://your-server-ip:9090
 # Login with system credentials
-```bash
+```
 
 ---
 

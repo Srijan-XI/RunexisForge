@@ -105,9 +105,8 @@ All web frameworks are located in **`/Backend-Web/`**
 
 #### C# (.NET) 🎨
 
-- **Location**: `/Programming-Languages/CSharp/`
-- **Introduction**: `CSharp/intro.md`
-- **User Guide**: `CSharp/user-guide.md`
+- **Location**: `/Programming-Languages/EnterpriseApplications/CSharp/`
+- **Guide**: `EnterpriseApplications/CSharp/CSharp.md`
 - **Topics**: .NET framework, ASP.NET, Entity Framework, LINQ
 
 #### PHP 🐘
@@ -163,69 +162,60 @@ All web frameworks are located in **`/Backend-Web/`**
 
 #### Kotlin 🟣
 
-- **Location**: `/Programming-Languages/Kotlin/`
-- **Introduction**: `Kotlin/intro.md`
-- **User Guide**: `Kotlin/user-guide.md`
-- **Examples**: `Kotlin/examples/`
-- **Practice**: `Kotlin/questions/`
+- **Location**: `/Programming-Languages/General-purpose/Kotlin/`
+- **Guide**: `Programming-Languages/General-purpose/Kotlin/Kotlin.md`
+- **Examples**: `Programming-Languages/General-purpose/Kotlin/examples/`
+- **Practice**: `Programming-Languages/General-purpose/Kotlin/questions/`
 
 #### Swift 🍎
 
-- **Location**: `/Programming-Languages/Swift/`
-- **Introduction**: `Swift/intro.md`
-- **User Guide**: `Swift/user-guide.md`
-- **Examples**: `Swift/examples/`
-- **Practice**: `Swift/questions/`
+- **Location**: `/Programming-Languages/General-purpose/Swift/`
+- **Guide**: `Programming-Languages/General-purpose/Swift/Swift.md`
+- **Examples**: `Programming-Languages/General-purpose/Swift/examples/`
+- **Practice**: `Programming-Languages/General-purpose/Swift/questions/`
 
 #### Ruby 💎
 
-- **Location**: `/Programming-Languages/Ruby/`
-- **Introduction**: `Ruby/intro.md`
-- **User Guide**: `Ruby/user-guide.md`
-- **Examples**: `Ruby/examples/`
-- **Practice**: `Ruby/questions/`
+- **Location**: `/Programming-Languages/Scripting/Ruby/`
+- **Guide**: `Programming-Languages/Scripting/Ruby/Ruby.md`
+- **Examples**: `Programming-Languages/Scripting/Ruby/examples/`
+- **Practice**: `Programming-Languages/Scripting/Ruby/questions/`
 
 #### Scala 🔴
 
-- **Location**: `/Programming-Languages/Scala/`
-- **Introduction**: `Scala/intro.md`
-- **User Guide**: `Scala/user-guide.md`
+- **Location**: `/Programming-Languages/General-purpose/Scala/`
+- **Guide**: `Programming-Languages/General-purpose/Scala/Scala.md`
 - **Topics**: Functional programming, JVM language, type system
 
 #### MATLAB 📊
 
-- **Location**: `/Programming-Languages/MATLAB/`
-- **Introduction**: `MATLAB/intro.md`
-- **User Guide**: `MATLAB/user-guide.md`
+- **Location**: `/Programming-Languages/DataScience&Analytics/MATLAB/`
+- **Guide**: `Programming-Languages/DataScience&Analytics/MATLAB/MATLAB.md`
 - **Topics**: Numerical computing, matrix operations, visualization
 
 #### Dart & Flutter 📱
 
-- **Location**: `/Programming-Languages/Dart with Flutter/`
-- **Introduction**: `Dart with Flutter/intro.md`
-- **User Guide**: `Dart with Flutter/user-guide.md`
+- **Location**: `/Programming-Languages/General-purpose/Dart with Flutter/`
+- **Guide**: `Programming-Languages/General-purpose/Dart with Flutter/Dart with Flutter.md`
 - **Topics**: Mobile development, cross-platform apps, UI widgets
 
 #### Assembly Language ⚙️
 
-- **Location**: `/Programming-Languages/Assembly/`
-- **Introduction**: `Assembly/intro.md`
-- **User Guide**: `Assembly/user-guide.md`
+- **Location**: `/Programming-Languages/SystemsProgramming/Assembly/`
+- **Guide**: `Programming-Languages/SystemsProgramming/Assembly/Assembly.md`
 - **Topics**: Low-level programming, x86/x64 architecture, NASM
 
 #### Bash 🐚
 
-- **Location**: `/Programming-Languages/Bash/`
-- **Introduction**: `Bash/intro.md`
-- **User Guide**: `Bash/user-guide.md`
-- **Practice**: `Bash/Questions/`
+- **Location**: `/Programming-Languages/Scripting/Bash/`
+- **Guide**: `Programming-Languages/Scripting/Bash/Bash.md`
+- **Practice**: `Programming-Languages/Scripting/Bash/Questions/`
 
 #### KQL (Kusto Query Language) 🔍
 
-- **Location**: `/Programming-Languages/Kql/`
-- **Introduction**: `Kql/intro.md`
-- **User Guide**: `Kql/user-guide.md`
-- **Practice**: `Kql/Questions/`
+- **Location**: `/Programming-Languages/DataScience&Analytics/Kql/`
+- **Guide**: `Programming-Languages/DataScience&Analytics/Kql/Kql.md`
+- **Practice**: `Programming-Languages/DataScience&Analytics/Kql/Questions/`
 
 ### 🗄️ Databases & Storage
 
@@ -570,99 +560,84 @@ All security and testing tools are located in **`/Security-Testing/`**
 #### OWASP Top 10 🛡️
 
 - **Location**: `/Security-Testing/OWASP-Top-10/`
-- **Introduction**: `OWASP-Top-10/intro.md`
-- **User Guide**: `OWASP-Top-10/user-guide.md`
+- **Guide**: `OWASP-Top-10/OWASP-Top-10.md`
 - **Topics**: Web app risks, checklists, secure design/testing
 
 #### Semgrep 🔍
 
 - **Location**: `/Security-Testing/Semgrep/`
-- **Introduction**: `Semgrep/intro.md`
-- **User Guide**: `Semgrep/user-guide.md`
+- **Guide**: `Semgrep/Semgrep.md`
 - **Topics**: SAST, custom rules, CI integration
 
 #### Dependency Scanning 📦
 
 - **Location**: `/Security-Testing/Dependency-Scanning/`
-- **Introduction**: `Dependency-Scanning/intro.md`
-- **User Guide**: `Dependency-Scanning/user-guide.md`
+- **Guide**: `Dependency-Scanning/Dependency-Scanning.md`
 - **Topics**: SCA, SBOM, CVEs, CI gates
 
 #### Secrets Scanning 🔑
 
 - **Location**: `/Security-Testing/Secrets-Scanning/`
-- **Introduction**: `Secrets-Scanning/intro.md`
-- **User Guide**: `Secrets-Scanning/user-guide.md`
+- **Guide**: `Secrets-Scanning/Secrets-Scanning.md`
 - **Topics**: gitleaks, trufflehog, remediation, pre-commit/CI
 
 #### Aqua Security (Trivy) 🛡️
 
 - **Location**: `/Security-Testing/AquaSecurity/`
-- **Introduction**: `AquaSecurity/intro.md`
-- **User Guide**: `AquaSecurity/user-guide.md`
+- **Guide**: `AquaSecurity/AquaSecurity.md`
 
 #### Burp Suite Framework 🔍
 
 - **Location**: `/Security-Testing/Burp Suite Framework/`
-- **Introduction**: `Burp Suite Framework/intro.md`
-- **User Guide**: `Burp Suite Framework/user-guide.md`
+- **Guide**: `Burp Suite Framework/Burp Suite Framework.md`
 - **Examples**: `Burp Suite Framework/examples/`
 
 #### HashiCorp Vault 🔐
 
 - **Location**: `/Security-Testing/HashiCorpVault/`
-- **Introduction**: `HashiCorpVault/intro.md`
-- **User Guide**: `HashiCorpVault/user-guide.md`
+- **Guide**: `HashiCorpVault/HashiCorpVault.md`
 
 #### Jest 🃏
 
 - **Location**: `/Security-Testing/Jest/`
-- **Introduction**: `Jest/intro.md`
-- **User Guide**: `Jest/user-guide.md`
+- **Guide**: `Jest/Jest.md`
 
 #### Metasploit Framework 💣
 
 - **Location**: `/Security-Testing/Metasploit Framework/`
-- **Introduction**: `Metasploit Framework/intro.md`
-- **User Guide**: `Metasploit Framework/user-guide.md`
+- **Guide**: `Metasploit Framework/Metasploit Framework.md`
 - **Examples**: `Metasploit Framework/examples/`
 
 #### OpenVAS 🔎
 
 - **Location**: `/Security-Testing/OpenVAS/`
-- **Introduction**: `OpenVAS/intro.md`
-- **User Guide**: `OpenVAS/user-guide.md`
+- **Guide**: `OpenVAS/OpenVAS.md`
 - **Examples**: `OpenVAS/examples/`
 
 #### Postman 📮
 
 - **Location**: `/Security-Testing/Postman/`
-- **Introduction**: `Postman/intro.md`
-- **User Guide**: `Postman/user-guide.md`
+- **Guide**: `Postman/Postman.md`
 
 #### Scapy 📡
 
 - **Location**: `/Security-Testing/Scapy/`
-- **Introduction**: `Scapy/intro.md`
-- **User Guide**: `Scapy/user-guide.md`
+- **Guide**: `Scapy/Scapy.md`
 
 #### Snyk 🐍
 
 - **Location**: `/Security-Testing/Snyk/`
-- **Introduction**: `Snyk/intro.md`
-- **User Guide**: `Snyk/user-guide.md`
+- **Guide**: `Snyk/Snyk.md`
 
 #### SonarQube 📊
 
 - **Location**: `/Security-Testing/SonarQube/`
-- **Introduction**: `SonarQube/intro.md`
-- **User Guide**: `SonarQube/user-guide.md`
+- **Guide**: `SonarQube/SonarQube.md`
 
 #### Vitest 🧪
 
 - **Location**: `/Security-Testing/Vitest/`
-- **Introduction**: `Vitest/intro.md`
-- **User Guide**: `Vitest/user-guide.md`
+- **Guide**: `Vitest/Vitest.md`
 - **Examples**: `Vitest/examples/`
 - **Practice**: `Vitest/questions/`
 
@@ -673,24 +648,21 @@ All game engines are located in **`/Game-Engines/`**
 #### Unity 🎯
 
 - **Location**: `/Game-Engines/Unity/`
-- **Introduction**: `Unity/intro.md`
-- **User Guide**: `Unity/user-guide.md`
+- **Guide**: `Unity/Unity.md`
 - **Examples**: `Unity/examples/`
 - **Practice**: `Unity/questions/`
 
 #### Unreal Engine 🎮
 
 - **Location**: `/Game-Engines/Unreal Engine/`
-- **Introduction**: `Unreal Engine/intro.md`
-- **User Guide**: `Unreal Engine/user-guide.md`
+- **Guide**: `Unreal Engine/Unreal Engine.md`
 - **Examples**: `Unreal Engine/examples/`
 - **Practice**: `Unreal Engine/questions/`
 
 #### Godot 🎨
 
 - **Location**: `/Game-Engines/Godot/`
-- **Introduction**: `Godot/intro.md`
-- **User Guide**: `Godot/user-guide.md`
+- **Guide**: `Godot/Godot.md`
 - **Examples**: `Godot/examples/`
 - **Practice**: `Godot/questions/`
 
@@ -1034,24 +1006,21 @@ All miscellaneous tools are located in **`/Misc/`**
 ### Unity 🎮
 
 - **Location**: `/Unity/`
-- **Introduction**: `Unity/intro.md`
-- **User Guide**: `Unity/user-guide.md`
+- **Guide**: `Unity/Unity.md`
 - **Examples**: `Unity/examples/`
 - **Practice**: `Unity/questions/`
 
 ### Unreal Engine 🧩
 
 - **Location**: `/Unreal Engine/`
-- **Introduction**: `Unreal Engine/intro.md`
-- **User Guide**: `Unreal Engine/user-guide.md`
+- **Guide**: `Unreal Engine/Unreal Engine.md`
 - **Examples**: `Unreal Engine/examples/`
 - **Practice**: `Unreal Engine/questions/`
 
 ### Godot 🟦
 
 - **Location**: `/Godot/`
-- **Introduction**: `Godot/intro.md`
-- **User Guide**: `Godot/user-guide.md`
+- **Guide**: `Godot/Godot.md`
 - **Examples**: `Godot/examples/`
 - **Practice**: `Godot/questions/`
 
@@ -1061,38 +1030,34 @@ All miscellaneous tools are located in **`/Misc/`**
 
 ### Bash 🐚
 
-- **Location**: `/Bash/`
-- **Introduction**: `Bash/intro.md`
-- **User Guide**: `Bash/user-guide.md`
-- **Practice**: `Bash/Questions/` (10 questions Q1-Q10)
+- **Location**: `/Programming-Languages/Scripting/Bash/`
+- **Guide**: `Programming-Languages/Scripting/Bash/Bash.md`
+- **Practice**: `Programming-Languages/Scripting/Bash/Questions/` (10 questions Q1-Q10)
 - **Topics**: Shell Scripting, Command Line, File Operations, Text Processing, Variables, Control Structures, Functions, Process Management, Automation, Best Practices
 
 ### KQL (Kusto Query Language) 📊
 
-- **Location**: `/Kql/`
-- **Introduction**: `Kql/intro.md`
-- **User Guide**: `Kql/user-guide.md`
-- **Practice**: `Kql/Questions/` (10 queries Q1-Q10)
+- **Location**: `/Programming-Languages/DataScience&Analytics/Kql/`
+- **Guide**: `Programming-Languages/DataScience&Analytics/Kql/Kql.md`
+- **Practice**: `Programming-Languages/DataScience&Analytics/Kql/Questions/` (10 queries Q1-Q10)
 - **Topics**: Azure Log Analytics, Application Insights, Query Syntax, Operators, Filtering, Aggregation, Time Series Analysis, Joins, Visualization, Best Practices
 
 ### GitHub 🐙
 
-- **Location**: `/GitHub/`
-- **Introduction**: `GitHub/intro.md`
+- **Location**: `/Cloud-DevOps/GitHub/`
+- **Introduction**: `Cloud-DevOps/GitHub/intro.md`
 - **Topics**: Repositories, Pull Requests, Issues, GitHub Actions, Projects, Discussions, Collaboration, Branch Protection, Code Owners, Workflows, Best Practices
 
 ### Postman 📮
 
-- **Location**: `/Postman/`
-- **Introduction**: `Postman/intro.md`
-- **User Guide**: `Postman/user-guide.md`
+- **Location**: `/Security-Testing/Postman/`
+- **Guide**: `Security-Testing/Postman/Postman.md`
 - **Topics**: API Testing, Installation, Requests, Collections, Authorization, Variables, Environments, Scripts (Pre-request & Tests), Collection Runner, Newman, Mock Servers, Monitors, Documentation, OpenAPI Import, CI/CD Integration
 
 ### Jest 🃏
 
-- **Location**: `/Jest/`
-- **Introduction**: `Jest/intro.md`
-- **User Guide**: `Jest/user-guide.md`
+- **Location**: `/Security-Testing/Jest/`
+- **Guide**: `Security-Testing/Jest/Jest.md`
 - **Topics**: Testing Framework, Installation, Writing Tests, Matchers, Async Testing, Mocking, Snapshot Testing, React Testing, Code Coverage, Configuration, Best Practices
 
 ---

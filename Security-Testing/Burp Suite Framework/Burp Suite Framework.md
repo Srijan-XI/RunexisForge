@@ -1,0 +1,452 @@
+# Burp Suite Framework
+
+## Introduction
+
+## Overview
+
+Burp Suite is a comprehensive web application security testing platform. Developed by PortSwigger, it's the industry-leading tool for finding vulnerabilities in web applications. It includes automated scanning, manual testing tools, and exploitation capabilities.
+
+## Key Features
+
+- **Proxy Interception**: Capture and modify HTTP requests/responses
+- **Scanner**: Automated vulnerability scanning
+- **Intruder**: Automated injection attacks
+- **Repeater**: Manual request manipulation
+- **Sequencer**: Token/randomness analysis
+- **Decoder**: Encoding/decoding data
+- **Comparer**: Compare request/response pairs
+- **Extensions**: Plugin ecosystem
+- **Collaborator**: Out-of-band testing
+
+## Editions
+
+### Community Edition
+
+- Free version
+- Manual testing tools
+- Automated scanning (limited)
+- Good for learning
+
+### Professional Edition
+
+- Advanced automated scanning
+- Burp Collaborator Server
+- Priority support
+- Enterprise features
+- $3,999/year
+
+## Core Tools
+
+1. **Proxy**: Man-in-the-middle interceptor
+2. **Scanner**: Automated vulnerability detection
+3. **Intruder**: Attack automation
+4. **Repeater**: Manual request/response testing
+5. **Sequencer**: Session token analysis
+6. **Decoder**: Encoding/decoding utility
+7. **Comparer**: Differential analysis
+8. **Extender**: Plugin framework
+
+## Common Use Cases
+
+- Web application penetration testing
+- Security vulnerability scanning
+- API security testing
+- Authentication mechanism testing
+- Session token analysis
+- Web service testing
+- OWASP Top 10 assessment
+- Bug bounty hunting
+
+## Prerequisites
+
+- Java 8+ (for Burp Suite)
+- Web application knowledge
+- HTTP protocol understanding
+- Networking fundamentals
+- SQL injection concepts
+- XSS vulnerabilities awareness
+
+## Advantages
+
+- Industry standard tool
+- Comprehensive testing platform
+- Excellent documentation
+- Active community
+- Regular updates
+- Works with most web applications
+- Integration with other tools
+- Flexible and extensible
+
+## Resources
+
+- Official Website: <https://portswigger.net/burp>
+- Documentation: <https://portswigger.net/burp/documentation>
+- GitHub: <https://github.com/PortSwigger>
+- Community: <https://forum.portswigger.net>
+- Bug Bounty: <https://portswigger.net/web-security>
+- Free Training: <https://portswigger.net/web-security/dashboard>
+
+---
+
+## User Guide
+
+## Installation
+
+### Prerequisites
+
+- Java 8 or higher
+- 4GB RAM minimum
+- 500MB disk space
+- Administrator/Root access
+
+### Download
+
+Visit <https://portswigger.net/burp/download>
+
+### Linux Installation
+
+```bash
+# Download
+wget https://portswigger.net/burp/releases/download?type=Linux
+
+# Extract
+tar -xzf burpsuite_*.tar.gz
+
+# Run
+cd BurpSuite
+./burpsuite
+```bash
+
+### Windows Installation
+
+1. Download installer from PortSwigger website
+2. Run the installer
+3. Follow installation wizard
+4. Launch Burp Suite
+
+### macOS Installation
+
+1. Download DMG file
+2. Mount the image
+3. Drag Burp Suite to Applications
+4. Launch from Applications folder
+
+### Docker Installation
+
+```bash
+docker run -it -p 8080:8080 \
+  -v /path/to/output:/output \
+  portswigger/burp-suite-community:latest
+```bash
+
+## Initial Setup
+
+### Browser Configuration
+
+Configure your browser to use Burp as proxy:
+
+- Proxy address: 127.0.0.1
+- Port: 8080
+
+### Install CA Certificate
+
+1. Open browser to <http://burp>
+2. Download CA certificate
+3. Import into browser's certificate store
+
+### Configure Burp
+
+1. User Options → TLS
+2. Generate CA certificate
+3. Import certificate to browser
+
+## Core Tools
+
+### Proxy
+
+#### Intercept Requests
+
+1. Turn on Interceptor (Intercept is on)
+2. Browse website
+3. Requests appear in Proxy tab
+4. Modify and forward or drop
+
+#### Forward Intercepted Request
+
+```yaml
+Original: GET / HTTP/1.1
+Modified: GET /admin HTTP/1.1
+```yaml
+
+#### Set Up Listeners
+
+1. Go to Proxy → Options
+2. Click "Add"
+3. Set Binding: 127.0.0.1:8080
+4. Set Redirect: default browser interface
+
+### Scanner
+
+#### Automated Scan
+
+1. Right-click request → "Scan"
+2. Go to Scanner tab
+3. Monitor scan progress
+4. Review findings
+
+#### Active vs Passive Scanning
+
+- **Passive**: Non-intrusive analysis
+- **Active**: Send test payloads (use with caution)
+
+### Intruder
+
+#### Basic Attack Setup
+
+1. Right-click request → "Send to Intruder"
+2. Go to Intruder → Positions
+3. Mark payload positions with § symbol
+4. Choose attack type:
+   - Sniper: One payload at a time
+   - Battering ram: Same payload everywhere
+   - Pitchfork: Multiple payloads simultaneously
+   - Cluster bomb: All combinations
+
+#### Payload Types
+
+```yaml
+Simple list: One-by-one testing
+Numbers: Sequential numbers
+Dates: Date variations
+Custom: User-defined values
+Brute force: Character combinations
+```yaml
+
+#### Example: SQL Injection Testing
+
+```yaml
+GET /search?query=test' OR '1'='1 HTTP/1.1
+Host: vulnerable.app
+```yaml
+
+### Repeater
+
+#### Manual Testing
+
+1. Right-click request → "Send to Repeater"
+2. Modify request manually
+3. Click "Send"
+4. Analyze response
+5. Iterate until findings discovered
+
+#### Request Modifications
+
+```text
+Original: GET / HTTP/1.1
+Modified: GET /../../etc/passwd HTTP/1.1
+```text
+
+### Sequencer
+
+#### Analyze Token Randomness
+
+1. Right-click token → "Send to Sequencer"
+2. Go to Sequencer tab
+3. Click "Start live capture"
+4. Analyze entropy and randomness
+5. Determine predictability
+
+### Decoder
+
+#### Encode/Decode Data
+
+```yaml
+Input: Hello World
+Base64: SGVsbG8gV29ybGQ=
+URL: %48%65%6c%6c%6f%20%57%6f%72%6c%64
+HTML: &#72;&#101;&#108;...
+```yaml
+
+### Comparer
+
+#### Find Differences
+
+1. Select two requests/responses
+2. Right-click → "Send to Comparer"
+3. Compare output
+4. Identify differences
+
+## Scanning Workflow
+
+### Step 1: Create Scope
+
+1. Target → Scope
+2. Click "Add"
+3. Enter URL: <http://vulnerable-app.local>
+
+### Step 2: Map Application
+
+1. Spider application with Proxy
+2. Click "Scan" on target
+
+### Step 3: Configure Scan Settings
+
+1. Scanner → Live scanning
+2. Select scope
+3. Choose scan quality (Light/Normal/Deep)
+4. Start scan
+
+### Step 4: Review Findings
+
+1. Scanner → Issues
+2. Sort by severity
+3. Click issue for details
+4. Review proof of concept
+
+### Step 5: Generate Report
+
+1. Report → Generate
+2. Export as HTML/PDF
+
+## Common Vulnerabilities to Test
+
+### SQL Injection
+
+```yaml
+Input: 1' OR '1'='1
+Payload: test' UNION SELECT NULL,NULL,NULL--
+```yaml
+
+### Cross-Site Scripting (XSS)
+
+```yaml
+Payload: <script>alert('XSS')</script>
+Test in: Search fields, comments, user inputs
+```yaml
+
+### Cross-Site Request Forgery (CSRF)
+
+```yaml
+Look for: Missing CSRF tokens
+Test: Forge requests without token
+```yaml
+
+### Authentication Bypass
+
+```yaml
+Test: Password reset flaws
+Test: Session fixation
+Test: Logic bypass
+```yaml
+
+### Path Traversal
+
+```yaml
+Payload: ../../etc/passwd
+Payload: ..\\..\\windows\\system32\\config\\sam
+```yaml
+
+## Advanced Techniques
+
+### Intruder Fuzzing
+
+```rust
+Use wordlists from:
+- SecLists (GitHub)
+- Burp Suite provided lists
+- Custom generated lists
+```rust
+
+### Custom Extensions
+
+```java
+// Burp Extension Example
+public class BurpExtender implements IBurpExtender {
+    public void registerExtenderCallbacks(IBurpExtenderCallbacks callbacks) {
+        callbacks.setExtensionName("Custom Extension");
+    }
+}
+```rust
+
+### Burp Collaborator
+
+- Out-of-band testing
+- Time-delay SQL injection
+- DNS exfiltration
+- SSRF testing
+
+## Useful Extensions
+
+- Logger++ - Enhanced logging
+- Active Scan++ - Extended scanning
+- JSON Web Tokens - JWT testing
+- Autorize - Authorization testing
+- Retire.js - Dependency checking
+
+## Best Practices
+
+### Testing Best Practices
+
+1. Always get written authorization
+2. Test on staging environment first
+3. Document all findings
+4. Use Burp's scope feature
+5. Follow OWASP Top 10
+6. Test all input fields
+7. Check authentication mechanisms
+8. Test API endpoints
+
+### Security Practices
+
+1. Use strong Burp password
+2. Disable Proxy when not testing
+3. Don't test production without permission
+4. Use VPN for testing
+5. Keep Burp updated
+6. Review Proxy history carefully
+7. Implement findings promptly
+
+## Keyboard Shortcuts
+
+```rust
+Ctrl+Shift+D     Send to Intruder
+Ctrl+Shift+E     Send to Repeater
+Ctrl+Shift+I     Send to Scanner
+Tab              Switch tabs
+Ctrl+B           Toggle Burp browser
+```rust
+
+## Troubleshooting
+
+### Certificate Issues
+
+```yaml
+Regenerate: User Options → TLS
+Re-import certificate to browser
+Clear browser cache
+```yaml
+
+### Proxy Not Working
+
+```yaml
+Check: Listeners on correct port
+Verify: Browser proxy settings
+Check: Firewall rules
+```yaml
+
+### Scanner Not Finding Issues
+
+```yaml
+Ensure: Scope is configured
+Check: Active scanning is enabled
+Verify: Target is accessible
+```yaml
+
+## Useful Resources
+
+- PortSwigger Web Security Academy: <https://portswigger.net/web-security>
+- Burp Suite Docs: <https://portswigger.net/burp/documentation>
+- Community Forum: <https://forum.portswigger.net>
+- YouTube Tutorials: Official PortSwigger channel
+- Bug Bounty Platforms: HackerOne, Bugcrowd
+

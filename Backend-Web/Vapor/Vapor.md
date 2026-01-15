@@ -44,7 +44,7 @@ Vapor is an elegant, safe, and performant web framework for Swift. It enables bu
 ## Installation
 
 ### macOS
-```bash
+```
 # Using Homebrew
 brew install vapor
 
@@ -52,7 +52,7 @@ brew install vapor
 ```
 
 ### Linux
-```bash
+```
 # Ubuntu/Debian
 curl -sL https://apt.vapor.codes | sudo bash
 sudo apt-get install vapor
@@ -62,7 +62,7 @@ git clone https://github.com/vapor/vapor.git
 ```
 
 ### Create Project
-```bash
+```
 vapor new my-app
 cd my-app
 swift build

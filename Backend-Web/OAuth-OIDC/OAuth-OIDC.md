@@ -60,7 +60,7 @@ https://accounts.google.com/o/oauth2/v2/auth?
   &response_type=code
   &scope=openid%20profile%20email
   &state=random_state_string
-```text
+```
 
 **Params:**
 
@@ -82,7 +82,7 @@ Verify `state` matches what you sent.
 
 **POST** to token endpoint:
 
-```bash
+```
 curl -X POST https://oauth2.googleapis.com/token \
   -d client_id=YOUR_CLIENT_ID \
   -d client_secret=YOUR_CLIENT_SECRET \

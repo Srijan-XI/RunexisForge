@@ -100,19 +100,19 @@
 
 ### Change Layout
 
-```bash
+```
 Zorin Appearance → Layouts
 - Windows-like
 - macOS-like
 - GNOME-like
 - Touch-optimized
-```bash
+```
 
 ---
 
 ## Package Management
 
-```bash
+```
 # Update system
 sudo apt update && sudo apt upgrade
 
@@ -120,7 +120,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install <package-name>
 
 # Or use Software Center (GUI)
-```bash
+```
 
 ---
 
@@ -128,12 +128,12 @@ sudo apt install <package-name>
 
 ### Using Wine
 
-```bash
+```
 # Install Windows app
 wine setup.exe
 
 # Or use PlayOnLinux (pre-installed)
-```bash
+```
 
 ---
 

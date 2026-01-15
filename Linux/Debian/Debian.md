@@ -14,24 +14,24 @@ Debian prioritizes stability and free software. Popular derivatives include Ubun
 
 ## Update & Upgrade
 
-```bash
+```
 sudo apt update
 sudo apt upgrade
-```bash
+```
 
 ## Search & Install
 
-```bash
+```
 apt search <name>
 sudo apt install <pkg>
-```bash
+```
 
 ## Remove
 
-```bash
+```
 sudo apt remove <pkg>
 sudo apt purge <pkg>
-```bash
+```
 
 ## Install Debian/Ubuntu
 
@@ -42,8 +42,8 @@ sudo apt purge <pkg>
 
 ## Services
 
-```bash
+```
 systemctl status <service>
 sudo systemctl enable --now <service>
-```bash
+```
 

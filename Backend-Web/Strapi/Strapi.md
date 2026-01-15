@@ -42,7 +42,7 @@ Strapi is a leading open-source headless CMS that enables developers to build AP
 ## Installation
 
 ### Quick Start
-```bash
+```
 # Using Strapi CLI
 npm create strapi-app@latest my-project -- --quickstart
 
@@ -51,7 +51,7 @@ npm create strapi-app@latest my-project -- --template=postgres
 ```
 
 ### Manual Setup
-```bash
+```
 mkdir my-strapi-project
 cd my-strapi-project
 npm init -y
@@ -83,7 +83,7 @@ Access admin panel: `http://localhost:1337/admin`
 4. Click "Save" and "Publish"
 
 ### Access via API
-```bash
+```
 curl http://localhost:1337/api/articles
 ```
 
@@ -109,7 +109,7 @@ Response:
 ## Content Types
 
 ### Create Content Type
-```bash
+```
 # Via CLI
 strapi generate
 # Then select content-type
@@ -144,7 +144,7 @@ BlogPost
 ## API Access
 
 ### REST API
-```bash
+```
 # Get all articles
 GET http://localhost:1337/api/articles
 
@@ -178,7 +178,7 @@ DELETE http://localhost:1337/api/articles/1
 ```
 
 ### Query Parameters
-```bash
+```
 # Pagination
 GET /api/articles?pagination[page]=1&pagination[pageSize]=10
 
@@ -196,7 +196,7 @@ GET /api/articles?fields[0]=title&fields[1]=slug
 ```
 
 ### GraphQL API
-```bash
+```
 POST http://localhost:1337/graphql
 
 query {
@@ -225,7 +225,7 @@ query {
 ## Plugins
 
 ### Using Plugins
-```bash
+```
 # Install plugin
 npm install @strapi/plugin-seo
 
@@ -241,7 +241,7 @@ npm install @strapi/plugin-seo
 - **Import/Export**: Data migration
 
 ### Create Custom Plugin
-```bash
+```
 strapi generate
 # Select plugin
 ```
@@ -251,7 +251,7 @@ strapi generate
 ## Deployment
 
 ### Heroku
-```bash
+```
 # Create Procfile
 echo "release: npm run build && npm run migrate" > Procfile
 echo "web: npm run start" >> Procfile
@@ -284,7 +284,7 @@ Most modern platforms have one-click Strapi deployment
 ## Best Practices
 
 ### 1. Security
-```bash
+```
 # Set strong JWT secret
 ADMIN_JWT_SECRET=your-strong-secret
 API_TOKEN_SALT=your-salt
@@ -302,7 +302,7 @@ API_TOKEN_SALT=your-salt
 - Version your API endpoints
 
 ### 4. Database
-```bash
+```
 # Use production database
 DATABASE_FILENAME=./data/strapi.db
 

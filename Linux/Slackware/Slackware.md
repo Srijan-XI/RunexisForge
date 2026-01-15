@@ -14,17 +14,17 @@ Slackware is a classic, minimalist distribution emphasizing simplicity and Unix-
 
 ## Update & Upgrade
 
-```bash
+```
 sudo slackpkg update
 sudo slackpkg upgrade-all
-```bash
+```
 
 ## Install/Remove Packages
 
-```bash
+```
 sudo slackpkg install <pkg>
 sudo removepkg <pkg>
-```bash
+```
 
 ## Install Slackware
 
@@ -37,7 +37,7 @@ sudo removepkg <pkg>
 
 - Managed via rc scripts in `/etc/rc.d/`:
 
-```bash
+```
 sudo /etc/rc.d/rc.<service> start
-```bash
+```
 

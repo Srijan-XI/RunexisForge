@@ -90,13 +90,13 @@
 
 ### Access MX Tools
 
-```bash
+```
 Menu → System → MX Tools
-```bash
+```
 
 ### Common Tools
 
-```bash
+```
 - MX Package Installer (software)
 - MX Snapshot (backup)
 - MX Boot Repair (fix GRUB)

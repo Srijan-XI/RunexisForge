@@ -701,7 +701,7 @@ public class ServerTest {
 - Use thread pools for blocking operations
 
 ### Benchmarking
-```bash
+```
 # Using Apache Bench
 ab -n 10000 -c 100 http://localhost:8000/
 
