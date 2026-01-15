@@ -1,3 +1,7 @@
+# VB.NET
+
+## Introduction
+
 # 💼 VB.NET Programming Language - Introduction
 
 **VB.NET** (Visual Basic .NET) is Microsoft's approachable .NET language with English-like syntax designed for rapid Windows application development. While overshadowed by C#, VB.NET remains critical for massive legacy codebases and Office automation in enterprises worldwide.
@@ -33,3 +37,10 @@
 ## 🏢 Still Used By: Banks, insurance companies, government agencies, Fortune 500 internal apps
 
 **Best For**: Maintaining VB.NET legacy systems, Office automation, .NET developers preferring readable syntax, enterprises with existing VB codebases
+
+---
+
+## User Guide
+
+User guide coming soon.
+

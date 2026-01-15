@@ -1,3 +1,7 @@
+# FSharp
+
+## Introduction
+
 # 🔷 F# Programming Language - Introduction
 
 **F#** is a functional-first programming language on .NET that combines functional programming, object-oriented programming, and imperative programming. Created by Microsoft Research, F# brings ML-family elegance to the .NET ecosystem with powerful features like type providers.
@@ -34,3 +38,10 @@
 ## 🏢 Companies Using: Jet.com (Walmart), Credit Suisse, Kaggle, Bloomberg
 
 **Best For**: .NET developers wanting functional programming, financial applications, type-safe data science, combining FP with enterprise .NET
+
+---
+
+## User Guide
+
+User guide coming soon.
+

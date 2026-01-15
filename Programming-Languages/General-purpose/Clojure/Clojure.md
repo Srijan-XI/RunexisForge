@@ -1,3 +1,7 @@
+# Clojure
+
+## Introduction
+
 # ☯️ Clojure Programming Language - Introduction
 
 **Clojure** is a modern, functional Lisp dialect that runs on the JVM, designed for concurrent programming with immutable data structures. Created by Rich Hickey in 2007, Clojure brings the power of Lisp to enterprise Java environments with practical concurrency solutions and excellent Java interoperability.
@@ -33,3 +37,10 @@
 ## 🏢 Companies Using: Nubank, Walmart, Apple, Netflix, Amazon
 
 **Best For**: Enterprise Java shops wanting functional programming, data-heavy applications, concurrent systems
+
+---
+
+## User Guide
+
+User guide coming soon.
+

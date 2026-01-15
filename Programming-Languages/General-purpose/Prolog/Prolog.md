@@ -1,3 +1,7 @@
+# Prolog
+
+## Introduction
+
 # 🧩 Prolog - Logic Programming Language
 
 **Prolog** is a logic programming language based on formal logic, used in AI, expert systems, and computational linguistics. Declares relationships and lets Prolog find solutions through logical inference.
@@ -9,3 +13,10 @@
 ## Applications: IBM Watson (parts), Expert systems (medical diagnosis), Semantic web, Computational linguistics
 
 **Best For**: AI research, expert systems, logic puzzles, natural language processing, symbolic reasoning
+
+---
+
+## User Guide
+
+User guide coming soon.
+

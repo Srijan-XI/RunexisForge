@@ -1,3 +1,7 @@
+# Erlang
+
+## Introduction
+
 # 📡 Erlang Programming Language - Introduction
 
 ## 📘 What is Erlang?
@@ -440,3 +444,10 @@ add(A, B) ->
 **📡 "Erlang: Built for Systems That Never Stop"**
 
 *Last Updated: January 15, 2026*
+
+---
+
+## User Guide
+
+User guide coming soon.
+

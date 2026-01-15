@@ -1,3 +1,7 @@
+# Scheme
+
+## Introduction
+
 # 🎨 Scheme - Minimalist Lisp for Education
 
 **Scheme** is a minimalist Lisp dialect emphasizing simplicity and elegance, widely used in computer science education (MIT's SICP book) and embedded scripting (GNU Guile).
@@ -9,3 +13,10 @@
 ## Implementations: Racket, Guile, Chicken Scheme, Chez Scheme
 
 **Best For**: Learning functional programming, embedded Lisp scripting, computer science education, language research
+
+---
+
+## User Guide
+
+User guide coming soon.
+

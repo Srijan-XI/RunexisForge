@@ -1,3 +1,7 @@
+# Haskell
+
+## Introduction
+
 # 🎓 Haskell Programming Language - Introduction
 
 **Haskell** is a purely functional programming language with a strong, static type system and lazy evaluation. Named after logician Haskell Curry, it pushes functional programming to its logical extreme and has influenced modern languages like Rust, Swift, and Scala.
@@ -34,3 +38,10 @@
 ## 🏢 Companies Using: Facebook (Sigma), Deutsche Bank, Standard Chartered, Microsoft (Semantic Code)
 
 **Best For**: Type-safe systems, financial applications, compiler development, advanced functional programming
+
+---
+
+## User Guide
+
+User guide coming soon.
+
