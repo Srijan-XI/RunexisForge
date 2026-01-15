@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.3] - 2026-01-15
+
+### Fixed
+
+- **Documentation Accuracy**: Updated all badge counts to reflect actual repository contents
+  - Languages: Updated from 21 to 35+ (reflects actual language folders across categories)
+  - Backend Frameworks: Split from generic "20+" to accurate "42 Frameworks"
+  - Frontend Frameworks: Added separate badge showing "11 Frameworks"
+  - DevOps Tools: Updated from "15+" to accurate "26 tools"
+  - Linux Distros: Updated from "25+" to accurate "26 distros"
+  - Databases: Confirmed accurate at 11 ✓
+  - Game Engines: Confirmed accurate at 9 ✓
+- **Broken Links**: Fixed badge links that pointed to non-existent folders
+  - Changed Frameworks badge from `Frameworks/` to `Backend-Web/`
+  - Changed Databases badge from `Databases/` to `SQL&DB'S/`
+  - Changed Languages badge from `CATEGORIZATION.md` to `Programming-Languages/`
+- **Features List**: Expanded to accurately reflect 42 backend frameworks, 11 frontend frameworks, 26 DevOps tools, and comprehensive coverage across all categories
+
+### Changed
+
+- Enhanced README.md badges with color-coded separation between backend (orange) and frontend (pink) frameworks
+- Updated features section with specific tool counts and comprehensive listings
+- Improved organization description to include additional language categories (Perl, PowerShell, Julia)
+
 ## [2.1.2] - 2025-12-28
 
 ### Added

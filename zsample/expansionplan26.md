@@ -307,7 +307,7 @@ Meilisearch - Fast search
 Typesense - Search engine
 Algolia - Hosted search
 
-## Specialized Languages (Niche)
+## Specialized Languages (Niche) completion done
 OCaml, F# - Functional languages
 Scheme - Lisp dialect
 Prolog - Logic programming

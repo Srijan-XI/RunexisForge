@@ -521,7 +521,7 @@ The combination of Spring Boot's developer-friendly features, production-ready c
 
 ---
 
-**Ready to get started?** Check out the [User Guide](user-guide.md) for step-by-step instructions on installation, setup, and building your first Spring Boot application!
+**Ready to get started?** Check out the [User Guide](Spring Boot.md#user-guide) for step-by-step instructions on installation, setup, and building your first Spring Boot application!
 
 ## User Guide
 
@@ -1789,4 +1789,5 @@ Refactor code or use `@Lazy` annotation.
 ---
 
 **Congratulations!** You now have a comprehensive guide to Spring Boot development. Start building amazing applications!
+
 

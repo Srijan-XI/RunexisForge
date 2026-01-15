@@ -11,7 +11,7 @@ Get up and running with any programming language in minutes!
 Never coded before? Start here!
 
 1. **Choose Python** (most beginner-friendly)
-2. **Go to**: `Programming-Languages/PYTHON/Installation-Guide.md`
+2. **Go to**: `Programming-Languages/Scripting/PYTHON/Installation-Guide.md`
 3. **Follow**: Step-by-step installation
 4. **Try**: `q01_hello_world.py`
 5. **Progress**: Work through questions q01-q10
@@ -134,9 +134,18 @@ RunexisForge/
 │   ├── ASP.NET Core/    # ASP.NET Core (C#)
 │   ├── Laravel/         # Laravel (PHP)
 │   ├── Ruby on Rails/   # Rails (Ruby)
+│   ├── Express/         # Express.js (Node.js)
+│   ├── NestJS/          # NestJS (TypeScript)
 │   ├── Gin/             # Gin (Go)
+│   ├── Actix-web/       # Actix-web (Rust)
+│   ├── Axum/            # Axum (Rust)
+│   ├── Rocket/          # Rocket (Rust)
+│   ├── Phoenix/         # Phoenix (Elixir)
 │   ├── LangChain/       # LangChain (LLM apps)
-│   └── Streamlit/       # Streamlit (Python data apps)
+│   ├── Streamlit/       # Streamlit (Python data apps)
+│   ├── GraphQL/         # GraphQL APIs
+│   ├── gRPC/            # gRPC services
+│   └── ...42 frameworks total
 │
 ├── Cloud-DevOps/
 │   ├── AWS/             # Amazon Web Services
@@ -144,14 +153,22 @@ RunexisForge/
 │   ├── GCP/             # Google Cloud Platform
 │   ├── DigitalOcean/    # DigitalOcean
 │   ├── Docker/          # Docker containerization
+│   ├── Podman/          # Podman containers
 │   ├── Kubernetes/      # Kubernetes orchestration
+│   ├── Helm/            # Helm package manager
+│   ├── ArgoCD/          # ArgoCD GitOps
+│   ├── Flux/            # Flux GitOps
 │   ├── Terraform/       # Infrastructure as Code
+│   ├── OpenTofu/        # OpenTofu (Terraform fork)
 │   ├── Ansible/         # Configuration management
+│   ├── Prometheus/      # Prometheus monitoring
+│   ├── Grafana/         # Grafana visualization
 │   ├── Git/             # Git version control
 │   ├── GitHub/          # GitHub & Actions
 │   ├── GitLab/          # GitLab & CI/CD
 │   ├── BitBucket/       # Bitbucket & Pipelines
-│   └── JenKins/         # Jenkins CI/CD
+│   ├── JenKins/         # Jenkins CI/CD
+│   └── ...26 tools total
 │
 ├── Data-Analytics/
 │   ├── Apache Spark/    # Apache Spark

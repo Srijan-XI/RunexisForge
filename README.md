@@ -3,12 +3,13 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/badge/Languages-21%20Categorized-blue.svg)](Programming-Languages/CATEGORIZATION.md)
-[![Frameworks](https://img.shields.io/badge/Frameworks-20%2B-orange.svg)](Frameworks/)
-[![Databases](https://img.shields.io/badge/Databases-11-purple.svg)](Databases/)
+[![Languages](https://img.shields.io/badge/Languages-35%2B-blue.svg)](Programming-Languages/)
+[![Backend Frameworks](https://img.shields.io/badge/Backend-42%20Frameworks-orange.svg)](Backend-Web/)
+[![Frontend Frameworks](https://img.shields.io/badge/Frontend-11%20Frameworks-ff69b4.svg)](Frontend-Frameworks/)
+[![Databases](https://img.shields.io/badge/Databases-11-purple.svg)](SQL&DB'S/)
 [![Cloud](https://img.shields.io/badge/Cloud-4%20Platforms-cyan.svg)](Cloud-DevOps/)
-[![DevOps](https://img.shields.io/badge/DevOps%20Tools-15%2B-red.svg)](Cloud-DevOps/)
-[![Linux](https://img.shields.io/badge/Linux%20Distros-25%2B-teal.svg)](Linux/)
+[![DevOps](https://img.shields.io/badge/DevOps%20Tools-26-red.svg)](Cloud-DevOps/)
+[![Linux](https://img.shields.io/badge/Linux%20Distros-26-teal.svg)](Linux/)
 [![Game Engines](https://img.shields.io/badge/Game%20Engines-9-indigo.svg)](Game-Engines/)
 [![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)](Practice-Questions/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -412,18 +413,20 @@ Or jump directly to a language folder and follow the installation guide!
 - ✅ **Installation Guides** – Step-by-step setup for each language  
 - ✅ **Usage Examples** – Basic syntax and starter scripts  
 - ✅ **Practice Questions** – Hands-on coding exercises (Beginner to Advanced)  
-- ✅ **Framework Guides** – Django, Flask, Node.js, Express.js, Next.js  
-- ✅ **DevOps & CI/CD Tools** – Docker, Git, Jenkins  
-- ✅ **Development Tools** – GitHub, Postman, Jest testing  
+- ✅ **Backend Frameworks** – 42 frameworks including Django, Flask, FastAPI, Spring Boot, ASP.NET Core, Laravel, Ruby on Rails, Gin, and more  
+- ✅ **Frontend Frameworks** – 11 frameworks including Angular, React, Vue, Svelte, NuxtJs, Remix, Astro, SolidJs, Electron, Tauri, Vite  
+- ✅ **DevOps & CI/CD Tools** – 26 tools including Docker, Kubernetes, Terraform, Ansible, Git, Jenkins, GitHub Actions, GitLab CI/CD, ArgoCD, and more  
+- ✅ **Cloud Platforms** – AWS, Azure, GCP, DigitalOcean with comprehensive guides  
+- ✅ **Databases** – 11 databases including MySQL, PostgreSQL, MongoDB, Redis, Neo4j, SQLite, MariaDB, and more  
 - ✅ **Platform Coverage** – Instructions for Windows, Linux, and macOS  
 - ✅ **Tooling Help** – IDE setup, compilers, package managers  
 - ✅ **Troubleshooting Tips** – Common issues and their fixes  
-- ✅ **Data Engineering** – Apache Spark, Apache Kafka, Pandas, NumPy  
+- ✅ **Data Engineering** – Apache Spark, Apache Kafka, Pandas, NumPy, dbt, Airflow, and more  
 - ✅ **AI/ML & Data Apps** – TensorFlow, Streamlit, LangChain  
-- ✅ **Game Development** – Unity, Unreal Engine, Godot  
-- ✅ **Infrastructure & Automation** – Kubernetes, Terraform, Ansible  
-- ✅ **Config Formats** – YAML, TOML  
-- ✅ **Desktop Development** – Tauri  
+- ✅ **Game Development** – 9 game engines including Unity, Unreal Engine, Godot, CryEngine, and more  
+- ✅ **Security Testing** – Tools like Trivy, SonarQube, Snyk, HashiCorp Vault, Burp Suite, Metasploit  
+- ✅ **Linux Distributions** – 26 distros across families (Debian, Arch, RedHat, etc.)  
+- ✅ **Development Tools** – JSON, XML, CSV, YAML, TOML parsing and manipulation  
 
 ---
 
@@ -454,17 +457,17 @@ This repository currently includes guides and practice questions for:
 | **KQL** 📊 | ✅ Available | Query Language + 10 Questions | Active |
 | **SQL** 🗄️ | ✅ Available | 10 Questions + 11 DB Guides | Active |
 
-**📁 Organization**: Languages are now organized by category in `Programming-Languages/`:
+**📁 Organization**: 35+ languages organized by category in `Programming-Languages/`:
 
 - **General-purpose/**: Kotlin, Scala, Swift, Dart with Flutter
-- **Scripting/**: Python, PHP, Ruby, Bash
+- **Scripting/**: Python, PHP, Ruby, Bash, Perl, PowerShell
 - **WebDevelopment/**: JavaScript (+ Node.js, Express, Next.js), TypeScript
 - **SystemsProgramming/**: Assembly, C, C++, Rust
 - **EnterpriseApplications/**: C#, Java
-- **DataScience&Analytics/**: R, MATLAB, KQL
+- **DataScience&Analytics/**: R, MATLAB, KQL, Julia
 - **Cloud-native/**: Go (Golang)
 
-👉 See [Programming-Languages/README.md](Programming-Languages/README.md) for categorized navigation
+👉 See [Programming-Languages/README.md](Programming-Languages/README.md) for complete categorized navigation
 
 ### Frontend Frameworks & Libraries
 
@@ -686,8 +689,8 @@ This repository currently includes guides and practice questions for:
 
 ```
 
-git clone https://github.com/Srijan-XI/Install-and-Learn-DevLangs.git
-cd Install-and-Learn-DevLangs
+git clone https://github.com/Srijan-XI/RunexisForge.git
+cd RunexisForge
 ```
 
 ### 2. Choose Your Language
@@ -696,16 +699,16 @@ Navigate to the folder of the programming language you want to learn:
 
 # Programming Languages
 ```
-cd Programming-Languages/PYTHON/      # Python
-cd Programming-Languages/JAVA/        # Java
-cd Programming-Languages/JavaScript/  # JavaScript + Node.js
-cd Programming-Languages/CSharp/      # C#
-cd Programming-Languages/Golang/      # Go
-cd Programming-Languages/RUST/        # Rust
-cd Programming-Languages/PHP/         # PHP
-cd Programming-Languages/Ruby/        # Ruby
-cd Programming-Languages/Scala/       # Scala
-cd Programming-Languages/MATLAB/      # MATLAB
+cd Programming-Languages/Scripting/PYTHON/                 # Python
+cd Programming-Languages/EnterpriseApplications/JAVA/      # Java
+cd Programming-Languages/WebDevelopment/JavaScript/        # JavaScript + Node.js
+cd Programming-Languages/EnterpriseApplications/CSharp/    # C#
+cd Programming-Languages/Cloud-native/Golang/              # Go
+cd Programming-Languages/SystemsProgramming/RUST/          # Rust
+cd Programming-Languages/Scripting/PHP/                    # PHP
+cd Programming-Languages/Scripting/Ruby/                   # Ruby
+cd Programming-Languages/General-purpose/Scala/            # Scala
+cd Programming-Languages/DataScience&Analytics/MATLAB/     # MATLAB
 
 # Frontend Frameworks
 cd Frontend-Frameworks/Angular/       # Angular
