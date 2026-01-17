@@ -67,12 +67,12 @@ Tekton - Cloud-native CI/CD
 Drone CI - Container-native CI
 CircleCI - CI/CD platform
 Travis CI - CI/CD platform
-### Phase 04 DOI
-GitLab CI/CD - More detailed guides
-Maven - Java build tool (not just mentioned)
-Gradle - Java build tool (not just mentioned)
-Bazel - Build system
-Make/CMake - Build automation
+### Phase 04 DOI completed
+GitLab CI/CD - More detailed guides - done
+Maven - Java build tool (not just mentioned) - done
+Gradle - Java build tool (not just mentioned) - done
+Bazel - Build system - done
+Make/CMake - Build automation - done
 
 ## Testing & Quality Assurance [TQA]
 ### Phase 01 TQA
@@ -219,13 +219,13 @@ Sanity - Headless CMS `done`
 Directus - Content platform `done`
 Payload - TypeScript CMS `done`
 
-## Search & Indexing
-Elasticsearch - Search engine (deeper)
-Solr - Enterprise search
-OpenSearch - Elasticsearch fork
-Meilisearch - Fast search
-Typesense - Search engine
-Algolia - Hosted search
+## Search & Indexing [SI] completed
+Elasticsearch - Search engine (deeper) done
+Solr - Enterprise search done
+OpenSearch - Elasticsearch fork done
+Meilisearch - Fast search done
+Typesense - Search engine done
+Algolia - Hosted search done
 
 
 ## Adding More Content in existing topics [AMCET]
