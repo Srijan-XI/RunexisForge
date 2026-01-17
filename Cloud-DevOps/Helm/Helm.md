@@ -203,6 +203,9 @@ spec:
 - Store custom values in version control
 - Use `--dry-run` to preview changes before applying
 
+## Real World Use Case
+**Complex Application Distribution**: You are a software vendor distributing a complex app (Web, API, Worker, Redis, Postgres) to clients to install on their own clusters. Asking them to edit 50 YAML files is prone to error. Instead, you package it as a Helm Chart. The client simply runs `helm install my-app vendor/app --set persistence.size=100Gi`. You abstract the complexity of Kubernetes behind a simple "Settings" interface (`values.yaml`).
+
 ---
 
 ## References

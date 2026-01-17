@@ -1,97 +1,140 @@
-# Code Editors - Mastering VS Code
+# Code Editors - Mastering VS Code & Beyond
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Visual Studio Code (VS Code)](#visual-studio-code)
-  - [Key Features](#key-features)
-  - [Essential Extensions](#essential-extensions)
-  - [Settings & Customization](#settings--customization)
-  - [Shortcuts (Productivity)](#shortcuts)
-  - [Debugging](#debugging)
-- [Vim / Neovim (Brief)](#vim--neovim)
-- [Resources](#resources)
+- [Code Editors - Mastering VS Code \& Beyond](#code-editors---mastering-vs-code--beyond)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+    - [The Modern Editor Landscape](#the-modern-editor-landscape)
+  - [Visual Studio Code](#visual-studio-code)
+    - [Architecture (Electron)](#architecture-electron)
+    - [Killer Features for Students/Pros](#killer-features-for-studentspros)
+    - [Essential Extension Packs (IIT Level)](#essential-extension-packs-iit-level)
+    - [Settings \& Customization](#settings--customization)
+    - [Shortcuts Cheat Sheet](#shortcuts-cheat-sheet)
+    - [Debugging (Node/Python)](#debugging-nodepython)
+  - [Vim / Neovim](#vim--neovim)
+    - [Why use it?](#why-use-it)
+    - [Vim in VS Code](#vim-in-vs-code)
+  - [Comparison: VS Code vs. The Rest](#comparison-vs-code-vs-the-rest)
+  - [Resources](#resources)
 
 ---
 
 ## Introduction
 
-So much of a developer's life is spent inside a code editor. Choosing the right one and mastering it is the highest leverage skill you can acquire. Currently, **VS Code** is the industry standard for general web and software development.
+A **Code Editor** is a lightweight tool focused on the act of writing code. Unlike an IDE, it starts blank. You build your perfect environment by adding plugins.
+
+### The Modern Editor Landscape
+-   **VS Code**: Uses ~70% of the market. Open source, Microsoft.
+-   **Vim/Neovim**: Terminal-based. 100% keyboard. High learning curve.
+-   **Sublime Text**: Instant startup, proprietary, paid (winrar style).
+-   **Notepad++**: Windows classic. Good for large logs.
 
 ---
 
 ## Visual Studio Code
 
-Microsoft's open-source editor. Lightweight but powerful.
+### Architecture (Electron)
+VS Code is built on **Electron** (Chromium + Node.js).
+-   *Pros*: CSS/JS for UI (highly themeable), huge extension ecosystem.
+-   *Cons*: Uses more RAM than Sublime (Chromium overhead).
 
-### Key Features
--   **IntelliSense**: Smart completions based on variable types, function definitions, and imported modules.
--   **Integrated Terminal**: Run shell commands without leaving the editor.
--   **Git Integration**: Review diffs, stage files, and commit directly.
--   **Debugger**: Print debugging is a thing of the past.
+### Killer Features for Students/Pros
+1.  **Hacking the Editor**: Since it's web-tech, you can use Custom CSS extensions to make it look Cyberpunk/Neon instantly.
+2.  **Dev Containers**: (Crucial for Resumes). Define your environment in a `Dockerfile`. VS Code opens *inside* that container.
+    -   *Scenario*: You are on Windows, but the class needs Linux C++ tools. DevContainer gives you a Linux terminal inside VS Code on Windows.
+3.  **Live Share**: Google Docs for Code. You send a link, your friend joins your editor. You debug together.
 
-### Essential Extensions
+### Essential Extension Packs (IIT Level)
 
-#### Web Development
-1.  **Prettier**: Code formatter. Essential for consistent style.
-2.  **ESLint**: Find and fix problems in JavaScript code.
-3.  **Live Server**: Launch a local development server with live reload.
-4.  **Auto Rename Tag**: Rename one HTML tag, automatically rename the pair.
+**1. The "Must Haves"**
+-   **Prettier**: Formats code automatically on save. (Never argue about spaces vs tabs again).
+-   **ESLint**: Finds bugs in JS before you run it.
+-   **Material Icon Theme**: Makes the file explorer readable.
+-   **GitLens**: Show "Who wrote this code 3 years ago?" inline.
 
-#### Frameworks & Languages
-5.  **Python**: Official support for Python (linting, debugging, Jupyter).
-6.  **C/C++**: IntelliSense and debugging.
-7.  **Docker**: Manager images/containers.
-8.  **Tailwind CSS IntelliSense**: Autocomplete for utility classes.
+**2. Web Development**
+-   **Live Server**: Right Click -> Open with Live Server. Instant hot-reload html.
+-   **Auto Rename Tag**: Change `<div>` to `<section>`, the closing tag updates automatically.
+-   **Tailwind CSS IntelliSense**: Autocomplete classes.
 
-#### Utilities
-9.  **GitLens**: Supercharge Git (see who wrote each line of code).
-10. **Remote - SSH**: Edit files on a remote server as if they were local.
-11. **Live Share**: Real-time collaborative coding in the editor.
+**3. Data Science / Python**
+-   **Python (Microsoft)**: IntelliSense, Linting.
+-   **Jupyter**: Run `.ipynb` notebooks directly inside VS Code.
+-   **Data Wrangler**: View CSVs/Pandas Dataframes in a glorious Excel-like grid.
 
 ### Settings & Customization
+(File -> Preferences -> Settings -> Open JSON)
 
-VS Code is configured via `settings.json`.
-
-**Recommended Settings**:
+**Pro Config**:
 ```json
 {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": true,         // Format every time you save
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "files.autoSave": "onFocusChange",
-  "terminal.integrated.defaultProfile.windows": "Git Bash"
+  "editor.fontFamily": "'Fira Code', Consolas, monospace",
+  "editor.fontLigatures": true,        // Turn != into ≠
+  "files.autoSave": "onFocusChange",   // Save when clicking away
+  "terminal.integrated.fontFamily": "'MesloLGS NF'", // For Oh-My-Posh icons
+  "workbench.iconTheme": "material-icon-theme"
 }
 ```
 
-### Shortcuts (Productivity)
+### Shortcuts Cheat Sheet
+*Memorize these to code 2x faster.*
 
-| Action | Win/Linux | macOS |
-|--------|-----------|-------|
-| Command Palette | `Ctrl + Shift + P` | `Cmd + Shift + P` |
-| Quick Open File | `Ctrl + P` | `Cmd + P` |
-| Multi-Cursor | `Alt + Click` | `Opt + Click` |
-| Find in Files | `Ctrl + Shift + F` | `Cmd + Shift + F` |
-| Toggle Terminal | `` Ctrl + ` `` | `` Cmd + ` `` |
-| Format Document | `Shift + Alt + F` | `Shift + Opt + F` |
+| Action | Win/Linux | macOS | Description |
+|:-------|:----------|:------|:------------|
+| **Command Palette** | `Ctrl + Shift + P` | `Cmd + Shift + P` | Do ANYTHING. (Theme, Install, etc) |
+| **Go to File** | `Ctrl + P` | `Cmd + P` | Fuzzy match file name. |
+| **Multi Cursor** | `Alt + Click` | `Opt + Click` | Edit 10 lines at once. |
+| **Move Line** | `Alt + Up/Down` | `Opt + Up/Down` | Move code block up or down. |
+| **Toggle Terminal** | `` Ctrl + ` `` | `` Cmd + ` `` | Open/Close terminal. |
+| **Format Code** | `Shift + Alt + F` | `Shift + Opt + F` | Fix indentation instantly. |
 
-### Debugging
-
-Use the "Run and Debug" tab (Ctrl+Shift+D).
--   Set **Breakpoints** by clicking the gutter (left of line number).
--   Inspect variables and call stack in real-time.
+### Debugging (Node/Python)
+Stop using `print()`!
+1.  Click the "Bug" icon sidebar.
+2.  Click "create a launch.json file".
+3.  Set breakpoints (Red dot in gutter).
+4.  Hit F5.
+5.  Hover over variables to see values.
 
 ---
 
 ## Vim / Neovim
 
-**Vim** is a modal text editor focused on editing speed. It has a steep learning curve but allows editing at the "speed of thought".
--   If interested, install the **Vim** extension in VS Code to learn the keybindings (`h`, `j`, `k`, `l` navigation) without losing VS Code features.
+**"The Mouse is Lava"**
+
+Vim is a "Modal" editor. You are in modes:
+-   **Normal Mode**: Keys move cursor (`h j k l`) or execute commands.
+-   **Insert Mode**: Keys types text.
+
+### Why use it?
+-   **Speed**: Editing logic like "Delete inside quotes" is `di"`. 3 keystrokes. In VS Code that involves dragging a mouse.
+-   **Server Config**: Every Linux server has Vim installed. If you SSH into AWS, you need Vim.
+
+### Vim in VS Code
+Best of both worlds. Install **Vim** extension in VS Code.
+-   You get VS Code's extensions/debugging.
+-   You get Vim's editing speed (hjkl navigation).
+
+---
+
+## Comparison: VS Code vs. The Rest
+
+| Feature | **VS Code** | **Sublime Text** | **Vim/Neovim** |
+|:--------|:------------|:-----------------|:---------------|
+| **Speed** | Medium (Electron) | ⚡ Blazing Fast (C++) | ⚡ Instant (C) |
+| **Learning Curve** | Low | Low | 🏔️ Very High |
+| **Extensions** | ♾️ Infinite | Many | Many (Lua) |
+| **Remote Dev** | ✅ Excellent (SSH/WSL) | ❌ No | ✅ Native (SSH) |
+| **Best For** | Daily Driver, Web, JS | Large Files, Quick Edits | DevOps, Servers, Hardcore |
 
 ---
 
 ## Resources
 
--   [VS Code Documentation](https://code.visualstudio.com/docs)
--   [VS Code Tips & Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
--   [Vim Adventures](https://vim-adventures.com/) - Learn Vim by playing a game.
+-   [VS Code Tricks (Microsoft)](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
+-   [Vim Adventures (Game)](https://vim-adventures.com/)
+-   [Fira Code Font](https://github.com/tonsky/FiraCode)
+-   [Wes Bos VS Code Course (Free)](https://vscode.pro/)

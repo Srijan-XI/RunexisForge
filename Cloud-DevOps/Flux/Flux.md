@@ -286,6 +286,9 @@ flux resume kustomization myapp
 - Pin image tags or use semver policies
 - Store secrets with SOPS or sealed-secrets
 
+## Real World Use Case
+**Secure Multi-Tenancy**: You run a SaaS platform where each customer gets their own namespace. You need to ensure Customer A cannot deploy pods into Customer B's namespace. With Flux, you set up a central "Fleet Repo" managed by admins. Flux reads from this restricted repo and applies the namespaces and RBAC policies. Even if a customer tries to commit a "ClusterRoleBinding" to their app repo, Flux (running with restricted service account) will fail to apply it, or the admin repo will strictly override it.
+
 ---
 
 ## References

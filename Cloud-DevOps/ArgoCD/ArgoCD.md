@@ -205,6 +205,9 @@ argocd app create myapp \
 - Restrict access with RBAC
 - Monitor health and sync status
 
+## Real World Use Case
+**Configuration Drift**: A developer manually patches a production service to increase memory limits during an incident but forgets to update the Git repo. ArgoCD instantly detects this "Out of Sync" state (Yellow status). The platform engineer sees the delta and clicks "Sync" (or enables auto-self-heal) to overwrite the manual change, restoring the cluster to the known-good state defined in Git. This prevents "Snowflake Servers".
+
 ---
 
 ## References
