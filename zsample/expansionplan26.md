@@ -31,13 +31,6 @@ Pulumi - Infrastructure as Code (Python/TypeScript)
 CDK - AWS CDK for infrastructure
 CloudFormation - AWS native IaC
 
-### Phase 03 DOI
-Argo Workflows - Kubernetes workflows
-Tekton - Cloud-native CI/CD
-Drone CI - Container-native CI
-CircleCI - CI/CD platform
-Travis CI - CI/CD platform
-
 ## Testing & Quality Assurance [TQA]
 ### Phase 01 TQA
 Cypress - E2E testing
@@ -47,14 +40,8 @@ Puppeteer - Headless browser
 TestNG - Java testing framework
 JUnit - Java testing (deeper)
 PHPUnit - PHP testing
-### Phase 02 TQA
-pytest - Python testing (deeper)
-unittest - Python testing alternative
-RSpec - Ruby testing
-Cucumber - BDD testing framework
-Mocha - JavaScript testing
-Chai - Assertion library
-Sinon - Mocking library
+
+
 ### Phase 03 TQA
 SonarQube - Code quality (exists but needs expansion)
 Checkmarx - SAST tool
@@ -80,20 +67,11 @@ Stable Diffusion - Image generation
 YOLO - Object detection
 Message Queues & Streaming
 
-### Phase 04 AIDMS
-RabbitMQ - Message broker
-ActiveMQ - Message broker
-AWS SQS/SNS - AWS messaging
-Azure Service Bus - Azure messaging
-Google Pub/Sub - GCP messaging
-NATS - Cloud-native messaging
-Redis Streams - Redis streaming capability
 
 ## Monitoring & Observability [MO]
 ### Phase 01 MO
 New Relic - APM platform
 Datadog - Monitoring platform
-Elastic Stack - Deeper guides (exists but expand)
 Splunk - Log aggregation
 Dynatrace - APM
 Jaeger - Distributed tracing
@@ -127,19 +105,6 @@ Kong - API gateway
 Traefik - Reverse proxy/API gateway
 API rate limiting - Best practices
 API versioning - Strategies
-
----
-
-## Game Development [GD]
-### Phase 02 GD
-Love 2D - Lua game framework
-Raylib - Simple game library
-Bevy - Rust game engine
-Amethyst - Rust game engine
-libGDX - Java game framework
-MonoGame - XNA successor (C#)
-FNA - XNA reimplementation
-Pygame - Python game library
 
 ---
 
