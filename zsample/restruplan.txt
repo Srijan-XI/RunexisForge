@@ -1,0 +1,27 @@
+WE ARE NOW DOING RESTRUCTURE PLANNING.
+ THE FOLLOWING FILES WILL BE RESTRUCTURED:
+ we are going to merge the file like intro.md and user-guide.md into a single file called with 
+ there repsective sections / folders and called with there respective name of folder.
+  for example : react folder will have react.md file inside it with all the content 
+  from intro.md and user-guide.md under respective sections.
+
+  and install&usage.md and introduction.md file will be merged into a single file called with 
+  there respective name of folder . example : mongoDB folder will have mongoDB.md file inside 
+  it with all the content from install&usage.md and introduction.md under respective sections.
+we will follow with all other folder in repo 
+
+this RESTRUCTURE done in phases:
+in phase 01 we will do for the backend-web folder : completed
+in phase 02 we will do for the programming-languages folder : completed
+in phase 03 we will do for the SQL&DB'S folder : completed
+in phase 04 we will do for the security-testing folder : completed
+in phase 05 we will do for the frontend frameworks folder : completed
+in phase 06 we will do for the Linux folder : completed
+in phase 07 we will do for the cloud-devops folder : completed
+in phase 08 we will do for the game-engines folder : completed
+in phase 09 we will do for the data-analytics folder : completed
+in phase 10 we will do for the development-tools folder : completed
+in phase 11 we will do for the operating-systems folder : completed
+
+
+also from now on ward any new content will be added in this new restructured format only.
