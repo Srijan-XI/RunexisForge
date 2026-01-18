@@ -220,12 +220,31 @@ Directus - Content platform `done`
 Payload - TypeScript CMS `done`
 
 ## Search & Indexing [SI] completed
-Elasticsearch - Search engine (deeper) done
-Solr - Enterprise search done
-OpenSearch - Elasticsearch fork done
-Meilisearch - Fast search done
-Typesense - Search engine done
-Algolia - Hosted search done
+Elasticsearch - Search engine (deeper) `done`
+Solr - Enterprise search `done`
+OpenSearch - Elasticsearch fork `done`
+Meilisearch - Fast search `done`
+Typesense - Search engine `done`
+Algolia - Hosted search `done`
+
+## Network Tools [NT] 
+Wireshark - Network protocol analyzer (existing, empty folder) `done`
+nmap - Network scanner (existing, empty folder) `done`
+tcpdump - Packet analyzer `done`
+iftop - Network bandwidth monitor `done`
+iperf - Network performance testing `done`
+Kismet - Wireless network detector (existing, empty folder) `done`
+Netcat - Network utility `done`
+Bettercap - Network security tool (existing, empty folder) `done`
+Ettercap - Network sniffer/mitm `done`
+ARP-scan - Network discovery tool (existing, empty folder) `done`
+Aircrack-ng Suite - Wireless security suite (existing, empty folder) `done`
+Angry IP Scanner - Network scanner tool (existing, empty folder) `done`
+Airmon-ng - Wireless network management tool `done`
+Zmap - Network scanner (existing, empty folder) 
+Hping - Network tool for packet crafting `done`
+BlueMaho - Bluetooth security tool `done`
+Wifite - Automated wireless attack tool `done`
 
 
 ## Adding More Content in existing topics [AMCET]
