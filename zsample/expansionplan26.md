@@ -6,12 +6,6 @@ Technology Gap Analysis - RunexisForge
 ## 🔴 Critical Gaps (High Priority)
 
 ## Databases & Data Storage [DBDS]
-### Phase 02 DBDS [Completed by the Contributor AMAN...]
-VictoriaMetrics - Time-series database
-Weaviate - Vector database for AI
-Pinecone - Managed vector database
-Milvus - Open-source vector DB
-Druid - Real-time analytics
 ### Phase 03 DBDS
 Presto/Trino - SQL query engine
 Apache Druid - OLAP database
