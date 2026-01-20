@@ -1,53 +1,166 @@
-# OAuth-OIDC
+# OAuth 2.0 & OpenID Connect (OIDC)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Why OAuth 2.0 & OIDC?](#why-oauth-20--oidc)
+- [Core Concepts](#core-concepts)
+- [OAuth 2.0 Grant Types](#oauth-20-grant-types)
+- [OpenID Connect (OIDC)](#openid-connect-oidc)
+- [Token Management](#token-management)
+- [Scope Handling](#scope-handling)
+- [Security Best Practices](#security-best-practices)
+- [Implementation Examples](#implementation-examples)
+- [Token Validation](#token-validation)
+- [Common Providers](#common-providers)
+- [OAuth 2.0 vs OIDC vs SAML](#oauth-20-vs-oidc-vs-saml)
+- [Resources](#resources)
+
+---
 
 ## Introduction
 
-OAuth 2.0 is an authorization framework that allows third-party apps to access user resources without exposing passwords. OpenID Connect (OIDC) is an identity layer on top of OAuth 2.0.
+OAuth 2.0 is an industry-standard **authorization framework** that enables applications to obtain limited access to user accounts on an HTTP service. OpenID Connect (OIDC) is an identity layer built on top of OAuth 2.0 that adds **authentication** capabilities and standardized user identity information.
+
+### Key Characteristics
+
+**OAuth 2.0:**
+- Authorization framework (not authentication)
+- Delegated access to resources
+- Access tokens for API calls
+- Multiple grant types for different use cases
+- Industry standard since 2012
+
+**OpenID Connect (OIDC):**
+- Authentication layer on OAuth 2.0
+- ID tokens with user information (JWT)
+- UserInfo endpoint for profile data
+- Standard claims (sub, name, email, etc.)
+- Single Sign-On (SSO) capabilities
+
+---
 
 ## Why OAuth 2.0 & OIDC?
 
-- **Delegated access**: users grant limited access to their data
-- **No password sharing**: apps never see user passwords
-- **Standard protocol**: widely supported (Google, GitHub, Azure AD)
-- **Identity**: OIDC adds authentication and user info
+### Benefits
 
-## Key concepts
+✅ **Security**
+- No password sharing between apps
+- Limited scope access
+- Token-based authentication
+- Industry-standard security practices
 
-- **Resource Owner**: the user
-- **Client**: the app requesting access
-- **Authorization Server**: issues tokens (e.g., Google, Auth0)
-- **Resource Server**: the API being accessed
-- **Access Token**: proof of authorization
-- **ID Token** (OIDC): proof of authentication, contains user info
+✅ **User Experience**
+- Single Sign-On (SSO)
+- Familiar login flows (Google, Facebook, etc.)
+- Granular permission control
+- Easy account linking
 
-## OAuth 2.0 flows
+✅ **Developer Experience**
+- Widely supported libraries
+- Standard protocol
+- Well-documented
+- Easy integration with providers
 
-- **Authorization Code**: most secure, for web apps
-- **Client Credentials**: for server-to-server
-- **PKCE**: for mobile/SPA apps
+✅ **Enterprise Ready**
+- Compliance friendly (GDPR, HIPAA)
+- Audit trails
+- Centralized identity management
+- Role-based access control (RBAC)
 
-## OIDC additions
+### Use Cases
 
-- ID Token (JWT with user claims)
-- UserInfo endpoint
-- Standard scopes (openid, profile, email)
+- **Social Login**: Sign in with Google, Facebook, GitHub
+- **API Access**: Mobile apps accessing backend APIs
+- **Third-Party Integration**: Apps accessing user data (Spotify, Strava)
+- **Microservices**: Service-to-service authentication
+- **Single Sign-On (SSO)**: Enterprise identity federation
+- **Mobile Apps**: Secure authentication without storing passwords
 
-## Where to go next
+---
 
-- Guide: `Backend-Web/OAuth-OIDC/OAuth-OIDC.md`
-- Examples: `Backend-Web/OAuth-OIDC/examples/`
+## Core Concepts
 
-## User Guide
+### OAuth 2.0 Roles
 
-## Authorization Code Flow (OIDC)
+```
+┌──────────────┐         ┌──────────────────┐
+│   Resource   │◄────────│  Resource Server │
+│     Owner    │         │   (API Server)   │
+│   (User)     │         └──────────────────┘
+└──────────────┘                  ▲
+      │                           │
+      │ 1. Authorization          │ 4. Access API
+      │    Request                │    with Token
+      ▼                           │
+┌──────────────┐         ┌──────────────────┐
+│    Client    │────────>│  Authorization   │
+│ Application  │ 2. Auth │     Server       │
+│              │◄────────│  (Identity       │
+└──────────────┘ 3. Token│   Provider)      │
+                         └──────────────────┘
+```
 
-This is the most common flow for web apps.
+1. **Resource Owner**: The user who owns the data
+2. **Client**: The application requesting access
+3. **Authorization Server**: Issues tokens (Google, Auth0, Okta)
+4. **Resource Server**: API hosting protected resources
 
-### 1. Register your app
+### Key Terms
 
-Register with an identity provider (Google, Auth0, Azure AD) to get:
+**Access Token**
+- Short-lived credential for API access
+- Bearer token (typically JWT)
+- Includes scopes/permissions
+- Example lifetime: 1 hour
 
-- **Client ID**: public identifier
+**Refresh Token**
+- Long-lived credential
+- Used to obtain new access tokens
+- Revocable
+- Example lifetime: 30-90 days
+
+**ID Token (OIDC)**
+- Proof of authentication
+- JWT with user information
+- Contains claims (sub, email, name)
+- Should not be used for API access
+
+**Scopes**
+- Define permissions
+- Space-separated list
+- Examples: `read:users`, `write:posts`, `openid profile email`
+
+**Claims**
+- Pieces of information about user/token
+- Standard claims: `sub`, `name`, `email`, `iss`, `exp`
+- Custom claims: application-specific data
+
+---
+
+## OAuth 2.0 Grant Types
+
+### User Guide
+
+### 1. Authorization Code Grant
+
+**Most secure flow** for web applications with server-side components.
+
+**Flow Diagram:**
+```
+User            Client          Auth Server      Resource Server
+  │               │                  │                  │
+  │─1.Login──────>│                  │                  │
+  │               │──2.Auth Request─>│                  │
+  │◄──────────────┼──3.Login Page────│                  │
+  │─4.Credentials>│                  │                  │
+  │               │◄─5.Auth Code─────│                  │
+  │               │──6.Token Request>│                  │
+  │               │◄─7.Access Token──│                  │
+  │               │──8.API Request──────────────────────>│
+  │               │◄─9.Protected Resource───────────────│
+```
+
+**Step 1: Redirect to Authorization Endpoint**
 - **Client Secret**: confidential key
 - **Redirect URI**: where users return after login
 

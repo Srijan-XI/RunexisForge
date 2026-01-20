@@ -26,15 +26,6 @@ CDK - AWS CDK for infrastructure
 CloudFormation - AWS native IaC
 
 ## Testing & Quality Assurance [TQA]
-### Phase 01 TQA
-Cypress - E2E testing
-Playwright - Cross-browser testing
-Selenium - Web automation AND testing
-Puppeteer - Headless browser
-TestNG - Java testing framework
-JUnit - Java testing (deeper)
-PHPUnit - PHP testing
-
 
 ### Phase 03 TQA
 SonarQube - Code quality (exists but needs expansion)
@@ -45,8 +36,6 @@ Code coverage tools - Codecov and Coveralls
 
 ## AI/ML & Data Science [AIDMS]
 ### Phase 01 AIDMS
-PyTorch - Deep learning (vs TensorFlow)
-Scikit-learn - ML library (deeper)
 XGBoost - Gradient boosting
 LightGBM - Gradient boosting
 Hugging Face - Transformers library
@@ -86,12 +75,7 @@ gRPC - Binary RPC (exists, needs expansion)
 GraphQL - Query language (exists, needs expansion)
 OpenAPI/Swagger - API documentation
 JSON:API - JSON specification
-### Phase 02 API
-AsyncAPI - Event-driven APIs
-SOAP - Legacy web services
-Webhook - Event delivery
-OAuth 2.0/OIDC - Auth (exists, needs expansion)
-SAML - Enterprise authentication
+
 ### Phase 03 API
 Refresh tokens - Token management
 API Gateway - API management

@@ -5,6 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-01-20
+
+### Added
+
+- **Programming Languages**: Prolog and Scheme documentation with comprehensive guides
+- **Backend Frameworks**: Express.js, Next.js, and Node.js complete documentation
+- **Databases**: New database documentation including Typesense (Phase 02 DBDS)
+  - SQLite comprehensive guide and SQL & Databases overview
+- **Network Tools**: iperf and tcpdump with detailed usage guides
+  - OpenVPN and WireGuard VPN documentation with IPsec section updates
+  - WebSocket documentation and examples
+- **Testing Frameworks**: pytest and unittest comprehensive documentation
+- **Security Testing**: Complete documentation for security testing tools
+- **Development Tools**: Gradle build tool documentation
+- **Visual Enhancements**: Skill icons for various technologies across the repository
+
+### Changed
+
+- Updated expansion plan to reflect completed programming languages and frameworks
+- Refined expansion plan sections by removing completed phases (Phase 02 DBDS)
+- Enhanced niche languages section organization
+- Updated CODEOWNERS file with consolidated code owners (@AmanKumar-St added)
+- Improved .gitignore to exclude text files
+- Added restructure planning document
+
+### Fixed
+
+- User guide references for clarity in SteamOS, ChromeOS Flex, and Rocky Linux documentation
+- Removed outdated installation guide and intro files
+- Removed outdated N2PLAN documentation
+
+### Statistics
+
+- **5 new programming languages/frameworks** documented
+- **8 new tool categories** added (Network Tools, VPN, WebSocket, Testing, Security)
+- **Multiple database guides** completed
+- Expansion plan continuously updated to track progress
+
 ## [2.1.3] - 2026-01-15
 
 ### Fixed
