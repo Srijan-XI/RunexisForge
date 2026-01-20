@@ -14,17 +14,6 @@ etcd - Distributed configuration
 Consul - Service mesh & discovery
 Memcached - In-memory caching (separate from Redis)
 
-## DevOps & Infrastructure
-### Phase 01 DOI
-Vagrant - Development environment automation
-Packer - Machine image building
-Vault - Secret management (HashiCorp Vault exists but needs expansion)
-Consul - Service discovery & mesh
-Nomad - Workload orchestration
-Pulumi - Infrastructure as Code (Python/TypeScript)
-CDK - AWS CDK for infrastructure
-CloudFormation - AWS native IaC
-
 ## Testing & Quality Assurance [TQA]
 
 ### Phase 03 TQA
@@ -35,12 +24,6 @@ Fortify - Security scanning
 Code coverage tools - Codecov and Coveralls
 
 ## AI/ML & Data Science [AIDMS]
-### Phase 01 AIDMS
-XGBoost - Gradient boosting
-LightGBM - Gradient boosting
-Hugging Face - Transformers library
-OpenAI/GPT integration - LLM APIs
-Anthropic Claude integration - Alternative LLM
 
 ### Phase 03 AIDMS
 RAPIDS - GPU-accelerated data science
@@ -96,15 +79,11 @@ IN WHICH WE ADD NEW SUBTOPICS, TOOLS, FRAMEWORKS, LIBRARIES, BEST PRACTICES, TUT
 - Code Editors & IDEs (expand existing)
 - IDE's: JetBrains and many more (expand existing)
 
-### Phase 02 AMCET
-- Git-Workflows (expand existing)
-- Package Managers (expand existing)
-- SSH-SSL (expand existing)
-- Terminal Tools (expand existing)
-
 
 ### Phase 03 AMCET
 - n8n - Workflow Automation (expand existing)
+- zapier - Integration Platform (expand existing)
+- supabase - Open Source Firebase Alternative (file create and expand)
 - firebase - BaaS Platform (expand existing)
 - Streamlit - Data Apps and Implementation (expand existing)
 - Electron - Desktop Apps with Web Tech (expand existing)
