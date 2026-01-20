@@ -60,6 +60,47 @@ This guide covers multiple database systems, each with unique strengths:
 - Low latency at any scale
 - Built-in security and backup
 
+### **Time-Series Databases**
+
+#### **VictoriaMetrics** 📊
+
+- High-performance time-series database
+- Prometheus-compatible with better efficiency
+- 7x less RAM and disk space than Prometheus
+- Ideal for monitoring and observability
+
+### **Vector Databases**
+
+#### **Weaviate** 🔍
+
+- Open-source vector database for AI applications
+- Native support for vector and hybrid search
+- Multi-modal data support (text, images)
+- GraphQL and REST APIs
+
+#### **Pinecone** 🌲
+
+- Fully managed vector database service
+- Sub-50ms latency at billion-scale
+- Serverless and auto-scaling
+- Perfect for semantic search and RAG
+
+#### **Milvus** 🚀
+
+- Open-source vector database built for scale
+- GPU acceleration support
+- Billion-scale vector search in milliseconds
+- Multiple index types (HNSW, IVF, DiskANN)
+
+### **Analytics Databases**
+
+#### **Apache Druid** 🔥
+
+- Real-time analytics database (OLAP)
+- Sub-second queries on event-driven data
+- Streaming and batch data ingestion
+- Perfect for user-facing analytics dashboards
+
 ---
 
 ## 🎯 SQL Basics
@@ -196,6 +237,46 @@ Process of organizing data to reduce redundancy
 - Want managed service (no servers to maintain)
 - Global distribution required
 
+### **Use VictoriaMetrics When:**
+
+- Need time-series database for monitoring
+- Want better performance than Prometheus
+- Long-term metrics storage required
+- Resource efficiency is important
+- Multi-tenancy support needed
+
+### **Use Weaviate When:**
+
+- Building semantic search applications
+- Need multi-modal vector search
+- Want GraphQL API for queries
+- Open-source solution preferred
+- Hybrid search (vector + keyword) required
+
+### **Use Pinecone When:**
+
+- Need fully managed vector database
+- Want minimal infrastructure management
+- Building production AI applications
+- Sub-50ms latency is critical
+- Prefer serverless auto-scaling
+
+### **Use Milvus When:**
+
+- Need open-source vector database
+- Billion-scale vector search required
+- GPU acceleration is important
+- Want flexible deployment options
+- Multiple index types needed
+
+### **Use Apache Druid When:**
+
+- Building real-time analytics dashboards
+- Need sub-second query performance
+- Streaming data ingestion required
+- OLAP workloads on event data
+- User-facing analytics applications
+
 ---
 
 ## 🚀 Getting Started
@@ -209,6 +290,21 @@ Process of organizing data to reduce redundancy
 
 2. **Master CRUD Operations**
    - CREATE: Insert new data
+
+Time-series monitoring + Better than Prometheus?
+    └─> VictoriaMetrics
+
+Semantic search + AI applications?
+    └─> Weaviate or Pinecone or Milvus
+
+Vector search + Open source preferred?
+    └─> Weaviate or Milvus
+
+Vector search + Fully managed service?
+    └─> Pinecone
+
+Real-time analytics + OLAP queries?
+    └─> Apache Druid
    - READ: Query and retrieve data
    - UPDATE: Modify existing data
    - DELETE: Remove data
