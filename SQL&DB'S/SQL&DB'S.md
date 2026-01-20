@@ -101,6 +101,40 @@ This guide covers multiple database systems, each with unique strengths:
 - Streaming and batch data ingestion
 - Perfect for user-facing analytics dashboards
 
+#### **Trino** ⚡
+
+- Distributed SQL query engine (formerly Presto)
+- Federated queries across multiple data sources
+- 50+ connectors for databases and data lakes
+- MPP architecture for fast analytics
+
+### **Object Storage**
+
+#### **MinIO** 🗄️
+
+- S3-compatible object storage
+- 100% open-source and Kubernetes native
+- Multi-cloud deployment support
+- Erasure coding for data protection
+
+### **Distributed Key-Value Stores**
+
+#### **etcd** 🔑
+
+- Distributed key-value store for configuration
+- Raft consensus algorithm
+- Strong consistency guarantees
+- Used by Kubernetes and other systems
+
+### **Caching Systems**
+
+#### **Memcached** ⚡
+
+- High-performance distributed memory caching
+- Sub-millisecond response times
+- Multi-threaded and lightweight
+- Simple key-value storage
+
 ---
 
 ## 🎯 SQL Basics
