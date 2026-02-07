@@ -5,6 +5,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2026-02-07
+
+### Added
+
+- **Monitoring & Observability**: Jaeger distributed tracing documentation
+  - Complete guide to distributed tracing and OpenTelemetry integration
+  - Installation and configuration examples
+  - Multi-language instrumentation (Java, Go, Python, Node.js)
+  - Production deployment patterns and best practices
+- **Backend Frameworks**: gRPC advanced documentation enhancements
+  - Advanced streaming patterns (client, server, bidirectional)
+  - Comprehensive error handling examples
+  - Production-grade best practices
+  - Multi-language implementation examples
+- **Security Testing Enhancements**: Phase 03 TQA comprehensive expansion
+  - SonarQube: Added "Why Use" section, competitor comparison table, and "When to Use" decision guide
+  - Checkmarx: Added decision-making sections with 10 key benefits and use case scenarios
+  - OWASP ZAP: Added comprehensive comparison vs Burp Suite, Acunetix, and other tools
+  - Fortify: Added enterprise platform analysis with SAST/DAST/SCA/RASP comparison
+  - Codecov: Added coverage tracking comparison and integration ecosystem analysis
+  - Coveralls: Added simplicity-focused comparison and cost-effectiveness analysis
+- **Tool Selection Guidance**: All security testing tools now include:
+  - "Why Use X?" sections highlighting unique benefits
+  - Detailed comparison tables vs 4-5 competitors
+  - "When to Use" guides with clear ✅/❌ scenarios
+  - Decision-making criteria for tool selection
+
+### Changed
+
+- Enhanced Security-Testing documentation with comprehensive decision-making content
+- Updated all 6 testing tool guides to include competitive analysis
+- Improved tool selection guidance for enterprise and team scenarios
+- Updated expansion plan to reflect completed monitoring tools and API strategies
+- Removed Testing & Quality Assurance section from expansion plan (completed)
+
+### Statistics
+
+- **6 security testing guides** expanded with decision frameworks
+- **30+ tool comparisons** added across all guides
+- **60+ decision scenarios** documented for tool selection
+- **1 monitoring tool** (Jaeger) added to observability stack
+- **1 backend framework** (gRPC) enhanced with advanced patterns
+
 ## [2.2.0] - 2026-01-20
 
 ### Added
