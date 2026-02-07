@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - 2026-02-07
+
+### Added
+
+- **Linux Distributions - Red Hat Family**: Phase 04 AMCET 4.2 comprehensive expansion
+  - **Red Hat Ecosystem Overview** (RedHat.md): Complete guide to DNF/RPM package management, systemd service management, SELinux configuration and troubleshooting, firewalld setup, Cockpit web administration, repository management, distribution family tree (Fedora→CentOS Stream→RHEL→derivatives), version comparison tables (RHEL 7/8/9), migration paths, web/database server setup, development environments, security hardening, backup strategies, and boot/package/SELinux troubleshooting (~1000 lines)
+  - **Fedora Linux** (Fedora Linux.md): Cutting-edge community distribution with detailed coverage of Fedora editions (Workstation/Server/IoT/CoreOS), desktop Spins (KDE/Xfce/MATE/Cinnamon), Toolbox containerized development, installation with Anaconda, DNF package management, RPM Fusion repositories, multimedia codecs, Flatpak integration, development languages (Python/Node/Java/Go/Rust), IDEs, Podman/Buildah containers, system upgrades, Fedora innovations (systemd/Wayland/PipeWire/Btrfs pioneering), and real-world developer/container platform use cases (~1100 lines)
+  - **CentOS** (CentOS.md): CentOS transformation documentation covering CentOS Linux EOL history, CentOS Stream rolling release model, development pipeline changes (Fedora→RHEL→CentOS vs Fedora→Stream→RHEL), migration paths with scripts (migrate2rocky, almalinux-deploy, convert2rhel), EPEL repository setup, when to use Stream vs alternatives (dev/test vs production), DNF package management, server setup examples (Apache, PostgreSQL, Podman), and rolling release best practices (~900 lines)
+  - **Red Hat Enterprise Linux** (RedHatEnterpriseLinux.md): Enterprise platform guide with comprehensive coverage of RHEL versions and lifecycle (7/8/9 with 10+ year support), subscription types (free developer program, Standard, Premium), subscription-manager registration and management, Application Streams for multiple package versions, enterprise features (Red Hat Insights proactive management, System Roles Ansible automation, Image Builder custom images), Cockpit web console, SELinux/FIPS compliance, OpenSCAP scanning, Pacemaker/Corosync clustering, Podman containers, OpenShift Kubernetes, Red Hat support and sosreport, leapp in-place upgrades, and enterprise use cases (database servers, cloud-native platforms) (~1100 lines)
+  - **Oracle Linux** (OracleLinux.md): Oracle's RHEL-compatible distribution featuring Unbreakable Enterprise Kernel (UEK) with latest features and Oracle optimizations, Ksplice zero-downtime kernel patching, 100% RHEL binary compatibility, Oracle software optimizations, DTrace dynamic tracing, Btrfs support, Oracle Database preparation and hosting, Oracle Instant Client, container support with Podman and OLCNE (Kubernetes), migration from CentOS/RHEL with conversion scripts, free vs Premier Support options, and real-world use cases for Oracle workloads and cloud-native development (~900 lines)
+  - **Rocky Linux**: Verified existing comprehensive documentation (1022 lines, no expansion needed)
+
+### Changed
+
+- Enhanced Linux/RedHat family documentation with enterprise-grade deployment guides
+- Updated all Red Hat family distributions to include subscription management, security hardening, and production best practices
+- Improved documentation consistency across Red Hat ecosystem with emphasis on DNF/RPM, SELinux, and systemd
+
+### Statistics
+
+- **5 Red Hat distribution guides** significantly expanded (RedHat, Fedora, CentOS, RHEL, Oracle Linux)
+- **1 distribution guide** verified as comprehensive (Rocky Linux)
+- **~5,000 lines** of enterprise Linux documentation added
+- **Complete Phase 04 AMCET 4.2** Red Hat-based distributions expansion
+- Comprehensive coverage: package management, enterprise features, migration paths, security, containers, real-world deployments
+
 ## [2.3.0] - 2026-02-07
 
 ### Added
