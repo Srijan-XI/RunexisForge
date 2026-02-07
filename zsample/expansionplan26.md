@@ -28,12 +28,12 @@ IN WHICH WE ADD NEW SUBTOPICS, TOOLS, FRAMEWORKS, LIBRARIES, BEST PRACTICES, TUT
 
 
 ### Phase 03 AMCET
-#### phase 3.1 amcet
+#### phase 3.1 AMCET 
 - n8n - Workflow Automation (expand existing)
 - zapier - Integration Platform (expand existing)
 - supabase - Open Source Firebase Alternative (file create and expand)
 - firebase - BaaS Platform (expand existing)
-#### Phase 02 AMCET
+#### Phase 3.2 AMCET
 - Streamlit - Data Apps and Implementation (expand existing)
 - Electron - Desktop Apps with Web Tech (expand existing)
 - React Native - Mobile Apps with React (expand existing)
