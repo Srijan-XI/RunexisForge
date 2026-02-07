@@ -1,21 +1,5 @@
 ## Expansion Plan 26 for Runexis Forge
 
-### Adding New content / topics 
-
-Technology Gap Analysis - RunexisForge
-## 🔴 Critical Gaps (High Priority)
-
-## Monitoring & Observability [MO]
-
-### Phase 03 MO
-Grafana Loki - Log aggregation
-Grafana - Dashboards (exists, needs expansion)
-Prometheus - Metrics (exists, needs expansion)
-InfluxDB - Time-series database
-Datadog - Full observability stack
-
----
-
 
 ## Adding More Content in existing topics [AMCET]
 IN AMCET WE ADD MORE CONTENT IN THE EXISTING TOPICS TO MAKE THEM MORE COMPREHENSIVE AND DETAILED.
