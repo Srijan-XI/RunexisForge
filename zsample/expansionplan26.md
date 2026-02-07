@@ -46,8 +46,8 @@ IN WHICH WE ADD NEW SUBTOPICS, TOOLS, FRAMEWORKS, LIBRARIES, BEST PRACTICES, TUT
 - firebase - BaaS Platform (expand existing)
 - Streamlit - Data Apps and Implementation (expand existing)
 - Electron - Desktop Apps with Web Tech (expand existing)
-- Reat Native - Mobile Apps with React (expand existing)
-- Reat - Frontend Library (expand existing)
+- React Native - Mobile Apps with React (expand existing)
+- React - Frontend Library (expand existing)
 
 ### Phase 04 AMCET - LINUX FOLDER EXPANSION
 - 4.1 : DEBIAN BASED DISTROS (expand existing) : Debin.md file ,kali, ubuntu,parrotsec,popos, tails linux mint.
@@ -59,7 +59,7 @@ IN WHICH WE ADD NEW SUBTOPICS, TOOLS, FRAMEWORKS, LIBRARIES, BEST PRACTICES, TUT
 - Solidity - Smart Contract Language (expand existing)
 - Defi Protocols - Uniswap, Aave (expand existing)
 - NFT Standards - ERC-721, ERC-1155 (expand existing)
-- Solnana Development - Anchor Framework (expand existing)
+- Solana Development - Anchor Framework (expand existing)
 - Web3 Libraries - web3.js, ethers.js (expand existing)
 - IPFS & Filecoin - Decentralized Storage (expand existing)
 - Oracles - Chainlink, Band Protocol (expand existing)
