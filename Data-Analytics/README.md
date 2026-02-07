@@ -25,12 +25,15 @@ Traditional machine learning libraries and gradient boosting frameworks.
 - **Scikit-learn** - Classic machine learning algorithms and tools
 - **LightGBM** - Fast gradient boosting framework
 - **XGBoost** - Scalable gradient boosting system
+- **RAPIDS** - GPU-accelerated data science and machine learning
 
 ### 04-Deep-Learning
 Neural network and deep learning frameworks.
 
 - **TensorFlow** - End-to-end machine learning platform
 - **PyTorch** - Dynamic deep learning framework
+- **OpenCV** - Computer vision library for image and video processing
+- **YOLO** - Real-time object detection and computer vision
 
 ### 05-ML-Operations
 Tools for managing ML lifecycle, experiment tracking, and model deployment.
@@ -46,6 +49,9 @@ Large Language Models, AI APIs, and LLM application frameworks.
 - **Anthropic-Claude** - Anthropic's Claude AI assistant
 - **HuggingFace** - Transformers and pre-trained models hub
 - **LangChain** - Framework for developing LLM-powered applications
+- **NLTK** - Natural Language Toolkit for NLP tasks
+- **spaCy** - Industrial-strength natural language processing
+- **Stable Diffusion** - Text-to-image generation and AI art
 
 ### 07-Streaming-Platforms
 Real-time data streaming and event-driven architectures.
