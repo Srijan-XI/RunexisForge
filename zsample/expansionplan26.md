@@ -35,7 +35,7 @@ Message Queues & Streaming
 
 
 ## Monitoring & Observability [MO]
-### Phase 01 MO
+### Phase 01 MO ~~~
 New Relic - APM platform
 Datadog - Monitoring platform
 Splunk - Log aggregation
@@ -52,12 +52,6 @@ Datadog - Full observability stack
 ---
 
 ## API & Web Services [API]
-### Phase 01 API
-REST API - Core REST patterns
-gRPC - Binary RPC (exists, needs expansion)
-GraphQL - Query language (exists, needs expansion)
-OpenAPI/Swagger - API documentation
-JSON:API - JSON specification
 
 ### Phase 03 API
 Refresh tokens - Token management
