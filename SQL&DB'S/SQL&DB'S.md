@@ -126,6 +126,16 @@ This guide covers multiple database systems, each with unique strengths:
 - Strong consistency guarantees
 - Used by Kubernetes and other systems
 
+### **Service Discovery & Coordination**
+
+#### **Consul** 🔗
+
+- Service networking and service mesh solution
+- Service discovery with health checking
+- Distributed key-value store
+- Multi-datacenter support with WAN federation
+- Connect service mesh for secure communication
+
 ### **Caching Systems**
 
 #### **Memcached** ⚡
@@ -311,6 +321,46 @@ Process of organizing data to reduce redundancy
 - OLAP workloads on event data
 - User-facing analytics applications
 
+### **Use Trino When:**
+
+- Need to query multiple data sources
+- Federated queries across databases
+- Interactive analytics on data lakes
+- No data movement/ETL required
+- Want standard SQL across different systems
+
+### **Use MinIO When:**
+
+- Need S3-compatible object storage
+- Want to avoid vendor lock-in
+- Building AI/ML workloads with large datasets
+- Self-hosted object storage preferred
+- Multi-cloud deployment required
+
+### **Use etcd When:**
+
+- Building distributed systems
+- Need configuration management
+- Service discovery and coordination
+- Strong consistency is critical
+- Running Kubernetes (etcd is its backbone)
+
+### **Use Consul When:**
+
+- Need service discovery with health checks
+- Building service mesh architecture
+- Multi-datacenter deployments
+- Want integrated key-value store
+- Require DNS-based service discovery
+
+### **Use Memcached When:**
+
+- Simple caching layer needed
+- Session storage for web apps
+- Multi-threaded performance important
+- Ephemeral data (no persistence needed)
+- Want simple, battle-tested solution
+
 ---
 
 ## 🚀 Getting Started
@@ -379,6 +429,21 @@ Ultra-fast caching + Real-time data?
 
 AWS-based + Serverless + Auto-scaling?
     └─> DynamoDB
+
+Federated queries across multiple data sources?
+    └─> Trino
+
+S3-compatible object storage?
+    └─> MinIO
+
+Distributed configuration + Strong consistency?
+    └─> etcd
+
+Service discovery + Service mesh?
+    └─> Consul
+
+Simple distributed caching?
+    └─> Memcached
 ```bash
 
 ---
