@@ -35,12 +35,6 @@ Message Queues & Streaming
 
 
 ## Monitoring & Observability [MO]
-### Phase 01 MO ~~~
-New Relic - APM platform
-Datadog - Monitoring platform
-Splunk - Log aggregation
-Dynatrace - APM
-Jaeger - Distributed tracing
 
 ### Phase 03 MO
 Grafana Loki - Log aggregation
