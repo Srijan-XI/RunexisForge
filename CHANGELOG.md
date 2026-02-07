@@ -5,10 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+<<<<<<< HEAD
+=======
+## [2.6.0] - 2026-02-07
+
+### Added
+
+- **Backend-Web - Phase 03 API**: Comprehensive API gateway and management expansion
+  - **API Gateway** (NEW): Complete API gateway overview (~750 lines) covering architecture patterns (centralized gateway, BFF, sidecar proxy, service mesh integration), core capabilities (routing, authentication, rate limiting, transformation), gateway comparison (Kong, Traefik, NGINX, AWS API Gateway, Apigee, Azure API Management), security features (OAuth 2.0/OIDC, JWT validation, mTLS, WAF integration), traffic management (load balancing, circuit breaking, retry policies), observability (distributed tracing, metrics, logging), deployment patterns (Docker, Kubernetes Ingress, cloud-native), multi-region strategies, migration approaches, and production best practices
+  - **Kong API Gateway** (NEW): Enterprise API gateway documentation (~850 lines) covering Kong architecture (control plane, data plane, Admin API), installation methods (Docker, Kubernetes Helm, DB-less declarative), declarative YAML configuration, service and route management, plugin ecosystem (authentication with JWT/OAuth/API keys, rate limiting with sliding window algorithms, CORS/request transformation, logging to HTTP/TCP/file), security best practices (RBAC, secrets management, network policies), Kubernetes Ingress Controller with custom resources, monitoring with Prometheus integration, enterprise vs OSS features, Kong Mesh service mesh, troubleshooting, and real-world use cases (microservices gateway, legacy system modernization, multi-cloud routing)
+  - **Traefik** (NEW): Modern reverse proxy and load balancer guide (~800 lines) featuring automatic service discovery (Docker, Kubernetes, Consul, file providers), dynamic configuration with no restarts, middleware system (authentication, rate limiting, circuit breaker, retry, compression), static and dynamic configuration separation, Let's Encrypt automatic TLS with DNS-01/HTTP-01 challenges, Kubernetes IngressRoute CRDs, TCP/UDP support, metrics and tracing (Prometheus, Jaeger, Zipkin), access logs, deployment patterns (Docker Compose, Kubernetes DaemonSet/Deployment), dashboard UI, comparison with NGINX/HAProxy/Envoy, migration strategies, troubleshooting (certificate issues, routing problems), and production use cases (microservices ingress, Docker Swarm routing, multi-domain hosting)
+  - **Refresh Tokens** (NEW): Token management lifecycle documentation (~950 lines) covering OAuth 2.0 refresh token flows, token vs session authentication, access/refresh token lifecycle, security considerations (rotation, detection of reuse, family tracking), storage strategies (Redis with TTL, PostgreSQL with indexes, mobile secure storage with iOS Keychain/Android EncryptedSharedPreferences), implementation examples across Node.js/Express, Python/FastAPI, ASP.NET Core, React SPA with automatic refresh, iOS Swift with token interceptors, Android Kotlin with OkHttp, automatic refresh patterns, token revocation strategies (blacklisting, versioning, token families), best practices (token expiry management, HTTPS enforcement, PKCE for SPAs), real-world use cases (mobile apps, SPAs, microservices), and comprehensive troubleshooting
+  - **API Rate Limiting** (NEW): Rate limiting algorithms and best practices (~1000 lines) featuring algorithm implementations (fixed window counter, sliding window log, sliding window counter, token bucket, leaky bucket) with pros/cons analysis, storage backends (in-memory with Map/LRU cache, Redis with Lua scripts for atomicity, PostgreSQL with window functions), implementation examples across Express.js middleware, FastAPI decorators with Depends, ASP.NET Core middleware, distributed rate limiting patterns, rate limit headers (X-RateLimit-*, Retry-After), response strategies (429 status codes, exponential backoff), advanced patterns (user-tier limits, endpoint-specific limits, burst allowances, dynamic limits), DDoS protection integration, testing strategies, monitoring and alerting, and real-world scenarios (public APIs, authentication endpoints, GraphQL query complexity, webhook delivery)
+  - **API Versioning** (NEW): API versioning strategies guide (~850 lines) covering versioning approaches (URI path versioning `/v1/users`, subdomain versioning `v1.api.example.com`, header versioning `API-Version: 1`, query parameter `?version=1`, content negotiation with Accept headers), semantic versioning for APIs, breaking vs non-breaking changes with examples, version lifecycle management (deprecation policies, sunset headers, migration periods), implementation examples across Express.js routers, FastAPI with subdomain/header routing, ASP.NET Core API versioning package with conventions, GraphQL schema evolution with field deprecation, gRPC versioning with package namespacing, versioning best practices (minimize breaking changes, clear documentation, migration guides, backwards compatibility strategies), client SDK versioning, API documentation per version, real-world patterns (GitHub API evolution, Stripe versioning model, AWS service versions), and troubleshooting common issues
+
+### Changed
+
+- Enhanced Backend-Web folder with comprehensive API gateway and management documentation
+- Created new 08-API-Gateway subfolder for gateway-specific tools
+- Expanded 05-Authentication with token management best practices
+- Expanded 07-Patterns-and-Utilities with rate limiting and versioning strategies
+- Improved documentation consistency across API topics with architecture patterns, implementation examples, and production best practices
+
+### Statistics
+
+- **6 new API guides** added (API Gateway, Kong, Traefik, Refresh Tokens, Rate Limiting, Versioning)
+- **~5,200+ lines** of API documentation created
+- **Complete Phase 03 API** expansion
+- Comprehensive coverage: gateway architecture, service discovery, authentication patterns, traffic management, rate limiting algorithms, versioning strategies, and security best practices
+- Multi-language examples: Node.js, Python, C#, React, Swift, Kotlin
+
+>>>>>>> 867b00f2ea19799bb7c9fbfbb213a63eb81aaa9e
 ## [2.5.0] - 2026-02-07
 
 ### Added
 
+<<<<<<< HEAD
 - **Backend-as-a-Service Platforms - Phase 03 AMCET 3.1**: Comprehensive expansion of automation and BaaS platforms
   - **n8n - Workflow Automation** (Cloud-DevOps/09-Automation-Workflows/n8n/n8n.md): Significantly expanded with real-world use cases (customer onboarding, social media management, data backup, lead scoring, e-commerce order processing), advanced workflow patterns (fan-out/fan-in, retry with exponential backoff, rate limiting, conditional routing), production best practices (workflow organization, performance optimization, monitoring/alerting, security hardening, backup strategy), extensive integration showcase (databases, communication platforms, marketing/CRM, AI/ML services), custom node development guide, troubleshooting common issues, detailed competitor comparisons (n8n vs Zapier/Airflow/Power Automate), advanced queue mode configuration for production scaling, environment variables reference, performance benchmarks, and community resources (~900 lines expanded)
   - **Zapier - Integration Platform** (Cloud-DevOps/09-Automation-Workflows/zapier/zapier.md): Complete new documentation covering introduction to 5,000+ app integration platform, core concepts (Zaps, triggers, actions, filters, paths, multi-step), getting started guide with first Zap creation, 6 real-world use cases (lead management, social media cross-posting, e-commerce order processing, customer support automation, event registration, content curation), advanced features (Formatter, Code by Zapier with JS/Python, Webhooks, Storage, Digest, Sub-Zaps), built-in apps across 10+ categories, pricing plans 2026 (Free to Company tier), best practices for workflow design and performance optimization, troubleshooting common issues, detailed comparisons with competitors (n8n, Make, Power Automate, IFTTT), migration guides, enterprise features (SSO, admin controls, premier support), API/developer resources with CLI and REST hooks, FAQs, and success stories (~1,100 lines)
@@ -22,6 +54,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Complete Phase 03 AMCET 3.1**: Workflow automation and Backend-as-a-Service platforms
 - Coverage: no-code automation (Zapier), developer automation (n8n), open-source BaaS (Supabase), Google BaaS (Firebase)
 - Real-world use cases, production deployments, security best practices, and migration guides included
+=======
+- **Monitoring & Observability - Phase 03 MO**: Comprehensive time-series database and observability platform expansion
+  - **InfluxDB** (NEW): Complete time-series database documentation (~1000 lines) covering data model and architecture, installation methods (Docker, Linux, Kubernetes), writing and querying data with Flux and InfluxQL, retention policies and downsampling strategies, Grafana integration, real-world use cases (infrastructure monitoring, IoT sensor data, APM, financial markets, DevOps CI/CD metrics), performance optimization, production deployment patterns (HA, Kubernetes StatefulSets), backup and recovery, security best practices, and comprehensive troubleshooting guide for high-cardinality and query performance issues
+  - **Grafana** (EXPANDED): Massively enhanced visualization platform guide (~1000 lines, from ~80 lines) with universal data source support (150+ connectors), installation across Docker/Kubernetes/Linux/Helm, comprehensive data source configuration (Prometheus, Loki, InfluxDB, Tempo, Elasticsearch with provisioning YAML examples), dashboard building with template variables and transformations, advanced unified alerting system (Grafana 8+) with contact points and notification policies, annotations for event correlation, real-world use cases (Kubernetes monitoring, APM dashboards, infrastructure metrics, PostgreSQL database monitoring, business KPIs), dashboard best practices and performance optimization, provisioning for GitOps, plugin ecosystem, Grafana Cloud features, security configuration (OAuth, LDAP, RBAC, HTTPS), and comprehensive troubleshooting
+  - **Prometheus** (EXPANDED): Extensively enhanced monitoring documentation (~1200 lines, from ~133 lines) covering pull-based architecture and data model, multi-dimensional metrics with labels, installation methods (Docker, Linux with systemd, Kubernetes Helm with kube-prometheus-stack), comprehensive configuration examples, application instrumentation across Python/Flask, Go, Java/Spring Boot, and Node.js/Express, complete PromQL query language guide (basic queries, aggregations, rate/increase functions, histogram quantiles, useful functions), alerting with Alertmanager configuration and multi-channel routing, recording rules for query optimization, exporters ecosystem (Node Exporter, Blackbox, database exporters), real-world use cases (Kubernetes cluster monitoring, SLO tracking, database performance), production patterns (federation, Thanos for long-term storage, remote write configurations), resource optimization strategies, and troubleshooting guide for high memory usage and slow queries
+  - **Loki** (EXPANDED): Significantly enhanced log aggregation documentation (~1000 lines, from ~104 lines) featuring label-based indexing architecture (10x cost reduction vs Elasticsearch), installation with Docker Compose/Kubernetes/S3 backend, Promtail configuration for system logs/Docker containers/Kubernetes pods, comprehensive LogQL query language (basic queries, pipeline expressions with JSON/regex/pattern parsing, aggregations, advanced queries with quantiles), real-world use cases (application error tracking, nginx access log analysis, Kubernetes pod logs with service discovery, AWS Lambda via CloudWatch, security and audit logs), alerting with Loki Ruler and recording rules, Grafana integration with log-to-trace correlation via derived fields, performance optimization (label cardinality management, query optimization, retention policies with per-tenant overrides), and troubleshooting guide for ingestion issues and slow queries
+  - **Datadog** (VERIFIED): Confirmed comprehensive APM platform documentation (1304 lines) already covering full observability stack, installation, APM instrumentation, infrastructure monitoring, log management, Kubernetes integration, and production best practices
+
+### Changed
+
+- Enhanced Cloud-DevOps/07-Monitoring-Observability with production-grade documentation
+- Updated all monitoring tools to include architecture diagrams, comparison tables, installation guides, real-world use cases, and troubleshooting sections
+- Improved documentation consistency across observability stack with emphasis on Grafana integration, PromQL/LogQL query languages, and cloud-native deployments
+
+### Statistics
+
+- **1 new time-series database guide** added (InfluxDB)
+- **4 monitoring and observability guides** significantly expanded (Grafana, Prometheus, Loki, Datadog verified)
+- **~5,000+ lines** of observability documentation added
+- **Complete Phase 03 MO** Monitoring & Observability expansion
+- Comprehensive coverage: metrics collection, log aggregation, time-series storage, visualization, alerting, distributed tracing integration, Kubernetes monitoring, and production deployment patterns
+>>>>>>> 867b00f2ea19799bb7c9fbfbb213a63eb81aaa9e
 
 ## [2.4.0] - 2026-02-07
 
