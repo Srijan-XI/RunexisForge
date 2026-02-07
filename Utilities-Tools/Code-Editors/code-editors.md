@@ -5,17 +5,43 @@
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
     - [The Modern Editor Landscape](#the-modern-editor-landscape)
+    - [Editor vs IDE](#editor-vs-ide)
   - [Visual Studio Code](#visual-studio-code)
     - [Architecture (Electron)](#architecture-electron)
     - [Killer Features for Students/Pros](#killer-features-for-studentspros)
-    - [Essential Extension Packs (IIT Level)](#essential-extension-packs-iit-level)
+    - [Essential Extension Packs](#essential-extension-packs)
     - [Settings \& Customization](#settings--customization)
     - [Shortcuts Cheat Sheet](#shortcuts-cheat-sheet)
-    - [Debugging (Node/Python)](#debugging-nodepython)
+    - [Debugging](#debugging)
+    - [Remote Development](#remote-development)
+    - [Multi-Root Workspaces](#multi-root-workspaces)
+    - [Git Integration](#git-integration)
+    - [Extensions Development](#extensions-development)
+  - [Sublime Text](#sublime-text)
+    - [Why Sublime Text?](#why-sublime-text)
+    - [Installation and Setup](#installation-and-setup)
+    - [Key Features](#key-features)
+    - [Package Control](#package-control)
+    - [Customization](#customization)
   - [Vim / Neovim](#vim--neovim)
     - [Why use it?](#why-use-it)
+    - [Installation](#installation)
+    - [Basic Operations](#basic-operations)
     - [Vim in VS Code](#vim-in-vs-code)
+    - [Neovim \& Modern Plugins](#neovim--modern-plugins)
+  - [Atom](#atom)
+  - [Notepad++](#notepad)
+  - [Other Notable Editors](#other-notable-editors)
+    - [Kate (KDE)](#kate-kde)
+    - [gedit (GNOME)](#gedit-gnome)
+    - [Brackets](#brackets)
+  - [Advanced Techniques](#advanced-techniques)
+    - [Multi-Cursor Editing](#multi-cursor-editing)
+    - [Regular Expressions](#regular-expressions)
+    - [Snippets and Templates](#snippets-and-templates)
+    - [Task Runners](#task-runners)
   - [Comparison: VS Code vs. The Rest](#comparison-vs-code-vs-the-rest)
+  - [Choosing the Right Editor](#choosing-the-right-editor)
   - [Resources](#resources)
 
 ---
@@ -29,6 +55,23 @@ A **Code Editor** is a lightweight tool focused on the act of writing code. Unli
 -   **Vim/Neovim**: Terminal-based. 100% keyboard. High learning curve.
 -   **Sublime Text**: Instant startup, proprietary, paid (winrar style).
 -   **Notepad++**: Windows classic. Good for large logs.
+-   **Atom**: GitHub's editor (now sunset, but still used).
+-   **Kate**: KDE's powerful editor for Linux.
+-   **gedit**: GNOME's simple text editor.
+
+### Editor vs IDE
+
+**Code Editor**:
+- Lightweight, fast startup
+- Extensible through plugins
+- Language-agnostic
+- Examples: VS Code, Sublime, Vim
+
+**IDE** (Integrated Development Environment):
+- Heavy, feature-rich
+- Language-specific optimizations
+- Built-in compiler, debugger, build tools
+- Examples: IntelliJ IDEA, Visual Studio, PyCharm
 
 ---
 
