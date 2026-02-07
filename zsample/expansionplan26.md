@@ -16,18 +16,6 @@ Datadog - Full observability stack
 
 ---
 
-## API & Web Services [API]
-
-### Phase 03 API
-Refresh tokens - Token management
-API Gateway - API management
-Kong - API gateway
-Traefik - Reverse proxy/API gateway
-API rate limiting - Best practices
-API versioning - Strategies
-
----
-
 
 ## Adding More Content in existing topics [AMCET]
 IN AMCET WE ADD MORE CONTENT IN THE EXISTING TOPICS TO MAKE THEM MORE COMPREHENSIVE AND DETAILED.
@@ -40,17 +28,18 @@ IN WHICH WE ADD NEW SUBTOPICS, TOOLS, FRAMEWORKS, LIBRARIES, BEST PRACTICES, TUT
 
 
 ### Phase 03 AMCET
+#### phase 3.1 amcet
 - n8n - Workflow Automation (expand existing)
 - zapier - Integration Platform (expand existing)
 - supabase - Open Source Firebase Alternative (file create and expand)
 - firebase - BaaS Platform (expand existing)
+#### Phase 02 AMCET
 - Streamlit - Data Apps and Implementation (expand existing)
 - Electron - Desktop Apps with Web Tech (expand existing)
 - React Native - Mobile Apps with React (expand existing)
 - React - Frontend Library (expand existing)
 
 ### Phase 04 AMCET - LINUX FOLDER EXPANSION
-- 4.1 : DEBIAN BASED DISTROS (expand existing) : Debin.md file ,kali, ubuntu,parrotsec,popos, tails linux mint.
 - 4.2 : REDHAT BASED DISTROS (expand existing) : RedHat.md file,fedora, centos.
   
 ### Phase 05 AMCET - WEB3 AND BLOCKCHAIN EXPANSION
