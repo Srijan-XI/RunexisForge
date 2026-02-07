@@ -70,13 +70,8 @@ IN WHICH WE ADD NEW SUBTOPICS, TOOLS, FRAMEWORKS, LIBRARIES, BEST PRACTICES, TUT
 - Reat - Frontend Library (expand existing)
 
 ### Phase 04 AMCET - LINUX FOLDER EXPANSION
-- 4.1 : DEBIAN BASED DISTROS (expand existing)
-- 4.2 : REDHAT BASED DISTROS (expand existing)
-- 4.3 : QUBEOS BASED DISTROS (expand existing)
-- 4.4 : SLACKWARE BASED DISTROS (expand existing)
-- 4.5 : GENTOO BASED DISTROS (expand existing)
-- 4.6 : ALPINE BASED DISTROS (expand existing)
-- 4.7 : SPECIALITY DISTROS (expand existing)
+- 4.1 : DEBIAN BASED DISTROS (expand existing) : Debin.md file ,kali, ubuntu,parrotsec,popos, tails linux mint.
+- 4.2 : REDHAT BASED DISTROS (expand existing) : RedHat.md file,fedora, centos.
   
 ### Phase 05 AMCET - WEB3 AND BLOCKCHAIN EXPANSION
 - bitcoin - Bitcoin Core Implementation (expand existing)
