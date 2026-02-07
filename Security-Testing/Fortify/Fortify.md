@@ -36,6 +36,58 @@ Fortify provides multiple security testing solutions:
 - Automated policy enforcement
 - Comprehensive reporting and analytics
 
+## Why Fortify?
+
+- **Enterprise Standard**: Industry-leading AppSec platform trusted globally
+- **Complete Security Coverage**: SAST, DAST, SCA, RASP in one platform
+- **Accuracy and Depth**: Advanced analysis with low false positives
+- **Scalability**: Handles enterprise-scale applications and portfolios
+- **Compliance Support**: Built-in compliance reporting for major standards
+- **Centralized Management**: Single pane of glass for all security data
+- **Developer Enablement**: IDE integration, training, remediation guidance
+- **Flexibility**: Cloud (FoD), on-premises, or hybrid deployment
+- **Mature Platform**: 20+ years of security testing innovation
+- **Risk Prioritization**: Intelligent risk scoring and remediation prioritization
+
+## Fortify vs Competitors
+
+| Feature | Fortify | Checkmarx | Veracode | SonarQube | Synopsys |
+|---------|---------|-----------|----------|-----------|----------|
+| SAST | ✅ Excellent | ✅ Excellent | ✅ Excellent | ✅ Excellent | ✅ Excellent |
+| DAST | ✅ WebInspect | ✅ Built-in | ✅ Built-in | ❌ No | ✅ Built-in |
+| SCA | ✅ Built-in | ✅ Built-in | ✅ Built-in | ➕ Add-on | ✅ Excellent |
+| RASP | ✅ Yes | ❌ No | ❌ No | ❌ No | ❌ No |
+| Languages | ✅ 30+ | ✅ 25+ | ✅ 100+ | ✅ 30+ | ✅ 40+ |
+| Cloud Platform | ✅ FoD | ❌ Limited | ✅ Yes | ❌ No | ❌ Limited |
+| On-Premises | ✅ Yes | ✅ Yes | ❌ No | ✅ Yes | ✅ Yes |
+| False Positives | ✅ Low | ✅ Low | ✅ Medium | ✅ Medium | ✅ Low |
+| Audit Manager | ✅ Built-in | ✅ Yes | ✅ Yes | ❌ Limited | ✅ Yes |
+| Pricing | 💰 Very High | 💰 High | 💰 High | Free/Paid | 💰 Very High |
+| Support | ✅ Enterprise | ✅ Enterprise | ✅ Enterprise | Community/Paid | ✅ Enterprise |
+
+## When to Use Fortify
+
+✅ **Use Fortify when:**
+- Enterprise security program requires comprehensive platform
+- Need both SAST and DAST in unified solution
+- Regulatory compliance demands rigorous security testing
+- Managing application security at portfolio scale
+- Want centralized security management (SSC)
+- Need flexible deployment (cloud FoD or on-premises)
+- Require RASP for runtime protection
+- Want mature platform with proven track record
+- Need detailed audit trails and compliance reporting
+- Budget supports enterprise-grade tooling
+
+❌ **Consider alternatives when:**
+- Budget is limited (SonarQube Community free)
+- Small team or startup (Snyk, SonarQube better)
+- Need only code quality focus (SonarQube better)
+- Want cloud-native SaaS only (Veracode)
+- Primary need is developer experience (Snyk better)
+- Open-source solution required
+- Simple security scanning sufficient
+
 ## Key Features
 
 ### Static Application Security Testing (SAST)

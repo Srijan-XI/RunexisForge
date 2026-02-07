@@ -39,6 +39,56 @@ SonarQube analyzes source code to detect:
    - High availability
    - Horizontal scalability
 
+## Why SonarQube?
+
+- **Open Source Foundation**: Free Community Edition with powerful features
+- **Continuous Code Quality**: Automated code review on every commit
+- **Developer-Friendly**: IDE integration provides immediate feedback
+- **Security First**: Built-in OWASP, CWE, and SANS vulnerability detection
+- **Technical Debt Management**: Quantifies and tracks code maintainability
+- **Multi-Language Support**: One platform for all your tech stack (30+ languages)
+- **Quality Gates**: Enforce coding standards automatically in CI/CD
+- **Proven at Scale**: Used by 300,000+ organizations worldwide
+- **Clean Code Focus**: Helps teams write maintainable, reliable code
+- **Compliance Ready**: Supports regulatory requirements (PCI-DSS, CERT)
+
+## SonarQube vs Competitors
+
+| Feature | SonarQube | Checkmarx | Fortify | CodeClimate | Veracode |
+|---------|-----------|-----------|---------|-------------|----------|
+| Open Source | ✅ Community | ❌ Commercial | ❌ Commercial | ❌ Commercial | ❌ Commercial |
+| SAST | ✅ Excellent | ✅ Excellent | ✅ Excellent | ✅ Good | ✅ Excellent |
+| Languages | ✅ 30+ | ✅ 25+ | ✅ 30+ | ✅ 20+ | ✅ 100+ |
+| Code Quality | ✅ Excellent | ✅ Good | ✅ Good | ✅ Excellent | ✅ Good |
+| Technical Debt | ✅ Built-in | ❌ Limited | ❌ Limited | ✅ Good | ❌ Limited |
+| IDE Integration | ✅ Excellent | ✅ Good | ✅ Good | ✅ Good | ✅ Good |
+| Self-Hosted | ✅ Yes | ✅ Yes | ✅ Yes | ❌ Cloud-only | ❌ Cloud-only |
+| Pricing | Free/Paid | 💰 High | 💰 Very High | 💰 Medium | 💰 Very High |
+| Learning Curve | Low-Medium | Medium-High | Medium-High | Low | Medium |
+
+## When to Use SonarQube
+
+✅ **Use SonarQube when:**
+- Need continuous code quality monitoring
+- Want both quality and security analysis in one tool
+- Building microservices with multiple languages
+- Need developer-friendly IDE integration
+- Want to track and reduce technical debt
+- Require on-premises deployment option
+- Need free open-source solution with room to grow
+- Want detailed code coverage analysis
+- Building quality gates into CI/CD pipeline
+- Need compliance with coding standards
+
+❌ **Consider alternatives when:**
+- Need only security scanning (Checkmarx, Fortify more specialized)
+- Want cloud-only SaaS (CodeClimate, Veracode)
+- Need binary/compiled code analysis only
+- Require dynamic application security testing (DAST)
+- Budget for premium enterprise features is limited
+- Need mobile app-specific analysis
+- Want AI-powered automated remediation
+
 ## Key Features
 
 ### Code Quality Analysis

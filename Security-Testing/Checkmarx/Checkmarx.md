@@ -29,6 +29,57 @@ Checkmarx offers a suite of application security testing products:
 - GDPR compliance
 - Custom security standards
 
+## Why Checkmarx?
+
+- **Enterprise-Grade Security**: Trusted by Fortune 500 companies
+- **Comprehensive Coverage**: SAST, SCA, DAST, IAST in one platform
+- **Deep Code Analysis**: Advanced data flow and taint analysis
+- **Developer Integration**: IDE plugins, Git integration, CI/CD automation
+- **Accurate Results**: Low false-positive rates with intelligent detection
+- **Compliance Automation**: Built-in compliance reporting (PCI-DSS, GDPR, HIPAA)
+- **Scalability**: Handles massive codebases (millions of lines)
+- **Expert Remediation**: Detailed fix guidance with code examples
+- **AppSec Training**: Integrated Codebashing secure coding training
+- **Proven Track Record**: 1,500+ enterprise customers, 20+ years experience
+
+## Checkmarx vs Competitors
+
+| Feature | Checkmarx | SonarQube | Fortify | Veracode | Snyk |
+|---------|-----------|-----------|---------|----------|------|
+| SAST | ✅ Excellent | ✅ Excellent | ✅ Excellent | ✅ Excellent | ✅ Good |
+| SCA | ✅ Built-in | ➕ Add-on | ✅ Built-in | ✅ Built-in | ✅ Excellent |
+| DAST | ✅ Built-in | ❌ No | ✅ Built-in | ✅ Built-in | ❌ No |
+| IAST | ✅ Yes | ❌ No | ❌ No | ✅ Yes | ❌ No |
+| Languages | ✅ 25+ | ✅ 30+ | ✅ 30+ | ✅ 100+ | ✅ 20+ |
+| False Positives | ✅ Low | ✅ Medium | ✅ Low | ✅ Low | ✅ Low |
+| Remediation | ✅ Excellent | ✅ Good | ✅ Excellent | ✅ Good | ✅ Excellent |
+| Open Source | ❌ No | ✅ Community | ❌ No | ❌ No | ✅ Free tier |
+| Pricing | 💰 High | Free/Paid | 💰 Very High | 💰 High | 💰 Medium |
+| Deployment | ✅ On-prem/Cloud | ✅ Self-hosted | ✅ On-prem/Cloud | ☁️ Cloud-only | ☁️ Cloud-only |
+
+## When to Use Checkmarx
+
+✅ **Use Checkmarx when:**
+- Enterprise security requirements demand comprehensive AppSec
+- Need unified platform for SAST, SCA, DAST, IAST
+- Regulatory compliance is critical (PCI-DSS, HIPAA, GDPR)
+- Want low false-positive rates and accurate vulnerability detection
+- Need deep code analysis with data flow tracking
+- Building security champions program with Codebashing training
+- Large organization with diverse technology stack
+- Require on-premises deployment for data sovereignty
+- Want detailed remediation guidance for developers
+- Need executive-level security reporting and analytics
+
+❌ **Consider alternatives when:**
+- Budget is limited (use SonarQube Community)
+- Need only code quality metrics (SonarQube better)
+- Small team or startup (Snyk more cost-effective)
+- Open-source solution required
+- Primary focus is container security (Snyk better)
+- Want developer-focused tool over enterprise platform
+- Need lightweight, fast scans only
+
 ## Key Features
 
 ### Source Code Analysis

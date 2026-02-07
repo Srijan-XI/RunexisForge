@@ -37,6 +37,57 @@ Coveralls processes coverage reports from various testing tools and provides:
 - Priority support
 - Self-hosted options
 
+## Why Coveralls?
+
+- **Simple and Focused**: Dedicated coverage tracking without complexity
+- **Cost-Effective**: Affordable pricing for teams of all sizes
+- **Fast Setup**: Get started in minutes with minimal configuration
+- **Clean Interface**: Straightforward, no-nonsense dashboard
+- **Reliable**: Proven stability with years of service
+- **Open Source Friendly**: Free for public repositories
+- **Lightweight**: No heavy tooling or infrastructure required
+- **Team-Oriented**: Built for collaborative development
+- **Wide Support**: 20+ languages and all major CI platforms
+- **Flexible Deployment**: Cloud or self-hosted options
+
+## Coveralls vs Competitors
+
+| Feature | Coveralls | Codecov | SonarQube | Code Climate | Codacy |
+|---------|-----------|---------|-----------|--------------|--------|
+| Coverage Tracking | ✅ Excellent | ✅ Excellent | ✅ Good | ✅ Good | ✅ Good |
+| PR Integration | ✅ Excellent | ✅ Excellent | ✅ Excellent | ✅ Good | ✅ Good |
+| Visualization | ✅ Good | ✅ Excellent | ✅ Good | ✅ Good | ✅ Good |
+| Languages | ✅ 20+ | ✅ 20+ | ✅ 30+ | ✅ 15+ | ✅ 30+ |
+| Simplicity | ✅ Excellent | ✅ Good | ✅ Medium | ✅ Medium | ✅ Medium |
+| Free Tier | ✅ OSS | ✅ Unlimited OSS | ✅ Community | ✅ Limited | ✅ Limited |
+| Code Quality | ❌ No | ❌ No | ✅ Excellent | ✅ Excellent | ✅ Good |
+| Self-Hosted | ✅ Enterprise | ✅ Enterprise | ✅ Yes | ❌ No | ✅ Enterprise |
+| Pricing | 💰 $5/mo | 💰 $10/user/mo | Free/Paid | 💰 $50/mo | 💰 $15/mo |
+| Setup Time | ✅ 5 minutes | ✅ 5 minutes | ⏱️ 30+ min | ⏱️ 15 min | ⏱️ 15 min |
+
+## When to Use Coveralls
+
+✅ **Use Coveralls when:**
+- Want simple, dedicated coverage tracking
+- Need cost-effective solution for small teams
+- Value simplicity over advanced features
+- Working on open-source projects (free)
+- Want fast setup without configuration complexity
+- Need reliable, proven coverage service
+- Don't need additional code quality features
+- Want lightweight tool that "just works"
+- Prefer pay-per-repo vs per-user pricing
+- Need basic PR integration and badges
+
+❌ **Consider alternatives when:**
+- Need advanced visualizations (Codecov better)
+- Want code quality analysis too (SonarQube, Code Climate)
+- Need more detailed analytics (Codecov)
+- Want enterprise features and support
+- Require advanced team management
+- Need security vulnerability scanning
+- Want all-in-one platform (SonarQube, Code Climate)
+
 ## Key Features
 
 ### Coverage Tracking

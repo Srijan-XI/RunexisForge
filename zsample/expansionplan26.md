@@ -14,15 +14,6 @@ etcd - Distributed configuration
 Consul - Service mesh & discovery
 Memcached - In-memory caching (separate from Redis)
 
-## Testing & Quality Assurance [TQA]
-
-### Phase 03 TQA
-SonarQube - Code quality (exists but needs expansion)
-Checkmarx - SAST tool
-OWASP ZAP - Security testing
-Fortify - Security scanning
-Code coverage tools - Codecov and Coveralls
-
 ## AI/ML & Data Science [AIDMS]
 
 ### Phase 03 AIDMS
