@@ -39,15 +39,15 @@ IN WHICH WE ADD NEW SUBTOPICS, TOOLS, FRAMEWORKS, LIBRARIES, BEST PRACTICES, TUT
 - React Native - Mobile Apps with React (expand existing)
 - React - Frontend Library (expand existing)
 
-### Phase 04 AMCET - LINUX FOLDER EXPANSION
-- 4.2 : REDHAT BASED DISTROS (expand existing) : RedHat.md file,fedora, centos.
   
 ### Phase 05 AMCET - WEB3 AND BLOCKCHAIN EXPANSION
+phase 5.1 AMCET
 - bitcoin - Bitcoin Core Implementation (expand existing)
 - Ethereum Clients - Geth, OpenEthereum (expand existing)
 - Solidity - Smart Contract Language (expand existing)
 - Defi Protocols - Uniswap, Aave (expand existing)
 - NFT Standards - ERC-721, ERC-1155 (expand existing)
+phase 5.2 AMCET
 - Solana Development - Anchor Framework (expand existing)
 - Web3 Libraries - web3.js, ethers.js (expand existing)
 - IPFS & Filecoin - Decentralized Storage (expand existing)
