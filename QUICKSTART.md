@@ -41,23 +41,31 @@ Want to contribute to the project?
 ### Windows
 
 ```powershell
-# Python
-winget install Python.Python.3.11
+# Python (Latest LTS)
+winget install Python.Python.3.12
 
-# Java
-winget install Oracle.JDK.17
+# Java (Latest LTS)
+winget install Oracle.JDK.21
+
+# Node.js (Latest LTS)
+winget install OpenJS.NodeJS.LTS
 
 # Rust
-winget install Rustlang.Rust.MSVC
+winget install Rustlang.Rustup
+
+# Go
+winget install GoLang.Go
 ```
 
 ### macOS
 
 ```bash
 # Using Homebrew
-brew install python
-brew install openjdk@17
-brew install rust
+brew install python@3.12
+brew install openjdk@21
+brew install node@20
+brew install rustup-init
+brew install go
 ```
 
 ### Linux (Ubuntu/Debian)
@@ -65,13 +73,20 @@ brew install rust
 ```bash
 # Python
 sudo apt update
-sudo apt install python3 python3-pip
+sudo apt install python3.12 python3-pip python3-venv
 
-# Java
-sudo apt install openjdk-17-jdk
+# Java (Latest LTS)
+sudo apt install openjdk-21-jdk
+
+# Node.js (via NodeSource)
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Go
+sudo apt install golang-go
 ```
 
 *For detailed instructions, see language-specific installation guides.*
@@ -79,204 +94,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ---
 
 ## 📁 Repository Structure (Quick Reference)
-
-```bash
-RunexisForge/
-│
-├── Programming-Languages/
-│   ├── README.md        # 📚 Main navigation & categorization
-│   ├── CATEGORIZATION.md # 📊 Detailed language comparison
-│   ├── General-purpose/
-│   │   ├── Kotlin/      # Kotlin guides & questions
-│   │   ├── Scala/       # Scala guides
-│   │   ├── Swift/       # Swift guides & questions
-│   │   └── Dart with Flutter/ # Dart/Flutter guides
-│   ├── Scripting/
-│   │   ├── PYTHON/      # Python guides & questions
-│   │   ├── PHP/         # PHP guides & questions
-│   │   ├── Ruby/        # Ruby guides
-│   │   └── Bash/        # Bash shell scripting
-│   ├── WebDevelopment/
-│   │   ├── JavaScript/  # JavaScript + Node.js, Express.js, Next.js
-│   │   └── TypeScript/  # TypeScript guides
-│   ├── SystemsProgramming/
-│   │   ├── Assembly/    # Assembly guides
-│   │   ├── C & C++/     # C/C++ guides & questions
-│   │   └── RUST/        # Rust guides & questions
-│   ├── EnterpriseApplications/
-│   │   ├── CSharp/      # C# guides
-│   │   └── JAVA/        # Java guides & questions
-│   ├── DataScience&Analytics/
-│   │   ├── R/           # R guides & questions
-│   │   ├── MATLAB/      # MATLAB guides
-│   │   └── Kql/         # KQL query language
-│   └── Cloud-native/
-│       └── Golang/      # Go guides & questions
-│
-├── Frontend-Frameworks/
-│   ├── Angular/         # Angular framework
-│   ├── React/           # React library
-│   ├── Vue/             # Vue.js framework
-│   ├── Svelte/          # Svelte framework
-│   ├── NuxtJs/          # Nuxt.js (Vue meta-framework)
-│   ├── Remix/           # Remix (React framework)
-│   ├── Astro/           # Astro (islands architecture)
-│   ├── SolidJs/         # SolidJS framework
-│   ├── Vite/            # Vite build tool
-│   ├── Electron/        # Electron desktop apps
-│   └── Tauri/           # Tauri desktop apps
-│
-├── Backend-Web/
-│   ├── Django/          # Django (Python)
-│   ├── Flask/           # Flask (Python)
-│   ├── FastAPI/         # FastAPI (Python)
-│   ├── Spring Boot/     # Spring Boot (Java)
-│   ├── ASP.NET Core/    # ASP.NET Core (C#)
-│   ├── Laravel/         # Laravel (PHP)
-│   ├── Ruby on Rails/   # Rails (Ruby)
-│   ├── Express/         # Express.js (Node.js)
-│   ├── NestJS/          # NestJS (TypeScript)
-│   ├── Gin/             # Gin (Go)
-│   ├── Actix-web/       # Actix-web (Rust)
-│   ├── Axum/            # Axum (Rust)
-│   ├── Rocket/          # Rocket (Rust)
-│   ├── Phoenix/         # Phoenix (Elixir)
-│   ├── LangChain/       # LangChain (LLM apps)
-│   ├── Streamlit/       # Streamlit (Python data apps)
-│   ├── GraphQL/         # GraphQL APIs
-│   ├── gRPC/            # gRPC services
-│   └── ...42 frameworks total
-│
-├── Cloud-DevOps/
-│   ├── AWS/             # Amazon Web Services
-│   ├── Azure/           # Microsoft Azure
-│   ├── GCP/             # Google Cloud Platform
-│   ├── DigitalOcean/    # DigitalOcean
-│   ├── Docker/          # Docker containerization
-│   ├── Podman/          # Podman containers
-│   ├── Kubernetes/      # Kubernetes orchestration
-│   ├── Helm/            # Helm package manager
-│   ├── ArgoCD/          # ArgoCD GitOps
-│   ├── Flux/            # Flux GitOps
-│   ├── Terraform/       # Infrastructure as Code
-│   ├── OpenTofu/        # OpenTofu (Terraform fork)
-│   ├── Ansible/         # Configuration management
-│   ├── Prometheus/      # Prometheus monitoring
-│   ├── Grafana/         # Grafana visualization
-│   ├── Git/             # Git version control
-│   ├── GitHub/          # GitHub & Actions
-│   ├── GitLab/          # GitLab & CI/CD
-│   ├── BitBucket/       # Bitbucket & Pipelines
-│   ├── JenKins/         # Jenkins CI/CD
-│   └── ...26 tools total
-│
-├── Data-Analytics/
-│   ├── Apache Spark/    # Apache Spark
-│   ├── Apache Kafka/    # Apache Kafka
-│   ├── Pandas/          # Pandas (Python)
-│   ├── NumPy/           # NumPy (Python)
-│   ├── TensorFlow/      # TensorFlow ML
-│   ├── MariaDB/         # MariaDB database
-│   ├── SQLite/          # SQLite database
-│   ├── IBM_Db2/         # IBM Db2
-│   ├── Neo4j/           # Neo4j graph database
-│   ├── Snowflake/       # Snowflake data warehouse
-│   └── BigQuery/        # Google BigQuery
-│
-├── Security-Testing/
-│   ├── AquaSecurity/    # Aqua Security / Trivy
-│   ├── SonarQube/       # SonarQube code quality
-│   ├── Snyk/            # Snyk security
-│   ├── HashiCorpVault/  # HashiCorp Vault
-│   ├── Burp Suite Framework/
-│   ├── Metasploit Framework/
-│   ├── OpenVAS/         # Vulnerability scanner
-│   ├── Scapy/           # Packet manipulation
-│   ├── Postman/         # API testing
-│   ├── Jest/            # Jest testing
-│   └── Vitest/          # Vitest unit testing
-│
-├── Game-Engines/
-│   ├── Cocos2d/         # Cocos2d (2D games)
-│   ├── CryEngine/       # CryEngine (photorealistic)
-│   ├── GameMaker Studio/ # GameMaker (beginner-friendly)
-│   ├── Godot/           # Godot engine
-│   ├── Panda3D/         # Panda3D (Python)
-│   ├── Rage/            # Rage Engine (educational)
-│   ├── Spring Engine/   # Spring RTS engine
-│   ├── Unity/           # Unity game engine
-│   └── Unreal Engine/   # Unreal Engine
-│
-├── Development-Tools/
-│   ├── CSV/             # CSV data format
-│   ├── JSON/            # JSON data format
-│   ├── TOML/            # TOML config format
-│   ├── XML/             # XML data format
-│   └── YAML/            # YAML config format
-│
-├── SQL&DB'S/
-│   ├── BigQuery/        # Google BigQuery
-│   ├── DynamoDB/        # AWS DynamoDB
-│   ├── IBM_Db2/         # IBM Db2
-│   ├── MariaDB/         # MariaDB
-│   ├── MongoDB/         # MongoDB (NoSQL)
-│   ├── MySQL/           # MySQL
-│   ├── Neo4j/           # Neo4j graph database
-│   ├── PostgreSQL/      # PostgreSQL
-│   ├── Redis/           # Redis cache/DB
-│   └── SQLite/          # SQLite embedded DB
-│
-├── Operating-Systems/
-│   ├── Windows/         # Windows OS guides
-│   ├── macOS/           # macOS guides
-│   ├── iOS/             # iOS development
-│   ├── Android/         # Android development
-│   └── WSL/             # Windows Subsystem for Linux
-│
-├── Misc/
-│   ├── Cuba/            # Cuba framework
-│   ├── notes/           # General notes
-│   └── zsample/         # Samples and plans
-│
-├── Linux/               # Linux distros (25+ distributions, family-organized)
-│   ├── Alpine/          # Alpine Linux (minimal, musl)
-│   ├── Arch/
-│   │   ├── Arch/        # Arch Linux base
-│   │   ├── BlackArch/   # Security/pentesting (2800+ tools)
-│   │   ├── GarudaLinux/ # Gaming-focused derivative
-│   │   ├── RedArch/     # Arch + Red Hat hybrid
-│   │   └── SteamOS/     # Valve's Steam Deck OS
-│   ├── Debian/
-│   │   ├── Debian/      # Debian base (stable)
-│   │   ├── Ubuntu/      # Most popular, LTS
-│   │   ├── KaliLinux/   # Pentesting & security
-│   │   ├── MintLinux/   # User-friendly desktop
-│   │   ├── MX_Linux/    # #1 on DistroWatch
-│   │   ├── ParrotSec/   # Security, privacy, development
-│   │   ├── Pop_OS/      # System76, developer-focused
-│   │   ├── Tails/       # Privacy, Tor, amnesia
-│   │   └── Zorin/       # Windows-like UI, beginners
-│   ├── RedHat/
-│   │   ├── CentOS/      # RHEL downstream (deprecated)
-│   │   ├── Fedora Linux/ # RHEL upstream, cutting-edge
-│   │   ├── OracleLinux/ # Oracle-supported RHEL clone
-│   │   ├── RedHatEnterpriseLinux/ # Commercial enterprise
-│   │   └── Rocky_Linux/ # CentOS replacement
-│   ├── Gentoo/
-│   │   ├── Gentoo/      # Source-based, optimization
-│   │   └── ChromeOS_Flex/ # Cloud-managed, legacy HW
-│   ├── NixOS/           # Declarative, reproducible
-│   ├── Qubes_OS/        # Security by isolation
-│   └── Slackware/       # Oldest, traditional Unix-like
-│
-├── README.md            # Main documentation
-├── CONTRIBUTING.md      # How to contribute
-├── FAQ.md               # Common questions
-├── RESOURCES.md         # Learning materials
-├── ROADMAP.md           # Project roadmap
-└── .github/             # Templates & workflows
-```
-
+Checkout the Repository Structure in the [Repository Structure](RepositoryStructure.md) file.
 ---
 
 ## 🎓 Learning Path Recommendations
