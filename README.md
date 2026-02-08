@@ -1,4 +1,4 @@
-# Runexis Forge — Install & Learn DevLangs
+# Runexis Forge — [ Install & Learn DevLangs ]
 
 <div align="center">
 
@@ -516,10 +516,6 @@
 
   <a href="https://wordpress.org/" target="_blank" rel="noopener noreferrer" title="wordpress">
     <img alt="wordpress" width="50" src="https://skillicons.dev/icons?i=wordpress" style="vertical-align: top;" />
-  </a>
-
-  <a href="https://yaml.org/" target="_blank" rel="noopener noreferrer" title="yaml">
-    <img alt="yaml" width="50" src="https://skillicons.dev/icons?i=yaml" style="vertical-align: top;" />
   </a>
 
   <a href="https://yarnpkg.com/" target="_blank" rel="noopener noreferrer" title="yarn">
