@@ -3,15 +3,16 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/badge/Languages-35%2B-blue.svg)](Programming-Languages/)
-[![Backend Frameworks](https://img.shields.io/badge/Backend-42%20Frameworks-orange.svg)](Backend-Web/)
-[![Frontend Frameworks](https://img.shields.io/badge/Frontend-11%20Frameworks-ff69b4.svg)](Frontend-Frameworks/)
-[![Databases](https://img.shields.io/badge/Databases-11-purple.svg)](SQL&DB'S/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-February%202026-blue.svg)]()  
+[![Languages](https://img.shields.io/badge/Languages-40%2B-blue.svg)](Programming-Languages/)
+[![Backend Frameworks](https://img.shields.io/badge/Backend-45%20Frameworks-orange.svg)](Backend-Web/)
+[![Frontend Frameworks](https://img.shields.io/badge/Frontend-15%20Frameworks-ff69b4.svg)](Frontend-Frameworks/)
+[![Databases](https://img.shields.io/badge/Databases-15-purple.svg)](SQL&DB'S/)
 [![Cloud](https://img.shields.io/badge/Cloud-4%20Platforms-cyan.svg)](Cloud-DevOps/)
-[![DevOps](https://img.shields.io/badge/DevOps%20Tools-26-red.svg)](Cloud-DevOps/)
+[![DevOps](https://img.shields.io/badge/DevOps%20Tools-30%2B-red.svg)](Cloud-DevOps/)
 [![Linux](https://img.shields.io/badge/Linux%20Distros-26-teal.svg)](Linux/)
 [![Game Engines](https://img.shields.io/badge/Game%20Engines-9-indigo.svg)](Game-Engines/)
-[![Questions](https://img.shields.io/badge/Practice%20Questions-116%2B-green.svg)](Practice-Questions/)
+[![Questions](https://img.shields.io/badge/Practice%20Questions-125%2B-green.svg)](Practice-Questions/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-success.svg)]()
 
@@ -538,6 +539,8 @@ Whether you're a beginner or setting up a fresh dev environment, this guide has 
 
 - [What You'll Find Here](#-what-youll-find-here)
 - [Quick Start](#-quick-start)
+- [Quick Navigation](#-quick-navigation)
+- [Popular Learning Paths](#-popular-learning-paths)
 - [Supported Languages](#-supported-languages)
 - [Repository Structure](#-repository-structure)
 - [Getting Started](#-getting-started)
@@ -562,6 +565,63 @@ Whether you're a beginner or setting up a fresh dev environment, this guide has 
 - Start learning immediately
 
 Or jump directly to a language folder and follow the installation guide!
+
+---
+
+## 🧭 Quick Navigation
+
+**Jump to your area of interest:**
+
+| Category | Quick Links |
+|----------|-------------|
+| **💻 Languages** | [Python](#-supported-languages) · [JavaScript](#-supported-languages) · [Java](#-supported-languages) · [Go](#-supported-languages) · [Rust](#-supported-languages) · [TypeScript](#-supported-languages) |
+| **🎨 Frontend** | [React](Frontend-Frameworks/React/) · [Vue](Frontend-Frameworks/Vue/) · [Angular](Frontend-Frameworks/Angular/) · [Svelte](Frontend-Frameworks/Svelte/) · [Astro](Frontend-Frameworks/Astro/) |
+| **⚙️ Backend** | [Django](Backend-Web/Django/) · [FastAPI](Backend-Web/FastAPI/) · [Spring Boot](Backend-Web/Spring-Boot/) · [Express](Backend-Web/Express/) · [Gin](Backend-Web/Gin/) |
+| **☁️ Cloud/DevOps** | [AWS](Cloud-DevOps/06-Cloud-Providers/AWS/) · [Docker](Cloud-DevOps/04-Containerization/Docker/) · [Kubernetes](Cloud-DevOps/04-Containerization/Kubernetes/) · [Terraform](Cloud-DevOps/05-Infrastructure-as-Code/Terraform/) |
+| **🗄️ Databases** | [PostgreSQL](SQL&DB'S/PostgreSQL/) · [MongoDB](SQL&DB'S/MongoDB/) · [Redis](SQL&DB'S/Redis/) · [MySQL](SQL&DB'S/MySQL/) |
+| **🐧 Linux** | [Ubuntu](Linux/Debian/Ubuntu/) · [Arch](Linux/Arch/) · [Debian](Linux/Debian/) · [Fedora](Linux/RedHat/Fedora/) |
+| **🎮 Game Dev** | [Unity](Game-Engines/Unity/) · [Godot](Game-Engines/Godot/) · [Unreal](Game-Engines/Unreal-Engine/) |
+
+---
+
+## 🎯 Popular Learning Paths
+
+**Structured paths to guide your learning journey:**
+
+### 🌐 **Web Development Full Stack**
+1. Start with [HTML/CSS/JavaScript](Programming-Languages/WebDevelopment/JavaScript/)
+2. Learn [React](Frontend-Frameworks/React/) or [Vue](Frontend-Frameworks/Vue/)
+3. Backend with [Node.js/Express](Backend-Web/Express/) or [Python/Django](Backend-Web/Django/)
+4. Database: [PostgreSQL](SQL&DB'S/PostgreSQL/) or [MongoDB](SQL&DB'S/MongoDB/)
+5. Deploy with [Docker](Cloud-DevOps/04-Containerization/Docker/) and [AWS](Cloud-DevOps/06-Cloud-Providers/AWS/)
+
+### ☁️ **Cloud & DevOps Engineer**
+1. Master [Linux](Linux/) basics
+2. Learn [Git](Cloud-DevOps/01-Version-Control/Git/) and [GitHub](Cloud-DevOps/01-Version-Control/GitHub/)
+3. Containerization: [Docker](Cloud-DevOps/04-Containerization/Docker/) → [Kubernetes](Cloud-DevOps/04-Containerization/Kubernetes/)
+4. IaC: [Terraform](Cloud-DevOps/05-Infrastructure-as-Code/Terraform/) or [Ansible](Cloud-DevOps/09-Automation-Workflows/Ansible/)
+5. CI/CD: [GitHub Actions](Cloud-DevOps/03-CI-CD/GitHub-Actions/) or [Jenkins](Cloud-DevOps/03-CI-CD/Jenkins/)
+6. Cloud Platform: [AWS](Cloud-DevOps/06-Cloud-Providers/AWS/), [Azure](Cloud-DevOps/06-Cloud-Providers/Azure/), or [GCP](Cloud-DevOps/06-Cloud-Providers/GCP/)
+
+### 📊 **Data Science & ML**
+1. Python basics: [Python](Programming-Languages/Scripting/PYTHON/)
+2. Libraries: [NumPy](Data-Analytics/01-Data-Processing/NumPy/) → [Pandas](Data-Analytics/01-Data-Processing/Pandas/)
+3. Visualization: [Matplotlib](Data-Analytics/10-Visualization-Apps/Matplotlib/) → [Streamlit](Data-Analytics/10-Visualization-Apps/Streamlit/)
+4. Machine Learning: [TensorFlow](Data-Analytics/04-Deep-Learning/TensorFlow/) or [PyTorch](Data-Analytics/04-Deep-Learning/PyTorch/)
+5. Big Data: [Apache Spark](Data-Analytics/02-Distributed-Computing/Spark/) and [Kafka](Data-Analytics/07-Streaming-Platforms/Kafka/)
+
+### 🎮 **Game Development**
+1. Choose your engine: [Unity](Game-Engines/Unity/) (C#) or [Godot](Game-Engines/Godot/) (GDScript/C#)
+2. Learn [C#](Programming-Languages/EnterpriseApplications/CSharp/) or [C++](Programming-Languages/SystemsProgramming/CPP/)
+3. Graphics with [Three.js](Game-Development/Three.js/) or [Babylon.js](Game-Development/Babylon.js/)
+4. Advanced: [Unreal Engine](Game-Engines/Unreal-Engine/) with C++
+
+### 🔐 **Cybersecurity Specialist**
+1. Foundations: [Linux](Linux/) + [Networking](Network-Tools/)
+2. Security distros: [Kali Linux](Linux/Debian/KaliLinux/) or [Parrot](Linux/Debian/ParrotSec/)
+3. Tools: [Burp Suite](Security-Testing/BurpSuite/) · [Metasploit](Security-Testing/Metasploit/) · [Wireshark](Network-Tools/Wireshark/)
+4. Scanning: [Trivy](Security-Testing/AquaSecurity/) · [Snyk](Security-Testing/Snyk/) · [SonarQube](Security-Testing/SonarQube/)
+5. Secrets: [HashiCorp Vault](Security-Testing/Vault/)
 
 ---
 
@@ -613,6 +673,10 @@ This repository currently includes guides and practice questions for:
 | **Bash** 🐚 | ✅ Available | Shell Scripting + 10 Questions | Active |
 | **KQL** 📊 | ✅ Available | Query Language + 10 Questions | Active |
 | **SQL** 🗄️ | ✅ Available | 10 Questions + 11 DB Guides | Active |
+| **Zig** ⚡ | ✅ Available | Systems Programming | Active |
+| **Elixir** 💧 | ✅ Available | Functional Programming | Active |
+| **Lua** 🌙 | ✅ Available | Scripting & Game Dev | Active |
+| **Haskell** 🎓 | ✅ Available | Functional Programming | Active |
 
 **📁 Organization**: 35+ languages organized by category in `Programming-Languages/`:
 
@@ -640,6 +704,10 @@ This repository currently includes guides and practice questions for:
 | **SolidJs** 🔶 | ✅ Available | Fine-grained Reactivity | Active |
 | **Electron** 🖥️ | ✅ Available | Desktop Apps with Web Tech | Active |
 | **Tauri** 🦀 | ✅ Available | Rust + Web UI Desktop Apps | Active |
+| **Qwik** ⚡ | ✅ Available | Resumability, O(1) Loading | Active |
+| **htmx** 🔷 | ✅ Available | Hypermedia-driven Applications | Active |
+| **Alpine.js** 🏔️ | ✅ Available | Lightweight JavaScript Framework | Active |
+| **Lit** 🔥 | ✅ Available | Web Components Library | Active |
 
 ### Backend Frameworks
 
@@ -655,14 +723,25 @@ This repository currently includes guides and practice questions for:
 | **Gin** 🍸 | ✅ Available | Go HTTP Framework, Fast & Minimal | Active |
 | **Express.js** 🟩 | ✅ Available | Node.js Framework, Middleware | Active |
 | **Next.js** ▲ | ✅ Available | React Framework, SSR, API Routes | Active |
+| **NestJS** 🐈 | ✅ Available | TypeScript Backend Framework | Active |
+| **Phoenix** 🔥 | ✅ Available | Elixir Web Framework | Active |
+| **Rocket** 🚀 | ✅ Available | Rust Web Framework | Active |
+| **Actix** ⚡ | ✅ Available | Rust Actor Framework | Active |
+| **Supabase** 🔋 | ✅ Available | Firebase Alternative, PostgreSQL | Active |
 
 ### DevOps & CI/CD Tools
 
 | Tool | Guide Available | Topics Covered | Status |
 |------|----------------|----------------|--------|
 | **Docker** 🐳 | ✅ Available | Containers, Images, Compose, Networking | Active |
+| **Kubernetes** ☸️ | ✅ Available | Container Orchestration, Pods, Services | Active |
+| **Terraform** 🏗️ | ✅ Available | Infrastructure as Code, Multi-cloud | Active |
+| **Ansible** 🤖 | ✅ Available | Configuration Management, Automation | Active |
 | **Git** 📚 | ✅ Available | Version Control, Branching, Workflows | Active |
 | **Jenkins** 🔧 | ✅ Available | CI/CD, Pipelines, Automation | Active |
+| **ArgoCD** 🐙 | ✅ Available | GitOps Continuous Delivery | Active |
+| **Prometheus** 📊 | ✅ Available | Monitoring & Alerting | Active |
+| **Grafana** 📈 | ✅ Available | Observability & Dashboards | Active |
 
 ### Development Tools & Platforms
 
@@ -675,6 +754,9 @@ This repository currently includes guides and practice questions for:
 | **Jest** 🃏 | ✅ Available | Testing Framework, Mocking, Coverage | Active |
 | **Vite** ⚡ | ✅ Available | Frontend tooling, dev server, builds | Active |
 | **Vitest** 🧪 | ✅ Available | Unit testing for Vite projects | Active |
+| **Bun** 🥟 | ✅ Available | Fast all-in-one JavaScript runtime | Active |
+| **Deno** 🦕 | ✅ Available | Secure TypeScript/JavaScript runtime | Active |
+| **pnpm** 📦 | ✅ Available | Fast, disk space efficient package manager | Active |
 | **YAML** 🧾 | ✅ Available | Config format basics and examples | Active |
 | **TOML** 🧩 | ✅ Available | Config format basics and examples | Active |
 
@@ -733,6 +815,10 @@ This repository currently includes guides and practice questions for:
 | **Neo4j** 🕸️ | Graph | ✅ Available | Cypher, nodes, relationships | Active |
 | **Snowflake** ❄️ | Cloud DW | ✅ Available | Data warehouse, virtual warehouses | Active |
 | **BigQuery** 📊 | Cloud DW | ✅ Available | Google's serverless analytics | Active |
+| **CockroachDB** 🪳 | Distributed | ✅ Available | Distributed SQL, Postgres-compatible | Active |
+| **Cassandra** 💎 | NoSQL | ✅ Available | Wide-column store, high availability | Active |
+| **Supabase** 🔋 | Backend | ✅ Available | PostgreSQL-based Firebase alternative | Active |
+| **PlanetScale** 🌍 | MySQL | ✅ Available | Serverless MySQL, branching | Active |
 
 ### Data Engineering & ML
 
@@ -743,8 +829,12 @@ This repository currently includes guides and practice questions for:
 | **Pandas** 🧮 | ✅ Available | DataFrames, I/O, groupby, cleaning | Active |
 | **NumPy** 🔢 | ✅ Available | ndarrays, broadcasting, basic ops | Active |
 | **TensorFlow** 🧠 | ✅ Available | ML framework, neural networks | Active |
+| **PyTorch** 🔥 | ✅ Available | Deep learning framework | Active |
 | **Streamlit** 📈 | ✅ Available | Python data apps, dashboards | Active |
 | **LangChain** 🔗 | ✅ Available | LLM applications, chains | Active |
+| **Hugging Face** 🤗 | ✅ Available | Transformers, model hub | Active |
+| **dbt** 🔧 | ✅ Available | Data transformation tool | Active |
+| **Airbyte** 🔄 | ✅ Available | Data integration platform | Active |
 
 ### Game Development
 
@@ -842,101 +932,341 @@ This repository currently includes guides and practice questions for:
 
 ## 🚀 Getting Started
 
+### Prerequisites
+
+Before you begin, ensure you have:
+
+- ✅ **Git** installed ([Download](https://git-scm.com/downloads))
+- ✅ **Text Editor/IDE** (VS Code, IntelliJ IDEA, PyCharm, etc.)
+- ✅ **Terminal/Command Prompt** access
+- ✅ **Internet connection** for downloading dependencies
+
+### Recommended IDEs by Technology
+
+| Technology | Recommended IDE | Alternative |
+|------------|----------------|-------------|
+| **Python** | VS Code, PyCharm | Jupyter Notebook, Spyder |
+| **Java** | IntelliJ IDEA, Eclipse | NetBeans, VS Code |
+| **JavaScript/TypeScript** | VS Code, WebStorm | Sublime Text, Atom |
+| **C/C++** | VS Code, CLion | Code::Blocks, Dev-C++ |
+| **C#/.NET** | Visual Studio, Rider | VS Code |
+| **Go** | GoLand, VS Code | Vim/Neovim |
+| **Rust** | VS Code, RustRover | IntelliJ IDEA |
+| **Web Dev** | VS Code, WebStorm | Sublime Text |
+
 ### 1. Clone the Repository
 
-```
-
+**Using Git:**
+```bash
 git clone https://github.com/Srijan-XI/RunexisForge.git
 cd RunexisForge
 ```
 
-### 2. Choose Your Language
+**Or download as ZIP:**
+- Visit [RunexisForge Repository](https://github.com/Srijan-XI/RunexisForge)
+- Click **Code** → **Download ZIP**
+- Extract and navigate to the folder
 
-Navigate to the folder of the programming language you want to learn:
+### 2. Choose Your Technology
 
-# Programming Languages
-```
-cd Programming-Languages/Scripting/PYTHON/                 # Python
-cd Programming-Languages/EnterpriseApplications/JAVA/      # Java
+Navigate to the folder of what you want to learn:
+
+**📂 Programming Languages**
+```bash
+# Scripting Languages
+cd Programming-Languages/Scripting/PYTHON/                 # Python 3.x
+cd Programming-Languages/Scripting/PHP/                    # PHP 8.x
+cd Programming-Languages/Scripting/Ruby/                   # Ruby 3.x
+cd Programming-Languages/Scripting/Bash/                   # Bash Scripting
+cd Programming-Languages/Scripting/PowerShell/             # PowerShell
+
+# Web Development
 cd Programming-Languages/WebDevelopment/JavaScript/        # JavaScript + Node.js
-cd Programming-Languages/EnterpriseApplications/CSharp/    # C#
-cd Programming-Languages/Cloud-native/Golang/              # Go
+cd Programming-Languages/WebDevelopment/TypeScript/        # TypeScript
+cd Programming-Languages/WebDevelopment/HTML-CSS/          # HTML5 & CSS3
+
+# Systems Programming
+cd Programming-Languages/SystemsProgramming/C/             # C Language
+cd Programming-Languages/SystemsProgramming/CPP/           # C++
 cd Programming-Languages/SystemsProgramming/RUST/          # Rust
-cd Programming-Languages/Scripting/PHP/                    # PHP
-cd Programming-Languages/Scripting/Ruby/                   # Ruby
+cd Programming-Languages/SystemsProgramming/Zig/           # Zig
+cd Programming-Languages/SystemsProgramming/Assembly/      # Assembly
+
+# Enterprise Applications
+cd Programming-Languages/EnterpriseApplications/JAVA/      # Java
+cd Programming-Languages/EnterpriseApplications/CSharp/    # C# (.NET)
+
+# Cloud-Native & Modern Languages
+cd Programming-Languages/Cloud-native/Golang/              # Go (Golang)
+cd Programming-Languages/General-purpose/Kotlin/           # Kotlin
 cd Programming-Languages/General-purpose/Scala/            # Scala
+cd Programming-Languages/General-purpose/Swift/            # Swift
+cd Programming-Languages/General-purpose/Dart/             # Dart + Flutter
+
+# Functional Programming
+cd Programming-Languages/Functional/Elixir/                # Elixir
+cd Programming-Languages/Functional/Haskell/               # Haskell
+
+# Data Science & Analytics
+cd Programming-Languages/DataScience&Analytics/R/          # R Language
 cd Programming-Languages/DataScience&Analytics/MATLAB/     # MATLAB
+cd Programming-Languages/DataScience&Analytics/KQL/        # Kusto Query Language
+cd Programming-Languages/DataScience&Analytics/Julia/      # Julia
+```
 
-# Frontend Frameworks
-cd Frontend-Frameworks/Angular/       # Angular
-cd Frontend-Frameworks/React/         # React
-cd Frontend-Frameworks/Vue/           # Vue.js
-cd Frontend-Frameworks/NuxtJs/        # Nuxt.js
+**🎨 Frontend Frameworks**
+```bash
+cd Frontend-Frameworks/React/         # React 18+
+cd Frontend-Frameworks/Vue/           # Vue 3
+cd Frontend-Frameworks/Angular/       # Angular 17+
+cd Frontend-Frameworks/Svelte/        # Svelte 4
+cd Frontend-Frameworks/NuxtJs/        # Nuxt.js 3
 cd Frontend-Frameworks/Astro/         # Astro
+cd Frontend-Frameworks/Remix/         # Remix
+cd Frontend-Frameworks/SolidJs/       # SolidJS
+cd Frontend-Frameworks/Qwik/          # Qwik
+cd Frontend-Frameworks/htmx/          # htmx
+cd Frontend-Frameworks/Alpine.js/     # Alpine.js
+cd Frontend-Frameworks/Lit/           # Lit
+cd Frontend-Frameworks/Electron/      # Electron
+cd Frontend-Frameworks/Tauri/         # Tauri
+cd Frontend-Frameworks/Vite/          # Vite
+```
 
-# Backend Frameworks
-cd Backend-Web/Django/                # Django
-cd Backend-Web/Flask/                 # Flask
-cd Backend-Web/FastAPI/               # FastAPI
-cd Backend-Web/"Spring Boot"/        # Spring Boot
-cd Backend-Web/Gin/                   # Gin (Go)
+**⚙️ Backend Frameworks**
+```bash
+# Python Backends
+cd Backend-Web/02-Web-Frameworks/Django/        # Django 5.x
+cd Backend-Web/02-Web-Frameworks/Flask/         # Flask
+cd Backend-Web/02-Web-Frameworks/FastAPI/       # FastAPI
 
-# Cloud & DevOps
-cd Cloud-DevOps/AWS/                  # AWS
-cd Cloud-DevOps/Azure/                # Azure
-cd Cloud-DevOps/GCP/                  # Google Cloud
-cd Cloud-DevOps/Docker/               # Docker
-cd Cloud-DevOps/Kubernetes/           # Kubernetes
-cd Cloud-DevOps/Terraform/            # Terraform
-cd Cloud-DevOps/Git/                  # Git
-cd Cloud-DevOps/GitHub/               # GitHub
-cd Cloud-DevOps/GitLab/               # GitLab
+# JavaScript/TypeScript Backends
+cd Backend-Web/02-Web-Frameworks/Express/       # Express.js
+cd Backend-Web/02-Web-Frameworks/NestJS/        # NestJS
+cd Backend-Web/02-Web-Frameworks/Next.js/       # Next.js
 
-# Databases
-cd "SQL&DB'S"/MySQL/                  # MySQL
-cd "SQL&DB'S"/PostgreSQL/             # PostgreSQL
-cd "SQL&DB'S"/MongoDB/                # MongoDB
+# Java Backends
+cd Backend-Web/02-Web-Frameworks/"Spring Boot"/ # Spring Boot 3.x
+
+# Go Backends
+cd Backend-Web/02-Web-Frameworks/Gin/           # Gin
+cd Backend-Web/02-Web-Frameworks/Fiber/         # Fiber
+
+# Rust Backends
+cd Backend-Web/02-Web-Frameworks/Rocket/        # Rocket
+cd Backend-Web/02-Web-Frameworks/Actix/         # Actix-web
+
+# Others
+cd Backend-Web/02-Web-Frameworks/Laravel/       # Laravel (PHP)
+cd Backend-Web/02-Web-Frameworks/Rails/         # Ruby on Rails
+cd Backend-Web/02-Web-Frameworks/Phoenix/       # Phoenix (Elixir)
+cd Backend-Web/06-Backend-as-a-Service/Supabase/ # Supabase
+```
+
+**☁️ Cloud & DevOps**
+```bash
+# Cloud Providers
+cd Cloud-DevOps/06-Cloud-Providers/AWS/         # Amazon Web Services
+cd Cloud-DevOps/06-Cloud-Providers/Azure/       # Microsoft Azure
+cd Cloud-DevOps/06-Cloud-Providers/GCP/         # Google Cloud Platform
+cd Cloud-DevOps/06-Cloud-Providers/DigitalOcean/ # DigitalOcean
+
+# Version Control
+cd Cloud-DevOps/01-Version-Control/Git/         # Git
+cd Cloud-DevOps/01-Version-Control/GitHub/      # GitHub
+cd Cloud-DevOps/01-Version-Control/GitLab/      # GitLab
+cd Cloud-DevOps/01-Version-Control/Bitbucket/   # Bitbucket
+
+# Containerization & Orchestration
+cd Cloud-DevOps/04-Containerization/Docker/     # Docker
+cd Cloud-DevOps/04-Containerization/Kubernetes/ # Kubernetes (K8s)
+cd Cloud-DevOps/04-Containerization/Podman/     # Podman
+
+# Infrastructure as Code
+cd Cloud-DevOps/05-Infrastructure-as-Code/Terraform/  # Terraform
+cd Cloud-DevOps/05-Infrastructure-as-Code/Pulumi/     # Pulumi
+cd Cloud-DevOps/05-Infrastructure-as-Code/CloudFormation/ # AWS CloudFormation
+
+# CI/CD
+cd Cloud-DevOps/03-CI-CD/GitHub-Actions/        # GitHub Actions
+cd Cloud-DevOps/03-CI-CD/GitLab-CI/             # GitLab CI/CD
+cd Cloud-DevOps/03-CI-CD/Jenkins/               # Jenkins
+cd Cloud-DevOps/03-CI-CD/ArgoCD/                # ArgoCD
+cd Cloud-DevOps/03-CI-CD/CircleCI/              # CircleCI
+
+# Configuration Management
+cd Cloud-DevOps/09-Automation-Workflows/Ansible/ # Ansible
+cd Cloud-DevOps/09-Automation-Workflows/Chef/    # Chef
+
+# Monitoring & Observability
+cd Cloud-DevOps/07-Monitoring-Observability/Prometheus/ # Prometheus
+cd Cloud-DevOps/07-Monitoring-Observability/Grafana/    # Grafana
+cd Cloud-DevOps/07-Monitoring-Observability/ELK/        # ELK Stack
+```
+
+**🗄️ Databases**
+```bash
+# Relational Databases
+cd "SQL&DB'S"/MySQL/                  # MySQL 8.x
+cd "SQL&DB'S"/PostgreSQL/             # PostgreSQL 16
 cd "SQL&DB'S"/MariaDB/                # MariaDB
+cd "SQL&DB'S"/SQLite/                 # SQLite
+cd "SQL&DB'S"/MicrosoftSQL/           # MS SQL Server
+
+# NoSQL Databases
+cd "SQL&DB'S"/MongoDB/                # MongoDB
+cd "SQL&DB'S"/Redis/                  # Redis
+cd "SQL&DB'S"/DynamoDB/               # AWS DynamoDB
+cd "SQL&DB'S"/Cassandra/              # Apache Cassandra
+cd "SQL&DB'S"/CouchDB/                # CouchDB
+
+# Graph Databases
 cd "SQL&DB'S"/Neo4j/                  # Neo4j
+
+# Cloud Data Warehouses
 cd "SQL&DB'S"/Snowflake/              # Snowflake
+cd "SQL&DB'S"/BigQuery/               # Google BigQuery
 
-# Data & Analytics
-cd Data-Analytics/"Apache Spark"/     # Apache Spark
-cd Data-Analytics/"Apache Kafka"/     # Apache Kafka
-cd Data-Analytics/Pandas/             # Pandas
-cd Data-Analytics/NumPy/              # NumPy
-cd Data-Analytics/TensorFlow/         # TensorFlow
+# Modern Database Solutions
+cd "SQL&DB'S"/Supabase/               # Supabase
+cd "SQL&DB'S"/PlanetScale/            # PlanetScale
+cd "SQL&DB'S"/CockroachDB/            # CockroachDB
+```
 
-# Security & Testing
-cd Security-Testing/AquaSecurity/     # Trivy
-cd Security-Testing/SonarQube/        # SonarQube
-cd Security-Testing/Snyk/             # Snyk
-cd Security-Testing/Postman/          # Postman
-cd Security-Testing/Jest/             # Jest
+**📊 Data & Analytics**
+```bash
+# Data Processing
+cd Data-Analytics/01-Data-Processing/Pandas/    # Pandas
+cd Data-Analytics/01-Data-Processing/NumPy/     # NumPy
+cd Data-Analytics/01-Data-Processing/dbt/       # dbt
 
-# Game Engines
-cd Game-Engines/Unity/                # Unity
-cd Game-Engines/Godot/                # Godot
-cd "Game-Engines/Unreal Engine"/      # Unreal
+# Distributed Computing
+cd Data-Analytics/02-Distributed-Computing/Spark/  # Apache Spark
+cd Data-Analytics/02-Distributed-Computing/Hadoop/ # Apache Hadoop
 
-# Operating Systems
-cd Operating-Systems/Windows/         # Windows
+# Streaming Platforms
+cd Data-Analytics/07-Streaming-Platforms/Kafka/    # Apache Kafka
+cd Data-Analytics/07-Streaming-Platforms/Flink/    # Apache Flink
+
+# Machine Learning & AI
+cd Data-Analytics/04-Deep-Learning/TensorFlow/  # TensorFlow
+cd Data-Analytics/04-Deep-Learning/PyTorch/     # PyTorch
+cd Data-Analytics/06-AI-LLM/LangChain/          # LangChain
+cd Data-Analytics/06-AI-LLM/HuggingFace/        # Hugging Face
+
+# Visualization
+cd Data-Analytics/10-Visualization-Apps/Streamlit/ # Streamlit
+cd Data-Analytics/10-Visualization-Apps/Tableau/   # Tableau
+```
+
+**🔒 Security & Testing**
+```bash
+cd Security-Testing/Trivy/            # Container Security
+cd Security-Testing/SonarQube/        # Code Quality
+cd Security-Testing/Snyk/             # Dependency Scanning
+cd Security-Testing/Vault/            # HashiCorp Vault
+cd Security-Testing/BurpSuite/        # Web Security
+cd Security-Testing/Metasploit/       # Penetration Testing
+cd Security-Testing/Postman/          # API Testing
+cd Security-Testing/Jest/             # JavaScript Testing
+```
+
+**🎮 Game Engines**
+```bash
+cd Game-Engines/Unity/                # Unity Engine
+cd Game-Engines/Godot/                # Godot Engine
+cd "Game-Engines/Unreal Engine"/      # Unreal Engine 5
+cd Game-Engines/CryEngine/            # CryEngine
+cd Game-Engines/Panda3D/              # Panda3D
+```
+
+**🐧 Operating Systems**
+```bash
+# Desktop OS
+cd Operating-Systems/Windows/         # Windows 10/11
 cd Operating-Systems/macOS/           # macOS
-cd Operating-Systems/Android/         # Android
-cd Linux/                             # Linux distros
+cd Operating-Systems/Linux/           # Various Linux Distros
+
+# Mobile OS
+cd Operating-Systems/Android/         # Android Development
+cd Operating-Systems/iOS/             # iOS Development
+
+# Linux Distributions
+cd Linux/Debian/Ubuntu/               # Ubuntu
+cd Linux/Arch/                        # Arch Linux
+cd Linux/RedHat/Fedora/               # Fedora
+cd Linux/Debian/Kali/                 # Kali Linux
 ```
 
 ### 3. Follow the Installation Guide
 
-Each language folder contains an installation guide with detailed instructions for:
+Each technology folder contains comprehensive documentation:
 
-- `Windows`
-- `macOS`
-- `Linux`
+📖 **What You'll Find:**
+- ✅ **Installation guides** for Windows, macOS, and Linux
+- ✅ **Getting Started** tutorials and examples
+- ✅ **Configuration** best practices
+- ✅ **Common Issues** and troubleshooting
+- ✅ **Practice questions** (where applicable)
+- ✅ **Resources** and further learning materials
+
+**Example Structure:**
+```
+Programming-Languages/Scripting/PYTHON/
+├── README.md                    # Overview & Quick Links
+├── INSTALL.md                   # Installation Guide (all OS)
+├── GETTING-STARTED.md           # First Steps & Examples
+├── PRACTICE-QUESTIONS/          # Coding Exercises
+│   ├── Beginner/
+│   ├── Intermediate/
+│   └── Advanced/
+└── RESOURCES.md                 # Learning Resources
+```
 
 ### 4. Try Practice Questions
 
-After installation, explore the practice questions folder to test your knowledge with hands-on coding exercises.
+After installation, test your skills:
+
+**📝 Question Categories:**
+- 🟢 **Beginner** - Variables, loops, functions
+- 🟡 **Intermediate** - Data structures, OOP, file I/O
+- 🔴 **Advanced** - Algorithms, design patterns, optimization
+
+**💡 Pro Tips:**
+- Start with beginner questions even if experienced
+- Try to solve problems without looking at solutions first
+- Review multiple solution approaches
+- Contribute your own solutions!
+
+### 5. Set Up Your Development Environment
+
+**Recommended Tools:**
+```bash
+# Install VS Code (cross-platform)
+winget install Microsoft.VisualStudioCode  # Windows
+brew install --cask visual-studio-code     # macOS
+sudo snap install code --classic            # Linux
+
+# Install Git
+winget install Git.Git                      # Windows
+brew install git                            # macOS
+sudo apt install git                        # Linux (Debian/Ubuntu)
+```
+
+**Essential VS Code Extensions:**
+- Python: `ms-python.python`
+- JavaScript/TypeScript: `dbaeumer.vscode-eslint`
+- Java: `vscjava.vscode-java-pack`
+- C/C++: `ms-vscode.cpptools`
+- Docker: `ms-azuretools.vscode-docker`
+- GitLens: `eamodio.gitlens`
+
+### 6. Join the Community
+
+- 💬 [GitHub Discussions](https://github.com/Srijan-XI/RunexisForge/discussions)
+- 🐛 [Report Issues](https://github.com/Srijan-XI/RunexisForge/issues)
+- 🤝 [Contribute](CONTRIBUTING.md)
+- ⭐ Star the repo to stay updated!
 
 ---
 
@@ -980,7 +1310,7 @@ We welcome contributions from everyone! 🎉
 ### Quick Start for Contributors
 
 1. Read our [**CONTRIBUTING.md**](CONTRIBUTING.md) for detailed guidelines
-2. Check [**open issues**](https://github.com/Srijan-XI/Install-and-Learn-DevLangs/issues) for tasks
+2. Check [**open issues**](https://github.com/Srijan-XI/RunexisForge/issues) for tasks
 3. Follow our [**Code of Conduct**](CODE_OF_CONDUCT.md)
 4. Submit your [**Pull Request**](.github/PULL_REQUEST_TEMPLATE.md)
 
@@ -1001,8 +1331,8 @@ See [**CONTRIBUTORS.md**](CONTRIBUTORS.md) for our list of amazing contributors!
 ### Get Help
 
 - 📖 Check our [**FAQ**](FAQ.md) for common questions
-- 💬 Open a [**Discussion**](https://github.com/Srijan-XI/Install-and-Learn-DevLangs/discussions)
-- 🐛 Report bugs via [**Issues**](https://github.com/Srijan-XI/Install-and-Learn-DevLangs/issues)
+- 💬 Open a [**Discussion**](https://github.com/Srijan-XI/RunexisForge/discussions)
+- 🐛 Report bugs via [**Issues**](https://github.com/Srijan-XI/RunexisForge/issues)
 - 📧 Contact maintainers through GitHub
 
 ### Community Guidelines
@@ -1084,9 +1414,12 @@ If you find this repository helpful, please consider:
 
 ## 📊 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/Srijan-XI/Install-and-Learn-DevLangs?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Srijan-XI/Install-and-Learn-DevLangs?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/Srijan-XI/Install-and-Learn-DevLangs?style=social)
+![GitHub stars](https://img.shields.io/github/stars/Srijan-XI/RunexisForge?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Srijan-XI/RunexisForge?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/Srijan-XI/RunexisForge?style=social)
+![GitHub contributors](https://img.shields.io/github/contributors/Srijan-XI/RunexisForge?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/Srijan-XI/RunexisForge?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/Srijan-XI/RunexisForge?style=flat-square)
 
 ---
 
