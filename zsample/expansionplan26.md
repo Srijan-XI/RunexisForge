@@ -20,10 +20,10 @@ phase 5.1 AMCET
 - Solidity - Smart Contract Language (expand existing)
 - Defi Protocols - Uniswap, Aave (expand existing)
 - NFT Standards - ERC-721, ERC-1155 (expand existing)
-phase 5.2 AMCET
-- Solana Development - Anchor Framework (expand existing)
-- IPFS & Filecoin - Decentralized Storage (expand existing)
-- Oracles - Chainlink, Band Protocol (expand existing)
+phase 5.2 AMCET ✅ COMPLETED
+- ✅ Solana Development - Anchor Framework (expand existing)
+- ✅ IPFS & Filecoin - Decentralized Storage (expand existing)
+- ✅ Oracles - Chainlink, Band Protocol (expand existing)
 
 ### Phase 06 AMCET - EXPAND VIRTUALIZATION TOPIC
 Expanding the Virtualization folder and subfiles
