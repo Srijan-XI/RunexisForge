@@ -94,10 +94,6 @@
     <img alt="dart" width="50" src="https://skillicons.dev/icons?i=dart" style="vertical-align: top;" />
   </a>
 
-  <a href="https://www.digitalocean.com/" target="_blank" rel="noopener noreferrer" title="digitalocean">
-    <img alt="digitalocean" width="50" src="https://skillicons.dev/icons?i=digitalocean" style="vertical-align: top;" />
-  </a>
-
   <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer" title="django">
     <img alt="django" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=django&theme=dark" style="vertical-align: top;" />
   </a>
@@ -108,10 +104,6 @@
 
   <a href="https://dotnet.microsoft.com/en-us/" target="_blank" rel="noopener noreferrer" title="dotnet">
     <img alt="dotnet" width="50" src="https://skillicons.dev/icons?i=dotnet" style="vertical-align: top;" />
-  </a>
-
-  <a href="https://dusk.sh/" target="_blank" rel="noopener noreferrer" title="dusk">
-    <img alt="dusk" width="50" src="https://skillicons.dev/icons?i=dusk" style="vertical-align: top;" />
   </a>
 
   <a href="https://www.dynamodb.org/" target="_blank" rel="noopener noreferrer" title="dynamodb">
@@ -142,10 +134,6 @@
     <img alt="expressjs" width="50" src="https://skillicons.dev/icons?i=expressjs" style="vertical-align: top;" />
   </a>
 
-  <a href="https://fedoraproject.org/" target="_blank" rel="noopener noreferrer" title="fedora">
-    <img alt="fedora" width="50" src="https://skillicons.dev/icons?i=fedora" style="vertical-align: top;" />
-  </a>
-
   <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" title="firebase">
     <img alt="firebase" width="50" src="https://skillicons.dev/icons?i=firebase" style="vertical-align: top;" />
   </a>
@@ -160,10 +148,6 @@
 
   <a href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer" title="gcp">
     <img alt="gcp" width="50" src="https://skillicons.dev/icons?i=gcp" style="vertical-align: top;" />
-  </a>
-
-  <a href="https://www.gentoo.org/" target="_blank" rel="noopener noreferrer" title="gentoo">
-    <img alt="gentoo" width="50" src="https://skillicons.dev/icons?i=gentoo" style="vertical-align: top;" />
   </a>
 
   <a href="https://gin-gonic.com/" target="_blank" rel="noopener noreferrer" title="gin">
@@ -282,10 +266,6 @@
     <img alt="manjaro" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=manjaro&theme=dark" style="vertical-align: top;" />
   </a>
 
-  <a href="https://mariadb.org/" target="_blank" rel="noopener noreferrer" title="mariadb">
-    <img alt="mariadb" width="50" src="https://skillicons.dev/icons?i=mariadb" style="vertical-align: top;" />
-  </a>
-
   <a href="https://www.markdownguide.org/" target="_blank" rel="noopener noreferrer" title="markdown">
     <img alt="markdown" width="50" src="https://skillicons.dev/icons?i=md" style="vertical-align: top;" />
   </a>
@@ -314,10 +294,6 @@
     <img alt="n8n" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=n8n&theme=dark" style="vertical-align: top;" />
   </a>
 
-  <a href="https://neo4j.com/" target="_blank" rel="noopener noreferrer" title="neo4j">
-    <img alt="neo4j" width="50" src="https://skillicons.dev/icons?i=neo4j" style="vertical-align: top;" />
-  </a>
-
   <a href="https://nestjs.com/" target="_blank" rel="noopener noreferrer" title="nestjs">
     <img alt="nestjs" width="50" src="https://skillicons.dev/icons?i=nestjs" style="vertical-align: top;" />
   </a>
@@ -332,10 +308,6 @@
 
   <a href="https://nginx.org/" target="_blank" rel="noopener noreferrer" title="nginx">
     <img alt="nginx" width="50" src="https://skillicons.dev/icons?i=nginx" style="vertical-align: top;" />
-  </a>
-
-  <a href="https://nixos.org/" target="_blank" rel="noopener noreferrer" title="nixos">
-    <img alt="nixos" width="50" src="https://skillicons.dev/icons?i=nixos" style="vertical-align: top;" />
   </a>
 
   <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" title="nodejs">
@@ -442,10 +414,6 @@
     <img alt="snowflake" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=snowflake&theme=dark" style="vertical-align: top;" />
   </a>
 
-  <a href="https://socket.io/" target="_blank" rel="noopener noreferrer" title="socketio">
-    <img alt="socketio" width="50" src="https://skillicons.dev/icons?i=socketio" style="vertical-align: top;" />
-  </a>
-
   <a href="https://www.solidjs.com/" target="_blank" rel="noopener noreferrer" title="solidjs">
     <img alt="solidjs" width="50" src="https://skillicons.dev/icons?i=solidjs" style="vertical-align: top;" />
   </a>
@@ -494,10 +462,6 @@
     <img alt="threejs" width="50" src="https://skillicons.dev/icons?i=threejs" style="vertical-align: top;" />
   </a>
 
-  <a href="https://tomcat.apache.org/" target="_blank" rel="noopener noreferrer" title="tomcat">
-    <img alt="tomcat" width="50" src="https://skillicons.dev/icons?i=tomcat" style="vertical-align: top;" />
-  </a>
-
   <a href="https://toml.io/en/" target="_blank" rel="noopener noreferrer" title="toml">
     <img alt="toml" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=toml&theme=dark" style="vertical-align: top;" />
   </a>
@@ -534,10 +498,6 @@
     <img alt="vitest" width="50" src="https://skillicons.dev/icons?i=vitest" style="vertical-align: top;" />
   </a>
 
-  <a href="https://www.vmware.com/products/workstation-pro.html" target="_blank" rel="noopener noreferrer" title="vmwareworkstation">
-    <img alt="vmwareworkstation" width="50" src="https://go-skill-icons.vercel.app/api/icons?i=vmware&theme=dark" style="vertical-align: top;" />
-  </a>
-
   <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" title="vscode">
     <img alt="vscode" width="50" src="https://skillicons.dev/icons?i=vscode" style="vertical-align: top;" />
   </a>
@@ -556,10 +516,6 @@
 
   <a href="https://wordpress.org/" target="_blank" rel="noopener noreferrer" title="wordpress">
     <img alt="wordpress" width="50" src="https://skillicons.dev/icons?i=wordpress" style="vertical-align: top;" />
-  </a>
-
-  <a href="https://learn.microsoft.com/windows/wsl/" target="_blank" rel="noopener noreferrer" title="wsl">
-    <img alt="wsl" width="50" src="https://skillicons.dev/icons?i=wsl" style="vertical-align: top;" />
   </a>
 
   <a href="https://yaml.org/" target="_blank" rel="noopener noreferrer" title="yaml">
