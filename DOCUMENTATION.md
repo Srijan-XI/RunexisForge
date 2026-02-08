@@ -8,21 +8,22 @@ Welcome to the complete documentation for Runexis Forge!
 
 ### Summary
 
-- **35+ Programming Languages**: Organized across 7 categories including Python, Java, C/C++, C#, PHP, R, Rust, Go, JavaScript, TypeScript, Kotlin, Swift, Ruby, SQL, Scala, MATLAB, Dart, Assembly, Bash, KQL, and more
-- **42 Backend Frameworks**: Django, Flask, FastAPI, Express, NestJS, Spring Boot, ASP.NET Core, Laravel, Ruby on Rails, Gin, Actix-web, Axum, Rocket, Phoenix, GraphQL, gRPC, and many more
-- **11 Frontend Frameworks**: Angular, React, Vue, Svelte, NuxtJs, Remix, Astro, SolidJs, Vite, Electron, Tauri
-- **11 Databases**: MySQL, PostgreSQL, MongoDB, Redis, DynamoDB, MariaDB, SQLite, IBM Db2, Neo4j, Snowflake, BigQuery
+- **40+ Programming Languages**: Organized across 7 categories including Python, Java, C/C++, C#, PHP, R, Rust, Go, JavaScript, TypeScript, Kotlin, Swift, Ruby, SQL, Scala, MATLAB, Dart, Assembly, Bash, KQL, Zig, Elixir, Lua, Haskell, and more
+- **45+ Backend Frameworks**: Django, Flask, FastAPI, Express, NestJS, Spring Boot, ASP.NET Core, Laravel, Ruby on Rails, Gin, Phoenix, Rocket, Actix-web, Axum, Supabase, GraphQL, gRPC, and many more
+- **15+ Frontend Frameworks**: Angular, React, Vue, Svelte, NuxtJs, Remix, Astro, SolidJs, Qwik, htmx, Alpine.js, Lit, Vite, Electron, Tauri
+- **15+ Databases**: MySQL, PostgreSQL, MongoDB, Redis, DynamoDB, MariaDB, SQLite, IBM Db2, Neo4j, Snowflake, BigQuery, CockroachDB, Cassandra, Supabase, PlanetScale
 - **4 Cloud Platforms**: AWS, Azure, GCP, DigitalOcean
-- **26 DevOps & Infrastructure Tools**: Docker, Podman, Kubernetes, Helm, ArgoCD, Flux, Terraform, OpenTofu, Ansible, Prometheus, Grafana, Loki, Git, GitHub, GitLab, BitBucket, Jenkins, and more
+- **30+ DevOps & Infrastructure Tools**: Docker, Podman, Kubernetes, Helm, ArgoCD, Flux, Terraform, OpenTofu, Ansible, Prometheus, Grafana, Loki, Git, GitHub, GitLab, BitBucket, Jenkins, and more
 - **15+ Security Tools**: AquaSecurity/Trivy, Burp Suite, HashiCorp Vault, Metasploit, OpenVAS, Scapy, Snyk, SonarQube, Semgrep, and more
 - **5 Operating Systems**: Windows, macOS, iOS, Android, WSL
 - **26 Linux Distributions**: Organized by families - Arch (5), Debian (9), RedHat (5), Gentoo (2), NixOS, Qubes OS, Slackware, Alpine
 - **9 Game Engines**: Unity, Unreal Engine, Godot, CryEngine, Panda3D, Cocos2d, GameMaker Studio, Spring Engine, Rage
 - **Testing Tools**: Jest, Vitest, Postman
-- **Build Tools**: Vite, Electron, Tauri
-- **Data Engineering**: Apache Spark, Apache Kafka, Pandas, NumPy, TensorFlow, Airflow, dbt, DuckDB, Snowflake
+- **JavaScript Runtimes**: Node.js, Bun, Deno
+- **Build Tools**: Vite, Electron, Tauri, pnpm
+- **Data Engineering**: Apache Spark, Apache Kafka, Pandas, NumPy, TensorFlow, PyTorch, Hugging Face, Airflow, dbt, DuckDB, Airbyte, Snowflake
 - **Development Tools**: CSV, JSON, XML, YAML, TOML
-- **150+ Practice Questions**: Beginner to Expert levels
+- **125+ Practice Questions**: Beginner to Expert levels
 
 ### Getting Started
 
@@ -181,6 +182,30 @@ All web frameworks are located in **`/Backend-Web/`**
 - **Examples**: `Programming-Languages/Scripting/Ruby/examples/`
 - **Practice**: `Programming-Languages/Scripting/Ruby/questions/`
 
+#### Zig ⚡
+
+- **Location**: `/Programming-Languages/SystemsProgramming/Zig/`
+- **Guide**: `Programming-Languages/SystemsProgramming/Zig/Zig.md`
+- **Topics**: Systems programming, memory safety, comptime
+
+#### Elixir 💧
+
+- **Location**: `/Programming-Languages/Functional/Elixir/`
+- **Guide**: `Programming-Languages/Functional/Elixir/Elixir.md`
+- **Topics**: Functional programming, Erlang VM, concurrency
+
+#### Lua 🌙
+
+- **Location**: `/Programming-Languages/Scripting/Lua/`
+- **Guide**: `Programming-Languages/Scripting/Lua/Lua.md`
+- **Topics**: Scripting, game development, embedded systems
+
+#### Haskell 🎓
+
+- **Location**: `/Programming-Languages/Functional/Haskell/`
+- **Guide**: `Programming-Languages/Functional/Haskell/Haskell.md`
+- **Topics**: Pure functional programming, type system, lazy evaluation
+
 #### Scala 🔴
 
 - **Location**: `/Programming-Languages/General-purpose/Scala/`
@@ -237,6 +262,10 @@ All databases are located in **`/SQL&DB'S/`**
   - **IBM Db2**: `SQL&DB'S/IBM_Db2/IBM_Db2.md`
   - **Neo4j**: `SQL&DB'S/Neo4j/Neo4j.md`
   - **BigQuery**: `SQL&DB'S/BigQuery/BigQuery.md`
+  - **CockroachDB**: `SQL&DB'S/CockroachDB/CockroachDB.md`
+  - **Cassandra**: `SQL&DB'S/Cassandra/Cassandra.md`
+  - **Supabase**: `SQL&DB'S/Supabase/Supabase.md`
+  - **PlanetScale**: `SQL&DB'S/PlanetScale/PlanetScale.md`
 - **Topics**: SELECT, JOIN, Aggregate Functions, Subqueries, Transactions
 
 ### 🎨 Frontend Frameworks
@@ -295,6 +324,34 @@ All frontend frameworks are located in **`/Frontend-Frameworks/`**
 - **Introduction**: `Frontend-Frameworks/SolidJS/SolidJS.md#introduction`
 - **User Guide**: `Frontend-Frameworks/SolidJS/SolidJS.md#user-guide`
 
+#### Qwik ⚡
+
+- **Location**: `/Frontend-Frameworks/Qwik/`
+- **Introduction**: `Frontend-Frameworks/Qwik/Qwik.md#introduction`
+- **User Guide**: `Frontend-Frameworks/Qwik/Qwik.md#user-guide`
+- **Topics**: Resumability, O(1) loading, fine-grained lazy loading
+
+#### htmx 🔷
+
+- **Location**: `/Frontend-Frameworks/htmx/`
+- **Introduction**: `Frontend-Frameworks/htmx/htmx.md#introduction`
+- **User Guide**: `Frontend-Frameworks/htmx/htmx.md#user-guide`
+- **Topics**: Hypermedia-driven applications, AJAX, HTML attributes
+
+#### Alpine.js 🏔️
+
+- **Location**: `/Frontend-Frameworks/Alpine.js/`
+- **Introduction**: `Frontend-Frameworks/Alpine.js/Alpine.js.md#introduction`
+- **User Guide**: `Frontend-Frameworks/Alpine.js/Alpine.js.md#user-guide`
+- **Topics**: Lightweight reactivity, declarative rendering
+
+#### Lit 🔥
+
+- **Location**: `/Frontend-Frameworks/Lit/`
+- **Introduction**: `Frontend-Frameworks/Lit/Lit.md#introduction`
+- **User Guide**: `Frontend-Frameworks/Lit/Lit.md#user-guide`
+- **Topics**: Web Components, reactive properties, efficient updates
+
 ### 🔧 Backend Frameworks
 
 All backend frameworks are located in **`/Backend-Web/`**
@@ -339,6 +396,30 @@ All backend frameworks are located in **`/Backend-Web/`**
 
 - **Location**: `/Backend-Web/Gin/`
 - **Guide**: `Gin/Gin.md`
+
+#### Phoenix (Elixir) 🔥
+
+- **Location**: `/Backend-Web/Phoenix/`
+- **Guide**: `Phoenix/Phoenix.md`
+- **Topics**: Elixir web framework, channels, LiveView
+
+#### Rocket (Rust) 🚀
+
+- **Location**: `/Backend-Web/Rocket/`
+- **Guide**: `Rocket/Rocket.md`
+- **Topics**: Type-safe routing, async support, fairings
+
+#### Actix (Rust) ⚡
+
+- **Location**: `/Backend-Web/Actix/`
+- **Guide**: `Actix/Actix.md`
+- **Topics**: Actor framework, high performance, async/await
+
+#### Supabase 🔌
+
+- **Location**: `/Backend-Web/Supabase/`
+- **Guide**: `Supabase/Supabase.md`
+- **Topics**: PostgreSQL backend, real-time, authentication, storage
 
 #### LangChain 🔗
 
@@ -413,6 +494,20 @@ All cloud and DevOps tools are located in **`/Cloud-DevOps/`**
 - **Location**: `/Cloud-DevOps/Docker/`
 - **Guide**: `Cloud-DevOps/Docker/Docker.md`
 - **Topics**: Containers, Images, Dockerfile, Docker Compose, Volumes, Networking, Best Practices
+
+#### Prometheus 📈
+
+- **Location**: `/Cloud-DevOps/Prometheus/`
+- **Introduction**: `Cloud-DevOps/Prometheus/Prometheus.md#introduction`
+- **User Guide**: `Cloud-DevOps/Prometheus/Prometheus.md#user-guide`
+- **Topics**: Metrics collection, PromQL, exporters, alerting
+
+#### Grafana 📊
+
+- **Location**: `/Cloud-DevOps/Grafana/`
+- **Introduction**: `Cloud-DevOps/Grafana/Grafana.md#introduction`
+- **User Guide**: `Cloud-DevOps/Grafana/Grafana.md#user-guide`
+- **Topics**: Dashboards, data sources, alerts, visualization
 
 #### n8n 🔁
 
@@ -736,6 +831,27 @@ All data tools are located in **`/Data-Analytics/`**
 - **Examples**: `TensorFlow/examples/`
 - **Practice**: `TensorFlow/questions/`
 
+#### PyTorch 🔥
+
+- **Location**: `/Data-Analytics/PyTorch/`
+- **Introduction**: `Data-Analytics/PyTorch/PyTorch.md#introduction`
+- **User Guide**: `Data-Analytics/PyTorch/PyTorch.md#user-guide`
+- **Topics**: Deep learning framework, dynamic computation graphs
+
+#### Hugging Face 🤗
+
+- **Location**: `/Data-Analytics/HuggingFace/`
+- **Introduction**: `Data-Analytics/HuggingFace/HuggingFace.md#introduction`
+- **User Guide**: `Data-Analytics/HuggingFace/HuggingFace.md#user-guide`
+- **Topics**: Transformers library, model hub, datasets
+
+#### Airbyte 🔄
+
+- **Location**: `/Data-Analytics/Airbyte/`
+- **Introduction**: `Data-Analytics/Airbyte/Airbyte.md#introduction`
+- **User Guide**: `Data-Analytics/Airbyte/Airbyte.md#user-guide`
+- **Topics**: Data integration, ELT pipelines, connectors
+
 ### 🖥️ Operating Systems
 
 All operating systems are located in **`/Operating-Systems/`**
@@ -877,6 +993,24 @@ Linux distributions are organized in **`/Linux/`** by family:
 - **User Guide**: `Frontend-Frameworks/Tauri/Tauri.md#user-guide`
 - **Examples**: `Frontend-Frameworks/Tauri/examples/`
 - **Practice**: `Frontend-Frameworks/Tauri/questions/`
+
+#### Bun 🥟
+
+- **Location**: `/Development-Tools/Bun/`
+- **Guide**: `Development-Tools/Bun/Bun.md`
+- **Topics**: Fast JavaScript runtime, bundler, package manager
+
+#### Deno 🦕
+
+- **Location**: `/Development-Tools/Deno/`
+- **Guide**: `Development-Tools/Deno/Deno.md`
+- **Topics**: Secure TypeScript/JavaScript runtime, modern APIs
+
+#### pnpm 📦
+
+- **Location**: `/Development-Tools/pnpm/`
+- **Guide**: `Development-Tools/pnpm/pnpm.md`
+- **Topics**: Fast, disk-efficient package manager
 
 #### YAML 🧾
 
@@ -1133,7 +1267,9 @@ Linux distributions are organized in **`/Linux/`** by family:
 | JavaScript| 5       | 7            | 13       | 25    |
 | TypeScript| 3       | 4            | 3        | 10    |
 | SQL      | 5        | 3            | 2        | 10    |
-| **Total**| **44+**  | **41+**      | **46+**  | **131+**|
+| Bash     | 3        | 4            | 3        | 10    |
+| KQL      | 3        | 4            | 3        | 10    |
+| **Total**| **50+**  | **45+**      | **50+**  | **145+**|
 
 ---
 
@@ -1281,10 +1417,10 @@ Found something unclear? Documentation improvements are always welcome!
 
 - Open an issue with the "documentation" label
 - Suggest improvements via pull request
-- Ask in [GitHub Discussions](https://github.com/Srijan-XI/Install-and-Learn-DevLangs/discussions)
+- Ask in [GitHub Discussions](https://github.com/Srijan-XI/RunexisForge/discussions)
 
 ---
 
-**Last Updated**: November 13, 2025
+**Last Updated**: February 8, 2026
 
 [⬆ Back to README](README.md)
