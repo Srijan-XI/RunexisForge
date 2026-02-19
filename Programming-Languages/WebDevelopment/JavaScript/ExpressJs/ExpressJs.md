@@ -136,7 +136,7 @@ Represents the HTTP response that Express sends when it receives a request.
 
 ## Installation
 
-```bash
+```
 # Create a new directory
 mkdir myapp
 cd myapp
@@ -149,7 +149,7 @@ npm install express
 
 # Install development dependencies (optional)
 npm install --save-dev nodemon
-```bash
+```
 
 ## Hello World Example
 
@@ -165,7 +165,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
-```bash
+```
 
 ## HTTP Methods
 
@@ -192,7 +192,7 @@ app.use((req, res, next) => {
     console.log('Time:', Date.now());
     next();
 });
-```bash
+```
 
 ### 2. Router-Level Middleware
 
@@ -205,7 +205,7 @@ router.use((req, res, next) => {
     console.log('Router middleware');
     next();
 });
-```bash
+```
 
 ### 3. Error-Handling Middleware
 
@@ -216,7 +216,7 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke!');
 });
-```bash
+```
 
 ### 4. Built-in Middleware
 
@@ -226,7 +226,7 @@ Provided by Express itself.
 app.use(express.json());              // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded
 app.use(express.static('public'));     // Serve static files
-```bash
+```
 
 ### 5. Third-Party Middleware
 
@@ -240,7 +240,7 @@ const morgan = require('morgan');
 app.use(cors());                       // Enable CORS
 app.use(helmet());                     // Security headers
 app.use(morgan('dev'));                // Logging
-```bash
+```
 
 ## Routing
 
@@ -266,7 +266,7 @@ app.put('/users/:id', (req, res) => {
 app.delete('/users/:id', (req, res) => {
     res.json({ message: `Delete user ${req.params.id}` });
 });
-```bash
+```
 
 ### Route Parameters
 
@@ -283,7 +283,7 @@ app.get('/users/:userId/posts/:postId', (req, res) => {
         postId: req.params.postId
     });
 });
-```bash
+```
 
 ### Query Strings
 
@@ -295,7 +295,7 @@ app.get('/search', (req, res) => {
         page: req.query.page     // '2'
     });
 });
-```bash
+```
 
 ### Router Module
 
@@ -317,7 +317,7 @@ module.exports = router;
 // app.js
 const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
-```bash
+```
 
 ## Response Methods
 
@@ -340,35 +340,35 @@ app.use('/users', usersRouter);
 ```javascript
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-```bash
+```
 
 ### 2. **CORS** (Cross-Origin Resource Sharing)
 
 ```javascript
 const cors = require('cors');
 app.use(cors());
-```bash
+```
 
 ### 3. **Helmet** (Security)
 
 ```javascript
 const helmet = require('helmet');
 app.use(helmet());
-```bash
+```
 
 ### 4. **Morgan** (Logging)
 
 ```javascript
 const morgan = require('morgan');
 app.use(morgan('dev'));
-```bash
+```
 
 ### 5. **Cookie Parser**
 
 ```javascript
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
-```bash
+```
 
 ### 6. **Express Session**
 
@@ -379,7 +379,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-```bash
+```
 
 ## RESTful API Example
 
@@ -435,7 +435,7 @@ app.delete('/api/users/:id', (req, res) => {
 });
 
 app.listen(3000, () => console.log('Server running on port 3000'));
-```bash
+```
 
 ## Advantages
 
@@ -468,7 +468,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ## Project Structure (Best Practice)
 
-```bash
+```
 myapp/
 ├── node_modules/
 ├── public/
@@ -495,7 +495,7 @@ myapp/
 ├── .gitignore
 ├── package.json
 └── server.js
-```bash
+```
 
 ## Best Practices
 

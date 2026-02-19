@@ -22,9 +22,9 @@ This guide details professional, repeatable methods for installing and configuri
 - Download and install **MSYS2** for a modern GCC/Clang experience.
 - In the MSYS2 terminal, run
 
-```bash
+```
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
-```bash
+```
 
 - Add the MinGW-w64 `bin` directory (usually `C:\msys64\ucrt64\bin`) to your system `PATH`.
 - This setup gives access to `gcc`, `g++`, `clang`, and debugging tools for native Windows binaries.
@@ -59,17 +59,17 @@ if above option not work then use `guide-part02.md` file for easy installation s
 
 - Ubuntu/Debian:
 
-```bash
+```
 sudo apt-get update
 sudo apt-get install build-essential clang cmake gdb
-```bash
+```
 
 - Fedora/Red Hat:
 
-```bash
+```
 sudo dnf groupinstall "Development Tools"
 sudo dnf install clang cmake gdb
-```bash
+```
 
 - Verify installation:
 `gcc --version` and `clang --version`.
@@ -100,9 +100,9 @@ sudo dnf install clang cmake gdb
 - Install **Xcode** from the Mac App Store.
 - To install only the core CLI tools:
 
-```bash
+```
 xcode-select --install
-```bash
+```
 
 - Both methods provide `clang`, Apple’s officially supported C/C++ compiler.
 
@@ -110,15 +110,15 @@ xcode-select --install
 
 - Install Homebrew:
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```bash
+```
+/bin/ -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 - Then:
 
-```bash
+```
 brew install gcc cmake gdb
-```bash
+```
 
 ### B. IDEs \& Editors
 

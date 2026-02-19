@@ -13,11 +13,11 @@ Go to the Release versions section at scroll down and download the latest archiv
 
 Example :
 
-```bash
+```
 GCC 15.2.0 (with POSIX threads) + MinGW-w64 13.0.0 (UCRT) - release 3   (LATEST)
 Win32 (without LLVM/Clang/LLD/LLDB): 7-Zip archive* | Zip archive
 Win64 (without LLVM/Clang/LLD/LLDB): 7-Zip archive* | Zip archive
-```bash
+```
 
 Download Win32 or Win64 version based on your system architecture.
 
@@ -31,25 +31,25 @@ Winget can directly pull the compiler from official repositories.
 
 ```powershell
 winget install --id=GnuWin32.GCC
-```bash
+```
 
 Or for a more up-to-date MinGW-w64 build:
 
-```bash
+```
 winget install --id=WinLibs.MinGW-w64 --source=winget
-```bash
+```
 
 ### For LLVM Clang
 
-```bash
+```
 winget install LLVM.LLVM
-```bash
+```
 
 ### For Microsoft Build Tools (MSVC without full Visual Studio)
 
-```bash
+```
 winget install --id=Microsoft.VisualStudio.2022.BuildTools --source=winget
-```bash
+```
 
 - During install, select C++ build tools.
 
@@ -59,21 +59,21 @@ If you install [Chocolatey](https://chocolatey.org/install), you can get compile
 
 ### Install GCC
 
-```bash
+```
 choco install mingw
-```bash
+```
 
 ### Install LLVM Clang
 
-```bash
+```
 choco install llvm
-```bash
+```
 
 ### Install Visual Studio Build Tools
 
-```bash
+```
 choco install visualstudio2022buildtools
-```bash
+```
 
 ### Why This Method is Easier
 
@@ -85,15 +85,15 @@ choco install visualstudio2022buildtools
 
 ---
 
-```bash
+```
 winget upgrade --all
-```bash
+```
 
 or
 
-```bash
+```
 choco upgrade all
-```bash
+```
 
 ## 3. Use Code::Blocks IDE (with built-in MinGW)
 
@@ -105,4 +105,4 @@ Winget script example:
 
 ```powershell
 winget install codeblocks.codeblocks
-```bash
+```

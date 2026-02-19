@@ -8,10 +8,10 @@
 - Run the installer and follow on-screen instructions.
 - Open Command Prompt and verify with:
 
-```bash
+```
 rustc --version
 cargo --version
-```bash
+```
 
 - Update Rust: `rustup update`.
 
@@ -19,31 +19,31 @@ cargo --version
 
 - Open the terminal and run:
 
-```bash
+```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```bash
+```
 
 - Follow installation prompts.
 - Reload your shell or restart terminal:
 
-```bash
+```
 source $HOME/.cargo/env
-```bash
+```
 
 - Verify:
 
-```bash
+```
 rustc --version
 cargo --version
-```bash
+```
 
 **macOS**
 
 - Open Terminal and run:
 
-```bash
+```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```bash
+```
 
 - Follow installation instructions.
 - To update, run: `rustup update`.
@@ -60,7 +60,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fn main() {
     println!("Hello, world!");
 }
-```bash
+```
 
 **Variables \& Types**
 
@@ -70,7 +70,7 @@ fn main() {
     let y = 10.0; // f64 by default
     println!("x = {}, y = {}", x, y);
 }
-```bash
+```
 
 **Control Flow**
 
@@ -84,7 +84,7 @@ fn main() {
         }
     }
 }
-```bash
+```
 
 ***
 
@@ -139,7 +139,7 @@ fn main() {
         if i % 2 == 0 { println!("{}", i); }
     }
 }
-```bash
+```
 
 1. **Sum Array Elements**
 
@@ -149,7 +149,7 @@ fn main() {
     let sum: i32 = arr.iter().sum();
     println!("{}", sum);
 }
-```bash
+```
 
 ### Intermediate
 
@@ -161,7 +161,7 @@ fn main() {
     let rev: String = s.chars().rev().collect();
     println!("{}", rev);
 }
-```bash
+```
 
 1. **Check if Number is Prime**
 
@@ -174,7 +174,7 @@ fn is_prime(n: u32) -> bool {
     true
 }
 fn main() { println!("{}", is_prime(17)); }
-```bash
+```
 
 1. **Factorial Calculation**
 
@@ -185,7 +185,7 @@ fn factorial(n: u32) -> u32 {
 fn main() {
     println!("{}", factorial(5));
 }
-```bash
+```
 
 ### Advanced
 
@@ -196,7 +196,7 @@ fn main() {
     let v = vec![10, 44, 32, 17];
     println!("{}", v.iter().max().unwrap());
 }
-```bash
+```
 
 1. **Implement Fibonacci (Recursive)**
 
@@ -207,7 +207,7 @@ fn fib(n: u32) -> u32 {
 fn main() {
     println!("{}", fib(6));
 }
-```bash
+```
 
 1. **Write to a File**
 
@@ -218,7 +218,7 @@ fn main() {
     let mut file = File::create("demo.txt").unwrap();
     file.write_all(b"Hello, Rust!").unwrap();
 }
-```bash
+```
 
 1. **Struct for Rectangle + Area Method**
 
@@ -231,7 +231,7 @@ fn main() {
     let rect = Rectangle { width: 7, height: 3 };
     println!("Area: {}", rect.area());
 }
-```bash
+```
 
 1. **Read Numbers from User \& Sort**
 
@@ -247,4 +247,4 @@ fn main() {
     v.sort();
     println!("{:?}", v);
 }
-```bash
+```

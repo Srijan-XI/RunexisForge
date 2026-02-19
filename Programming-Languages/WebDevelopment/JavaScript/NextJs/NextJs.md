@@ -640,5 +640,110 @@ vercel
 
 ## User Guide
 
-User guide coming soon.
+### Quick Start: Build a Simple Blog
+
+This guide combines the concepts above into a step-by-step tutorial.
+
+#### 1. Setup
+Initialize a new project:
+
+```bash
+npx create-next-app@latest my-blog
+cd my-blog
+npm run dev
+```
+
+#### 2. Create the Index Page
+Edit `pages/index.js` to add navigation:
+
+```javascript
+import Link from 'next/link';
+
+export default function Home() {
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>Welcome to My Blog</h1>
+      <Link href="/posts">View All Posts</Link>
+    </div>
+  );
+}
+```
+
+#### 3. Create a Blog Feed (SSG)
+Create a new file `pages/posts/index.js`. We will use `getStaticProps` to pre-render this page at build time.
+
+```javascript
+import Link from 'next/link';
+
+export default function BlogIndex({ posts }) {
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>Recent Posts</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id} style={{ margin: '10px 0' }}>
+            <Link href={`/posts/${post.id}`}>
+              {post.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// Simulating data fetch
+export async function getStaticProps() {
+  const posts = [
+    { id: 1, title: 'Getting Started with Next.js' },
+    { id: 2, title: 'Understanding SSR vs SSG' },
+    { id: 3, title: 'Deployment Guide' },
+  ];
+
+  return {
+    props: { posts },
+  };
+}
+```
+
+#### 4. Create Dynamic Post Pages (SSR)
+Create `pages/posts/[id].js` to handle dynamic routes. We'll use `getServerSideProps` to fetch data on every request (simulating a live data source).
+
+```javascript
+export default function Post({ post }) {
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>{post.title}</h1>
+      <p>This page was rendered on the server.</p>
+      <p>Post ID: {post.id}</p>
+    </div>
+  );
+}
+
+export async function getServerSideProps({ params }) {
+  // In a real app, fetch from API using params.id
+  const post = { 
+    id: params.id, 
+    title: `Detailed Post Content for #${params.id}` 
+  };
+
+  return {
+    props: { post },
+  };
+}
+```
+
+#### 5. Run and Test
+1. Visit `http://localhost:3000` to see the Home page.
+2. Click "View All Posts" to see the static Blog Index.
+3. Click any post to see the server-rendered dynamic page.
+
+#### 6. Next Steps
+- Add global styles in `styles/globals.css`.
+- Create a persistent layout using `pages/_app.js`.
+- Deploy your blog to **Vercel** with a single command:
+  ```bash
+  npx vercel
+  ```
+
 

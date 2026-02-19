@@ -32,11 +32,11 @@ Assembly language provides low-level, architecture-specific instructions that ma
 
 ## Toolchain Basics (x86-64, NASM + GCC)
 
-```bash
+```
 nasm -f elf64 hello.asm -o hello.o
 gcc -nostartfiles -no-pie hello.o -o hello
 ./hello
-```bash
+```
 
 ## Minimal x86-64 Linux Example (Intel syntax)
 
@@ -58,7 +58,7 @@ _start:
   mov rax, 60       ; sys_exit
   xor rdi, rdi
   syscall
-```bash
+```
 
 ## Registers to Know
 
@@ -74,10 +74,10 @@ _start:
 
 ## ARM64 Tooling
 
-```bash
+```
 as -o hello.o hello.S
 ld -o hello hello.o
-```bash
+```
 
 Instruction names differ; refer to ARM docs for register usage and calling conventions.
 
