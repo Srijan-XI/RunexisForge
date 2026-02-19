@@ -41,13 +41,13 @@ Scala is a hybrid functional and object-oriented language on the JVM, blending c
 ```bash
 scala-cli repl
 scala-cli run Hello.scala
-```bash
+```
 
 ### Minimal Program
 
 ```scala
 @main def hello() = println("Hello, Scala")
-```bash
+```
 
 Run with `scala-cli run Hello.scala`.
 
@@ -57,20 +57,20 @@ Run with `scala-cli run Hello.scala`.
 sbt new scala/scala-seed.g8
 cd <project>
 sbt run
-```bash
+```
 
 ## Build & Test
 
 ```bash
 sbt compile
 sbt test
-```bash
+```
 
 ## Dependencies (sbt)
 
 ```scala
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.10.0"
-```bash
+```
 
 ## Key Concepts
 

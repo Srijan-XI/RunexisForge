@@ -44,7 +44,7 @@
 
 ## Architecture
 
-```bash
+```
 ┌─────────────────────────────────────────────────┐
 │                  Application                     │
 │            (JavaScript/Node.js Code)             │
@@ -68,7 +68,7 @@
 ┌──────────────────▼──────────────────────────────┐
 │            Operating System                      │
 └─────────────────────────────────────────────────┘
-```bash
+```
 
 ## Event Loop
 
@@ -164,7 +164,7 @@ Node.js comes with built-in modules that don't require installation:
 
 ### Common npm Commands
 
-```bash
+```
 npm init                    # Initialize a new project
 npm install <package>       # Install a package
 npm install -g <package>    # Install package globally
@@ -173,7 +173,7 @@ npm update                  # Update packages
 npm list                    # List installed packages
 npm search <term>           # Search for packages
 npm run <script>            # Run script from package.json
-```bash
+```
 
 ## Popular Node.js Frameworks
 
@@ -224,7 +224,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
-```bash
+```
 
 ## Getting Started
 
@@ -288,7 +288,173 @@ server.listen(port, hostname, () => {
 
 ---
 
-## User Guide
+## Installation
 
-User guide coming soon.
+### Windows & macOS
+1. Download the **LTS (Long Term Support)** installer from [nodejs.org](https://nodejs.org/).
+2. Run the installer and follow the prompts.
+3. (Optional) On macOS, you can also use Homebrew:
+   ```bash
+   brew install node
+   ```
+
+### Linux (Debian/Ubuntu)
+Using NodeSource binary distributions (recommended):
+```bash
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+### Version Managers (Recommended)
+Using a version manager like `nvm` (Node Version Manager) allows you to easily switch between Node.js versions.
+
+**Install nvm (Linux/macOS):**
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install --lts
+nvm use --lts
+```
+
+**Windows:** Use `nvm-windows`.
+
+## Quick Start
+
+### 1. Verify Installation
+Open your terminal and check the versions:
+```bash
+node -v
+npm -v
+```
+
+### 2. The REPL (Read-Eval-Print Loop)
+Type `node` and press Enter to start an interactive JavaScript session:
+```bash
+$ node
+> 1 + 1
+2
+> const name = 'Node.js';
+undefined
+> console.log(`Hello ${name}`);
+Hello Node.js
+undefined
+> .exit
+```
+
+### 3. Running a Script
+Create a file named `app.js`:
+```javascript
+console.log("Hello from file!");
+```
+
+Run it:
+```bash
+node app.js
+```
+
+## NPM (Node Package Manager)
+
+### Initialize a Project
+Create a `package.json` file to manage your project configuration and dependencies.
+```bash
+mkdir my-node-app
+cd my-node-app
+npm init -y  # -y accepts all defaults
+```
+
+### Install Dependencies
+**Production dependencies** (e.g., web frameworks, database drivers):
+```bash
+npm install express mongoose
+```
+
+**Development dependencies** (e.g., testing tools, linters):
+```bash
+npm install --save-dev jest nodemon
+```
+
+### Usage in Code
+```javascript
+// Import the installed package
+const express = require('express');
+const app = express();
+```
+
+## Basic Concepts & Patterns
+
+### 1. Modules (CommonJS)
+**math.js**:
+```javascript
+const add = (a, b) => a + b;
+module.exports = { add };
+```
+
+**index.js**:
+```javascript
+const math = require('./math');
+console.log(math.add(5, 3)); // 8
+```
+
+### 2. ES Modules (Modern)
+Set `"type": "module"` in `package.json` or use `.mjs` extension.
+
+**math.mjs**:
+```javascript
+export const add = (a, b) => a + b;
+```
+
+**index.mjs**:
+```javascript
+import { add } from './math.mjs';
+console.log(add(5, 3));
+```
+
+### 3. File System (Async/Await)
+Reading a file without blocking the event loop:
+```javascript
+const fs = require('fs').promises;
+
+async function readFile() {
+  try {
+    const data = await fs.readFile('example.txt', 'utf8');
+    console.log(data);
+  } catch (err) {
+    console.error('Error reading file:', err);
+  }
+}
+
+readFile();
+```
+
+### 4. HTTP Server
+A simple web server:
+```javascript
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.write('Welcome to Home Page');
+    res.end();
+  } else if (req.url === '/api') {
+    res.setHeader('Content-Type', 'application/json');
+    res.write(JSON.stringify({ message: 'Hello JSON' }));
+    res.end();
+  } else {
+    res.statusCode = 404;
+    res.end('Not Found');
+  }
+});
+
+server.listen(3000, () => console.log('Listening on port 3000...'));
+```
+
+## Debugging
+
+1. **Console**: Use `console.log()`, `console.error()`, `console.table()`.
+2. **Inspector**: Run with `--inspect` flag to debug in Chrome DevTools.
+   ```bash
+   node --inspect app.js
+   ```
+   Open `chrome://inspect` in Chrome and click "Open dedicated DevTools for Node".
+3. **VS Code**: Use the built-in "Run and Debug" side panel.
 

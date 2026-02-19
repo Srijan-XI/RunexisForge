@@ -2,6 +2,9 @@
 
 ## Introduction
 
+An overview of TypeScript — its features, advantages, trade-offs, and core concepts.
+
+---
 
 ## 🚀 What is TypeScript?
 
@@ -149,7 +152,7 @@ let user: { name: string; age: number } = {
   name: "Alice",
   age: 25
 };
-```javascript
+```
 
 ### 2. Interfaces
 
@@ -168,7 +171,7 @@ const user: User = {
   email: "john@example.com",
   createdAt: new Date()
 };
-```javascript
+```
 
 ### 3. Classes
 
@@ -188,7 +191,7 @@ class Person {
     return `Hi, I'm ${this.name}`;
   }
 }
-```javascript
+```
 
 ### 4. Generics
 
@@ -217,7 +220,7 @@ class DataStore<T> {
     return this.items;
   }
 }
-```javascript
+```
 
 ### 5. Union and Intersection Types
 
@@ -245,7 +248,7 @@ const person: Person = {
   name: "Alice",
   age: 30
 };
-```javascript
+```
 
 ### 6. Type Aliases
 
@@ -262,7 +265,7 @@ type Callback = (data: string) => void;
 // Using type alias
 const point: Point = { x: 10, y: 20 };
 const userId: ID = 123;
-```javascript
+```
 
 ### 7. Enums
 
@@ -284,7 +287,7 @@ enum Color {
 
 let direction: Direction = Direction.Up;
 let color: Color = Color.Red;
-```javascript
+```
 
 ---
 
@@ -309,7 +312,7 @@ let color: Color = Color.Red;
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
-```javascript
+```
 
 ---
 
@@ -326,7 +329,7 @@ let count = 42;        // Inferred as number
 function add(a: number, b: number) {
   return a + b; // Return type inferred as number
 }
-```javascript
+```
 
 ### Type Guards
 
@@ -340,7 +343,7 @@ function processValue(value: string | number) {
     console.log(value.toFixed(2));
   }
 }
-```javascript
+```
 
 ### Non-Null Assertion
 
@@ -354,7 +357,7 @@ function getLength(str: string | null) {
 function getLengthSafe(str: string | null) {
   return str?.length; // Returns undefined if null
 }
-```javascript
+```
 
 ---
 
@@ -405,7 +408,7 @@ const api = new ApiClient('https://api.example.com');
 // TypeScript knows the response type
 const response = await api.get<User>('/users/1');
 console.log(response.data.name); // Type-safe access
-```text
+```
 
 ---
 
@@ -451,7 +454,7 @@ console.log(response.data.name); // Type-safe access
 - **DefinitelyTyped**: Community-maintained type definitions for JavaScript libraries
 - **@types/* packages**: Install types for popular libraries
 
-  ```bash
+  ```
   npm install --save-dev @types/node @types/express @types/react
   ```
 
@@ -486,6 +489,9 @@ TypeScript works excellently with design patterns:
 
 ## User Guide
 
+Step-by-step guide to installing, configuring, and using TypeScript in real projects.
+
+---
 
 ## 💻 Installation
 
@@ -496,25 +502,25 @@ TypeScript works excellently with design patterns:
 - Download from <https://nodejs.org/>
 - Verify installation:
 
-  ```bash
+  ```
   node --version
   npm --version
   ```
 
 ### Global Installation (Recommended for CLI)
 
-```bash
+```
 # Install TypeScript globally
 npm install -g typescript
 
 # Verify installation
 tsc --version
 # Output: Version 5.x.x
-```bash
+```
 
 ### Project-Specific Installation (Recommended for Projects)
 
-```bash
+```
 # Create project directory
 mkdir my-typescript-project
 cd my-typescript-project
@@ -527,29 +533,29 @@ npm install --save-dev typescript
 
 # Verify
 npx tsc --version
-```bash
+```
 
 ### Alternative: Using Package Managers
 
 **Yarn:**
 
-```bash
+```
 # Global
 yarn global add typescript
 
 # Project-specific
 yarn add --dev typescript
-```bash
+```
 
 **pnpm:**
 
-```bash
+```
 # Global
 pnpm add -g typescript
 
 # Project-specific
 pnpm add -D typescript
-```bash
+```
 
 ---
 
@@ -557,10 +563,10 @@ pnpm add -D typescript
 
 ### Create TypeScript Configuration
 
-```bash
+```
 # Generate tsconfig.json
 npx tsc --init
-```bash
+```
 
 ### Basic `tsconfig.json` Configuration
 
@@ -602,11 +608,11 @@ npx tsc --init
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
-```bash
+```
 
 ### Project Structure
 
-```bash
+```
 my-typescript-project/
 ├── src/
 │   ├── index.ts
@@ -619,7 +625,7 @@ my-typescript-project/
 ├── package.json
 ├── tsconfig.json
 └── .gitignore
-```bash
+```
 
 ---
 
@@ -651,11 +657,11 @@ let user: { name: string; age: number } = {
 
 console.log(message);
 console.log(user);
-```bash
+```
 
 ### Compile TypeScript
 
-```bash
+```
 # Compile single file
 tsc src/index.ts
 
@@ -667,14 +673,14 @@ tsc --watch
 
 # Compile with specific config
 tsc --project tsconfig.json
-```bash
+```
 
 ### Run Compiled JavaScript
 
-```bash
+```
 # Run compiled file
 node dist/index.js
-```bash
+```
 
 ---
 
@@ -682,13 +688,13 @@ node dist/index.js
 
 **Install ts-node:**
 
-```bash
+```
 npm install --save-dev ts-node @types/node
-```bash
+```
 
 **Run TypeScript without compilation:**
 
-```bash
+```
 # Run TypeScript file directly
 npx ts-node src/index.ts
 
@@ -702,7 +708,7 @@ npx ts-node src/index.ts
 
 # Then run
 npm start
-```bash
+```
 
 ---
 
@@ -740,7 +746,7 @@ function logMessage(msg: string): void {
 function throwError(message: string): never {
   throw new Error(message);
 }
-```bash
+```
 
 ### Interfaces
 
@@ -784,7 +790,7 @@ const dict: Dictionary = {
   hello: "world",
   foo: "bar"
 };
-```bash
+```
 
 ### Classes
 
@@ -854,7 +860,7 @@ class Dog extends Animal {
     console.log("Woof!");
   }
 }
-```bash
+```
 
 ### Type Aliases and Union Types
 
@@ -895,7 +901,7 @@ const cc: ColorfulCircle = {
   color: "red",
   radius: 10
 };
-```bash
+```
 
 ### Generics
 
@@ -951,7 +957,7 @@ interface HasId {
 function getById<T extends HasId>(items: T[], id: number): T | undefined {
   return items.find(item => item.id === id);
 }
-```bash
+```
 
 ### Enums
 
@@ -985,7 +991,7 @@ const enum Color {
 }
 
 let color = Color.Red;
-```bash
+```
 
 ---
 
@@ -1031,7 +1037,7 @@ function getUser() {
   return { id: 1, name: "John" };
 }
 type User2 = ReturnType<typeof getUser>;
-```bash
+```
 
 ### Type Guards and Narrowing
 
@@ -1081,7 +1087,7 @@ function move(pet: Fish | Bird) {
     pet.fly();
   }
 }
-```bash
+```
 
 ### Decorators (Experimental)
 
@@ -1093,7 +1099,7 @@ Enable in `tsconfig.json`:
     "experimentalDecorators": true
   }
 }
-```bash
+```
 
 ```typescript
 // Class decorator
@@ -1125,7 +1131,7 @@ class Calculator {
     return a + b;
   }
 }
-```bash
+```
 
 ---
 
@@ -1133,13 +1139,13 @@ class Calculator {
 
 ### ESLint with TypeScript
 
-```bash
+```
 # Install ESLint and TypeScript parser
 npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
 # Initialize ESLint
 npx eslint --init
-```bash
+```
 
 **`.eslintrc.json`:**
 
@@ -1160,11 +1166,11 @@ npx eslint --init
     "@typescript-eslint/no-explicit-any": "warn"
   }
 }
-```bash
+```
 
 ### Prettier for Formatting
 
-```bash
+```
 npm install --save-dev prettier
 
 # Create .prettierrc
@@ -1172,16 +1178,16 @@ echo '{"semi": true, "singleQuote": true}' > .prettierrc
 
 # Format files
 npx prettier --write "src/**/*.ts"
-```bash
+```
 
 ### Jest for Testing
 
-```bash
+```
 npm install --save-dev jest ts-jest @types/jest
 
 # Initialize Jest
 npx ts-jest config:init
-```bash
+```
 
 **Example test file (`src/utils.test.ts`):**
 
@@ -1199,7 +1205,7 @@ describe('add function', () => {
     expect(add(-1, -2)).toBe(-3);
   });
 });
-```bash
+```
 
 ---
 
@@ -1207,10 +1213,10 @@ describe('add function', () => {
 
 ### Node.js Backend with Express
 
-```bash
+```
 npm install express
 npm install --save-dev @types/express
-```bash
+```
 
 **`src/server.ts`:**
 
@@ -1229,17 +1235,17 @@ app.get('/', (req: Request, res: Response) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-```bash
+```
 
 ### React with TypeScript
 
-```bash
+```
 # Create React app with TypeScript
 npx create-react-app my-app --template typescript
 
 # Or with Vite
 npm create vite@latest my-app -- --template react-ts
-```bash
+```
 
 ---
 
@@ -1249,11 +1255,11 @@ npm create vite@latest my-app -- --template react-ts
 
 **Error: Cannot find module**
 
-```bash
+```
 # Install type definitions
 npm install --save-dev @types/node
 npm install --save-dev @types/express
-```bash
+```
 
 **Error: Property does not exist on type**
 
@@ -1263,7 +1269,7 @@ const element = document.getElementById('app') as HTMLDivElement;
 
 // Or non-null assertion
 const element = document.getElementById('app')!;
-```bash
+```
 
 **Strict mode errors**
 
@@ -1275,7 +1281,7 @@ const element = document.getElementById('app')!;
     "strictNullChecks": false  // Disable specific check
   }
 }
-```bash
+```
 
 ---
 
@@ -1293,7 +1299,7 @@ const element = document.getElementById('app')!;
     "format": "prettier --write src/**/*.ts"
   }
 }
-```bash
+```
 
 ---
 
@@ -1309,5 +1315,5 @@ const element = document.getElementById('app')!;
 
 **TypeScript is ready!** 🚀
 
-[← Back to TypeScript Introduction](TypeScript.md#introduction) | [View TypeScript Questions →](questions/)
+
 

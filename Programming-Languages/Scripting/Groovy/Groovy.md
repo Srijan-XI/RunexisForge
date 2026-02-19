@@ -1,6 +1,4 @@
-# Groovy
-
-## Introduction
+# ☯️ Groovy Programming Language - Introduction
 
 ## 📘 What is Groovy?
 

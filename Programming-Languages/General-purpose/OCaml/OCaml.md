@@ -18,5 +18,5 @@
 
 ## User Guide
 
-User guide coming soon.
+User guide coming soon. 
 

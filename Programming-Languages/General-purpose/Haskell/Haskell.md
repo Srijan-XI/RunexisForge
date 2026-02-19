@@ -1,7 +1,3 @@
-# Haskell
-
-## Introduction
-
 # 🎓 Haskell Programming Language - Introduction
 
 **Haskell** is a purely functional programming language with a strong, static type system and lazy evaluation. Named after logician Haskell Curry, it pushes functional programming to its logical extreme and has influenced modern languages like Rust, Swift, and Scala.
@@ -19,7 +15,7 @@
 - **Compilers**: GHC itself, Purescript, Elm compilers
 - **Blockchain**: Cardano (ADA) written in Haskell
 - **Research**: Academic computer science
-- **Web**: Yesod, Servant frameworks
+- **Web**: Yesod, Servant frameworks    
 
 ## ⚖️ Advantages
 ✅ Catches bugs at compile time (type system prevents many errors)

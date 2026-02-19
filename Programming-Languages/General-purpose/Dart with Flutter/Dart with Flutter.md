@@ -61,7 +61,7 @@ pubspec.yaml
 android/
 ios/
 web/
-```bash
+```
 
 ## Minimal Flutter App
 
@@ -82,14 +82,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-```bash
+```
 
 ## Dependencies
 
 ```bash
 flutter pub add http
 flutter pub get
-```bash
+```
 
 ## Hot Reload vs. Restart
 
@@ -102,7 +102,7 @@ flutter pub get
 flutter build apk
 flutter build ios --release
 flutter build web
-```bash
+```
 
 ## Next Steps
 

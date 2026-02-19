@@ -90,7 +90,7 @@
 │            (Rendered Page + JS)                  │
 │              (Hydration)                         │
 └─────────────────────────────────────────────────┘
-```javascript
+```
 
 ## Rendering Strategies
 
@@ -113,7 +113,7 @@ export async function getStaticPaths() {
     const paths = posts.map(post => ({ params: { id: post.id } }));
     return { paths, fallback: false };
 }
-```javascript
+```
 
 ### 2. Server-Side Rendering (SSR)
 
@@ -127,7 +127,7 @@ export async function getServerSideProps(context) {
         props: { user }
     };
 }
-```javascript
+```
 
 ### 3. Client-Side Rendering (CSR)
 
@@ -147,7 +147,7 @@ export default function Profile() {
     
     return <div>{user?.name}</div>;
 }
-```javascript
+```
 
 ### 4. Incremental Static Regeneration (ISR)
 
@@ -161,11 +161,11 @@ export async function getStaticProps() {
         revalidate: 10 // Regenerate page every 10 seconds
     };
 }
-```javascript
+```
 
 ## Installation
 
-```bash
+```
 # Create a new Next.js app
 npx create-next-app@latest my-app
 
@@ -177,11 +177,11 @@ cd my-app
 
 # Start development server
 npm run dev
-```bash
+```
 
 ## File Structure
 
-```bash
+```
 my-app/
 ├── node_modules/
 ├── public/
@@ -205,18 +205,18 @@ my-app/
 ├── package.json
 ├── next.config.js
 └── README.md
-```bash
+```
 
 ## Routing
 
 ### Basic Routes
 
-```bash
+```
 pages/index.js           → /
 pages/about.js           → /about
 pages/blog/index.js      → /blog
 pages/blog/first-post.js → /blog/first-post
-```bash
+```
 
 ### Dynamic Routes
 
@@ -232,7 +232,7 @@ export default function Post() {
 }
 
 // Matches: /posts/1, /posts/abc, etc.
-```bash
+```
 
 ### Catch-All Routes
 
@@ -246,7 +246,7 @@ export default function Doc() {
 }
 
 // Matches: /docs/a, /docs/a/b, /docs/a/b/c, etc.
-```bash
+```
 
 ### API Routes
 
@@ -259,7 +259,7 @@ export default function handler(req, res) {
         res.status(201).json({ message: 'User created' });
     }
 }
-```bash
+```
 
 ## Navigation
 
@@ -277,7 +277,7 @@ export default function Nav() {
         </nav>
     );
 }
-```bash
+```
 
 ### Programmatic Navigation
 
@@ -294,7 +294,7 @@ export default function Login() {
     
     return <button onClick={handleLogin}>Login</button>;
 }
-```bash
+```
 
 ## Image Optimization
 
@@ -313,7 +313,7 @@ export default function Avatar() {
         />
     );
 }
-```bash
+```
 
 ## Built-in Components
 
@@ -336,7 +336,7 @@ export default function Home() {
         </>
     );
 }
-```bash
+```
 
 ### 2. Script Component
 
@@ -356,7 +356,7 @@ export default function Page() {
         </>
     );
 }
-```bash
+```
 
 ## Data Fetching
 
@@ -383,7 +383,7 @@ export async function getStaticProps() {
         props: { posts }
     };
 }
-```bash
+```
 
 ### getServerSideProps (SSR)
 
@@ -403,7 +403,7 @@ export async function getServerSideProps(context) {
         props: { data }
     };
 }
-```bash
+```
 
 ### SWR (Client-Side)
 
@@ -422,7 +422,7 @@ export default function Profile() {
     
     return <div>Hello {data.name}!</div>;
 }
-```bash
+```
 
 ## Styling Options
 
@@ -441,7 +441,7 @@ import styles from './Button.module.css';
 export default function Button() {
     return <button className={styles.button}>Click me</button>;
 }
-```bash
+```
 
 ### 2. Global Styles
 
@@ -452,7 +452,7 @@ import '../styles/globals.css';
 export default function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />;
 }
-```bash
+```
 
 ### 3. CSS-in-JS (Styled JSX)
 
@@ -475,14 +475,14 @@ export default function Home() {
         </>
     );
 }
-```bash
+```
 
 ### 4. Tailwind CSS
 
-```bash
+```
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
-```bash
+```
 
 ```javascript
 export default function Home() {
@@ -492,15 +492,15 @@ export default function Home() {
         </div>
     );
 }
-```bash
+```
 
 ## Environment Variables
 
-```bash
+```
 # .env.local
 DATABASE_URL=mongodb://localhost:27017
 NEXT_PUBLIC_API_URL=https://api.example.com
-```bash
+```
 
 ```javascript
 // Server-side only
@@ -508,7 +508,7 @@ const dbUrl = process.env.DATABASE_URL;
 
 // Exposed to browser (NEXT_PUBLIC_ prefix)
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-```bash
+```
 
 ## Middleware (Edge Functions)
 
@@ -530,7 +530,7 @@ export function middleware(request) {
 export const config = {
     matcher: '/dashboard/:path*'
 };
-```bash
+```
 
 ## Advantages
 
@@ -608,13 +608,13 @@ Major companies using Next.js:
 
 ### Vercel (Recommended)
 
-```bash
+```
 # Install Vercel CLI
 npm i -g vercel
 
 # Deploy
 vercel
-```bash
+```
 
 ### Other Platforms
 

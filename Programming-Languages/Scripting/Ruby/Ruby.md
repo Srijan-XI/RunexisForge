@@ -41,20 +41,20 @@ Verify:
 ```pwsh
 ruby -v
 gem -v
-```ruby
+```
 
 ## Run a script
 
 ```pwsh
 ruby hello.rb
-```bash
+```
 
 ## Bundler (dependencies)
 
 ```pwsh
 gem install bundler
 bundle -v
-```bash
+```
 
 Create a Gemfile:
 
@@ -62,13 +62,13 @@ Create a Gemfile:
 source "https://rubygems.org"
 
 gem "cuba"
-```bash
+```
 
 Then:
 
 ```pwsh
 bundle install
-```bash
+```
 
 See `Ruby/examples/` and `Ruby/questions/` for practice.
 

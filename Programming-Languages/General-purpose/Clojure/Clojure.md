@@ -1,46 +1,111 @@
-# Clojure
-
-## Introduction
-
 # ☯️ Clojure Programming Language - Introduction
 
-**Clojure** is a modern, functional Lisp dialect that runs on the JVM, designed for concurrent programming with immutable data structures. Created by Rich Hickey in 2007, Clojure brings the power of Lisp to enterprise Java environments with practical concurrency solutions and excellent Java interoperability.
+### Overview
 
-## 🎯 Key Features
-- **Modern Lisp** for JVM with practical focus
-- **Immutable data structures** by default
-- **Software Transactional Memory** (STM) for concurrency
-- **100% Java interoperability** - use any Java library
-- **ClojureScript** - compiles to JavaScript
-- **spec** - optional type specs and generative testing
+Clojure is a dynamic, general-purpose programming language, combining the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming. It is a dialect of Lisp that runs on the Java Virtual Machine (JVM), Common Language Runtime (CLR), and JavaScript engines (ClojureScript).
 
-## 💡 Major Use Cases
-- **Web Development**: Ring, Compojure, Pedestal frameworks
-- **Data Processing**: Transducers, core.async pipelines  
-- **Enterprise**: Nubank (70M+ customers), Walmart
-- **Concurrent Systems**: STM makes parallelism easy
+### Key Features
 
-## ⚖️ Advantages
-✅ Immutability eliminates whole classes of bugs
-✅ Lisp macros for metaprogramming
-✅ Excellent REPL-driven development
-✅ Access entire Java ecosystem
-✅ Growing in enterprise (Nubank, Walmart, Funding Circle)
+- **Hosted on the JVM**: Seamless Java interoperability.
+- **Functional**: Immutable data structures and first-class functions.
+- **Lisp Dialect**: Code as data (homoiconicity) and powerful macro system.
+- **Concurrent**: Software Transactional Memory (STM) and agent systems.
+- **Dynamic**: REPL-driven development workflow.
 
-## ⚠️ Disadvantages
-❌ Lisp syntax unfamiliar (lots of parentheses)
-❌ Startup time slower than pure Java
-❌ Smaller community than JavaScript/Python
-❌ Stack traces can be cryptic
-❌ Dynamic typing (though spec helps)
+## Common Use Cases
 
-## 🏢 Companies Using: Nubank, Walmart, Apple, Netflix, Amazon
+- Backend Web Development (Ring, Compojure, Pedestal)
+- Data Processing and Analysis
+- Distributed Systems
+- Single Page Applications (via ClojureScript/Re-frame)
 
-**Best For**: Enterprise Java shops wanting functional programming, data-heavy applications, concurrent systems
+## Resources
+
+- Official Site: <https://clojure.org>
+- ClojureDocs: <https://clojuredocs.org>
+- Leiningen (Build Tool): <https://leiningen.org>
 
 ---
 
 ## User Guide
 
-User guide coming soon.
+## Install
+
+- **Prerequisite**: Install Java (JDK 8+).
+- **Clojure CLI**: 
+  - macOS: `brew install clojure/tools/clojure`
+  - Linux: Follow script on <https://clojure.org/guides/install_clojure>
+  - Windows: Use `scoop install clojure` or official installer.
+- **Leiningen** (Alternative build tool): Follow instructions at <https://leiningen.org>.
+
+## Quick Start
+
+Start the REPL (Read-Eval-Print Loop) using Clojure CLI:
+
+```bash
+clj
+```
+
+Or using Leiningen:
+
+```bash
+lein repl
+```
+
+## Minimal Program
+
+Create a file named `hello.clj`:
+
+```clojure
+(defn -main []
+  (println "Hello, Clojure!"))
+
+(-main)
+```
+
+Run with `clj`:
+
+```bash
+clj -M hello.clj
+```
+
+## Project Skeleton (Leiningen)
+
+Create a new app:
+
+```bash
+lein new app my-project
+cd my-project
+lein run
+```
+
+## Build & Test
+
+Using Leiningen:
+
+```bash
+lein uberjar
+lein test
+```
+
+Using Clojure CLI (with aliases in `deps.edn`):
+
+```bash
+clj -T:build uber
+clj -M:test
+```
+
+## Key Concepts
+
+- **Immutability**: Data structures are immutable by default.
+- **Collections**: Rich set of literal syntax for lists `()`, vectors `[]`, maps `{}`, and sets `#{}`.
+- **Vars**: Global bindings, usually typically dynamic.
+- **Atoms**: Manage shared, synchronous, independent state.
+- **Macros**: Transform code before compilation.
+
+## Next Steps
+
+- Explore `core.async` for CSP-style concurrency.
+- Build a web server with Ring and Reitit.
+- Try ClojureScript for frontend development.
 

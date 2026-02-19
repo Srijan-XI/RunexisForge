@@ -34,7 +34,7 @@ Swift is a modern, statically typed programming language created by Apple for bu
 import Foundation
 
 print("Hello, Swift!")
-```bash
+```
 
 ## Learning Path
 
@@ -59,7 +59,7 @@ Swift is most straightforward to run on **macOS**.
 
 ```bash
 swift --version
-```bash
+```
 
 ## Run a Swift Script
 
@@ -70,20 +70,20 @@ import Foundation
 
 let name = "Swift"
 print("Hello, \(name)!")
-```bash
+```
 
 Run:
 
 ```bash
 swift main.swift
-```bash
+```
 
 ## Build a Swift Executable
 
 ```bash
 swiftc main.swift -o app
 ./app
-```bash
+```
 
 ## Swift Basics
 
@@ -93,7 +93,7 @@ swiftc main.swift -o app
 let x = 10      // constant
 var y = 20      // variable
 y += 1
-```bash
+```
 
 ### Optionals
 
@@ -101,7 +101,7 @@ y += 1
 let maybe: String? = nil
 let length = maybe?.count ?? 0
 print(length)
-```bash
+```
 
 ### Arrays and Dictionaries
 
@@ -112,7 +112,7 @@ let doubled = nums.map { $0 * 2 }
 let ages: [String: Int] = ["Ada": 36, "Linus": 54]
 print(doubled)
 print(ages["Ada"] ?? 0)
-```bash
+```
 
 ## Next Steps
 
