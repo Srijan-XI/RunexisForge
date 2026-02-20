@@ -127,13 +127,13 @@ From Windows → open your WSL home in Explorer:
 
 ```bash
 explorer.exe .
-```bash
+```
 
 From WSL → run a Windows command:
 
 ```bash
 notepad.exe README.md
-```bash
+```
 
 ## Common dev setup
 
@@ -141,7 +141,7 @@ Inside WSL (Ubuntu):
 
 ```bash
 sudo apt install -y git curl build-essential
-```bash
+```
 
 ## Troubleshooting
 

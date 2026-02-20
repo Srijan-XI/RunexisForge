@@ -76,7 +76,7 @@ end
 function script.FireWeapon(weaponNum)
     EmitSfx(barrel, 1024)
 end
-```java
+```
 
 ---
 
@@ -149,21 +149,25 @@ Jump to the **User Guide** section below to get started.
 1. Download from springrts.com
 2. Run installer
 3. Install Spring Lobby (recommended)
-```bash
+```
 
 ### Linux
 
-```bash
-# Ubuntu/Debian
-sudo apt-get install spring
 
-# Or build from source
+#### Ubuntu/Debian
+```
+sudo apt-get install spring
+```
+
+#### Or build from source
+
+```
 git clone https://github.com/spring/spring.git
 cd spring
 cmake .
 make
 sudo make install
-```bash
+```
 
 ---
 
@@ -176,7 +180,7 @@ sudo make install
 2. Browse games (BAR, Zero-K, etc.)
 3. Download game/maps
 4. Join or host match
-```bash
+```
 
 ---
 
@@ -196,7 +200,7 @@ MyMod/
 ├── scripts/             # Lua unit scripts
 ├── luarules/            # Game logic
 └── luaui/              # UI customization
-```bash
+```
 
 ### modinfo.lua
 
@@ -211,7 +215,7 @@ return {
     description = "My awesome RTS game",
     modtype = 1,
 }
-```bash
+```
 
 ---
 
@@ -250,7 +254,7 @@ return {
         buildTime = 10,
     },
 }
-```bash
+```
 
 ---
 
@@ -279,7 +283,7 @@ return {
         avoidFriendly = true,
     },
 }
-```bash
+```
 
 ---
 

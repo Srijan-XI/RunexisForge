@@ -70,7 +70,7 @@ Understanding the state of an app is crucial:
 
 ```bash
 # In Xcode: File > New > Project > App (SwiftUI)
-```bash
+```
 
 `ContentView.swift` example:
 
@@ -81,7 +81,7 @@ struct ContentView: View {
             .padding()
     }
 }
-```bash
+```
 
 Run on Simulator or a connected device.
 

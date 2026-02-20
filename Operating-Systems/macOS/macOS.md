@@ -34,7 +34,7 @@ macOS is Apple's desktop operating system, known for its UNIX foundation, hardwa
 brew update
 brew install git
 brew search <pkg>
-```bash
+```
 
 ## Shell and Terminal
 

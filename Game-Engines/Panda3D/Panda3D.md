@@ -60,7 +60,7 @@ class MyGame(ShowBase):
 
 app = MyGame()
 app.run()
-```bash
+```
 
 ---
 
@@ -90,7 +90,7 @@ pip install panda3d
 
 # Verify installation
 python -c "import panda3d; print(panda3d.__version__)"
-```bash
+```
 
 ---
 
@@ -107,7 +107,7 @@ class MyApp(ShowBase):
         
 app = MyApp()
 app.run()
-```bash
+```
 
 ### Load and Display Model
 
@@ -126,7 +126,7 @@ class MyApp(ShowBase):
         
 app = MyApp()
 app.run()
-```bash
+```
 
 ---
 
