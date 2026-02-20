@@ -413,7 +413,7 @@ Installation:
 1. Download from: http://www.dev-c.com/gtav/scripthookv/
 2. Extract to GTA V root folder
 3. Files: ScriptHookV.dll, dinput8.dll
-```bash
+```
 
 #### 2. OpenIV
 
@@ -427,7 +427,7 @@ Installation:
 4. Set GTA V game path
 5. Enable Edit Mode
 6. Create "mods" folder (recommended)
-```bash
+```
 
 #### 3. Community Script Hook V .NET
 
@@ -438,7 +438,7 @@ Installation:
 1. Download ScriptHookVDotNet
 2. Extract to GTA V folder
 3. Requires .NET Framework 4.8
-```bash
+```
 
 ---
 
@@ -455,7 +455,7 @@ Using OpenIV:
 5. Replace textures (.ytd files)
 6. Rebuild archive
 7. Launch game
-```bash
+```
 
 #### Installing Script Mods
 
@@ -465,7 +465,7 @@ Using OpenIV:
 3. Ensure Script Hook V is installed
 4. Launch game
 5. Mod loads automatically
-```bash
+```
 
 #### Installing Vehicle Mods
 
@@ -478,7 +478,7 @@ Using OpenIV:
 5. Import vehicle files (.yft, .ytd, etc.)
 6. Edit vehicles.meta
 7. Save and rebuild
-```bash
+```
 
 ---
 
@@ -517,7 +517,7 @@ Solutions:
 3. Check Script Hook V version
 4. Update graphics drivers
 5. Run as Administrator
-```bash
+```
 
 #### Crashes During Gameplay
 
@@ -533,7 +533,7 @@ Solutions:
 2. Update all modding tools
 3. Restore backup files
 4. Use fewer resource-heavy mods
-```bash
+```
 
 #### Mods Not Loading
 
@@ -544,7 +544,7 @@ Check:
 3. Mod files in correct location
 4. No spaces in file paths
 5. Read mod installation instructions
-```bash
+```
 
 ---
 
@@ -557,21 +557,21 @@ Check:
 ```bash
 Similar to GTA V Script Hook
 Download: http://www.dev-c.com/rdr2/scripthookrdr2/
-```bash
+```
 
 #### Lenny's Mod Loader
 
 ```bash
 Popular mod loader for RDR2
 Loads .lml files
-```bash
+```
 
 #### Red Dead Offline
 
 ```bash
 Bypasses online check for modding
 Required for most mods
-```bash
+```
 
 ---
 
@@ -613,7 +613,7 @@ float SuspensionStiffness = 50.0f;
 // Unity - Cloth Component
 Cloth cloth = GetComponent<Cloth>();
 cloth.stretchingStiffness = 0.5f;
-```bash
+```
 
 ---
 
@@ -638,7 +638,7 @@ if (distanceToPlayer < 10f)
 {
     ChangeState(AIState.Alert);
 }
-```bash
+```
 
 ---
 
@@ -671,7 +671,7 @@ StaticMeshComponent->SetForcedLodModel(lodLevel);
 
 // Unity - LOD Group
 LODGroup lodGroup = GetComponent<LODGroup>();
-```bash
+```
 
 ---
 
@@ -710,7 +710,7 @@ Learning Path:
 2. Open World tutorial series
 3. Vehicle physics
 4. AI and behavior trees
-```bash
+```
 
 #### Unity
 
@@ -726,7 +726,7 @@ Learning Path:
 2. DOTS for performance
 3. Addressables for streaming
 4. NavMesh AI
-```bash
+```
 
 ---
 

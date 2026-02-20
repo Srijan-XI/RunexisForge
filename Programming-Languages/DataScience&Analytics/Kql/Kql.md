@@ -91,7 +91,7 @@ KQL uses a pipeline-based syntax where data flows from left to right through ope
 TableName
 | where TimeGenerated > ago(1h)
 | summarize count() by Category
-```bash
+```
 
 ### 2. **Rich Data Types**
 
@@ -161,7 +161,7 @@ AppExceptions
 | where TimeGenerated > ago(1h)
 | summarize ErrorCount = count() by ExceptionType
 | order by ErrorCount desc
-```bash
+```
 
 ### 2. **Performance Monitoring**
 
@@ -171,7 +171,7 @@ Perf
 | where CounterName == "% Processor Time"
 | summarize AvgCPU = avg(CounterValue) by bin(TimeGenerated, 5m)
 | render timechart
-```bash
+```
 
 ### 3. **Security Investigation**
 
@@ -181,7 +181,7 @@ SigninLogs
 | where ResultType != 0
 | summarize FailedAttempts = count() by UserPrincipalName
 | where FailedAttempts > 5
-```text
+```
 
 ### 4. **Resource Optimization**
 
@@ -191,7 +191,7 @@ Perf
 | where CounterName == "% Processor Time"
 | summarize AvgCPU = avg(CounterValue) by Computer
 | where AvgCPU < 10
-```text
+```
 
 ### 5. **Application Insights**
 
@@ -201,7 +201,7 @@ requests
 | where duration > 1000
 | summarize RequestCount = count() by name
 | top 10 by RequestCount desc
-```text
+```
 
 ## The KQL Philosophy
 
@@ -251,7 +251,7 @@ Source
 | Operator1
 | Operator2
 | Operator3
-```text
+```
 
 ## Getting Started
 
@@ -282,7 +282,7 @@ Source
 // Simple query to see recent events
 Event
 | take 10
-```text
+```
 
 ### **Basic Analysis**
 
@@ -291,7 +291,7 @@ Event
 Event
 | summarize count() by EventLevelName
 | render piechart
-```text
+```
 
 ## Learning Path
 
@@ -414,7 +414,7 @@ The combination of ease of use, performance, and integration with Azure's ecosys
 2. Navigate to your Log Analytics workspace
 3. Click "Logs" in the left menu
 4. Start writing queries in the query editor
-```bash
+```
 
 #### 2. Azure Data Explorer Web UI
 
@@ -423,7 +423,7 @@ The combination of ease of use, performance, and integration with Azure's ecosys
 2. Sign in with your Azure credentials
 3. Connect to a cluster
 4. Select a database and start querying
-```bash
+```
 
 #### 3. Kusto Explorer (Desktop Application)
 
@@ -432,7 +432,7 @@ The combination of ease of use, performance, and integration with Azure's ecosys
 2. Install and launch the application
 3. Add connection to your cluster
 4. Enhanced IDE for advanced query development
-```bash
+```
 
 #### 4. VS Code Extension
 
@@ -440,7 +440,7 @@ The combination of ease of use, performance, and integration with Azure's ecosys
 1. Install "Kusto" extension in VS Code
 2. Configure cluster connections
 3. Write and execute queries directly in VS Code
-```bash
+```
 
 ### Your First Query
 
@@ -448,7 +448,7 @@ The combination of ease of use, performance, and integration with Azure's ecosys
 // Display 10 rows from any table
 Event
 | take 10
-```bash
+```
 
 ---
 
@@ -461,7 +461,7 @@ TableName
 | operator1
 | operator2
 | operator3
-```bash
+```
 
 ### Key Components
 
@@ -478,7 +478,7 @@ Event
 | where TimeGenerated > ago(1h)
 | where EventLevelName == "Error"
 | project TimeGenerated, Computer, EventID, RenderedDescription
-```bash
+```
 
 ---
 
@@ -495,7 +495,7 @@ Event
 // Same as
 Event
 | limit 100
-```bash
+```
 
 ### 2. **project**
 
@@ -504,7 +504,7 @@ Selects specific columns to include in the result.
 ```kql
 Event
 | project TimeGenerated, Computer, EventLevelName, EventID
-```text
+```
 
 ### 3. **project-away**
 
@@ -513,7 +513,7 @@ Excludes specific columns from the result.
 ```kql
 Event
 | project-away TenantId, SourceSystem, MG
-```text
+```
 
 ### 4. **project-rename**
 
@@ -522,7 +522,7 @@ Renames columns.
 ```kql
 Event
 | project-rename Timestamp = TimeGenerated, Machine = Computer
-```text
+```
 
 ### 5. **extend**
 
@@ -532,7 +532,7 @@ Adds new calculated columns without removing existing ones.
 Event
 | extend DayOfWeek = dayofweek(TimeGenerated)
 | extend HourOfDay = hourofday(TimeGenerated)
-```text
+```
 
 ### 6. **distinct**
 
@@ -541,7 +541,7 @@ Returns unique values from specified columns.
 ```kql
 Event
 | distinct Computer
-```text
+```
 
 ### 7. **sort** / **order**
 
@@ -558,7 +558,7 @@ Event
 // Multiple columns
 Event
 | order by EventLevelName asc, TimeGenerated desc
-```text
+```
 
 ### 8. **top**
 
@@ -567,7 +567,7 @@ Returns top N rows based on a specified column.
 ```kql
 Event
 | top 10 by TimeGenerated desc
-```text
+```
 
 ---
 
@@ -599,7 +599,7 @@ Event
 // Multiple conditions (OR)
 Event
 | where EventLevelName == "Error" or EventLevelName == "Warning"
-```text
+```
 
 #### String Operations
 
@@ -631,7 +631,7 @@ Event
 // Has any (word boundary match)
 Event
 | where RenderedDescription has "error"
-```text
+```
 
 #### Null Checks
 
@@ -643,7 +643,7 @@ Event
 // Is not null
 Event
 | where isnotempty(Computer)
-```text
+```
 
 ---
 
@@ -658,7 +658,7 @@ Event
 | where RenderedDescription has "user"
 | parse RenderedDescription with * "user " Username " " *
 | project TimeGenerated, Username
-```text
+```
 
 ### **parse-where**
 
@@ -668,7 +668,7 @@ Parse with filtering (only returns successfully parsed rows).
 Event
 | parse-where RenderedDescription with * "error code: " ErrorCode:int
 | project TimeGenerated, ErrorCode
-```text
+```
 
 ### **extract**
 
@@ -678,7 +678,7 @@ Extracts data using regular expressions.
 Event
 | extend IpAddress = extract(@"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})", 1, RenderedDescription)
 | where isnotempty(IpAddress)
-```text
+```
 
 ### **split**
 
@@ -688,7 +688,7 @@ Splits string into array.
 Event
 | extend Parts = split(RenderedDescription, " ")
 | extend FirstWord = Parts[0]
-```text
+```
 
 ### **strcat** / String Concatenation
 
@@ -697,7 +697,7 @@ Combines strings.
 ```kql
 Event
 | extend FullInfo = strcat(Computer, ": ", EventLevelName)
-```text
+```
 
 ### **replace** / **replace_string**
 
@@ -706,7 +706,7 @@ Replaces occurrences in strings.
 ```kql
 Event
 | extend CleanDescription = replace(@"\d+", "X", RenderedDescription)
-```text
+```
 
 ---
 
@@ -734,7 +734,7 @@ Event
 // Multiple aggregations
 Event
 | summarize EventCount = count(), Computers = dcount(Computer) by EventLevelName
-```text
+```
 
 #### Common Aggregation Functions
 
@@ -749,7 +749,7 @@ Perf
     StdDev = stdev(CounterValue),
     Percentile95 = percentile(CounterValue, 95)
     by Computer
-```text
+```
 
 #### String Aggregations
 
@@ -760,7 +760,7 @@ Event
     AllComputers = make_list(Computer),    // All values as array
     FirstComputer = any(Computer)          // Any one value
     by EventLevelName
-```text
+```
 
 #### Time-based Aggregations
 
@@ -771,7 +771,7 @@ Event
     LastEvent = max(TimeGenerated),
     EventCount = count()
     by Computer
-```text
+```
 
 ---
 
@@ -797,7 +797,7 @@ Event
 // Last 30 days
 Event
 | where TimeGenerated > ago(30d)
-```text
+```
 
 #### **between()** - Time range
 
@@ -808,14 +808,14 @@ Event
 // Specific dates
 Event
 | where TimeGenerated between(datetime(2024-01-01) .. datetime(2024-01-31))
-```text
+```
 
 #### **now()** - Current time
 
 ```kql
 Event
 | extend HoursAgo = (now() - TimeGenerated) / 1h
-```text
+```
 
 ### Time Bucketing with **bin()**
 
@@ -833,7 +833,7 @@ Event
 // Daily buckets
 Event
 | summarize count() by bin(TimeGenerated, 1d)
-```text
+```
 
 ### Time Series with **make-series**
 
@@ -846,7 +846,7 @@ Event
     from ago(7d) to now() 
     step 1h
     by EventLevelName
-```text
+```
 
 ### Date/Time Functions
 
@@ -860,7 +860,7 @@ Event
     DayOfWeek = dayofweek(TimeGenerated),
     WeekOfYear = week_of_year(TimeGenerated)
 | project TimeGenerated, Year, Month, Day, Hour, DayOfWeek
-```text
+```
 
 ---
 
@@ -879,7 +879,7 @@ Event
     Heartbeat
     | distinct Computer
 ) on Computer
-```text
+```
 
 #### Join Kinds
 
@@ -904,7 +904,7 @@ Table1 | join kind=rightanti Table2 on Key
 
 // Left semi (rows in left that HAVE match in right)
 Table1 | join kind=leftsemi Table2 on Key
-```text
+```
 
 #### Example
 
@@ -918,7 +918,7 @@ let Performance = Perf
 Errors
 | join kind=inner (Performance) on Computer
 | project Computer, ErrorCount, AvgCPU
-```text
+```
 
 ### **union** Operator
 
@@ -937,7 +937,7 @@ union
 // Union multiple tables
 union Event, Syslog, Heartbeat
 | summarize count() by Type
-```text
+```
 
 ---
 
@@ -961,7 +961,7 @@ Event
 Event
 | extend Tags = parse_json(Tags)
 | mv-expand Tag = Tags
-```text
+```
 
 ### String Functions
 
@@ -974,7 +974,7 @@ Event
     Substring = substring(Computer, 0, 3),
     Trimmed = trim(@"\s", Computer),
     Reversed = reverse(Computer)
-```text
+```
 
 ### Mathematical Functions
 
@@ -988,7 +988,7 @@ Perf
     PowerValue = pow(CounterValue, 2),
     SquareRoot = sqrt(CounterValue),
     LogValue = log10(CounterValue)
-```text
+```
 
 ### Conditional Logic
 
@@ -1004,7 +1004,7 @@ Event
 // iif function (ternary operator)
 Event
 | extend IsError = iif(EventLevelName == "Error", "Yes", "No")
-```text
+```
 
 ### Statistical Functions
 
@@ -1018,7 +1018,7 @@ Perf
     P95 = percentile(CounterValue, 95),
     P99 = percentile(CounterValue, 99)
     by Computer
-```text
+```
 
 ---
 
@@ -1034,7 +1034,7 @@ Creates visualizations from query results.
 Event
 | summarize count() by bin(TimeGenerated, 1h)
 | render timechart
-```text
+```
 
 #### Bar Chart
 
@@ -1042,7 +1042,7 @@ Event
 Event
 | summarize count() by EventLevelName
 | render barchart
-```text
+```
 
 #### Column Chart
 
@@ -1051,7 +1051,7 @@ Event
 | summarize count() by Computer
 | top 10 by count_
 | render columnchart
-```text
+```
 
 #### Pie Chart
 
@@ -1059,7 +1059,7 @@ Event
 Event
 | summarize count() by EventLevelName
 | render piechart
-```text
+```
 
 #### Area Chart
 
@@ -1068,7 +1068,7 @@ Perf
 | where CounterName == "% Processor Time"
 | summarize avg(CounterValue) by bin(TimeGenerated, 5m)
 | render areachart
-```text
+```
 
 #### Line Chart
 
@@ -1076,7 +1076,7 @@ Perf
 Perf
 | summarize avg(CounterValue) by bin(TimeGenerated, 5m), Computer
 | render linechart
-```text
+```
 
 #### Scatter Chart
 
@@ -1085,7 +1085,7 @@ Perf
 | summarize AvgCPU = avg(CounterValue) by Computer
 | extend RandomValue = rand()
 | render scatterchart with (xcolumn=AvgCPU, ycolumn=RandomValue)
-```text
+```
 
 ---
 
@@ -1106,7 +1106,7 @@ Event
 Event
 | summarize count() by Computer, EventLevelName
 | where EventLevelName == "Error"
-```text
+```
 
 ### 2. **Always Use Time Filters**
 
@@ -1117,7 +1117,7 @@ Limit the time range to avoid scanning unnecessary data.
 Event
 | where TimeGenerated > ago(24h)
 | where EventLevelName == "Error"
-```text
+```
 
 ### 3. **Project Only Needed Columns**
 
@@ -1130,7 +1130,7 @@ Event
 
 // Bad (returns all columns)
 Event
-```text
+```
 
 ### 4. **Use `let` Statements for Reusability**
 
@@ -1143,7 +1143,7 @@ let errorEvents = Event
     | where EventLevelName == "Error";
 errorEvents
 | summarize count() by Computer
-```text
+```
 
 ### 5. **Leverage `summarize` Instead of `distinct`**
 
@@ -1158,7 +1158,7 @@ Event
 Event
 | distinct Computer
 | count
-```text
+```
 
 ### 6. **Use `take` for Quick Exploration**
 
@@ -1167,7 +1167,7 @@ When exploring data, use `take` to limit results.
 ```kql
 Event
 | take 100
-```text
+```
 
 ### 7. **Comment Your Queries**
 
@@ -1180,7 +1180,7 @@ Event
 | where TimeGenerated > ago(1h)  // Last hour only
 | where Computer in (prodServers)  // Production servers only
 | where EventLevelName == "Error"  // Errors only
-```text
+```
 
 ### 8. **Avoid Wildcards When Possible**
 
@@ -1194,7 +1194,7 @@ Event
 // Avoid
 Event
 | project *
-```text
+```
 
 ---
 
@@ -1207,7 +1207,7 @@ Event
 | where TimeGenerated > ago(24h)
 | summarize count() by Computer
 | top 10 by count_ desc
-```text
+```
 
 ### Pattern 2: Trend Analysis
 
@@ -1216,7 +1216,7 @@ Event
 | where TimeGenerated > ago(7d)
 | summarize count() by bin(TimeGenerated, 1h), EventLevelName
 | render timechart
-```text
+```
 
 ### Pattern 3: Error Rate Calculation
 
@@ -1226,7 +1226,7 @@ Event
     TotalEvents = count(),
     ErrorEvents = countif(EventLevelName == "Error")
 | extend ErrorRate = (ErrorEvents * 100.0) / TotalEvents
-```text
+```
 
 ### Pattern 4: Comparing Time Periods
 
@@ -1240,7 +1240,7 @@ let previous = Event
 current
 | extend Previous = toscalar(previous)
 | extend PercentChange = ((CurrentCount - Previous) * 100.0) / Previous
-```text
+```
 
 ### Pattern 5: Finding Anomalies
 
@@ -1252,7 +1252,7 @@ Perf
 | extend Average = avg(AvgCPU), StdDev = stdev(AvgCPU)
 | extend IsAnomaly = abs(AvgCPU - Average) > (2 * StdDev)
 | where IsAnomaly
-```text
+```
 
 ### Pattern 6: Pivoting Data
 
@@ -1260,7 +1260,7 @@ Perf
 Event
 | summarize count() by EventLevelName, Computer
 | evaluate pivot(EventLevelName)
-```text
+```
 
 ### Pattern 7: Rolling Aggregations
 
@@ -1271,7 +1271,7 @@ Perf
 | sort by TimeGenerated asc
 | serialize
 | extend MovingAvg = row_avg(CounterValue, 10)
-```text
+```
 
 ### Pattern 8: Correlation Analysis
 
@@ -1284,7 +1284,7 @@ Event
 | where Computer in (HighCPU)
 | where EventLevelName == "Error"
 | summarize count() by Computer
-```text
+```
 
 ---
 

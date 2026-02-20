@@ -324,7 +324,7 @@ Quick start guide for CryEngine game development.
 2. Select engine version (latest recommended)
 3. Click "Download & Install"
 4. Wait for installation to complete (~15-20 GB)
-```bash
+```
 
 ### 3. Prerequisites
 
@@ -344,14 +344,14 @@ Quick start guide for CryEngine game development.
 3. Choose template (First Person, Third Person, Empty, etc.)
 4. Set project name and location
 5. Click "Create"
-```bash
+```
 
 ### Opening in Editor
 
 ```bash
 1. Project opens in Sandbox Editor automatically
 2. Or: Right-click project → "Launch Editor"
-```bash
+```
 
 ---
 
@@ -383,7 +383,7 @@ Quick start guide for CryEngine game development.
 2. Choose terrain size
 3. Click OK
 4. Level opens in editor
-```bash
+```
 
 ### Adding Objects
 
@@ -392,7 +392,7 @@ Quick start guide for CryEngine game development.
 2. Select entity type
 3. Click in viewport to place
 4. Adjust properties in Rollup Bar
-```bash
+```
 
 ### Importing Assets
 
@@ -403,7 +403,7 @@ Quick start guide for CryEngine game development.
 2. Right-click → "Import to Engine"
 3. Configure import settings
 4. Click Import
-```bash
+```
 
 **Textures**:
 
@@ -411,7 +411,7 @@ Quick start guide for CryEngine game development.
 1. Place images in Assets/Textures
 2. Auto-detected by engine
 3. Use in Material Editor
-```bash
+```
 
 ---
 
@@ -442,7 +442,7 @@ public:
 private:
     float m_speed = 5.0f;
 };
-```bash
+```
 
 ```cpp
 // MyEntity.cpp
@@ -467,7 +467,7 @@ void CMyEntityComponent::ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& d
     desc.SetGUID("{12345678-1234-1234-1234-123456789012}"_cry_guid);
     desc.SetLabel("My Entity Component");
 }
-```bash
+```
 
 ### Visual Scripting (Schematyc)
 
@@ -476,7 +476,7 @@ void CMyEntityComponent::ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& d
 2. Right-click → Create → Script
 3. Add nodes and connections
 4. Connect to entities
-```bash
+```
 
 ---
 
@@ -493,7 +493,7 @@ void CMyEntityComponent::ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& d
    - Specular
    - Height (optional)
 4. Save material
-```bash
+```
 
 ### Material Properties
 
@@ -504,7 +504,7 @@ Shader: Illum (PBR Standard)
 - Glossiness
 - Normal Strength
 - Opacity
-```yaml
+```
 
 ---
 
@@ -519,7 +519,7 @@ Rollup Bar → Misc → Light → Point Light
 - Radius: Light reach
 - Diffuse Color: Light color
 - Specular Multiplier: Shininess
-```yaml
+```
 
 **Spot Light**:
 
@@ -527,7 +527,7 @@ Rollup Bar → Misc → Light → Point Light
 Similar to Point Light
 - Cone Angle: Spread
 - Attenuation Falloff
-```yaml
+```
 
 **Environment Probe**:
 
@@ -535,7 +535,7 @@ Similar to Point Light
 For global illumination
 - Cubemap generation
 - Affects all objects in range
-```yaml
+```
 
 ### Time of Day
 
@@ -544,7 +544,7 @@ For global illumination
 2. Adjust sun position
 3. Configure sky colors
 4. Set atmosphere parameters
-```yaml
+```
 
 ---
 
@@ -557,7 +557,7 @@ For global illumination
 2. Set heightmap resolution
 3. Set meters per texel
 4. Generate
-```yaml
+```
 
 ### Sculpting Terrain
 
@@ -572,7 +572,7 @@ Brushes:
 - Size
 - Hardness
 - Strength
-```yaml
+```
 
 ### Terrain Textures
 
@@ -581,7 +581,7 @@ Brushes:
 2. Add layer
 3. Assign material
 4. Paint with brush
-```yaml
+```
 
 ---
 
@@ -595,7 +595,7 @@ SEntityPhysicalizeParams params;
 params.type = PE_RIGID;
 params.mass = 10.0f;
 GetEntity()->Physicalize(params);
-```yaml
+```
 
 ### Collision Meshes
 
@@ -604,7 +604,7 @@ GetEntity()->Physicalize(params);
 2. Name with _phys suffix
 3. Import with model
 4. Engine auto-detects
-```yaml
+```
 
 ---
 
@@ -623,7 +623,7 @@ GetEntity()->Physicalize(params);
    - Color
    - Velocity
 5. Save
-```yaml
+```
 
 ### Using in Level
 
@@ -631,7 +631,7 @@ GetEntity()->Physicalize(params);
 1. Place ParticleEffect entity
 2. Select particle library
 3. Adjust parameters
-```yaml
+```
 
 ---
 
@@ -644,7 +644,7 @@ GetEntity()->Physicalize(params);
 2. Audio Controls Editor
 3. Create trigger
 4. Assign to entity or Flow Graph
-```yaml
+```
 
 ### 3D Audio
 
@@ -653,7 +653,7 @@ Rollup Bar → Sound
 - Position-based
 - Attenuation settings
 - Occlusion support
-```yaml
+```
 
 ---
 
@@ -669,7 +669,7 @@ Rollup Bar → Sound
    - Pak files
    - Shaders
 4. Build
-```yaml
+```
 
 ### Command Line Build
 
@@ -677,7 +677,7 @@ Rollup Bar → Sound
 cd YourProject
 WAF configure
 WAF build_win_x64_profile
-```yaml
+```
 
 ---
 
@@ -700,7 +700,7 @@ p_draw_helpers 1
 
 // Reload scripts
 #Script.ReloadScript()
-```bash
+```
 
 ### Performance Profiling
 
@@ -709,7 +709,7 @@ Profiling Tools:
 - r_ProfileShaders
 - sys_profile
 - e_StatObjBufferRenderTasks
-```bash
+```
 
 ---
 
