@@ -468,22 +468,6 @@ end)
 
 ---
 
-## 📖 Next Steps
-
-Ready to code in Elixir? Check out:
-1. **User Guide** (section below) - Installation & syntax
-2. **[Phoenix Framework Guide](./phoenix-framework.md)** - Web development
-3. **[OTP Guide](./otp-guide.md)** - Concurrent systems
-4. **[Code Examples](./examples/)** - Practical programs
-
----
-
-**💧 "Elixir: Scalable, Fault-Tolerant, Real-Time"**
-
-*Last Updated: January 15, 2026*
-
----
-
 ## User Guide
 
 This comprehensive guide covers everything you need to start programming in Elixir, from installation to advanced concepts.
