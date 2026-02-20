@@ -482,6 +482,170 @@ Using OpenIV:
 
 ---
 
+### Writing Script Hook V .NET Scripts (C#)
+
+Script Hook V .NET lets you write GTA V mods in C# with full access to game native functions.
+
+#### File Layout
+
+```
+GTA V root/
+├── ScriptHookV.dll
+├── dinput8.dll
+├── ScriptHookVDotNet.asi
+├── ScriptHookVDotNet3.dll
+└── scripts/
+    └── MyMod.dll       ← compiled C# mod
+```
+
+#### Hello World Script
+
+```csharp
+// MyMod.cs — compile to scripts/MyMod.dll
+using System;
+using GTA;
+using GTA.Math;
+using GTA.Native;
+
+public class MyMod : Script
+{
+    public MyMod()
+    {
+        Tick    += OnTick;
+        KeyDown += OnKeyDown;
+        GTA.UI.Notification.Show("~g~MyMod loaded!");
+    }
+
+    private void OnTick(object sender, EventArgs e) { }
+
+    private void OnKeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+    {
+        if (e.KeyCode == System.Windows.Forms.Keys.F5)
+        {
+            // Teleport to LSIA runway
+            Game.Player.Character.Position = new Vector3(-1037.2f, -2736.9f, 13.8f);
+            GTA.UI.Notification.Show("~b~Teleported to airport!");
+        }
+    }
+}
+```
+
+#### Spawn Vehicle + Teleport
+
+```csharp
+using GTA;
+using GTA.Math;
+using System;
+
+public class VehicleSpawner : Script
+{
+    public VehicleSpawner() { KeyDown += OnKeyDown; }
+
+    private void OnKeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+    {
+        if (e.KeyCode != System.Windows.Forms.Keys.F6) return;
+
+        Model model = new Model("adder");   // Bugatti Veyron
+        model.Request(500);
+
+        if (model.IsInCdImage && model.IsValid)
+        {
+            Ped player = Game.Player.Character;
+            Vector3 spawnPos = player.GetOffsetPosition(new Vector3(0, 6, 0));
+
+            Vehicle v = World.CreateVehicle(model, spawnPos);
+            v.PlaceOnGround();
+            v.PrimaryColor = VehicleColor.HotRed;
+            v.BodyHealth   = 1000f;
+            player.SetIntoVehicle(v, VehicleSeat.Driver);
+
+            GTA.UI.Notification.Show("~g~Adder spawned!");
+        }
+        model.MarkAsNoLongerNeeded();
+    }
+}
+```
+
+#### God Mode & No Wanted Toggle
+
+```csharp
+using GTA;
+using System;
+using System.Windows.Forms;
+
+public class PlayerPerks : Script
+{
+    private bool _godMode   = false;
+    private bool _noWanted  = false;
+
+    public PlayerPerks() { Tick += OnTick; KeyDown += OnKeyDown; }
+
+    private void OnTick(object sender, EventArgs e)
+    {
+        if (_godMode)
+        {
+            var p = Game.Player.Character;
+            p.Health = p.MaxHealth;
+            p.Armor  = 100;
+            Game.Player.IsInvincible = true;
+        }
+        if (_noWanted && Game.Player.WantedLevel > 0)
+            Game.Player.WantedLevel = 0;
+    }
+
+    private void OnKeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.F7)
+        {
+            _godMode = !_godMode;
+            Game.Player.IsInvincible = _godMode;
+            GTA.UI.Notification.Show(_godMode ? "~g~God Mode ON" : "~r~God Mode OFF");
+        }
+        if (e.KeyCode == Keys.F8)
+        {
+            _noWanted = !_noWanted;
+            GTA.UI.Notification.Show(_noWanted ? "~g~No Wanted ON" : "~r~No Wanted OFF");
+        }
+    }
+}
+```
+
+---
+
+### FiveM Server-Side Script (C#)
+
+```csharp
+// FiveM server resource — ServerMain.cs
+using CitizenFX.Core;
+using System;
+
+public class ServerMain : BaseScript
+{
+    public ServerMain()
+    {
+        EventHandlers["playerConnecting"] +=
+            new Action<Player, string, dynamic, dynamic>(OnPlayerConnecting);
+    }
+
+    private void OnPlayerConnecting(
+        Player player, string name, dynamic setKickReason, dynamic deferrals)
+    {
+        Debug.WriteLine($"Player connecting: {name}");
+
+        // Welcome broadcast to all clients
+        TriggerClientEvent("chat:addMessage", new
+        {
+            args = new[] { $"~g~{name}~s~ joined the server!" }
+        });
+
+        deferrals.done();
+    }
+}
+```
+
+---
+
+
 ### Popular Mods
 
 #### Graphics Enhancement

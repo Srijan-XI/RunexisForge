@@ -417,61 +417,249 @@ Quick start guide for CryEngine game development.
 
 ## Scripting
 
-### C++ Programming
+### C++ Entity Component (Full Example)
 
-**Create New Entity**:
+A complete entity component demonstrates the full CryEngine ECS lifecycle — initialization, per-frame update, physics, input, and Schematyc editor registration.
+
+#### Header — `CPlayerComponent.h`
 
 ```cpp
-// MyEntity.h
 #pragma once
 
 #include <CryEntitySystem/IEntityComponent.h>
+#include <CryInput/IInput.h>
+#include <CryPhysics/physinterface.h>
+#include <CrySchematyc/CoreAPI.h>
 
-class CMyEntityComponent final : public IEntityComponent
+class CPlayerComponent final
+    : public IEntityComponent
+    , public IInputEventListener
 {
 public:
-    CMyEntityComponent() = default;
-    virtual ~CMyEntityComponent() = default;
-    
-    // IEntityComponent
+    CPlayerComponent() = default;
+    virtual ~CPlayerComponent();
+
+    // --- IEntityComponent ---
     virtual void Initialize() override;
     virtual void ProcessEvent(const SEntityEvent& event) override;
-    
-    static void ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& desc);
-    
+    virtual Cry::Entity::EventFlags GetEventMask() const override;
+
+    // --- IInputEventListener ---
+    virtual bool OnInputEvent(const SInputEvent& event) override;
+
+    // Schematyc reflection (required to appear in editor)
+    static void ReflectType(Schematyc::CTypeDesc<CPlayerComponent>& desc);
+
+    // Schematyc-callable functions (appear in visual script)
+    void Jump();
+    void SetMovementSpeed(float speed);
+
 private:
-    float m_speed = 5.0f;
+    void UpdateMovement(float deltaTime);
+    void PhysicalizePlayer();
+
+    // Editor-exposed properties
+    float m_moveSpeed   = 5.0f;
+    float m_jumpForce   = 8.0f;
+    float m_mass        = 80.0f;
+
+    // Runtime state
+    Vec3  m_movementDir = ZERO;
+    bool  m_isGrounded  = false;
+    IPhysicalEntity* m_pPhysEntity = nullptr;
 };
 ```
 
-```cpp
-// MyEntity.cpp
-#include "StdAfx.h"
-#include "MyEntity.h"
+#### Implementation — `CPlayerComponent.cpp`
 
-void CMyEntityComponent::Initialize()
+```cpp
+#include "StdAfx.h"
+#include "CPlayerComponent.h"
+
+#include <CryRenderer/IRenderAuxGeom.h>
+#include <CrySchematyc/Env/Elements/EnvComponent.h>
+#include <CryCore/StaticInstanceList.h>
+
+static void RegisterPlayerComponent(Schematyc::IEnvRegistrar& registrar)
 {
-    // Initialization code
+    Schematyc::CEnvRegistrationScope scope
+        = registrar.Scope(IEntity::GetEntityScopeGUID());
+
+    auto& comp = scope.Register(
+        SCHEMATYC_MAKE_ENV_COMPONENT(CPlayerComponent));
+
+    // Expose Jump() to Schematyc graph
+    comp.AddFunction<&CPlayerComponent::Jump>(
+        "Jump",
+        "Makes the player jump if grounded"
+    );
+}
+CRY_STATIC_AUTO_REGISTER_FUNCTION(&RegisterPlayerComponent);
+
+// ----- ReflectType -----
+void CPlayerComponent::ReflectType(
+    Schematyc::CTypeDesc<CPlayerComponent>& desc)
+{
+    desc.SetGUID("{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"_cry_guid);
+    desc.SetEditorCategory("Game/Player");
+    desc.SetLabel("Player Component");
+    desc.SetDescription("Handles player movement, physics, and jumping.");
+
+    // Expose properties to the Sandbox Editor
+    desc.AddMember(
+        &CPlayerComponent::m_moveSpeed, 'mspd',
+        "MoveSpeed", "Move Speed", "Units per second", 5.0f);
+    desc.AddMember(
+        &CPlayerComponent::m_jumpForce, 'jfrc',
+        "JumpForce", "Jump Force", "Vertical impulse for jumping", 8.0f);
+    desc.AddMember(
+        &CPlayerComponent::m_mass, 'mass',
+        "Mass", "Mass", "Physics mass in kg", 80.0f);
 }
 
-void CMyEntityComponent::ProcessEvent(const SEntityEvent& event)
+// ----- Initialize -----
+void CPlayerComponent::Initialize()
 {
-    if (event.event == ENTITY_EVENT_UPDATE)
+    // Subscribe to input system
+    if (IInput* pInput = gEnv->pInput)
+        pInput->AddEventListener(this);
+
+    // Set up physics
+    PhysicalizePlayer();
+
+    CryLog("CPlayerComponent initialized on entity: %s",
+           GetEntity()->GetName());
+}
+
+CPlayerComponent::~CPlayerComponent()
+{
+    if (gEnv && gEnv->pInput)
+        gEnv->pInput->RemoveEventListener(this);
+}
+
+// ----- GetEventMask (subscribe to engine events) -----
+Cry::Entity::EventFlags CPlayerComponent::GetEventMask() const
+{
+    return
+        ENTITY_EVENT_UPDATE         |   // per-frame tick
+        ENTITY_EVENT_COLLISION      |   // physics collisions
+        ENTITY_EVENT_RESET;             // editor Play/Stop
+}
+
+// ----- ProcessEvent -----
+void CPlayerComponent::ProcessEvent(const SEntityEvent& event)
+{
+    switch (event.event)
     {
-        // Update logic
+    case ENTITY_EVENT_UPDATE:
+    {
+        float dt = event.fParam[0];   // delta time from physics
+        UpdateMovement(dt);
+        break;
+    }
+    case ENTITY_EVENT_COLLISION:
+    {
+        const EventPhysCollision* pColl =
+            reinterpret_cast<EventPhysCollision*>(event.nParam[0]);
+        if (pColl)
+        {
+            // Check if colliding with ground (surface below player)
+            if (fabs(pColl->n.z) > 0.7f)
+                m_isGrounded = true;
+        }
+        break;
+    }
+    case ENTITY_EVENT_RESET:
+        // Called when editor presses Play/Stop — reset state
+        m_movementDir = ZERO;
+        m_isGrounded  = false;
+        break;
     }
 }
 
-void CMyEntityComponent::ReflectType(Schematyc::CTypeDesc<CMyEntityComponent>& desc)
+// ----- PhysicalizePlayer -----
+void CPlayerComponent::PhysicalizePlayer()
 {
-    desc.SetGUID("{12345678-1234-1234-1234-123456789012}"_cry_guid);
-    desc.SetLabel("My Entity Component");
+    SEntityPhysicalizeParams params;
+    params.type   = PE_LIVING;    // living entity (walking character)
+    params.mass   = m_mass;
+    params.nSlot  = 0;
+
+    pe_player_dimensions dims;
+    dims.heightCollider = 1.8f;
+    dims.radiusHead     = 0.3f;
+    dims.heightPivot    = 0.0f;
+    params.pPlayerDimensions = &dims;
+
+    pe_player_dynamics dynamics;
+    dynamics.kAirControl  = 0.25f;
+    dynamics.maxVelGround = m_moveSpeed;
+    params.pPlayerDynamics = &dynamics;
+
+    GetEntity()->Physicalize(params);
+    m_pPhysEntity = GetEntity()->GetPhysics();
+}
+
+// ----- UpdateMovement -----
+void CPlayerComponent::UpdateMovement(float deltaTime)
+{
+    if (!m_pPhysEntity || m_movementDir.IsZero())
+        return;
+
+    pe_action_move moveAction;
+    moveAction.dir    = m_movementDir.GetNormalized() * m_moveSpeed;
+    moveAction.iJump  = 0;
+    m_pPhysEntity->Action(&moveAction);
+
+    // Face movement direction
+    Ang3 angles = GetEntity()->GetWorldAngles();
+    angles.z = atan2f(-m_movementDir.x, m_movementDir.y);
+    GetEntity()->SetWorldTM(Matrix34::CreateRotationXYZ(angles,
+        GetEntity()->GetWorldPos()));
+}
+
+// ----- Jump -----
+void CPlayerComponent::Jump()
+{
+    if (!m_isGrounded || !m_pPhysEntity)
+        return;
+
+    pe_action_impulse impulse;
+    impulse.impulse = Vec3(0, 0, m_jumpForce * m_mass);
+    m_pPhysEntity->Action(&impulse);
+    m_isGrounded = false;
+    CryLog("Player jumped!");
+}
+
+void CPlayerComponent::SetMovementSpeed(float speed)
+{
+    m_moveSpeed = max(0.0f, speed);
+}
+
+// ----- Input -----
+bool CPlayerComponent::OnInputEvent(const SInputEvent& event)
+{
+    float value = event.value;
+    bool  pressed = (event.state == eIS_Pressed || event.state == eIS_Down);
+
+    if (event.keyId == eKI_W || event.keyId == eKI_Up)
+        m_movementDir.y = pressed ? 1.0f : 0.0f;
+    if (event.keyId == eKI_S || event.keyId == eKI_Down)
+        m_movementDir.y = pressed ? -1.0f : 0.0f;
+    if (event.keyId == eKI_A || event.keyId == eKI_Left)
+        m_movementDir.x = pressed ? -1.0f : 0.0f;
+    if (event.keyId == eKI_D || event.keyId == eKI_Right)
+        m_movementDir.x = pressed ? 1.0f : 0.0f;
+    if (event.keyId == eKI_Space && event.state == eIS_Pressed)
+        Jump();
+
+    return false;   // false = pass event on to other listeners
 }
 ```
 
 ### Visual Scripting (Schematyc)
 
-```bash
+```
 1. Tools → Schematyc Editor
 2. Right-click → Create → Script
 3. Add nodes and connections
