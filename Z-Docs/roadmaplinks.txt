@@ -1,0 +1,16 @@
+https://roadmap.sh/rust
+https://roadmap.sh/cpp
+https://roadmap.sh/java
+https://roadmap.sh/spring-boot
+https://roadmap.sh/python
+https://roadmap.sh/redis
+https://roadmap.sh/php
+https://roadmap.sh/nextjs
+https://roadmap.sh/docker
+https://roadmap.sh/golang
+https://roadmap.sh/nodejs
+https://roadmap.sh/javascript
+https://roadmap.sh/mongodb
+https://roadmap.sh/typescript
+https://roadmap.sh/sql
+https://roadmap.sh/postgresql-dba

@@ -1,0 +1,19 @@
+# Q1: Write a small config
+#
+# Goal:
+# - Create a YAML config for an app with:
+#   - name (string)
+#   - debug (boolean)
+#   - ports (list of ints)
+#   - database (object with host + port)
+#
+# Replace the TODO values with real ones.
+
+name: TODO_APP_NAME
+debug: false
+ports:
+  - 3000
+  - 3001
+database:
+  host: localhost
+  port: 5432

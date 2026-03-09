@@ -1,0 +1,16 @@
+// Question 2: Filtering with Where
+// Difficulty: Beginner
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves events from the last 24 hours
+// 2. Filters for events where EventLevelName is "Error"
+// 3. Shows only TimeGenerated, Computer, and RenderedDescription columns
+//
+// Expected Output:
+// All error events from the last 24 hours with the specified columns
+
+// Your query here:
+Event
+| where TimeGenerated > ago(24h)
+| where EventLevelName == "Error"
+| project TimeGenerated, Computer, RenderedDescription

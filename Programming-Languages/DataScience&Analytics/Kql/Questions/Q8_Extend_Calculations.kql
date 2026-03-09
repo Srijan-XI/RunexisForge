@@ -1,0 +1,27 @@
+// Question 8: Extend with Calculations
+// Difficulty: Intermediate
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves events from the last 24 hours
+// 2. Adds extended columns for:
+//    - DayOfWeek (using dayofweek function)
+//    - HourOfDay (using hourofday function)
+//    - IsWeekend (true if Saturday or Sunday)
+//    - IsBusinessHours (true if hour is between 8 and 17)
+// 3. Projects relevant columns including the new ones
+// 4. Takes 100 samples
+//
+// Expected Output:
+// TimeGenerated | Computer | EventLevelName | DayOfWeek | HourOfDay | IsWeekend | IsBusinessHours
+
+// Your query here:
+Event
+| where TimeGenerated > ago(24h)
+| extend 
+    DayOfWeek = dayofweek(TimeGenerated),
+    HourOfDay = hourofday(TimeGenerated)
+| extend 
+    IsWeekend = DayOfWeek >= 5d,
+    IsBusinessHours = HourOfDay >= 8 and HourOfDay <= 17
+| project TimeGenerated, Computer, EventLevelName, DayOfWeek, HourOfDay, IsWeekend, IsBusinessHours
+| take 100

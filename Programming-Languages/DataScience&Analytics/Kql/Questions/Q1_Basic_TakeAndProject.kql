@@ -1,0 +1,14 @@
+// Question 1: Basic Query - Take and Project
+// Difficulty: Beginner
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves 20 rows from the Event table
+// 2. Projects only the following columns: TimeGenerated, Computer, EventLevelName, EventID
+//
+// Expected Output:
+// A table with 20 rows showing only the specified columns
+
+// Your query here:
+Event
+| take 20
+| project TimeGenerated, Computer, EventLevelName, EventID

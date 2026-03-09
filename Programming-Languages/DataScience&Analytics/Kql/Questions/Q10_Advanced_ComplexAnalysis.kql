@@ -1,0 +1,49 @@
+// Question 10: Advanced Complex Analysis
+// Difficulty: Advanced
+// 
+// Task: Create a comprehensive monitoring dashboard query that:
+// 1. Analyzes the last 7 days of Perf data for CPU usage
+// 2. For each computer:
+//    - Calculate daily average CPU
+//    - Calculate overall average CPU (across all days)
+//    - Calculate standard deviation
+//    - Identify days where CPU exceeded 2 standard deviations from mean (anomalies)
+//    - Count total anomaly days
+// 3. Show only computers with at least 1 anomaly
+// 4. Include visualization as a time chart
+//
+// This demonstrates statistical analysis and anomaly detection
+
+// Solution Part 1: Calculate statistics and identify anomalies
+let CPUData = Perf
+| where TimeGenerated > ago(7d)
+| where CounterName == "% Processor Time"
+| summarize DailyAvgCPU = avg(CounterValue) by Computer, bin(TimeGenerated, 1d);
+
+let ComputerStats = CPUData
+| summarize 
+    OverallAvgCPU = avg(DailyAvgCPU),
+    StdDevCPU = stdev(DailyAvgCPU)
+    by Computer;
+
+let Anomalies = CPUData
+| join kind=inner (ComputerStats) on Computer
+| extend IsAnomaly = abs(DailyAvgCPU - OverallAvgCPU) > (2 * StdDevCPU)
+| where IsAnomaly
+| summarize AnomalyDays = count() by Computer;
+
+// Part 2: Final report
+ComputerStats
+| join kind=inner (Anomalies) on Computer
+| project Computer, OverallAvgCPU, StdDevCPU, AnomalyDays
+| order by AnomalyDays desc
+
+// Alternative: Visualization of CPU trends with anomalies
+// Uncomment to visualize:
+/*
+CPUData
+| join kind=inner (ComputerStats) on Computer
+| extend IsAnomaly = abs(DailyAvgCPU - OverallAvgCPU) > (2 * StdDevCPU)
+| project TimeGenerated, Computer, DailyAvgCPU, IsAnomaly
+| render timechart
+*/

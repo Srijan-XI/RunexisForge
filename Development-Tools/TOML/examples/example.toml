@@ -1,0 +1,13 @@
+title = "devsphere"
+active = true
+ports = [3000, 8080]
+
+[database]
+host = "localhost"
+port = 5432
+
+[app]
+name = "demo"
+
+[app.logging]
+level = "info"

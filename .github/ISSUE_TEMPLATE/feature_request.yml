@@ -1,0 +1,26 @@
+name: "✨ Feature request"
+description: Suggest an improvement or new topic
+labels: [enhancement]
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What do you want to add or change?
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this valuable for users?
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Pages, sections, or files involved.
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context

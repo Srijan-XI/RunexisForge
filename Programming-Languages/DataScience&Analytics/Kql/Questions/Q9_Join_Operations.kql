@@ -1,0 +1,25 @@
+// Question 9: Join Operations
+// Difficulty: Advanced
+// 
+// Task: Write a KQL query that:
+// 1. Creates a subquery for Error events from the last 24 hours, counting errors by Computer
+// 2. Creates another subquery for Heartbeat data, getting the latest heartbeat per Computer
+// 3. Joins both subqueries on Computer (inner join)
+// 4. Shows: Computer, ErrorCount, LastHeartbeat
+// 5. Filters for computers with more than 10 errors
+// 6. Orders by ErrorCount descending
+//
+// This demonstrates correlation between errors and system health
+
+// Your query here:
+let ErrorCounts = Event
+    | where TimeGenerated > ago(24h)
+    | where EventLevelName == "Error"
+    | summarize ErrorCount = count() by Computer;
+let Heartbeats = Heartbeat
+    | summarize LastHeartbeat = max(TimeGenerated) by Computer;
+ErrorCounts
+| join kind=inner (Heartbeats) on Computer
+| where ErrorCount > 10
+| project Computer, ErrorCount, LastHeartbeat
+| order by ErrorCount desc

@@ -1,0 +1,32 @@
+# Basic Vulnerability Scan Workflow
+
+## Step 1: Create Target
+Configuration → Targets → New Target
+- Enter IP: 192.168.1.100
+- Allow Simultaneous: (optional)
+- Save
+
+## Step 2: Create Task
+Scans → Tasks → New Task
+- Name: Network Assessment
+- Target: Select created target
+- Scanner: OpenVAS Default
+- Config: Full and Very Deep
+- Save
+
+## Step 3: Start Scan
+Click Play icon on task
+Monitor progress
+
+## Step 4: View Results
+Scans → Reports → View Results
+- Filter by severity
+- Export findings
+- Create remediation plan
+
+## High Severity Issues Typically Include:
+- Missing patches
+- Default credentials
+- Weak encryption
+- SQL injection vulnerabilities
+- Remote code execution risks

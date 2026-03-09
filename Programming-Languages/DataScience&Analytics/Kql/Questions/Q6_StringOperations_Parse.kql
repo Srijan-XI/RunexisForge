@@ -1,0 +1,20 @@
+// Question 6: String Operations and Parsing
+// Difficulty: Intermediate
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves events from the last 24 hours
+// 2. Filters for events where RenderedDescription contains "user"
+// 3. Extracts the username using parse (assume format: "user USERNAME performed action")
+// 4. Counts events by extracted username
+// 5. Shows top 5 users by activity
+//
+// Note: This query demonstrates string parsing patterns
+
+// Your query here:
+Event
+| where TimeGenerated > ago(24h)
+| where RenderedDescription has "user"
+| parse RenderedDescription with * "user " Username " " *
+| where isnotempty(Username)
+| summarize ActivityCount = count() by Username
+| top 5 by ActivityCount desc

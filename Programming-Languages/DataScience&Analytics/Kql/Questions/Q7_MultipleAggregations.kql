@@ -1,0 +1,29 @@
+// Question 7: Multiple Aggregations
+// Difficulty: Intermediate
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves Perf records from the last 1 hour
+// 2. Filters for CounterName == "% Processor Time"
+// 3. For each Computer, calculate:
+//    - Count of samples
+//    - Average CPU usage
+//    - Minimum CPU usage
+//    - Maximum CPU usage
+//    - 95th percentile CPU usage
+// 4. Order by Average CPU in descending order
+//
+// Expected Output:
+// Computer | SampleCount | AvgCPU | MinCPU | MaxCPU | P95CPU
+
+// Your query here:
+Perf
+| where TimeGenerated > ago(1h)
+| where CounterName == "% Processor Time"
+| summarize 
+    SampleCount = count(),
+    AvgCPU = avg(CounterValue),
+    MinCPU = min(CounterValue),
+    MaxCPU = max(CounterValue),
+    P95CPU = percentile(CounterValue, 95)
+    by Computer
+| order by AvgCPU desc

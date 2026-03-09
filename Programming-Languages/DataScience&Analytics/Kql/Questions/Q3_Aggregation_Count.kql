@@ -1,0 +1,19 @@
+// Question 3: Aggregation - Count by Category
+// Difficulty: Beginner
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves events from the last 7 days
+// 2. Counts the number of events for each EventLevelName
+// 3. Orders the results by count in descending order
+//
+// Expected Output:
+// EventLevelName | count_
+// Error          | 1234
+// Warning        | 567
+// Information    | 890
+
+// Your query here:
+Event
+| where TimeGenerated > ago(7d)
+| summarize count() by EventLevelName
+| order by count_ desc

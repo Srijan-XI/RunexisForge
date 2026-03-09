@@ -1,0 +1,18 @@
+// Question 4: Time Series Analysis with Binning
+// Difficulty: Intermediate
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves events from the last 24 hours
+// 2. Groups events by EventLevelName
+// 3. Creates hourly time buckets (bins)
+// 4. Counts events in each bucket
+// 5. Renders the result as a time chart
+//
+// Expected Output:
+// A time chart showing event counts over time, separated by EventLevelName
+
+// Your query here:
+Event
+| where TimeGenerated > ago(24h)
+| summarize count() by EventLevelName, bin(TimeGenerated, 1h)
+| render timechart

@@ -1,0 +1,16 @@
+# Task:
+# Create a Service that exposes the nginx-demo Deployment on port 80.
+# - Use selector app: nginx-demo
+# - Create a ClusterIP service named nginx-demo-svc
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-demo-svc
+spec:
+  selector:
+    app: nginx-demo
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP

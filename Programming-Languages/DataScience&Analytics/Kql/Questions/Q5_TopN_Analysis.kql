@@ -1,0 +1,22 @@
+// Question 5: Top N Analysis
+// Difficulty: Intermediate
+// 
+// Task: Write a KQL query that:
+// 1. Retrieves events from the last 7 days
+// 2. Filters for "Error" level events only
+// 3. Counts the errors by Computer
+// 4. Shows the top 10 computers with the most errors
+// 5. Displays results in descending order
+//
+// Expected Output:
+// Computer    | ErrorCount
+// SERVER01    | 450
+// SERVER02    | 320
+// ...
+
+// Your query here:
+Event
+| where TimeGenerated > ago(7d)
+| where EventLevelName == "Error"
+| summarize ErrorCount = count() by Computer
+| top 10 by ErrorCount desc
